@@ -18,8 +18,12 @@ export default function RootLayout() {
           options={{ title: 'Shadowing App' }}
         />
         <Stack.Screen
+          name="folder/[num]"
+          options={{ title: 'セット', headerBackTitle: 'Home' }}
+        />
+        <Stack.Screen
           name="topic/[id]"
-          options={{ title: '', headerBackTitle: 'Topics' }}
+          options={{ title: '', headerBackTitle: 'Back' }}
         />
       </Stack>
     </>
