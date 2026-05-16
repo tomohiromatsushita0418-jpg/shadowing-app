@@ -8,6 +8,7 @@ import {
 import { useLocalSearchParams, useNavigation, useFocusEffect } from 'expo-router';
 import * as Speech from 'expo-speech';
 import { topics } from '../../data/topics';
+import wordMeanings from '../../data/wordMeanings.json';
 import SentenceCard from '../../components/SentenceCard';
 import WordDefinitionModal from '../../components/WordDefinitionModal';
 
@@ -29,7 +30,13 @@ const TRANSLATE_MODELS = [
   'gemini-2.5-flash',
 ];
 
+const BUNDLED_MEANINGS: Record<string, string> = wordMeanings as Record<string, string>;
+
 async function fetchJapaneseMeaning(word: string): Promise<string | null> {
+  // 1) Check pre-generated bundled dictionary first (no network, no quota)
+  const cached = BUNDLED_MEANINGS[word.toLowerCase()];
+  if (cached) return cached;
+  // 2) Fallback: live Gemini call (subject to daily quota)
   const apiKey = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
   if (!apiKey) return null;
   const prompt = `英単語「${word}」の日本語の意味を、品詞ごとに簡潔に列挙してください。
