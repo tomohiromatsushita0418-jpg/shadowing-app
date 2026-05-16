@@ -2,8 +2,8 @@ name: Daily Topic Generation
 
 on:
   schedule:
-    # 00:00 UTC = 09:00 JST
-    - cron: '0 0 * * *'
+    # 15:00 UTC = 00:00 JST (next day)
+    - cron: '0 15 * * *'
   workflow_dispatch: {}
 
 permissions:
