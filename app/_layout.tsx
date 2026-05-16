@@ -15,7 +15,7 @@ export default function RootLayout() {
       >
         <Stack.Screen
           name="index"
-          options={{ title: 'Shadowing App' }}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="folder/[num]"
