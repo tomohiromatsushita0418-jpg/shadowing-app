@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Shadowing App",
+    "slug": "shadowing-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shadowing.app"
+    },
+    "android": {
+      "package": "com.shadowing.app"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "scheme": "shadowing-app"
+  }
+}
