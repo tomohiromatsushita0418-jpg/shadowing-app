@@ -27,7 +27,7 @@ export default function FolderScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      navigation.setOptions({ title: `セット ${folderNumber}` });
+      navigation.setOptions({ title: `Stage ${folderNumber}` });
     }, [navigation, folderNumber])
   );
 
@@ -45,7 +45,7 @@ export default function FolderScreen() {
         ]}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={
-          <Text style={styles.empty}>このセットにはまだトピックがありません。</Text>
+          <Text style={styles.empty}>このステージにはまだトピックがありません。</Text>
         }
       />
     </View>

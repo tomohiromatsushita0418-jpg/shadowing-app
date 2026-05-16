@@ -19,7 +19,7 @@ export default function RootLayout() {
         />
         <Stack.Screen
           name="folder/[num]"
-          options={{ title: 'セット', headerBackTitle: 'Home' }}
+          options={{ title: 'Stage', headerBackTitle: 'Home' }}
         />
         <Stack.Screen
           name="topic/[id]"
