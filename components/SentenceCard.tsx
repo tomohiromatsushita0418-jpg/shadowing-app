@@ -81,32 +81,68 @@ export default function SentenceCard({
     return () => { stopAudio(); };
   }, [stopAudio]);
 
+  const speakFallback = useCallback(() => {
+    try { Speech.stop(); } catch {}
+    Speech.speak(sentence.en, {
+      language: 'en-US',
+      rate: 0.85,
+      pitch: 1.0,
+      onDone: onSpeakDone,
+      onError: onSpeakDone,
+      onStopped: onSpeakDone,
+    });
+    // Safety: if Speech never fires onDone (some browsers), clear after a
+    // generous estimated duration so the speaking indicator doesn't get
+    // stuck on.
+    const estMs = Math.max(2500, sentence.en.length * 70);
+    setTimeout(() => onSpeakDone(), estMs + 1500);
+  }, [sentence.en, onSpeakDone]);
+
   const playAudio = useCallback(async () => {
     stoppedRef.current = false;
     onSpeak();
 
+    // Stop our own previous sound, if any
     if (soundRef.current) {
-      try { await soundRef.current.unloadAsync(); } catch {}
+      const prev = soundRef.current;
       soundRef.current = null;
+      try { await prev.unloadAsync(); } catch {}
     }
+    // Stop any TTS in flight too
+    try { Speech.stop(); } catch {}
 
     if (sentence.audioPath) {
+      setLoading(true);
       try {
-        setLoading(true);
         const uri = resolveAudioUri(sentence.audioPath);
-        const { sound } = await Audio.Sound.createAsync(
+        // Race the audio load against a timeout so a hung 404 / network
+        // doesn't leave the user staring at a non-playing card.
+        const loadPromise = Audio.Sound.createAsync(
           { uri },
           { shouldPlay: true }
         );
+        const timeoutPromise = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error('audio load timeout')), 6000)
+        );
+        const { sound } = (await Promise.race([
+          loadPromise,
+          timeoutPromise,
+        ])) as Awaited<typeof loadPromise>;
+
         if (stoppedRef.current) {
-          // The user navigated/tapped elsewhere while loading
           try { await sound.unloadAsync(); } catch {}
           setLoading(false);
           return;
         }
         soundRef.current = sound;
         sound.setOnPlaybackStatusUpdate((status) => {
-          if (!status.isLoaded) return;
+          if (!status.isLoaded) {
+            // Web sometimes reports unload mid-stream; treat as done
+            if ((status as any).error) {
+              onSpeakDone();
+            }
+            return;
+          }
           if (status.didJustFinish) {
             onSpeakDone();
             sound.unloadAsync().catch(() => {});
@@ -118,20 +154,13 @@ export default function SentenceCard({
       } catch (err) {
         setLoading(false);
         console.warn('Audio load failed, falling back to TTS:', err);
+        if (stoppedRef.current) return;
+        // Fall through to TTS
       }
     }
 
-    // Fallback: system TTS
-    Speech.stop();
-    Speech.speak(sentence.en, {
-      language: 'en-US',
-      rate: 0.85,
-      pitch: 1.0,
-      onDone: onSpeakDone,
-      onError: onSpeakDone,
-      onStopped: onSpeakDone,
-    });
-  }, [sentence, onSpeak, onSpeakDone]);
+    speakFallback();
+  }, [sentence, onSpeak, onSpeakDone, speakFallback]);
 
   const handleCardPress = useCallback(() => {
     // Tap outside any word dismisses the long-press highlight
