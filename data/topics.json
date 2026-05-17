@@ -460,13 +460,84 @@
       },
       {
         "en": "While immediate tactical wins can build momentum, the overarching strategy must align with a long-term vision to avoid fragmented efforts and ensure sustainable growth.",
-        "ja": "即座の戦術的成功が勢いを生む一方で、断片的な取り組みを避け、持続可能な成長を確実にするためには、全体的な戦略が長期的なビジョンと合致している必要があります。"
+        "ja": "即座の戦術的成功が勢いを生む一方で、断片的な取り組みを避け、持続可能な成長を確実にするためには、全体的な戦略が長期的なビジョンと合致している必要があります。",
+        "audioPath": "./assets/audio/t17789547858732949_10.wav"
       },
       {
         "en": "Ultimately, digital transformation is not a one-off project but an ongoing evolutionary journey requiring continuous adaptation, learning, and reinvention to maintain competitive edge.",
-        "ja": "究極的に、デジタルトランスフォーメーションは一度きりのプロジェクトではなく、競争優位性を維持するために継続的な適応、学習、そして再創造を要する進化し続ける旅路なのです。"
+        "ja": "究極的に、デジタルトランスフォーメーションは一度きりのプロジェクトではなく、競争優位性を維持するために継続的な適応、学習、そして再創造を要する進化し続ける旅路なのです。",
+        "audioPath": "./assets/audio/t17789547858732949_11.wav"
       }
     ],
     "createdAt": "2026-05-16T18:06:25.873Z"
+  },
+  {
+    "id": "t17790415783212985",
+    "title": "Decarbonization's Diplomatic Challenges",
+    "titleJa": "脱炭素化がもたらす外交的課題",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The urgent imperative to decarbonize the global economy presents a formidable diplomatic challenge, necessitating unprecedented levels of international cooperation.",
+        "ja": "世界経済を脱炭素化するという喫緊の課題は、かつてない国際協力が不可欠となる、極めて困難な外交的挑戦を突きつけています。",
+        "audioPath": "./assets/audio/t17790415783212985_0.wav"
+      },
+      {
+        "en": "Nations are grappling with the intricate task of balancing ambitious emission reduction targets with their respective economic development priorities and energy security concerns.",
+        "ja": "各国は、意欲的な排出量削減目標と、それぞれの経済発展の優先事項やエネルギー安全保障への懸念との間で、複雑な均衡点を見出すという難題に取り組んでいます。",
+        "audioPath": "./assets/audio/t17790415783212985_1.wav"
+      },
+      {
+        "en": "Developing countries, often disproportionately affected by climate change, frequently advocate for greater financial assistance and technology transfer from wealthier nations to facilitate their green transition.",
+        "ja": "気候変動の影響を不均衡に受けることが多い途上国は、グリーン移行を促進するため、富裕国からのより大きな財政援助と技術移転をしばしば強く求めています。",
+        "audioPath": "./assets/audio/t17790415783212985_2.wav"
+      },
+      {
+        "en": "The transition away from fossil fuels inevitably disrupts long-established geopolitical alliances and creates new spheres of influence centered around renewable energy resources and critical minerals.",
+        "ja": "化石燃料からの移行は、長年築かれてきた地政学的同盟関係を必然的に揺るがし、再生可能エネルギー資源や重要鉱物を中心とした新たな勢力圏を生み出します。",
+        "audioPath": "./assets/audio/t17790415783212985_3.wav"
+      },
+      {
+        "en": "Securing a stable supply of rare earth elements and other materials vital for batteries and solar panels has become a pivotal concern, intensifying competition among industrial powers.",
+        "ja": "バッテリーや太陽光パネルに不可欠なレアアースなどの材料の安定供給確保は極めて重要な懸念事項となっており、産業大国間の競争を激化させています。",
+        "audioPath": "./assets/audio/t17790415783212985_4.wav"
+      },
+      {
+        "en": "The efficacy of international climate agreements hinges on the political will of major emitters to implement stringent domestic policies and uphold their commitments despite potential economic headwinds.",
+        "ja": "国際的な気候変動合意の実効性は、主要排出国が、潜在的な経済的逆風にもかかわらず、厳格な国内政策を実施し、公約を堅持するという政治的意思にかかっています。",
+        "audioPath": "./assets/audio/t17790415783212985_5.wav"
+      },
+      {
+        "en": "Domestically, the phasing out of coal and other carbon-intensive industries faces significant resistance from entrenched interests and communities reliant on these sectors for employment.",
+        "ja": "国内では、石炭をはじめとする炭素集約型産業の段階的廃止は、既得権益層やこれらの部門に雇用を依存する地域社会から、大きな抵抗に直面しています。",
+        "audioPath": "./assets/audio/t17790415783212985_6.wav"
+      },
+      {
+        "en": "Carbon pricing mechanisms, such as emissions trading schemes or carbon taxes, remain contentious issues in many jurisdictions, often sparking debates about economic competitiveness and equity.",
+        "ja": "排出量取引制度や炭素税といった炭素価格メカニズムは、多くの国や地域で依然として議論の的となっており、経済競争力と公平性を巡る議論をしばしば引き起こしています。",
+        "audioPath": "./assets/audio/t17790415783212985_7.wav"
+      },
+      {
+        "en": "Multilateral development banks are increasingly being called upon to recalibrate their lending priorities to explicitly support green infrastructure projects and climate adaptation initiatives.",
+        "ja": "多国間開発銀行は、グリーンインフラプロジェクトや気候変動適応策を明確に支援するため、融資優先順位の見直しをますます求められています。",
+        "audioPath": "./assets/audio/t17790415783212985_8.wav"
+      },
+      {
+        "en": "Crafting a just transition framework that addresses the social and economic impacts on workers and communities affected by the shift to a low-carbon economy is paramount for political stability.",
+        "ja": "低炭素経済への移行によって影響を受ける労働者や地域社会の社会的・経済的影響に対処する公正な移行の枠組みを構築することは、政治的安定にとって極めて重要です。",
+        "audioPath": "./assets/audio/t17790415783212985_9.wav"
+      },
+      {
+        "en": "Green hydrogen, once a nascent technology, is now emerging as a potential game-changer for hard-to-abate sectors, though its widespread adoption requires substantial investment and regulatory harmonization.",
+        "ja": "かつては初期段階の技術であったグリーン水素は、排出削減が困難な分野にとって潜在的な状況一変させる技術として台頭しつつありますが、その広範な導入には多額の投資と規制の調和が必要です。",
+        "audioPath": "./assets/audio/t17790415783212985_10.wav"
+      },
+      {
+        "en": "Ultimately, achieving global climate goals necessitates a paradigm shift in international relations, moving beyond traditional power politics towards collective stewardship of the planet.",
+        "ja": "結局のところ、地球規模の気候目標を達成するには、従来の権力政治を超え、地球の集団的統治へと向かう国際関係のパラダイムシフトが不可欠となります。",
+        "audioPath": "./assets/audio/t17790415783212985_11.wav"
+      }
+    ],
+    "createdAt": "2026-05-17T18:12:58.321Z"
   }
 ]
