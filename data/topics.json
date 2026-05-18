@@ -374,11 +374,13 @@
       },
       {
         "en": "Taiwan, home to TSMC, a dominant player in the foundry market, finds itself at the epicenter of this intricate global supply network, granting it considerable leverage on the world stage.",
-        "ja": "ファウンドリ市場で圧倒的なシェアを誇るTSMCの本拠地である台湾は、この複雑なグローバルサプライ網の中心に位置し、世界に大きな影響力を行使しています。"
+        "ja": "ファウンドリ市場で圧倒的なシェアを誇るTSMCの本拠地である台湾は、この複雑なグローバルサプライ網の中心に位置し、世界に大きな影響力を行使しています。",
+        "audioPath": "./assets/audio/t17789131490304654_3.wav"
       },
       {
         "en": "Consequently, major powers are now vigorously pursuing strategies to bolster domestic production capabilities and diversify their supply chains, aiming to mitigate future vulnerabilities.",
-        "ja": "こうした状況を受け、主要国は将来的なリスクを軽減するため、国内生産能力の強化とサプライチェーンの多様化に向けた戦略を精力的に推進しています。"
+        "ja": "こうした状況を受け、主要国は将来的なリスクを軽減するため、国内生産能力の強化とサプライチェーンの多様化に向けた戦略を精力的に推進しています。",
+        "audioPath": "./assets/audio/t17789131490304654_4.wav"
       },
       {
         "en": "Billions of dollars are being earmarked for new fabrication plants and research initiatives, reflecting a collective imperative to secure national technological sovereignty.",
@@ -539,5 +541,74 @@
       }
     ],
     "createdAt": "2026-05-17T18:12:58.321Z"
+  },
+  {
+    "id": "t17791357132333430",
+    "title": "Reflecting on a Hectic Week",
+    "titleJa": "慌ただしい一週間を振り返って",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "This past week has been an absolute whirlwind, I barely feel like I've had a moment to myself.",
+        "ja": "この一週間は本当に目が回るような忙しさで、ほとんど自分の時間も取れませんでした。",
+        "audioPath": "./assets/audio/t17791357132333430_0.wav"
+      },
+      {
+        "en": "I was perpetually swamped with deadlines and back-to-back meetings, leaving little room for anything else.",
+        "ja": "締め切りと立て続けの会議に絶えず追われ、他のことにはほとんど手が回りませんでした。",
+        "audioPath": "./assets/audio/t17791357132333430_1.wav"
+      },
+      {
+        "en": "The sheer volume of tasks felt overwhelming at times, almost reaching a breaking point by Wednesday.",
+        "ja": "仕事の絶対量が膨大で、水曜日にはもう限界寸前だと感じたほどです。",
+        "audioPath": "./assets/audio/t17791357132333430_2.wav"
+      },
+      {
+        "en": "It truly tested my time management skills, forcing me to prioritize ruthlessly just to stay afloat.",
+        "ja": "時間管理能力が本当に試されて、何とか持ちこたえるために容赦なく優先順位をつけざるを得ませんでした。",
+        "audioPath": "./assets/audio/t17791357132333430_3.wav"
+      },
+      {
+        "en": "I even had to burn the midnight oil a couple of nights, which is something I generally try to avoid.",
+        "ja": "普段は避けているのですが、数晩は夜遅くまで仕事をする羽目になりました。",
+        "audioPath": "./assets/audio/t17791357132333430_4.wav"
+      },
+      {
+        "en": "Despite the intense pressure, I somehow managed to deliver on all fronts, which is a relief, to say the least.",
+        "ja": "尋常ではないプレッシャーにもかかわらず、何とか全ての面で成果を出すことができ、少なくともホッとしています。",
+        "audioPath": "./assets/audio/t17791357132333430_5.wav"
+      },
+      {
+        "en": "But honestly, the mental fatigue started to set in towards the end of the week, making it hard to focus.",
+        "ja": "でも正直なところ、週末に近づくにつれて精神的な疲労が蓄積し、集中力を保つのが困難になりました。",
+        "audioPath": "./assets/audio/t17791357132333430_6.wav"
+      },
+      {
+        "en": "I found myself yearning for a quiet evening, just to decompress and recharge my batteries.",
+        "ja": "静かな夜を心から求めていました。ただ気分転換をして、エネルギーを再充電したかったんです。",
+        "audioPath": "./assets/audio/t17791357132333430_7.wav"
+      },
+      {
+        "en": "It makes me realize the importance of setting boundaries and not letting work completely consume your personal life.",
+        "ja": "仕事がプライベートを完全に飲み込んでしまわないよう、境界線を設定することの重要性を改めて痛感しました。",
+        "audioPath": "./assets/audio/t17791357132333430_8.wav"
+      },
+      {
+        "en": "I'm looking forward to a completely unplugged weekend, perhaps catching up on some leisure reading or just unwinding.",
+        "ja": "今週末は完全にデジタルデトックスして、読書でもしたり、ただゆっくり過ごしたりしたいと思っています。",
+        "audioPath": "./assets/audio/t17791357132333430_9.wav"
+      },
+      {
+        "en": "It's a delicate balancing act, isn't it? Striving for professional excellence while safeguarding your well-being.",
+        "ja": "プロとしての卓越性を追求しながら、自分の健康も守るというのは、本当にデリケートなバランス感覚が求められますよね。",
+        "audioPath": "./assets/audio/t17791357132333430_10.wav"
+      },
+      {
+        "en": "Hopefully, the coming week will be a bit more manageable, allowing for a semblance of normalcy.",
+        "ja": "来週はもう少し無理のないペースで、平穏な日常を取り戻せることを願っています。",
+        "audioPath": "./assets/audio/t17791357132333430_11.wav"
+      }
+    ],
+    "createdAt": "2026-05-18T20:21:53.233Z"
   }
 ]
