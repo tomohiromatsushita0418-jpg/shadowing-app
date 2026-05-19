@@ -8,6 +8,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import * as Speech from 'expo-speech';
 import type { Sentence } from '../data/topics';
 
 interface Props {
@@ -125,15 +126,27 @@ export default function SentenceCard({
             <Text style={styles.phrasesHeaderText}>覚えたい表現</Text>
           </View>
           {sentence.phrases.map((p, i) => (
-            <View key={i} style={styles.phraseItem}>
-              <Text selectable style={styles.phraseEn}>{p.phrase}</Text>
+            <TouchableOpacity
+              key={i}
+              activeOpacity={0.7}
+              onPress={() => {
+                try { Speech.stop(); } catch {}
+                Speech.speak(p.phrase, { language: 'en-US', rate: 0.85, pitch: 1.0 });
+              }}
+              style={styles.phraseItem}
+              accessibilityLabel={`Play phrase ${p.phrase}`}
+            >
+              <View style={styles.phraseHeaderRow}>
+                <Text selectable style={styles.phraseEn}>{p.phrase}</Text>
+                <Ionicons name="volume-medium-outline" size={14} color="#fbbf24" />
+              </View>
               <Text selectable style={styles.phraseJa}>{p.meaning}</Text>
               {p.usage && (
                 <Text selectable style={styles.phraseUsage}>
                   💬 {p.usage}
                 </Text>
               )}
-            </View>
+            </TouchableOpacity>
           ))}
         </View>
       )}
@@ -250,10 +263,17 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     marginBottom: 6,
   },
+  phraseHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 8,
+  },
   phraseEn: {
     color: '#fde68a',
     fontSize: 14,
     fontWeight: '700',
+    flex: 1,
   },
   phraseJa: {
     color: '#e2e8f0',
