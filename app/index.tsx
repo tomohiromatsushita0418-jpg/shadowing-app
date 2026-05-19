@@ -63,25 +63,27 @@ export default function HomeScreen() {
           <>
             {/* Hero / brand banner */}
             <LinearGradient
-              colors={['#1e1b4b', '#0f1f38', '#0f0f14']}
+              colors={['#0b0c14', '#0b1424', '#0a0a10']}
               start={{ x: 0, y: 0 }}
               end={{ x: 1, y: 1 }}
               style={styles.hero}
             >
               <View style={styles.brandRow}>
-                <View style={styles.logoMark}>
-                  <Ionicons name="mic" size={20} color="#60a5fa" />
-                </View>
                 <Text style={styles.brandName}>ECHO</Text>
-                <View style={styles.proBadge}>
-                  <Text style={styles.proBadgeText}>PRO</Text>
-                </View>
+                <Text style={styles.brandSep}>·</Text>
+                <Text style={styles.brandSub}>shadowing studio</Text>
               </View>
-              <Text style={styles.heroHeadline}>
-                Master English by{'\n'}speaking it back.
-              </Text>
+
+              <View style={styles.heroBlock}>
+                <Text style={styles.heroWord}>Listen.</Text>
+                <Text style={styles.heroWord}>Mirror.</Text>
+                <Text style={[styles.heroWord, styles.heroWordAccent]}>
+                  Become fluent.
+                </Text>
+              </View>
+
               <Text style={styles.heroSub}>
-                TOEIC 700 → 990 シャドーイング
+                A daily shadowing ritual, curated by AI.
               </Text>
 
               {/* Stats row */}
@@ -191,74 +193,68 @@ const styles = StyleSheet.create({
   },
   hero: {
     marginHorizontal: -16,
-    paddingHorizontal: 24,
-    paddingTop: 22,
-    paddingBottom: 26,
-    borderBottomLeftRadius: 28,
-    borderBottomRightRadius: 28,
-    marginBottom: 18,
+    paddingHorizontal: 28,
+    paddingTop: 28,
+    paddingBottom: 30,
+    borderBottomLeftRadius: 32,
+    borderBottomRightRadius: 32,
+    marginBottom: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255,255,255,0.04)',
   },
   brandRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
-    marginBottom: 18,
-  },
-  logoMark: {
-    width: 34,
-    height: 34,
-    borderRadius: 10,
-    backgroundColor: 'rgba(96,165,250,0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(96,165,250,0.35)',
-    alignItems: 'center',
-    justifyContent: 'center',
+    gap: 8,
+    marginBottom: 28,
   },
   brandName: {
     color: '#fafafa',
-    fontSize: 20,
-    fontWeight: '900',
-    letterSpacing: 4,
+    fontSize: 13,
+    fontWeight: '700',
+    letterSpacing: 6,
   },
-  proBadge: {
-    backgroundColor: 'rgba(251,191,36,0.15)',
-    borderWidth: 1,
-    borderColor: 'rgba(251,191,36,0.5)',
-    paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 6,
-    marginLeft: 'auto',
+  brandSep: {
+    color: 'rgba(255,255,255,0.25)',
+    fontSize: 13,
+    fontWeight: '400',
   },
-  proBadgeText: {
-    color: '#fbbf24',
-    fontSize: 10,
-    fontWeight: '900',
-    letterSpacing: 1.5,
+  brandSub: {
+    color: 'rgba(255,255,255,0.45)',
+    fontSize: 11,
+    fontWeight: '500',
+    letterSpacing: 2,
+    textTransform: 'lowercase',
+    fontStyle: 'italic',
   },
-  heroHeadline: {
+  heroBlock: {
+    marginBottom: 16,
+  },
+  heroWord: {
+    color: '#f5f5f7',
+    fontSize: 34,
+    fontWeight: '300',
+    lineHeight: 40,
+    letterSpacing: -1,
+  },
+  heroWordAccent: {
     color: '#fafafa',
-    fontSize: 26,
-    fontWeight: '800',
-    lineHeight: 32,
-    letterSpacing: -0.5,
-    marginBottom: 6,
+    fontWeight: '700',
   },
   heroSub: {
-    color: 'rgba(255,255,255,0.6)',
-    fontSize: 13,
-    fontWeight: '600',
+    color: 'rgba(255,255,255,0.5)',
+    fontSize: 12,
+    fontWeight: '500',
     letterSpacing: 0.5,
-    marginBottom: 22,
+    fontStyle: 'italic',
+    marginBottom: 24,
   },
   statsRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.25)',
-    borderWidth: 1,
-    borderColor: 'rgba(255,255,255,0.08)',
-    borderRadius: 14,
-    paddingVertical: 12,
-    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255,255,255,0.06)',
   },
   stat: { flex: 1, alignItems: 'center' },
   statDivider: {
@@ -268,17 +264,17 @@ const styles = StyleSheet.create({
   },
   statNum: {
     color: '#fafafa',
-    fontSize: 22,
-    fontWeight: '800',
+    fontSize: 20,
+    fontWeight: '300',
     letterSpacing: -0.3,
   },
   statLabel: {
-    color: 'rgba(255,255,255,0.45)',
-    fontSize: 10,
-    fontWeight: '700',
-    letterSpacing: 1.5,
+    color: 'rgba(255,255,255,0.35)',
+    fontSize: 9,
+    fontWeight: '600',
+    letterSpacing: 2,
     textTransform: 'uppercase',
-    marginTop: 2,
+    marginTop: 3,
   },
   featuredCard: {
     marginBottom: 22,
