@@ -1,9 +1,16 @@
 import topicsJson from './topics.json';
 
+export interface Phrase {
+  phrase: string;
+  meaning: string;
+  usage?: string;
+}
+
 export interface Sentence {
   en: string;
   ja: string;
   audioPath?: string;
+  phrases?: Phrase[];
 }
 
 export interface Topic {

@@ -117,6 +117,26 @@ export default function SentenceCard({
           <Text selectable style={styles.translation}>{sentence.ja}</Text>
         )}
       </View>
+
+      {sentence.phrases && sentence.phrases.length > 0 && (
+        <View style={styles.phrasesRow}>
+          <View style={styles.phrasesHeader}>
+            <Ionicons name="bulb-outline" size={13} color="#fbbf24" />
+            <Text style={styles.phrasesHeaderText}>覚えたい表現</Text>
+          </View>
+          {sentence.phrases.map((p, i) => (
+            <View key={i} style={styles.phraseItem}>
+              <Text selectable style={styles.phraseEn}>{p.phrase}</Text>
+              <Text selectable style={styles.phraseJa}>{p.meaning}</Text>
+              {p.usage && (
+                <Text selectable style={styles.phraseUsage}>
+                  💬 {p.usage}
+                </Text>
+              )}
+            </View>
+          ))}
+        </View>
+      )}
     </View>
   );
 }
@@ -200,5 +220,50 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontStyle: 'italic',
     lineHeight: 20,
+  },
+  phrasesRow: {
+    marginTop: 10,
+    marginLeft: 30,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: '#1e293b',
+  },
+  phrasesHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    marginBottom: 8,
+  },
+  phrasesHeaderText: {
+    color: '#fbbf24',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1,
+    textTransform: 'uppercase',
+  },
+  phraseItem: {
+    backgroundColor: 'rgba(251,191,36,0.06)',
+    borderLeftWidth: 2,
+    borderLeftColor: '#fbbf24',
+    paddingVertical: 7,
+    paddingHorizontal: 10,
+    borderRadius: 6,
+    marginBottom: 6,
+  },
+  phraseEn: {
+    color: '#fde68a',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  phraseJa: {
+    color: '#e2e8f0',
+    fontSize: 13,
+    marginTop: 2,
+  },
+  phraseUsage: {
+    color: '#94a3b8',
+    fontSize: 11,
+    marginTop: 4,
+    fontStyle: 'italic',
   },
 });

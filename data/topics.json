@@ -482,62 +482,321 @@
       {
         "en": "The urgent imperative to decarbonize the global economy presents a formidable diplomatic challenge, necessitating unprecedented levels of international cooperation.",
         "ja": "世界経済を脱炭素化するという喫緊の課題は、かつてない国際協力が不可欠となる、極めて困難な外交的挑戦を突きつけています。",
-        "audioPath": "./assets/audio/t17790415783212985_0.wav"
+        "audioPath": "./assets/audio/t17790415783212985_0.wav",
+        "phrases": [
+          {
+            "phrase": "urgent imperative",
+            "meaning": "差し迫った、避けられない必要性",
+            "usage": "The urgent imperative to act now cannot be ignored. (今すぐ行動しなければならないという差し迫った必要性は無視できない。)"
+          },
+          {
+            "phrase": "decarbonize the global economy",
+            "meaning": "世界経済の脱炭素化を進める",
+            "usage": "Many countries are committed to decarbonize the global economy by 2050. (多くの国が2050年までに世界経済の脱炭素化を進めることを約束している。)"
+          },
+          {
+            "phrase": "formidable diplomatic challenge",
+            "meaning": "手ごわい外交上の課題",
+            "usage": "Achieving peace in the region is a formidable diplomatic challenge. (その地域での平和達成は手ごわい外交上の課題だ。)"
+          },
+          {
+            "phrase": "unprecedented levels of",
+            "meaning": "前例のないレベルの",
+            "usage": "The company achieved unprecedented levels of growth last quarter. (同社は前四半期に前例のないレベルの成長を達成した。)"
+          }
+        ]
       },
       {
         "en": "Nations are grappling with the intricate task of balancing ambitious emission reduction targets with their respective economic development priorities and energy security concerns.",
         "ja": "各国は、意欲的な排出量削減目標と、それぞれの経済発展の優先事項やエネルギー安全保障への懸念との間で、複雑な均衡点を見出すという難題に取り組んでいます。",
-        "audioPath": "./assets/audio/t17790415783212985_1.wav"
+        "audioPath": "./assets/audio/t17790415783212985_1.wav",
+        "phrases": [
+          {
+            "phrase": "grappling with",
+            "meaning": "〜に苦労している、〜に取り組んでいる",
+            "usage": "The government is grappling with the issue of rising unemployment. (政府は失業率上昇の問題に取り組んでいる)"
+          },
+          {
+            "phrase": "balancing ... with ...",
+            "meaning": "〜と〜のバランスを取る",
+            "usage": "It's important to balance work with personal life. (仕事と私生活のバランスを取ることが重要だ)"
+          },
+          {
+            "phrase": "emission reduction targets",
+            "meaning": "排出削減目標",
+            "usage": "Many countries have set ambitious emission reduction targets for the next decade. (多くの国が次の10年間の意欲的な排出削減目標を設定している)"
+          },
+          {
+            "phrase": "economic development priorities",
+            "meaning": "経済発展の優先事項",
+            "usage": "The minister discussed the nation's economic development priorities with international investors. (大臣は国の経済発展の優先事項について国際投資家と話し合った)"
+          }
+        ]
       },
       {
         "en": "Developing countries, often disproportionately affected by climate change, frequently advocate for greater financial assistance and technology transfer from wealthier nations to facilitate their green transition.",
         "ja": "気候変動の影響を不均衡に受けることが多い途上国は、グリーン移行を促進するため、富裕国からのより大きな財政援助と技術移転をしばしば強く求めています。",
-        "audioPath": "./assets/audio/t17790415783212985_2.wav"
+        "audioPath": "./assets/audio/t17790415783212985_2.wav",
+        "phrases": [
+          {
+            "phrase": "disproportionately affected by",
+            "meaning": "不均衡に〜の影響を受ける",
+            "usage": "The pandemic disproportionately affected low-income families. (パンデミックは低所得者層に不均衡に影響を与えた。)"
+          },
+          {
+            "phrase": "advocate for",
+            "meaning": "〜を強く主張する、支持する",
+            "usage": "She advocates for stricter environmental regulations. (彼女はより厳しい環境規制を強く主張している。)"
+          },
+          {
+            "phrase": "financial assistance",
+            "meaning": "財政的支援",
+            "usage": "The organization provides financial assistance to students in need. (その組織は困窮している学生に財政的支援を提供している。)"
+          },
+          {
+            "phrase": "technology transfer",
+            "meaning": "技術移転",
+            "usage": "Technology transfer is crucial for developing economies. (技術移転は発展途上経済にとって極めて重要である。)"
+          }
+        ]
       },
       {
         "en": "The transition away from fossil fuels inevitably disrupts long-established geopolitical alliances and creates new spheres of influence centered around renewable energy resources and critical minerals.",
         "ja": "化石燃料からの移行は、長年築かれてきた地政学的同盟関係を必然的に揺るがし、再生可能エネルギー資源や重要鉱物を中心とした新たな勢力圏を生み出します。",
-        "audioPath": "./assets/audio/t17790415783212985_3.wav"
+        "audioPath": "./assets/audio/t17790415783212985_3.wav",
+        "phrases": [
+          {
+            "phrase": "transition away from",
+            "meaning": "〜から移行する",
+            "usage": "The company is planning a transition away from traditional marketing methods."
+          },
+          {
+            "phrase": "long-established alliances",
+            "meaning": "長年確立された同盟関係",
+            "usage": "These long-established alliances are now being challenged by new global dynamics."
+          },
+          {
+            "phrase": "spheres of influence",
+            "meaning": "勢力圏",
+            "usage": "The competition for new spheres of influence is intensifying in the region."
+          },
+          {
+            "phrase": "centered around",
+            "meaning": "〜を中心に据えた",
+            "usage": "The new strategy is centered around customer satisfaction."
+          }
+        ]
       },
       {
         "en": "Securing a stable supply of rare earth elements and other materials vital for batteries and solar panels has become a pivotal concern, intensifying competition among industrial powers.",
         "ja": "バッテリーや太陽光パネルに不可欠なレアアースなどの材料の安定供給確保は極めて重要な懸念事項となっており、産業大国間の競争を激化させています。",
-        "audioPath": "./assets/audio/t17790415783212985_4.wav"
+        "audioPath": "./assets/audio/t17790415783212985_4.wav",
+        "phrases": [
+          {
+            "phrase": "Securing a stable supply",
+            "meaning": "安定供給の確保",
+            "usage": "Securing a stable supply of water is crucial for the region. (その地域の水安定供給の確保は極めて重要だ。)"
+          },
+          {
+            "phrase": "vital for",
+            "meaning": "〜にとって不可欠な、生命の",
+            "usage": "Oxygen is vital for human life. (酸素は人間の生命にとって不可欠だ。)"
+          },
+          {
+            "phrase": "pivotal concern",
+            "meaning": "極めて重要な懸念事項",
+            "usage": "Climate change has become a pivotal concern for governments worldwide. (気候変動は世界中の政府にとって極めて重要な懸念事項となっている。)"
+          },
+          {
+            "phrase": "intensifying competition",
+            "meaning": "競争の激化",
+            "usage": "The intensifying competition in the tech industry requires constant innovation. (IT業界における競争激化は、絶え間ないイノベーションを必要とする。)"
+          }
+        ]
       },
       {
         "en": "The efficacy of international climate agreements hinges on the political will of major emitters to implement stringent domestic policies and uphold their commitments despite potential economic headwinds.",
         "ja": "国際的な気候変動合意の実効性は、主要排出国が、潜在的な経済的逆風にもかかわらず、厳格な国内政策を実施し、公約を堅持するという政治的意思にかかっています。",
-        "audioPath": "./assets/audio/t17790415783212985_5.wav"
+        "audioPath": "./assets/audio/t17790415783212985_5.wav",
+        "phrases": [
+          {
+            "phrase": "hinges on",
+            "meaning": "〜にかかっている、〜次第である",
+            "usage": "The success of the project hinges on your support. (プロジェクトの成功はあなたの支援にかかっています)"
+          },
+          {
+            "phrase": "political will",
+            "meaning": "政治的意思、政治的意欲",
+            "usage": "Lack of political will is often a barrier to progress. (政治的意思の欠如はしばしば進歩への障壁となる)"
+          },
+          {
+            "phrase": "major emitters",
+            "meaning": "主要な排出国（温室効果ガスなど）",
+            "usage": "International negotiations often focus on the role of major emitters. (国際交渉はしばしば主要排出国の役割に焦点を当てる)"
+          },
+          {
+            "phrase": "economic headwinds",
+            "meaning": "経済的な逆風、向かい風",
+            "usage": "Companies are facing significant economic headwinds this year. (企業は今年、かなりの経済的逆風に直面している)"
+          }
+        ]
       },
       {
         "en": "Domestically, the phasing out of coal and other carbon-intensive industries faces significant resistance from entrenched interests and communities reliant on these sectors for employment.",
         "ja": "国内では、石炭をはじめとする炭素集約型産業の段階的廃止は、既得権益層やこれらの部門に雇用を依存する地域社会から、大きな抵抗に直面しています。",
-        "audioPath": "./assets/audio/t17790415783212985_6.wav"
+        "audioPath": "./assets/audio/t17790415783212985_6.wav",
+        "phrases": [
+          {
+            "phrase": "phasing out",
+            "meaning": "段階的に廃止すること",
+            "usage": "The company is phasing out its old software by the end of the year. (会社は年末までに古いソフトウェアを段階的に廃止する予定です。)"
+          },
+          {
+            "phrase": "carbon-intensive industries",
+            "meaning": "炭素集約型産業（二酸化炭素排出量の多い産業）",
+            "usage": "Governments are encouraging a shift away from carbon-intensive industries towards renewable energy. (政府は炭素集約型産業から再生可能エネルギーへの移行を奨励している。)"
+          },
+          {
+            "phrase": "entrenched interests",
+            "meaning": "既得権益",
+            "usage": "It is difficult to reform the system because of entrenched interests. (既得権益があるため、その制度を改革するのは難しい。)"
+          },
+          {
+            "phrase": "reliant on",
+            "meaning": "〜に頼っている",
+            "usage": "Many small businesses are reliant on tourism for their survival. (多くの小規模事業者は、存続のために観光に頼っている。)"
+          }
+        ]
       },
       {
         "en": "Carbon pricing mechanisms, such as emissions trading schemes or carbon taxes, remain contentious issues in many jurisdictions, often sparking debates about economic competitiveness and equity.",
         "ja": "排出量取引制度や炭素税といった炭素価格メカニズムは、多くの国や地域で依然として議論の的となっており、経済競争力と公平性を巡る議論をしばしば引き起こしています。",
-        "audioPath": "./assets/audio/t17790415783212985_7.wav"
+        "audioPath": "./assets/audio/t17790415783212985_7.wav",
+        "phrases": [
+          {
+            "phrase": "carbon pricing mechanisms",
+            "meaning": "炭素価格付けメカニズム（排出量取引制度や炭素税など）",
+            "usage": "経済政策や環境問題に関する議論で使われる専門用語です。"
+          },
+          {
+            "phrase": "emissions trading schemes",
+            "meaning": "排出量取引制度",
+            "usage": "企業の排出量削減を市場メカニズムで促す仕組みです。"
+          },
+          {
+            "phrase": "sparking debates",
+            "meaning": "議論を引き起こす、論争の火種となる",
+            "usage": "ある事柄が活発な意見交換や論争を招く状況を表します。"
+          },
+          {
+            "phrase": "economic competitiveness",
+            "meaning": "経済的競争力",
+            "usage": "国際的な市場における国の経済力を示す指標として使われます。"
+          }
+        ]
       },
       {
         "en": "Multilateral development banks are increasingly being called upon to recalibrate their lending priorities to explicitly support green infrastructure projects and climate adaptation initiatives.",
         "ja": "多国間開発銀行は、グリーンインフラプロジェクトや気候変動適応策を明確に支援するため、融資優先順位の見直しをますます求められています。",
-        "audioPath": "./assets/audio/t17790415783212985_8.wav"
+        "audioPath": "./assets/audio/t17790415783212985_8.wav",
+        "phrases": [
+          {
+            "phrase": "called upon to",
+            "meaning": "〜するよう求められる、要請される",
+            "usage": "The government was called upon to take action. (政府は行動するよう求められた)"
+          },
+          {
+            "phrase": "recalibrate their lending priorities",
+            "meaning": "融資の優先順位を再調整する",
+            "usage": "The company needs to recalibrate its marketing strategy. (その会社はマーケティング戦略を再調整する必要がある)"
+          },
+          {
+            "phrase": "support green infrastructure projects",
+            "meaning": "グリーンインフラプロジェクトを支援する",
+            "usage": "The initiative aims to support green infrastructure projects for sustainable development. (そのイニシアチブは持続可能な開発のためにグリーンインフラプロジェクトを支援することを目的としている)"
+          },
+          {
+            "phrase": "climate adaptation initiatives",
+            "meaning": "気候変動適応の取り組み",
+            "usage": "Governments are launching climate adaptation initiatives to mitigate the effects of climate change. (各国政府は気候変動の影響を緩和するために気候変動適応の取り組みを開始している)"
+          }
+        ]
       },
       {
         "en": "Crafting a just transition framework that addresses the social and economic impacts on workers and communities affected by the shift to a low-carbon economy is paramount for political stability.",
         "ja": "低炭素経済への移行によって影響を受ける労働者や地域社会の社会的・経済的影響に対処する公正な移行の枠組みを構築することは、政治的安定にとって極めて重要です。",
-        "audioPath": "./assets/audio/t17790415783212985_9.wav"
+        "audioPath": "./assets/audio/t17790415783212985_9.wav",
+        "phrases": [
+          {
+            "phrase": "addresses the social and economic impacts",
+            "meaning": "社会的・経済的影響に対処する",
+            "usage": "The new policy aims to address the environmental impacts of industrial activities."
+          },
+          {
+            "phrase": "shift to a low-carbon economy",
+            "meaning": "低炭素経済への移行",
+            "usage": "The company announced a shift to renewable energy sources."
+          },
+          {
+            "phrase": "paramount for political stability",
+            "meaning": "政治的安定にとって極めて重要である",
+            "usage": "Customer satisfaction is paramount for our business success."
+          }
+        ]
       },
       {
         "en": "Green hydrogen, once a nascent technology, is now emerging as a potential game-changer for hard-to-abate sectors, though its widespread adoption requires substantial investment and regulatory harmonization.",
         "ja": "かつては初期段階の技術であったグリーン水素は、排出削減が困難な分野にとって潜在的な状況一変させる技術として台頭しつつありますが、その広範な導入には多額の投資と規制の調和が必要です。",
-        "audioPath": "./assets/audio/t17790415783212985_10.wav"
+        "audioPath": "./assets/audio/t17790415783212985_10.wav",
+        "phrases": [
+          {
+            "phrase": "nascent technology",
+            "meaning": "黎明期の技術、新興技術",
+            "usage": "The company is investing in nascent technologies to secure future growth."
+          },
+          {
+            "phrase": "game-changer",
+            "meaning": "状況を一変させるもの、ゲームチェンジャー",
+            "usage": "This new policy could be a game-changer for the industry."
+          },
+          {
+            "phrase": "hard-to-abate sectors",
+            "meaning": "排出削減が困難な産業分野",
+            "usage": "Focusing on hard-to-abate sectors is crucial for achieving climate goals."
+          },
+          {
+            "phrase": "regulatory harmonization",
+            "meaning": "規制の調和、規制の統一",
+            "usage": "International regulatory harmonization is needed for global trade."
+          }
+        ]
       },
       {
         "en": "Ultimately, achieving global climate goals necessitates a paradigm shift in international relations, moving beyond traditional power politics towards collective stewardship of the planet.",
         "ja": "結局のところ、地球規模の気候目標を達成するには、従来の権力政治を超え、地球の集団的統治へと向かう国際関係のパラダイムシフトが不可欠となります。",
-        "audioPath": "./assets/audio/t17790415783212985_11.wav"
+        "audioPath": "./assets/audio/t17790415783212985_11.wav",
+        "phrases": [
+          {
+            "phrase": "a paradigm shift",
+            "meaning": "パラダイムシフト、抜本的な変化",
+            "usage": "既存の考え方や枠組みが大きく変わることを指す。"
+          },
+          {
+            "phrase": "moving beyond",
+            "meaning": "〜を乗り越えて、〜から脱却して",
+            "usage": "従来のやり方や制約から離れ、次へ進むニュアンス。"
+          },
+          {
+            "phrase": "power politics",
+            "meaning": "勢力均衡政治、パワーポリティクス",
+            "usage": "国際関係や企業間の競争など、力関係に基づく政治・戦略を指す。"
+          },
+          {
+            "phrase": "collective stewardship",
+            "meaning": "共同管理、集合的責任",
+            "usage": "共有の資源や課題に対し、皆で責任を持って管理する考え方。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-05-17T18:12:58.321Z"

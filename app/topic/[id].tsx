@@ -104,6 +104,51 @@ export default function TopicScreen() {
     }).catch(() => {});
   }, []);
 
+  // On web: preload all of this topic's audio files into the browser
+  // cache so when the user taps Play, the file is already local and
+  // Audio.Sound.createAsync resolves instantly within the gesture window
+  // (avoiding the "first tap is silent" autoplay issue).
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !topic) return;
+    for (const s of topic.sentences) {
+      if (!s.audioPath) continue;
+      const uri = resolveAudioUri(s.audioPath);
+      fetch(uri, { method: 'GET', cache: 'force-cache' }).catch(() => {});
+    }
+  }, [topic]);
+
+  // Unlock the Web Audio context on the very first user interaction
+  // anywhere on this screen by playing a 1-frame silent sound. After
+  // this, expo-av's first real play won't be swallowed by autoplay rules.
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    let done = false;
+    const unlock = () => {
+      if (done) return;
+      done = true;
+      try {
+        // 1-frame silent WAV (44 byte header + 2 byte sample)
+        const silentWav =
+          'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
+        const a = new (window as any).Audio(silentWav);
+        a.volume = 0;
+        const p = a.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+      } catch {}
+      window.removeEventListener('touchstart', unlock, true);
+      window.removeEventListener('mousedown', unlock, true);
+      window.removeEventListener('keydown', unlock, true);
+    };
+    window.addEventListener('touchstart', unlock, true);
+    window.addEventListener('mousedown', unlock, true);
+    window.addEventListener('keydown', unlock, true);
+    return () => {
+      window.removeEventListener('touchstart', unlock, true);
+      window.removeEventListener('mousedown', unlock, true);
+      window.removeEventListener('keydown', unlock, true);
+    };
+  }, []);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
