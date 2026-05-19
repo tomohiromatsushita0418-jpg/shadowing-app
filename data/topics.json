@@ -413,17 +413,83 @@
       {
         "en": "In today's fiercely competitive landscape, embarking on a comprehensive digital transformation is no longer an option but a strategic imperative for long-term viability.",
         "ja": "激しい競争が繰り広げられる今日のビジネス環境において、包括的なデジタルトランスフォーメーションに着手することは、もはや選択肢ではなく、長期的な企業の存続には欠かせない戦略的要件です。",
-        "audioPath": "./assets/audio/t17789547858732949_0.wav"
+        "audioPath": "./assets/audio/t17789547858732949_0.wav",
+        "phrases": [
+          {
+            "phrase": "fiercely competitive landscape",
+            "meaning": "激しい競争環境",
+            "usage": "現代ビジネスの状況を説明する際によく使われる表現。"
+          },
+          {
+            "phrase": "embarking on",
+            "meaning": "〜に着手する、〜を始める",
+            "usage": "大規模なプロジェクトや重要な計画を開始する際によく用いる。"
+          },
+          {
+            "phrase": "strategic imperative",
+            "meaning": "戦略的必須事項",
+            "usage": "企業が必ず取り組むべき、経営上不可欠な課題を指す。"
+          },
+          {
+            "phrase": "long-term viability",
+            "meaning": "長期的な存続可能性",
+            "usage": "企業の持続可能性や、プロジェクトの実現可能性を議論する際に重要。"
+          }
+        ]
       },
       {
         "en": "Established corporations, often burdened by legacy systems and entrenched organizational silos, face unique challenges in modernizing their operational frameworks.",
         "ja": "既存の大企業は、しばしばレガシーシステムと根深く定着した組織の縦割り構造に縛られ、事業運営の枠組みを近代化する上で特有の課題に直面しています。",
-        "audioPath": "./assets/audio/t17789547858732949_1.wav"
+        "audioPath": "./assets/audio/t17789547858732949_1.wav",
+        "phrases": [
+          {
+            "phrase": "legacy systems",
+            "meaning": "レガシーシステム（旧式のシステム）",
+            "usage": "特にIT分野で、古いシステムを指す際によく使われます。"
+          },
+          {
+            "phrase": "entrenched organizational silos",
+            "meaning": "根深く定着した組織の縦割り構造",
+            "usage": "組織改革や企業文化の議論で使われる、高度な表現です。"
+          },
+          {
+            "phrase": "operational frameworks",
+            "meaning": "業務基盤、運用体制",
+            "usage": "企業の戦略や効率化を語る際に便利なビジネス用語です。"
+          },
+          {
+            "phrase": "burdened by",
+            "meaning": "〜に重荷を負わされている、〜に苦しめられている",
+            "usage": "「burdened by debt (負債に苦しむ)」のように、様々な文脈で使えます。"
+          }
+        ]
       },
       {
         "en": "Securing unwavering executive sponsorship and fostering a culture of innovation from the top down are paramount to successfully navigating this complex paradigm shift.",
         "ja": "揺るぎない経営層の支援を確保し、トップダウンでイノベーション文化を醸成することは、この複雑なパラダイムシフトを成功裏に乗り切る上で極めて重要です。",
-        "audioPath": "./assets/audio/t17789547858732949_2.wav"
+        "audioPath": "./assets/audio/t17789547858732949_2.wav",
+        "phrases": [
+          {
+            "phrase": "unwavering executive sponsorship",
+            "meaning": "揺るぎない経営陣の支援",
+            "usage": "Unwavering support from leadership is crucial. (リーダーシップからの揺るぎない支援が不可欠です。)"
+          },
+          {
+            "phrase": "fostering a culture of innovation",
+            "meaning": "イノベーションの文化を育むこと",
+            "usage": "It is important to foster a culture of continuous improvement. (継続的改善の文化を育むことが重要です。)"
+          },
+          {
+            "phrase": "are paramount to",
+            "meaning": "〜にとって極めて重要である",
+            "usage": "Customer satisfaction is paramount to our success. (顧客満足は当社の成功にとって極めて重要です。)"
+          },
+          {
+            "phrase": "navigating this complex paradigm shift",
+            "meaning": "この複雑なパラダイムシフトを乗り切ること",
+            "usage": "We need to learn how to navigate complex challenges effectively. (複雑な課題を効果的に乗り切る方法を学ぶ必要があります。)"
+          }
+        ]
       },
       {
         "en": "Leveraging advanced data analytics and artificial intelligence is crucial for deriving actionable insights and personalizing customer experiences at scale.",
@@ -810,62 +876,266 @@
       {
         "en": "This past week has been an absolute whirlwind, I barely feel like I've had a moment to myself.",
         "ja": "この一週間は本当に目が回るような忙しさで、ほとんど自分の時間も取れませんでした。",
-        "audioPath": "./assets/audio/t17791357132333430_0.wav"
+        "audioPath": "./assets/audio/t17791357132333430_0.wav",
+        "phrases": [
+          {
+            "phrase": "absolute whirlwind",
+            "meaning": "目まぐるしい出来事の連続",
+            "usage": "This past week has been an absolute whirlwind. のように、非常に忙しかった週を表現するのに使われます。"
+          },
+          {
+            "phrase": "moment to myself",
+            "meaning": "自分一人の時間、プライベートな時間",
+            "usage": "I barely feel like I've had a moment to myself. のように、全く自分の時間がなかったことを強調する際に使われます。"
+          }
+        ]
       },
       {
         "en": "I was perpetually swamped with deadlines and back-to-back meetings, leaving little room for anything else.",
         "ja": "締め切りと立て続けの会議に絶えず追われ、他のことにはほとんど手が回りませんでした。",
-        "audioPath": "./assets/audio/t17791357132333430_1.wav"
+        "audioPath": "./assets/audio/t17791357132333430_1.wav",
+        "phrases": [
+          {
+            "phrase": "perpetually swamped",
+            "meaning": "常に〜で手一杯である",
+            "usage": "He was perpetually swamped with work."
+          },
+          {
+            "phrase": "back-to-back meetings",
+            "meaning": "連続した会議",
+            "usage": "My schedule is full of back-to-back meetings today."
+          },
+          {
+            "phrase": "leaving little room for",
+            "meaning": "〜の余地がほとんどない",
+            "usage": "The tight budget left little room for unexpected expenses."
+          }
+        ]
       },
       {
         "en": "The sheer volume of tasks felt overwhelming at times, almost reaching a breaking point by Wednesday.",
         "ja": "仕事の絶対量が膨大で、水曜日にはもう限界寸前だと感じたほどです。",
-        "audioPath": "./assets/audio/t17791357132333430_2.wav"
+        "audioPath": "./assets/audio/t17791357132333430_2.wav",
+        "phrases": [
+          {
+            "phrase": "sheer volume",
+            "meaning": "相当な量、莫大な量",
+            "usage": "The sheer volume of data needs to be analyzed. (そのデータは相当な量なので分析が必要だ。)"
+          },
+          {
+            "phrase": "felt overwhelming",
+            "meaning": "圧倒されるように感じた",
+            "usage": "The amount of information felt overwhelming. (情報量が圧倒されるように感じた。)"
+          },
+          {
+            "phrase": "reaching a breaking point",
+            "meaning": "限界点に達する、もう限界だ",
+            "usage": "After working for 12 hours straight, he was reaching a breaking point. (12時間ぶっ通しで働いた後、彼は限界点に達していた。)"
+          }
+        ]
       },
       {
         "en": "It truly tested my time management skills, forcing me to prioritize ruthlessly just to stay afloat.",
         "ja": "時間管理能力が本当に試されて、何とか持ちこたえるために容赦なく優先順位をつけざるを得ませんでした。",
-        "audioPath": "./assets/audio/t17791357132333430_3.wav"
+        "audioPath": "./assets/audio/t17791357132333430_3.wav",
+        "phrases": [
+          {
+            "phrase": "tested my time management skills",
+            "meaning": "私の時間管理能力を試した",
+            "usage": "This project really tested my time management skills. (このプロジェクトは本当に私の時間管理能力を試しました。)"
+          },
+          {
+            "phrase": "prioritize ruthlessly",
+            "meaning": "ruthlessly (容赦なく、徹底的に) 優先順位をつける",
+            "usage": "You need to prioritize ruthlessly to meet the deadline. (締め切りに間に合わせるためには、徹底的に優先順位をつける必要があります。)"
+          },
+          {
+            "phrase": "stay afloat",
+            "meaning": "なんとかやっていく、破産しない",
+            "usage": "The company is struggling to stay afloat. (その会社はなんとかやっていくのに苦労しています。)"
+          }
+        ]
       },
       {
         "en": "I even had to burn the midnight oil a couple of nights, which is something I generally try to avoid.",
         "ja": "普段は避けているのですが、数晩は夜遅くまで仕事をする羽目になりました。",
-        "audioPath": "./assets/audio/t17791357132333430_4.wav"
+        "audioPath": "./assets/audio/t17791357132333430_4.wav",
+        "phrases": [
+          {
+            "phrase": "burn the midnight oil",
+            "meaning": "徹夜する、夜遅くまで勉強・仕事する",
+            "usage": "試験や締め切り前によく使われる表現です。"
+          },
+          {
+            "phrase": "a couple of nights",
+            "meaning": "2〜3晩",
+            "usage": "具体的な回数ではなく、少数の回数を表す際に便利です。"
+          },
+          {
+            "phrase": "try to avoid",
+            "meaning": "避けようとする",
+            "usage": "自分の習慣や傾向について話す際によく使われます。"
+          }
+        ]
       },
       {
         "en": "Despite the intense pressure, I somehow managed to deliver on all fronts, which is a relief, to say the least.",
         "ja": "尋常ではないプレッシャーにもかかわらず、何とか全ての面で成果を出すことができ、少なくともホッとしています。",
-        "audioPath": "./assets/audio/t17791357132333430_5.wav"
+        "audioPath": "./assets/audio/t17791357132333430_5.wav",
+        "phrases": [
+          {
+            "phrase": "managed to deliver",
+            "meaning": "なんとかやり遂げる、なんとか間に合わせる",
+            "usage": "Despite the challenges, the team managed to deliver the project on time. (課題があったにもかかわらず、チームはプロジェクトを時間通りに完了させることができた。)"
+          },
+          {
+            "phrase": "on all fronts",
+            "meaning": "あらゆる面で、全ての分野で",
+            "usage": "The company is performing well on all fronts: sales, customer satisfaction, and innovation. (その会社は、売上、顧客満足度、イノベーションのあらゆる面で好調だ。)"
+          },
+          {
+            "phrase": "to say the least",
+            "meaning": "少なくとも、控えめに言っても",
+            "usage": "It was a difficult situation, to say the least. (少なくとも、それは困難な状況だった。)"
+          }
+        ]
       },
       {
         "en": "But honestly, the mental fatigue started to set in towards the end of the week, making it hard to focus.",
         "ja": "でも正直なところ、週末に近づくにつれて精神的な疲労が蓄積し、集中力を保つのが困難になりました。",
-        "audioPath": "./assets/audio/t17791357132333430_6.wav"
+        "audioPath": "./assets/audio/t17791357132333430_6.wav",
+        "phrases": [
+          {
+            "phrase": "mental fatigue",
+            "meaning": "精神的な疲労",
+            "usage": "長時間の会議や集中を要する作業の後に感じることが多い表現です。"
+          },
+          {
+            "phrase": "set in",
+            "meaning": "（不快なものが）始まる、定着する",
+            "usage": "mental fatigue set in のように、ネガティブな状況が始まる際に使われます。"
+          },
+          {
+            "phrase": "making it hard to focus",
+            "meaning": "集中を難しくさせる",
+            "usage": "原因（mental fatigue）と結果（hard to focus）をつなぐ、因果関係を示すのに便利な表現です。"
+          }
+        ]
       },
       {
         "en": "I found myself yearning for a quiet evening, just to decompress and recharge my batteries.",
         "ja": "静かな夜を心から求めていました。ただ気分転換をして、エネルギーを再充電したかったんです。",
-        "audioPath": "./assets/audio/t17791357132333430_7.wav"
+        "audioPath": "./assets/audio/t17791357132333430_7.wav",
+        "phrases": [
+          {
+            "phrase": "yearning for",
+            "meaning": "〜を切望する、〜に憧れる",
+            "usage": "a better futureをyearning forする、のように使う"
+          },
+          {
+            "phrase": "decompress",
+            "meaning": "（精神的に）リラックスする、緊張をほぐす",
+            "usage": "仕事の後でdecompressする、のように使う"
+          },
+          {
+            "phrase": "recharge my batteries",
+            "meaning": "（心身を）リフレッシュする、元気を回復する",
+            "usage": "週末にrecharge my batteriesする、のように使う"
+          }
+        ]
       },
       {
         "en": "It makes me realize the importance of setting boundaries and not letting work completely consume your personal life.",
         "ja": "仕事がプライベートを完全に飲み込んでしまわないよう、境界線を設定することの重要性を改めて痛感しました。",
-        "audioPath": "./assets/audio/t17791357132333430_8.wav"
+        "audioPath": "./assets/audio/t17791357132333430_8.wav",
+        "phrases": [
+          {
+            "phrase": "setting boundaries",
+            "meaning": "境界線を設ける、一線を引く",
+            "usage": "仕事とプライベートの境界線を明確にすることは大切です。"
+          },
+          {
+            "phrase": "not letting work completely consume your personal life",
+            "meaning": "仕事に私生活を完全に蝕まれないようにする",
+            "usage": "ワークライフバランスを保つために、仕事が生活を支配しないように注意が必要です。"
+          }
+        ]
       },
       {
         "en": "I'm looking forward to a completely unplugged weekend, perhaps catching up on some leisure reading or just unwinding.",
         "ja": "今週末は完全にデジタルデトックスして、読書でもしたり、ただゆっくり過ごしたりしたいと思っています。",
-        "audioPath": "./assets/audio/t17791357132333430_9.wav"
+        "audioPath": "./assets/audio/t17791357132333430_9.wav",
+        "phrases": [
+          {
+            "phrase": "looking forward to",
+            "meaning": "〜を楽しみにしている",
+            "usage": "I'm looking forward to our meeting next week. のように、未来の出来事への期待を表すのに広く使われます。"
+          },
+          {
+            "phrase": "unplugged weekend",
+            "meaning": "デジタル機器から離れた週末",
+            "usage": "デジタルデトックスをしたい時に使う表現です。"
+          },
+          {
+            "phrase": "catching up on",
+            "meaning": "（遅れていたことを）取り戻す、追いつく",
+            "usage": "I need to catch up on my work. のように、溜まったタスクや情報について使うことが多いです。"
+          },
+          {
+            "phrase": "unwinding",
+            "meaning": "リラックスすること、くつろぐこと",
+            "usage": "After a long week, I just want to unwind. のように、仕事やストレスから解放されてくつろぐ様子を表します。"
+          }
+        ]
       },
       {
         "en": "It's a delicate balancing act, isn't it? Striving for professional excellence while safeguarding your well-being.",
         "ja": "プロとしての卓越性を追求しながら、自分の健康も守るというのは、本当にデリケートなバランス感覚が求められますよね。",
-        "audioPath": "./assets/audio/t17791357132333430_10.wav"
+        "audioPath": "./assets/audio/t17791357132333430_10.wav",
+        "phrases": [
+          {
+            "phrase": "delicate balancing act",
+            "meaning": "微妙なバランス取り、難しい両立",
+            "usage": "複数の相反する要素を同時に管理する状況で使う。"
+          },
+          {
+            "phrase": "striving for",
+            "meaning": "〜を目指して努力する、〜に尽力する",
+            "usage": "We are striving for continuous improvement. (継続的な改善に努めている。)"
+          },
+          {
+            "phrase": "professional excellence",
+            "meaning": "職業上の卓越性、仕事の質の高さ",
+            "usage": "常に professional excellence を追求することが求められる。"
+          },
+          {
+            "phrase": "safeguarding your well-being",
+            "meaning": "幸福・健康を守る",
+            "usage": "従業員の well-being を safeguarding するのは企業の責任だ。"
+          }
+        ]
       },
       {
         "en": "Hopefully, the coming week will be a bit more manageable, allowing for a semblance of normalcy.",
         "ja": "来週はもう少し無理のないペースで、平穏な日常を取り戻せることを願っています。",
-        "audioPath": "./assets/audio/t17791357132333430_11.wav"
+        "audioPath": "./assets/audio/t17791357132333430_11.wav",
+        "phrases": [
+          {
+            "phrase": "a bit more manageable",
+            "meaning": "もう少し管理しやすい、対処しやすい",
+            "usage": "Delegating some tasks made my workload a bit more manageable. (いくつかのタスクを委任したことで、私の仕事量はもう少し対処しやすくなった。)"
+          },
+          {
+            "phrase": "allowing for",
+            "meaning": "〜を可能にする、〜を考慮に入れる",
+            "usage": "The new schedule is designed to allow for unexpected delays. (新しいスケジュールは予期せぬ遅延を考慮に入れるように設計されている。)"
+          },
+          {
+            "phrase": "a semblance of normalcy",
+            "meaning": "ある程度の正常な状態、見せかけの平穏",
+            "usage": "After the crisis, the city slowly returned to a semblance of normalcy. (危機後、都市はゆっくりとある程度の正常な状態に戻った。)"
+          }
+        ]
       }
     ],
     "createdAt": "2026-05-18T20:21:53.233Z"
