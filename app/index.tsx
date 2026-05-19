@@ -74,20 +74,9 @@ export default function HomeScreen() {
                 <Text style={styles.brandSub}>shadowing studio</Text>
               </View>
 
-              <View style={styles.heroBlock}>
-                <Text style={styles.heroHeadline}>
-                  <Text style={styles.heroHeadlineLight}>The art of</Text>
-                  {'\n'}
-                  <Text style={styles.heroHeadlineBold}>sounding native.</Text>
-                </Text>
-              </View>
-
-              <View style={styles.metaRow}>
-                <View style={styles.metaDot} />
-                <Text style={styles.metaText}>
-                  Refined daily — from 700 to 990.
-                </Text>
-              </View>
+              <Text style={styles.heroSub}>
+                A daily shadowing ritual, curated by AI.
+              </Text>
 
               {/* Stats row */}
               <View style={styles.statsRow}>
@@ -230,44 +219,13 @@ const styles = StyleSheet.create({
     textTransform: 'lowercase',
     fontStyle: 'italic',
   },
-  heroBlock: {
-    marginBottom: 20,
-  },
-  heroHeadline: {
-    color: '#fafafa',
-    lineHeight: 48,
-  },
-  heroHeadlineLight: {
+  heroSub: {
     color: 'rgba(255,255,255,0.55)',
-    fontSize: 36,
-    fontWeight: '200',
-    letterSpacing: -1,
+    fontSize: 13,
+    fontWeight: '500',
+    letterSpacing: 0.3,
     fontStyle: 'italic',
-  },
-  heroHeadlineBold: {
-    color: '#fafafa',
-    fontSize: 42,
-    fontWeight: '800',
-    letterSpacing: -1.5,
-  },
-  metaRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    marginBottom: 22,
-  },
-  metaDot: {
-    width: 4,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: 'rgba(255,255,255,0.4)',
-  },
-  metaText: {
-    color: 'rgba(255,255,255,0.55)',
-    fontSize: 11,
-    fontWeight: '600',
-    letterSpacing: 1.5,
-    textTransform: 'uppercase',
+    marginBottom: 24,
   },
   statsRow: {
     flexDirection: 'row',
