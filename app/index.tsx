@@ -152,7 +152,7 @@ export default function HomeScreen() {
                 styles.phraseBookBtn,
                 pressed && styles.phraseBookBtnPressed,
               ]}
-              onPress={() => router.push('/phrasebook')}
+              onPress={() => router.push('/phrasebook' as any)}
             >
               <View style={styles.phraseBookLeft}>
                 <View style={styles.phraseBookIcon}>
