@@ -317,6 +317,7 @@ export default function TopicScreen() {
             index={index}
             isSpeaking={speakingIndex === index}
             isLoading={loadingIndex === index}
+            topicId={topic.id}
             onPlay={() => playSentence(index, item)}
             onWordTap={handleWordTap}
           />

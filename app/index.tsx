@@ -146,6 +146,26 @@ export default function HomeScreen() {
               </Pressable>
             )}
 
+            {/* Phrase book entry */}
+            <Pressable
+              style={({ pressed }) => [
+                styles.phraseBookBtn,
+                pressed && styles.phraseBookBtnPressed,
+              ]}
+              onPress={() => router.push('/phrasebook')}
+            >
+              <View style={styles.phraseBookLeft}>
+                <View style={styles.phraseBookIcon}>
+                  <Ionicons name="bookmark" size={18} color="#fbbf24" />
+                </View>
+                <View>
+                  <Text style={styles.phraseBookTitle}>熟語帳</Text>
+                  <Text style={styles.phraseBookSub}>保存したフレーズを復習</Text>
+                </View>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color="#94a3b8" />
+            </Pressable>
+
             {/* Section heading */}
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionTitle}>Stages</Text>
@@ -340,6 +360,41 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '800',
     letterSpacing: 0.3,
+  },
+  phraseBookBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(251,191,36,0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(251,191,36,0.25)',
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 22,
+  },
+  phraseBookBtnPressed: { opacity: 0.8 },
+  phraseBookLeft: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  phraseBookIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    backgroundColor: 'rgba(251,191,36,0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(251,191,36,0.35)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  phraseBookTitle: {
+    color: '#fde68a',
+    fontSize: 15,
+    fontWeight: '800',
+    letterSpacing: 0.3,
+  },
+  phraseBookSub: {
+    color: 'rgba(255,255,255,0.55)',
+    fontSize: 11,
+    marginTop: 1,
   },
   sectionHeader: {
     flexDirection: 'row',

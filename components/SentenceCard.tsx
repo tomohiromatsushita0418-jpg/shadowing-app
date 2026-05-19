@@ -10,12 +10,14 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import type { Sentence } from '../data/topics';
+import { usePhraseBook } from '../hooks/usePhraseBook';
 
 interface Props {
   sentence: Sentence;
   index: number;
   isSpeaking: boolean;
   isLoading: boolean;
+  topicId?: string;
   onPlay: () => void;
   onWordTap: (word: string) => void;
 }
@@ -25,12 +27,14 @@ export default function SentenceCard({
   index,
   isSpeaking,
   isLoading,
+  topicId,
   onPlay,
   onWordTap,
 }: Props) {
   const [showTranslation, setShowTranslation] = useState(true);
   const [pressedIdx, setPressedIdx] = useState<number | null>(null);
   const [stuckIdx, setStuckIdx] = useState<number | null>(null);
+  const { isSaved, togglePhrase } = usePhraseBook();
 
   const words = sentence.en.split(/(\s+)/);
 
@@ -125,29 +129,54 @@ export default function SentenceCard({
             <Ionicons name="bulb-outline" size={13} color="#fbbf24" />
             <Text style={styles.phrasesHeaderText}>覚えたい表現</Text>
           </View>
-          {sentence.phrases.map((p, i) => (
-            <TouchableOpacity
-              key={i}
-              activeOpacity={0.7}
-              onPress={() => {
-                try { Speech.stop(); } catch {}
-                Speech.speak(p.phrase, { language: 'en-US', rate: 0.85, pitch: 1.0 });
-              }}
-              style={styles.phraseItem}
-              accessibilityLabel={`Play phrase ${p.phrase}`}
-            >
-              <View style={styles.phraseHeaderRow}>
-                <Text selectable style={styles.phraseEn}>{p.phrase}</Text>
-                <Ionicons name="volume-medium-outline" size={14} color="#fbbf24" />
-              </View>
-              <Text selectable style={styles.phraseJa}>{p.meaning}</Text>
-              {p.usage && (
-                <Text selectable style={styles.phraseUsage}>
-                  💬 {p.usage}
-                </Text>
-              )}
-            </TouchableOpacity>
-          ))}
+          {sentence.phrases.map((p, i) => {
+            const saved = isSaved(p.phrase);
+            return (
+              <TouchableOpacity
+                key={i}
+                activeOpacity={0.7}
+                onPress={() => {
+                  try { Speech.stop(); } catch {}
+                  Speech.speak(p.phrase, { language: 'en-US', rate: 0.85, pitch: 1.0 });
+                }}
+                style={styles.phraseItem}
+                accessibilityLabel={`Play phrase ${p.phrase}`}
+              >
+                <View style={styles.phraseHeaderRow}>
+                  <Text selectable style={styles.phraseEn}>{p.phrase}</Text>
+                  <View style={styles.phraseActions}>
+                    <TouchableOpacity
+                      onPress={(e) => {
+                        e.stopPropagation();
+                        togglePhrase({
+                          phrase: p.phrase,
+                          meaning: p.meaning,
+                          usage: p.usage,
+                          topicId,
+                          sentenceEn: sentence.en,
+                        });
+                      }}
+                      hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                      accessibilityLabel={saved ? 'Remove from phrase book' : 'Save to phrase book'}
+                    >
+                      <Ionicons
+                        name={saved ? 'checkmark-circle' : 'add-circle-outline'}
+                        size={20}
+                        color={saved ? '#34d399' : '#94a3b8'}
+                      />
+                    </TouchableOpacity>
+                    <Ionicons name="volume-medium-outline" size={14} color="#fbbf24" />
+                  </View>
+                </View>
+                <Text selectable style={styles.phraseJa}>{p.meaning}</Text>
+                {p.usage && (
+                  <Text selectable style={styles.phraseUsage}>
+                    💬 {p.usage}
+                  </Text>
+                )}
+              </TouchableOpacity>
+            );
+          })}
         </View>
       )}
     </View>
@@ -268,6 +297,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 8,
+  },
+  phraseActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
   },
   phraseEn: {
     color: '#fde68a',

@@ -22,6 +22,10 @@ export default function RootLayout() {
           options={{ title: 'Stage', headerBackTitle: 'Home' }}
         />
         <Stack.Screen
+          name="phrasebook"
+          options={{ title: '熟語帳', headerBackTitle: 'Home' }}
+        />
+        <Stack.Screen
           name="topic/[id]"
           options={{ title: '', headerBackTitle: 'Back' }}
         />
