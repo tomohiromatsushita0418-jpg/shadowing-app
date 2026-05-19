@@ -75,16 +75,19 @@ export default function HomeScreen() {
               </View>
 
               <View style={styles.heroBlock}>
-                <Text style={styles.heroWord}>Listen.</Text>
-                <Text style={styles.heroWord}>Mirror.</Text>
-                <Text style={[styles.heroWord, styles.heroWordAccent]}>
-                  Become fluent.
+                <Text style={styles.heroHeadline}>
+                  <Text style={styles.heroHeadlineLight}>The art of</Text>
+                  {'\n'}
+                  <Text style={styles.heroHeadlineBold}>sounding native.</Text>
                 </Text>
               </View>
 
-              <Text style={styles.heroSub}>
-                A daily shadowing ritual, curated by AI.
-              </Text>
+              <View style={styles.metaRow}>
+                <View style={styles.metaDot} />
+                <Text style={styles.metaText}>
+                  Refined daily — from 700 to 990.
+                </Text>
+              </View>
 
               {/* Stats row */}
               <View style={styles.statsRow}>
@@ -228,26 +231,43 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   heroBlock: {
-    marginBottom: 16,
+    marginBottom: 20,
   },
-  heroWord: {
-    color: '#f5f5f7',
-    fontSize: 34,
-    fontWeight: '300',
-    lineHeight: 40,
-    letterSpacing: -1,
-  },
-  heroWordAccent: {
+  heroHeadline: {
     color: '#fafafa',
-    fontWeight: '700',
+    lineHeight: 48,
   },
-  heroSub: {
-    color: 'rgba(255,255,255,0.5)',
-    fontSize: 12,
-    fontWeight: '500',
-    letterSpacing: 0.5,
+  heroHeadlineLight: {
+    color: 'rgba(255,255,255,0.55)',
+    fontSize: 36,
+    fontWeight: '200',
+    letterSpacing: -1,
     fontStyle: 'italic',
-    marginBottom: 24,
+  },
+  heroHeadlineBold: {
+    color: '#fafafa',
+    fontSize: 42,
+    fontWeight: '800',
+    letterSpacing: -1.5,
+  },
+  metaRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 22,
+  },
+  metaDot: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: 'rgba(255,255,255,0.4)',
+  },
+  metaText: {
+    color: 'rgba(255,255,255,0.55)',
+    fontSize: 11,
+    fontWeight: '600',
+    letterSpacing: 1.5,
+    textTransform: 'uppercase',
   },
   statsRow: {
     flexDirection: 'row',
