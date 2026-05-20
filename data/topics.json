@@ -360,36 +360,181 @@
       {
         "en": "The protracted global semiconductor shortage continues to send ripples across various industries, underscoring the critical role these tiny components play in modern economies.",
         "ja": "長引く世界的な半導体不足は、現代経済におけるこれらの微小部品の重要性を浮き彫りにし、様々な産業に影響を与え続けています。",
-        "audioPath": "./assets/audio/t17789131490304654_0.wav"
+        "audioPath": "./assets/audio/t17789131490304654_0.wav",
+        "phrases": [
+          {
+            "phrase": "send ripples across",
+            "meaning": "（影響などが）〜に波及する、広がる",
+            "usage": "The news sent ripples across the financial markets. (そのニュースは金融市場に波及した。)"
+          },
+          {
+            "phrase": "underscoring the critical role",
+            "meaning": "〜の極めて重要な役割を強調する",
+            "usage": "The success of the project is underscoring the critical role of teamwork. (プロジェクトの成功はチームワークの極めて重要な役割を強調している。)"
+          },
+          {
+            "phrase": "play a role in",
+            "meaning": "〜において役割を果たす",
+            "usage": "Technology plays a role in modern economies. (テクノロジーは現代経済において役割を果たす。)"
+          }
+        ]
       },
       {
         "en": "From automotive production lines to consumer electronics and advanced computing, the scarcity has throttled output, leading to significant revenue shortfalls and supply chain disruptions.",
         "ja": "自動車から家電、先端コンピューティングに至るまで、この供給不足は生産を滞らせ、大幅な収益減とサプライチェーンの混乱を招いています。",
-        "audioPath": "./assets/audio/t17789131490304654_1.wav"
+        "audioPath": "./assets/audio/t17789131490304654_1.wav",
+        "phrases": [
+          {
+            "phrase": "throttled output",
+            "meaning": "生産を抑制した、生産量を絞った",
+            "usage": "The factory throttled output due to low demand. (需要低迷のため、工場は生産を抑制した。)"
+          },
+          {
+            "phrase": "revenue shortfalls",
+            "meaning": "減収、歳入不足",
+            "usage": "The economic downturn resulted in unexpected revenue shortfalls. (景気後退は予期せぬ減収をもたらした。)"
+          },
+          {
+            "phrase": "supply chain disruptions",
+            "meaning": "サプライチェーンの混乱",
+            "usage": "Natural disasters can cause widespread supply chain disruptions. (自然災害は広範囲にわたるサプライチェーンの混乱を引き起こす可能性がある。)"
+          }
+        ]
       },
       {
         "en": "Beyond mere economic ramifications, the concentration of advanced chip manufacturing in a few key regions has ignited geopolitical tensions and prompted nations to reassess their strategic dependencies.",
         "ja": "高度な半導体の製造が一部の地域に集中していることは、単なる経済的影響にとどまらず、地政学的な緊張を高め、各国に戦略的依存の見直しを迫っています。",
-        "audioPath": "./assets/audio/t17789131490304654_2.wav"
+        "audioPath": "./assets/audio/t17789131490304654_2.wav",
+        "phrases": [
+          {
+            "phrase": "Beyond mere X",
+            "meaning": "単なるXを超えて、Xにとどまらず",
+            "usage": "Beyond mere profits, our company values social contribution."
+          },
+          {
+            "phrase": "economic ramifications",
+            "meaning": "経済的影響、経済的波及効果",
+            "usage": "The decision had wide-ranging economic ramifications."
+          },
+          {
+            "phrase": "ignite tensions",
+            "meaning": "緊張に火をつける、緊張を高める",
+            "usage": "The incident could ignite tensions between the two countries."
+          },
+          {
+            "phrase": "prompt X to Y",
+            "meaning": "XにYを促す",
+            "usage": "The new policy prompted many companies to reconsider their strategies."
+          }
+        ]
       },
       {
         "en": "Taiwan, home to TSMC, a dominant player in the foundry market, finds itself at the epicenter of this intricate global supply network, granting it considerable leverage on the world stage.",
         "ja": "ファウンドリ市場で圧倒的なシェアを誇るTSMCの本拠地である台湾は、この複雑なグローバルサプライ網の中心に位置し、世界に大きな影響力を行使しています。",
-        "audioPath": "./assets/audio/t17789131490304654_3.wav"
+        "audioPath": "./assets/audio/t17789131490304654_3.wav",
+        "phrases": [
+          {
+            "phrase": "dominant player",
+            "meaning": "有力企業、支配的なプレーヤー",
+            "usage": "市場で大きなシェアを持つ企業を指す際に使う"
+          },
+          {
+            "phrase": "at the epicenter of",
+            "meaning": "〜の中心に、〜の震源地に",
+            "usage": "問題や活動の最も重要な場所に位置する状況を表す"
+          },
+          {
+            "phrase": "considerable leverage",
+            "meaning": "かなりの影響力、交渉力",
+            "usage": "交渉や取引において優位に立つ力を意味する"
+          },
+          {
+            "phrase": "on the world stage",
+            "meaning": "国際舞台で",
+            "usage": "国際的な活動や影響力を語る際に用いられる"
+          }
+        ]
       },
       {
         "en": "Consequently, major powers are now vigorously pursuing strategies to bolster domestic production capabilities and diversify their supply chains, aiming to mitigate future vulnerabilities.",
         "ja": "こうした状況を受け、主要国は将来的なリスクを軽減するため、国内生産能力の強化とサプライチェーンの多様化に向けた戦略を精力的に推進しています。",
-        "audioPath": "./assets/audio/t17789131490304654_4.wav"
+        "audioPath": "./assets/audio/t17789131490304654_4.wav",
+        "phrases": [
+          {
+            "phrase": "vigorously pursuing strategies",
+            "meaning": "戦略を精力的に推進する／追求する",
+            "usage": "政府は経済成長戦略を精力的に推進している、のように使う。"
+          },
+          {
+            "phrase": "bolster domestic production capabilities",
+            "meaning": "国内生産能力を強化する",
+            "usage": "企業の競争力を強化する文脈で使われる。"
+          },
+          {
+            "phrase": "diversify their supply chains",
+            "meaning": "サプライチェーンを多様化する",
+            "usage": "リスク分散や安定供給の文脈で頻繁に使われる。"
+          },
+          {
+            "phrase": "mitigate future vulnerabilities",
+            "meaning": "将来の脆弱性を軽減する",
+            "usage": "リスク管理や危機対策の文脈でよく使われる。"
+          }
+        ]
       },
       {
         "en": "Billions of dollars are being earmarked for new fabrication plants and research initiatives, reflecting a collective imperative to secure national technological sovereignty.",
         "ja": "国家の技術的自立を確保するという共通の課題意識から、巨額の資金が新たな製造拠点や研究開発に投じられています。",
-        "audioPath": "./assets/audio/t17789131490304654_5.wav"
+        "audioPath": "./assets/audio/t17789131490304654_5.wav",
+        "phrases": [
+          {
+            "phrase": "earmarked for",
+            "meaning": "〜に充てられる、〜のために確保される",
+            "usage": "予算や資源が特定の目的のために割り当てられる状況で使う。"
+          },
+          {
+            "phrase": "fabrication plants",
+            "meaning": "製造工場、生産施設",
+            "usage": "半導体や精密機器などの生産拠点について話す際によく登場する。"
+          },
+          {
+            "phrase": "research initiatives",
+            "meaning": "研究プロジェクト、研究構想",
+            "usage": "新しい研究開発の取り組みや計画を指す。"
+          },
+          {
+            "phrase": "national technological sovereignty",
+            "meaning": "国家の技術主権、技術的自立",
+            "usage": "国家が特定の技術分野で他国に依存しない状態を指す。"
+          }
+        ]
       },
       {
         "en": "However, establishing state-of-the-art foundries is an immensely capital-intensive and time-consuming endeavor, fraught with technical complexities and environmental considerations.",
-        "ja": "しかし、最先端の半導体製造拠点の建設は、莫大な設備投資と時間を要するだけでなく、高度な技術的課題や環境への配慮といった複雑な問題も伴います。"
+        "ja": "しかし、最先端の半導体製造拠点の建設は、莫大な設備投資と時間を要するだけでなく、高度な技術的課題や環境への配慮といった複雑な問題も伴います。",
+        "audioPath": "./assets/audio/t17789131490304654_6.wav",
+        "phrases": [
+          {
+            "phrase": "state-of-the-art",
+            "meaning": "最先端の、最新式の",
+            "usage": "state-of-the-art technology (最先端技術) のように使う。"
+          },
+          {
+            "phrase": "capital-intensive",
+            "meaning": "資本集約的な、多額の資本を要する",
+            "usage": "製造業はcapital-intensiveな産業だ。"
+          },
+          {
+            "phrase": "time-consuming",
+            "meaning": "時間のかかる、手間のかかる",
+            "usage": "報告書の作成はtime-consumingな作業だ。"
+          },
+          {
+            "phrase": "fraught with",
+            "meaning": "〜に満ちた、〜を伴う (困難や危険など)",
+            "usage": "The negotiations were fraught with tension. (交渉は緊張に満ちていた。)"
+          }
+        ]
       },
       {
         "en": "This intricate dance between national security interests and global economic interdependence necessitates delicate diplomatic maneuvering, as countries vie for technological supremacy while also relying on collaborative ecosystems.",
@@ -495,47 +640,235 @@
       {
         "en": "Leveraging advanced data analytics and artificial intelligence is crucial for deriving actionable insights and personalizing customer experiences at scale.",
         "ja": "高度なデータ分析と人工知能を最大限に活用することは、実用的な洞察を引き出し、顧客体験を大規模にパーソナライズするために不可欠です。",
-        "audioPath": "./assets/audio/t17789547858732949_3.wav"
+        "audioPath": "./assets/audio/t17789547858732949_3.wav",
+        "phrases": [
+          {
+            "phrase": "Leveraging advanced data analytics",
+            "meaning": "高度なデータ分析を活用すること",
+            "usage": "「Leveraging X」で「Xを活用する」という意味になり、ビジネスシーンでよく使われます。"
+          },
+          {
+            "phrase": "deriving actionable insights",
+            "meaning": "実用的な洞察を得ること",
+            "usage": "「actionable」は「実行可能な」「実用的な」という意味で、ビジネスの意思決定に役立つ情報を示す際によく使われます。"
+          },
+          {
+            "phrase": "personalizing customer experiences",
+            "meaning": "顧客体験をパーソナライズすること",
+            "usage": "「personalize」は「〜を個人向けにする」「〜をパーソナライズする」という意味で、マーケティングやサービス提供の文脈で頻出します。"
+          },
+          {
+            "phrase": "at scale",
+            "meaning": "大規模に、広範囲に",
+            "usage": "「scale」は「規模」を意味し、「at scale」で「大規模な規模で」というニュアンスを表します。"
+          }
+        ]
       },
       {
         "en": "Transitioning towards agile methodologies facilitates rapid prototyping, iterative development, and quicker adaptation to evolving market demands.",
         "ja": "アジャイル手法への移行は、迅速なプロトタイピング、反復的な開発、そして変化する市場の要求へのより迅速な適応を促進します。",
-        "audioPath": "./assets/audio/t17789547858732949_4.wav"
+        "audioPath": "./assets/audio/t17789547858732949_4.wav",
+        "phrases": [
+          {
+            "phrase": "Transitioning towards",
+            "meaning": "〜へ移行する、〜へと転換する",
+            "usage": "企業が新しいシステムや戦略へ移行する際によく使う表現。"
+          },
+          {
+            "phrase": "adaptation to",
+            "meaning": "〜への適応",
+            "usage": "環境変化や新しい状況への適応について話す際に頻繁に用いられる。"
+          },
+          {
+            "phrase": "evolving market demands",
+            "meaning": "変化する市場の要求、進化する市場のニーズ",
+            "usage": "経営戦略や製品開発の議論で、市場の動向を語る際に非常に実用的。"
+          }
+        ]
       },
       {
         "en": "A customer-centric approach, prioritizing seamless user journeys across all touchpoints, is fundamental to enhancing engagement and fostering brand loyalty.",
         "ja": "全てのタッチポイントでシームレスなユーザー体験を優先する顧客中心のアプローチは、エンゲージメントを高め、ブランドロイヤルティを醸成するための基本です。",
-        "audioPath": "./assets/audio/t17789547858732949_5.wav"
+        "audioPath": "./assets/audio/t17789547858732949_5.wav",
+        "phrases": [
+          {
+            "phrase": "customer-centric approach",
+            "meaning": "顧客中心のアプローチ",
+            "usage": "This approach aims to put the customer's needs and satisfaction first."
+          },
+          {
+            "phrase": "seamless user journeys",
+            "meaning": "シームレスなユーザー体験",
+            "usage": "It refers to a smooth and uninterrupted experience for users interacting with a product or service."
+          },
+          {
+            "phrase": "fostering brand loyalty",
+            "meaning": "ブランドロイヤルティを育成する",
+            "usage": "This means encouraging customers to repeatedly purchase from or engage with a specific brand."
+          }
+        ]
       },
       {
         "en": "Investing significantly in upskilling and reskilling the workforce is indispensable to bridge the talent gap and empower employees to embrace new digital tools and processes.",
         "ja": "労働力のスキルアップとリスキリングに多大な投資を行うことは、人材ギャップを埋め、従業員が新しいデジタルツールやプロセスを受け入れる力を与える上で不可欠です。",
-        "audioPath": "./assets/audio/t17789547858732949_6.wav"
+        "audioPath": "./assets/audio/t17789547858732949_6.wav",
+        "phrases": [
+          {
+            "phrase": "upskilling and reskilling",
+            "meaning": "従業員のスキルアップと再教育",
+            "usage": "企業が人材育成のために積極的に行うべき施策です。"
+          },
+          {
+            "phrase": "indispensable to",
+            "meaning": "〜に不可欠である",
+            "usage": "This knowledge is indispensable to our project. この知識は我々のプロジェクトに不可欠だ。"
+          },
+          {
+            "phrase": "bridge the talent gap",
+            "meaning": "人材不足を解消する",
+            "usage": "企業が成長を続けるために重要な課題です。"
+          },
+          {
+            "phrase": "embrace new digital tools",
+            "meaning": "新しいデジタルツールを受け入れる",
+            "usage": "変化の激しい現代において、企業文化として推奨されるべき行動です。"
+          }
+        ]
       },
       {
         "en": "Seamless integration of cloud-native applications and robust cybersecurity measures are foundational elements for building a resilient and scalable digital infrastructure.",
         "ja": "クラウドネイティブアプリケーションのシームレスな統合と、堅牢なサイバーセキュリティ対策は、レジリエントでスケーラブルなデジタルインフラを構築するための基盤となる要素です。",
-        "audioPath": "./assets/audio/t17789547858732949_7.wav"
+        "audioPath": "./assets/audio/t17789547858732949_7.wav",
+        "phrases": [
+          {
+            "phrase": "Seamless integration",
+            "meaning": "継ぎ目のない統合、シームレスな統合",
+            "usage": "異なるシステムやサービスを円滑に連携させる状況で使われる。"
+          },
+          {
+            "phrase": "robust cybersecurity measures",
+            "meaning": "堅牢なサイバーセキュリティ対策",
+            "usage": "企業や組織が情報資産を守るための強力な対策を指す。"
+          },
+          {
+            "phrase": "foundational elements",
+            "meaning": "基本的な要素、基盤となる要素",
+            "usage": "何かの土台や根幹を成す重要な構成要素について述べる際に使う。"
+          },
+          {
+            "phrase": "resilient and scalable",
+            "meaning": "回復力があり拡張可能な",
+            "usage": "システムやインフラが障害に強く、需要の増加に対応できることを表現する。"
+          }
+        ]
       },
       {
         "en": "Defining clear key performance indicators and establishing a robust measurement framework are essential for tracking progress and demonstrating tangible ROI from transformation initiatives.",
         "ja": "明確な主要業績評価指標（KPI）を定義し、堅固な測定フレームワークを確立することは、進捗を追跡し、変革イニシアチブからの具体的な投資収益率（ROI）を実証するために不可欠です。",
-        "audioPath": "./assets/audio/t17789547858732949_8.wav"
+        "audioPath": "./assets/audio/t17789547858732949_8.wav",
+        "phrases": [
+          {
+            "phrase": "key performance indicators",
+            "meaning": "主要業績評価指標 (KPI)",
+            "usage": "KPIを設定する (set KPIs)、KPIを達成する (achieve KPIs) のように使う。"
+          },
+          {
+            "phrase": "robust measurement framework",
+            "meaning": "堅牢な測定の枠組み",
+            "usage": "robust system (堅牢なシステム) や robust economy (力強い経済) のように「頑丈な」「力強い」の意味で使う。"
+          },
+          {
+            "phrase": "tracking progress",
+            "meaning": "進捗を追跡する",
+            "usage": "プロジェクトの進捗を追跡する (track project progress) や、目標達成に向けた進捗を管理する、のように使う。"
+          },
+          {
+            "phrase": "demonstrating tangible ROI",
+            "meaning": "目に見える投資収益率を示す",
+            "usage": "tangible results (具体的な結果) や tangible assets (有形資産) のように「形のある」「具体的な」の意味で使う。"
+          }
+        ]
       },
       {
         "en": "Overcoming inherent resistance to change requires transparent communication, active employee involvement, and highlighting the long-term benefits for both individuals and the organization.",
         "ja": "変化に対する根源的な抵抗を克服するには、透明性のあるコミュニケーション、従業員の積極的な関与、そして個人と組織双方にとっての長期的な利益を強調することが求められます。",
-        "audioPath": "./assets/audio/t17789547858732949_9.wav"
+        "audioPath": "./assets/audio/t17789547858732949_9.wav",
+        "phrases": [
+          {
+            "phrase": "inherent resistance to change",
+            "meaning": "変化に対する根源的な抵抗",
+            "usage": "組織にはinherent resistance to changeがつきものだ。"
+          },
+          {
+            "phrase": "transparent communication",
+            "meaning": "透明性のあるコミュニケーション",
+            "usage": "信頼構築にはtransparent communicationが不可欠です。"
+          },
+          {
+            "phrase": "active employee involvement",
+            "meaning": "従業員の積極的な関与",
+            "usage": "プロジェクトの成功にはactive employee involvementが欠かせません。"
+          },
+          {
+            "phrase": "highlighting the long-term benefits",
+            "meaning": "長期的な利益を強調すること",
+            "usage": "提案の際にはlong-term benefitsをhighlightingすることが重要です。"
+          }
+        ]
       },
       {
         "en": "While immediate tactical wins can build momentum, the overarching strategy must align with a long-term vision to avoid fragmented efforts and ensure sustainable growth.",
         "ja": "即座の戦術的成功が勢いを生む一方で、断片的な取り組みを避け、持続可能な成長を確実にするためには、全体的な戦略が長期的なビジョンと合致している必要があります。",
-        "audioPath": "./assets/audio/t17789547858732949_10.wav"
+        "audioPath": "./assets/audio/t17789547858732949_10.wav",
+        "phrases": [
+          {
+            "phrase": "build momentum",
+            "meaning": "勢いをつけさせる、弾みをつける",
+            "usage": "The new marketing campaign helped to build momentum for the product launch."
+          },
+          {
+            "phrase": "overarching strategy",
+            "meaning": "包括的な戦略、全体的な戦略",
+            "usage": "The company needs an overarching strategy to guide its various departments."
+          },
+          {
+            "phrase": "long-term vision",
+            "meaning": "長期的なビジョン、将来像",
+            "usage": "A clear long-term vision is essential for sustainable business development."
+          },
+          {
+            "phrase": "sustainable growth",
+            "meaning": "持続可能な成長",
+            "usage": "The government is focused on achieving sustainable growth without harming the environment."
+          }
+        ]
       },
       {
         "en": "Ultimately, digital transformation is not a one-off project but an ongoing evolutionary journey requiring continuous adaptation, learning, and reinvention to maintain competitive edge.",
         "ja": "究極的に、デジタルトランスフォーメーションは一度きりのプロジェクトではなく、競争優位性を維持するために継続的な適応、学習、そして再創造を要する進化し続ける旅路なのです。",
-        "audioPath": "./assets/audio/t17789547858732949_11.wav"
+        "audioPath": "./assets/audio/t17789547858732949_11.wav",
+        "phrases": [
+          {
+            "phrase": "one-off project",
+            "meaning": "一度きりのプロジェクト",
+            "usage": "This is not a one-off project, but a long-term strategy. (これは一度きりのプロジェクトではなく、長期的な戦略です。)"
+          },
+          {
+            "phrase": "evolutionary journey",
+            "meaning": "進化の過程、発展の道のり",
+            "usage": "The company is on an evolutionary journey to become more sustainable. (その会社は、より持続可能になるための進化の過程にあります。)"
+          },
+          {
+            "phrase": "continuous adaptation",
+            "meaning": "継続的な適応",
+            "usage": "Continuous adaptation is key to surviving in a rapidly changing market. (急速に変化する市場で生き残るためには、継続的な適応が鍵となります。)"
+          },
+          {
+            "phrase": "competitive edge",
+            "meaning": "競争優位性、競争力",
+            "usage": "Technology can give a company a significant competitive edge. (テクノロジーは企業に大きな競争優位性をもたらすことができます。)"
+          }
+        ]
       }
     ],
     "createdAt": "2026-05-16T18:06:25.873Z"
@@ -1388,19 +1721,378 @@
       {
         "en": "Therefore, agility and a swift execution timeline are critical to securing a competitive advantage before the market consolidates further.",
         "ja": "したがって、市場がさらに統合される前に競争優位性を確保するためには、機敏性と迅速な実行スケジュールが極めて重要です。",
-        "audioPath": "./assets/audio/t17792240295651552_9.wav"
+        "audioPath": "./assets/audio/t17792240295651552_9.wav",
+        "phrases": [
+          {
+            "phrase": "swift execution timeline",
+            "meaning": "迅速な実行スケジュール",
+            "usage": "プロジェクトの成功には、swift execution timeline が不可欠です。"
+          },
+          {
+            "phrase": "securing a competitive advantage",
+            "meaning": "競争優位性を確保する",
+            "usage": "新しい技術を導入することで、securing a competitive advantage を目指します。"
+          },
+          {
+            "phrase": "market consolidates",
+            "meaning": "市場が統合される、市場が寡占化する",
+            "usage": "市場が統合される前に、迅速な行動が必要です。"
+          }
+        ]
       },
       {
         "en": "Naturally, this strategic shift entails inherent risks, including potential overvaluation and the challenge of scaling a nascent technology.",
         "ja": "当然のことながら、この戦略的転換は、過大評価の可能性や新興技術のスケールアップの課題など、固有のリスクを伴います。",
-        "audioPath": "./assets/audio/t17792240295651552_10.wav"
+        "audioPath": "./assets/audio/t17792240295651552_10.wav",
+        "phrases": [
+          {
+            "phrase": "strategic shift",
+            "meaning": "戦略的転換",
+            "usage": "The company announced a strategic shift towards digital services. (同社はデジタルサービスへの戦略的転換を発表した。)"
+          },
+          {
+            "phrase": "entails inherent risks",
+            "meaning": "内在的なリスクを伴う",
+            "usage": "Launching a new product often entails inherent risks such as market rejection. (新製品の発売は、市場からの拒絶といった内在的なリスクを伴うことが多い。)"
+          },
+          {
+            "phrase": "scaling a nascent technology",
+            "meaning": "新興技術を普及・拡大させること",
+            "usage": "The main challenge is scaling a nascent technology to meet global demand. (主な課題は、世界的な需要に応えるために新興技術を普及・拡大させることだ。)"
+          }
+        ]
       },
       {
         "en": "Nevertheless, the long-term strategic imperative to future-proof our enterprise against obsolescence far outweighs these immediate concerns.",
         "ja": "それにもかかわらず、企業を将来にわたって陳腐化から守るという長期的な戦略的要件は、これら目先の懸念をはるかに上回るものです。",
-        "audioPath": "./assets/audio/t17792240295651552_11.wav"
+        "audioPath": "./assets/audio/t17792240295651552_11.wav",
+        "phrases": [
+          {
+            "phrase": "long-term strategic imperative",
+            "meaning": "長期的な戦略的必須事項",
+            "usage": "企業の持続的成長のために不可欠な戦略的意思決定を指す場合に使われる。"
+          },
+          {
+            "phrase": "future-proof against obsolescence",
+            "meaning": "陳腐化に対して将来にわたって通用するようにする",
+            "usage": "技術革新や市場の変化に対応し、製品やサービスが時代遅れにならないように対策を講じること。"
+          },
+          {
+            "phrase": "far outweighs",
+            "meaning": "〜をはるかに上回る、〜よりはるかに重要である",
+            "usage": "短期的な問題よりも長期的な目標の重要性を強調する際に用いられる。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-05-19T20:53:49.566Z"
+  },
+  {
+    "id": "t17793122018560327",
+    "title": "Navigating Global Food Insecurity",
+    "titleJa": "世界の食料不安を乗り越える",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The intricate web of global food security is currently experiencing unprecedented strain, exacerbated by a confluence of geopolitical tensions and extreme climatic events.",
+        "ja": "現在、世界の食料安全保障を巡る複雑な網の目が未曾有の緊張にさらされており、地政学的緊張と異常気象の複合的な影響によって悪化の一途をたどっています。",
+        "audioPath": "./assets/audio/t17793122018560327_0.wav",
+        "phrases": [
+          {
+            "phrase": "intricate web",
+            "meaning": "複雑な網の目、込み入った仕組み",
+            "usage": "The intricate web of international relations can be difficult to understand. (国際関係の複雑な網の目は理解が難しいことがある。)"
+          },
+          {
+            "phrase": "experiencing unprecedented strain",
+            "meaning": "前例のない負担・圧力を経験している",
+            "usage": "The healthcare system is experiencing unprecedented strain due to the pandemic. (パンデミックにより、医療システムは前例のない負担を経験している。)"
+          },
+          {
+            "phrase": "confluence of",
+            "meaning": "〜の合流、〜が同時に起こること",
+            "usage": "A confluence of factors led to the company's success. (多くの要因が重なって、その会社の成功につながった。)"
+          },
+          {
+            "phrase": "exacerbated by",
+            "meaning": "〜によって悪化させられた",
+            "usage": "The economic crisis was exacerbated by rising inflation. (インフレの高騰によって、経済危機は悪化した。)"
+          }
+        ]
+      },
+      {
+        "en": "Lingering supply chain disruptions, a legacy of the recent pandemic, continue to impede the timely and equitable distribution of essential foodstuffs worldwide.",
+        "ja": "最近のパンデミックが残した遺産であるサプライチェーンの混乱は依然として解消されず、世界中で不可欠な食料品のタイムリーかつ公平な流通を妨げ続けています。",
+        "audioPath": "./assets/audio/t17793122018560327_1.wav",
+        "phrases": [
+          {
+            "phrase": "lingering supply chain disruptions",
+            "meaning": "長引くサプライチェーンの混乱",
+            "usage": "The company is still facing lingering supply chain disruptions from the earthquake."
+          },
+          {
+            "phrase": "impede the timely and equitable distribution",
+            "meaning": "タイムリーで公平な分配を妨げる",
+            "usage": "Bureaucracy can often impede the timely and equitable distribution of aid."
+          },
+          {
+            "phrase": "a legacy of",
+            "meaning": "〜の遺産、〜の負の遺産",
+            "usage": "The economic problems are a legacy of the previous government's policies."
+          }
+        ]
+      },
+      {
+        "en": "Soaring commodity prices, particularly for staple grains, have pushed millions into acute food insecurity, disproportionately affecting low-income nations.",
+        "ja": "特に主要穀物の商品価格の急騰は、数百万の人々を深刻な食料不安に陥れており、低所得国に不釣り合いなほど大きな影響を与えています。",
+        "audioPath": "./assets/audio/t17793122018560327_2.wav",
+        "phrases": [
+          {
+            "phrase": "soaring commodity prices",
+            "meaning": "急騰する商品価格",
+            "usage": "The report highlighted soaring commodity prices as a major economic concern."
+          },
+          {
+            "phrase": "pushed millions into",
+            "meaning": "何百万人もの人々を〜の状態に追い込む",
+            "usage": "Economic downturns can push millions into poverty."
+          },
+          {
+            "phrase": "acute food insecurity",
+            "meaning": "深刻な食料不安",
+            "usage": "International aid is crucial to combat acute food insecurity in the region."
+          },
+          {
+            "phrase": "disproportionately affecting",
+            "meaning": "不均衡に影響を与えている",
+            "usage": "Climate change is disproportionately affecting vulnerable communities."
+          }
+        ]
+      },
+      {
+        "en": "Droughts, floods, and erratic weather patterns, undeniably linked to climate change, are devastating agricultural yields in key breadbasket regions.",
+        "ja": "干ばつ、洪水、そして不規則な気象パターンは、気候変動と疑いなく関連しており、主要な穀倉地帯における農業生産量を壊滅させています。",
+        "audioPath": "./assets/audio/t17793122018560327_3.wav",
+        "phrases": [
+          {
+            "phrase": "erratic weather patterns",
+            "meaning": "異常気象",
+            "usage": "erratic weather patterns have become more frequent in recent years のように使われます。"
+          },
+          {
+            "phrase": "undeniably linked to",
+            "meaning": "〜と否定できないほど結びついている",
+            "usage": "This problem is undeniably linked to a lack of funding. のように、原因と結果の関係を強調する際に使われます。"
+          },
+          {
+            "phrase": "devastating agricultural yields",
+            "meaning": "農業生産高に壊滅的な打撃を与える",
+            "usage": "Severe storms are devastating agricultural yields in the region. のように、自然災害などが農作物に与える甚大な影響を表します。"
+          },
+          {
+            "phrase": "key breadbasket regions",
+            "meaning": "主要な穀倉地帯",
+            "usage": "The country relies on these key breadbasket regions for its food supply. のように、食料生産の要となる地域を指します。"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, ongoing armed conflicts have not only displaced populations but also disrupted farming cycles and destroyed critical infrastructure vital for food production.",
+        "ja": "さらに、進行中の武力紛争は、住民を避難させただけでなく、農業サイクルを寸断し、食料生産に不可欠な重要インフラをも破壊しました。",
+        "audioPath": "./assets/audio/t17793122018560327_4.wav",
+        "phrases": [
+          {
+            "phrase": "ongoing armed conflicts",
+            "meaning": "継続中の武力紛争",
+            "usage": "The report detailed the impact of ongoing armed conflicts on regional stability."
+          },
+          {
+            "phrase": "disrupted farming cycles",
+            "meaning": "農業のサイクルを混乱させた",
+            "usage": "Droughts have severely disrupted farming cycles in the region."
+          },
+          {
+            "phrase": "vital for food production",
+            "meaning": "食料生産にとって不可欠な",
+            "usage": "Investment in irrigation systems is vital for food production in arid areas."
+          }
+        ]
+      },
+      {
+        "en": "International organizations are scrambling to coordinate humanitarian aid, yet the sheer scale of the crisis often overwhelms existing response mechanisms.",
+        "ja": "国際機関は人道援助の調整に奔走していますが、危機の規模が非常に大きいため、既存の対応メカニズムがしばしば圧倒されています。",
+        "audioPath": "./assets/audio/t17793122018560327_5.wav",
+        "phrases": [
+          {
+            "phrase": "scrambling to coordinate",
+            "meaning": "調整に躍起になっている",
+            "usage": "They are scrambling to meet the deadline. (締め切りに間に合わせようと躍起になっている)"
+          },
+          {
+            "phrase": "humanitarian aid",
+            "meaning": "人道支援",
+            "usage": "The country is in urgent need of humanitarian aid. (その国は人道支援を緊急に必要としている)"
+          },
+          {
+            "phrase": "sheer scale",
+            "meaning": "純粋な規模、途方もない規模",
+            "usage": "The sheer scale of the problem is daunting. (問題の途方もない規模に圧倒される)"
+          },
+          {
+            "phrase": "overwhelms existing response mechanisms",
+            "meaning": "既存の対応メカニズムを圧倒する、手に負えなくさせる",
+            "usage": "The sudden influx of refugees overwhelmed the local infrastructure. (突然の難民の流入が、現地のインフラを手に負えなくさせた)"
+          }
+        ]
+      },
+      {
+        "en": "Policymakers worldwide are grappling with the imperative to balance domestic food security with global trade obligations and sustainable environmental practices.",
+        "ja": "世界中の政策立案者は、国内の食料安全保障を国際貿易義務および持続可能な環境慣行とどのように両立させるかという喫緊の課題に取り組んでいます。",
+        "audioPath": "./assets/audio/t17793122018560327_6.wav",
+        "phrases": [
+          {
+            "phrase": "grappling with",
+            "meaning": "〜に苦心している、〜に取り組んでいる",
+            "usage": "They are grappling with the issue of climate change. (彼らは気候変動の問題に取り組んでいる。)"
+          },
+          {
+            "phrase": "food security",
+            "meaning": "食料安全保障",
+            "usage": "Ensuring food security for all citizens is a top priority. (国民全員の食料安全保障の確保は最優先事項だ。)"
+          },
+          {
+            "phrase": "global trade obligations",
+            "meaning": "国際貿易上の義務",
+            "usage": "Countries must adhere to their global trade obligations. (各国は国際貿易上の義務を遵守しなければならない。)"
+          },
+          {
+            "phrase": "sustainable environmental practices",
+            "meaning": "持続可能な環境慣行",
+            "usage": "Businesses are adopting sustainable environmental practices to reduce their impact. (企業は環境への影響を減らすために持続可能な環境慣行を採用している。)"
+          }
+        ]
+      },
+      {
+        "en": "Investments in climate-resilient agriculture, such as drought-resistant crops and precision farming techniques, are seen as pivotal long-term solutions.",
+        "ja": "干ばつに強い作物や精密農業技術のような気候変動に耐性のある農業への投資は、極めて重要な長期的な解決策と見なされています。",
+        "audioPath": "./assets/audio/t17793122018560327_7.wav",
+        "phrases": [
+          {
+            "phrase": "climate-resilient",
+            "meaning": "気候変動に強い、気候変動適応型の",
+            "usage": "\"resilient\" は「回復力のある」という意味で、\"resilient economy\" や \"resilient supply chain\" などもよく使う。"
+          },
+          {
+            "phrase": "precision farming",
+            "meaning": "精密農業",
+            "usage": "\"precision medicine\" (精密医療) や \"precision engineering\" (精密工学) など、\"precision\" を使った専門用語は他にもある。"
+          },
+          {
+            "phrase": "pivotal long-term solutions",
+            "meaning": "極めて重要な長期的な解決策",
+            "usage": "\"pivotal role\" (極めて重要な役割) や \"pivotal moment\" (極めて重要な局面) のように、\"pivotal\" は様々な名詞と組み合わせて使える。"
+          }
+        ]
+      },
+      {
+        "en": "However, translating these innovative approaches into widespread implementation requires substantial financial commitments and robust knowledge transfer mechanisms.",
+        "ja": "しかし、これらの革新的なアプローチを広範囲にわたって実施するには、多額の財政的コミットメントと強固な知識移転メカニズムが必要です。",
+        "audioPath": "./assets/audio/t17793122018560327_8.wav",
+        "phrases": [
+          {
+            "phrase": "translating ... into",
+            "meaning": "〜を〜に翻訳する、〜を〜に置き換える",
+            "usage": "新しいアイデアを具体的な形にする、という文脈でよく使われます。"
+          },
+          {
+            "phrase": "widespread implementation",
+            "meaning": "広範な実施、広く普及すること",
+            "usage": "新しい政策や技術などが広く使われるようになる様子を表します。"
+          },
+          {
+            "phrase": "substantial financial commitments",
+            "meaning": "相当な財政的約束、多額の資金投入",
+            "usage": "大きなプロジェクトや事業に必要な資金の負担が大きいことを示します。"
+          },
+          {
+            "phrase": "robust knowledge transfer mechanisms",
+            "meaning": "堅牢な知識移転メカニズム、確実な知識伝達の仕組み",
+            "usage": "専門知識やノウハウが効果的に共有・伝達される体制を指します。"
+          }
+        ]
+      },
+      {
+        "en": "Addressing food waste across the entire supply chain, from farm to fork, could also significantly alleviate pressure on global food systems.",
+        "ja": "農場から食卓に至るサプライチェーン全体での食品廃棄物削減も、世界の食料システムへの圧力を大幅に軽減し得ます。",
+        "audioPath": "./assets/audio/t17793122018560327_9.wav",
+        "phrases": [
+          {
+            "phrase": "across the entire supply chain",
+            "meaning": "サプライチェーン全体にわたって",
+            "usage": "食品ロス削減の対象範囲の広さを示す際に使えます。"
+          },
+          {
+            "phrase": "from farm to fork",
+            "meaning": "農場から食卓まで（生産から消費まで）",
+            "usage": "食品のライフサイクル全体を指す慣用的な表現です。"
+          },
+          {
+            "phrase": "alleviate pressure on",
+            "meaning": "〜への圧力を軽減する",
+            "usage": "問題や負担を和らげる状況で使われるフォーマルな表現です。"
+          }
+        ]
+      },
+      {
+        "en": "A concerted, multilateral effort is indispensable to foster greater resilience and equity within the global food architecture, transcending national interests.",
+        "ja": "国益を超えて、世界の食料構造内により大きなレジリエンスと公平性を育むためには、協調的で多国間による努力が不可欠です。",
+        "audioPath": "./assets/audio/t17793122018560327_10.wav",
+        "phrases": [
+          {
+            "phrase": "concerted effort",
+            "meaning": "協調的な努力、連携した取り組み",
+            "usage": "目標達成には、チーム全体の concerted effort が不可欠だ。"
+          },
+          {
+            "phrase": "indispensable to",
+            "meaning": "〜にとって不可欠である",
+            "usage": "この技術は、当社の将来の成長にとって indispensable to success だ。"
+          },
+          {
+            "phrase": "transcending national interests",
+            "meaning": "国益を超えて",
+            "usage": "地球規模の課題解決には、transcending national interests な視点が必要とされる。"
+          }
+        ]
+      },
+      {
+        "en": "The urgency of this endeavor cannot be overstated, as the repercussions of widespread food insecurity threaten to destabilize societies and impede global progress.",
+        "ja": "広範囲にわたる食料不安が社会を不安定化させ、世界の進歩を阻害する恐れがあるため、この取り組みの緊急性はいくら強調してもし過ぎることはありません。",
+        "audioPath": "./assets/audio/t17793122018560327_11.wav",
+        "phrases": [
+          {
+            "phrase": "cannot be overstated",
+            "meaning": "いくら強調してもしすぎることはない",
+            "usage": "The importance of this issue cannot be overstated. (この問題の重要性はいくら強調してもしすぎることはない。)"
+          },
+          {
+            "phrase": "repercussions of",
+            "meaning": "〜の影響、余波",
+            "usage": "the repercussions of the economic crisis (経済危機の余波)"
+          },
+          {
+            "phrase": "food insecurity",
+            "meaning": "食料不安、食料不足",
+            "usage": "Global food insecurity is a growing concern. (世界的な食料不安は増大する懸念事項だ。)"
+          },
+          {
+            "phrase": "impede global progress",
+            "meaning": "国際的な進歩を妨げる",
+            "usage": "Lack of funding can impede progress on the project. (資金不足はプロジェクトの進展を妨げる可能性がある。)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-05-20T21:23:21.856Z"
   }
 ]
