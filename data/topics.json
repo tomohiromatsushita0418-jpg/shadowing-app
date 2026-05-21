@@ -257,23 +257,113 @@
     "sentences": [
       {
         "en": "It's truly invigorating to finally carve out some time to catch up amidst our typically hectic schedules, isn't it?",
-        "ja": "いつもの忙しい日々の中、こうしてようやく時間をとって近況を語り合えるのは、本当に心地よいものですね。"
+        "ja": "いつもの忙しい日々の中、こうしてようやく時間をとって近況を語り合えるのは、本当に心地よいものですね。",
+        "phrases": [
+          {
+            "phrase": "carve out some time",
+            "meaning": "時間を捻出する、時間を作る",
+            "usage": "We need to carve out time for strategic planning. (戦略的計画のために時間を捻出する必要がある)"
+          },
+          {
+            "phrase": "catch up",
+            "meaning": "近況を報告し合う、情報交換する",
+            "usage": "Let's catch up next week to discuss the project. (来週、プロジェクトについて話し合うために情報交換しましょう)"
+          },
+          {
+            "phrase": "hectic schedules",
+            "meaning": "多忙なスケジュール、慌ただしい日程",
+            "usage": "It's hard to meet due to our hectic schedules. (多忙なスケジュールのせいで会うのが難しい)"
+          }
+        ]
       },
       {
         "en": "I was just reflecting on that fascinating podcast episode you recommended last week; it really presented a compelling new perspective on urban development.",
-        "ja": "先週あなたが勧めてくれたポッドキャストのエピソードを聴き返していたところです。都市開発に関する、非常に示唆に富む新しい視点が提示されていました。"
+        "ja": "先週あなたが勧めてくれたポッドキャストのエピソードを聴き返していたところです。都市開発に関する、非常に示唆に富む新しい視点が提示されていました。",
+        "phrases": [
+          {
+            "phrase": "reflecting on",
+            "meaning": "〜について熟考する、振り返る",
+            "usage": "過去の経験や将来の計画について深く考える際に使う。"
+          },
+          {
+            "phrase": "compelling new perspective",
+            "meaning": "説得力のある新しい視点/見解",
+            "usage": "議論や提案で、人の心を動かすような新しい考え方を示す際に使う。"
+          },
+          {
+            "phrase": "urban development",
+            "meaning": "都市開発",
+            "usage": "環境、経済、社会問題などの文脈で頻繁に使われる専門用語。"
+          }
+        ]
       },
       {
         "en": "The host's argument concerning sustainable infrastructure and community engagement resonated deeply with me, particularly the emphasis on bottom-up initiatives.",
-        "ja": "ホストが持続可能なインフラと地域社会の関わりについて論じた内容は、特にボトムアップの取り組みを重視する点において、私の心に深く響きました。"
+        "ja": "ホストが持続可能なインフラと地域社会の関わりについて論じた内容は、特にボトムアップの取り組みを重視する点において、私の心に深く響きました。",
+        "phrases": [
+          {
+            "phrase": "community engagement",
+            "meaning": "地域社会との連携、住民参加",
+            "usage": "企業はCSR活動の一環としてcommunity engagementを重視している。"
+          },
+          {
+            "phrase": "resonate deeply with",
+            "meaning": "〜に深く響く、深く共感する",
+            "usage": "彼の言葉は聴衆の心に深くresonate deeply withした。"
+          },
+          {
+            "phrase": "emphasis on",
+            "meaning": "〜を重視すること、〜に重点を置くこと",
+            "usage": "このプロジェクトは品質管理へのemphasis onが特徴だ。"
+          },
+          {
+            "phrase": "bottom-up initiatives",
+            "meaning": "草の根的な取り組み、下からの提案",
+            "usage": "トップダウンではなく、bottom-up initiativesが組織変革を促す。"
+          }
+        ]
       },
       {
         "en": "Speaking of thought-provoking content, have you managed to delve into that non-fiction bestseller I mentioned, 'The Atlas of AI'?",
-        "ja": "そういえば、私が以前話したノンフィクションのベストセラー、『AIの地図』はもう読み始めましたか？"
+        "ja": "そういえば、私が以前話したノンフィクションのベストセラー、『AIの地図』はもう読み始めましたか？",
+        "phrases": [
+          {
+            "phrase": "Speaking of",
+            "meaning": "〜と言えば、〜に関して言えば",
+            "usage": "話題転換や関連する話題を切り出すときに使う。"
+          },
+          {
+            "phrase": "thought-provoking",
+            "meaning": "示唆に富む、考えさせられる",
+            "usage": "A thought-provoking article（示唆に富む記事）のように使う。"
+          },
+          {
+            "phrase": "delve into",
+            "meaning": "深く調べる、掘り下げる",
+            "usage": "We need to delve into the details.（詳細を掘り下げる必要がある。）"
+          }
+        ]
       },
       {
         "en": "Not yet, unfortunately, but it's next on my reading list, right after I finish this rather dense historical biography I've been slowly but surely making my way through.",
-        "ja": "残念ながら、まだです。ただ、今ゆっくりと読み進めている、かなり読み応えのある歴史伝記を終えたら、すぐに取り掛かる予定です。"
+        "ja": "残念ながら、まだです。ただ、今ゆっくりと読み進めている、かなり読み応えのある歴史伝記を終えたら、すぐに取り掛かる予定です。",
+        "phrases": [
+          {
+            "phrase": "on my reading list",
+            "meaning": "読書リストに載っている、次に読む予定",
+            "usage": "「on my to-do list」（やることリストに載っている）のように応用可能。"
+          },
+          {
+            "phrase": "slowly but surely",
+            "meaning": "ゆっくりとだが着実に、確実に",
+            "usage": "プロジェクトの進捗や目標達成など、着実な進歩を表現する際に使う。"
+          },
+          {
+            "phrase": "making my way through",
+            "meaning": "(困難なものなどを) 進めていく、読み進める",
+            "usage": "「make one's way through a difficult task」（困難なタスクをこなしていく）のように使う。"
+          }
+        ]
       },
       {
         "en": "I can certainly relate; finding dedicated time for serious reading often feels like a luxurious indulgence rather than a routine activity these days.",
@@ -308,43 +398,238 @@
     "sentences": [
       {
         "en": "The unprecedented volatility in global logistics has underscored the critical need for robust supply chain resilience across all sectors.",
-        "ja": "世界的な物流における前例のない変動は、あらゆる分野で強固なサプライチェーンのレジリエンス（回復力）がいかに不可欠であるかを浮き彫りにしました。"
+        "ja": "世界的な物流における前例のない変動は、あらゆる分野で強固なサプライチェーンのレジリエンス（回復力）がいかに不可欠であるかを浮き彫りにしました。",
+        "phrases": [
+          {
+            "phrase": "unprecedented volatility",
+            "meaning": "前例のない変動性",
+            "usage": "市場の急激な変化などを表す際に使われます。"
+          },
+          {
+            "phrase": "underscored the critical need for",
+            "meaning": "〜の喫緊の必要性を強調した",
+            "usage": "問題の重要性を指摘する際によく使われる表現です。"
+          },
+          {
+            "phrase": "robust supply chain resilience",
+            "meaning": "強固なサプライチェーンの回復力",
+            "usage": "ビジネスにおいて、供給網の安定性や復元力を指す場合に用いられます。"
+          },
+          {
+            "phrase": "across all sectors",
+            "meaning": "すべての分野にわたって",
+            "usage": "広範囲に影響が及んでいることを示す際に使われます。"
+          }
+        ]
       },
       {
         "en": "Companies are increasingly pivoting from a lean just-in-time model to a more flexible just-in-case approach, emphasizing redundancy.",
-        "ja": "企業は、リーンなジャストインタイム方式から、冗長性を確保するより柔軟なジャストインケース方式へと、その戦略を転換しつつあります。"
+        "ja": "企業は、リーンなジャストインタイム方式から、冗長性を確保するより柔軟なジャストインケース方式へと、その戦略を転換しつつあります。",
+        "phrases": [
+          {
+            "phrase": "pivoting from ... to ...",
+            "meaning": "～から～へと転換している",
+            "usage": "The company is pivoting from traditional marketing to digital strategies. (その会社は伝統的なマーケティングからデジタル戦略へと転換している。)"
+          },
+          {
+            "phrase": "just-in-time model",
+            "meaning": "ジャストインタイム方式（必要なものを必要な時にだけ生産・供給する方式）",
+            "usage": "This model minimizes inventory costs but can be vulnerable to disruptions. (この方式は在庫コストを最小限に抑えるが、混乱に対して脆弱になりうる。)"
+          },
+          {
+            "phrase": "just-in-case approach",
+            "meaning": "ジャストインケース方式（万が一に備えて余裕を持たせる方式）",
+            "usage": "The just-in-case approach builds resilience into the supply chain. (ジャストインケース方式はサプライチェーンに回復力を構築する。)"
+          },
+          {
+            "phrase": "emphasizing redundancy",
+            "meaning": "冗長性（予備や重複）を強調している",
+            "usage": "They are emphasizing redundancy by having backup systems in place. (彼らはバックアップシステムを配置することで冗長性を強調している。)"
+          }
+        ]
       },
       {
         "en": "Diversifying the supplier base across multiple geographical regions is now a strategic imperative to mitigate single-point-of-failure risks.",
-        "ja": "サプライヤー基盤を複数の地域に分散させることは、単一障害点のリスクを軽減するための戦略的な必須事項となっています。"
+        "ja": "サプライヤー基盤を複数の地域に分散させることは、単一障害点のリスクを軽減するための戦略的な必須事項となっています。",
+        "phrases": [
+          {
+            "phrase": "strategic imperative",
+            "meaning": "戦略的必須事項、戦略的急務",
+            "usage": "企業が必ず取り組むべき重要な課題を指す表現です。"
+          },
+          {
+            "phrase": "mitigate risks",
+            "meaning": "リスクを軽減する",
+            "usage": "損害や影響などを軽減する際にも広く使われるビジネス表現です。"
+          },
+          {
+            "phrase": "single-point-of-failure risks",
+            "meaning": "単一障害点のリスク",
+            "usage": "システムやプロセスで、一つの要素が停止すると全体が停止する危険性を指します。"
+          },
+          {
+            "phrase": "Diversifying the supplier base",
+            "meaning": "供給元を多様化すること",
+            "usage": "サプライチェーンの安定化やリスク分散の文脈でよく使われます。"
+          }
+        ]
       },
       {
         "en": "Leveraging advanced predictive analytics and AI-driven insights is paramount for proactive demand forecasting and risk mitigation.",
-        "ja": "高度な予測分析とAIによる洞察の活用は、プロアクティブな需要予測とリスク軽減のために極めて重要です。"
+        "ja": "高度な予測分析とAIによる洞察の活用は、プロアクティブな需要予測とリスク軽減のために極めて重要です。",
+        "phrases": [
+          {
+            "phrase": "paramount for",
+            "meaning": "〜にとって極めて重要である、最重要である",
+            "usage": "Customer satisfaction is paramount for our business. (顧客満足は当社の事業にとって最重要である。)"
+          },
+          {
+            "phrase": "risk mitigation",
+            "meaning": "リスク軽減、リスク緩和",
+            "usage": "Effective risk mitigation is key to project success. (効果的なリスク軽減がプロジェクト成功の鍵となる。)"
+          },
+          {
+            "phrase": "AI-driven insights",
+            "meaning": "AIによる知見/洞察",
+            "usage": "「X-driven Y」で「Xによって駆動されるY」「Xに基づいたY」のように、現代ビジネスで頻出の表現。"
+          }
+        ]
       },
       {
         "en": "Achieving end-to-end visibility throughout the entire supply network is no longer a luxury but a fundamental necessity for informed decision-making.",
-        "ja": "サプライチェーン全体にわたるエンドツーエンドの可視性の確保は、もはや贅沢ではなく、情報に基づいた意思決定のための基本的な要件となっています。"
+        "ja": "サプライチェーン全体にわたるエンドツーエンドの可視性の確保は、もはや贅沢ではなく、情報に基づいた意思決定のための基本的な要件となっています。",
+        "phrases": [
+          {
+            "phrase": "end-to-end visibility",
+            "meaning": "全体的な可視性、最初から最後まで見通せること",
+            "usage": "サプライチェーンやプロジェクト管理でよく使われる表現。"
+          },
+          {
+            "phrase": "no longer a luxury but a fundamental necessity",
+            "meaning": "もはや贅沢品ではなく、基本的な必需品である",
+            "usage": "「もはやAではなくBである」という構文で応用可能。"
+          },
+          {
+            "phrase": "informed decision-making",
+            "meaning": "情報に基づいた意思決定",
+            "usage": "データや知識を基に判断する際に使う重要なビジネス用語。"
+          }
+        ]
       },
       {
         "en": "Many organizations are exploring reshoring or nearshoring initiatives to reduce lead times and enhance control over manufacturing processes.",
-        "ja": "多くの組織が、リードタイムの短縮と製造プロセスにおける管理強化を目指し、国内回帰（リショアリング）や近隣国での生産（ニアショアリング）といった取り組みを検討しています。"
+        "ja": "多くの組織が、リードタイムの短縮と製造プロセスにおける管理強化を目指し、国内回帰（リショアリング）や近隣国での生産（ニアショアリング）といった取り組みを検討しています。",
+        "phrases": [
+          {
+            "phrase": "exploring initiatives",
+            "meaning": "施策を検討する、取り組みを探る",
+            "usage": "新しい市場開拓の施策を検討する (explore new market initiatives)"
+          },
+          {
+            "phrase": "reduce lead times",
+            "meaning": "リードタイムを短縮する",
+            "usage": "在庫管理の改善でリードタイムを短縮する"
+          },
+          {
+            "phrase": "enhance control over",
+            "meaning": "〜に対する管理を強化する",
+            "usage": "品質管理を強化する (enhance control over quality)"
+          }
+        ]
       },
       {
         "en": "Navigating complex geopolitical landscapes and evolving trade policies presents significant challenges to international sourcing and distribution.",
-        "ja": "複雑化する地政学的な情勢や変化し続ける貿易政策への対応は、国際的な調達と流通において大きな課題となっています。"
+        "ja": "複雑化する地政学的な情勢や変化し続ける貿易政策への対応は、国際的な調達と流通において大きな課題となっています。",
+        "phrases": [
+          {
+            "phrase": "Navigating complex geopolitical landscapes",
+            "meaning": "複雑な地政学的な情勢を乗り切ること",
+            "usage": "企業が国際的なビジネスを行う上で、様々な国の政治状況を理解し、対応していく様子を表します。"
+          },
+          {
+            "phrase": "evolving trade policies",
+            "meaning": "変化し続ける貿易政策",
+            "usage": "国際貿易において、各国が頻繁に変更する関税や規制などの政策に対応する必要がある状況を指します。"
+          },
+          {
+            "phrase": "presents significant challenges",
+            "meaning": "重大な課題をもたらす",
+            "usage": "ある状況や要因が、困難や問題を引き起こすことを示す、ビジネスやニュースでよく使われる表現です。"
+          },
+          {
+            "phrase": "international sourcing and distribution",
+            "meaning": "国際的な調達と流通",
+            "usage": "製品の原材料調達から最終的な顧客への配送まで、国境を越えて行われる一連のプロセスを指します。"
+          }
+        ]
       },
       {
         "en": "Implementing robust contingency plans and alternative sourcing strategies is crucial for effectively addressing unforeseen disruptions.",
-        "ja": "予期せぬ混乱に効果的に対処するには、堅牢な危機管理計画と代替調達戦略の実施が不可欠です。"
+        "ja": "予期せぬ混乱に効果的に対処するには、堅牢な危機管理計画と代替調達戦略の実施が不可欠です。",
+        "phrases": [
+          {
+            "phrase": "contingency plans",
+            "meaning": "危機管理計画、緊急時対応計画",
+            "usage": "We need to develop clear contingency plans for potential supply chain issues."
+          },
+          {
+            "phrase": "alternative sourcing strategies",
+            "meaning": "代替調達戦略",
+            "usage": "The company is exploring alternative sourcing strategies to reduce reliance on a single supplier."
+          },
+          {
+            "phrase": "unforeseen disruptions",
+            "meaning": "予期せぬ混乱、予期せぬ障害",
+            "usage": "The pandemic caused unforeseen disruptions to global trade."
+          }
+        ]
       },
       {
         "en": "Fostering deeper collaborative relationships with key strategic partners strengthens the collective ability to withstand external shocks.",
-        "ja": "主要な戦略的パートナーとのより深い協力関係を育むことは、外部からの衝撃に耐えうる組織全体の能力を強化します。"
+        "ja": "主要な戦略的パートナーとのより深い協力関係を育むことは、外部からの衝撃に耐えうる組織全体の能力を強化します。",
+        "phrases": [
+          {
+            "phrase": "Fostering deeper collaborative relationships",
+            "meaning": "より深い協力関係を築くこと",
+            "usage": "企業間や組織内で連携を強化する文脈で使われます。"
+          },
+          {
+            "phrase": "key strategic partners",
+            "meaning": "主要な戦略的パートナー",
+            "usage": "企業間の提携や国際関係で頻繁に使われる表現です。"
+          },
+          {
+            "phrase": "collective ability",
+            "meaning": "全体としての能力、集合的な能力",
+            "usage": "チームや組織全体の力を指す際に用います。"
+          },
+          {
+            "phrase": "withstand external shocks",
+            "meaning": "外部からの衝撃に耐える",
+            "usage": "経済危機や予期せぬ事態への耐性を表現する際によく使われます。"
+          }
+        ]
       },
       {
         "en": "Ultimately, building an agile and adaptive supply chain confers a sustainable competitive advantage in an increasingly unpredictable global market.",
-        "ja": "最終的に、機敏で適応性の高いサプライチェーンを構築することは、ますます予測不能になる世界市場において、持続可能な競争優位性を確立することにつながります。"
+        "ja": "最終的に、機敏で適応性の高いサプライチェーンを構築することは、ますます予測不能になる世界市場において、持続可能な競争優位性を確立することにつながります。",
+        "phrases": [
+          {
+            "phrase": "agile and adaptive",
+            "meaning": "機敏で適応性の高い",
+            "usage": "agile and adaptive approach (機敏で適応性の高いアプローチ) のように、組織や戦略に対して使う。"
+          },
+          {
+            "phrase": "confers a sustainable competitive advantage",
+            "meaning": "持続可能な競争優位性をもたらす",
+            "usage": "A strong brand image confers a competitive advantage. (強力なブランドイメージは競争優位性をもたらす)"
+          },
+          {
+            "phrase": "increasingly unpredictable",
+            "meaning": "ますます予測不可能な",
+            "usage": "increasingly difficult (ますます困難な) のように、「ますます〜になる」状況を表す際に使う。"
+          }
+        ]
       }
     ],
     "titleJa": "グローバル危機に負けないサプライチェーン",
@@ -538,11 +823,57 @@
       },
       {
         "en": "This intricate dance between national security interests and global economic interdependence necessitates delicate diplomatic maneuvering, as countries vie for technological supremacy while also relying on collaborative ecosystems.",
-        "ja": "国家安全保障とグローバル経済の相互依存という、この複雑な関係性の中で、各国は技術的優位性を追求しつつも協力体制を維持する必要があり、繊細な外交手腕が求められています。"
+        "ja": "国家安全保障とグローバル経済の相互依存という、この複雑な関係性の中で、各国は技術的優位性を追求しつつも協力体制を維持する必要があり、繊細な外交手腕が求められています。",
+        "audioPath": "./assets/audio/t17789131490304654_7.wav",
+        "phrases": [
+          {
+            "phrase": "intricate dance",
+            "meaning": "複雑な相互作用、微妙な駆け引き",
+            "usage": "「intricate dance between A and B」のように、複雑な関係性を描写する際に使う。"
+          },
+          {
+            "phrase": "delicate diplomatic maneuvering",
+            "meaning": "繊細な外交的駆け引き",
+            "usage": "国際情勢に関する記事や議論でよく見かける表現。"
+          },
+          {
+            "phrase": "vie for",
+            "meaning": "〜を競う、〜を争う",
+            "usage": "企業が市場シェアをvie forする、のように、競争状況で頻繁に用いられる。"
+          },
+          {
+            "phrase": "technological supremacy",
+            "meaning": "技術的優位性、技術覇権",
+            "usage": "国家間の競争や企業の戦略において、重要な目標として言及される。"
+          }
+        ]
       },
       {
         "en": "The long-term implications of this strategic reorientation could fundamentally reshape global trade dynamics and foster new alliances centered on critical technological infrastructure.",
-        "ja": "この戦略的な方向転換は、長期的には世界の貿易構造を根本的に変え、重要技術インフラを軸とした新たな国際連携を生み出す可能性があります。"
+        "ja": "この戦略的な方向転換は、長期的には世界の貿易構造を根本的に変え、重要技術インフラを軸とした新たな国際連携を生み出す可能性があります。",
+        "audioPath": "./assets/audio/t17789131490304654_8.wav",
+        "phrases": [
+          {
+            "phrase": "long-term implications",
+            "meaning": "長期的な影響",
+            "usage": "This policy has significant long-term implications for the economy. (この政策は経済に長期的な影響を与える。)"
+          },
+          {
+            "phrase": "reshape global trade dynamics",
+            "meaning": "世界の貿易力学を再構築する",
+            "usage": "Technological advancements are reshaping global trade dynamics. (技術の進歩は世界の貿易力学を再構築している。)"
+          },
+          {
+            "phrase": "foster new alliances",
+            "meaning": "新たな同盟を育成する",
+            "usage": "The summit aims to foster new alliances for climate action. (サミットは気候変動対策のための新たな同盟を育成することを目的としている。)"
+          },
+          {
+            "phrase": "centered on",
+            "meaning": "〜を中心に据えた",
+            "usage": "a discussion centered on the future of education (教育の将来を中心に据えた議論)"
+          }
+        ]
       }
     ],
     "titleJa": "半導体製造の地政学",
@@ -2094,5 +2425,303 @@
       }
     ],
     "createdAt": "2026-05-20T21:23:21.856Z"
+  },
+  {
+    "id": "t17793981538716535",
+    "title": "Pre-Wedding Preparations & Anticipation",
+    "titleJa": "結婚式前の準備と期待",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I'm absolutely brimming with excitement for Sarah and Tom's wedding next month; it feels like it's been an eternity since they first announced their engagement.",
+        "ja": "来月のサラとトムの結婚式、本当に楽しみで仕方ありません。婚約発表から随分と時間が経ったように感じます。",
+        "audioPath": "./assets/audio/t17793981538716535_0.wav",
+        "phrases": [
+          {
+            "phrase": "brimming with excitement",
+            "meaning": "興奮でいっぱいである、ワクワクしている",
+            "usage": "She was brimming with excitement about her new job. (彼女は新しい仕事にワクワクしていた)"
+          },
+          {
+            "phrase": "an eternity",
+            "meaning": "永遠のように長い時間",
+            "usage": "It felt like an eternity waiting for the results. (結果を待つのが永遠のように感じられた)"
+          }
+        ]
+      },
+      {
+        "en": "As one of the bridesmaids, I've been heavily involved in some of the logistical arrangements, particularly coordinating the bachelorette party details.",
+        "ja": "花嫁の付き添い人として、特に独身最後のパーティーの段取り調整など、いくつかの手配に深く関わってきました。",
+        "audioPath": "./assets/audio/t17793981538716535_1.wav",
+        "phrases": [
+          {
+            "phrase": "heavily involved in",
+            "meaning": "深く関わっている、密接に関与している",
+            "usage": "プロジェクトや活動に深く関わる状況で使う。"
+          },
+          {
+            "phrase": "logistical arrangements",
+            "meaning": "ロジスティクス上の手配、物流の手配",
+            "usage": "イベントやプロジェクトの準備段階で、具体的な手配を指す。"
+          },
+          {
+            "phrase": "particularly coordinating",
+            "meaning": "特に〜を調整すること",
+            "usage": "複数のタスクの中で、特に力を入れている調整作業を強調する際に使う。"
+          }
+        ]
+      },
+      {
+        "en": "Finding the perfect dress that strikes a balance between elegance and comfort for a full day of festivities has proven to be quite a sartorial quest.",
+        "ja": "一日中続くお祝いにふさわしい、優雅さと着心地の良さを兼ね備えた完璧なドレスを見つけるのは、まさに服飾の探求でしたね。",
+        "audioPath": "./assets/audio/t17793981538716535_2.wav",
+        "phrases": [
+          {
+            "phrase": "strikes a balance between A and B",
+            "meaning": "AとBのバランスを取る",
+            "usage": "This proposal strikes a balance between cost-effectiveness and quality. (この提案は費用対効果と品質のバランスを取っている)"
+          },
+          {
+            "phrase": "full day of festivities",
+            "meaning": "一日中のお祭り騒ぎ、祝賀行事",
+            "usage": "We enjoyed a full day of festivities at the local fair. (地元のお祭りで一日中のお祝いを楽しんだ)"
+          },
+          {
+            "phrase": "proven to be",
+            "meaning": "〜であることがわかる、判明する",
+            "usage": "The new strategy has proven to be successful. (新しい戦略は成功であることがわかった)"
+          },
+          {
+            "phrase": "sartorial quest",
+            "meaning": "服装選びの探求、ファッション上の難題",
+            "usage": "For many, finding the right outfit for a wedding is a sartorial quest. (多くの人にとって、結婚式にふさわしい服装を見つけることは服装選びの探求である)"
+          }
+        ]
+      },
+      {
+        "en": "We're planning to carpool with a few other mutual friends to the venue, which is quite a scenic drive out in the countryside.",
+        "ja": "会場までは、数人の共通の友人と相乗りしていく予定です。そこは田園地帯の眺めが素晴らしい場所なんですよ。",
+        "audioPath": "./assets/audio/t17793981538716535_3.wav",
+        "phrases": [
+          {
+            "phrase": "carpool with",
+            "meaning": "〜と相乗りする",
+            "usage": "We decided to carpool with our neighbors to save on gas."
+          },
+          {
+            "phrase": "mutual friends",
+            "meaning": "共通の友人",
+            "usage": "They met through mutual friends from college."
+          },
+          {
+            "phrase": "scenic drive",
+            "meaning": "景色の良いドライブ",
+            "usage": "The coastal road offers a scenic drive with ocean views."
+          }
+        ]
+      },
+      {
+        "en": "It's truly heartwarming to witness their journey culminate in such a beautiful commitment, considering all the milestones they've shared.",
+        "ja": "彼らがこれまで分かち合ってきた数々の節目を考えると、その旅路がこのような美しい誓いとなって結実するのを目にするのは、本当に心が温まります。",
+        "audioPath": "./assets/audio/t17793981538716535_4.wav",
+        "phrases": [
+          {
+            "phrase": "heartwarming to witness",
+            "meaning": "〜を目にするのは心温まる",
+            "usage": "It's heartwarming to witness their success. (彼らの成功を目にするのは心温まる)"
+          },
+          {
+            "phrase": "culminate in",
+            "meaning": "〜で最高潮に達する、〜で終わる",
+            "usage": "Their efforts culminated in a successful product launch. (彼らの努力は成功裏な製品発売で最高潮に達した)"
+          },
+          {
+            "phrase": "commitment",
+            "meaning": "婚約、約束、献身",
+            "usage": "They announced their commitment to each other. (彼らは互いへの婚約を発表した)"
+          },
+          {
+            "phrase": "milestones they've shared",
+            "meaning": "共に経験してきた重要な出来事",
+            "usage": "Looking back at the milestones we've shared reminds us of our journey. (共に経験してきた重要な出来事を振り返ると、私たちの道のりを思い出す)"
+          }
+        ]
+      },
+      {
+        "en": "I'm particularly looking forward to the reception; I hear they've arranged for a live band and a truly delectable menu.",
+        "ja": "特に披露宴が楽しみです。生バンドと本当に美味しいメニューを手配したと聞きましたから。",
+        "audioPath": "./assets/audio/t17793981538716535_5.wav",
+        "phrases": [
+          {
+            "phrase": "looking forward to",
+            "meaning": "～を楽しみにしている",
+            "usage": "I'm looking forward to the party. のように、楽しみにしている対象をtoの後に続ける"
+          },
+          {
+            "phrase": "arranged for",
+            "meaning": "～を手配した、～を用意した",
+            "usage": "They arranged for a taxi. のように、手配したものを目的語にとる"
+          },
+          {
+            "phrase": "delectable menu",
+            "meaning": "美味しいメニュー",
+            "usage": "delectable は食べ物や飲み物が「この上なく美味しい」ことを表すフォーマルな形容詞"
+          }
+        ]
+      },
+      {
+        "en": "There was a minor hiccup with the seating chart initially, but we managed to iron out the kinks without much fuss.",
+        "ja": "最初、席次表にちょっとした手違いがあったのですが、大した手間もなくその問題を解決できました。",
+        "audioPath": "./assets/audio/t17793981538716535_6.wav",
+        "phrases": [
+          {
+            "phrase": "minor hiccup",
+            "meaning": "小さな一時的な問題",
+            "usage": "プロジェクトや計画で発生した、軽微で一時的な障害を指す。"
+          },
+          {
+            "phrase": "iron out the kinks",
+            "meaning": "問題を解決する、不具合を修正する",
+            "usage": "計画やシステムの細かい問題点や障害を取り除き、スムーズに進める。"
+          },
+          {
+            "phrase": "without much fuss",
+            "meaning": "大した騒ぎもなく、あっさりと",
+            "usage": "物事がスムーズに、または手間なく処理された状況を表す。"
+          }
+        ]
+      },
+      {
+        "en": "My sincere hope for them is a lifetime filled with shared laughter, unwavering support, and an enduring bond that deepens with each passing year.",
+        "ja": "彼らには、共に笑い、揺るぎない支え、そして年月を重ねるごとに深まる永続的な絆に満ちた人生を心から願っています。",
+        "audioPath": "./assets/audio/t17793981538716535_7.wav",
+        "phrases": [
+          {
+            "phrase": "sincere hope",
+            "meaning": "心からの願い",
+            "usage": "My sincere hope is that the project will be successful. のように、自分の切実な願いを伝える際に使われます。"
+          },
+          {
+            "phrase": "filled with",
+            "meaning": "〜で満たされている",
+            "usage": "a life filled with joy のように、感情や経験が豊かであることを表現するのに適しています。"
+          },
+          {
+            "phrase": "unwavering support",
+            "meaning": "揺るぎない支援",
+            "usage": "The team showed unwavering support for their captain. のように、変わらない支持や応援を強調する際に使います。"
+          },
+          {
+            "phrase": "enduring bond",
+            "meaning": "永続的な絆",
+            "usage": "They have an enduring bond that has lasted for decades. のように、時を経ても続く強い結びつきを表します。"
+          }
+        ]
+      },
+      {
+        "en": "We've settled on contributing to their honeymoon fund, as they've explicitly requested experiences over material possessions.",
+        "ja": "彼らが物質的な所有物よりも経験を明確に希望していたので、新婚旅行資金に寄付することに決めました。",
+        "audioPath": "./assets/audio/t17793981538716535_8.wav",
+        "phrases": [
+          {
+            "phrase": "settled on",
+            "meaning": "〜に決めた、〜で合意した",
+            "usage": "We finally settled on a restaurant for the party. (パーティーのレストランがついに決まった。)"
+          },
+          {
+            "phrase": "contributing to",
+            "meaning": "〜に貢献する、〜に寄付する",
+            "usage": "Everyone is contributing to the charity event. (皆がチャリティーイベントに貢献している。)"
+          },
+          {
+            "phrase": "explicitly requested",
+            "meaning": "明確に求めた、はっきりと要求した",
+            "usage": "She explicitly requested no gifts. (彼女はプレゼントは一切いらないとはっきり言った。)"
+          },
+          {
+            "phrase": "experiences over material possessions",
+            "meaning": "物質的な所有物よりも経験を重視する",
+            "usage": "Many young people now prefer experiences over material possessions. (最近の若者は、モノよりもコトにお金をかける傾向がある。)"
+          }
+        ]
+      },
+      {
+        "en": "The chosen venue, an old converted barn with rustic charm, is going to provide an absolutely picturesque backdrop for the ceremony.",
+        "ja": "選ばれた会場は、素朴な魅力を持つ古い改装された納屋で、式典にはまさに絵のように美しい背景を提供してくれるでしょう。",
+        "audioPath": "./assets/audio/t17793981538716535_9.wav",
+        "phrases": [
+          {
+            "phrase": "converted barn",
+            "meaning": "改築された納屋",
+            "usage": "古い建物を別の用途に改築したものを指す場合に使われます。"
+          },
+          {
+            "phrase": "rustic charm",
+            "meaning": "田舎風の魅力",
+            "usage": "都会的でない、素朴で自然な魅力を表す際に用いられます。"
+          },
+          {
+            "phrase": "picturesque backdrop",
+            "meaning": "絵のように美しい背景",
+            "usage": "写真撮影やイベント会場の説明などで、景観の美しさを強調したいときに使われます。"
+          }
+        ]
+      },
+      {
+        "en": "I anticipate the entire atmosphere will be one of unadulterated joy and effervescent celebration, truly reflecting the couple's vibrant personalities.",
+        "ja": "全体的な雰囲気は、純粋な喜びと活気に満ちたお祝いムードになることでしょう。まさに新郎新婦の明るい人柄を映し出すと思います。",
+        "audioPath": "./assets/audio/t17793981538716535_10.wav",
+        "phrases": [
+          {
+            "phrase": "anticipate ... will be one of",
+            "meaning": "〜が〜の状態になると予想する",
+            "usage": "The company anticipates profits will be one of record highs. (会社は利益が過去最高水準になると予想している。)"
+          },
+          {
+            "phrase": "unadulterated joy",
+            "meaning": "純粋な喜び",
+            "usage": "Her unadulterated joy at seeing her family was palpable. (家族に会えた彼女の純粋な喜びは明白だった。)"
+          },
+          {
+            "phrase": "effervescent celebration",
+            "meaning": "活気に満ちた祝賀",
+            "usage": "The city hosted an effervescent celebration for the national holiday. (その都市は祝日で活気に満ちた祝賀会を開催した。)"
+          },
+          {
+            "phrase": "vibrant personalities",
+            "meaning": "活気に満ちた個性",
+            "usage": "The team is known for its vibrant personalities and collaborative spirit. (そのチームは活気に満ちた個性と協力的な精神で知られている。)"
+          }
+        ]
+      },
+      {
+        "en": "It’ll also be a fantastic opportunity to catch up with a plethora of old friends we haven't seen in ages, making the occasion even more special.",
+        "ja": "長い間会っていない多くの旧友たちと再会できる絶好の機会にもなるので、その場がさらに特別なものになるでしょう。",
+        "audioPath": "./assets/audio/t17793981538716535_11.wav",
+        "phrases": [
+          {
+            "phrase": "catch up with",
+            "meaning": "（しばらく会わなかった人と）近況を報告し合う、話をする",
+            "usage": "It's great to catch up with you after so long. のように使う"
+          },
+          {
+            "phrase": "plethora of",
+            "meaning": "多数の、豊富さ",
+            "usage": "a plethora of options （選択肢の多さ）のように使う"
+          },
+          {
+            "phrase": "in ages",
+            "meaning": "長い間（〜ない）",
+            "usage": "I haven't seen him in ages. のように使う"
+          },
+          {
+            "phrase": "making the occasion even more special",
+            "meaning": "その機会をさらに特別なものにする",
+            "usage": "This unexpected gift made the celebration even more special. のように使う"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-05-21T21:15:53.871Z"
   }
 ]
