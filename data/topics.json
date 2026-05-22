@@ -159,11 +159,55 @@
     "sentences": [
       {
         "en": "The phase III randomized controlled trial demonstrated a statistically significant reduction in all-cause mortality among the treatment cohort, albeit with a modest effect size.",
-        "ja": "第III相ランダム化比較試験において、治療群では全死因死亡率の統計学的に有意な減少が認められたが、効果量としては限定的であった。"
+        "ja": "第III相ランダム化比較試験において、治療群では全死因死亡率の統計学的に有意な減少が認められたが、効果量としては限定的であった。",
+        "phrases": [
+          {
+            "phrase": "randomized controlled trial",
+            "meaning": "ランダム化比較試験",
+            "usage": "医学や心理学分野の研究でよく使われる表現です。"
+          },
+          {
+            "phrase": "statistically significant",
+            "meaning": "統計学的に有意な",
+            "usage": "研究結果の信頼性を示す際に用いられる重要な表現です。"
+          },
+          {
+            "phrase": "treatment cohort",
+            "meaning": "治療群",
+            "usage": "臨床試験などで、特定の治療を受けたグループを指します。"
+          },
+          {
+            "phrase": "effect size",
+            "meaning": "効果量",
+            "usage": "治療や介入の効果の大きさを客観的に示す指標です。"
+          }
+        ]
       },
       {
         "en": "Pharmacokinetic analyses revealed that the drug's bioavailability is substantially compromised in patients with hepatic impairment, necessitating a revised dosing protocol.",
-        "ja": "薬物動態解析の結果、肝機能障害患者では当該薬剤のバイオアベイラビリティが著しく低下することが判明し、投与計画の見直しが必要となった。"
+        "ja": "薬物動態解析の結果、肝機能障害患者では当該薬剤のバイオアベイラビリティが著しく低下することが判明し、投与計画の見直しが必要となった。",
+        "phrases": [
+          {
+            "phrase": "Pharmacokinetic analyses",
+            "meaning": "薬物動態学的解析",
+            "usage": "薬が体内でどのように吸収、分布、代謝、排泄されるかを調べる分析のことです。"
+          },
+          {
+            "phrase": "substantially compromised",
+            "meaning": "著しく損なわれる",
+            "usage": "能力や機能などが大きく低下した場合に使われます。"
+          },
+          {
+            "phrase": "hepatic impairment",
+            "meaning": "肝機能障害",
+            "usage": "肝臓の機能が低下している状態を指す医学・薬学用語です。"
+          },
+          {
+            "phrase": "revised dosing protocol",
+            "meaning": "改訂された投与プロトコル（手順）",
+            "usage": "薬の量や投与方法に関する手順が見直されたことを意味します。"
+          }
+        ]
       },
       {
         "en": "Regulatory authorities stipulated that the sponsor must conduct a comprehensive post-market surveillance study to monitor long-term adverse event profiles in diverse populations.",
@@ -206,43 +250,258 @@
     "sentences": [
       {
         "en": "Pursuant to the arbitration clause embedded in the Master Services Agreement, all disputes arising therefrom shall be resolved under the ICC Rules of Arbitration in Singapore.",
-        "ja": "基本サービス契約に定められた仲裁条項に基づき、本件に起因する一切の紛争は、シンガポールにおけるICC仲裁規則に従って解決されるものとします。"
+        "ja": "基本サービス契約に定められた仲裁条項に基づき、本件に起因する一切の紛争は、シンガポールにおけるICC仲裁規則に従って解決されるものとします。",
+        "phrases": [
+          {
+            "phrase": "Pursuant to",
+            "meaning": "〜に従って、〜に基づき",
+            "usage": "契約書や規則などで、特定の条項や規定に言及する際に使われます。"
+          },
+          {
+            "phrase": "embedded in",
+            "meaning": "〜に組み込まれた、〜に埋め込まれた",
+            "usage": "契約条項やシステムなどに機能や規定が組み込まれている状況を表します。"
+          },
+          {
+            "phrase": "arising therefrom",
+            "meaning": "そこから生じる、それにより発生する",
+            "usage": "契約や合意事項から派生する問題や紛争について述べる際に用いられます。"
+          },
+          {
+            "phrase": "resolved under",
+            "meaning": "〜に基づいて解決される",
+            "usage": "紛争や問題が、特定の規則や手続きに従って解決されることを示します。"
+          }
+        ]
       },
       {
         "en": "The claimant contends that the respondent's unilateral termination of the contract constituted a material breach that engendered substantial consequential damages.",
-        "ja": "申立人は、被申立人による一方的な契約解除は重大な契約違反であり、それによって相当な範囲の派生損害が生じたと主張しています。"
+        "ja": "申立人は、被申立人による一方的な契約解除は重大な契約違反であり、それによって相当な範囲の派生損害が生じたと主張しています。",
+        "phrases": [
+          {
+            "phrase": "unilateral termination",
+            "meaning": "一方的な解約・終了",
+            "usage": "The company announced the unilateral termination of the agreement."
+          },
+          {
+            "phrase": "material breach",
+            "meaning": "重大な契約違反",
+            "usage": "This failure to deliver on time constitutes a material breach of contract."
+          },
+          {
+            "phrase": "consequential damages",
+            "meaning": "間接損害、派生損害",
+            "usage": "The lawsuit seeks compensation for consequential damages, such as lost profits."
+          }
+        ]
       },
       {
         "en": "Notwithstanding the governing law clause designating English law, the tribunal must also give due consideration to mandatory provisions of the seat jurisdiction.",
-        "ja": "英国法を準拠法として指定する条項があるにもかかわらず、仲裁廷は仲裁地法域の強行法規にも十分な配慮を払う必要があります。"
+        "ja": "英国法を準拠法として指定する条項があるにもかかわらず、仲裁廷は仲裁地法域の強行法規にも十分な配慮を払う必要があります。",
+        "phrases": [
+          {
+            "phrase": "Notwithstanding the governing law clause",
+            "meaning": "法律準拠条項にかかわらず",
+            "usage": "契約書などで、特定の条項の適用を例外とする場合に用いられます。"
+          },
+          {
+            "phrase": "give due consideration to",
+            "meaning": "〜を十分に考慮に入れる",
+            "usage": "単なる consideration よりも、より慎重かつ真剣な検討を促す表現です。"
+          },
+          {
+            "phrase": "mandatory provisions",
+            "meaning": "強行規定",
+            "usage": "法律や規則のうち、当事者の意思にかかわらず必ず従わなければならない規定を指します。"
+          },
+          {
+            "phrase": "seat jurisdiction",
+            "meaning": "仲裁地（または裁判地）の管轄権",
+            "usage": "国際仲裁や国際訴訟において、手続きが行われる場所の法律が適用される範囲を意味します。"
+          }
+        ]
       },
       {
         "en": "The doctrine of separability ensures that an arbitration agreement remains valid and enforceable even if the underlying commercial contract is subsequently found to be void.",
-        "ja": "分離可能性の原則により、たとえ基礎となる商業契約自体が無効と判断されたとしても、仲裁合意は有効かつ執行可能なものとして存続することが保証されます。"
+        "ja": "分離可能性の原則により、たとえ基礎となる商業契約自体が無効と判断されたとしても、仲裁合意は有効かつ執行可能なものとして存続することが保証されます。",
+        "phrases": [
+          {
+            "phrase": "doctrine of separability",
+            "meaning": "分離原則 (契約の一部が無効でも、仲裁合意は有効とする原則)",
+            "usage": "法律や契約に関する議論で使われます。"
+          },
+          {
+            "phrase": "remains valid and enforceable",
+            "meaning": "有効かつ執行可能であり続ける",
+            "usage": "契約や法律の効力について説明する際によく使われます。"
+          },
+          {
+            "phrase": "underlying commercial contract",
+            "meaning": "根底にある商業契約",
+            "usage": "仲裁合意の対象となる主要な契約を指します。"
+          },
+          {
+            "phrase": "found to be void",
+            "meaning": "無効であると判明する",
+            "usage": "契約や法律が無効と判断された状況を説明する際に使われます。"
+          }
+        ]
       },
       {
         "en": "Counsel for the respondent argued that the claimant had failed to mitigate its losses, thereby precluding recovery of damages that could have been avoided through reasonable measures.",
-        "ja": "被申立人側の弁護士は、申立人が損失の軽減措置を怠ったため、合理的な対応によって回避できたはずの損害賠償は認められないと主張しました。"
+        "ja": "被申立人側の弁護士は、申立人が損失の軽減措置を怠ったため、合理的な対応によって回避できたはずの損害賠償は認められないと主張しました。",
+        "phrases": [
+          {
+            "phrase": "counsel for the respondent",
+            "meaning": "被告側の弁護人",
+            "usage": "This phrase is common in legal contexts, referring to the lawyer representing the party being sued or responding to a claim."
+          },
+          {
+            "phrase": "failed to mitigate its losses",
+            "meaning": "損失を軽減する努力をしなかった",
+            "usage": "This is a legal principle where a party cannot recover damages that they could have reasonably avoided."
+          },
+          {
+            "phrase": "precluding recovery of damages",
+            "meaning": "損害賠償の回復を妨げる",
+            "usage": "This means that because of a certain action or failure, the ability to claim compensation for losses is blocked."
+          },
+          {
+            "phrase": "reasonable measures",
+            "meaning": "合理的な措置",
+            "usage": "This refers to actions that a sensible person would take in a similar situation to minimize harm."
+          }
+        ]
       },
       {
         "en": "The arbitral award, once rendered, is binding on the parties and is enforceable in over 160 contracting states pursuant to the 1958 New York Convention.",
-        "ja": "仲裁判断は、一度下されると当事者を拘束し、1958年のニューヨーク条約に基づき160を超える締約国で執行可能となります。"
+        "ja": "仲裁判断は、一度下されると当事者を拘束し、1958年のニューヨーク条約に基づき160を超える締約国で執行可能となります。",
+        "phrases": [
+          {
+            "phrase": "binding on",
+            "meaning": "〜を拘束する、〜に法的拘束力がある",
+            "usage": "契約書などで \"The agreement is binding on both parties.\" のように使う。"
+          },
+          {
+            "phrase": "enforceable in",
+            "meaning": "〜において強制力がある、執行可能である",
+            "usage": "判決や契約などが \"enforceable in court\" のように使われる。"
+          },
+          {
+            "phrase": "pursuant to",
+            "meaning": "〜に従って、〜に基づいて",
+            "usage": "契約や規則などに言及する際に \"pursuant to Article 5\" のように使う。"
+          },
+          {
+            "phrase": "once rendered",
+            "meaning": "いったん〜されると、〜されれば",
+            "usage": "\"once + 過去分詞\" の形で「いったん〜されると」という意味で広く使える。"
+          }
+        ]
       },
       {
         "en": "Witness testimony was deemed inadmissible insofar as it pertained to pre-contractual negotiations that the parol evidence rule expressly excludes from consideration.",
-        "ja": "証人尋問は、口頭証拠排除原則によって審理の対象から明確に除外されている契約締結前の交渉に関するものであったため、証拠として採用されないと判断されました。"
+        "ja": "証人尋問は、口頭証拠排除原則によって審理の対象から明確に除外されている契約締結前の交渉に関するものであったため、証拠として採用されないと判断されました。",
+        "phrases": [
+          {
+            "phrase": "witness testimony",
+            "meaning": "目撃者の証言",
+            "usage": "裁判や法廷での証言を指す場合によく使われます。"
+          },
+          {
+            "phrase": "inadmissible",
+            "meaning": "（証拠などが）採用できない、許容されない",
+            "usage": "法廷で証拠として認められない場合などに使われます。"
+          },
+          {
+            "phrase": "pre-contractual negotiations",
+            "meaning": "契約締結前の交渉",
+            "usage": "契約が成立する前に行われる話し合いや駆け引きを指します。"
+          },
+          {
+            "phrase": "parol evidence rule",
+            "meaning": "口頭証拠排除法則",
+            "usage": "契約書の内容が最終的なものであり、それ以前の口頭での合意は証拠として認められないという法的な原則です。"
+          }
+        ]
       },
       {
         "en": "The tribunal exercised its inherent jurisdiction to issue interim measures of protection, restraining the respondent from dissipating its assets pending the final award.",
-        "ja": "仲裁廷は、最終判断が下されるまで被申立人による資産の散逸を差し止める暫定的な保護措置を発令するため、その固有の管轄権を行使しました。"
+        "ja": "仲裁廷は、最終判断が下されるまで被申立人による資産の散逸を差し止める暫定的な保護措置を発令するため、その固有の管轄権を行使しました。",
+        "phrases": [
+          {
+            "phrase": "exercise jurisdiction",
+            "meaning": "管轄権を行使する",
+            "usage": "裁判所や政府機関がその権限を使う際に用いる表現。"
+          },
+          {
+            "phrase": "interim measures",
+            "meaning": "暫定措置、一時的な措置",
+            "usage": "最終決定が出るまでの暫定的な対応や手段を指す。"
+          },
+          {
+            "phrase": "restrain from",
+            "meaning": "〜を差し止める、〜するのを阻止する",
+            "usage": "restrain A from doing B の形で「AがBするのを差し止める」と使う。"
+          },
+          {
+            "phrase": "dissipate assets",
+            "meaning": "資産を散逸させる、費消する",
+            "usage": "会社や個人が資産を不適切に処分したり、無駄遣いしたりする状況で使う。"
+          }
+        ]
       },
       {
         "en": "Expert witnesses presented divergent methodologies for quantifying lost profits, compelling the tribunal to conduct an independent assessment of the evidentiary weight of each approach.",
-        "ja": "専門家証人は逸失利益の算定に関して異なる手法を提示したため、仲裁廷は各手法の証拠としての価値について独自の評価を行うことを余儀なくされました。"
+        "ja": "専門家証人は逸失利益の算定に関して異なる手法を提示したため、仲裁廷は各手法の証拠としての価値について独自の評価を行うことを余儀なくされました。",
+        "phrases": [
+          {
+            "phrase": "divergent methodologies",
+            "meaning": "異なる方法論",
+            "usage": "The research team used divergent methodologies to analyze the data."
+          },
+          {
+            "phrase": "quantifying lost profits",
+            "meaning": "逸失利益の算定",
+            "usage": "The insurance company hired an expert for quantifying lost profits."
+          },
+          {
+            "phrase": "evidentiary weight",
+            "meaning": "証拠の重み、証拠力",
+            "usage": "The judge considered the evidentiary weight of the witness's testimony."
+          },
+          {
+            "phrase": "independent assessment",
+            "meaning": "独立した評価",
+            "usage": "The company requested an independent assessment of the project's feasibility."
+          }
+        ]
       },
       {
         "en": "The successful party was awarded a substantial portion of its legal costs on an indemnity basis, reflecting the tribunal's censure of the respondent's dilatory conduct.",
-        "ja": "勝訴当事者には、被申立人の遅延行為に対する仲裁廷の非難を反映し、実費補償の原則に基づき、相当額の訴訟費用が認められました。"
+        "ja": "勝訴当事者には、被申立人の遅延行為に対する仲裁廷の非難を反映し、実費補償の原則に基づき、相当額の訴訟費用が認められました。",
+        "phrases": [
+          {
+            "phrase": "awarded a substantial portion of",
+            "meaning": "かなりの部分を授与される",
+            "usage": "The company was awarded a substantial portion of the contract. (その会社は契約のかなりの部分を勝ち取った。)"
+          },
+          {
+            "phrase": "on an indemnity basis",
+            "meaning": "補償の原則に基づいて",
+            "usage": "This means the winning party will be reimbursed for their legal expenses. (これは、勝訴した当事者が法的費用を払い戻されることを意味する。)"
+          },
+          {
+            "phrase": "censure of",
+            "meaning": "〜に対する非難",
+            "usage": "The report included a strong censure of the company's environmental practices. (その報告書は、会社の環境対策に対する厳しい非難を含んでいた。)"
+          },
+          {
+            "phrase": "dilatory conduct",
+            "meaning": "遅延させる行為、怠慢な行動",
+            "usage": "The court warned the lawyer against dilatory conduct that was delaying the trial. (裁判所は弁護士に対し、裁判を遅らせる遅延行為をやめるよう警告した。)"
+          }
+        ]
       }
     ],
     "titleJa": "国際商事仲裁",
@@ -274,7 +533,8 @@
             "meaning": "多忙なスケジュール、慌ただしい日程",
             "usage": "It's hard to meet due to our hectic schedules. (多忙なスケジュールのせいで会うのが難しい)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131269933220_0.wav"
       },
       {
         "en": "I was just reflecting on that fascinating podcast episode you recommended last week; it really presented a compelling new perspective on urban development.",
@@ -295,7 +555,8 @@
             "meaning": "都市開発",
             "usage": "環境、経済、社会問題などの文脈で頻繁に使われる専門用語。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131269933220_1.wav"
       },
       {
         "en": "The host's argument concerning sustainable infrastructure and community engagement resonated deeply with me, particularly the emphasis on bottom-up initiatives.",
@@ -321,7 +582,8 @@
             "meaning": "草の根的な取り組み、下からの提案",
             "usage": "トップダウンではなく、bottom-up initiativesが組織変革を促す。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131269933220_2.wav"
       },
       {
         "en": "Speaking of thought-provoking content, have you managed to delve into that non-fiction bestseller I mentioned, 'The Atlas of AI'?",
@@ -367,23 +629,103 @@
       },
       {
         "en": "I can certainly relate; finding dedicated time for serious reading often feels like a luxurious indulgence rather than a routine activity these days.",
-        "ja": "お気持ちお察しします。最近は、じっくり読書に時間を割くことが、日常的な習慣というより、むしろ贅沢な時間の使い方に思えますよね。"
+        "ja": "お気持ちお察しします。最近は、じっくり読書に時間を割くことが、日常的な習慣というより、むしろ贅沢な時間の使い方に思えますよね。",
+        "phrases": [
+          {
+            "phrase": "relate to",
+            "meaning": "（人の気持ちや状況に）共感する、よくわかる",
+            "usage": "I can relate to your frustration. (あなたのフラストレーション、よくわかります。)"
+          },
+          {
+            "phrase": "dedicated time",
+            "meaning": "（特定の目的のために）確保された時間",
+            "usage": "We need to set aside dedicated time for project planning. (プロジェクト計画のために、確保された時間を設ける必要がある。)"
+          },
+          {
+            "phrase": "luxurious indulgence",
+            "meaning": "贅沢な気晴らし、ぜいたくな楽しみ",
+            "usage": "For many, a long vacation is a luxurious indulgence. (多くの人にとって、長期休暇は贅沢な気晴らしである。)"
+          }
+        ]
       },
       {
         "en": "On a different note, did you catch the news about the local art exhibition opening next month? The curator's vision sounds quite avant-garde and promising.",
-        "ja": "ところで、来月開催される地元の美術展のニュースはもうご存知ですか？キュレーターの構想が非常に斬新で、期待できそうだと聞きました。"
+        "ja": "ところで、来月開催される地元の美術展のニュースはもうご存知ですか？キュレーターの構想が非常に斬新で、期待できそうだと聞きました。",
+        "phrases": [
+          {
+            "phrase": "On a different note",
+            "meaning": "話を変えると、ところで",
+            "usage": "話題を転換する際に使う便利なフレーズです。"
+          },
+          {
+            "phrase": "catch the news",
+            "meaning": "ニュースを知る、ニュースを見る",
+            "usage": "「〜のニュースを聞いた？」と尋ねる際によく使われます。"
+          },
+          {
+            "phrase": "avant-garde",
+            "meaning": "前衛的な、革新的な",
+            "usage": "芸術や文化の分野で、伝統にとらわれない新しいスタイルを指す言葉です。"
+          }
+        ]
       },
       {
         "en": "I did! I was actually thinking of making a point to attend the preview night, hoping to avoid the inevitable crowds during regular hours.",
-        "ja": "はい、知っています！通常開場時の混雑を避けるために、プレビューナイトにぜひ参加しようかと考えていたところです。"
+        "ja": "はい、知っています！通常開場時の混雑を避けるために、プレビューナイトにぜひ参加しようかと考えていたところです。",
+        "phrases": [
+          {
+            "phrase": "making a point to do",
+            "meaning": "わざわざ〜するようにする、〜することを心がける",
+            "usage": "I'm making a point to exercise every day. (毎日運動するように心がけています)"
+          },
+          {
+            "phrase": "attend the preview night",
+            "meaning": "プレビューナイト（内覧会、先行上映会など）に参加する",
+            "usage": "We're planning to attend the preview night of the new exhibition. (新しい展示会のプレビューナイトに参加する予定です)"
+          },
+          {
+            "phrase": "avoid the inevitable crowds",
+            "meaning": "避けられない混雑を避ける",
+            "usage": "We went early to avoid the inevitable crowds. (避けられない混雑を避けるために早く行きました)"
+          }
+        ]
       },
       {
         "en": "Perhaps we could coordinate our schedules and experience it together? It's always more enjoyable to discuss art with someone whose insights you value.",
-        "ja": "もしかしたら、お互いの都合を合わせて、ご一緒しませんか？理解のある方と芸術について語り合うのは、いつもより一層楽しいものです。"
+        "ja": "もしかしたら、お互いの都合を合わせて、ご一緒しませんか？理解のある方と芸術について語り合うのは、いつもより一層楽しいものです。",
+        "phrases": [
+          {
+            "phrase": "coordinate our schedules",
+            "meaning": "互いのスケジュールを調整する",
+            "usage": "We need to coordinate our schedules to find a meeting time. (会議時間を決めるために、互いのスケジュールを調整する必要があります。)"
+          },
+          {
+            "phrase": "experience it together",
+            "meaning": "それを一緒に体験する",
+            "usage": "Let's go to the exhibition and experience it together. (その展示会に行って、一緒に体験しましょう。)"
+          },
+          {
+            "phrase": "whose insights you value",
+            "meaning": "その人の洞察力をあなたが評価している",
+            "usage": "It's good to have colleagues whose insights you value. (その人の洞察力をあなたが評価している同僚がいるのは良いことです。)"
+          }
+        ]
       },
       {
         "en": "That sounds like an excellent proposition! Let's firm up the details next week once we've both had a chance to check our calendars.",
-        "ja": "それは素晴らしいお誘いです！来週、お互いに予定を確認した上で、詳細を詰めましょう。"
+        "ja": "それは素晴らしいお誘いです！来週、お互いに予定を確認した上で、詳細を詰めましょう。",
+        "phrases": [
+          {
+            "phrase": "firm up the details",
+            "meaning": "詳細を確定する",
+            "usage": "会議で決定事項の詳細を詰める際などに使われます。"
+          },
+          {
+            "phrase": "had a chance to check",
+            "meaning": "確認する機会を得る",
+            "usage": "相手に都合を確認してもらうよう促す丁寧な表現です。"
+          }
+        ]
       }
     ],
     "titleJa": "コーヒーを飲みながら近況報告",
@@ -420,7 +762,8 @@
             "meaning": "すべての分野にわたって",
             "usage": "広範囲に影響が及んでいることを示す際に使われます。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_0.wav"
       },
       {
         "en": "Companies are increasingly pivoting from a lean just-in-time model to a more flexible just-in-case approach, emphasizing redundancy.",
@@ -446,7 +789,8 @@
             "meaning": "冗長性（予備や重複）を強調している",
             "usage": "They are emphasizing redundancy by having backup systems in place. (彼らはバックアップシステムを配置することで冗長性を強調している。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_1.wav"
       },
       {
         "en": "Diversifying the supplier base across multiple geographical regions is now a strategic imperative to mitigate single-point-of-failure risks.",
@@ -472,7 +816,8 @@
             "meaning": "供給元を多様化すること",
             "usage": "サプライチェーンの安定化やリスク分散の文脈でよく使われます。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_2.wav"
       },
       {
         "en": "Leveraging advanced predictive analytics and AI-driven insights is paramount for proactive demand forecasting and risk mitigation.",
@@ -493,7 +838,8 @@
             "meaning": "AIによる知見/洞察",
             "usage": "「X-driven Y」で「Xによって駆動されるY」「Xに基づいたY」のように、現代ビジネスで頻出の表現。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_3.wav"
       },
       {
         "en": "Achieving end-to-end visibility throughout the entire supply network is no longer a luxury but a fundamental necessity for informed decision-making.",
@@ -514,7 +860,8 @@
             "meaning": "情報に基づいた意思決定",
             "usage": "データや知識を基に判断する際に使う重要なビジネス用語。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_4.wav"
       },
       {
         "en": "Many organizations are exploring reshoring or nearshoring initiatives to reduce lead times and enhance control over manufacturing processes.",
@@ -535,7 +882,8 @@
             "meaning": "〜に対する管理を強化する",
             "usage": "品質管理を強化する (enhance control over quality)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_5.wav"
       },
       {
         "en": "Navigating complex geopolitical landscapes and evolving trade policies presents significant challenges to international sourcing and distribution.",
@@ -561,7 +909,8 @@
             "meaning": "国際的な調達と流通",
             "usage": "製品の原材料調達から最終的な顧客への配送まで、国境を越えて行われる一連のプロセスを指します。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_6.wav"
       },
       {
         "en": "Implementing robust contingency plans and alternative sourcing strategies is crucial for effectively addressing unforeseen disruptions.",
@@ -582,7 +931,8 @@
             "meaning": "予期せぬ混乱、予期せぬ障害",
             "usage": "The pandemic caused unforeseen disruptions to global trade."
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_7.wav"
       },
       {
         "en": "Fostering deeper collaborative relationships with key strategic partners strengthens the collective ability to withstand external shocks.",
@@ -608,7 +958,8 @@
             "meaning": "外部からの衝撃に耐える",
             "usage": "経済危機や予期せぬ事態への耐性を表現する際によく使われます。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_8.wav"
       },
       {
         "en": "Ultimately, building an agile and adaptive supply chain confers a sustainable competitive advantage in an increasingly unpredictable global market.",
@@ -629,7 +980,8 @@
             "meaning": "ますます予測不可能な",
             "usage": "increasingly difficult (ますます困難な) のように、「ますます〜になる」状況を表す際に使う。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131381771636_9.wav"
       }
     ],
     "titleJa": "グローバル危機に負けないサプライチェーン",
