@@ -57,27 +57,129 @@
     "sentences": [
       {
         "en": "The experimental paradigm was meticulously designed to isolate the causal relationship between neuroplasticity and second-language acquisition in post-adolescent subjects.",
-        "ja": "本実験の枠組みは、青年期以降の被験者を対象に、神経可塑性と第二言語習得との因果関係を精緻に特定できるよう、細心の注意を払って設計されました。"
+        "ja": "本実験の枠組みは、青年期以降の被験者を対象に、神経可塑性と第二言語習得との因果関係を精緻に特定できるよう、細心の注意を払って設計されました。",
+        "phrases": [
+          {
+            "phrase": "meticulously designed",
+            "meaning": "綿密に設計された、細部まで注意深く計画された",
+            "usage": "そのシステムは、ユーザーのニーズに合わせて綿密に設計された。"
+          },
+          {
+            "phrase": "isolate the causal relationship",
+            "meaning": "因果関係を特定する／切り分ける",
+            "usage": "統計分析により、2つの変数間の因果関係を特定することができた。"
+          },
+          {
+            "phrase": "experimental paradigm",
+            "meaning": "実験の枠組み、実験モデル",
+            "usage": "その研究は、新しい実験パラダイムを導入することで画期的な成果を上げた。"
+          }
+        ]
       },
       {
         "en": "Contrary to the prevailing consensus, our longitudinal data suggest that socioeconomic variables confound the observed correlation to a statistically significant degree.",
-        "ja": "これまでの一般的な見解とは異なり、我々の縦断的データは、社会経済的要因が観測された相関関係に統計的に有意な影響を与え、結果を歪めている可能性を示唆しています。"
+        "ja": "これまでの一般的な見解とは異なり、我々の縦断的データは、社会経済的要因が観測された相関関係に統計的に有意な影響を与え、結果を歪めている可能性を示唆しています。",
+        "phrases": [
+          {
+            "phrase": "Contrary to",
+            "meaning": "〜に反して、〜とは異なり",
+            "usage": "Contrary to expectations, the project was completed ahead of schedule. (予想に反して、プロジェクトは予定より早く完了した。)"
+          },
+          {
+            "phrase": "prevailing consensus",
+            "meaning": "一般的な合意、支配的な見解",
+            "usage": "The prevailing consensus is that interest rates will rise. (一般的な見解では、金利は上昇するだろう。)"
+          },
+          {
+            "phrase": "observed correlation",
+            "meaning": "観察された相関関係",
+            "usage": "The observed correlation does not necessarily imply causation. (観察された相関関係は、必ずしも因果関係を意味しない。)"
+          }
+        ]
       },
       {
         "en": "The heterogeneous composition of the control group inadvertently introduced a source of systematic bias that subsequent meta-analyses must rigorously account for.",
-        "ja": "対照群の不均一な構成が、意図せず系統的なバイアスを生じさせる要因となっており、今後のメタ分析ではこの点を厳密に考慮する必要があります。"
+        "ja": "対照群の不均一な構成が、意図せず系統的なバイアスを生じさせる要因となっており、今後のメタ分析ではこの点を厳密に考慮する必要があります。",
+        "phrases": [
+          {
+            "phrase": "source of systematic bias",
+            "meaning": "体系的な偏りの原因",
+            "usage": "報告書では、データ収集における潜在的な偏りの原因を特定する必要がある。"
+          },
+          {
+            "phrase": "account for",
+            "meaning": "～を考慮に入れる、～を説明する",
+            "usage": "予算案では、予期せぬ費用を厳密に考慮する必要がある。"
+          },
+          {
+            "phrase": "heterogeneous composition",
+            "meaning": "異質な構成、多様な構成",
+            "usage": "チームの多様な構成が、革新的なアイデアを生み出した。"
+          }
+        ]
       },
       {
         "en": "We employed a mixed-methods approach, triangulating qualitative ethnographic observations with quantitative biomarker measurements to corroborate our primary hypothesis.",
-        "ja": "我々は、一次仮説を裏付けるため、質的な民族誌的観察と定量的バイオマーカー測定を組み合わせる複合的アプローチを採用しました。"
+        "ja": "我々は、一次仮説を裏付けるため、質的な民族誌的観察と定量的バイオマーカー測定を組み合わせる複合的アプローチを採用しました。",
+        "phrases": [
+          {
+            "phrase": "employed a mixed-methods approach",
+            "meaning": "複合的な手法を採用した",
+            "usage": "'employ an approach' の形で「〜の手法を用いる」という意味でよく使われる"
+          },
+          {
+            "phrase": "triangulating observations with measurements",
+            "meaning": "（複数の情報源、ここでは観察と測定）を照合して検証する",
+            "usage": "複数のデータソースをtriangulateすることで、より信頼性の高い結論が得られる"
+          },
+          {
+            "phrase": "corroborate our primary hypothesis",
+            "meaning": "主要な仮説を裏付ける、確証する",
+            "usage": "新たな証拠が彼の主張をcorroborateした"
+          }
+        ]
       },
       {
         "en": "The reproducibility crisis in social psychology necessitates that researchers pre-register their hypotheses and analytical protocols prior to data collection.",
-        "ja": "社会心理学における再現性の危機を受け、研究者はデータ収集前に仮説と分析手順を事前登録することが不可欠となっています。"
+        "ja": "社会心理学における再現性の危機を受け、研究者はデータ収集前に仮説と分析手順を事前登録することが不可欠となっています。",
+        "phrases": [
+          {
+            "phrase": "reproducibility crisis",
+            "meaning": "再現性の危機",
+            "usage": "科学研究の信頼性に関する文脈で使われることが多い。"
+          },
+          {
+            "phrase": "necessitates that",
+            "meaning": "〜を必要とする、〜を義務付ける",
+            "usage": "The new regulation necessitates that all data be encrypted. (新しい規制により、すべてのデータを暗号化する必要がある。)"
+          },
+          {
+            "phrase": "prior to",
+            "meaning": "〜の前に",
+            "usage": "All participants must register prior to the event. (すべての参加者はイベントの前に登録しなければならない。)"
+          }
+        ]
       },
       {
         "en": "Peer reviewers unanimously flagged the ambiguous operationalization of the construct \"resilience,\" urging the authors to delineate more precise measurement criteria.",
-        "ja": "査読者らは、構成概念「レジリエンス」の操作的定義の曖昧さを満場一致で指摘し、著者に対し、より明確な測定基準を示すよう強く求めました。"
+        "ja": "査読者らは、構成概念「レジリエンス」の操作的定義の曖昧さを満場一致で指摘し、著者に対し、より明確な測定基準を示すよう強く求めました。",
+        "phrases": [
+          {
+            "phrase": "flag (something)",
+            "meaning": "〜を指摘する、〜に注意を促す",
+            "usage": "問題点や懸念事項を指摘する際によく使う。「The auditor flagged several inconsistencies.」"
+          },
+          {
+            "phrase": "urge (someone) to (do something)",
+            "meaning": "（人）に〜するよう強く促す",
+            "usage": "提案や要求を強く伝える際に使う。「The committee urged the government to take action.」"
+          },
+          {
+            "phrase": "delineate (something)",
+            "meaning": "〜を明確に描写する、〜の輪郭をはっきりさせる",
+            "usage": "計画、役割、境界などを明確にする際に使う。「The new policy delineates the responsibilities of each department.」"
+          }
+        ]
       },
       {
         "en": "The effect size, as measured by Cohen's d, was negligible, undermining the practical significance of an otherwise statistically robust finding.",
@@ -108,43 +210,243 @@
     "sentences": [
       {
         "en": "Large language models exhibit remarkable emergent capabilities that were not explicitly programmed but instead arose organically from training on vast corpora of unstructured text.",
-        "ja": "大規模言語モデルは、膨大な非構造化テキストデータセットでの学習を通じて、当初の設計にはなかった驚くべき能力を自然に獲得しています。"
+        "ja": "大規模言語モデルは、膨大な非構造化テキストデータセットでの学習を通じて、当初の設計にはなかった驚くべき能力を自然に獲得しています。",
+        "phrases": [
+          {
+            "phrase": "exhibit remarkable capabilities",
+            "meaning": "優れた能力を示す",
+            "usage": "報告書やプレゼンで、対象の優れた特性を述べる際に使える。"
+          },
+          {
+            "phrase": "arose organically",
+            "meaning": "自然発生的に生じた",
+            "usage": "計画的ではなく、自然な過程で物事が起こった状況を説明する際に使う。"
+          },
+          {
+            "phrase": "vast corpora",
+            "meaning": "膨大な量のテキストデータ",
+            "usage": "\"vast amounts of data\" (膨大な量のデータ) のように、\"vast\"は「膨大な」という意味で様々な名詞と組み合わせる。"
+          }
+        ]
       },
       {
         "en": "To mitigate the risks of model hallucination, enterprises are increasingly deploying retrieval-augmented generation architectures that ground outputs in authoritative knowledge bases.",
-        "ja": "モデルの誤情報生成（ハルシネーション）リスクを低減するため、企業は信頼できる知識ベースに基づいた出力を生成する、検索拡張生成（RAG）アーキテクチャの導入を拡大しています。"
+        "ja": "モデルの誤情報生成（ハルシネーション）リスクを低減するため、企業は信頼できる知識ベースに基づいた出力を生成する、検索拡張生成（RAG）アーキテクチャの導入を拡大しています。",
+        "phrases": [
+          {
+            "phrase": "mitigate the risks",
+            "meaning": "リスクを軽減する",
+            "usage": "災害リスクを軽減するために、事前対策が重要だ。"
+          },
+          {
+            "phrase": "increasingly deploying",
+            "meaning": "ますます展開している、導入を加速している",
+            "usage": "企業は新しい技術をますます導入している。"
+          },
+          {
+            "phrase": "ground outputs in",
+            "meaning": "出力を〜に根拠を置く、〜に基づいて確実にする",
+            "usage": "彼の主張は確かな事実に根拠を置いている。"
+          },
+          {
+            "phrase": "authoritative knowledge bases",
+            "meaning": "信頼できる知識ベース、権威ある情報源",
+            "usage": "決定は常に信頼できる情報源に基づくべきだ。"
+          }
+        ]
       },
       {
         "en": "The proliferation of generative AI tools has precipitated an urgent reexamination of intellectual property law, particularly regarding the ownership of AI-generated creative works.",
-        "ja": "生成AIツールの急速な普及は、特にAIが生成した創作物の著作権を巡り、知的財産法の抜本的な見直しを喫緊の課題としています。"
+        "ja": "生成AIツールの急速な普及は、特にAIが生成した創作物の著作権を巡り、知的財産法の抜本的な見直しを喫緊の課題としています。",
+        "phrases": [
+          {
+            "phrase": "the proliferation of",
+            "meaning": "〜の急増、拡散",
+            "usage": "The proliferation of misinformation is a serious concern."
+          },
+          {
+            "phrase": "precipitated an urgent reexamination",
+            "meaning": "緊急の再検討を促した/引き起こした",
+            "usage": "The new evidence precipitated a shift in public opinion. (新しい証拠が世論の変化を促した。)"
+          },
+          {
+            "phrase": "intellectual property law",
+            "meaning": "知的財産法",
+            "usage": "He specializes in intellectual property law."
+          },
+          {
+            "phrase": "regarding the ownership of",
+            "meaning": "〜の所有権に関して",
+            "usage": "There are ongoing discussions regarding the ownership of digital assets."
+          }
+        ]
       },
       {
         "en": "Federated learning enables organizations to collaboratively train machine learning models without centralizing sensitive data, thereby preserving individual privacy at scale.",
-        "ja": "連合学習（Federated Learning）は、機密データを一元管理することなく機械学習モデルの共同学習を可能にし、大規模なデータプライバシー保護を実現します。"
+        "ja": "連合学習（Federated Learning）は、機密データを一元管理することなく機械学習モデルの共同学習を可能にし、大規模なデータプライバシー保護を実現します。",
+        "phrases": [
+          {
+            "phrase": "sensitive data",
+            "meaning": "機密データ、個人情報",
+            "usage": "顧客の機密データを厳重に管理する必要がある。"
+          },
+          {
+            "phrase": "thereby preserving",
+            "meaning": "それによって〜する、その結果〜する (「thereby + 動名詞」の形で因果関係を示す)",
+            "usage": "コスト削減策を導入し、それによって利益率を向上させた。"
+          },
+          {
+            "phrase": "at scale",
+            "meaning": "大規模に、広範囲に",
+            "usage": "このソリューションは、大規模な展開に適している。"
+          }
+        ]
       },
       {
         "en": "The opacity of deep neural networks poses profound challenges for regulated industries where algorithmic decision-making must be auditable and explicable to stakeholders.",
-        "ja": "ディープニューラルネットワークのブラックボックス性は、アルゴリズムによる意思決定の監査可能性と説明責任が求められる規制産業にとって、極めて深刻な課題となっています。"
+        "ja": "ディープニューラルネットワークのブラックボックス性は、アルゴリズムによる意思決定の監査可能性と説明責任が求められる規制産業にとって、極めて深刻な課題となっています。",
+        "phrases": [
+          {
+            "phrase": "pose profound challenges",
+            "meaning": "深刻な課題を提起する／もたらす",
+            "usage": "環境問題は世界に深刻な課題を提起している。"
+          },
+          {
+            "phrase": "regulated industries",
+            "meaning": "規制産業",
+            "usage": "金融や医療は典型的な規制産業です。"
+          },
+          {
+            "phrase": "algorithmic decision-making",
+            "meaning": "アルゴリズムによる意思決定",
+            "usage": "AIの普及により、アルゴリズムによる意思決定の重要性が増している。"
+          },
+          {
+            "phrase": "to stakeholders",
+            "meaning": "利害関係者に対して",
+            "usage": "企業は株主や顧客など、すべての利害関係者に対して透明性を保つべきだ。"
+          }
+        ]
       },
       {
         "en": "Consequently, the EU AI Act mandates that high-risk AI systems undergo rigorous conformity assessments before being deployed in critical societal infrastructure.",
-        "ja": "その結果、EUのAI法は、リスクの高いAIシステムが社会インフラに導入される前に、厳格な適合性評価を受けることを義務付けています。"
+        "ja": "その結果、EUのAI法は、リスクの高いAIシステムが社会インフラに導入される前に、厳格な適合性評価を受けることを義務付けています。",
+        "phrases": [
+          {
+            "phrase": "mandates that",
+            "meaning": "〜を義務付ける、〜を命じる",
+            "usage": "The new regulation mandates that all data be encrypted. (新規則は全てのデータの暗号化を義務付けている。)"
+          },
+          {
+            "phrase": "high-risk AI systems",
+            "meaning": "高リスクAIシステム",
+            "usage": "「high-risk」は「high-risk investment (高リスク投資)」のように他の名詞と組み合わせて使える。"
+          },
+          {
+            "phrase": "undergo rigorous conformity assessments",
+            "meaning": "厳格な適合性評価を受ける",
+            "usage": "「undergo」は「undergo training (研修を受ける)」のように、何かを経験する際に使う。"
+          },
+          {
+            "phrase": "critical societal infrastructure",
+            "meaning": "重要な社会インフラ",
+            "usage": "「critical infrastructure (重要インフラ)」はニュースで頻繁に使われる表現。"
+          }
+        ]
       },
       {
         "en": "Edge computing architectures are gaining traction as latency-sensitive applications demand that inference be performed locally rather than routed through distant cloud servers.",
-        "ja": "推論処理を遠隔のクラウドサーバーではなくローカルで実行することが求められる、遅延に敏感なアプリケーションの増加に伴い、エッジコンピューティングアーキテクチャへの関心が高まっています。"
+        "ja": "推論処理を遠隔のクラウドサーバーではなくローカルで実行することが求められる、遅延に敏感なアプリケーションの増加に伴い、エッジコンピューティングアーキテクチャへの関心が高まっています。",
+        "phrases": [
+          {
+            "phrase": "gaining traction",
+            "meaning": "勢いを増す、普及し始める",
+            "usage": "新製品が市場でgaining tractionだ。"
+          },
+          {
+            "phrase": "demand that ... be performed",
+            "meaning": "〜が実行されることを要求する（仮定法現在）",
+            "usage": "demand that the report be submitted by Friday のように使う。"
+          },
+          {
+            "phrase": "latency-sensitive",
+            "meaning": "遅延に敏感な、レイテンシの影響を受けやすい",
+            "usage": "latency-sensitive applications のように名詞を修飾する複合形容詞。"
+          }
+        ]
       },
       {
         "en": "Notwithstanding the hype surrounding autonomous systems, current AI exhibits no genuine comprehension — it approximates understanding through sophisticated pattern recognition.",
-        "ja": "自律システムを取り巻く過熱した期待とは裏腹に、現在のAIは真の理解をしているわけではなく、高度なパターン認識によってあたかも理解しているかのように振る舞っているに過ぎません。"
+        "ja": "自律システムを取り巻く過熱した期待とは裏腹に、現在のAIは真の理解をしているわけではなく、高度なパターン認識によってあたかも理解しているかのように振る舞っているに過ぎません。",
+        "phrases": [
+          {
+            "phrase": "Notwithstanding the hype",
+            "meaning": "〜という誇大宣伝にもかかわらず",
+            "usage": "フォーマルな文脈で、一般的な期待や誇張された情報とは異なる事実を述べる際に使う。"
+          },
+          {
+            "phrase": "genuine comprehension",
+            "meaning": "真の理解、本物の理解",
+            "usage": "表面的な理解ではなく、深く本質的な理解を指す。AIの能力を議論する際などによく使われる。"
+          },
+          {
+            "phrase": "sophisticated pattern recognition",
+            "meaning": "高度なパターン認識",
+            "usage": "AIやデータ分析の分野で、複雑なデータから規則性を見つけ出す能力を説明する際によく使われる。"
+          }
+        ]
       },
       {
         "en": "Enterprises that leverage AI to augment human judgment rather than replace it invariably achieve more robust outcomes and maintain greater organizational resilience.",
-        "ja": "AIを人間の判断を代替するのではなく、あくまで補完するものとして活用する企業は、より確実な成果を上げ、組織としてのレジリエンス（回復力）も高めています。"
+        "ja": "AIを人間の判断を代替するのではなく、あくまで補完するものとして活用する企業は、より確実な成果を上げ、組織としてのレジリエンス（回復力）も高めています。",
+        "phrases": [
+          {
+            "phrase": "leverage AI",
+            "meaning": "AIを活用する",
+            "usage": "「〜を最大限に活用する」という意味で、leverage technology/data/resources などと使う。"
+          },
+          {
+            "phrase": "augment human judgment",
+            "meaning": "人間の判断力を強化する/補強する",
+            "usage": "AIが人間の能力を「拡張する」という文脈でよく使われる。"
+          },
+          {
+            "phrase": "robust outcomes",
+            "meaning": "確固たる成果、強固な結果",
+            "usage": "「堅牢な、盤石な」といった意味で、robust system/economy などと使う。"
+          },
+          {
+            "phrase": "organizational resilience",
+            "meaning": "組織の回復力/弾力性",
+            "usage": "「困難からの回復力」を指し、economic resilience などとも使う。"
+          }
+        ]
       },
       {
         "en": "The imperative to develop energy-efficient AI architectures is becoming increasingly salient given the substantial carbon footprint associated with large-scale model training.",
-        "ja": "大規模なモデル学習に伴う相当な二酸化炭素排出量を考慮すると、エネルギー効率の高いAIアーキテクチャを開発する必要性が、ますます高まっています。"
+        "ja": "大規模なモデル学習に伴う相当な二酸化炭素排出量を考慮すると、エネルギー効率の高いAIアーキテクチャを開発する必要性が、ますます高まっています。",
+        "phrases": [
+          {
+            "phrase": "the imperative to develop",
+            "meaning": "〜を開発する緊急の必要性/責務",
+            "usage": "The imperative to innovate is crucial for survival. (「〜する責務」という文脈で使える)"
+          },
+          {
+            "phrase": "increasingly salient",
+            "meaning": "ますます顕著になっている、重要性が増している",
+            "usage": "その問題は、最近の出来事を受けてますます顕著になっている。"
+          },
+          {
+            "phrase": "given the substantial carbon footprint",
+            "meaning": "かなりの二酸化炭素排出量を考慮すると",
+            "usage": "「〜を考慮すると」という意味で、\"given X\" の形で広く使える。"
+          },
+          {
+            "phrase": "associated with",
+            "meaning": "〜に関連する、〜に伴う",
+            "usage": "リスクやコストなど、特定の事柄と別の事柄の関連性を説明する際に使う。"
+          }
+        ]
       }
     ],
     "titleJa": "AIの企業活用",
@@ -211,31 +513,175 @@
       },
       {
         "en": "Regulatory authorities stipulated that the sponsor must conduct a comprehensive post-market surveillance study to monitor long-term adverse event profiles in diverse populations.",
-        "ja": "規制当局は、開発元に対し、多様な集団における長期的な有害事象プロファイルを監視するための包括的な市販後調査を実施するよう指示した。"
+        "ja": "規制当局は、開発元に対し、多様な集団における長期的な有害事象プロファイルを監視するための包括的な市販後調査を実施するよう指示した。",
+        "phrases": [
+          {
+            "phrase": "Regulatory authorities",
+            "meaning": "規制当局",
+            "usage": "医薬品や金融など、様々な分野の規制を行う公的機関を指す場合に使う。"
+          },
+          {
+            "phrase": "conduct a study",
+            "meaning": "調査を実施する",
+            "usage": "research, survey, experiment など、様々な種類の study に使える一般的な表現。"
+          },
+          {
+            "phrase": "post-market surveillance",
+            "meaning": "市販後調査",
+            "usage": "医薬品や医療機器などが市場に出た後に、その安全性や有効性を監視する活動を指す。"
+          },
+          {
+            "phrase": "adverse event profiles",
+            "meaning": "副作用のプロファイル（傾向）",
+            "usage": "医薬品などの予期せぬ有害な事象の発生パターンや特徴を指す。"
+          }
+        ]
       },
       {
         "en": "The incidence of treatment-emergent adverse events in the experimental arm was comparable to placebo, suggesting a favourable safety profile that merits further investigation.",
-        "ja": "試験群における治療関連有害事象の発現率はプラセボ群と同程度であり、さらなる検証に値する良好な安全性プロファイルが示唆された。"
+        "ja": "試験群における治療関連有害事象の発現率はプラセボ群と同程度であり、さらなる検証に値する良好な安全性プロファイルが示唆された。",
+        "phrases": [
+          {
+            "phrase": "treatment-emergent adverse events",
+            "meaning": "治療によって誘発される有害事象",
+            "usage": "医療分野や医薬品開発の文脈で使われる専門的な表現です。"
+          },
+          {
+            "phrase": "comparable to",
+            "meaning": "〜に匹敵する、〜と同程度である",
+            "usage": "The results were comparable to previous studies. (その結果は以前の研究に匹敵した。)"
+          },
+          {
+            "phrase": "favourable safety profile",
+            "meaning": "好ましい安全性プロファイル",
+            "usage": "医薬品や治療法の安全性を評価する際によく使われる表現です。"
+          },
+          {
+            "phrase": "merits further investigation",
+            "meaning": "さらなる調査に値する",
+            "usage": "The findings merit further investigation. (その発見はさらなる調査に値する。)"
+          }
+        ]
       },
       {
         "en": "Compassionate use provisions allow terminally ill patients to access investigational therapies that have not yet received regulatory approval, albeit under stringent conditions.",
-        "ja": "人道的使用（コンパッショネートユース）の規定により、末期患者は、厳格な条件下ではあるものの、まだ承認されていない治験薬へのアクセスが可能となる。"
+        "ja": "人道的使用（コンパッショネートユース）の規定により、末期患者は、厳格な条件下ではあるものの、まだ承認されていない治験薬へのアクセスが可能となる。",
+        "phrases": [
+          {
+            "phrase": "Compassionate use provisions",
+            "meaning": "治療目的での特別使用規定",
+            "usage": "患者が未承認の治療法にアクセスするための例外的な制度を指す場合に使う"
+          },
+          {
+            "phrase": "terminally ill patients",
+            "meaning": "末期患者",
+            "usage": "回復の見込みがなく、余命が限られている患者を指す"
+          },
+          {
+            "phrase": "investigational therapies",
+            "meaning": "治験段階の治療法",
+            "usage": "まだ正式な承認を受けていない、研究・開発中の治療法を指す"
+          },
+          {
+            "phrase": "regulatory approval",
+            "meaning": "規制当局の承認",
+            "usage": "医薬品や医療機器などが市場に出るために必要な公的な許可のこと"
+          }
+        ]
       },
       {
         "en": "The principal investigator disclosed a potential conflict of interest stemming from equity holdings in the sponsoring biopharmaceutical company, which the IRB took under advisement.",
-        "ja": "主任研究者は、出資先のバイオ医薬品企業に対する株式保有に起因する潜在的な利益相反を開示しており、治験審査委員会（IRB）はこれを考慮に入れた。"
+        "ja": "主任研究者は、出資先のバイオ医薬品企業に対する株式保有に起因する潜在的な利益相反を開示しており、治験審査委員会（IRB）はこれを考慮に入れた。",
+        "phrases": [
+          {
+            "phrase": "principal investigator",
+            "meaning": "主任研究員、主担当研究者",
+            "usage": "研究プロジェクトや実験の責任者を示す際に使われます。"
+          },
+          {
+            "phrase": "conflict of interest",
+            "meaning": "利益相反",
+            "usage": "公務員や研究者などが、個人的な利益と公的な義務との間で利害が対立する状況を指します。"
+          },
+          {
+            "phrase": "stemming from",
+            "meaning": "〜に由来する、〜から生じる",
+            "usage": "問題や状況の原因を説明する際によく使われます。例: problems stemming from the new policy"
+          },
+          {
+            "phrase": "take under advisement",
+            "meaning": "〜を熟慮する、〜を検討する",
+            "usage": "決定を下す前に、提案や情報を慎重に検討するプロセスを指します。"
+          }
+        ]
       },
       {
         "en": "Genome-wide association studies have elucidated several single-nucleotide polymorphisms that predispose individuals to idiosyncratic drug reactions, advancing personalized medicine.",
-        "ja": "ゲノムワイド関連解析（GWAS）により、特異体質的な薬物反応を起こしやすい個人を特定する複数の一塩基多型（SNP）が明らかにされ、個別化医療の進展に貢献した。"
+        "ja": "ゲノムワイド関連解析（GWAS）により、特異体質的な薬物反応を起こしやすい個人を特定する複数の一塩基多型（SNP）が明らかにされ、個別化医療の進展に貢献した。",
+        "phrases": [
+          {
+            "phrase": "Genome-wide association studies",
+            "meaning": "ゲノムワイド関連解析（ゲノム全体にわたる遺伝子型と形質の関連を調べる研究）",
+            "usage": "医学・生物学分野で広く使われる専門用語です。"
+          },
+          {
+            "phrase": "single-nucleotide polymorphisms",
+            "meaning": "一塩基多型（SNP、DNA配列中の塩基一つ一つの違い）",
+            "usage": "遺伝子の個人差や疾患リスクに関連する研究で重要視されます。"
+          },
+          {
+            "phrase": "predispose individuals to",
+            "meaning": "個人を～にかかりやすくする、～の素因を持たせる",
+            "usage": "病気や特定の反応に対する傾向を説明する際に用いられます。"
+          },
+          {
+            "phrase": "advancing personalized medicine",
+            "meaning": "個別化医療（プレシジョン・メディシン）を進展させる",
+            "usage": "個人の遺伝情報などに基づいて、最適な治療法を提供する医療の発展を指します。"
+          }
+        ]
       },
       {
         "en": "The Data Safety Monitoring Board convened an unscheduled interim analysis after preliminary signals indicated a disproportionate rate of serious cardiac events in elderly participants.",
-        "ja": "データ安全性モニタリング委員会（DSMB）は、高齢参加者において重篤な心イベントの発生率に不均衡があることを示唆する初期シグナルを受け、予定外の中間解析を実施した。"
+        "ja": "データ安全性モニタリング委員会（DSMB）は、高齢参加者において重篤な心イベントの発生率に不均衡があることを示唆する初期シグナルを受け、予定外の中間解析を実施した。",
+        "phrases": [
+          {
+            "phrase": "preliminary signals",
+            "meaning": "初期の兆候、予備的な兆候",
+            "usage": "There are preliminary signals that the market is recovering. (市場が回復している初期の兆候がある。)"
+          },
+          {
+            "phrase": "disproportionate rate",
+            "meaning": "不均衡な割合、異常な割合",
+            "usage": "The study found a disproportionate rate of errors in the new system. (その調査は、新システムにおいて不均衡な割合のエラーがあることを発見した。)"
+          },
+          {
+            "phrase": "convene an analysis",
+            "meaning": "分析を行う、分析を招集する",
+            "usage": "The committee decided to convene an independent analysis of the incident. (委員会は、その事案について独立した分析を行うことを決定した。)"
+          }
+        ]
       },
       {
         "en": "Biosimilar manufacturers must demonstrate that their product is highly similar to the reference biologic with no clinically meaningful differences in safety, purity, or potency.",
-        "ja": "バイオシミラー製造業者は、その製品が参照バイオ医薬品と安全性、純度、効力のいずれにおいても臨床的に意味のある差がなく、極めて類似していることを証明する必要がある。"
+        "ja": "バイオシミラー製造業者は、その製品が参照バイオ医薬品と安全性、純度、効力のいずれにおいても臨床的に意味のある差がなく、極めて類似していることを証明する必要がある。",
+        "phrases": [
+          {
+            "phrase": "demonstrate that",
+            "meaning": "〜であることを証明する、実証する",
+            "usage": "The study demonstrated that the new drug was effective. (その研究は、新薬が効果的であることを実証した。)"
+          },
+          {
+            "phrase": "highly similar to",
+            "meaning": "〜に非常に類似している",
+            "usage": "The two products are highly similar to each other in terms of quality. (品質面では、その二つの製品は互いに非常に似ている。)"
+          },
+          {
+            "phrase": "clinically meaningful differences",
+            "meaning": "臨床的に意味のある違い",
+            "usage": "This phrase is specific to medical and pharmaceutical contexts, emphasizing that any differences must be significant from a patient care perspective. (このフレーズは医療・製薬分野に特有で、いかなる違いも患者ケアの観点から見て重要でなければならないことを強調する。)"
+          }
+        ]
       }
     ],
     "titleJa": "臨床試験と薬事承認",
@@ -3075,5 +3521,323 @@
       }
     ],
     "createdAt": "2026-05-21T21:15:53.871Z"
+  },
+  {
+    "id": "t17795600186599892",
+    "title": "The Global Imperative for Renewable Energy",
+    "titleJa": "再生可能エネルギーへの世界的な転換の必要性",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The imperative to transition towards renewable energy sources has never been more pressing, given escalating climate concerns and geopolitical volatilities.",
+        "ja": "気候変動への懸念の高まりと地政学的な不安定さを鑑みると、再生可能エネルギー源への移行はかつてないほど喫緊の課題となっています。",
+        "audioPath": "./assets/audio/t17795600186599892_0.wav",
+        "phrases": [
+          {
+            "phrase": "has never been more pressing",
+            "meaning": "これほど差し迫ったことはない、かつてないほど喫緊の課題だ",
+            "usage": "The need for reform has never been more pressing. (改革の必要性はかつてないほど差し迫っている。)"
+          },
+          {
+            "phrase": "the imperative to transition",
+            "meaning": "移行する義務／必要性",
+            "usage": "The imperative to innovate is crucial for survival. (革新する義務は生き残るために極めて重要だ。)"
+          },
+          {
+            "phrase": "transition towards",
+            "meaning": "〜へ移行する、〜へ転換する",
+            "usage": "We need to transition towards a digital-first strategy. (デジタルファースト戦略へと移行する必要がある。)"
+          },
+          {
+            "phrase": "escalating climate concerns",
+            "meaning": "高まる気候変動への懸念",
+            "usage": "Escalating concerns about inflation are impacting markets. (インフレに対する高まる懸念が市場に影響を与えている。)"
+          }
+        ]
+      },
+      {
+        "en": "This monumental shift is not merely an environmental desideratum but a profound economic restructuring, promising long-term stability and innovation.",
+        "ja": "この歴史的な転換は、単なる環境面での望ましい目標に留まらず、長期的な安定と革新を約束する、経済の抜本的な再構築を意味します。",
+        "audioPath": "./assets/audio/t17795600186599892_1.wav",
+        "phrases": [
+          {
+            "phrase": "monumental shift",
+            "meaning": "画期的な変化、大変革",
+            "usage": "a monumental shift in technology のように、規模の大きさを強調して使う"
+          },
+          {
+            "phrase": "economic restructuring",
+            "meaning": "経済構造改革",
+            "usage": "The government is implementing an economic restructuring plan. のように、経済政策の文脈で使われる"
+          },
+          {
+            "phrase": "long-term stability",
+            "meaning": "長期的な安定",
+            "usage": "This policy aims to ensure long-term stability for the company. のように、将来の見通しについて話す際に使う"
+          }
+        ]
+      },
+      {
+        "en": "Significant technological breakthroughs in solar photovoltaics and wind power generation have drastically improved efficiency and cost-effectiveness.",
+        "ja": "太陽光発電や風力発電における目覚ましい技術的進歩は、効率性と費用対効果を劇的に向上させました。",
+        "audioPath": "./assets/audio/t17795600186599892_2.wav",
+        "phrases": [
+          {
+            "phrase": "technological breakthroughs",
+            "meaning": "技術的飛躍、画期的な進歩",
+            "usage": "This phrase refers to major advancements in technology."
+          },
+          {
+            "phrase": "wind power generation",
+            "meaning": "風力発電",
+            "usage": "This is a common term in the energy sector."
+          },
+          {
+            "phrase": "cost-effectiveness",
+            "meaning": "費用対効果、費用効率",
+            "usage": "This term is crucial when evaluating projects or investments."
+          }
+        ]
+      },
+      {
+        "en": "Governments worldwide are implementing ambitious policy frameworks, including carbon pricing and subsidies, to accelerate adoption and incentivize investment.",
+        "ja": "世界各国の政府は、導入を加速し投資を促進するため、炭素価格設定や補助金制度を含む野心的な政策枠組みを導入しています。",
+        "audioPath": "./assets/audio/t17795600186599892_3.wav",
+        "phrases": [
+          {
+            "phrase": "implementing ambitious policy frameworks",
+            "meaning": "野心的な政策の枠組みを実施している",
+            "usage": "Governments are implementing ambitious policy frameworks to tackle climate change. (政府は気候変動に対処するために野心的な政策の枠組みを実施している。)"
+          },
+          {
+            "phrase": "carbon pricing",
+            "meaning": "炭素価格設定（炭素排出量に価格を付けること）",
+            "usage": "Carbon pricing is a key tool for reducing greenhouse gas emissions. (炭素価格設定は温室効果ガス排出量を削減するための重要な手段である。)"
+          },
+          {
+            "phrase": "incentivize investment",
+            "meaning": "投資を奨励する",
+            "usage": "The government introduced tax breaks to incentivize investment in renewable energy. (政府は再生可能エネルギーへの投資を奨励するために税制優遇措置を導入した。)"
+          }
+        ]
+      },
+      {
+        "en": "However, integrating intermittent renewable sources necessitates substantial investment in grid modernization and energy storage solutions.",
+        "ja": "しかしながら、間欠的な再生可能エネルギー源を統合するには、送電網の近代化と蓄電ソリューションへの多大な投資が不可欠です。",
+        "audioPath": "./assets/audio/t17795600186599892_4.wav",
+        "phrases": [
+          {
+            "phrase": "intermittent renewable sources",
+            "meaning": "間欠的な再生可能エネルギー源",
+            "usage": "太陽光や風力など、天候によって出力が変動するエネルギー源を指す場合に使う"
+          },
+          {
+            "phrase": "necessitates substantial investment",
+            "meaning": "相当な投資を必要とする",
+            "usage": "何かを実現するために多額の資金が必要であることを示す際に使う"
+          },
+          {
+            "phrase": "grid modernization",
+            "meaning": "電力網の近代化",
+            "usage": "老朽化した送電網や配電網を最新技術で更新することを意味する"
+          },
+          {
+            "phrase": "energy storage solutions",
+            "meaning": "エネルギー貯蔵ソリューション",
+            "usage": "蓄電池システムなど、エネルギーを貯蔵・供給する技術やサービスを指す"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, securing critical minerals for battery production and ensuring ethical supply chains present formidable geopolitical and logistical hurdles.",
+        "ja": "さらに、バッテリー生産に必要な重要鉱物の確保や、倫理的なサプライチェーンの確立は、地政学的および物流上の手ごわい課題を提示しています。",
+        "audioPath": "./assets/audio/t17795600186599892_5.wav",
+        "phrases": [
+          {
+            "phrase": "securing critical minerals",
+            "meaning": "重要鉱物の確保",
+            "usage": "エネルギー転換や先端技術に不可欠な鉱物の安定供給は、国家戦略上の重要課題です。"
+          },
+          {
+            "phrase": "ethical supply chains",
+            "meaning": "倫理的なサプライチェーン",
+            "usage": "児童労働や環境破壊がない、公正で持続可能な供給網を構築することが求められています。"
+          },
+          {
+            "phrase": "formidable geopolitical hurdles",
+            "meaning": "手ごわい地政学的な障害",
+            "usage": "国際情勢の複雑さや国家間の対立が、プロジェクト遂行の大きな障壁となることがあります。"
+          },
+          {
+            "phrase": "logistical hurdles",
+            "meaning": "物流上の障害",
+            "usage": "輸送ルートの確保、通関手続き、在庫管理など、物理的な移動や保管に関する困難さも含まれます。"
+          }
+        ]
+      },
+      {
+        "en": "International cooperation is paramount to facilitate technology transfer, share best practices, and mobilize financing for developing nations.",
+        "ja": "途上国への技術移転を促進し、ベストプラクティスを共有し、資金を動員するためには、国際協力が極めて重要です。",
+        "audioPath": "./assets/audio/t17795600186599892_6.wav",
+        "phrases": [
+          {
+            "phrase": "international cooperation",
+            "meaning": "国際協力",
+            "usage": "国際的な課題解決のために不可欠な要素です。"
+          },
+          {
+            "phrase": "facilitate technology transfer",
+            "meaning": "技術移転を促進する",
+            "usage": "先進国から途上国への技術移転を円滑に進めることを指します。"
+          },
+          {
+            "phrase": "share best practices",
+            "meaning": "ベストプラクティスを共有する",
+            "usage": "成功事例や効果的な手法を互いに学び合うことです。"
+          },
+          {
+            "phrase": "mobilize financing",
+            "meaning": "資金を調達する",
+            "usage": "開発プロジェクトなどのために必要な資金を集めることを意味します。"
+          }
+        ]
+      },
+      {
+        "en": "The private sector's role is equally pivotal, driving innovation in green technologies and deploying capital at an unprecedented scale.",
+        "ja": "民間部門の役割も同様に極めて重要であり、グリーンテクノロジーの革新を推進し、前例のない規模で資本を投下しています。",
+        "audioPath": "./assets/audio/t17795600186599892_7.wav",
+        "phrases": [
+          {
+            "phrase": "private sector",
+            "meaning": "民間部門",
+            "usage": "public sector (公的部門) と対比して使われることが多い表現です。"
+          },
+          {
+            "phrase": "driving innovation",
+            "meaning": "イノベーションを推進する",
+            "usage": "技術革新や新しいアイデアを生み出す文脈でよく使われます。"
+          },
+          {
+            "phrase": "deploying capital",
+            "meaning": "資本を投下する、資金を投入する",
+            "usage": "投資や事業展開のために資金を積極的に使うことを意味します。"
+          },
+          {
+            "phrase": "at an unprecedented scale",
+            "meaning": "前例のない規模で",
+            "usage": "これまでにないほど大規模であることを強調する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Overcoming public resistance to new infrastructure projects, often rooted in NIMBYism, remains a persistent challenge for policymakers.",
+        "ja": "多くの場合、NIMBY（Not In My Backyard）主義に根ざす新たなインフラプロジェクトに対する住民の抵抗を克服することは、政策立案者にとって依然として根強い課題です。",
+        "audioPath": "./assets/audio/t17795600186599892_8.wav",
+        "phrases": [
+          {
+            "phrase": "Overcoming public resistance",
+            "meaning": "世論の反対を乗り越えること",
+            "usage": "新しい政策や計画を進める際に、人々の反対意見を克服するという文脈で使われます。"
+          },
+          {
+            "phrase": "rooted in",
+            "meaning": "〜に根差している、〜に起因する",
+            "usage": "問題や感情の原因を説明する際に用いられます。例: The problem is rooted in a lack of communication."
+          },
+          {
+            "phrase": "persistent challenge",
+            "meaning": "根強い課題、継続的な難題",
+            "usage": "解決が容易ではない、長引く問題点を指す場合に適しています。"
+          },
+          {
+            "phrase": "for policymakers",
+            "meaning": "政策立案者にとって",
+            "usage": "政策決定者や政府関係者が直面する問題について述べる際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Beyond environmental benefits, the green transition is poised to be a significant engine for job creation across various sectors.",
+        "ja": "環境上の恩恵を超えて、グリーン移行は様々な分野において雇用創出の重要な原動力となることが期待されています。",
+        "audioPath": "./assets/audio/t17795600186599892_9.wav",
+        "phrases": [
+          {
+            "phrase": "green transition",
+            "meaning": "環境への配慮を重視した社会・経済への移行",
+            "usage": "The company is investing heavily in the green transition."
+          },
+          {
+            "phrase": "poised to be",
+            "meaning": "〜する見込みである、〜する態勢にある",
+            "usage": "The new product is poised to be a bestseller."
+          },
+          {
+            "phrase": "job creation",
+            "meaning": "雇用の創出",
+            "usage": "Government policies aim to stimulate job creation."
+          },
+          {
+            "phrase": "across various sectors",
+            "meaning": "様々な分野にわたって",
+            "usage": "The impact of the new technology will be felt across various sectors."
+          }
+        ]
+      },
+      {
+        "en": "Shifting away from fossil fuels inherently enhances energy security by reducing reliance on volatile international commodity markets.",
+        "ja": "化石燃料からの脱却は、変動の激しい国際商品市場への依存度を低減することで、本質的にエネルギー安全保障を強化します。",
+        "audioPath": "./assets/audio/t17795600186599892_10.wav",
+        "phrases": [
+          {
+            "phrase": "Shifting away from",
+            "meaning": "～から移行する、～から離れる",
+            "usage": "Shifting away from traditional methods is essential for innovation. (伝統的な手法から離れることが革新には不可欠だ。)"
+          },
+          {
+            "phrase": "inherently enhances",
+            "meaning": "固有に～を高める、本質的に～を向上させる",
+            "usage": "This design inherently enhances user experience. (このデザインは本質的にユーザーエクスペリエンスを向上させる。)"
+          },
+          {
+            "phrase": "reducing reliance on",
+            "meaning": "～への依存を減らす",
+            "usage": "We are focused on reducing reliance on single suppliers. (私たちは単一の供給元への依存を減らすことに注力している。)"
+          },
+          {
+            "phrase": "volatile international commodity markets",
+            "meaning": "不安定な国際商品市場",
+            "usage": "The company is exposed to risks from volatile international commodity markets. (その会社は不安定な国際商品市場からのリスクにさらされている。)"
+          }
+        ]
+      },
+      {
+        "en": "While the path ahead is fraught with complexities, the collective resolve to achieve a sustainable energy future appears increasingly resolute.",
+        "ja": "前途は複雑さに満ちていますが、持続可能なエネルギーの未来を達成しようとする集団的な決意は、ますます強固になっているようです。",
+        "audioPath": "./assets/audio/t17795600186599892_11.wav",
+        "phrases": [
+          {
+            "phrase": "fraught with complexities",
+            "meaning": "複雑さに満ちている、困難が伴う",
+            "usage": "The negotiation was fraught with difficulties. 交渉は困難を極めた。"
+          },
+          {
+            "phrase": "collective resolve",
+            "meaning": "集団的な決意、共通の決意",
+            "usage": "We need a collective resolve to tackle climate change. 気候変動に取り組むには、集団的な決意が必要だ。"
+          },
+          {
+            "phrase": "sustainable energy future",
+            "meaning": "持続可能なエネルギーの未来",
+            "usage": "Investing in renewable sources is key to a sustainable energy future. 再生可能エネルギー源への投資は、持続可能なエネルギーの未来にとって重要である。"
+          },
+          {
+            "phrase": "increasingly resolute",
+            "meaning": "ますます断固とした、一層決意を固めた",
+            "usage": "The public became increasingly resolute in their demands for reform. 世論は改革を求める声に対し、ますます断固たるものとなった。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-05-23T18:13:38.659Z"
   }
 ]
