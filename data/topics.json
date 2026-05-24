@@ -6,43 +6,248 @@
     "sentences": [
       {
         "en": "The proposed acquisition, albeit ambitious in scope, presents a compelling opportunity to leverage synergies across our combined portfolio.",
-        "ja": "今回の買収提案は、その規模こそ野心的ではあるものの、統合後のポートフォリオ全体にわたるシナジー効果を最大限に引き出す、極めて魅力的な機会となります。"
+        "ja": "今回の買収提案は、その規模こそ野心的ではあるものの、統合後のポートフォリオ全体にわたるシナジー効果を最大限に引き出す、極めて魅力的な機会となります。",
+        "phrases": [
+          {
+            "phrase": "proposed acquisition",
+            "meaning": "提案されている買収",
+            "usage": "M&Aの文脈で、買収の提案段階を示す際に使われます。"
+          },
+          {
+            "phrase": "ambitious in scope",
+            "meaning": "範囲が野心的である、規模が大きい",
+            "usage": "計画やプロジェクトの規模の大きさを表現する際に用いられます。"
+          },
+          {
+            "phrase": "leverage synergies",
+            "meaning": "相乗効果を活用する",
+            "usage": "特にビジネス分野で、複数の要素が組み合わさることで生まれる大きな効果を指します。"
+          },
+          {
+            "phrase": "combined portfolio",
+            "meaning": "統合されたポートフォリオ",
+            "usage": "合併や買収後、両社の持つ資産や事業を合わせたものを指す場合に便利です。"
+          }
+        ]
       },
       {
         "en": "Pursuant to the term sheet circulated last Friday, both parties are obligated to maintain strict confidentiality throughout the due diligence process.",
-        "ja": "先週金曜日に回覧された基本合意書に基づき、両社はデューデリジェンス期間中、厳格な機密保持義務を負います。"
+        "ja": "先週金曜日に回覧された基本合意書に基づき、両社はデューデリジェンス期間中、厳格な機密保持義務を負います。",
+        "phrases": [
+          {
+            "phrase": "Pursuant to",
+            "meaning": "～に従って、～に基づき",
+            "usage": "契約書や公的な文書でよく使われる表現です。"
+          },
+          {
+            "phrase": "term sheet",
+            "meaning": "（M&Aなどの）基本合意書、条件一覧表",
+            "usage": "取引の初期段階で、主要な条件をまとめた書類を指します。"
+          },
+          {
+            "phrase": "maintain strict confidentiality",
+            "meaning": "厳格な機密性を維持する",
+            "usage": "契約やNDA（秘密保持契約）で義務付けられることが多い表現です。"
+          },
+          {
+            "phrase": "due diligence process",
+            "meaning": "デューデリジェンス（精査・調査）のプロセス",
+            "usage": "M&Aや投資の前に、対象企業の財務状況や法的リスクなどを詳細に調査する過程を指します。"
+          }
+        ]
       },
       {
         "en": "Our legal counsel strongly advises that we mitigate any residual liability by incorporating robust indemnification clauses into the definitive agreement.",
-        "ja": "当社の法務顧問は、最終契約に強固な補償条項を盛り込むことで、残存するあらゆる責任リスクを軽減するよう強く推奨しています。"
+        "ja": "当社の法務顧問は、最終契約に強固な補償条項を盛り込むことで、残存するあらゆる責任リスクを軽減するよう強く推奨しています。",
+        "phrases": [
+          {
+            "phrase": "legal counsel",
+            "meaning": "法律顧問、弁護士",
+            "usage": "企業の法務部門や外部の弁護士を指す際に使う。"
+          },
+          {
+            "phrase": "mitigate liability",
+            "meaning": "責任を軽減する",
+            "usage": "リスク管理や契約交渉において、損害や責任を減らす努力を指す。"
+          },
+          {
+            "phrase": "indemnification clauses",
+            "meaning": "免責条項、補償条項",
+            "usage": "契約書において、一方の当事者が被る損害を他方が補償する義務を定める条項。"
+          },
+          {
+            "phrase": "definitive agreement",
+            "meaning": "最終合意、確定契約",
+            "usage": "M&Aや大規模な取引において、全ての条件が確定し締結される最終的な契約書。"
+          }
+        ]
       },
       {
         "en": "The valuation discrepancy stems primarily from divergent assumptions regarding the target company's projected EBITDA growth trajectory over the next five fiscal years.",
-        "ja": "評価額の乖離は、主に、対象企業の今後5会計年度におけるEBITDA成長予測に関する前提条件の違いに起因しています。"
+        "ja": "評価額の乖離は、主に、対象企業の今後5会計年度におけるEBITDA成長予測に関する前提条件の違いに起因しています。",
+        "phrases": [
+          {
+            "phrase": "stems from",
+            "meaning": "〜に由来する、〜が原因である",
+            "usage": "The problem stems from a lack of communication. (問題はコミュニケーション不足に由来する)"
+          },
+          {
+            "phrase": "divergent assumptions",
+            "meaning": "見解の相違、異なる仮定",
+            "usage": "There are divergent assumptions about the future of the market. (市場の将来について見解の相違がある)"
+          },
+          {
+            "phrase": "projected EBITDA growth trajectory",
+            "meaning": "予測されるEBITDA成長軌道",
+            "usage": "This phrase is specific to financial forecasting. (このフレーズは財務予測に特有です)"
+          }
+        ]
       },
       {
         "en": "We are prepared to articulate a comprehensive integration roadmap, contingent upon satisfactory resolution of the outstanding regulatory concerns raised by both jurisdictions.",
-        "ja": "両管轄当局から提起された未解決の規制上の懸念が円満に解決されることを条件に、当社は包括的な統合ロードマップを提示する準備ができています。"
+        "ja": "両管轄当局から提起された未解決の規制上の懸念が円満に解決されることを条件に、当社は包括的な統合ロードマップを提示する準備ができています。",
+        "phrases": [
+          {
+            "phrase": "prepared to articulate",
+            "meaning": "〜を明確に述べる準備ができている",
+            "usage": "会社のビジョンや戦略などを明確に説明する際に使う。"
+          },
+          {
+            "phrase": "contingent upon",
+            "meaning": "〜次第で、〜を条件として",
+            "usage": "契約や計画の成立が特定の結果に依存する場合に使う。"
+          },
+          {
+            "phrase": "satisfactory resolution",
+            "meaning": "満足のいく解決",
+            "usage": "問題や交渉が望ましい形で解決することを指す。"
+          },
+          {
+            "phrase": "outstanding regulatory concerns",
+            "meaning": "未解決の規制上の懸念",
+            "usage": "「outstanding」が「未解決の」という意味で使われる点が重要。"
+          }
+        ]
       },
       {
         "en": "Consequently, management has convened an emergency session to reassess the deal structure in light of the newly disclosed liabilities identified during the audit.",
-        "ja": "この結果を受け、経営陣は、監査で新たに特定された負債開示を踏まえ、取引スキームを再評価するため緊急会合を招集しました。"
+        "ja": "この結果を受け、経営陣は、監査で新たに特定された負債開示を踏まえ、取引スキームを再評価するため緊急会合を招集しました。",
+        "phrases": [
+          {
+            "phrase": "in light of",
+            "meaning": "〜を考慮して、〜鑑みて",
+            "usage": "「新しい情報に鑑みて」in light of new information のように使う。"
+          },
+          {
+            "phrase": "convened an emergency session",
+            "meaning": "緊急会議を招集した",
+            "usage": "「会議を招集する」は convene a meeting/session と言う。"
+          },
+          {
+            "phrase": "reassess the deal structure",
+            "meaning": "取引構造を再評価する",
+            "usage": "「計画を再評価する」reassess the plan のように応用できる。"
+          },
+          {
+            "phrase": "newly disclosed liabilities",
+            "meaning": "新たに開示された負債",
+            "usage": "「新たに判明した情報」newly disclosed information のように応用できる。"
+          }
+        ]
       },
       {
         "en": "The counterparty's insistence on an escrow arrangement reflects their apprehension regarding our capacity to fulfil post-closing obligations in a timely manner.",
-        "ja": "相手方がエスクロー方式を主張するのは、クロージング後の義務を当社が適時に履行できるかについて、懸念を抱いていることの表れです。"
+        "ja": "相手方がエスクロー方式を主張するのは、クロージング後の義務を当社が適時に履行できるかについて、懸念を抱いていることの表れです。",
+        "phrases": [
+          {
+            "phrase": "insistence on",
+            "meaning": "〜への主張、〜へのこだわり",
+            "usage": "Her insistence on accuracy saved the project. (彼女の正確さへのこだわりがプロジェクトを救った)"
+          },
+          {
+            "phrase": "apprehension regarding",
+            "meaning": "〜に関する懸念、不安",
+            "usage": "There is apprehension regarding the new policy's impact. (新方針の影響に関して懸念がある)"
+          },
+          {
+            "phrase": "capacity to fulfil",
+            "meaning": "〜を履行する能力",
+            "usage": "We questioned their capacity to fulfil the large order. (我々は彼らがその大量注文を履行する能力に疑問を抱いた)"
+          },
+          {
+            "phrase": "in a timely manner",
+            "meaning": "適時に、タイムリーに",
+            "usage": "Please respond to the client's inquiry in a timely manner. (顧客の問い合わせには適時に対応してください)"
+          }
+        ]
       },
       {
         "en": "Notwithstanding the prevailing market volatility, the strategic rationale for this transaction remains unequivocally sound and merits expeditious execution.",
-        "ja": "現在の市場の不安定さにもかかわらず、本取引の戦略的根拠は揺るぎなく、迅速な実行が求められます。"
+        "ja": "現在の市場の不安定さにもかかわらず、本取引の戦略的根拠は揺るぎなく、迅速な実行が求められます。",
+        "phrases": [
+          {
+            "phrase": "Notwithstanding",
+            "meaning": "〜にもかかわらず、〜ではあるが",
+            "usage": "Notwithstanding the initial setbacks, the project was completed on time. のように、文頭や句の前に置いて使う。"
+          },
+          {
+            "phrase": "strategic rationale",
+            "meaning": "戦略的根拠、戦略的論理",
+            "usage": "The board discussed the strategic rationale for the acquisition. のように、ビジネス戦略の背景や理由を説明する際に使う。"
+          },
+          {
+            "phrase": "merits expeditious execution",
+            "meaning": "迅速な実行に値する",
+            "usage": "This urgent matter merits expeditious execution. のように、何かを迅速に進めるべきだと強調する際に使う。"
+          }
+        ]
       },
       {
         "en": "To facilitate a mutually advantageous outcome, we propose the establishment of a joint steering committee empowered to adjudicate disputes during the transition phase.",
-        "ja": "双方にとって有利な結果を導くため、移行期間中の紛争解決権限を持つ共同運営委員会の設置を提案します。"
+        "ja": "双方にとって有利な結果を導くため、移行期間中の紛争解決権限を持つ共同運営委員会の設置を提案します。",
+        "phrases": [
+          {
+            "phrase": "facilitate a mutually advantageous outcome",
+            "meaning": "相互に有利な結果をもたらす/促進する",
+            "usage": "ビジネス交渉や提携において、双方にメリットのある結果を導く際に使う。"
+          },
+          {
+            "phrase": "joint steering committee",
+            "meaning": "合同運営委員会",
+            "usage": "複数の組織が共同でプロジェクトや事業を管理するために設置される委員会。"
+          },
+          {
+            "phrase": "empowered to adjudicate disputes",
+            "meaning": "紛争を裁定する権限を与えられた",
+            "usage": "委員会や機関が正式な手続きで争いを解決する権限を持つことを示す。"
+          }
+        ]
       },
       {
         "en": "The board categorically rejected the hostile takeover bid, citing an irreconcilable undervaluation of the company's intangible assets and intellectual property.",
-        "ja": "取締役会は、当社の無形資産および知的財産が著しく過小評価されていることを理由に、敵対的買収提案を明確に拒絶しました。"
+        "ja": "取締役会は、当社の無形資産および知的財産が著しく過小評価されていることを理由に、敵対的買収提案を明確に拒絶しました。",
+        "phrases": [
+          {
+            "phrase": "hostile takeover bid",
+            "meaning": "敵対的買収提案",
+            "usage": "M&A関連のビジネスニュースでよく見かける表現。"
+          },
+          {
+            "phrase": "categorically rejected",
+            "meaning": "断固として拒否した",
+            "usage": "提案や要求をきっぱりと拒絶する際に使う。"
+          },
+          {
+            "phrase": "intangible assets",
+            "meaning": "無形資産",
+            "usage": "ブランド価値や技術力など、目に見えない資産のこと。"
+          },
+          {
+            "phrase": "intellectual property",
+            "meaning": "知的財産",
+            "usage": "著作権、特許、商標などがこれにあたる。"
+          }
+        ]
       }
     ],
     "titleJa": "海外M&Aの交渉術",
@@ -183,19 +388,107 @@
       },
       {
         "en": "The effect size, as measured by Cohen's d, was negligible, undermining the practical significance of an otherwise statistically robust finding.",
-        "ja": "検出力分析（Cohen's d）で示された効果量はごくわずかであり、統計的には有意な結果であったものの、実質的な意義は乏しいという結果でした。"
+        "ja": "検出力分析（Cohen's d）で示された効果量はごくわずかであり、統計的には有意な結果であったものの、実質的な意義は乏しいという結果でした。",
+        "phrases": [
+          {
+            "phrase": "effect size",
+            "meaning": "効果量 (統計学で、介入や処置の効果の大きさを表す指標)",
+            "usage": "The study found a significant effect size for the new drug."
+          },
+          {
+            "phrase": "negligible",
+            "meaning": "無視できるほどの、ごくわずかな",
+            "usage": "The cost difference was negligible, so we chose the more convenient option."
+          },
+          {
+            "phrase": "practical significance",
+            "meaning": "実用的な重要性、実質的な意味",
+            "usage": "While the results were statistically significant, their practical significance was limited."
+          },
+          {
+            "phrase": "statistically robust",
+            "meaning": "統計的に頑健な、信頼性の高い",
+            "usage": "The findings were statistically robust, meaning they were unlikely to be due to random chance."
+          }
+        ]
       },
       {
         "en": "Ethical imperatives compelled the research team to truncate the intervention prematurely upon observing unanticipated adverse outcomes in a subset of participants.",
-        "ja": "倫理的な観点から、一部の参加者において予期せぬ有害事象が確認されたため、研究チームは介入を早期に中止せざるを得ませんでした。"
+        "ja": "倫理的な観点から、一部の参加者において予期せぬ有害事象が確認されたため、研究チームは介入を早期に中止せざるを得ませんでした。",
+        "phrases": [
+          {
+            "phrase": "Ethical imperatives",
+            "meaning": "倫理的な義務・要請",
+            "usage": "倫理的な観点から、〜せざるを得ない状況を表す際に使われます。"
+          },
+          {
+            "phrase": "compelled ... to",
+            "meaning": "〜せざるを得なくさせる、〜を強いる",
+            "usage": "The urgent situation compelled him to make a difficult decision. のように、強い理由で行動を促す場合に使います。"
+          },
+          {
+            "phrase": "truncate the intervention",
+            "meaning": "介入・処置を途中で打ち切る",
+            "usage": "研究やプロジェクトなどが、予定より早く終了される状況で使われます。"
+          },
+          {
+            "phrase": "adverse outcomes",
+            "meaning": "好ましくない結果、有害な結果",
+            "usage": "医療や研究分野で、予期せぬ悪い結果が生じた際に用いられる表現です。"
+          }
+        ]
       },
       {
         "en": "Our theoretical framework draws extensively upon Vygotsky's zone of proximal development, recontextualizing it within contemporary computational cognitive science.",
-        "ja": "本研究の理論的枠組みは、ヴィゴツキーの発達の最近接領域の概念を、現代の計算認知科学の文脈で再解釈し、広範に活用しています。"
+        "ja": "本研究の理論的枠組みは、ヴィゴツキーの発達の最近接領域の概念を、現代の計算認知科学の文脈で再解釈し、広範に活用しています。",
+        "phrases": [
+          {
+            "phrase": "draws upon",
+            "meaning": "〜を源泉とする、〜から引き出す",
+            "usage": "The artist draws upon her personal experiences for inspiration. (その芸術家は自身の個人的経験をインスピレーションの源としている。)"
+          },
+          {
+            "phrase": "zone of proximal development",
+            "meaning": "発達の隣接領域（子供が他者の助けを借りて達成できることと、一人では達成できないことの間の領域）",
+            "usage": "This concept is often discussed in educational psychology. (この概念は教育心理学でよく議論される。)"
+          },
+          {
+            "phrase": "recontextualize",
+            "meaning": "文脈を再設定する、新たな文脈に置く",
+            "usage": "We need to recontextualize these findings for a modern audience. (これらの発見を現代の聴衆のために文脈を再設定する必要がある。)"
+          },
+          {
+            "phrase": "contemporary cognitive science",
+            "meaning": "現代の計算論的認知科学",
+            "usage": "This field explores how the mind works using computational models. (この分野は計算論的モデルを用いて心の働きを探求する。)"
+          }
+        ]
       },
       {
         "en": "Disseminating findings through open-access repositories is increasingly regarded as both an ethical obligation and a pragmatic strategy for maximizing scholarly impact.",
-        "ja": "研究成果をオープンアクセスリポジトリで公開することは、倫理的な責務であると同時に、学術的影響力を最大化するための現実的な戦略として、ますます重視されるようになっています。"
+        "ja": "研究成果をオープンアクセスリポジトリで公開することは、倫理的な責務であると同時に、学術的影響力を最大化するための現実的な戦略として、ますます重視されるようになっています。",
+        "phrases": [
+          {
+            "phrase": "Disseminating findings",
+            "meaning": "調査結果を広めること",
+            "usage": "Researchers are focused on disseminating findings to the public. (研究者たちは調査結果を一般に広めることに注力している。)"
+          },
+          {
+            "phrase": "open-access repositories",
+            "meaning": "オープンアクセスリポジトリ（誰でも自由にアクセスできる資料保管庫）",
+            "usage": "Many universities now encourage scholars to use open-access repositories. (多くの大学は現在、研究者に対しオープンアクセスリポジトリの利用を奨励している。)"
+          },
+          {
+            "phrase": "regarded as",
+            "meaning": "〜とみなされる、〜と考えられている",
+            "usage": "This new policy is regarded as a major step forward. (この新方針は大きな前進とみなされている。)"
+          },
+          {
+            "phrase": "pragmatic strategy",
+            "meaning": "実用的な戦略、現実的な戦略",
+            "usage": "We need a pragmatic strategy to solve this problem. (この問題を解決するために、我々には実用的な戦略が必要だ。)"
+          }
+        ]
       }
     ],
     "titleJa": "査読研究の方法論",
@@ -1050,7 +1343,8 @@
             "meaning": "深く調べる、掘り下げる",
             "usage": "We need to delve into the details.（詳細を掘り下げる必要がある。）"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17789131269933220_3.wav"
       },
       {
         "en": "Not yet, unfortunately, but it's next on my reading list, right after I finish this rather dense historical biography I've been slowly but surely making my way through.",
@@ -3839,5 +4133,283 @@
       }
     ],
     "createdAt": "2026-05-23T18:13:38.659Z"
+  },
+  {
+    "id": "t17796464362296577",
+    "title": "Orchestrating a Weekend Escape",
+    "titleJa": "週末の逃避行を計画する",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I've been absolutely swamped with work lately, so a rejuvenating weekend escape sounds incredibly appealing right about now.",
+        "ja": "最近仕事に完全に追われているので、今まさに心身ともにリフレッシュできる週末の逃避行が、とてつもなく魅力的に聞こえますね。",
+        "audioPath": "./assets/audio/t17796464362296577_0.wav",
+        "phrases": [
+          {
+            "phrase": "swamped with work",
+            "meaning": "仕事でてんてこ舞いである、非常に忙しい",
+            "usage": "I'm swamped with deadlines this week. (今週は締め切りで手一杯です)"
+          },
+          {
+            "phrase": "rejuvenating escape",
+            "meaning": "心身を若返らせるような逃避行、気分転換",
+            "usage": "A short trip can be a rejuvenating escape from daily stress. (短い旅行は日常のストレスからの気分転換になり得る)"
+          },
+          {
+            "phrase": "sounds appealing",
+            "meaning": "魅力的に聞こえる、魅力的である",
+            "usage": "That job offer sounds very appealing. (その仕事のオファーは非常に魅力的だ)"
+          }
+        ]
+      },
+      {
+        "en": "I'm leaning towards something tranquil and picturesque, perhaps a secluded cabin in the mountains or a charming coastal town.",
+        "ja": "私は何か穏やかで絵のように美しい場所がいいですね。例えば、山の中の人里離れたキャビンとか、魅力的な海辺の町とか。",
+        "audioPath": "./assets/audio/t17796464362296577_1.wav",
+        "phrases": [
+          {
+            "phrase": "leaning towards",
+            "meaning": "〜に傾いている、〜に惹かれている",
+            "usage": "I'm leaning towards a new strategy. (新しい戦略に傾いています)"
+          },
+          {
+            "phrase": "tranquil and picturesque",
+            "meaning": "静かで絵のように美しい",
+            "usage": "A tranquil and picturesque setting is ideal for relaxation. (静かで絵のように美しい環境はリラックスに最適です)"
+          },
+          {
+            "phrase": "secluded cabin",
+            "meaning": "人里離れた、隠れ家のような小屋",
+            "usage": "They rented a secluded cabin for their honeymoon. (新婚旅行のために人里離れた小屋を借りました)"
+          },
+          {
+            "phrase": "coastal town",
+            "meaning": "海岸沿いの町",
+            "usage": "We enjoyed a weekend getaway in a charming coastal town. (魅力的な海岸沿いの町で週末の小旅行を楽しみました)"
+          }
+        ]
+      },
+      {
+        "en": "Do you have any particular predilections or preferences when it comes to potential destinations?",
+        "ja": "行先候補に関して、何か特別な好みや希望はありますか？",
+        "audioPath": "./assets/audio/t17796464362296577_2.wav",
+        "phrases": [
+          {
+            "phrase": "predilections or preferences",
+            "meaning": "特に好みや希望",
+            "usage": "個人的な好みや、より一般的な希望の両方を含む場合に使われる"
+          },
+          {
+            "phrase": "when it comes to",
+            "meaning": "〜に関して言えば",
+            "usage": "話題を切り出す際や、特定の事柄に焦点を当てる際に便利"
+          },
+          {
+            "phrase": "potential destinations",
+            "meaning": "候補となる行き先",
+            "usage": "旅行や出張などの計画で、まだ確定していない場所を指す"
+          }
+        ]
+      },
+      {
+        "en": "We'd ideally need to pin down the dates soon to ensure we can secure suitable accommodations, especially if it's a popular spot.",
+        "ja": "特に人気の場所なら、適切な宿泊施設を確保するために、早めに日程を確定させる必要がありますね。",
+        "audioPath": "./assets/audio/t17796464362296577_3.wav",
+        "phrases": [
+          {
+            "phrase": "pin down",
+            "meaning": "（日時・場所・情報などを）正確に特定する、突き止める",
+            "usage": "We need to pin down the exact time of the meeting. (会議の正確な時間を特定する必要がある)"
+          },
+          {
+            "phrase": "secure accommodations",
+            "meaning": "宿泊施設を確保する",
+            "usage": "It's important to secure accommodations early for popular tourist destinations. (人気の観光地では早めに宿泊施設を確保することが重要だ)"
+          },
+          {
+            "phrase": "popular spot",
+            "meaning": "人気の場所、人気のスポット",
+            "usage": "This restaurant is a popular spot among locals. (このレストランは地元の人々に人気のスポットだ)"
+          }
+        ]
+      },
+      {
+        "en": "I recall that delightful bed and breakfast we stayed at last year; their gourmet breakfasts were truly unparalleled.",
+        "ja": "去年の滞在した、あの素晴らしいB&Bを覚えていますか？あそこのグルメ朝食は本当に比類ないものでした。",
+        "audioPath": "./assets/audio/t17796464362296577_4.wav",
+        "phrases": [
+          {
+            "phrase": "bed and breakfast",
+            "meaning": "朝食付き宿泊施設、B&B",
+            "usage": "We stayed at a charming bed and breakfast during our trip."
+          },
+          {
+            "phrase": "gourmet breakfasts",
+            "meaning": "豪華な朝食、グルメ朝食",
+            "usage": "The hotel is known for its gourmet dinners and excellent service."
+          },
+          {
+            "phrase": "truly unparalleled",
+            "meaning": "まさに比類のない、本当に並外れた",
+            "usage": "Her performance in the competition was truly unparalleled."
+          }
+        ]
+      },
+      {
+        "en": "Beyond just unwinding, I'm hoping for some opportunities to immerse ourselves in nature, perhaps a leisurely hike or kayaking.",
+        "ja": "ただリラックスするだけでなく、自然にどっぷり浸かる機会も欲しいですね。例えば、のんびりハイキングしたり、カヤックに乗ったりとか。",
+        "audioPath": "./assets/audio/t17796464362296577_5.wav",
+        "phrases": [
+          {
+            "phrase": "unwinding",
+            "meaning": "リラックスすること、くつろぐこと",
+            "usage": "仕事の後や休暇中に使うことが多い表現です。"
+          },
+          {
+            "phrase": "immerse ourselves in nature",
+            "meaning": "自然にどっぷり浸かる、自然を満喫する",
+            "usage": "自然体験を強調したいときに使える表現です。"
+          },
+          {
+            "phrase": "leisurely hike",
+            "meaning": "ゆったりとしたハイキング",
+            "usage": "急がず、のんびりとしたペースでの活動を表します。"
+          }
+        ]
+      },
+      {
+        "en": "We should probably establish a ballpark figure for our expenditure to avoid any unwelcome surprises down the line.",
+        "ja": "後で予期せぬ出費に驚かないよう、おおよその予算を決めておくべきでしょうね。",
+        "audioPath": "./assets/audio/t17796464362296577_6.wav",
+        "phrases": [
+          {
+            "phrase": "establish a ballpark figure",
+            "meaning": "おおよその金額を決める",
+            "usage": "プロジェクトの初期段階で予算の目安を立てる際などに使われます。"
+          },
+          {
+            "phrase": "unwelcome surprises",
+            "meaning": "望ましくない驚き、予期せぬ問題",
+            "usage": "予期せぬ出費やトラブルなど、ネガティブな事柄に対して使われます。"
+          },
+          {
+            "phrase": "down the line",
+            "meaning": "将来的に、後になって",
+            "usage": "将来起こりうる事柄について言及する際に用いられます。"
+          }
+        ]
+      },
+      {
+        "en": "Perhaps you could take the lead on researching accommodation options, and I'll delve into local attractions and dining establishments?",
+        "ja": "宿泊施設の調査はあなたに任せて、私が現地の観光名所や飲食店を詳しく調べてみるのはどうでしょう？",
+        "audioPath": "./assets/audio/t17796464362296577_7.wav",
+        "phrases": [
+          {
+            "phrase": "take the lead on",
+            "meaning": "〜の主導権を握る、〜を率先して行う",
+            "usage": "She will take the lead on the new project. (彼女が新プロジェクトの主導権を握るだろう)"
+          },
+          {
+            "phrase": "delve into",
+            "meaning": "〜を深く掘り下げる、〜を詳しく調べる",
+            "usage": "He delved into the company's financial records. (彼は会社の財務記録を詳しく調べた)"
+          },
+          {
+            "phrase": "accommodation options",
+            "meaning": "宿泊施設の選択肢",
+            "usage": "We need to research various accommodation options for our trip. (旅行のために様々な宿泊施設の選択肢を調べる必要がある)"
+          }
+        ]
+      },
+      {
+        "en": "The mere thought of escaping the urban hustle and bustle and breathing in fresh air is already invigorating.",
+        "ja": "都会の喧騒から逃れて新鮮な空気を吸うという、その想像だけで既に活力が湧いてきます。",
+        "audioPath": "./assets/audio/t17796464362296577_8.wav",
+        "phrases": [
+          {
+            "phrase": "hustle and bustle",
+            "meaning": "喧騒、活気",
+            "usage": "the hustle and bustle of city life のように、都市の賑やかさを表す際によく使われます。"
+          },
+          {
+            "phrase": "breathing in fresh air",
+            "meaning": "新鮮な空気を吸い込む",
+            "usage": "自然やリラックスできる状況を表現する際に用いられます。"
+          },
+          {
+            "phrase": "is already invigorating",
+            "meaning": "すでに元気づけられる、活力を与える",
+            "usage": "単に「良い」というだけでなく、具体的な効果や感覚を伝える際に便利です。"
+          }
+        ]
+      },
+      {
+        "en": "It's imperative that we fully disconnect from our digital devices and truly embrace the tranquility of the surroundings.",
+        "ja": "デジタル機器から完全に切り離され、周囲の静けさを心ゆくまで享受することが肝要です。",
+        "audioPath": "./assets/audio/t17796464362296577_9.wav",
+        "phrases": [
+          {
+            "phrase": "imperative that",
+            "meaning": "〜することが必須である、極めて重要である",
+            "usage": "It is imperative that we act now. (今すぐ行動することが必須です)"
+          },
+          {
+            "phrase": "disconnect from",
+            "meaning": "〜から接続を切る、離れる",
+            "usage": "It's important to disconnect from work during vacation. (休暇中は仕事から離れることが大切です)"
+          },
+          {
+            "phrase": "embrace the tranquility",
+            "meaning": "静けさを受け入れる、静寂を楽しむ",
+            "usage": "Let's embrace the tranquility of the countryside. (田舎の静けさを楽しみましょう)"
+          }
+        ]
+      },
+      {
+        "en": "I'm confident this will be a much-needed respite for both of us, allowing us to recharge our batteries effectively.",
+        "ja": "これは私たち二人にとって本当に必要な休息となり、効果的に英気を養えること間違いなしだと確信しています。",
+        "audioPath": "./assets/audio/t17796464362296577_10.wav",
+        "phrases": [
+          {
+            "phrase": "confident that",
+            "meaning": "〜だと確信している",
+            "usage": "I am confident that we can achieve our goals. のように使う"
+          },
+          {
+            "phrase": "much-needed respite",
+            "meaning": "待望久しい休息、切望されていた休息",
+            "usage": "This vacation is a much-needed respite from our busy lives. のように使う"
+          },
+          {
+            "phrase": "recharge our batteries",
+            "meaning": "元気を回復する、リフレッシュする",
+            "usage": "After a long week, I need to recharge my batteries this weekend. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "Let's touch base again by the end of the week to consolidate our findings and make some definitive decisions.",
+        "ja": "今週末までにもう一度連絡を取り合って、見つけた情報をまとめ、具体的な決定を下しましょう。",
+        "audioPath": "./assets/audio/t17796464362296577_11.wav",
+        "phrases": [
+          {
+            "phrase": "touch base",
+            "meaning": "（一時的に）連絡を取り合う、近況を報告し合う",
+            "usage": "We need to touch base with the marketing team about the new campaign. (新しいキャンペーンについてマーケティングチームと連絡を取り合う必要があります。)"
+          },
+          {
+            "phrase": "consolidate our findings",
+            "meaning": "調査結果をまとめる",
+            "usage": "After the research, we will consolidate our findings into a report. (調査の後、調査結果を報告書にまとめます。)"
+          },
+          {
+            "phrase": "make definitive decisions",
+            "meaning": "最終的な決定を下す",
+            "usage": "It's time to make definitive decisions about the project's future. (プロジェクトの将来について最終的な決定を下す時です。)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-05-24T18:13:56.229Z"
   }
 ]
