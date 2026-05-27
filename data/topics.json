@@ -5051,5 +5051,187 @@
       }
     ],
     "createdAt": "2026-05-26T21:14:42.322Z"
+  },
+  {
+    "id": "t17799173134504858",
+    "title": "Coordinating a Casual Catch-Up",
+    "titleJa": "カジュアルな集まりの調整",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I'm really hoping we can finally nail down a date for that long-overdue catch-up we've been talking about.",
+        "ja": "ずっと話していた、あの先延ばしになっていた再会、そろそろ具体的に日程を決めたいよね。",
+        "audioPath": "./assets/audio/t17799173134504858_0.wav",
+        "phrases": [
+          {
+            "phrase": "nail down",
+            "meaning": "（日時・計画などを）最終決定する、確定させる",
+            "usage": "We need to nail down the budget by Friday. (金曜日までに予算を確定させる必要がある。)"
+          },
+          {
+            "phrase": "long-overdue",
+            "meaning": "ずっと延期されていた、とうに期限が過ぎた",
+            "usage": "a long-overdue apology (ずっと謝罪が遅れていた)"
+          },
+          {
+            "phrase": "catch-up",
+            "meaning": "（しばらく会えなかった人との）近況報告、情報交換",
+            "usage": "Let's schedule a catch-up next week. (来週、近況報告の時間を設けましょう。)"
+          }
+        ]
+      },
+      {
+        "en": "Absolutely! My calendar has been unexpectedly chaotic lately, but I'm determined to make it happen this time.",
+        "ja": "本当にそうだね！最近、カレンダーが予期せぬ予定でごちゃごちゃしてたんだけど、今度こそ実現させたいな。",
+        "audioPath": "./assets/audio/t17799173134504858_1.wav",
+        "phrases": [
+          {
+            "phrase": "unexpectedly chaotic",
+            "meaning": "予期せず混乱している、非常に忙しい",
+            "usage": "My schedule has been unexpectedly chaotic. (私のスケジュールは予期せず混乱していました。)"
+          },
+          {
+            "phrase": "make it happen",
+            "meaning": "それを実現させる、成功させる",
+            "usage": "We need to make it happen by the deadline. (締め切りまでにそれを実現させなければなりません。)"
+          }
+        ]
+      },
+      {
+        "en": "I completely empathize; it feels like we're all constantly juggling a myriad of commitments these days.",
+        "ja": "すごくよく分かるよ。最近はみんな、無数の約束事を常にやりくりしているような感じだもんね。",
+        "audioPath": "./assets/audio/t17799173134504858_2.wav",
+        "phrases": [
+          {
+            "phrase": "completely empathize",
+            "meaning": "完全に共感する",
+            "usage": "相手の気持ちや状況を深く理解し、同意する際に使います。"
+          },
+          {
+            "phrase": "juggling a myriad of commitments",
+            "meaning": "数多くの約束事や仕事などを同時にこなす",
+            "usage": "現代社会で多くのタスクや責任を抱えている状況を表す際に使われます。"
+          },
+          {
+            "phrase": "these days",
+            "meaning": "最近では、今日この頃",
+            "usage": "現代の状況や一般的な傾向を指す際に使われる口語的な表現です。"
+          }
+        ]
+      },
+      {
+        "en": "How about we aim for sometime next week? My evenings are relatively free, barring a couple of minor work commitments.",
+        "ja": "来週のどこかでどうかな？いくつか軽微な仕事の予定を除けば、夜は比較的空いているんだけど。",
+        "audioPath": "./assets/audio/t17799173134504858_3.wav",
+        "phrases": [
+          {
+            "phrase": "aim for",
+            "meaning": "～を目指す、～を目標とする",
+            "usage": "Let's aim for a Q3 launch. (第3四半期のローンチを目指しましょう。)"
+          },
+          {
+            "phrase": "relatively free",
+            "meaning": "比較的空いている、比較的自由な",
+            "usage": "My schedule is relatively free this weekend. (今週末は私のスケジュールは比較的空いています。)"
+          },
+          {
+            "phrase": "barring",
+            "meaning": "～を除いては、～がない限りは",
+            "usage": "Barring any unforeseen circumstances, the project will be completed on time. (予期せぬ事態がない限り、プロジェクトは予定通り完了します。)"
+          }
+        ]
+      },
+      {
+        "en": "Let me quickly pull up my schedule... Hmm, Tuesday or Thursday evening looks promising, provided I can shift that Pilates class.",
+        "ja": "ちょっとすぐにスケジュールを確認させて… うーん、火曜か木曜の夜が良さそうだね、ピラティスのクラスをずらせればだけど。",
+        "audioPath": "./assets/audio/t17799173134504858_4.wav",
+        "phrases": [
+          {
+            "phrase": "pull up my schedule",
+            "meaning": "自分のスケジュールを呼び出す、確認する",
+            "usage": "Can you pull up the sales report? のように使う"
+          },
+          {
+            "phrase": "looks promising",
+            "meaning": "有望に見える、都合が良さそうだ",
+            "usage": "This investment looks promising. のように使う"
+          },
+          {
+            "phrase": "provided I can",
+            "meaning": "もし〜できれば、〜という条件で",
+            "usage": "I'll go, provided I can finish work early. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "Perfect! I'm quite flexible on those days. Do you have any particular cuisine or restaurant in mind, or are you open to suggestions?",
+        "ja": "いいね！その日はかなり融通が利くよ。何か特定の料理やレストランの希望はある？それとも、提案に開いてる？",
+        "audioPath": "./assets/audio/t17799173134504858_5.wav",
+        "phrases": [
+          {
+            "phrase": "flexible on",
+            "meaning": "～について柔軟に対応できる",
+            "usage": "I'm flexible on the meeting time. (会議の時間については柔軟に対応できます)"
+          },
+          {
+            "phrase": "in mind",
+            "meaning": "～を念頭に置いて、～を考えて",
+            "usage": "Do you have any ideas in mind? (何か考えはありますか？)"
+          },
+          {
+            "phrase": "open to suggestions",
+            "meaning": "提案を受け入れる用意がある",
+            "usage": "We are open to suggestions regarding the project. (プロジェクトに関して、提案を受け入れる用意があります)"
+          }
+        ]
+      },
+      {
+        "en": "I'm fairly amenable to anything, to be honest. Perhaps something with a relaxed ambiance where we can actually hear each other speak.",
+        "ja": "正直なところ、何でも構わないよ。お互いの声がちゃんと聞こえるような、リラックスした雰囲気の場所がいいかな。",
+        "audioPath": "./assets/audio/t17799173134504858_6.wav",
+        "phrases": [
+          {
+            "phrase": "amenable to",
+            "meaning": "〜を受け入れやすい、〜に賛成しやすい",
+            "usage": "I'm amenable to your suggestion. のように、提案や意見を受け入れる際に使う。"
+          },
+          {
+            "phrase": "to be honest",
+            "meaning": "正直に言うと",
+            "usage": "相手に率直な意見を伝える際に挿入する。"
+          },
+          {
+            "phrase": "hear each other speak",
+            "meaning": "お互いの声が聞こえる",
+            "usage": "騒がしい場所ではなく、静かで会話がしやすい状況を表す。"
+          }
+        ]
+      },
+      {
+        "en": "That's a crucial point! I know a fantastic little bistro downtown that fits that description perfectly, boasting some exquisite small plates.",
+        "ja": "それ、すごく重要なポイントだね！まさにその条件にぴったりの、素晴らしい小皿料理が自慢の小さなビストロをダウンタウンに知ってるよ。",
+        "audioPath": "./assets/audio/t17799173134504858_7.wav"
+      },
+      {
+        "en": "Oh, that sounds absolutely delightful! Is it the one near the old bookstore with the fairy lights outside?",
+        "ja": "おお、それはまさに素敵だね！あの、古い書店の近くで、外にフェアリーライトが飾ってあるお店のことかな？",
+        "audioPath": "./assets/audio/t17799173134504858_8.wav"
+      },
+      {
+        "en": "Exactly! Their seasonal menu is always a culinary adventure, and the wine list is impeccably curated.",
+        "ja": "その通り！彼らの季節のメニューはいつも食の冒険だし、ワインリストも完璧に厳選されているんだ。",
+        "audioPath": "./assets/audio/t17799173134504858_9.wav"
+      },
+      {
+        "en": "Consider me intrigued! Let me just confirm with my Pilates instructor, and I'll text you with my availability by end of day.",
+        "ja": "すごく興味をそそられるね！ピラティスの先生に確認してから、今日の終わりには空き状況をテキストするよ。",
+        "audioPath": "./assets/audio/t17799173134504858_10.wav"
+      },
+      {
+        "en": "Wonderful! I'm genuinely looking forward to catching up properly and hearing all your news.",
+        "ja": "素晴らしい！本当にゆっくり話して、君の近況を全部聞くのが今から楽しみだよ。"
+      }
+    ],
+    "createdAt": "2026-05-27T21:28:33.451Z"
   }
 ]
