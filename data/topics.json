@@ -4719,7 +4719,8 @@
             "meaning": "持続的な組織の回復力",
             "usage": "企業が困難に直面しても長く回復し続ける能力を意味する。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17797401852818765_11.wav"
       }
     ],
     "createdAt": "2026-05-25T20:16:25.281Z"
@@ -5210,28 +5211,417 @@
       {
         "en": "That's a crucial point! I know a fantastic little bistro downtown that fits that description perfectly, boasting some exquisite small plates.",
         "ja": "それ、すごく重要なポイントだね！まさにその条件にぴったりの、素晴らしい小皿料理が自慢の小さなビストロをダウンタウンに知ってるよ。",
-        "audioPath": "./assets/audio/t17799173134504858_7.wav"
+        "audioPath": "./assets/audio/t17799173134504858_7.wav",
+        "phrases": [
+          {
+            "phrase": "crucial point",
+            "meaning": "極めて重要な点、要点",
+            "usage": "This is a crucial point for our negotiation. (これは我々の交渉における極めて重要な点です)"
+          },
+          {
+            "phrase": "fits that description",
+            "meaning": "その説明にぴったり合う、その条件を満たす",
+            "usage": "The hotel fits the description of a luxury resort. (そのホテルは高級リゾートという説明にぴったり合っています)"
+          },
+          {
+            "phrase": "boasting some exquisite small plates",
+            "meaning": "絶妙な小皿料理を売りにしている",
+            "usage": "This restaurant is boasting some innovative fusion dishes. (このレストランは革新的なフュージョン料理を売り物にしています)"
+          }
+        ]
       },
       {
         "en": "Oh, that sounds absolutely delightful! Is it the one near the old bookstore with the fairy lights outside?",
         "ja": "おお、それはまさに素敵だね！あの、古い書店の近くで、外にフェアリーライトが飾ってあるお店のことかな？",
-        "audioPath": "./assets/audio/t17799173134504858_8.wav"
+        "audioPath": "./assets/audio/t17799173134504858_8.wav",
+        "phrases": [
+          {
+            "phrase": "sounds absolutely delightful",
+            "meaning": "絶対に素晴らしいですね",
+            "usage": "相手の提案や計画に対して、強い喜びや同意を示す際に使います。"
+          },
+          {
+            "phrase": "fairy lights",
+            "meaning": "フェアリーライト、イルミネーション",
+            "usage": "装飾用の小さな電球のことで、特に屋外のカフェやイベント会場などでよく見られます。"
+          }
+        ]
       },
       {
         "en": "Exactly! Their seasonal menu is always a culinary adventure, and the wine list is impeccably curated.",
         "ja": "その通り！彼らの季節のメニューはいつも食の冒険だし、ワインリストも完璧に厳選されているんだ。",
-        "audioPath": "./assets/audio/t17799173134504858_9.wav"
+        "audioPath": "./assets/audio/t17799173134504858_9.wav",
+        "phrases": [
+          {
+            "phrase": "culinary adventure",
+            "meaning": "食の冒険、新しい味覚体験",
+            "usage": "新しいレストランやメニューを試す際に、期待感を表すのに使えます。"
+          },
+          {
+            "phrase": "impeccably curated",
+            "meaning": "非の打ちどころなく厳選された",
+            "usage": "ワインリストだけでなく、アート作品や商品選定などにも応用できます。"
+          }
+        ]
       },
       {
         "en": "Consider me intrigued! Let me just confirm with my Pilates instructor, and I'll text you with my availability by end of day.",
         "ja": "すごく興味をそそられるね！ピラティスの先生に確認してから、今日の終わりには空き状況をテキストするよ。",
-        "audioPath": "./assets/audio/t17799173134504858_10.wav"
+        "audioPath": "./assets/audio/t17799173134504858_10.wav",
+        "phrases": [
+          {
+            "phrase": "Consider me intrigued",
+            "meaning": "興味を持ったと考えてください",
+            "usage": "相手に自分の興味や関心を伝える丁寧な表現です。"
+          },
+          {
+            "phrase": "confirm with",
+            "meaning": "〜に確認する",
+            "usage": "予定や情報を他の人に伝える前に、必ず確認を取る際に使います。"
+          },
+          {
+            "phrase": "by end of day",
+            "meaning": "今日の終わりまでに、本日中に",
+            "usage": "ビジネスシーンでよく使われる、締め切りを示す表現です。"
+          }
+        ]
       },
       {
         "en": "Wonderful! I'm genuinely looking forward to catching up properly and hearing all your news.",
-        "ja": "素晴らしい！本当にゆっくり話して、君の近況を全部聞くのが今から楽しみだよ。"
+        "ja": "素晴らしい！本当にゆっくり話して、君の近況を全部聞くのが今から楽しみだよ。",
+        "audioPath": "./assets/audio/t17799173134504858_11.wav",
+        "phrases": [
+          {
+            "phrase": "genuinely looking forward to",
+            "meaning": "心から楽しみにしている",
+            "usage": "I'm genuinely looking forward to our meeting tomorrow. のように、強い期待感を表現する際に使う"
+          },
+          {
+            "phrase": "catching up properly",
+            "meaning": "きちんと近況報告をする、じっくり話す",
+            "usage": "We haven't seen each other in ages, so let's catch up properly soon. のように、久しぶりに会って話す状況で使う"
+          },
+          {
+            "phrase": "hearing all your news",
+            "meaning": "あなたの近況をすべて聞く",
+            "usage": "It's always great hearing all your news from your travels. のように、相手の近況に興味があることを示す際に使う"
+          }
+        ]
       }
     ],
     "createdAt": "2026-05-27T21:28:33.451Z"
+  },
+  {
+    "id": "t17800060430125577",
+    "title": "Forging a Strategic Alliance",
+    "titleJa": "戦略的提携の構築",
+    "category": "Business",
+    "sentences": [
+      {
+        "en": "The leadership team is currently deliberating the strategic imperative of forging a robust alliance to bolster our market position and accelerate innovation.",
+        "ja": "経営陣は現在、市場での地位を強化し、イノベーションを加速するための強固な提携を構築するという戦略的要請について審議しています。",
+        "audioPath": "./assets/audio/t17800060430125577_0.wav",
+        "phrases": [
+          {
+            "phrase": "deliberating the strategic imperative",
+            "meaning": "戦略的な必須事項を熟考している",
+            "usage": "企業が重要な経営判断を下す際に使われる表現です。"
+          },
+          {
+            "phrase": "forging a robust alliance",
+            "meaning": "強固な同盟を築く",
+            "usage": "ビジネスにおける提携や協力関係の構築を表します。"
+          },
+          {
+            "phrase": "bolster our market position",
+            "meaning": "市場での地位を強化する",
+            "usage": "競争力を高め、市場における優位性を確固たるものにすることを意味します。"
+          },
+          {
+            "phrase": "accelerate innovation",
+            "meaning": "イノベーションを加速させる",
+            "usage": "新しい技術やアイデアの開発・導入を迅速に進めることです。"
+          }
+        ]
+      },
+      {
+        "en": "Thorough due diligence is paramount, encompassing financial scrutiny, operational compatibility, and a meticulous assessment of cultural alignment to mitigate unforeseen risks.",
+        "ja": "徹底したデューデリジェンスは極めて重要であり、予期せぬリスクを軽減するため、財務精査、業務上の互換性、そして文化的な適合性への綿密な評価を含みます。",
+        "audioPath": "./assets/audio/t17800060430125577_1.wav",
+        "phrases": [
+          {
+            "phrase": "due diligence",
+            "meaning": "デューデリジェンス（資産・取引などの価値やリスクを調査すること）",
+            "usage": "M&Aや投資の場面でよく使われる表現です。"
+          },
+          {
+            "phrase": "mitigate unforeseen risks",
+            "meaning": "予期せぬリスクを軽減する",
+            "usage": "ビジネスシーンで、リスク管理の文脈で使われます。"
+          },
+          {
+            "phrase": "cultural alignment",
+            "meaning": "文化的な適合性、企業文化の一致",
+            "usage": "M&Aやグローバル展開の際に、組織間の文化的な相性を評価する際に用いられます。"
+          }
+        ]
+      },
+      {
+        "en": "Clearly articulating the synergistic objectives and delineating the scope of collaboration are foundational steps towards a mutually beneficial partnership.",
+        "ja": "相乗効果を生む目標を明確に述べ、協力範囲を具体的に定めることは、相互に利益をもたらすパートナーシップの基盤となるステップです。",
+        "audioPath": "./assets/audio/t17800060430125577_2.wav",
+        "phrases": [
+          {
+            "phrase": "articulating the synergistic objectives",
+            "meaning": "相乗効果のある目標を明確に述べること",
+            "usage": "会議でプロジェクトの目的を共有する際などに使えます。"
+          },
+          {
+            "phrase": "delineating the scope of collaboration",
+            "meaning": "協力の範囲を明確にすること",
+            "usage": "契約書やプロジェクト計画書で、協力範囲を定義する際に用いられます。"
+          },
+          {
+            "phrase": "mutually beneficial partnership",
+            "meaning": "相互に有益なパートナーシップ",
+            "usage": "Win-Winの関係を築くビジネス提携について話すときに使います。"
+          }
+        ]
+      },
+      {
+        "en": "We've identified several potential partners whose core competencies and strategic vision appear highly complementary to our long-term growth trajectory.",
+        "ja": "我々は、その中核的競争力と戦略的ビジョンが、当社の長期的な成長軌道と非常に補完的であると思われる複数の潜在的パートナーを特定しました。",
+        "audioPath": "./assets/audio/t17800060430125577_3.wav",
+        "phrases": [
+          {
+            "phrase": "core competencies",
+            "meaning": "中核となる強み・能力",
+            "usage": "企業の競争力の源泉となるスキルや知識を指す場合が多い"
+          },
+          {
+            "phrase": "strategic vision",
+            "meaning": "戦略的ビジョン・将来像",
+            "usage": "長期的な目標達成に向けた企業の方向性を示す"
+          },
+          {
+            "phrase": "complementary to",
+            "meaning": "〜と補完関係にある、〜を引き立てる",
+            "usage": "互いに不足している点を補い合い、相乗効果を生む関係を表す"
+          },
+          {
+            "phrase": "growth trajectory",
+            "meaning": "成長軌道・成長曲線",
+            "usage": "企業の将来的な成長の道筋やペースを示す"
+          }
+        ]
+      },
+      {
+        "en": "Negotiations, however, often entail intricate discussions concerning intellectual property rights, revenue sharing models, and exit strategies, demanding astute diplomacy.",
+        "ja": "しかしながら、交渉には知的財産権、収益分配モデル、そして出口戦略に関する複雑な議論が伴うことが多く、鋭敏な外交手腕が求められます。",
+        "audioPath": "./assets/audio/t17800060430125577_4.wav",
+        "phrases": [
+          {
+            "phrase": "intellectual property rights",
+            "meaning": "知的財産権",
+            "usage": "特許権、著作権、商標権などを包括する言葉です。"
+          },
+          {
+            "phrase": "revenue sharing models",
+            "meaning": "収益分配モデル",
+            "usage": "ビジネスにおける利益の分け方を定める仕組みを指します。"
+          },
+          {
+            "phrase": "exit strategies",
+            "meaning": "出口戦略",
+            "usage": "投資や事業から撤退する際の計画を意味します。"
+          },
+          {
+            "phrase": "astute diplomacy",
+            "meaning": "抜け目のない、巧みな外交・交渉術",
+            "usage": "単なる外交だけでなく、状況を的確に判断し、有利に進める能力を指します。"
+          }
+        ]
+      },
+      {
+        "en": "A meticulously crafted memorandum of understanding and subsequent definitive agreements are indispensable for establishing clear governance structures and dispute resolution mechanisms.",
+        "ja": "綿密に作成された基本合意書とその後の最終契約は、明確なガバナンス構造と紛争解決メカニズムを確立するために不可欠です。",
+        "audioPath": "./assets/audio/t17800060430125577_5.wav",
+        "phrases": [
+          {
+            "phrase": "memorandum of understanding",
+            "meaning": "了解覚書、MOU",
+            "usage": "契約交渉の初期段階で、当事者間の合意事項をまとめる際に使われます。"
+          },
+          {
+            "phrase": "definitive agreements",
+            "meaning": "最終契約",
+            "usage": "MOUなどの前段階の合意を経て、正式に締結される契約を指します。"
+          },
+          {
+            "phrase": "dispute resolution mechanisms",
+            "meaning": "紛争解決メカニズム",
+            "usage": "契約上の問題が発生した場合に、どのように解決するかを定めた手続きや仕組みのことです。"
+          }
+        ]
+      },
+      {
+        "en": "Integrating disparate organizational cultures presents a formidable challenge, requiring proactive communication strategies and a shared commitment to common goals.",
+        "ja": "異なる組織文化を統合することは容易ではない課題であり、積極的なコミュニケーション戦略と共通目標への相互のコミットメントが必要です。",
+        "audioPath": "./assets/audio/t17800060430125577_6.wav",
+        "phrases": [
+          {
+            "phrase": "Integrating disparate organizational cultures",
+            "meaning": "異なる組織文化を統合すること",
+            "usage": "Mergers and acquisitions often involve integrating disparate organizational cultures."
+          },
+          {
+            "phrase": "presents a formidable challenge",
+            "meaning": "手ごわい課題を提示する、困難な問題となる",
+            "usage": "This complex project presents a formidable challenge for the team."
+          },
+          {
+            "phrase": "proactive communication strategies",
+            "meaning": "積極的なコミュニケーション戦略",
+            "usage": "Effective leadership requires proactive communication strategies to keep everyone informed."
+          },
+          {
+            "phrase": "a shared commitment to common goals",
+            "meaning": "共通の目標に対する共有された献身・コミットメント",
+            "usage": "Success in team sports relies on a shared commitment to common goals."
+          }
+        ]
+      },
+      {
+        "en": "Effective post-alliance management necessitates dedicated joint steering committees to monitor progress, address emerging issues, and ensure accountability across all workstreams.",
+        "ja": "提携後の効果的なマネジメントには、進捗を監視し、新たな問題に対処し、全ての業務フローにおいて説明責任を確保するための専門的な共同運営委員会が不可欠です。",
+        "audioPath": "./assets/audio/t17800060430125577_7.wav",
+        "phrases": [
+          {
+            "phrase": "post-alliance management",
+            "meaning": "提携・連携後の管理",
+            "usage": "提携解消や成功の鍵となる重要なプロセスです。"
+          },
+          {
+            "phrase": "joint steering committees",
+            "meaning": "合同運営委員会",
+            "usage": "複数の組織が関わるプロジェクトや提携で、意思決定や進捗管理のために設置されます。"
+          },
+          {
+            "phrase": "address emerging issues",
+            "meaning": "新たな問題に対処する",
+            "usage": "予期せぬ課題が発生した際に、迅速かつ適切に対応することの重要性を示します。"
+          },
+          {
+            "phrase": "ensure accountability",
+            "meaning": "責任を確実にすること",
+            "usage": "各担当者が自身の役割と責任を果たすように管理・監督することです。"
+          }
+        ]
+      },
+      {
+        "en": "Key performance indicators (KPIs) must be rigorously defined and regularly reviewed to objectively gauge the alliance's efficacy and return on investment.",
+        "ja": "提携の効果と投資収益率を客観的に測るため、重要業績評価指標（KPI）は厳密に定義され、定期的に見直される必要があります。",
+        "audioPath": "./assets/audio/t17800060430125577_8.wav",
+        "phrases": [
+          {
+            "phrase": "Key performance indicators",
+            "meaning": "主要業績評価指標 (KPI)",
+            "usage": "ビジネスで「KPIを設定する」「KPIを追跡する」のように使う。"
+          },
+          {
+            "phrase": "rigorously defined",
+            "meaning": "厳密に定義された",
+            "usage": "「厳密に定義された基準」のように、基準や方針に対して使う。"
+          },
+          {
+            "phrase": "objectively gauge",
+            "meaning": "客観的に評価する／測定する",
+            "usage": "状況や成果を「客観的に評価する」際に使う。"
+          },
+          {
+            "phrase": "return on investment",
+            "meaning": "投資収益率、費用対効果 (ROI)",
+            "usage": "投資やプロジェクトの「ROIを計算する」のように使う。"
+          }
+        ]
+      },
+      {
+        "en": "The dynamic market landscape compels us to maintain agility, continuously evaluating the alliance's relevance and adapting its strategic direction as circumstances evolve.",
+        "ja": "ダイナミックな市場環境は、私たちに俊敏性を維持することを求め、提携の関連性を継続的に評価し、状況の変化に応じてその戦略的方向性を適応させる必要があります。",
+        "audioPath": "./assets/audio/t17800060430125577_9.wav",
+        "phrases": [
+          {
+            "phrase": "dynamic market landscape",
+            "meaning": "変化の激しい市場環境",
+            "usage": "現代のビジネス環境を表現する際によく使われる。"
+          },
+          {
+            "phrase": "maintain agility",
+            "meaning": "俊敏性を維持する",
+            "usage": "変化に対応するために企業が「俊敏性を保つ」という文脈で使う。"
+          },
+          {
+            "phrase": "evaluating the alliance's relevance",
+            "meaning": "提携の妥当性を評価する",
+            "usage": "「〜の関連性/妥当性を評価する」という文脈で使う。"
+          },
+          {
+            "phrase": "as circumstances evolve",
+            "meaning": "状況が変化するにつれて",
+            "usage": "「〜が変化するにつれて」という文脈で、状況の変化に対応する際に使う。"
+          }
+        ]
+      },
+      {
+        "en": "Should this initial venture prove successful, there is considerable scope for expanding the partnership into new geographical markets or exploring deeper product co-development initiatives.",
+        "ja": "この初期の取り組みが成功すれば、新たな地理的市場へのパートナーシップ拡大や、より深い製品共同開発の取り組みを探る大きな余地があります。",
+        "audioPath": "./assets/audio/t17800060430125577_10.wav",
+        "phrases": [
+          {
+            "phrase": "prove successful",
+            "meaning": "成功するとわかる、成功する",
+            "usage": "prove + 形容詞/名詞 で「〜だとわかる」という意味でビジネスでよく使う。"
+          },
+          {
+            "phrase": "considerable scope",
+            "meaning": "かなりの余地、大きな範囲",
+            "usage": "scope for improvement/expansion のように「〜の余地」と続くことが多い。"
+          },
+          {
+            "phrase": "geographical markets",
+            "meaning": "地理的な市場、地域市場",
+            "usage": "domestic markets や overseas markets と対比して使われることが多い。"
+          },
+          {
+            "phrase": "product co-development initiatives",
+            "meaning": "製品共同開発の取り組み",
+            "usage": "co-developmentは共同開発、initiativesは具体的な取り組みや計画を指す。"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, a truly successful strategic alliance transcends mere transactional benefits, fostering a robust ecosystem that drives sustained competitive advantage for all parties involved.",
+        "ja": "最終的に、真に成功する戦略的提携は、単なる取引上の利益を超越し、関与する全ての当事者に持続的な競争優位性をもたらす強固なエコシステムを育みます。",
+        "audioPath": "./assets/audio/t17800060430125577_11.wav",
+        "phrases": [
+          {
+            "phrase": "strategic alliance",
+            "meaning": "戦略的提携",
+            "usage": "企業間の協力関係を指すビジネス用語です。"
+          },
+          {
+            "phrase": "transactional benefits",
+            "meaning": "取引上の利益",
+            "usage": "単なる金銭的なやり取りから得られる利益のことです。"
+          },
+          {
+            "phrase": "sustained competitive advantage",
+            "meaning": "持続的な競争優位性",
+            "usage": "長期にわたって競合他社よりも優位な状態を保つことです。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-05-28T22:07:23.012Z"
   }
 ]
