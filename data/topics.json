@@ -5623,5 +5623,320 @@
       }
     ],
     "createdAt": "2026-05-28T22:07:23.012Z"
+  },
+  {
+    "id": "t17800900955238483",
+    "title": "Combating Disinformation in the Digital Age",
+    "titleJa": "デジタル時代における偽情報対策",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The pervasive spread of disinformation has emerged as a formidable challenge, undermining public trust and fracturing societal cohesion across democracies worldwide.",
+        "ja": "偽情報の蔓延は、世界中の民主主義国家において国民の信頼を損ない、社会の結束を分断する手ごわい課題として浮上しています。",
+        "audioPath": "./assets/audio/t17800900955238483_0.wav",
+        "phrases": [
+          {
+            "phrase": "pervasive spread",
+            "meaning": "広範な蔓延",
+            "usage": "The pervasive spread of a new virus is a global concern. (新しいウイルスの広範な蔓延は世界的な懸念事項です。)"
+          },
+          {
+            "phrase": "formidable challenge",
+            "meaning": "手ごわい課題、困難な挑戦",
+            "usage": "Climate change presents a formidable challenge for future generations. (気候変動は将来世代にとって手ごわい課題となっています。)"
+          },
+          {
+            "phrase": "undermining public trust",
+            "meaning": "公衆の信頼を損なうこと",
+            "usage": "Corruption scandals are often accused of undermining public trust in government. (汚職スキャンダルは、しばしば政府への公衆の信頼を損なうと非難されます。)"
+          },
+          {
+            "phrase": "fracturing societal cohesion",
+            "meaning": "社会的な結束を破壊すること",
+            "usage": "Political polarization can lead to fracturing societal cohesion. (政治的な二極化は、社会的な結束を破壊することにつながる可能性があります。)"
+          }
+        ]
+      },
+      {
+        "en": "Its insidious nature often makes it difficult for individuals to discern fact from fiction, thereby exacerbating polarization and eroding informed discourse.",
+        "ja": "その巧妙な性質により、個人が事実と虚偽を区別することがしばしば困難となり、結果として二極化を助長し、情報に基づいた議論を蝕んでいます。",
+        "audioPath": "./assets/audio/t17800900955238483_1.wav",
+        "phrases": [
+          {
+            "phrase": "insidious nature",
+            "meaning": "見過ごされがちな、巧妙に進行する性質",
+            "usage": "The insidious nature of the disease means it's hard to detect early. (その病気の巧妙な性質は、早期発見が難しいことを意味する。)"
+          },
+          {
+            "phrase": "discern fact from fiction",
+            "meaning": "事実と虚偽を見分ける",
+            "usage": "It's becoming harder to discern fact from fiction in the age of fake news. (フェイクニュースの時代には、事実と虚偽を見分けるのがますます難しくなっている。)"
+          },
+          {
+            "phrase": "exacerbating polarization",
+            "meaning": "対立・二極化を悪化させる",
+            "usage": "Social media algorithms can be accused of exacerbating polarization. (ソーシャルメディアのアルゴリズムは、対立を悪化させていると非難されることがある。)"
+          },
+          {
+            "phrase": "eroding informed discourse",
+            "meaning": "情報に基づいた議論を損なう・侵食する",
+            "usage": "The spread of misinformation is eroding informed discourse. (誤情報の拡散は、情報に基づいた議論を損なっている。)"
+          }
+        ]
+      },
+      {
+        "en": "Sophisticated AI-powered tools are increasingly being leveraged to propagate misleading narratives, making detection and mitigation efforts more complex than ever.",
+        "ja": "高度なAI搭載ツールが誤解を招く物語を拡散するために利用されることが増え、その検知と緩和の取り組みはかつてないほど複雑化しています。",
+        "audioPath": "./assets/audio/t17800900955238483_2.wav",
+        "phrases": [
+          {
+            "phrase": "AI-powered tools",
+            "meaning": "AI搭載ツール",
+            "usage": "AI-powered translation software のように、技術や機能を示す際に使われます。"
+          },
+          {
+            "phrase": "leveraged to",
+            "meaning": "〜のために活用される",
+            "usage": "The data was leveraged to improve the product のように、目的を示すために使われます。"
+          },
+          {
+            "phrase": "propagate misleading narratives",
+            "meaning": "誤解を招くような言説を広める",
+            "usage": "SNSなどで意図的に虚偽情報を拡散する状況を表す際に使われます。"
+          },
+          {
+            "phrase": "detection and mitigation efforts",
+            "meaning": "検知と緩和の取り組み",
+            "usage": "サイバーセキュリティや問題解決の文脈で、対策のプロセスを示す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Governments and international bodies are grappling with the delicate balance between safeguarding freedom of speech and implementing effective regulatory frameworks to curb this phenomenon.",
+        "ja": "各国政府や国際機関は、言論の自由を擁護することと、この現象を抑制するための効果的な規制枠組みを導入することとの間の微妙な均衡を模索しています。",
+        "audioPath": "./assets/audio/t17800900955238483_3.wav",
+        "phrases": [
+          {
+            "phrase": "grappling with",
+            "meaning": "〜に苦心して取り組む",
+            "usage": "difficult problems を grappling with する、といった形で使われます。"
+          },
+          {
+            "phrase": "delicate balance",
+            "meaning": "微妙な均衡、繊細なバランス",
+            "usage": "freedom of speech and security のような対立する要素の間のバランスを指す際によく使われます。"
+          },
+          {
+            "phrase": "safeguarding freedom",
+            "meaning": "自由を保護すること",
+            "usage": "freedom of speech, freedom of the press など、特定の自由を守る文脈で使われます。"
+          },
+          {
+            "phrase": "implementing regulatory frameworks",
+            "meaning": "規制の枠組みを実施すること",
+            "usage": "新しい法律や規則を導入する際に用いられる表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Crafting legislation that addresses the transnational character of disinformation campaigns without stifling legitimate expression presents a significant policy conundrum.",
+        "ja": "合法的な表現を阻害することなく、偽情報キャンペーンの国境を越えた性質に対処する法案を作成することは、政策上極めて困難な問題となっています。",
+        "audioPath": "./assets/audio/t17800900955238483_4.wav",
+        "phrases": [
+          {
+            "phrase": "crafting legislation",
+            "meaning": "法案を作成すること",
+            "usage": "The committee is responsible for crafting legislation to improve public safety."
+          },
+          {
+            "phrase": "addresses the transnational character",
+            "meaning": "国境を越えた性質に対処する",
+            "usage": "This new policy addresses the transnational character of cybercrime."
+          },
+          {
+            "phrase": "stifling legitimate expression",
+            "meaning": "正当な表現を抑制すること",
+            "usage": "We must ensure that new regulations do not result in stifling legitimate expression."
+          },
+          {
+            "phrase": "presents a significant policy conundrum",
+            "meaning": "重大な政策的難問を提示する",
+            "usage": "Balancing economic growth with environmental protection presents a significant policy conundrum for many governments."
+          }
+        ]
+      },
+      {
+        "en": "Social media platforms, often criticized for their role in amplifying harmful content, are under immense pressure to enhance their content moderation capabilities and transparency.",
+        "ja": "有害なコンテンツを増幅させる役割を担っているとしてしばしば批判されるソーシャルメディアプラットフォームは、コンテンツモデレーション能力と透明性を強化するよう多大な圧力を受けています。",
+        "audioPath": "./assets/audio/t17800900955238483_5.wav",
+        "phrases": [
+          {
+            "phrase": "under immense pressure",
+            "meaning": "多大なプレッシャーを受けている",
+            "usage": "The company is under immense pressure to meet its quarterly targets. (会社は四半期目標達成のために多大なプレッシャーを受けている)"
+          },
+          {
+            "phrase": "enhance their capabilities",
+            "meaning": "能力を強化する",
+            "usage": "We need to enhance our capabilities in digital marketing. (デジタルマーケティングにおける能力を強化する必要がある)"
+          },
+          {
+            "phrase": "content moderation",
+            "meaning": "コンテンツモデレーション（不適切な投稿の削除・管理）",
+            "usage": "Platforms are investing heavily in content moderation to combat misinformation. (プラットフォームは偽情報の対策としてコンテンツモデレーションに多額の投資をしている)"
+          },
+          {
+            "phrase": "transparency",
+            "meaning": "透明性",
+            "usage": "Increased transparency in government is crucial for public trust. (政府における透明性の向上は、国民の信頼のために不可欠である)"
+          }
+        ]
+      },
+      {
+        "en": "Fostering media literacy and critical thinking skills among the populace is paramount to empowering citizens to independently evaluate information sources.",
+        "ja": "国民の間でメディアリテラシーと批判的思考力を育むことは、市民が情報源を独自に評価できるようにするために最も重要です。",
+        "audioPath": "./assets/audio/t17800900955238483_6.wav",
+        "phrases": [
+          {
+            "phrase": "fostering media literacy",
+            "meaning": "メディアリテラシーを育成すること",
+            "usage": "schools are fostering media literacy among students のように使う"
+          },
+          {
+            "phrase": "critical thinking skills",
+            "meaning": "批判的思考力（多角的に物事を分析・評価する力）",
+            "usage": "developing critical thinking skills is essential for problem-solving のように使う"
+          },
+          {
+            "phrase": "among the populace",
+            "meaning": "一般大衆の間で",
+            "usage": "public health campaigns are most effective when targeted among the populace のように使う"
+          },
+          {
+            "phrase": "paramount to",
+            "meaning": "〜にとって最も重要である",
+            "usage": "customer satisfaction is paramount to our success のように使う"
+          }
+        ]
+      },
+      {
+        "en": "Collaborative initiatives among nations are crucial for sharing intelligence and developing common strategies to counter state-sponsored disinformation operations.",
+        "ja": "国家間の協力的な取り組みは、情報共有と国家支援型偽情報作戦に対抗するための共通戦略を策定する上で不可欠です。",
+        "audioPath": "./assets/audio/t17800900955238483_7.wav",
+        "phrases": [
+          {
+            "phrase": "Collaborative initiatives",
+            "meaning": "協力的な取り組み、共同イニシアチブ",
+            "usage": "環境保護のためのcollaborative initiativesが求められている。"
+          },
+          {
+            "phrase": "sharing intelligence",
+            "meaning": "情報共有（特に機密情報や専門知識の）",
+            "usage": "sharing intelligence on cyber threats のように使う。"
+          },
+          {
+            "phrase": "developing common strategies",
+            "meaning": "共通戦略を策定する",
+            "usage": "世界的な課題に対処するため、各国はdeveloping common strategiesが必要だ。"
+          },
+          {
+            "phrase": "counter disinformation operations",
+            "meaning": "偽情報工作に対抗する",
+            "usage": "政府はSNS上のcounter disinformation operationsに注力している。"
+          }
+        ]
+      },
+      {
+        "en": "The ethical implications of using counter-disinformation tactics, such as pre-bunking or de-platforming, warrant careful consideration to prevent unintended consequences.",
+        "ja": "事前警告やプラットフォームからの排除といった偽情報対策戦術を用いることの倫理的含意は、意図せざる結果を防ぐために慎重な検討を要します。",
+        "audioPath": "./assets/audio/t17800900955238483_8.wav",
+        "phrases": [
+          {
+            "phrase": "ethical implications",
+            "meaning": "倫理的な影響・意味合い",
+            "usage": "その技術の倫理的意味合いを考慮する必要がある (We need to consider the ethical implications of the technology.)"
+          },
+          {
+            "phrase": "warrant careful consideration",
+            "meaning": "慎重な検討を要する",
+            "usage": "その提案はさらなる検討を要する (The proposal warrants further consideration.)"
+          },
+          {
+            "phrase": "unintended consequences",
+            "meaning": "意図せざる結果、予期せぬ結果",
+            "usage": "新しい政策にはしばしば意図せざる結果が伴う (New policies often have unintended consequences.)"
+          }
+        ]
+      },
+      {
+        "en": "Beyond its societal effects, disinformation can also destabilize financial markets and undermine consumer confidence, posing tangible economic risks.",
+        "ja": "偽情報は、社会への影響にとどまらず、金融市場を不安定化させ、消費者信頼感を損ない、具体的な経済的リスクをもたらす可能性もあります。",
+        "phrases": [
+          {
+            "phrase": "destabilize financial markets",
+            "meaning": "金融市場を不安定にする",
+            "usage": "Political unrest can destabilize the region. (政治不安はその地域を不安定にすることがある。)"
+          },
+          {
+            "phrase": "undermine consumer confidence",
+            "meaning": "消費者信頼感を損なう",
+            "usage": "The scandal could undermine public trust in the government. (そのスキャンダルは政府への国民の信頼を損なう可能性がある。)"
+          },
+          {
+            "phrase": "posing tangible economic risks",
+            "meaning": "具体的な経済的リスクをもたらす",
+            "usage": "The new policy could pose a significant challenge to small businesses. (新しい政策は中小企業に大きな課題をもたらす可能性がある。)"
+          }
+        ]
+      },
+      {
+        "en": "The evolving landscape necessitates adaptive and multi-pronged approaches, recognizing that a definitive solution remains elusive in this ever-changing digital environment.",
+        "ja": "この進化し続ける状況は、適応的かつ多角的なアプローチを必要とします。なぜなら、絶えず変化するデジタル環境において決定的な解決策は依然として見出しがたいためです。",
+        "phrases": [
+          {
+            "phrase": "evolving landscape",
+            "meaning": "進化し続ける状況、変化し続ける情勢",
+            "usage": "The evolving landscape of technology requires constant learning. (テクノロジーの進化し続ける状況は、絶え間ない学習を必要とする。)"
+          },
+          {
+            "phrase": "multi-pronged approaches",
+            "meaning": "多角的なアプローチ、多方面からの取り組み",
+            "usage": "We need multi-pronged approaches to solve this complex problem. (この複雑な問題を解決するには、多角的なアプローチが必要だ。)"
+          },
+          {
+            "phrase": "remains elusive",
+            "meaning": "依然としてつかみどころがない、見つけにくい",
+            "usage": "A permanent cure for the common cold remains elusive. (普通の風邪の恒久的な治療法は依然として見つかっていない。)"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, a collective commitment from policymakers, tech companies, educators, and the public is indispensable to preserving the integrity of our information ecosystem.",
+        "ja": "最終的に、政策立案者、テクノロジー企業、教育者、そして一般市民からの総体的なコミットメントが、私たちの情報エコシステムの健全性を維持するために不可欠です。",
+        "phrases": [
+          {
+            "phrase": "collective commitment",
+            "meaning": "集合的な取り組み、共同での決意",
+            "usage": "A collective commitment is needed to solve the problem. (その問題を解決するには集合的な取り組みが必要です。)"
+          },
+          {
+            "phrase": "indispensable to",
+            "meaning": "〜に不可欠である",
+            "usage": "This information is indispensable to our research. (この情報は私たちの研究に不可欠です。)"
+          },
+          {
+            "phrase": "preserving the integrity",
+            "meaning": "〜の健全性・誠実性を維持すること",
+            "usage": "preserving the integrity of the election (選挙の公正性を維持すること)"
+          },
+          {
+            "phrase": "information ecosystem",
+            "meaning": "情報エコシステム（情報が流通・共有される環境）",
+            "usage": "The spread of misinformation harms the information ecosystem. (誤情報の拡散は情報エコシステムを損なう。)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-05-29T21:28:15.523Z"
   }
 ]
