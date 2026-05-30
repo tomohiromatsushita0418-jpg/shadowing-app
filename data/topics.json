@@ -5887,7 +5887,8 @@
             "meaning": "具体的な経済的リスクをもたらす",
             "usage": "The new policy could pose a significant challenge to small businesses. (新しい政策は中小企業に大きな課題をもたらす可能性がある。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17800900955238483_9.wav"
       },
       {
         "en": "The evolving landscape necessitates adaptive and multi-pronged approaches, recognizing that a definitive solution remains elusive in this ever-changing digital environment.",
@@ -5938,5 +5939,293 @@
       }
     ],
     "createdAt": "2026-05-29T21:28:15.523Z"
+  },
+  {
+    "id": "t17801650557435423",
+    "title": "Navigating a Home Renovation Project",
+    "titleJa": "自宅リノベーションに挑む",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "We've finally decided to bite the bullet and embark on that much-needed kitchen renovation, which feels both exhilarating and daunting.",
+        "ja": "ついに意を決して、長年の懸案だったキッチンのリノベーションに着手することにしました。期待に胸が膨らむ一方で、かなりの大仕事になりそうで、少し気が重いのも正直なところです。",
+        "audioPath": "./assets/audio/t17801650557435423_0.wav",
+        "phrases": [
+          {
+            "phrase": "bite the bullet",
+            "meaning": "困難な状況に立ち向かう、ぐっとこらえて決行する",
+            "usage": "He had to bite the bullet and admit his mistake. (彼はぐっとこらえて自分の間違いを認めなければならなかった)"
+          },
+          {
+            "phrase": "embark on",
+            "meaning": "〜に着手する、〜を始める",
+            "usage": "They decided to embark on a new business venture. (彼らは新しい事業に着手することにした)"
+          },
+          {
+            "phrase": "much-needed",
+            "meaning": "待望の、切実に必要な",
+            "usage": "This is a much-needed break from our busy schedules. (これは忙しいスケジュールからの待望の休息だ)"
+          },
+          {
+            "phrase": "exhilarating and daunting",
+            "meaning": "ワクワクする一方で、気が遠くなるような（恐ろしい）",
+            "usage": "The prospect of climbing Mount Everest is both exhilarating and daunting. (エベレスト登頂という見込みは、ワクワクする一方で、気が遠くなるようなものだ)"
+          }
+        ]
+      },
+      {
+        "en": "The initial planning phase has been quite extensive, meticulously mapping out every detail from cabinetry to countertop materials.",
+        "ja": "最初の計画段階はかなり綿密に進め、キャビネットからカウンタートップの素材に至るまで、あらゆる細部を徹底的に検討しました。",
+        "audioPath": "./assets/audio/t17801650557435423_1.wav",
+        "phrases": [
+          {
+            "phrase": "planning phase",
+            "meaning": "計画段階",
+            "usage": "The project is still in its early planning phase. (プロジェクトはまだ初期の計画段階です。)"
+          },
+          {
+            "phrase": "meticulously mapping out",
+            "meaning": "細部にわたって綿密に計画を立てる",
+            "usage": "The team meticulously mapped out the entire marketing strategy. (チームはマーケティング戦略全体を綿密に計画しました。)"
+          },
+          {
+            "phrase": "cabinetry to countertop materials",
+            "meaning": "食器棚からカウンタートップの素材まで（＝詳細な項目）",
+            "usage": "The interior design covered everything from cabinetry to countertop materials. (インテリアデザインは、食器棚からカウンタートップの素材まで、あらゆるものを網羅していました。)"
+          }
+        ]
+      },
+      {
+        "en": "We're aiming for a more open-concept layout, hoping to really maximize the natural light and create a more functional space.",
+        "ja": "より開放的な間取りを目指しており、自然光を最大限に取り込み、機能的な空間を創り出すことを期待しています。",
+        "audioPath": "./assets/audio/t17801650557435423_2.wav",
+        "phrases": [
+          {
+            "phrase": "open-concept layout",
+            "meaning": "開放的な間取り",
+            "usage": "住宅やオフィスデザインでよく使われる表現です。"
+          },
+          {
+            "phrase": "maximize the natural light",
+            "meaning": "自然光を最大限に活用する",
+            "usage": "採光を工夫する際に用いられる表現です。"
+          },
+          {
+            "phrase": "functional space",
+            "meaning": "機能的な空間",
+            "usage": "使い勝手の良い空間を指す場合に便利です。"
+          }
+        ]
+      },
+      {
+        "en": "One of the biggest hurdles we anticipate is coordinating the various contractors to ensure a seamless workflow.",
+        "ja": "私たちが予想する最大の課題の一つは、複数の業者間の調整を円滑に進め、作業の流れを滞りなくすることです。",
+        "audioPath": "./assets/audio/t17801650557435423_3.wav",
+        "phrases": [
+          {
+            "phrase": "biggest hurdles",
+            "meaning": "最大の障害・難関",
+            "usage": "The biggest hurdle to overcome is funding. (克服すべき最大の難関は資金調達です)"
+          },
+          {
+            "phrase": "anticipate is coordinating",
+            "meaning": "〜を予期しているのは〜の調整である",
+            "usage": "We anticipate is hiring more staff. (我々が予期しているのは、より多くの人員を雇用することです)"
+          },
+          {
+            "phrase": "ensure a seamless workflow",
+            "meaning": "円滑なワークフローを保証する",
+            "usage": "This new software will ensure a seamless workflow for the team. (この新しいソフトウェアは、チームの円滑なワークフローを保証するでしょう)"
+          }
+        ]
+      },
+      {
+        "en": "I'm particularly excited about incorporating smart home features, like integrated lighting and voice-activated appliances, to streamline daily tasks.",
+        "ja": "特に、統合型照明や音声起動家電といったスマートホーム機能を導入し、日々のタスクを効率化できることに非常にワクワクしています。",
+        "audioPath": "./assets/audio/t17801650557435423_4.wav",
+        "phrases": [
+          {
+            "phrase": "particularly excited about",
+            "meaning": "〜について特に興奮している、楽しみにしている",
+            "usage": "新しいプロジェクトの開始について、彼はparticularly excited about the new project launch と述べていた。"
+          },
+          {
+            "phrase": "incorporating ... to",
+            "meaning": "〜するために…を組み込む、取り入れる",
+            "usage": "業務効率化のために、新しいソフトウェアをincorporating into our workflow to improve efficiency のように使う。"
+          },
+          {
+            "phrase": "streamline daily tasks",
+            "meaning": "日常業務を効率化する、合理化する",
+            "usage": "スマートホーム技術は、streamline daily tasks の一助となる。"
+          }
+        ]
+      },
+      {
+        "en": "Of course, budget management is always a precarious balancing act, and we're trying our best to mitigate any unforeseen expenses.",
+        "ja": "もちろん、予算管理は常に綱渡りのようなもので、予期せぬ出費を最小限に抑えるため、最善を尽くしています。",
+        "audioPath": "./assets/audio/t17801650557435423_5.wav",
+        "phrases": [
+          {
+            "phrase": "budget management",
+            "meaning": "予算管理",
+            "usage": "budget management software のように具体的な製品名と組み合わせることも多い"
+          },
+          {
+            "phrase": "precarious balancing act",
+            "meaning": "不安定な綱渡り、綱渡りのような難しい状況",
+            "usage": "The company is performing a precarious balancing act to stay afloat. のように、困難な状況を表現する際に使う"
+          },
+          {
+            "phrase": "mitigate any unforeseen expenses",
+            "meaning": "予期せぬ出費を軽減する",
+            "usage": "mitigate the risks（リスクを軽減する）のように、様々なネガティブな事柄に対して使うことができる"
+          }
+        ]
+      },
+      {
+        "en": "We've been poring over design magazines and online galleries for inspiration, trying to synthesize different aesthetics into our own unique vision.",
+        "ja": "デザイン雑誌やオンラインギャラリーを隅々まで読み漁り、様々な美的要素を私たち独自のビジョンに統合しようとインスピレーションを探しています。",
+        "audioPath": "./assets/audio/t17801650557435423_6.wav",
+        "phrases": [
+          {
+            "phrase": "poring over",
+            "meaning": "熱心に調べる、じっくり読み込む",
+            "usage": "He was poring over the documents for hours. (彼は何時間も書類を精読していた。)"
+          },
+          {
+            "phrase": "synthesize different aesthetics",
+            "meaning": "異なる美意識を統合する",
+            "usage": "The artist tried to synthesize different aesthetics into her work. (その芸術家は、異なる美意識を自身の作品に統合しようと試みた。)"
+          },
+          {
+            "phrase": "unique vision",
+            "meaning": "独自のビジョン、独自の視点",
+            "usage": "The company is known for its unique vision in the tech industry. (その会社は、テクノロジー業界における独自のビジョンで知られている。)"
+          }
+        ]
+      },
+      {
+        "en": "The prospect of living without a functional kitchen for several weeks is certainly a logistical challenge we need to meticulously prepare for.",
+        "ja": "数週間、機能的なキッチンなしで過ごすという見通しは、間違いなく綿密な準備が必要な物流上の課題です。",
+        "audioPath": "./assets/audio/t17801650557435423_7.wav",
+        "phrases": [
+          {
+            "phrase": "The prospect of",
+            "meaning": "〜の見込み、〜の可能性",
+            "usage": "The prospect of success は「成功の見込み」という意味で使う"
+          },
+          {
+            "phrase": "logistical challenge",
+            "meaning": "物流上の課題、ロジスティクス上の問題",
+            "usage": "大規模なプロジェクトでは、しばしば logistical challenges が発生する"
+          },
+          {
+            "phrase": "meticulously prepare for",
+            "meaning": "入念に〜に備える、細心の注意を払って準備する",
+            "usage": "重要な会議に meticulously prepare for する必要がある"
+          }
+        ]
+      },
+      {
+        "en": "My partner is keen on a minimalist, contemporary look, while I'm leaning towards a more rustic, cozy ambiance, so we're trying to find a harmonious compromise.",
+        "ja": "パートナーはミニマリストで現代的なデザインを強く望んでいますが、私はもう少し素朴で居心地の良い雰囲気を求めているので、調和の取れた妥協点を見つけようとしています。",
+        "audioPath": "./assets/audio/t17801650557435423_8.wav",
+        "phrases": [
+          {
+            "phrase": "keen on",
+            "meaning": "〜に熱心である、〜が大好きである",
+            "usage": "She's keen on learning Japanese. (彼女は日本語学習に熱心だ)"
+          },
+          {
+            "phrase": "leaning towards",
+            "meaning": "〜の方に傾いている、〜に惹かれている",
+            "usage": "He's leaning towards accepting the offer. (彼はその申し出を受け入れる方に傾いている)"
+          },
+          {
+            "phrase": "harmonious compromise",
+            "meaning": "調和のとれた妥協案",
+            "usage": "Finding a harmonious compromise is key to a successful negotiation. (調和のとれた妥協案を見つけることが、交渉成功の鍵となる)"
+          }
+        ]
+      },
+      {
+        "en": "We're hoping to complete the bulk of the structural work before the holiday season kicks in, to minimize disruption to our usual festivities.",
+        "ja": "祝日シーズンが始まる前に構造工事の大部分を終え、通常の祝祭への支障を最小限に抑えたいと考えています。",
+        "audioPath": "./assets/audio/t17801650557435423_9.wav",
+        "phrases": [
+          {
+            "phrase": "the bulk of",
+            "meaning": "大部分、大半",
+            "usage": "the bulk of the work (作業の大半) や the bulk of the population (人口の大半) のように使う。"
+          },
+          {
+            "phrase": "kicks in",
+            "meaning": "始まる、効果が出始める",
+            "usage": "薬が効き始める (The medicine kicks in) のようにも使う。"
+          },
+          {
+            "phrase": "minimize disruption",
+            "meaning": "混乱を最小限に抑える",
+            "usage": "minimize disruption to services (サービスへの混乱を最小限に抑える) のように使う。"
+          }
+        ]
+      },
+      {
+        "en": "It's definitely a significant undertaking, but we're convinced the long-term value and enhanced living experience will be well worth the temporary inconvenience.",
+        "ja": "確かに大がかりなプロジェクトですが、長期的な価値と向上した居住体験を考えれば、一時的な不便さは十分に報われると確信しています。",
+        "audioPath": "./assets/audio/t17801650557435423_10.wav",
+        "phrases": [
+          {
+            "phrase": "a significant undertaking",
+            "meaning": "重要な事業、大規模な取り組み",
+            "usage": "新規プロジェクトや大規模な計画を指す際によく使われる。"
+          },
+          {
+            "phrase": "long-term value",
+            "meaning": "長期的な価値",
+            "usage": "短期的な利益と対比して、将来的な恩恵を強調する際に用いる。"
+          },
+          {
+            "phrase": "be well worth",
+            "meaning": "十分に〜する価値がある",
+            "usage": "努力や投資が報われることを表す際に使う。「It's well worth the effort.」"
+          },
+          {
+            "phrase": "temporary inconvenience",
+            "meaning": "一時的な不便",
+            "usage": "工事やシステム停止など、一時的な顧客への影響を説明する際によく使う。"
+          }
+        ]
+      },
+      {
+        "en": "Wish us luck – we're bracing ourselves for the inevitable dust and disarray, but equally looking forward to the grand reveal!",
+        "ja": "応援してくださいね。避けられない埃や混乱には覚悟していますが、完成のお披露目が今から本当に楽しみです！",
+        "audioPath": "./assets/audio/t17801650557435423_11.wav",
+        "phrases": [
+          {
+            "phrase": "bracing ourselves for",
+            "meaning": "〜に備える、〜に覚悟を決める",
+            "usage": "困難な状況や予期せぬ出来事に対して心の準備をする際に使う表現です。"
+          },
+          {
+            "phrase": "inevitable dust and disarray",
+            "meaning": "避けられない混乱と乱雑さ",
+            "usage": "改築や大規模なイベントの後など、ある程度の混乱が予想される状況を表す際に使われます。"
+          },
+          {
+            "phrase": "looking forward to",
+            "meaning": "〜を楽しみにしている",
+            "usage": "期待感やワクワクする気持ちを表す、非常に一般的な表現です。"
+          },
+          {
+            "phrase": "grand reveal",
+            "meaning": "盛大な発表、お披露目",
+            "usage": "新製品、改築された場所、イベントのクライマックスなど、注目度の高いものを公開する際に使われます。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-05-30T18:17:35.743Z"
   }
 ]
