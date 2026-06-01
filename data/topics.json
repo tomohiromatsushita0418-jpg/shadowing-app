@@ -6542,5 +6542,315 @@
       }
     ],
     "createdAt": "2026-05-31T18:56:12.032Z"
+  },
+  {
+    "id": "t17803543956140175",
+    "title": "Monetary Policy Challenges in an Era of Persistent Inflation",
+    "titleJa": "根強いインフレ時代の金融政策の課題",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The current global economic landscape is characterized by persistent inflationary pressures, compelling central banks worldwide to recalibrate their monetary policy stances.",
+        "ja": "現在、世界経済は根強いインフレ圧力に見舞われており、世界各国の中央銀行は金融政策のスタンスを再調整せざるを得ない状況にあります。",
+        "audioPath": "./assets/audio/t17803543956140175_0.wav",
+        "phrases": [
+          {
+            "phrase": "global economic landscape",
+            "meaning": "世界経済の情勢",
+            "usage": "The global economic landscape is constantly changing. のように使う"
+          },
+          {
+            "phrase": "persistent inflationary pressures",
+            "meaning": "根強いインフレ圧力",
+            "usage": "persistent inflationary pressures が続いている、と報道で使われる"
+          },
+          {
+            "phrase": "recalibrate their monetary policy stances",
+            "meaning": "金融政策の姿勢を再調整する",
+            "usage": "central banks recalibrate their monetary policy stances. のように、中央銀行の行動として使われる"
+          }
+        ]
+      },
+      {
+        "en": "Aggressive interest rate hikes have become a primary tool in their arsenal, aiming to curb demand and bring soaring prices under control.",
+        "ja": "需要を抑制し、高騰する物価を制御するため、積極的な利上げが彼らの主要な手段となっています。",
+        "audioPath": "./assets/audio/t17803543956140175_1.wav",
+        "phrases": [
+          {
+            "phrase": "interest rate hikes",
+            "meaning": "利上げ",
+            "usage": "The central bank announced aggressive interest rate hikes. (中央銀行は積極的な利上げを発表した。)"
+          },
+          {
+            "phrase": "primary tool",
+            "meaning": "主要な手段、主な武器",
+            "usage": "This policy is their primary tool for economic growth. (この政策は経済成長のための彼らの主要な手段だ。)"
+          },
+          {
+            "phrase": "in their arsenal",
+            "meaning": "（武器や手段として）彼らの手持ちの、彼らが使える",
+            "usage": "Diplomacy is an important tool in their arsenal. (外交は彼らの手持ちの重要な手段だ。)"
+          },
+          {
+            "phrase": "bring ... under control",
+            "meaning": "〜を抑制する、〜を管理下に置く",
+            "usage": "They are trying to bring inflation under control. (彼らはインフレを抑制しようとしている。)"
+          }
+        ]
+      },
+      {
+        "en": "However, this hawkish approach carries the inherent risk of stifling economic growth, potentially tipping major economies into recession.",
+        "ja": "しかし、このタカ派的なアプローチは、経済成長を阻害し、主要経済を景気後退に陥れる潜在的なリスクを内包しています。",
+        "audioPath": "./assets/audio/t17803543956140175_2.wav",
+        "phrases": [
+          {
+            "phrase": "hawkish approach",
+            "meaning": "強硬なアプローチ、タカ派的な姿勢",
+            "usage": "金融政策や外交政策で使われることが多い表現です。"
+          },
+          {
+            "phrase": "inherent risk",
+            "meaning": "内在するリスク、固有のリスク",
+            "usage": "その性質上避けられないリスクを指します。"
+          },
+          {
+            "phrase": "stifling economic growth",
+            "meaning": "経済成長を抑制する、妨げる",
+            "usage": "過度な規制や政策が経済の発展を阻害する状況で使われます。"
+          },
+          {
+            "phrase": "tipping into recession",
+            "meaning": "景気後退に陥る、転落する",
+            "usage": "経済が不況状態になることを示す表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Policymakers face an unenviable dilemma: prioritize price stability at the expense of economic expansion, or vice versa.",
+        "ja": "政策立案者たちは、物価安定を経済成長よりも優先するか、あるいはその逆かという、困難なジレンマに直面しています。",
+        "audioPath": "./assets/audio/t17803543956140175_3.wav",
+        "phrases": [
+          {
+            "phrase": "face an unenviable dilemma",
+            "meaning": "厄介なジレンマに直面する",
+            "usage": "It's a difficult choice with no easy answers. (答えのない難しい選択だ、という意味合い)"
+          },
+          {
+            "phrase": "at the expense of",
+            "meaning": "〜を犠牲にして",
+            "usage": "He sacrificed his health at the expense of his career. (キャリアを犠牲にして健康を犠牲にした、のように使う)"
+          },
+          {
+            "phrase": "vice versa",
+            "meaning": "逆もまた同様に、その逆",
+            "usage": "He likes apples, and vice versa. (彼がりんごが好きで、逆もまた同様だ、のように使う)"
+          }
+        ]
+      },
+      {
+        "en": "Supply-side constraints, exacerbated by geopolitical tensions and lingering pandemic-related disruptions, continue to fuel cost-push inflation.",
+        "ja": "地政学的な緊張とパンデミックに起因する長引く混乱によって悪化した供給側の制約が、コストプッシュ型インフレを煽り続けています。",
+        "phrases": [
+          {
+            "phrase": "Supply-side constraints",
+            "meaning": "供給側の制約",
+            "usage": "経済ニュースで、生産能力や物流の問題を指す際によく使われます。"
+          },
+          {
+            "phrase": "exacerbated by",
+            "meaning": "〜によって悪化させられた",
+            "usage": "問題や困難な状況が、特定の要因でさらにひどくなったことを説明する際に用います。"
+          },
+          {
+            "phrase": "cost-push inflation",
+            "meaning": "コストプッシュインフレ（生産コストの上昇が原因で物価が上昇すること）",
+            "usage": "経済学や経済報道で、インフレの原因を説明する際に重要な専門用語です。"
+          }
+        ]
+      },
+      {
+        "en": "Energy price volatility, in particular, remains a significant wildcard, complicating efforts to forecast future inflation trajectories accurately.",
+        "ja": "特にエネルギー価格の変動性は依然として大きな不確定要素であり、将来のインフレ経路を正確に予測する取り組みを複雑にしています。",
+        "phrases": [
+          {
+            "phrase": "volatility",
+            "meaning": "変動性、不安定さ",
+            "usage": "price volatility (価格変動性) のように、経済や市場の文脈でよく使われます。"
+          },
+          {
+            "phrase": "significant wildcard",
+            "meaning": "無視できない不確定要素、大きな予測不能要因",
+            "usage": "予測を困難にする予期せぬ要因を指す際に使われます。"
+          },
+          {
+            "phrase": "complicating efforts",
+            "meaning": "〜の取り組みを複雑にする、〜を困難にする",
+            "usage": "目標達成のための努力を難しくしている状況を表すのに適しています。"
+          },
+          {
+            "phrase": "inflation trajectories",
+            "meaning": "インフレの軌跡、インフレの推移",
+            "usage": "将来のインフレの動向や予測される経路を指す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, tight labor markets in many developed nations are contributing to wage-price spirals, embedding inflation expectations.",
+        "ja": "さらに、多くの先進国における労働市場の逼迫は、賃金と物価の悪循環に寄与し、インフレ期待を定着させています。",
+        "phrases": [
+          {
+            "phrase": "tight labor markets",
+            "meaning": "労働市場が逼迫している（求職者よりも求人が多い状態）",
+            "usage": "The company is struggling to hire new staff due to tight labor markets."
+          },
+          {
+            "phrase": "contributing to",
+            "meaning": "〜の一因となっている、〜に寄与している",
+            "usage": "Poor diet is a major factor contributing to health problems."
+          },
+          {
+            "phrase": "wage-price spirals",
+            "meaning": "賃金と物価が互いに上昇し合う悪循環",
+            "usage": "Central banks are trying to break the wage-price spiral."
+          },
+          {
+            "phrase": "embedding inflation expectations",
+            "meaning": "インフレ期待を定着させる、インフレが今後も続くと人々に思わせる",
+            "usage": "The government's policies are embedding inflation expectations among consumers."
+          }
+        ]
+      },
+      {
+        "en": "Central bankers are keenly observing various economic indicators, including consumer spending, manufacturing output, and employment figures, for signs of moderation.",
+        "ja": "中央銀行家たちは、消費支出、製造業生産高、雇用統計といった様々な経済指標を注視し、経済活動の減速の兆候を探っています。",
+        "phrases": [
+          {
+            "phrase": "keenly observing",
+            "meaning": "鋭意観察している、注意深く見守っている",
+            "usage": "The company is keenly observing market trends. (その会社は市場の動向を鋭意観察している。)"
+          },
+          {
+            "phrase": "economic indicators",
+            "meaning": "経済指標",
+            "usage": "Governments use economic indicators to assess the health of the economy. (政府は経済の健全性を評価するために経済指標を用いる。)"
+          },
+          {
+            "phrase": "consumer spending",
+            "meaning": "個人消費",
+            "usage": "Consumer spending is a major driver of economic growth. (個人消費は経済成長の主要な推進力である。)"
+          },
+          {
+            "phrase": "signs of moderation",
+            "meaning": "鈍化の兆候、落ち着きの兆候",
+            "usage": "The report showed signs of moderation in inflation. (その報告書はインフレの鈍化の兆候を示した。)"
+          }
+        ]
+      },
+      {
+        "en": "Divergent economic performances across regions also complicate a synchronized global response, necessitating tailored national strategies.",
+        "ja": "各地域で経済パフォーマンスが異なっていることも、協調的な世界規模の対応を複雑にし、各国に合わせた戦略が必要となっています。",
+        "phrases": [
+          {
+            "phrase": "Divergent economic performances",
+            "meaning": "異なる経済状況、経済格差",
+            "usage": "経済報告書や分析記事で頻出。例: \"Divergent economic performances among member states.\""
+          },
+          {
+            "phrase": "across regions",
+            "meaning": "地域間で、各地で",
+            "usage": "\"across the board\" や \"across industries\" と同様に、広範囲を示す。"
+          },
+          {
+            "phrase": "synchronized global response",
+            "meaning": "協調的な世界規模の対応",
+            "usage": "パンデミックや気候変動など、国際的な課題への対応で使われる。"
+          },
+          {
+            "phrase": "tailored national strategies",
+            "meaning": "各国に合わせた戦略、個別戦略",
+            "usage": "\"tailored solution\" や \"tailored approach\" のように、個別のニーズに対応する意味でビジネスで多用。"
+          }
+        ]
+      },
+      {
+        "en": "The efficacy of current monetary tightening cycles will largely depend on how quickly supply-side bottlenecks resolve and demand responds to higher borrowing costs.",
+        "ja": "現在の金融引き締めサイクルの有効性は、サプライサイドのボトルネックがどれだけ速く解消され、需要がより高い借入コストにどう反応するかに大きく左右されるでしょう。",
+        "phrases": [
+          {
+            "phrase": "efficacy of",
+            "meaning": "〜の効果、〜の有効性",
+            "usage": "The efficacy of the new strategy is still being evaluated. (新戦略の有効性はまだ評価中だ。)"
+          },
+          {
+            "phrase": "monetary tightening",
+            "meaning": "金融引き締め",
+            "usage": "中央銀行はインフレ抑制のため金融引き締め政策を実施した。"
+          },
+          {
+            "phrase": "largely depend on",
+            "meaning": "主に〜に左右される、大部分が〜次第である",
+            "usage": "Project success will largely depend on team collaboration. (プロジェクトの成功は主にチームの協力にかかっている。)"
+          },
+          {
+            "phrase": "supply-side bottlenecks",
+            "meaning": "供給側のボトルネック、供給制約",
+            "usage": "Supply-side bottlenecks are causing price increases. (供給側のボトルネックが物価上昇を引き起こしている。)"
+          }
+        ]
+      },
+      {
+        "en": "Market participants are closely scrutinizing central bank forward guidance for clues on the terminal rate and the potential timing of policy pivots.",
+        "ja": "市場参加者たちは、中央銀行のフォワードガイダンスを綿密に分析し、最終的な政策金利の水準や政策転換の潜在的な時期に関する手掛かりを探っています。",
+        "phrases": [
+          {
+            "phrase": "Market participants",
+            "meaning": "市場参加者",
+            "usage": "金融市場や経済ニュースでよく使われる表現です。"
+          },
+          {
+            "phrase": "closely scrutinizing",
+            "meaning": "綿密に精査している",
+            "usage": "政府の発表や企業の決算などを注意深く分析する際に使われます。"
+          },
+          {
+            "phrase": "forward guidance",
+            "meaning": "フォワードガイダンス（将来の金融政策に関する中央銀行の見通し）",
+            "usage": "金融政策の方向性を示す際に、中央銀行が用いる重要なコミュニケーション手段です。"
+          },
+          {
+            "phrase": "policy pivots",
+            "meaning": "政策の転換",
+            "usage": "経済状況の変化に応じて、金融政策や政府の政策が大きく変わることを指します。"
+          }
+        ]
+      },
+      {
+        "en": "Navigating this intricate economic environment demands astute judgment and flexible policy frameworks to ensure a soft landing rather than a hard one.",
+        "ja": "この複雑な経済環境を乗り切るには、ハードランディングではなくソフトランディングを確実にするため、的確な判断力と柔軟な政策枠組みが求められます。",
+        "phrases": [
+          {
+            "phrase": "astute judgment",
+            "meaning": "的確な判断、鋭い判断",
+            "usage": "困難な状況で特に求められる、洞察力のある判断を指す。"
+          },
+          {
+            "phrase": "flexible policy frameworks",
+            "meaning": "柔軟な政策枠組み",
+            "usage": "経済政策や企業戦略の議論で、状況に応じた適応力を強調する際に使う。"
+          },
+          {
+            "phrase": "soft landing",
+            "meaning": "軟着陸（経済の急激な悪化を避けること）",
+            "usage": "経済やビジネスの文脈で「急激な変化や悪化を避ける」という意味で頻繁に用いられる。"
+          },
+          {
+            "phrase": "intricate economic environment",
+            "meaning": "複雑な経済環境",
+            "usage": "経済ニュースや分析で、多岐にわたる要因が絡み合う状況を表現する際に使う。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-01T22:53:15.614Z"
   }
 ]
