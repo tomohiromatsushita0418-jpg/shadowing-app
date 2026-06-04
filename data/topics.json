@@ -6693,7 +6693,8 @@
             "meaning": "インフレの軌跡、インフレの推移",
             "usage": "将来のインフレの動向や予測される経路を指す際に使われます。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17803543956140175_5.wav"
       },
       {
         "en": "Furthermore, tight labor markets in many developed nations are contributing to wage-price spirals, embedding inflation expectations.",
@@ -7419,5 +7420,318 @@
       }
     ],
     "createdAt": "2026-06-03T22:55:19.803Z"
+  },
+  {
+    "id": "t17806078010465564",
+    "title": "The Evolving Landscape of International Sanctions",
+    "titleJa": "国際制裁の進化する様相",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The imposition of international sanctions has become an increasingly prevalent tool in statecraft, often deployed to exert economic pressure and influence geopolitical outcomes.",
+        "ja": "国際制裁の発動は、経済的圧力をかけ、地政学的な結果に影響を与えるためにしばしば用いられる、国家戦略においてますます重要な手段となっています。",
+        "audioPath": "./assets/audio/t17806078010465564_0.wav",
+        "phrases": [
+          {
+            "phrase": "imposition of international sanctions",
+            "meaning": "国際的な制裁の課し方",
+            "usage": "The imposition of sanctions was a last resort. のように使う"
+          },
+          {
+            "phrase": "increasingly prevalent tool",
+            "meaning": "ますます一般的になっている手段",
+            "usage": "This is an increasingly prevalent tool for managing complex projects. のように使う"
+          },
+          {
+            "phrase": "exert economic pressure",
+            "meaning": "経済的圧力をかける",
+            "usage": "The goal is to exert economic pressure on the regime. のように使う"
+          },
+          {
+            "phrase": "influence geopolitical outcomes",
+            "meaning": "地政学的な結果に影響を与える",
+            "usage": "Diplomacy aims to influence geopolitical outcomes peacefully. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "Initially conceived as a non-military alternative to armed conflict, sanctions regimes have grown remarkably sophisticated, targeting specific sectors, entities, and individuals.",
+        "ja": "当初は武力紛争に代わる非軍事的選択肢として構想された制裁体制は、特定の部門、団体、個人を標的とするようになり、目覚ましく高度化しています。",
+        "audioPath": "./assets/audio/t17806078010465564_1.wav",
+        "phrases": [
+          {
+            "phrase": "conceived as",
+            "meaning": "～として構想された、～として考えられた",
+            "usage": "The project was initially conceived as a way to improve local infrastructure. (そのプロジェクトは当初、地域のインフラを改善する方法として構想された。)"
+          },
+          {
+            "phrase": "armed conflict",
+            "meaning": "武力紛争",
+            "usage": "Diplomatic solutions are preferred over armed conflict. (武力紛争よりも外交的解決が望ましい。)"
+          },
+          {
+            "phrase": "grown remarkably sophisticated",
+            "meaning": "著しく洗練されてきた、高度化してきた",
+            "usage": "Technology in this field has grown remarkably sophisticated over the past decade. (この分野の技術は過去10年間で著しく洗練されてきた。)"
+          },
+          {
+            "phrase": "targeting specific",
+            "meaning": "特定の～を標的とする、的を絞る",
+            "usage": "The new marketing strategy is targeting specific demographics. (新しいマーケティング戦略は特定の人口統計を標的としている。)"
+          }
+        ]
+      },
+      {
+        "en": "However, their efficacy remains a subject of intense debate among policymakers and economists alike, with critics highlighting potential humanitarian consequences and unintended blowback.",
+        "ja": "しかし、その有効性は政策立案者や経済学者の間で激しい議論の的となっており、批判派は潜在的な人道的影響や意図せざる反動を指摘しています。",
+        "audioPath": "./assets/audio/t17806078010465564_2.wav",
+        "phrases": [
+          {
+            "phrase": "efficacy remains a subject of intense debate",
+            "meaning": "有効性が激しい議論の的であり続けている",
+            "usage": "The efficacy of the new policy remains a subject of intense debate. (新政策の有効性は激しい議論の的であり続けている。)"
+          },
+          {
+            "phrase": "policymakers and economists alike",
+            "meaning": "政策立案者も経済学者も同様に",
+            "usage": "This issue concerns policymakers and economists alike. (この問題は政策立案者も経済学者も同様に懸念している。)"
+          },
+          {
+            "phrase": "unintended blowback",
+            "meaning": "意図しない反動、予期せぬ副作用",
+            "usage": "The government feared unintended blowback from the new sanctions. (政府は新たな制裁による意図しない反動を恐れていた。)"
+          }
+        ]
+      },
+      {
+        "en": "Recent years have seen a significant shift from broad embargoes towards more granular, targeted measures, aiming to minimize collateral damage to innocent populations.",
+        "ja": "近年、広範な禁輸措置から、罪のない市民への巻き添え被害を最小限に抑えることを目的とした、より詳細で的を絞った措置へと大きな転換が見られます。",
+        "audioPath": "./assets/audio/t17806078010465564_3.wav",
+        "phrases": [
+          {
+            "phrase": "significant shift",
+            "meaning": "大きな変化、著しい移行",
+            "usage": "There has been a significant shift in consumer behavior. (消費者の行動に大きな変化が見られる。)"
+          },
+          {
+            "phrase": "granular, targeted measures",
+            "meaning": "詳細で的を絞った対策",
+            "usage": "The government implemented granular, targeted measures to address the specific needs of different regions. (政府は、地域ごとの特定のニーズに対応するため、詳細で的を絞った対策を実施した。)"
+          },
+          {
+            "phrase": "aiming to minimize",
+            "meaning": "〜を最小限に抑えることを目指して",
+            "usage": "The company is aiming to minimize its environmental impact. (その会社は環境への影響を最小限に抑えることを目指している。)"
+          },
+          {
+            "phrase": "collateral damage",
+            "meaning": "巻き添え被害、副次的損害",
+            "usage": "The military operation was designed to avoid collateral damage to civilian areas. (その軍事作戦は、民間地域への巻き添え被害を避けるように設計された。)"
+          }
+        ]
+      },
+      {
+        "en": "This strategic recalibration, often referred to as \"smart sanctions,\" seeks to disrupt specific revenue streams or supply chains critical to sanctioned regimes.",
+        "ja": "「スマート制裁」としばしば称されるこの戦略的な再調整は、制裁対象体制にとって不可欠な特定の歳入源やサプライチェーンを寸断することを目指しています。",
+        "audioPath": "./assets/audio/t17806078010465564_4.wav",
+        "phrases": [
+          {
+            "phrase": "strategic recalibration",
+            "meaning": "戦略的な再調整",
+            "usage": "企業の経営戦略の見直しなどに使われます。"
+          },
+          {
+            "phrase": "revenue streams",
+            "meaning": "収益源",
+            "usage": "企業や組織の収入源を指す際に用いられます。"
+          },
+          {
+            "phrase": "supply chains",
+            "meaning": "サプライチェーン、供給網",
+            "usage": "製品が原材料から消費者に届くまでの物流プロセス全体を指します。"
+          },
+          {
+            "phrase": "sanctioned regimes",
+            "meaning": "制裁対象の政権",
+            "usage": "国際的な制裁措置を受けている国の政府や指導部を指します。"
+          }
+        ]
+      },
+      {
+        "en": "Despite these advancements, circumventing sanctions has also become an intricate art, with illicit networks constantly innovating to maintain their financial lifelines.",
+        "ja": "これらの進展にもかかわらず、制裁を回避することもまた複雑な技術となっており、非合法ネットワークは金融の生命線を維持するために絶えず革新を続けています。",
+        "audioPath": "./assets/audio/t17806078010465564_5.wav",
+        "phrases": [
+          {
+            "phrase": "circumventing sanctions",
+            "meaning": "制裁を回避すること",
+            "usage": "制裁措置をかいくぐる、という意味で使われます。例えば、'They are looking for ways to circumvent sanctions.' のように使えます。"
+          },
+          {
+            "phrase": "intricate art",
+            "meaning": "複雑な技術、巧妙な手口",
+            "usage": "単なる技術ではなく、高度で巧妙なやり方を指す場合に用いられます。例えば、'This requires an intricate art of negotiation.' のように使えます。"
+          },
+          {
+            "phrase": "financial lifelines",
+            "meaning": "財政的な生命線、資金源",
+            "usage": "事業や組織の存続に不可欠な資金の流れや支援を意味します。例えば、'The bailout package provided a financial lifeline to the struggling company.' のように使えます。"
+          }
+        ]
+      },
+      {
+        "en": "The proliferation of digital currencies and complex financial instruments presents new challenges for enforcement agencies tasked with upholding these restrictions.",
+        "ja": "デジタル通貨や複雑な金融商品の拡散は、これらの規制の順守を徹底する執行機関に新たな課題を突きつけています。",
+        "audioPath": "./assets/audio/t17806078010465564_6.wav",
+        "phrases": [
+          {
+            "phrase": "proliferation of",
+            "meaning": "〜の急増、蔓延",
+            "usage": "The proliferation of smartphones has changed our lives. スマートフォンの普及は私たちの生活を変えた。"
+          },
+          {
+            "phrase": "presents new challenges",
+            "meaning": "新たな課題をもたらす",
+            "usage": "This new technology presents new challenges for the company. この新技術は会社に新たな課題をもたらす。"
+          },
+          {
+            "phrase": "tasked with",
+            "meaning": "〜を任務とする、〜を任されている",
+            "usage": "The committee is tasked with investigating the issue. その委員会は問題の調査を任務としている。"
+          },
+          {
+            "phrase": "upholding these restrictions",
+            "meaning": "これらの規制を維持・遵守すること",
+            "usage": "It is difficult for the police to be upholding these restrictions in such a large crowd. 大勢の群衆の中でこれらの規制を維持するのは警察にとって難しい。"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, the extraterritorial reach of some sanction frameworks frequently sparks diplomatic friction and legal disputes among allied nations.",
+        "ja": "さらに、一部の制裁枠組みの域外適用は、同盟国間で外交的な摩擦や法的な紛争を頻繁に引き起こしています。",
+        "audioPath": "./assets/audio/t17806078010465564_7.wav",
+        "phrases": [
+          {
+            "phrase": "sparks",
+            "meaning": "〜を引き起こす、〜のきっかけとなる",
+            "usage": "動詞 spark は、controversy (論争) や debate (議論) など、特定の状況や感情を引き起こす際によく使われます。"
+          },
+          {
+            "phrase": "diplomatic friction",
+            "meaning": "外交摩擦",
+            "usage": "「貿易摩擦 (trade friction)」など、他の種類の「摩擦」にも応用可能です。"
+          },
+          {
+            "phrase": "legal disputes",
+            "meaning": "法的紛争",
+            "usage": "「労働争議 (labor disputes)」や「契約紛争 (contract disputes)」など、他の種類の「紛争」にも応用可能です。"
+          }
+        ]
+      },
+      {
+        "en": "Businesses operating globally must navigate an increasingly labyrinthine web of compliance requirements to avoid severe penalties for violations.",
+        "ja": "グローバルに事業を展開する企業は、違反に対する厳しい罰則を避けるため、ますます複雑なコンプライアンス要件の網をくぐり抜けなければなりません。",
+        "audioPath": "./assets/audio/t17806078010465564_8.wav",
+        "phrases": [
+          {
+            "phrase": "operating globally",
+            "meaning": "世界的に事業を展開している",
+            "usage": "「グローバル市場で事業を展開する企業」のように使う。"
+          },
+          {
+            "phrase": "labyrinthine web",
+            "meaning": "迷宮のような網の目、非常に複雑なネットワーク",
+            "usage": "「a labyrinthine web of regulations (規制の迷宮)」のように複雑さを強調する。"
+          },
+          {
+            "phrase": "compliance requirements",
+            "meaning": "法令順守要件",
+            "usage": "企業が満たすべき法的・倫理的な要件を指す。"
+          },
+          {
+            "phrase": "severe penalties for violations",
+            "meaning": "違反に対する重い罰則",
+            "usage": "規則や法律を破った場合に科される罰則。"
+          }
+        ]
+      },
+      {
+        "en": "The long-term geopolitical implications of these economic measures, particularly their potential to foster new alliances or deepen existing divisions, are yet to be fully understood.",
+        "ja": "これらの経済措置が持つ長期的な地政学的影響、特に新たな同盟を育んだり、既存の対立を深めたりする可能性については、まだ完全に理解されていません。",
+        "audioPath": "./assets/audio/t17806078010465564_9.wav",
+        "phrases": [
+          {
+            "phrase": "geopolitical implications",
+            "meaning": "地政学的な影響",
+            "usage": "These economic measures have significant geopolitical implications for the region. (これらの経済対策は、その地域に重大な地政学的な影響を与える。)"
+          },
+          {
+            "phrase": "foster new alliances",
+            "meaning": "新たな同盟関係を育む・促進する",
+            "usage": "The summit aims to foster new alliances between the two nations. (そのサミットは、両国間に新たな同盟関係を育むことを目的としている。)"
+          },
+          {
+            "phrase": "deepen existing divisions",
+            "meaning": "既存の対立・亀裂を深める",
+            "usage": "His inflammatory remarks threatened to deepen existing divisions within the party. (彼の扇動的な発言は、党内の既存の対立を深める危険性があった。)"
+          },
+          {
+            "phrase": "yet to be fully understood",
+            "meaning": "まだ完全に理解されていない",
+            "usage": "The full impact of the pandemic is yet to be fully understood. (パンデミックの全容は、まだ完全に理解されていません。)"
+          }
+        ]
+      },
+      {
+        "en": "Many argue that the ultimate success of sanctions hinges not just on their design, but also on the political will and international consensus supporting their implementation.",
+        "ja": "制裁の最終的な成功は、その設計だけでなく、その実施を支える政治的意志と国際的な合意にかかっていると多くの人が主張しています。",
+        "audioPath": "./assets/audio/t17806078010465564_10.wav",
+        "phrases": [
+          {
+            "phrase": "ultimate success",
+            "meaning": "最終的な成功",
+            "usage": "プロジェクトのultimate success を確実にするために、綿密な計画が必要です。"
+          },
+          {
+            "phrase": "hinges on",
+            "meaning": "〜にかかっている、〜次第である",
+            "usage": "この提案の成功は、上司の承認にかかっています (The success of this proposal hinges on the approval of my boss.)。"
+          },
+          {
+            "phrase": "political will",
+            "meaning": "政治的意思",
+            "usage": "この改革を実行するには、強いpolitical will が必要です。"
+          },
+          {
+            "phrase": "international consensus",
+            "meaning": "国際的な合意",
+            "usage": "気候変動対策には、international consensus を形成することが不可欠です。"
+          }
+        ]
+      },
+      {
+        "en": "As global power dynamics continue to shift, the utility and moral dimensions of economic coercion through sanctions will undoubtedly remain at the forefront of foreign policy discussions.",
+        "ja": "世界のパワーバランスが変化し続ける中、制裁を通じた経済的強制の有用性と倫理的側面は、外交政策の議論の最前線に間違いなくあり続けるでしょう。",
+        "audioPath": "./assets/audio/t17806078010465564_11.wav",
+        "phrases": [
+          {
+            "phrase": "power dynamics",
+            "meaning": "権力構造、力関係",
+            "usage": "international power dynamics のように、国際関係の文脈でよく使われます。"
+          },
+          {
+            "phrase": "at the forefront of",
+            "meaning": "〜の最前線に、〜の中心に",
+            "usage": "remain at the forefront of discussions のように、議論の中心であることを示す際に使われます。"
+          },
+          {
+            "phrase": "economic coercion",
+            "meaning": "経済的強制",
+            "usage": "sanctions (制裁) と組み合わせて、経済的な圧力による強制を指す場合に用いられます。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-04T21:16:41.046Z"
   }
 ]
