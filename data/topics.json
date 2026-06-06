@@ -1011,7 +1011,8 @@
             "meaning": "〜に基づいて解決される",
             "usage": "紛争や問題が、特定の規則や手続きに従って解決されることを示します。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_0.wav"
       },
       {
         "en": "The claimant contends that the respondent's unilateral termination of the contract constituted a material breach that engendered substantial consequential damages.",
@@ -1032,7 +1033,8 @@
             "meaning": "間接損害、派生損害",
             "usage": "The lawsuit seeks compensation for consequential damages, such as lost profits."
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_1.wav"
       },
       {
         "en": "Notwithstanding the governing law clause designating English law, the tribunal must also give due consideration to mandatory provisions of the seat jurisdiction.",
@@ -7745,5 +7747,213 @@
       }
     ],
     "createdAt": "2026-06-04T21:16:41.046Z"
+  },
+  {
+    "id": "t17807723666495319",
+    "title": "Optimizing Talent Acquisition in a Tight Labor Market",
+    "titleJa": "逼迫した労働市場における戦略的な人材獲得の最適化",
+    "category": "Business",
+    "sentences": [
+      {
+        "en": "The current labor market presents an unprecedented challenge, characterized by fierce competition for highly skilled professionals across various sectors.",
+        "ja": "現在の労働市場は、多岐にわたる分野で高度なスキルを持つ専門職を巡る熾烈な競争が特徴であり、前例のない課題を突きつけています。",
+        "audioPath": "./assets/audio/t17807723666495319_0.wav",
+        "phrases": [
+          {
+            "phrase": "labor market",
+            "meaning": "労働市場",
+            "usage": "The labor market is currently very competitive. (現在の労働市場は非常に競争が激しい。)"
+          },
+          {
+            "phrase": "unprecedented challenge",
+            "meaning": "前例のない課題",
+            "usage": "This is an unprecedented challenge for the company. (これは会社にとって前例のない課題です。)"
+          },
+          {
+            "phrase": "fierce competition",
+            "meaning": "激しい競争",
+            "usage": "There is fierce competition among tech companies. (IT企業間では激しい競争がある。)"
+          },
+          {
+            "phrase": "highly skilled professionals",
+            "meaning": "高度なスキルを持つ専門家",
+            "usage": "The demand for highly skilled professionals is increasing. (高度なスキルを持つ専門家への需要が増加している。)"
+          }
+        ]
+      },
+      {
+        "en": "To navigate this landscape effectively, we must shift from a reactive recruitment model to a proactive, forward-thinking talent acquisition strategy.",
+        "ja": "この状況を効果的に乗り切るためには、受動的な採用モデルから、能動的で先見性のある人材獲得戦略へと転換する必要があります。",
+        "audioPath": "./assets/audio/t17807723666495319_1.wav",
+        "phrases": [
+          {
+            "phrase": "navigate this landscape",
+            "meaning": "この状況を乗り切る、うまく進む",
+            "usage": "複雑なビジネス環境などをうまく処理する際に使われます。"
+          },
+          {
+            "phrase": "shift from ... to ...",
+            "meaning": "...から...へ移行する",
+            "usage": "考え方や戦略などを変える際に頻繁に使われる表現です。"
+          },
+          {
+            "phrase": "forward-thinking strategy",
+            "meaning": "先見性のある戦略",
+            "usage": "将来を見据えた計画やアプローチを指す場合に用います。"
+          }
+        ]
+      },
+      {
+        "en": "Cultivating a compelling employer brand is paramount to distinguishing ourselves and attracting top-tier candidates amidst the clamor.",
+        "ja": "喧噪の中で他社との差別化を図り、一流の人材を惹きつけるためには、魅力的な雇用主ブランドを育成することが極めて重要です。",
+        "audioPath": "./assets/audio/t17807723666495319_2.wav",
+        "phrases": [
+          {
+            "phrase": "cultivating a compelling employer brand",
+            "meaning": "魅力的な雇用主ブランドを育成すること",
+            "usage": "企業が優秀な人材を引きつけるために重要な活動です。"
+          },
+          {
+            "phrase": "is paramount to",
+            "meaning": "〜にとって極めて重要である",
+            "usage": "This information is paramount to our decision-making. のように使う"
+          },
+          {
+            "phrase": "distinguishing ourselves",
+            "meaning": "自分たちを際立たせること",
+            "usage": "競合他社との差別化を図る際に使われます。"
+          },
+          {
+            "phrase": "attracting top-tier candidates",
+            "meaning": "トップクラスの候補者を引きつけること",
+            "usage": "優秀な人材獲得競争において重要な目標です。"
+          }
+        ]
+      },
+      {
+        "en": "We should explore innovative sourcing channels, venturing beyond conventional job boards to tap into passive candidate pools and niche communities.",
+        "ja": "従来の求人サイトに留まらず、潜在的な候補者層やニッチなコミュニティを開拓するため、革新的なソーシングチャネルを模索すべきです。",
+        "audioPath": "./assets/audio/t17807723666495319_3.wav",
+        "phrases": [
+          {
+            "phrase": "explore innovative sourcing channels",
+            "meaning": "革新的な調達チャネルを探求する",
+            "usage": "採用活動において、新しい人材獲得の方法を検討する際に使われます。"
+          },
+          {
+            "phrase": "venturing beyond conventional job boards",
+            "meaning": "従来の求人掲示板を超えて進出する",
+            "usage": "人材採用の際に、ありきたりな方法だけでなく、より広範なアプローチを試みることを示唆します。"
+          },
+          {
+            "phrase": "tap into passive candidate pools",
+            "meaning": "潜在的な候補者の層にアクセスする",
+            "usage": "積極的に転職活動をしていないが、良い機会があれば応じる可能性のある人材にアプローチすることを意味します。"
+          }
+        ]
+      },
+      {
+        "en": "Ensuring a seamless and positive candidate experience throughout the entire hiring funnel is crucial for securing preferred talent and preserving our reputation.",
+        "ja": "採用プロセスの全段階において、円滑で肯定的な候補者体験を保証することは、優秀な人材を確保し、当社の評判を維持するために不可欠です。",
+        "audioPath": "./assets/audio/t17807723666495319_4.wav",
+        "phrases": [
+          {
+            "phrase": "seamless and positive candidate experience",
+            "meaning": "候補者にとって円滑で好ましい経験",
+            "usage": "採用プロセス全体を通して、候補者が良い印象を持てるようにすることが重要です。"
+          },
+          {
+            "phrase": "throughout the entire hiring funnel",
+            "meaning": "採用プロセス全体を通して",
+            "usage": "候補者が応募してから採用が決まるまでの全段階を指します。"
+          },
+          {
+            "phrase": "securing preferred talent",
+            "meaning": "優秀な人材を確保する",
+            "usage": "自社が求めるスキルや経験を持つ人材を獲得すること。"
+          },
+          {
+            "phrase": "preserving our reputation",
+            "meaning": "私たちの評判を維持する",
+            "usage": "企業イメージやブランド価値を損なわないようにすること。"
+          }
+        ]
+      },
+      {
+        "en": "Integrating diversity, equity, and inclusion (DEI) principles into our recruitment framework will undeniably broaden our talent pool and foster a richer organizational culture.",
+        "ja": "採用枠組みにダイバーシティ、エクイティ、インクルージョン（DEI）の原則を統合することは、間違いなく人材プールを拡大し、より豊かな組織文化を育むでしょう。",
+        "audioPath": "./assets/audio/t17807723666495319_5.wav",
+        "phrases": [
+          {
+            "phrase": "Integrating ... into",
+            "meaning": "〜を〜に組み込む、統合する",
+            "usage": "New technologies are being integrated into the classroom. (新しい技術が教室に導入されている。)"
+          },
+          {
+            "phrase": "talent pool",
+            "meaning": "人材プール、採用可能な人材の集まり",
+            "usage": "Expanding the talent pool is crucial for growth. (人材プールの拡大は成長に不可欠である。)"
+          },
+          {
+            "phrase": "foster a richer organizational culture",
+            "meaning": "より豊かな組織文化を育む",
+            "usage": "Leadership plays a key role in fostering a positive work environment. (リーダーシップは、肯定的な職場環境を育む上で重要な役割を果たす。)"
+          }
+        ]
+      },
+      {
+        "en": "A critical discussion revolves around the optimal balance between internal upskilling initiatives and external hiring for pivotal leadership and specialized technical roles.",
+        "ja": "重要な議論の一つは、社内でのスキルアッププログラムと、主要なリーダーシップ職や専門的な技術職に対する外部からの採用との最適なバランスを巡るものです。",
+        "audioPath": "./assets/audio/t17807723666495319_6.wav",
+        "phrases": [
+          {
+            "phrase": "revolves around",
+            "meaning": "〜を中心に展開する、〜について議論する",
+            "usage": "The meeting revolves around the new marketing strategy. (会議は新しいマーケティング戦略を中心に展開する)"
+          },
+          {
+            "phrase": "upskilling initiatives",
+            "meaning": "スキルアップの取り組み",
+            "usage": "Companies are investing in upskilling initiatives to adapt to new technologies. (企業は新技術に対応するため、スキルアップの取り組みに投資している)"
+          },
+          {
+            "phrase": "external hiring",
+            "meaning": "外部からの採用",
+            "usage": "The company is considering external hiring for senior management positions. (同社は上級管理職のポジションについて外部からの採用を検討している)"
+          },
+          {
+            "phrase": "pivotal leadership",
+            "meaning": "極めて重要なリーダーシップ",
+            "usage": "Effective communication is pivotal leadership in any organization. (効果的なコミュニケーションは、あらゆる組織において極めて重要なリーダーシップである)"
+          }
+        ]
+      },
+      {
+        "en": "To remain competitive, a comprehensive revamp of our compensation and benefits package, benchmarked against industry leaders, is imperative.",
+        "ja": "競争力を維持するためには、業界のリーダー企業をベンチマークとした、報酬および福利厚生パッケージの抜本的な見直しが不可欠です。",
+        "audioPath": "./assets/audio/t17807723666495319_7.wav"
+      },
+      {
+        "en": "The long-term implications of a persistent talent shortage on our projected business growth and innovation pipeline cannot be overstated.",
+        "ja": "人材不足の長期化が、予測される事業成長やイノベーションのパイプラインに与える影響は、いくら強調してもし過ぎることはありません。",
+        "audioPath": "./assets/audio/t17807723666495319_8.wav"
+      },
+      {
+        "en": "Leveraging sophisticated data analytics to anticipate future talent needs and mitigate attrition risks will provide a significant strategic advantage.",
+        "ja": "高度なデータ分析を活用して将来の人材ニーズを予測し、離職リスクを軽減することは、戦略上大きな優位性をもたらすでしょう。",
+        "audioPath": "./assets/audio/t17807723666495319_9.wav"
+      },
+      {
+        "en": "We are also evaluating the judicious integration of AI-powered tools to streamline initial screening processes, thereby freeing up recruiters for more strategic engagement.",
+        "ja": "また、初期のスクリーニングプロセスを効率化するためにAI搭載ツールの慎重な導入を検討しており、それにより採用担当者はより戦略的な業務に専念できるようになります。",
+        "audioPath": "./assets/audio/t17807723666495319_10.wav"
+      },
+      {
+        "en": "Ultimately, fostering a culture of talent advocacy requires unwavering cross-departmental collaboration and a shared commitment to nurturing our most valuable asset: our people.",
+        "ja": "最終的に、人材育成を推進する文化を育むには、部門を超えた揺るぎない協力と、最も貴重な資産である人材を育成するための共通のコミットメントが必要です。",
+        "audioPath": "./assets/audio/t17807723666495319_11.wav"
+      }
+    ],
+    "createdAt": "2026-06-06T18:59:26.649Z"
   }
 ]
