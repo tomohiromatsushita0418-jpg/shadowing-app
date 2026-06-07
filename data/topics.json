@@ -7931,29 +7931,431 @@
       {
         "en": "To remain competitive, a comprehensive revamp of our compensation and benefits package, benchmarked against industry leaders, is imperative.",
         "ja": "競争力を維持するためには、業界のリーダー企業をベンチマークとした、報酬および福利厚生パッケージの抜本的な見直しが不可欠です。",
-        "audioPath": "./assets/audio/t17807723666495319_7.wav"
+        "audioPath": "./assets/audio/t17807723666495319_7.wav",
+        "phrases": [
+          {
+            "phrase": "To remain competitive",
+            "meaning": "競争力を維持するために",
+            "usage": "企業が市場で生き残るための目標としてよく使われる。"
+          },
+          {
+            "phrase": "a comprehensive revamp",
+            "meaning": "抜本的な見直し／刷新",
+            "usage": "システムや戦略の大規模な変更を指す際に用いる。"
+          },
+          {
+            "phrase": "compensation and benefits package",
+            "meaning": "報酬と福利厚生の制度",
+            "usage": "人事や採用の文脈で頻繁に登場する専門用語。"
+          },
+          {
+            "phrase": "benchmarked against",
+            "meaning": "〜を基準に比較・評価された",
+            "usage": "競合他社や業界標準との比較を示す際に使う。"
+          }
+        ]
       },
       {
         "en": "The long-term implications of a persistent talent shortage on our projected business growth and innovation pipeline cannot be overstated.",
         "ja": "人材不足の長期化が、予測される事業成長やイノベーションのパイプラインに与える影響は、いくら強調してもし過ぎることはありません。",
-        "audioPath": "./assets/audio/t17807723666495319_8.wav"
+        "audioPath": "./assets/audio/t17807723666495319_8.wav",
+        "phrases": [
+          {
+            "phrase": "long-term implications",
+            "meaning": "長期的な影響",
+            "usage": "The long-term implications of climate change are severe. (気候変動の長期的な影響は深刻だ。)"
+          },
+          {
+            "phrase": "talent shortage",
+            "meaning": "人材不足",
+            "usage": "The tech industry is facing a severe talent shortage. (IT業界は深刻な人材不足に直面している。)"
+          },
+          {
+            "phrase": "projected business growth",
+            "meaning": "予測される事業成長",
+            "usage": "Our projected business growth for next year is optimistic. (来年の予測される事業成長は楽観的だ。)"
+          },
+          {
+            "phrase": "cannot be overstated",
+            "meaning": "いくら強調してもしすぎることはない",
+            "usage": "The importance of teamwork cannot be overstated. (チームワークの重要性はいくら強調してもしすぎることはない。)"
+          }
+        ]
       },
       {
         "en": "Leveraging sophisticated data analytics to anticipate future talent needs and mitigate attrition risks will provide a significant strategic advantage.",
         "ja": "高度なデータ分析を活用して将来の人材ニーズを予測し、離職リスクを軽減することは、戦略上大きな優位性をもたらすでしょう。",
-        "audioPath": "./assets/audio/t17807723666495319_9.wav"
+        "audioPath": "./assets/audio/t17807723666495319_9.wav",
+        "phrases": [
+          {
+            "phrase": "Leveraging ... to ...",
+            "meaning": "〜を活用して〜する",
+            "usage": "「最新技術をレバレッジして」のように動名詞で使うことが多い。"
+          },
+          {
+            "phrase": "anticipate future talent needs",
+            "meaning": "将来の人材ニーズを予測する",
+            "usage": "anticipate demand/changes のように、需要や変化を予測する文脈で頻出。"
+          },
+          {
+            "phrase": "mitigate attrition risks",
+            "meaning": "離職リスクを軽減する",
+            "usage": "mitigate risks/impact のように、リスクや悪影響を軽減する際によく使う。"
+          },
+          {
+            "phrase": "strategic advantage",
+            "meaning": "戦略的優位性",
+            "usage": "gain/maintain a strategic advantage のように使う。"
+          }
+        ]
       },
       {
         "en": "We are also evaluating the judicious integration of AI-powered tools to streamline initial screening processes, thereby freeing up recruiters for more strategic engagement.",
         "ja": "また、初期のスクリーニングプロセスを効率化するためにAI搭載ツールの慎重な導入を検討しており、それにより採用担当者はより戦略的な業務に専念できるようになります。",
-        "audioPath": "./assets/audio/t17807723666495319_10.wav"
+        "audioPath": "./assets/audio/t17807723666495319_10.wav",
+        "phrases": [
+          {
+            "phrase": "judicious integration",
+            "meaning": "賢明な統合、適切な導入",
+            "usage": "The judicious integration of new technology is crucial for business growth. (新技術の賢明な導入は、企業の成長に不可欠である。)"
+          },
+          {
+            "phrase": "streamline processes",
+            "meaning": "プロセスを効率化する",
+            "usage": "We need to streamline our hiring processes to reduce time-to-hire. (採用までの時間を短縮するために、採用プロセスを効率化する必要がある。)"
+          },
+          {
+            "phrase": "strategic engagement",
+            "meaning": "戦略的な関与、戦略的な取り組み",
+            "usage": "This allows recruiters to focus on strategic engagement with top candidates. (これにより、採用担当者はトップ候補者との戦略的な関与に集中できる。)"
+          }
+        ]
       },
       {
         "en": "Ultimately, fostering a culture of talent advocacy requires unwavering cross-departmental collaboration and a shared commitment to nurturing our most valuable asset: our people.",
         "ja": "最終的に、人材育成を推進する文化を育むには、部門を超えた揺るぎない協力と、最も貴重な資産である人材を育成するための共通のコミットメントが必要です。",
-        "audioPath": "./assets/audio/t17807723666495319_11.wav"
+        "audioPath": "./assets/audio/t17807723666495319_11.wav",
+        "phrases": [
+          {
+            "phrase": "fostering a culture of",
+            "meaning": "〜の文化を育成する",
+            "usage": "fostering a culture of innovation (イノベーションの文化を育成する)"
+          },
+          {
+            "phrase": "unwavering commitment",
+            "meaning": "揺るぎない献身、確固たる決意",
+            "usage": "They showed an unwavering commitment to their goals. (彼らは目標に対して揺るぎない決意を示した。)"
+          },
+          {
+            "phrase": "talent advocacy",
+            "meaning": "人材擁護、人材育成支援",
+            "usage": "The company's new policy is focused on talent advocacy. (その会社の新しい方針は人材育成支援に焦点を当てている。)"
+          },
+          {
+            "phrase": "nurturing our most valuable asset",
+            "meaning": "最も価値ある資産を育む",
+            "usage": "Companies often consider their employees to be their most valuable asset. (企業はしばしば従業員を最も価値ある資産とみなす。)"
+          }
+        ]
       }
     ],
     "createdAt": "2026-06-06T18:59:26.649Z"
+  },
+  {
+    "id": "t17808622806102238",
+    "title": "Navigating the Global Green Energy Transition",
+    "titleJa": "世界のグリーンエネルギー移行を巡る課題",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The urgent global imperative to pivot away from fossil fuels toward sustainable energy sources has never been more pronounced.",
+        "ja": "化石燃料から持続可能なエネルギー源へと転換するという、世界的な喫緊の課題はかつてないほど明確になっています。",
+        "audioPath": "./assets/audio/t17808622806102238_0.wav",
+        "phrases": [
+          {
+            "phrase": "pivot away from",
+            "meaning": "〜から方向転換する",
+            "usage": "The company had to pivot away from its traditional business model. (その会社は従来のビジネスモデルから方向転換せざるを得なかった。)"
+          },
+          {
+            "phrase": "sustainable energy sources",
+            "meaning": "持続可能なエネルギー源",
+            "usage": "Investing in sustainable energy sources is crucial for the future. (持続可能なエネルギー源への投資は、未来のために不可欠である。)"
+          },
+          {
+            "phrase": "has never been more pronounced",
+            "meaning": "かつてないほど顕著である",
+            "usage": "The need for climate action has never been more pronounced. (気候変動対策の必要性はかつてないほど顕著になっている。)"
+          }
+        ]
+      },
+      {
+        "en": "Governments worldwide are grappling with the intricate challenge of formulating robust policies to incentivize renewable energy adoption and decarbonize their economies.",
+        "ja": "世界各国の政府は、再生可能エネルギーの導入を促進し、経済の脱炭素化を推し進めるための強力な政策を策定するという複雑な課題に取り組んでいます。",
+        "audioPath": "./assets/audio/t17808622806102238_1.wav",
+        "phrases": [
+          {
+            "phrase": "grappling with",
+            "meaning": "〜に苦労している、〜に取り組んでいる",
+            "usage": "The company is grappling with a major financial crisis. (その会社は深刻な財政危機に取り組んでいる。)"
+          },
+          {
+            "phrase": "formulating policies",
+            "meaning": "政策を策定する",
+            "usage": "It is important to formulate policies that benefit all citizens. (すべての市民に利益をもたらす政策を策定することが重要だ。)"
+          },
+          {
+            "phrase": "incentivize adoption",
+            "meaning": "導入を奨励する、促進する",
+            "usage": "The government offered tax breaks to incentivize adoption of electric vehicles. (政府は電気自動車の導入を奨励するために税制優遇措置を提供した。)"
+          },
+          {
+            "phrase": "decarbonize economies",
+            "meaning": "経済の脱炭素化を進める",
+            "usage": "Many countries are committed to decarbonize economies by 2050. (多くの国が2050年までに経済の脱炭素化を進めることにコミットしている。)"
+          }
+        ]
+      },
+      {
+        "en": "Significant capital reallocation is underway, with unprecedented investments flowing into solar, wind, and battery storage technologies.",
+        "ja": "太陽光、風力、蓄電技術へと前例のない投資が流れ込み、大規模な資本再配分が進行中です。",
+        "audioPath": "./assets/audio/t17808622806102238_2.wav",
+        "phrases": [
+          {
+            "phrase": "capital reallocation",
+            "meaning": "資本の再配分",
+            "usage": "企業の投資戦略の変化を示す際に使われます。"
+          },
+          {
+            "phrase": "is underway",
+            "meaning": "進行中である、実施されている",
+            "usage": "現在進行中の出来事を説明するのに便利です。"
+          },
+          {
+            "phrase": "investments flowing into",
+            "meaning": "〜への投資が流れ込んでいる",
+            "usage": "特定の分野への資金流入の大きさを表現します。"
+          }
+        ]
+      },
+      {
+        "en": "Breakthroughs in energy efficiency and grid modernization are pivotal in ensuring the stability and resilience of future power infrastructures.",
+        "ja": "エネルギー効率の向上や送電網の近代化におけるブレークスルーは、将来の電力インフラの安定性とレジリエンスを確保する上で極めて重要です。",
+        "audioPath": "./assets/audio/t17808622806102238_3.wav",
+        "phrases": [
+          {
+            "phrase": "Breakthroughs in",
+            "meaning": "〜における画期的な進歩",
+            "usage": "Breakthroughs in AI technology have revolutionized the industry. のように使われます。"
+          },
+          {
+            "phrase": "energy efficiency",
+            "meaning": "エネルギー効率",
+            "usage": "Improving energy efficiency is crucial for reducing costs. のように使われます。"
+          },
+          {
+            "phrase": "grid modernization",
+            "meaning": "電力網の近代化",
+            "usage": "The government is investing in grid modernization to prevent blackouts. のように使われます。"
+          },
+          {
+            "phrase": "ensuring the stability and resilience",
+            "meaning": "安定性と回復力を確保すること",
+            "usage": "The company's strategy focuses on ensuring the stability and resilience of its supply chain. のように使われます。"
+          }
+        ]
+      },
+      {
+        "en": "However, the intermittency of renewable sources, such as solar and wind, remains a formidable hurdle requiring innovative storage solutions.",
+        "ja": "しかし、太陽光や風力といった再生可能エネルギー源の断続性は依然として手ごわい障害であり、革新的な貯蔵ソリューションが求められています。",
+        "audioPath": "./assets/audio/t17808622806102238_4.wav",
+        "phrases": [
+          {
+            "phrase": "intermittency of renewable sources",
+            "meaning": "再生可能エネルギー源の断続性（不安定さ）",
+            "usage": "The intermittency of solar power means it's not always available."
+          },
+          {
+            "phrase": "formidable hurdle",
+            "meaning": "手ごわい障害、困難な課題",
+            "usage": "Lack of funding is a formidable hurdle for startups."
+          },
+          {
+            "phrase": "innovative storage solutions",
+            "meaning": "革新的な貯蔵（蓄電）ソリューション",
+            "usage": "We need innovative storage solutions to manage energy effectively."
+          }
+        ]
+      },
+      {
+        "en": "Moreover, upgrading existing transmission infrastructure to accommodate decentralized generation presents a monumental undertaking.",
+        "ja": "さらに、分散型発電に対応するために既存の送電インフラをアップグレードすることも、膨大な労力を要する事業です。",
+        "audioPath": "./assets/audio/t17808622806102238_5.wav",
+        "phrases": [
+          {
+            "phrase": "existing transmission infrastructure",
+            "meaning": "既存の送電インフラ",
+            "usage": "power grid modernization の文脈でよく使われます。"
+          },
+          {
+            "phrase": "decentralized generation",
+            "meaning": "分散型発電",
+            "usage": "再生可能エネルギーの普及に伴い、重要性が増しています。"
+          },
+          {
+            "phrase": "monumental undertaking",
+            "meaning": "記念碑的な事業、非常に困難な事業",
+            "usage": "scale が非常に大きいプロジェクトや挑戦を指す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The transition also entails substantial socio-economic shifts, including job displacement in traditional energy sectors and the creation of new green industries.",
+        "ja": "この移行はまた、従来のエネルギー部門における雇用の喪失や新たなグリーン産業の創出といった、社会経済に大きな変化をもたらします。",
+        "audioPath": "./assets/audio/t17808622806102238_6.wav",
+        "phrases": [
+          {
+            "phrase": "entails substantial",
+            "meaning": "相当な〜を伴う、引き起こす",
+            "usage": "This decision entails substantial costs. (この決定は相当なコストを伴う)"
+          },
+          {
+            "phrase": "socio-economic shifts",
+            "meaning": "社会経済的な変化",
+            "usage": "The report analyzes the socio-economic shifts caused by globalization. (その報告書はグローバリゼーションによって引き起こされた社会経済的な変化を分析している)"
+          },
+          {
+            "phrase": "job displacement",
+            "meaning": "失業、職の喪失",
+            "usage": "Automation can lead to job displacement in manufacturing. (自動化は製造業における失業につながる可能性がある)"
+          },
+          {
+            "phrase": "creation of new green industries",
+            "meaning": "新たなグリーン産業の創出",
+            "usage": "The government is investing in the creation of new green industries to combat climate change. (政府は気候変動と戦うために新たなグリーン産業の創出に投資している)"
+          }
+        ]
+      },
+      {
+        "en": "International collaboration is indispensable for harmonizing regulatory frameworks and facilitating technology transfer to developing nations.",
+        "ja": "規制枠組みの調和を図り、開発途上国への技術移転を促進するためには、国際協力が不可欠です。",
+        "audioPath": "./assets/audio/t17808622806102238_7.wav",
+        "phrases": [
+          {
+            "phrase": "international collaboration",
+            "meaning": "国際協力",
+            "usage": "This phrase is crucial in global business and diplomacy."
+          },
+          {
+            "phrase": "harmonizing regulatory frameworks",
+            "meaning": "規制の枠組みを調和させる",
+            "usage": "This is often discussed in trade agreements and international standards."
+          },
+          {
+            "phrase": "facilitating technology transfer",
+            "meaning": "技術移転を促進する",
+            "usage": "Essential for economic development and bridging the digital divide."
+          }
+        ]
+      },
+      {
+        "en": "The geopolitical landscape is also being reshaped as nations vie for dominance in critical mineral supply chains essential for green technologies.",
+        "ja": "各国がグリーン技術に不可欠な重要鉱物サプライチェーンにおける優位性を競う中、地政学的状況もまた再構築されています。",
+        "audioPath": "./assets/audio/t17808622806102238_8.wav",
+        "phrases": [
+          {
+            "phrase": "geopolitical landscape",
+            "meaning": "地政学的な情勢、国際情勢",
+            "usage": "The geopolitical landscape of Southeast Asia is complex. のように使う"
+          },
+          {
+            "phrase": "vie for dominance",
+            "meaning": "支配権を争う、覇権を争う",
+            "usage": "Companies vie for dominance in the market. のように使う"
+          },
+          {
+            "phrase": "supply chains",
+            "meaning": "サプライチェーン、供給網",
+            "usage": "Disruptions in global supply chains are a major concern. のように使う"
+          },
+          {
+            "phrase": "essential for",
+            "meaning": "〜に不可欠な、〜にとって必須の",
+            "usage": "Clean water is essential for life. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "Corporations are increasingly integrating ESG (Environmental, Social, and Governance) principles into their core strategies, recognizing both the risks and opportunities.",
+        "ja": "企業は、リスクと機会の両方を認識し、ESG（環境・社会・ガバナンス）原則を中核戦略にますます統合しています。",
+        "audioPath": "./assets/audio/t17808622806102238_9.wav",
+        "phrases": [
+          {
+            "phrase": "integrating ... into",
+            "meaning": "〜を〜に組み込む",
+            "usage": "Companies are integrating new technology into their workflows. (企業は新しい技術をワークフローに組み込んでいる。)"
+          },
+          {
+            "phrase": "core strategies",
+            "meaning": "中核戦略、基幹戦略",
+            "usage": "This initiative is central to our core strategies for the next five years. (この取り組みは、今後5年間の我々の中核戦略にとって重要です。)"
+          },
+          {
+            "phrase": "recognizing both ... and ...",
+            "meaning": "〜と〜の両方を認識している",
+            "usage": "The government is recognizing both the challenges and potential benefits of AI. (政府はAIの課題と潜在的な利点の両方を認識している。)"
+          }
+        ]
+      },
+      {
+        "en": "Public engagement and broad societal consensus are crucial to sustaining the momentum for such a transformative shift.",
+        "ja": "このような変革的な移行の勢いを維持するためには、国民の関与と幅広い社会的な合意が極めて重要です。",
+        "audioPath": "./assets/audio/t17808622806102238_10.wav",
+        "phrases": [
+          {
+            "phrase": "Public engagement",
+            "meaning": "市民参加、公共の関与",
+            "usage": "企業が地域社会との関わりを深める文脈でよく使われる。"
+          },
+          {
+            "phrase": "broad societal consensus",
+            "meaning": "広範な社会的合意",
+            "usage": "政策決定や社会問題の解決において、多くの人々の意見が一致している状態を指す。"
+          },
+          {
+            "phrase": "sustaining the momentum",
+            "meaning": "勢いを維持する、推進力を保つ",
+            "usage": "プロジェクトや改革、成長などの推進力を継続させる意味でビジネスシーンで頻出。"
+          },
+          {
+            "phrase": "transformative shift",
+            "meaning": "変革的な変化、抜本的な転換",
+            "usage": "社会、経済、技術などの分野における大きな、根本的な変化を表す。"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, an equitable and effective global energy transition demands unwavering commitment and concerted efforts from all stakeholders.",
+        "ja": "最終的に、公平かつ効果的な世界のエネルギー移行は、すべてのステークホルダーからの揺るぎないコミットメントと協調的な努力を要求します。",
+        "phrases": [
+          {
+            "phrase": "unwavering commitment",
+            "meaning": "揺るぎないコミットメント、確固たる決意",
+            "usage": "目標達成には unwavering commitment が不可欠です。"
+          },
+          {
+            "phrase": "concerted efforts",
+            "meaning": "協調的な努力、連携した取り組み",
+            "usage": "課題解決には all stakeholders の concerted efforts が求められます。"
+          },
+          {
+            "phrase": "energy transition",
+            "meaning": "エネルギー転換",
+            "usage": "気候変動対策の文脈で頻繁に使われる表現です。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-07T19:58:00.610Z"
   }
 ]
