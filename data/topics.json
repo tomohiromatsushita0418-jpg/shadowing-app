@@ -1060,7 +1060,8 @@
             "meaning": "仲裁地（または裁判地）の管轄権",
             "usage": "国際仲裁や国際訴訟において、手続きが行われる場所の法律が適用される範囲を意味します。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_2.wav"
       },
       {
         "en": "The doctrine of separability ensures that an arbitration agreement remains valid and enforceable even if the underlying commercial contract is subsequently found to be void.",
@@ -8353,9 +8354,286 @@
             "meaning": "エネルギー転換",
             "usage": "気候変動対策の文脈で頻繁に使われる表現です。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17808622806102238_11.wav"
       }
     ],
     "createdAt": "2026-06-07T19:58:00.610Z"
+  },
+  {
+    "id": "t17809541189490702",
+    "title": "Planning a Casual Dinner Gathering",
+    "titleJa": "気軽な夕食会の計画",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I was just thinking it's been ages since we all properly caught up; how about we orchestrate a casual dinner gathering sometime soon?",
+        "ja": "最近、皆でゆっくり話す機会が全然なかったなと思っていたんだけど、近いうちに気兼ねなく夕食会でも企画しない？",
+        "audioPath": "./assets/audio/t17809541189490702_0.wav",
+        "phrases": [
+          {
+            "phrase": "it's been ages",
+            "meaning": "ずいぶん長い時間が経った",
+            "usage": "久しぶりに会う友人などに使う表現です。"
+          },
+          {
+            "phrase": "properly caught up",
+            "meaning": "きちんと近況を報告し合う、じっくり話す",
+            "usage": "単に会うだけでなく、お互いの状況を詳しく話すニュアンスです。"
+          },
+          {
+            "phrase": "orchestrate a gathering",
+            "meaning": "集まりを計画・調整する",
+            "usage": "単に「開催する」よりも、準備や段取りを整えるニュアンスが強いです。"
+          },
+          {
+            "phrase": "casual dinner gathering",
+            "meaning": "気軽な夕食会",
+            "usage": "フォーマルすぎない、リラックスした雰囲気の集まりを指します。"
+          }
+        ]
+      },
+      {
+        "en": "Are you leaning towards trying out that new bistro everyone's been raving about, or would a cozy potluck at someone's place be more up your alley?",
+        "ja": "皆が絶賛しているあの新しいビストロを試してみたい気分？それとも、誰かの家でアットホームな持ち寄りパーティーの方が好みかな？",
+        "audioPath": "./assets/audio/t17809541189490702_1.wav",
+        "phrases": [
+          {
+            "phrase": "leaning towards",
+            "meaning": "〜に傾いている、〜にしようと思っている",
+            "usage": "I'm leaning towards accepting the job offer. (その仕事のオファーを受ける方に傾いています。)"
+          },
+          {
+            "phrase": "raving about",
+            "meaning": "〜を絶賛している、〜について熱狂的に話している",
+            "usage": "She's been raving about her new car. (彼女は新しい車について絶賛しています。)"
+          },
+          {
+            "phrase": "up your alley",
+            "meaning": "あなたの得意な分野、あなたの好みにぴったり",
+            "usage": "This kind of problem is right up my alley. (この種の問題は私の得意分野です。)"
+          }
+        ]
+      },
+      {
+        "en": "We'd need to coordinate our schedules to pinpoint a date that works for everyone's often-packed calendars.",
+        "ja": "皆の予定がぎっしり詰まっていることが多いから、全員が都合の良い日を特定するために日程調整が必要だね。",
+        "audioPath": "./assets/audio/t17809541189490702_2.wav",
+        "phrases": [
+          {
+            "phrase": "coordinate our schedules",
+            "meaning": "スケジュールを調整する",
+            "usage": "会議の日程を調整するために使われる一般的な表現です。"
+          },
+          {
+            "phrase": "pinpoint a date",
+            "meaning": "具体的な日付を特定する",
+            "usage": "会議やイベントなど、特定の日時を決める際に使われます。"
+          },
+          {
+            "phrase": "packed calendars",
+            "meaning": "非常に忙しいスケジュール",
+            "usage": "個人のスケジュールが予定で埋まっている様子を表します。"
+          }
+        ]
+      },
+      {
+        "en": "I'm pretty swamped with work commitments during the week, so a weekend evening would certainly be preferable for me.",
+        "ja": "平日は仕事の予定がかなり詰まっているから、私としては週末の夜の方が断然ありがたいな。",
+        "audioPath": "./assets/audio/t17809541189490702_3.wav",
+        "phrases": [
+          {
+            "phrase": "swamped with work",
+            "meaning": "仕事でてんてこ舞いである、非常に忙しい",
+            "usage": "I'm swamped with deadlines this week. (今週は締め切りで山積みだ。)"
+          },
+          {
+            "phrase": "work commitments",
+            "meaning": "仕事上の約束事、仕事の都合",
+            "usage": "I have several work commitments next month. (来月はいくつかの仕事上の約束がある。)"
+          },
+          {
+            "phrase": "preferable for me",
+            "meaning": "私にとってはより望ましい、都合が良い",
+            "usage": "Early morning meetings are not preferable for me. (早朝の会議は私にはあまり都合が良くない。)"
+          }
+        ]
+      },
+      {
+        "en": "How does next Saturday evening sound? It gives us ample time to sort out the logistics and firm up the guest list.",
+        "ja": "来週の土曜の夜はどうかな？それなら、準備を整えたり、参加者を確定させたりするのに十分な時間があるし。",
+        "audioPath": "./assets/audio/t17809541189490702_4.wav",
+        "phrases": [
+          {
+            "phrase": "ample time",
+            "meaning": "十分な時間",
+            "usage": "We have ample time to prepare for the presentation. (プレゼンの準備には十分な時間がある。)"
+          },
+          {
+            "phrase": "sort out",
+            "meaning": "解決する、整理する",
+            "usage": "Let's sort out the seating arrangements before the party. (パーティーの前に座席の手配を決めよう。)"
+          },
+          {
+            "phrase": "firm up",
+            "meaning": "確定する、固める",
+            "usage": "We need to firm up the details of the contract. (契約の詳細を確定する必要がある。)"
+          }
+        ]
+      },
+      {
+        "en": "If we opt for a potluck, we should probably assign dishes to avoid an overwhelming carb-fest or a dessert-only spread.",
+        "ja": "もし持ち寄りパーティーにするなら、炭水化物だらけになったり、デザートばかりになったりしないように、各自で担当を決めた方がいいかもね。",
+        "audioPath": "./assets/audio/t17809541189490702_5.wav",
+        "phrases": [
+          {
+            "phrase": "opt for",
+            "meaning": "～を選ぶ、～に決める",
+            "usage": "We decided to opt for the cheaper option. (より安い方を選ぶことにした)"
+          },
+          {
+            "phrase": "assign dishes",
+            "meaning": "料理を割り当てる",
+            "usage": "To ensure variety, we should assign dishes for the party. (バラエティを確保するために、パーティーの料理を割り当てるべきだ)"
+          },
+          {
+            "phrase": "avoid an overwhelming carb-fest",
+            "meaning": "炭水化物ばかりの圧倒的な集まりを避ける",
+            "usage": "This phrase humorously describes a situation where there's too much of one type of food, especially unhealthy options. (このフレーズは、特に不健康な選択肢など、一種類の食べ物が多すぎる状況をユーモラスに表現しています)"
+          },
+          {
+            "phrase": "a dessert-only spread",
+            "meaning": "デザートだけの並び、デザートばかりの品揃え",
+            "usage": "This implies a lack of balance in the food offered. (これは提供される食事のバランスが欠けていることを示唆します)"
+          }
+        ]
+      },
+      {
+        "en": "We'll also need to discreetly inquire about any dietary restrictions or allergies among the attendees, just to be on the safe side.",
+        "ja": "念のため、参加者の中に食事制限やアレルギーがある人がいないか、さりげなく確認する必要もあるね。",
+        "audioPath": "./assets/audio/t17809541189490702_6.wav",
+        "phrases": [
+          {
+            "phrase": "discreetly inquire about",
+            "meaning": "〜について慎重に尋ねる",
+            "usage": "相手に不快感を与えないように、こっそり情報を集めるニュアンス。例: We need to discreetly inquire about their preferences before the meeting."
+          },
+          {
+            "phrase": "dietary restrictions",
+            "meaning": "食事制限",
+            "usage": "アレルギーや宗教上の理由など、食べられないものがある場合に使います。例: Please let us know if you have any dietary restrictions."
+          },
+          {
+            "phrase": "to be on the safe side",
+            "meaning": "念のため、万が一に備えて",
+            "usage": "リスクを避けるために、より慎重な行動をとることを表します。例: I'll bring an umbrella, just to be on the safe side, even though it looks sunny."
+          }
+        ]
+      },
+      {
+        "en": "The whole idea is to have a relaxed evening where we can unwind and genuinely connect, so no pressure to impress with culinary masterpieces.",
+        "ja": "大切なのは、皆がリラックスして心ゆくまで語り合えるような夜にすることだから、凝った料理で無理に印象付けようとする必要はないよ。",
+        "audioPath": "./assets/audio/t17809541189490702_7.wav",
+        "phrases": [
+          {
+            "phrase": "whole idea",
+            "meaning": "そもそもの目的、主旨",
+            "usage": "The whole idea behind this project is to improve efficiency. (このプロジェクトのそもそもの目的は効率を改善することです)"
+          },
+          {
+            "phrase": "unwind",
+            "meaning": "くつろぐ、リラックスする",
+            "usage": "After a long week, I like to unwind by reading a book. (長い一週間の後、本を読んでくつろぐのが好きです)"
+          },
+          {
+            "phrase": "genuinely connect",
+            "meaning": "心からつながる、本音で語り合う",
+            "usage": "It's important to genuinely connect with your colleagues. (同僚と心からつながることが大切です)"
+          },
+          {
+            "phrase": "no pressure to",
+            "meaning": "〜するプレッシャーはない、〜する必要はない",
+            "usage": "There's no pressure to finish the report today. (今日中にレポートを終える必要はありません)"
+          }
+        ]
+      },
+      {
+        "en": "Perhaps one of us could take charge of drinks, while another handles a simple appetizer, and I could tackle the main course.",
+        "ja": "例えば、誰か一人に飲み物を任せて、別の人には簡単な前菜をお願いして、私がメイン料理を担当するとかどうかな。",
+        "audioPath": "./assets/audio/t17809541189490702_8.wav",
+        "phrases": [
+          {
+            "phrase": "take charge of",
+            "meaning": "〜の責任を負う、〜を担当する",
+            "usage": "プロジェクトやイベントの責任者になる場合に「take charge of the project/event」のように使う。"
+          },
+          {
+            "phrase": "handle",
+            "meaning": "〜を処理する、〜を担当する、〜に対処する",
+            "usage": "業務、問題、顧客対応などに「handle tasks/problems/customer inquiries」のように幅広く使う。"
+          },
+          {
+            "phrase": "tackle",
+            "meaning": "(問題や課題に)取り組む、対処する",
+            "usage": "難しい課題や大きな仕事に「tackle a difficult problem/a big project」のように意欲的に取り組むニュアンス。"
+          }
+        ]
+      },
+      {
+        "en": "I'm really looking forward to it; it's always a breath of fresh air to spend quality time with good company.",
+        "ja": "本当に楽しみにしてるよ。気の置けない仲間と充実した時間を過ごすのは、いつも気分転換になるからね。",
+        "audioPath": "./assets/audio/t17809541189490702_9.wav",
+        "phrases": [
+          {
+            "phrase": "looking forward to",
+            "meaning": "〜を楽しみにしている",
+            "usage": "I'm really looking forward to our meeting next week. のように、未来の出来事への期待を表す際に頻繁に使われます。"
+          },
+          {
+            "phrase": "breath of fresh air",
+            "meaning": "新鮮な空気、気分転換",
+            "usage": "新しいアイデアや、普段と違う状況がもたらす爽快感やリフレッシュ感を表現する際に使われます。"
+          },
+          {
+            "phrase": "quality time",
+            "meaning": "質の高い時間",
+            "usage": "家族や友人など、大切な人々と過ごす、有意義で集中した時間を指します。"
+          },
+          {
+            "phrase": "good company",
+            "meaning": "良い仲間、一緒にいて楽しい人々",
+            "usage": "単に人がいるだけでなく、その人たちと一緒にいることで楽しい時間を過ごせる状況を指します。"
+          }
+        ]
+      },
+      {
+        "en": "Once we have a tentative date, I'll send out a quick message to everyone to gauge their availability and preferences.",
+        "ja": "仮の日程が決まったら、皆に連絡して都合と希望を確認するね。",
+        "audioPath": "./assets/audio/t17809541189490702_10.wav",
+        "phrases": [
+          {
+            "phrase": "tentative date",
+            "meaning": "仮の日程",
+            "usage": "「tentative agreement (仮合意)」のように、他の名詞と組み合わせて「仮の〜」の意味で使う。"
+          },
+          {
+            "phrase": "send out a quick message",
+            "meaning": "すぐにメッセージを送る",
+            "usage": "「send out invitations (招待状を送る)」のように、複数人や広範囲に情報を送る際に使う。"
+          },
+          {
+            "phrase": "gauge their availability and preferences",
+            "meaning": "彼らの都合と希望を測る/評価する",
+            "usage": "「gauge public opinion (世論を測る)」のように、状況や意見を慎重に評価する際に用いる。"
+          }
+        ]
+      },
+      {
+        "en": "It'll be wonderful to catch up properly and create some new memories together.",
+        "ja": "皆でゆっくり近況を話し合って、また新しい思い出を作れるのが楽しみだ。",
+        "audioPath": "./assets/audio/t17809541189490702_11.wav"
+      }
+    ],
+    "createdAt": "2026-06-08T21:28:38.949Z"
   }
 ]
