@@ -776,7 +776,8 @@
             "meaning": "効果量",
             "usage": "治療や介入の効果の大きさを客観的に示す指標です。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_0.wav"
       },
       {
         "en": "Pharmacokinetic analyses revealed that the drug's bioavailability is substantially compromised in patients with hepatic impairment, necessitating a revised dosing protocol.",
@@ -802,7 +803,8 @@
             "meaning": "改訂された投与プロトコル（手順）",
             "usage": "薬の量や投与方法に関する手順が見直されたことを意味します。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_1.wav"
       },
       {
         "en": "Regulatory authorities stipulated that the sponsor must conduct a comprehensive post-market surveillance study to monitor long-term adverse event profiles in diverse populations.",
@@ -828,7 +830,8 @@
             "meaning": "副作用のプロファイル（傾向）",
             "usage": "医薬品などの予期せぬ有害な事象の発生パターンや特徴を指す。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_2.wav"
       },
       {
         "en": "The incidence of treatment-emergent adverse events in the experimental arm was comparable to placebo, suggesting a favourable safety profile that merits further investigation.",
@@ -854,7 +857,8 @@
             "meaning": "さらなる調査に値する",
             "usage": "The findings merit further investigation. (その発見はさらなる調査に値する。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_3.wav"
       },
       {
         "en": "Compassionate use provisions allow terminally ill patients to access investigational therapies that have not yet received regulatory approval, albeit under stringent conditions.",
@@ -880,7 +884,8 @@
             "meaning": "規制当局の承認",
             "usage": "医薬品や医療機器などが市場に出るために必要な公的な許可のこと"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_4.wav"
       },
       {
         "en": "The principal investigator disclosed a potential conflict of interest stemming from equity holdings in the sponsoring biopharmaceutical company, which the IRB took under advisement.",
@@ -906,7 +911,8 @@
             "meaning": "〜を熟慮する、〜を検討する",
             "usage": "決定を下す前に、提案や情報を慎重に検討するプロセスを指します。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_5.wav"
       },
       {
         "en": "Genome-wide association studies have elucidated several single-nucleotide polymorphisms that predispose individuals to idiosyncratic drug reactions, advancing personalized medicine.",
@@ -932,7 +938,8 @@
             "meaning": "個別化医療（プレシジョン・メディシン）を進展させる",
             "usage": "個人の遺伝情報などに基づいて、最適な治療法を提供する医療の発展を指します。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_6.wav"
       },
       {
         "en": "The Data Safety Monitoring Board convened an unscheduled interim analysis after preliminary signals indicated a disproportionate rate of serious cardiac events in elderly participants.",
@@ -1087,7 +1094,8 @@
             "meaning": "無効であると判明する",
             "usage": "契約や法律が無効と判断された状況を説明する際に使われます。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_3.wav"
       },
       {
         "en": "Counsel for the respondent argued that the claimant had failed to mitigate its losses, thereby precluding recovery of damages that could have been avoided through reasonable measures.",
@@ -1113,7 +1121,8 @@
             "meaning": "合理的な措置",
             "usage": "This refers to actions that a sensible person would take in a similar situation to minimize harm."
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_4.wav"
       },
       {
         "en": "The arbitral award, once rendered, is binding on the parties and is enforceable in over 160 contracting states pursuant to the 1958 New York Convention.",
@@ -1139,7 +1148,8 @@
             "meaning": "いったん〜されると、〜されれば",
             "usage": "\"once + 過去分詞\" の形で「いったん〜されると」という意味で広く使える。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_5.wav"
       },
       {
         "en": "Witness testimony was deemed inadmissible insofar as it pertained to pre-contractual negotiations that the parol evidence rule expressly excludes from consideration.",
@@ -1165,7 +1175,8 @@
             "meaning": "口頭証拠排除法則",
             "usage": "契約書の内容が最終的なものであり、それ以前の口頭での合意は証拠として認められないという法的な原則です。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_6.wav"
       },
       {
         "en": "The tribunal exercised its inherent jurisdiction to issue interim measures of protection, restraining the respondent from dissipating its assets pending the final award.",
@@ -1191,7 +1202,8 @@
             "meaning": "資産を散逸させる、費消する",
             "usage": "会社や個人が資産を不適切に処分したり、無駄遣いしたりする状況で使う。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_7.wav"
       },
       {
         "en": "Expert witnesses presented divergent methodologies for quantifying lost profits, compelling the tribunal to conduct an independent assessment of the evidentiary weight of each approach.",
@@ -1217,7 +1229,8 @@
             "meaning": "独立した評価",
             "usage": "The company requested an independent assessment of the project's feasibility."
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_8.wav"
       },
       {
         "en": "The successful party was awarded a substantial portion of its legal costs on an indemnity basis, reflecting the tribunal's censure of the respondent's dilatory conduct.",
@@ -1243,7 +1256,8 @@
             "meaning": "遅延させる行為、怠慢な行動",
             "usage": "The court warned the lawyer against dilatory conduct that was delaying the trial. (裁判所は弁護士に対し、裁判を遅らせる遅延行為をやめるよう警告した。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/5_9.wav"
       }
     ],
     "titleJa": "国際商事仲裁",
@@ -8631,7 +8645,19 @@
       {
         "en": "It'll be wonderful to catch up properly and create some new memories together.",
         "ja": "皆でゆっくり近況を話し合って、また新しい思い出を作れるのが楽しみだ。",
-        "audioPath": "./assets/audio/t17809541189490702_11.wav"
+        "audioPath": "./assets/audio/t17809541189490702_11.wav",
+        "phrases": [
+          {
+            "phrase": "catch up properly",
+            "meaning": "きちんと近況を報告し合う、じっくり話す",
+            "usage": "久しぶりに会った友人や同僚と使う表現です。"
+          },
+          {
+            "phrase": "create some new memories",
+            "meaning": "新しい思い出を作る",
+            "usage": "旅行やイベントなど、特別な体験をした際に使われます。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-06-08T21:28:38.949Z"
