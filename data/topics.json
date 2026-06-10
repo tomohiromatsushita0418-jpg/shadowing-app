@@ -960,7 +960,8 @@
             "meaning": "分析を行う、分析を招集する",
             "usage": "The committee decided to convene an independent analysis of the incident. (委員会は、その事案について独立した分析を行うことを決定した。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_7.wav"
       },
       {
         "en": "Biosimilar manufacturers must demonstrate that their product is highly similar to the reference biologic with no clinically meaningful differences in safety, purity, or potency.",
@@ -8661,5 +8662,313 @@
       }
     ],
     "createdAt": "2026-06-08T21:28:38.949Z"
+  },
+  {
+    "id": "t17811304424189678",
+    "title": "The Shifting Global Economic Order",
+    "titleJa": "変革する世界経済秩序",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The prevailing geopolitical climate is compelling nations to re-evaluate long-standing economic interdependencies.",
+        "ja": "現在の地政学的状況は、各国に長年にわたる経済的相互依存関係の見直しを迫っています。",
+        "audioPath": "./assets/audio/t17811304424189678_0.wav",
+        "phrases": [
+          {
+            "phrase": "prevailing geopolitical climate",
+            "meaning": "現在の地政学的な情勢",
+            "usage": "The prevailing geopolitical climate is affecting global trade. (現在の地政学的な情勢が世界貿易に影響を与えている。)"
+          },
+          {
+            "phrase": "compelling nations to re-evaluate",
+            "meaning": "国家に再評価を迫る",
+            "usage": "Economic pressures are compelling nations to re-evaluate their policies. (経済的な圧力により、各国は政策の再評価を迫られている。)"
+          },
+          {
+            "phrase": "long-standing economic interdependencies",
+            "meaning": "長年にわたる経済的な相互依存関係",
+            "usage": "The report analyzed the long-standing economic interdependencies between the two countries. (その報告書は両国間の長年にわたる経済的な相互依存関係を分析した。)"
+          }
+        ]
+      },
+      {
+        "en": "This strategic recalibration aims to bolster national security while mitigating supply chain vulnerabilities.",
+        "ja": "この戦略的な再調整は、サプライチェーンの脆弱性を軽減しつつ、国家安全保障を強化することを目的としています。",
+        "audioPath": "./assets/audio/t17811304424189678_1.wav",
+        "phrases": [
+          {
+            "phrase": "strategic recalibration",
+            "meaning": "戦略的な再調整",
+            "usage": "企業の戦略見直しや政府の政策変更など、大きな方向転換を示す際に使われます。"
+          },
+          {
+            "phrase": "bolster national security",
+            "meaning": "国家安全保障を強化する",
+            "usage": "軍事力増強やサイバーセキュリティ対策など、国の安全を守るための具体的な行動を指すことが多いです。"
+          },
+          {
+            "phrase": "mitigating supply chain vulnerabilities",
+            "meaning": "サプライチェーンの脆弱性を軽減する",
+            "usage": "パンデミックや地政学的リスクなど、供給網の弱点を克服するための対策を説明する際に用いられます。"
+          }
+        ]
+      },
+      {
+        "en": "Many governments are actively promoting \"friend-shoring\" initiatives to diversify critical resource procurement away from adversarial states.",
+        "ja": "多くの政府は、敵対的な国家からの重要資源調達を多様化するため、「フレンドショアリング」の取り組みを積極的に推進しています。",
+        "audioPath": "./assets/audio/t17811304424189678_2.wav",
+        "phrases": [
+          {
+            "phrase": "actively promoting",
+            "meaning": "積極的に推進している",
+            "usage": "The company is actively promoting its new product line. (その会社は新製品ラインを積極的に宣伝している。)"
+          },
+          {
+            "phrase": "friend-shoring initiatives",
+            "meaning": "フレンド・ショアリング（友好国への生産拠点移転）の取り組み",
+            "usage": "This is a new term related to supply chain diversification. (サプライチェーンの多様化に関連する新しい用語です。)"
+          },
+          {
+            "phrase": "diversify ... away from",
+            "meaning": "〜から多角化する、〜に頼らないようにする",
+            "usage": "It's important to diversify your investments away from a single asset class. (単一の資産クラスから投資を多角化することが重要です。)"
+          },
+          {
+            "phrase": "adversarial states",
+            "meaning": "敵対的な国家",
+            "usage": "This term refers to countries with strained diplomatic relations. (外交関係が緊張している国々を指します。)"
+          }
+        ]
+      },
+      {
+        "en": "Corporations, too, are grappling with the imperative to de-risk their global operations amidst escalating geopolitical fragmentation.",
+        "ja": "企業もまた、地政学的な分断がエスカレートする中で、グローバル事業のリスクを低減する喫緊の課題に直面しています。",
+        "audioPath": "./assets/audio/t17811304424189678_3.wav",
+        "phrases": [
+          {
+            "phrase": "grappling with",
+            "meaning": "〜に苦労している、〜に取り組んでいる",
+            "usage": "Companies are grappling with supply chain issues. (企業はサプライチェーンの問題に苦労している。)"
+          },
+          {
+            "phrase": "imperative to",
+            "meaning": "〜すべきという義務、必須事項",
+            "usage": "There is an imperative to reduce carbon emissions. (二酸化炭素排出量を削減すべきという義務がある。)"
+          },
+          {
+            "phrase": "de-risk operations",
+            "meaning": "事業のリスクを低減する",
+            "usage": "The company is trying to de-risk its operations by diversifying suppliers. (同社はサプライヤーを多様化することで事業のリスクを低減しようとしている。)"
+          },
+          {
+            "phrase": "geopolitical fragmentation",
+            "meaning": "地政学的な断片化、分裂",
+            "usage": "The world is facing increasing geopolitical fragmentation. (世界は地政学的な断片化の増大に直面している。)"
+          }
+        ]
+      },
+      {
+        "en": "Consequently, we are witnessing a nascent trend of industrial relocation, often referred to as \"reshoring\" or \"nearshoring.\"",
+        "ja": "その結果、「リショアリング」や「ニアショアリング」と呼ばれる産業移転の新たな潮流が生まれています。",
+        "audioPath": "./assets/audio/t17811304424189678_4.wav",
+        "phrases": [
+          {
+            "phrase": "witnessing a nascent trend",
+            "meaning": "新たな傾向を目にしている",
+            "usage": "We are witnessing a nascent trend of remote work. (リモートワークという新たな傾向を目にしています。)"
+          },
+          {
+            "phrase": "industrial relocation",
+            "meaning": "産業の移転",
+            "usage": "The company is considering industrial relocation to reduce costs. (コスト削減のため、産業移転を検討しています。)"
+          },
+          {
+            "phrase": "often referred to as",
+            "meaning": "〜としてしばしば言及される",
+            "usage": "This phenomenon is often referred to as 'digital transformation'. (この現象はしばしば「デジタルトランスフォーメーション」として言及されます。)"
+          }
+        ]
+      },
+      {
+        "en": "This paradigm shift is reshaping established trade routes and fostering the emergence of new regional economic blocs.",
+        "ja": "このパラダイムシフトは、既存の貿易ルートを再構築し、新たな地域経済圏の出現を促進しています。",
+        "audioPath": "./assets/audio/t17811304424189678_5.wav",
+        "phrases": [
+          {
+            "phrase": "paradigm shift",
+            "meaning": "パラダイムシフト、考え方や価値観の大きな転換",
+            "usage": "a paradigm shift in education のように、分野を指定して使うことが多い"
+          },
+          {
+            "phrase": "reshaping established",
+            "meaning": "確立された〜を再形成する、作り変える",
+            "usage": "reshaping the industry landscape のように、より広い文脈で使われることもある"
+          },
+          {
+            "phrase": "fostering the emergence of",
+            "meaning": "〜の出現を促進する、育む",
+            "usage": "fostering the emergence of new technologies のように、新しいものの誕生を後押しする際に使う"
+          },
+          {
+            "phrase": "economic blocs",
+            "meaning": "経済圏、経済ブロック",
+            "usage": "forming new economic blocs のように、具体的な行動と結びつけて使われる"
+          }
+        ]
+      },
+      {
+        "en": "Developing nations are keenly observing these dynamics, seeking opportunities to integrate into nascent supply networks.",
+        "ja": "発展途上国は、これらの動向を注視しており、新たな供給網への統合機会を模索しています。",
+        "audioPath": "./assets/audio/t17811304424189678_6.wav",
+        "phrases": [
+          {
+            "phrase": "developing nations",
+            "meaning": "発展途上国",
+            "usage": "経済発展の文脈でよく使われる表現です。"
+          },
+          {
+            "phrase": "keenly observing",
+            "meaning": "鋭意観察している、熱心に見守っている",
+            "usage": "状況や動向を注意深く見ている様子を表します。"
+          },
+          {
+            "phrase": "seeking opportunities",
+            "meaning": "機会を求めている",
+            "usage": "新しいビジネスチャンスや発展の機会を探している状況で使われます。"
+          },
+          {
+            "phrase": "integrate into",
+            "meaning": "〜に統合する、〜の一員となる",
+            "usage": "サプライチェーンや組織などに組み込まれることを指します。"
+          }
+        ]
+      },
+      {
+        "en": "However, such ambitious economic realignments are fraught with significant logistical and financial hurdles.",
+        "ja": "しかし、こうした意欲的な経済再編は、重大な物流上および財政上の課題を伴います。",
+        "audioPath": "./assets/audio/t17811304424189678_7.wav",
+        "phrases": [
+          {
+            "phrase": "ambitious economic realignments",
+            "meaning": "野心的な経済再編",
+            "usage": "大規模な経済構造の変更や政策転換を指す際に使われる表現です。"
+          },
+          {
+            "phrase": "fraught with",
+            "meaning": "〜でいっぱいの、〜をはらんだ",
+            "usage": "困難や危険な要素が含まれている状況を表す際に便利です。"
+          },
+          {
+            "phrase": "logistical and financial hurdles",
+            "meaning": "物流および財政上の障害",
+            "usage": "計画実行における具体的な課題を挙げる際に役立つコロケーションです。"
+          }
+        ]
+      },
+      {
+        "en": "The pursuit of self-sufficiency, while strategically sound, often entails considerable increases in production costs for consumers.",
+        "ja": "自給自足の追求は、戦略的には賢明である一方で、消費者にとっては生産コストの大幅な上昇を招くことが少なくありません。",
+        "audioPath": "./assets/audio/t17811304424189678_8.wav",
+        "phrases": [
+          {
+            "phrase": "pursuit of self-sufficiency",
+            "meaning": "自給自足の追求",
+            "usage": "自給自足を目指すことは、個人や国家の経済戦略において重要なテーマとなり得ます。"
+          },
+          {
+            "phrase": "strategically sound",
+            "meaning": "戦略的に妥当な、理にかなった",
+            "usage": "短期的な損失が出ても、長期的な視点で見ればstrategically soundな判断である場合がある。"
+          },
+          {
+            "phrase": "entails considerable increases",
+            "meaning": "かなりの増加を伴う",
+            "usage": "この新しい規制は、企業にとってentails considerable increases in compliance costs となるだろう。"
+          },
+          {
+            "phrase": "production costs for consumers",
+            "meaning": "消費者にとっての生産コスト",
+            "usage": "技術革新は、often entails considerable decreases in production costs for consumers をもたらすことがある。"
+          }
+        ]
+      },
+      {
+        "en": "International organizations are striving to mediate these transitions, advocating for multilateral cooperation over protectionist policies.",
+        "ja": "国際機関は、保護主義的な政策よりも多国間協力を提唱し、これらの移行を仲介しようと努めています。",
+        "audioPath": "./assets/audio/t17811304424189678_9.wav",
+        "phrases": [
+          {
+            "phrase": "striving to",
+            "meaning": "〜しようと努力する、尽力する",
+            "usage": "The team is striving to meet the tight deadline. (そのチームは厳しい納期に間に合わせようと尽力している。)"
+          },
+          {
+            "phrase": "advocating for",
+            "meaning": "〜を主張する、擁護する",
+            "usage": "The organization is advocating for stricter environmental regulations. (その団体はより厳しい環境規制を提唱している。)"
+          },
+          {
+            "phrase": "multilateral cooperation",
+            "meaning": "多国間協力",
+            "usage": "Promoting multilateral cooperation is crucial for addressing global challenges. (多国間協力の推進は地球規模の課題に対処するために不可欠である。)"
+          }
+        ]
+      },
+      {
+        "en": "The long-term implications for global trade architecture and economic stability remain subject to intense debate among policymakers.",
+        "ja": "世界の貿易構造と経済の安定に対する長期的な影響については、政策立案者の間で活発な議論が続いています。",
+        "audioPath": "./assets/audio/t17811304424189678_10.wav",
+        "phrases": [
+          {
+            "phrase": "long-term implications",
+            "meaning": "長期的な影響、長期的な含意",
+            "usage": "The long-term implications of this policy need to be carefully considered."
+          },
+          {
+            "phrase": "economic stability",
+            "meaning": "経済の安定",
+            "usage": "Governments strive to achieve economic stability."
+          },
+          {
+            "phrase": "remain subject to",
+            "meaning": "〜の対象であり続ける、〜に左右される",
+            "usage": "The plan remains subject to change based on new data."
+          },
+          {
+            "phrase": "intense debate",
+            "meaning": "激しい議論",
+            "usage": "There was intense debate over the budget cuts."
+          }
+        ]
+      },
+      {
+        "en": "Navigating this intricate landscape demands astute diplomatic engagement and innovative economic statecraft from all stakeholders.",
+        "ja": "この複雑な状況を乗り切るには、すべてのステークホルダーによる鋭敏な外交的関与と革新的な経済的統治が求められます。",
+        "audioPath": "./assets/audio/t17811304424189678_11.wav",
+        "phrases": [
+          {
+            "phrase": "intricate landscape",
+            "meaning": "複雑な状況/局面",
+            "usage": "比喩的に「複雑な問題や状況」を指す際に使う。"
+          },
+          {
+            "phrase": "astute diplomatic engagement",
+            "meaning": "鋭い/抜け目のない外交的関与",
+            "usage": "astuteは「洞察力のある、賢明な」という意味で、ビジネス判断などにも応用可能。"
+          },
+          {
+            "phrase": "economic statecraft",
+            "meaning": "経済的統治術/国家運営術",
+            "usage": "statecraftは「国家運営の技術」を意味し、政治・経済ニュースでよく見る。"
+          },
+          {
+            "phrase": "all stakeholders",
+            "meaning": "全ての利害関係者",
+            "usage": "ビジネスやプロジェクトで「関係者全員」を指す際に頻繁に使う重要表現。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-10T22:27:22.418Z"
   }
 ]
