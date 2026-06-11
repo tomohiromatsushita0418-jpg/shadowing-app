@@ -520,7 +520,8 @@
             "meaning": "膨大な量のテキストデータ",
             "usage": "\"vast amounts of data\" (膨大な量のデータ) のように、\"vast\"は「膨大な」という意味で様々な名詞と組み合わせる。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_0.wav"
       },
       {
         "en": "To mitigate the risks of model hallucination, enterprises are increasingly deploying retrieval-augmented generation architectures that ground outputs in authoritative knowledge bases.",
@@ -546,7 +547,8 @@
             "meaning": "信頼できる知識ベース、権威ある情報源",
             "usage": "決定は常に信頼できる情報源に基づくべきだ。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_1.wav"
       },
       {
         "en": "The proliferation of generative AI tools has precipitated an urgent reexamination of intellectual property law, particularly regarding the ownership of AI-generated creative works.",
@@ -572,7 +574,8 @@
             "meaning": "〜の所有権に関して",
             "usage": "There are ongoing discussions regarding the ownership of digital assets."
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_2.wav"
       },
       {
         "en": "Federated learning enables organizations to collaboratively train machine learning models without centralizing sensitive data, thereby preserving individual privacy at scale.",
@@ -593,7 +596,8 @@
             "meaning": "大規模に、広範囲に",
             "usage": "このソリューションは、大規模な展開に適している。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_3.wav"
       },
       {
         "en": "The opacity of deep neural networks poses profound challenges for regulated industries where algorithmic decision-making must be auditable and explicable to stakeholders.",
@@ -619,7 +623,8 @@
             "meaning": "利害関係者に対して",
             "usage": "企業は株主や顧客など、すべての利害関係者に対して透明性を保つべきだ。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_4.wav"
       },
       {
         "en": "Consequently, the EU AI Act mandates that high-risk AI systems undergo rigorous conformity assessments before being deployed in critical societal infrastructure.",
@@ -645,7 +650,8 @@
             "meaning": "重要な社会インフラ",
             "usage": "「critical infrastructure (重要インフラ)」はニュースで頻繁に使われる表現。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_5.wav"
       },
       {
         "en": "Edge computing architectures are gaining traction as latency-sensitive applications demand that inference be performed locally rather than routed through distant cloud servers.",
@@ -666,7 +672,8 @@
             "meaning": "遅延に敏感な、レイテンシの影響を受けやすい",
             "usage": "latency-sensitive applications のように名詞を修飾する複合形容詞。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_6.wav"
       },
       {
         "en": "Notwithstanding the hype surrounding autonomous systems, current AI exhibits no genuine comprehension — it approximates understanding through sophisticated pattern recognition.",
@@ -687,7 +694,8 @@
             "meaning": "高度なパターン認識",
             "usage": "AIやデータ分析の分野で、複雑なデータから規則性を見つけ出す能力を説明する際によく使われる。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_7.wav"
       },
       {
         "en": "Enterprises that leverage AI to augment human judgment rather than replace it invariably achieve more robust outcomes and maintain greater organizational resilience.",
@@ -713,7 +721,8 @@
             "meaning": "組織の回復力/弾力性",
             "usage": "「困難からの回復力」を指し、economic resilience などとも使う。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_8.wav"
       },
       {
         "en": "The imperative to develop energy-efficient AI architectures is becoming increasingly salient given the substantial carbon footprint associated with large-scale model training.",
@@ -739,7 +748,8 @@
             "meaning": "〜に関連する、〜に伴う",
             "usage": "リスクやコストなど、特定の事柄と別の事柄の関連性を説明する際に使う。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/3_9.wav"
       }
     ],
     "titleJa": "AIの企業活用",
@@ -982,7 +992,8 @@
             "meaning": "臨床的に意味のある違い",
             "usage": "This phrase is specific to medical and pharmaceutical contexts, emphasizing that any differences must be significant from a patient care perspective. (このフレーズは医療・製薬分野に特有で、いかなる違いも患者ケアの観点から見て重要でなければならないことを強調する。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/4_8.wav"
       }
     ],
     "titleJa": "臨床試験と薬事承認",
