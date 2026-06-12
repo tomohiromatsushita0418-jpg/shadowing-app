@@ -279,7 +279,8 @@
             "meaning": "実験の枠組み、実験モデル",
             "usage": "その研究は、新しい実験パラダイムを導入することで画期的な成果を上げた。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/2_0.wav"
       },
       {
         "en": "Contrary to the prevailing consensus, our longitudinal data suggest that socioeconomic variables confound the observed correlation to a statistically significant degree.",
@@ -300,7 +301,8 @@
             "meaning": "観察された相関関係",
             "usage": "The observed correlation does not necessarily imply causation. (観察された相関関係は、必ずしも因果関係を意味しない。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/2_1.wav"
       },
       {
         "en": "The heterogeneous composition of the control group inadvertently introduced a source of systematic bias that subsequent meta-analyses must rigorously account for.",
@@ -8981,5 +8983,306 @@
       }
     ],
     "createdAt": "2026-06-10T22:27:22.418Z"
+  },
+  {
+    "id": "t17812991500578974",
+    "title": "Integrating ESG Principles into Core Business Strategy",
+    "titleJa": "ESG原則の事業戦略への統合",
+    "category": "Business",
+    "sentences": [
+      {
+        "en": "The board of directors recently convened to deliberate on the imperative of embedding Environmental, Social, and Governance (ESG) principles more deeply into Apex Solutions' overarching corporate strategy.",
+        "ja": "取締役会は先日、エイペックス・ソリューションズの全体的な企業戦略に、環境・社会・ガバナンス（ESG）原則をより深く組み込むことの喫緊性を議論するため、招集されました。",
+        "audioPath": "./assets/audio/t17812991500578974_0.wav",
+        "phrases": [
+          {
+            "phrase": "board of directors",
+            "meaning": "取締役会",
+            "usage": "The board of directors approved the new budget. (取締役会は新しい予算を承認した。)"
+          },
+          {
+            "phrase": "deliberate on",
+            "meaning": "〜について熟考する、審議する",
+            "usage": "They deliberated on the proposal for hours. (彼らはその提案について何時間も熟考した。)"
+          },
+          {
+            "phrase": "embedding ... into",
+            "meaning": "〜に〜を組み込む、浸透させる",
+            "usage": "We need to embed these values into our company culture. (これらの価値観を企業文化に浸透させる必要がある。)"
+          },
+          {
+            "phrase": "overarching corporate strategy",
+            "meaning": "包括的な企業戦略",
+            "usage": "This project is key to our overarching corporate strategy. (このプロジェクトは我々の包括的な企業戦略の鍵となる。)"
+          }
+        ]
+      },
+      {
+        "en": "Historically, our approach to corporate social responsibility was somewhat siloed, often perceived as a peripheral philanthropic endeavor rather than an integral component of value creation.",
+        "ja": "これまで、当社の企業の社会的責任への取り組みは、やや孤立しており、価値創造の不可欠な要素というよりも、周辺的な慈善活動として捉えられがちでした。",
+        "audioPath": "./assets/audio/t17812991500578974_1.wav",
+        "phrases": [
+          {
+            "phrase": "corporate social responsibility",
+            "meaning": "企業の社会的責任",
+            "usage": "CSR活動は現代のビジネスにおいて重要視されています。"
+          },
+          {
+            "phrase": "siloed approach",
+            "meaning": "部門ごとに分断されたアプローチ",
+            "usage": "部署間の連携不足がsiloed approachを生むことがあります。"
+          },
+          {
+            "phrase": "peripheral philanthropic endeavor",
+            "meaning": "周辺的な慈善活動",
+            "usage": "CSRを単なるperipheral philanthropic endeavorと見なすべきではありません。"
+          },
+          {
+            "phrase": "integral component",
+            "meaning": "不可欠な構成要素",
+            "usage": "イノベーションは企業の成長にとってintegral componentです。"
+          }
+        ]
+      },
+      {
+        "en": "However, the evolving landscape of investor expectations and regulatory scrutiny necessitates a paradigm shift towards holistic sustainability integration.",
+        "ja": "しかし、投資家の期待や規制当局の監視の状況が変化する中、持続可能性の全体的な統合へとパラダイムシフトを図る必要が生じています。",
+        "audioPath": "./assets/audio/t17812991500578974_2.wav",
+        "phrases": [
+          {
+            "phrase": "evolving landscape",
+            "meaning": "変化し続ける状況",
+            "usage": "The evolving landscape of technology requires constant learning. (技術の進化し続ける状況は、絶え間ない学習を必要とする)"
+          },
+          {
+            "phrase": "regulatory scrutiny",
+            "meaning": "規制当局による厳しい監視",
+            "usage": "Companies face increased regulatory scrutiny in the financial sector. (金融セクターでは、企業は規制当局による監視の強化に直面している)"
+          },
+          {
+            "phrase": "necessitates a paradigm shift",
+            "meaning": "パラダイムシフト（考え方や枠組みの根本的な転換）を必要とする",
+            "usage": "The pandemic necessitates a paradigm shift in how we work. (パンデミックは、働き方におけるパラダイムシフトを必要としている)"
+          },
+          {
+            "phrase": "holistic sustainability integration",
+            "meaning": "包括的なサステナビリティ（持続可能性）の統合",
+            "usage": "Holistic sustainability integration means considering environmental, social, and economic factors together. (包括的なサステナビリティ統合とは、環境的、社会的、経済的要因をまとめて考慮することを意味する)"
+          }
+        ]
+      },
+      {
+        "en": "Our CEO underscored that a robust ESG framework is no longer merely a 'nice-to-have' but a fundamental driver of long-term resilience and competitive advantage.",
+        "ja": "最高経営責任者（CEO）は、強固なESGフレームワークがもはや単なる「あれば良いもの」ではなく、長期的な回復力と競争優位性の根本的な推進力であると強調しました。",
+        "audioPath": "./assets/audio/t17812991500578974_3.wav",
+        "phrases": [
+          {
+            "phrase": "underscored that",
+            "meaning": "〜であることを強調した",
+            "usage": "会議などで重要な点を強調する際に使われる表現です。"
+          },
+          {
+            "phrase": "robust ESG framework",
+            "meaning": "堅牢なESG（環境・社会・ガバナンス）の枠組み",
+            "usage": "企業の持続可能性や社会的責任を示す上で重要な概念です。"
+          },
+          {
+            "phrase": "no longer merely a 'nice-to-have'",
+            "meaning": "もはや単なる「あれば嬉しいもの」ではない",
+            "usage": "必須の要素であることを示す際に使われます。"
+          },
+          {
+            "phrase": "fundamental driver of",
+            "meaning": "〜の根本的な推進力・要因",
+            "usage": "長期的な成功や成長の鍵となる要素を説明するのに適しています。"
+          }
+        ]
+      },
+      {
+        "en": "Key stakeholders, including institutional investors and younger talent, are increasingly scrutinizing our environmental footprint and social impact.",
+        "ja": "機関投資家や若手人材を含む主要なステークホルダーは、当社の環境負荷や社会的影響に対し、ますます厳しい目を向けています。",
+        "audioPath": "./assets/audio/t17812991500578974_4.wav",
+        "phrases": [
+          {
+            "phrase": "key stakeholders",
+            "meaning": "主要な関係者",
+            "usage": "企業の意思決定に影響を与える重要な人々や組織を指します。"
+          },
+          {
+            "phrase": "institutional investors",
+            "meaning": "機関投資家",
+            "usage": "年金基金や保険会社など、大規模な資金を運用する投資家を指します。"
+          },
+          {
+            "phrase": "younger talent",
+            "meaning": "若手人材",
+            "usage": "企業の将来を担う若い従業員や候補者を指す際に使われます。"
+          },
+          {
+            "phrase": "scrutinizing our environmental footprint and social impact",
+            "meaning": "私たちの環境負荷と社会的影響を精査している",
+            "usage": "企業がESG（環境・社会・ガバナンス）への取り組みを厳しく評価されている状況を表します。"
+          }
+        ]
+      },
+      {
+        "en": "The challenge lies in translating these high-level aspirations into concrete, measurable objectives across all operational divisions.",
+        "ja": "課題は、これらの高尚な目標を、すべての事業部門において具体的かつ測定可能な目標へと落とし込むことにあります。",
+        "audioPath": "./assets/audio/t17812991500578974_5.wav",
+        "phrases": [
+          {
+            "phrase": "lies in",
+            "meaning": "〜にある、〜に潜んでいる",
+            "usage": "The key to success lies in hard work. 成功の鍵は勤勉さにある。"
+          },
+          {
+            "phrase": "high-level aspirations",
+            "meaning": "高次の願望、大志",
+            "usage": "This is a common phrase in strategic planning documents. これは戦略計画文書でよく使われる表現です。"
+          },
+          {
+            "phrase": "concrete, measurable objectives",
+            "meaning": "具体的で測定可能な目標",
+            "usage": "Setting concrete, measurable objectives is crucial for project success. 具体的で測定可能な目標を設定することは、プロジェクト成功に不可欠です。"
+          },
+          {
+            "phrase": "across all operational divisions",
+            "meaning": "すべての事業部門にわたって",
+            "usage": "This phrase emphasizes broad application within an organization. このフレーズは、組織内での広範な適用を強調します。"
+          }
+        ]
+      },
+      {
+        "en": "We must meticulously identify material ESG issues pertinent to our industry and develop actionable strategies to address them proactively.",
+        "ja": "私たちは、当社の業界に関連する重要なESG課題を綿密に特定し、それらに積極的に対処するための実行可能な戦略を策定しなければなりません。",
+        "audioPath": "./assets/audio/t17812991500578974_6.wav",
+        "phrases": [
+          {
+            "phrase": "meticulously identify",
+            "meaning": "綿密に特定する",
+            "usage": "問題点や原因などを詳細に調べる際に使います。"
+          },
+          {
+            "phrase": "ESG issues",
+            "meaning": "ESG（環境・社会・ガバナンス）課題",
+            "usage": "企業の持続可能性や社会的責任に関連する重要なテーマです。"
+          },
+          {
+            "phrase": "pertinent to",
+            "meaning": "〜に関連する、〜に適切な",
+            "usage": "our industry に関連する issues のように、文脈に合うものを特定する際に使います。"
+          },
+          {
+            "phrase": "actionable strategies",
+            "meaning": "実行可能な戦略",
+            "usage": "具体的な行動に移せる計画や方策を指します。"
+          }
+        ]
+      },
+      {
+        "en": "This endeavor will entail cross-functional collaboration, fostering a culture where sustainability is ingrained in every decision-making process.",
+        "ja": "この取り組みには、部門横断的な協力が不可欠であり、持続可能性があらゆる意思決定プロセスに深く根ざした文化を育むことになります。",
+        "audioPath": "./assets/audio/t17812991500578974_7.wav",
+        "phrases": [
+          {
+            "phrase": "entail cross-functional collaboration",
+            "meaning": "部門横断的な協力を伴う",
+            "usage": "This project will entail cross-functional collaboration. (このプロジェクトは部門横断的な協力を伴うでしょう。)"
+          },
+          {
+            "phrase": "fostering a culture",
+            "meaning": "文化を育成する",
+            "usage": "fostering a culture of innovation (イノベーション文化の育成)"
+          },
+          {
+            "phrase": "ingrained in every decision-making process",
+            "meaning": "あらゆる意思決定プロセスに根付いている",
+            "usage": "Sustainability is ingrained in every decision-making process. (サステナビリティはあらゆる意思決定プロセスに根付いている。)"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, transparent reporting mechanisms are crucial to effectively communicate our progress and accountability to both internal and external audiences.",
+        "ja": "さらに、透明性の高い報告メカニズムは、内部および外部の双方の利害関係者に対し、当社の進捗と説明責任を効果的に伝える上で極めて重要です。",
+        "audioPath": "./assets/audio/t17812991500578974_8.wav",
+        "phrases": [
+          {
+            "phrase": "transparent reporting mechanisms",
+            "meaning": "透明性のある報告体制",
+            "usage": "企業の透明性を高めるために不可欠な要素です。"
+          },
+          {
+            "phrase": "crucial to",
+            "meaning": "〜にとって極めて重要である",
+            "usage": "This information is crucial to our decision-making.（この情報は私たちの意思決定にとって極めて重要です。）"
+          },
+          {
+            "phrase": "effectively communicate",
+            "meaning": "効果的に伝える",
+            "usage": "The manager needs to effectively communicate the new strategy to the team.（マネージャーは新しい戦略をチームに効果的に伝える必要があります。）"
+          },
+          {
+            "phrase": "internal and external audiences",
+            "meaning": "社内外の関係者",
+            "usage": "企業の広報活動において、社内外の関係者への情報発信は重要です。"
+          }
+        ]
+      },
+      {
+        "en": "Embracing a comprehensive ESG strategy is expected to yield manifold benefits, from enhanced brand reputation and increased investor confidence to operational efficiencies.",
+        "ja": "包括的なESG戦略を取り入れることで、ブランドイメージの向上や投資家信頼度の増加から、業務効率の改善に至るまで、多岐にわたる恩恵がもたらされると期待されています。",
+        "audioPath": "./assets/audio/t17812991500578974_9.wav",
+        "phrases": [
+          {
+            "phrase": "yield manifold benefits",
+            "meaning": "多くの多様な利益をもたらす",
+            "usage": "その投資は多岐にわたる恩恵を生むだろう (The investment is expected to yield manifold benefits)."
+          },
+          {
+            "phrase": "Embracing a comprehensive strategy",
+            "meaning": "包括的な戦略を採用する",
+            "usage": "新しい方針を積極的に導入する、といった文脈で使う。"
+          },
+          {
+            "phrase": "operational efficiencies",
+            "meaning": "業務効率",
+            "usage": "コスト削減や生産性向上を目指す文脈で使う。"
+          }
+        ]
+      },
+      {
+        "en": "It also serves as a potent tool for attracting and retaining top-tier talent, who are increasingly drawn to purpose-driven organizations.",
+        "ja": "また、目的意識の高い組織に惹かれる傾向がある優秀な人材を引きつけ、定着させる強力な手段ともなります。",
+        "audioPath": "./assets/audio/t17812991500578974_10.wav",
+        "phrases": [
+          {
+            "phrase": "serves as a potent tool for",
+            "meaning": "〜のための強力な手段となる",
+            "usage": "This software serves as a potent tool for data analysis. (このソフトウェアはデータ分析のための強力な手段となる。)"
+          },
+          {
+            "phrase": "attracting and retaining",
+            "meaning": "（優秀な人材などを）獲得し、維持する",
+            "usage": "Companies need effective strategies for attracting and retaining employees. (企業は従業員を引きつけ、維持するための効果的な戦略を必要としている。)"
+          },
+          {
+            "phrase": "top-tier talent",
+            "meaning": "トップレベルの人材",
+            "usage": "We are looking for top-tier talent to join our team. (私たちはチームに参加するトップレベルの人材を探しています。)"
+          },
+          {
+            "phrase": "purpose-driven organizations",
+            "meaning": "目的主導型の組織",
+            "usage": "Millennials are often attracted to purpose-driven organizations. (ミレニアル世代は、目的主導型の組織に惹かれることが多い。)"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, integrating ESG is not merely about compliance; it's about future-proofing our business and ensuring long-term value creation for all stakeholders.",
+        "ja": "最終的に、ESGの統合は単なる法令遵守に留まらず、当社の事業を将来にわたって維持し、すべてのステークホルダーのために長期的な価値を創造することに他なりません。",
+        "audioPath": "./assets/audio/t17812991500578974_11.wav"
+      }
+    ],
+    "createdAt": "2026-06-12T21:19:10.057Z"
   }
 ]
