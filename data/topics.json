@@ -323,7 +323,8 @@
             "meaning": "異質な構成、多様な構成",
             "usage": "チームの多様な構成が、革新的なアイデアを生み出した。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/2_2.wav"
       },
       {
         "en": "We employed a mixed-methods approach, triangulating qualitative ethnographic observations with quantitative biomarker measurements to corroborate our primary hypothesis.",
@@ -9280,9 +9281,349 @@
       {
         "en": "Ultimately, integrating ESG is not merely about compliance; it's about future-proofing our business and ensuring long-term value creation for all stakeholders.",
         "ja": "最終的に、ESGの統合は単なる法令遵守に留まらず、当社の事業を将来にわたって維持し、すべてのステークホルダーのために長期的な価値を創造することに他なりません。",
-        "audioPath": "./assets/audio/t17812991500578974_11.wav"
+        "audioPath": "./assets/audio/t17812991500578974_11.wav",
+        "phrases": [
+          {
+            "phrase": "future-proofing our business",
+            "meaning": "事業の将来性を確保する",
+            "usage": "システムのfuture-proofingはセキュリティ対策の要だ。"
+          },
+          {
+            "phrase": "long-term value creation",
+            "meaning": "長期的な価値創造",
+            "usage": "短期的な利益追求ではなく、long-term value creationを目指すべきだ。"
+          },
+          {
+            "phrase": "not merely about compliance",
+            "meaning": "単なるコンプライアンスの問題ではない",
+            "usage": "「not merely about profit; it's about social impact. (単に利益だけでなく、社会的な影響も重要だ)」のように、対比構造で使う。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-06-12T21:19:10.057Z"
+  },
+  {
+    "id": "t17813812517557262",
+    "title": "Forging a Global Climate Consensus",
+    "titleJa": "世界的な気候変動合意の形成",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "Global climate negotiations remain a labyrinthine endeavor, fraught with divergent national interests and profound economic implications.",
+        "ja": "世界的な気候変動交渉は、各国の異なる国益と深刻な経済的影響が絡み合い、依然として複雑な取り組みとなっています。",
+        "audioPath": "./assets/audio/t17813812517557262_0.wav",
+        "phrases": [
+          {
+            "phrase": "negotiations remain a labyrinthine endeavor",
+            "meaning": "交渉は複雑で迷路のような取り組みであり続ける",
+            "usage": "The project remained a labyrinthine endeavor due to unforeseen complications."
+          },
+          {
+            "phrase": "fraught with",
+            "meaning": "〜でいっぱいの、〜をはらんだ",
+            "usage": "The situation was fraught with danger."
+          },
+          {
+            "phrase": "divergent national interests",
+            "meaning": "国家間の利害の対立",
+            "usage": "The trade talks failed because of divergent national interests."
+          },
+          {
+            "phrase": "profound economic implications",
+            "meaning": "重大な経済的影響",
+            "usage": "The new policy has profound economic implications for the industry."
+          }
+        ]
+      },
+      {
+        "en": "The escalating frequency and intensity of extreme weather events underscore the urgent imperative for concerted international action.",
+        "ja": "極端な気象現象の頻度と激化が進んでいることは、国際社会が協調して行動することの喫緊の必要性を強調しています。",
+        "audioPath": "./assets/audio/t17813812517557262_1.wav",
+        "phrases": [
+          {
+            "phrase": "escalating frequency and intensity",
+            "meaning": "増加する頻度と激しさ",
+            "usage": "自然災害や問題の深刻化を表す際によく使われます。"
+          },
+          {
+            "phrase": "extreme weather events",
+            "meaning": "異常気象（による出来事）",
+            "usage": "気候変動に関連する報道で頻繁に登場する表現です。"
+          },
+          {
+            "phrase": "underscore the urgent imperative",
+            "meaning": "緊急の必要性を強調する",
+            "usage": "「～の喫緊の課題を浮き彫りにする」といったニュアンスで、問題の重要性を訴える際に使われます。"
+          },
+          {
+            "phrase": "concerted international action",
+            "meaning": "協調された国際的な行動",
+            "usage": "地球規模の課題解決のために、各国が協力して取り組む必要性を説く文脈で使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Achieving a truly equitable and enforceable global agreement continues to elude policymakers, despite years of intense diplomatic engagement.",
+        "ja": "長年にわたる集中的な外交努力にもかかわらず、真に公平かつ強制力のある世界的な合意の達成は、依然として政策立案者たちの手をすり抜けています。",
+        "audioPath": "./assets/audio/t17813812517557262_2.wav",
+        "phrases": [
+          {
+            "phrase": "truly equitable",
+            "meaning": "真に公平な",
+            "usage": "a truly equitable distribution of wealth のように、公平さの度合いを強調する際に使う"
+          },
+          {
+            "phrase": "enforceable global agreement",
+            "meaning": "施行可能な国際合意",
+            "usage": "国際的な取り決めが実際に守られることを示す際に使われる重要な表現"
+          },
+          {
+            "phrase": "continues to elude",
+            "meaning": "依然としてつかみきれない、達成できない",
+            "usage": "目標や解決策がなかなか実現しない状況を表すのに適している"
+          },
+          {
+            "phrase": "diplomatic engagement",
+            "meaning": "外交的関与、交渉",
+            "usage": "国際関係や政治の文脈で、国家間の話し合いや協力関係を指す"
+          }
+        ]
+      },
+      {
+        "en": "Developing nations often assert their right to economic growth, contending that industrialized countries bear primary historical responsibility for accumulated emissions.",
+        "ja": "発展途上国は、経済成長の権利を主張し、工業化された国々がこれまでの排出量に対し、主要な歴史的責任を負っていると主張することがよくあります。",
+        "audioPath": "./assets/audio/t17813812517557262_3.wav",
+        "phrases": [
+          {
+            "phrase": "Developing nations",
+            "meaning": "発展途上国",
+            "usage": "先進国 (developed countries) と対比して使われることが多い表現です。"
+          },
+          {
+            "phrase": "assert their right",
+            "meaning": "権利を主張する",
+            "usage": "権利を強く主張する際に用いられます。"
+          },
+          {
+            "phrase": "economic growth",
+            "meaning": "経済成長",
+            "usage": "経済発展の文脈で頻繁に使われる基本的なコロケーションです。"
+          },
+          {
+            "phrase": "bear primary historical responsibility",
+            "meaning": "主な歴史的責任を負う",
+            "usage": "過去の行動に対する責任の所在を議論する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The monumental task of transitioning away from fossil fuels presents formidable economic challenges, particularly for resource-dependent economies.",
+        "ja": "化石燃料からの転換という途方もない課題は、特に資源に依存する経済にとって、手ごわい経済的課題を提示します。",
+        "audioPath": "./assets/audio/t17813812517557262_4.wav",
+        "phrases": [
+          {
+            "phrase": "transitioning away from",
+            "meaning": "〜から移行する",
+            "usage": "transitioning away from fossil fuels は、化石燃料からの脱却を意味します。"
+          },
+          {
+            "phrase": "presents challenges",
+            "meaning": "課題をもたらす、困難を引き起こす",
+            "usage": "This new policy presents challenges for small businesses. のように使われます。"
+          },
+          {
+            "phrase": "resource-dependent economies",
+            "meaning": "資源依存型経済",
+            "usage": "資源の輸出に頼っている国の経済を指します。"
+          }
+        ]
+      },
+      {
+        "en": "Technological breakthroughs in renewable energy and carbon capture, while promising, require substantial investment and widespread deployment to be effective.",
+        "ja": "再生可能エネルギーや炭素回収における技術的進歩は有望であるものの、効果を発揮するには多大な投資と広範な展開が必要です。",
+        "audioPath": "./assets/audio/t17813812517557262_5.wav",
+        "phrases": [
+          {
+            "phrase": "Technological breakthroughs",
+            "meaning": "技術的飛躍、画期的な進歩",
+            "usage": "breakthroughs in AI のように、分野を特定して使うことが多い"
+          },
+          {
+            "phrase": "renewable energy",
+            "meaning": "再生可能エネルギー",
+            "usage": "再生可能エネルギー源（太陽光、風力など）を指す一般的な言葉"
+          },
+          {
+            "phrase": "carbon capture",
+            "meaning": "炭素回収（技術）",
+            "usage": "大気中の二酸化炭素を回収・貯留する技術を指す"
+          },
+          {
+            "phrase": "substantial investment",
+            "meaning": "相当な投資、多額の投資",
+            "usage": "significant investment とほぼ同義で、大きな資金が必要な場合に使われる"
+          }
+        ]
+      },
+      {
+        "en": "Discussions around \"loss and damage\" funding have become a contentious point, highlighting the stark inequalities in climate vulnerability and historical accountability.",
+        "ja": "「損失と損害」基金を巡る議論は、気候変動に対する脆弱性と歴史的責任における著しい不平等を浮き彫りにし、論争の的となっています。",
+        "audioPath": "./assets/audio/t17813812517557262_6.wav",
+        "phrases": [
+          {
+            "phrase": "loss and damage",
+            "meaning": "損失と損害（気候変動による被害への補償を指す文脈で使われることが多い）",
+            "usage": "気候変動交渉の文脈で頻出する専門用語です。"
+          },
+          {
+            "phrase": "contentious point",
+            "meaning": "議論を呼ぶ論点、争点",
+            "usage": "意見が対立しやすい問題について使われます。"
+          },
+          {
+            "phrase": "stark inequalities",
+            "meaning": "明白な不平等、著しい格差",
+            "usage": "社会や経済における大きな差を強調する際に用いられます。"
+          },
+          {
+            "phrase": "historical accountability",
+            "meaning": "歴史的な責任、過去の行為に対する責任",
+            "usage": "過去の出来事や政策が現在の状況に与える影響とその責任を問う際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Geopolitical rivalries frequently impede progress, as major powers strategically position themselves in the emerging green economy.",
+        "ja": "主要国が台頭するグリーン経済において戦略的に自らの地位を確立しようとするため、地政学的な対立がしばしば進展を妨げます。",
+        "audioPath": "./assets/audio/t17813812517557262_7.wav",
+        "phrases": [
+          {
+            "phrase": "geopolitical rivalries",
+            "meaning": "地政学的な対立",
+            "usage": "国家間の政治的・地理的な利害の対立を指す場合に使う"
+          },
+          {
+            "phrase": "impede progress",
+            "meaning": "進歩を妨げる",
+            "usage": "開発や改革などが進むのを阻害する状況で使う"
+          },
+          {
+            "phrase": "strategically position themselves",
+            "meaning": "戦略的に自分たちの立場を確立する",
+            "usage": "企業や国家が競争優位を得るために、有利な位置につくことを意味する"
+          },
+          {
+            "phrase": "emerging green economy",
+            "meaning": "台頭しつつあるグリーン経済（環境に配慮した経済）",
+            "usage": "持続可能性や環境技術に関連する新しい経済分野を指す"
+          }
+        ]
+      },
+      {
+        "en": "The perennial struggle to define fair and differentiated responsibilities for emissions reductions is central to any viable consensus.",
+        "ja": "排出量削減における公平で差別化された責任を定義するための絶え間ない闘いは、いかなる実行可能な合意にとっても中心的課題です。",
+        "audioPath": "./assets/audio/t17813812517557262_8.wav",
+        "phrases": [
+          {
+            "phrase": "perennial struggle",
+            "meaning": "絶え間ない、長年の闘い",
+            "usage": "The perennial struggle for survival は「生き残りをかけた絶え間ない闘い」という意味で使われます。"
+          },
+          {
+            "phrase": "emissions reductions",
+            "meaning": "排出量削減",
+            "usage": "Climate change mitigation における重要なキーワードです。"
+          },
+          {
+            "phrase": "viable consensus",
+            "meaning": "実行可能な合意、実現可能なコンセンサス",
+            "usage": "A viable consensus on climate action は「気候変動対策に関する実行可能な合意」を意味します。"
+          }
+        ]
+      },
+      {
+        "en": "Meanwhile, non-state actors, including multinational corporations and environmental NGOs, exert considerable influence, advocating for more ambitious climate targets.",
+        "ja": "一方、多国籍企業や環境NGOを含む非国家主体は、より野心的な気候目標を提唱し、かなりの影響力を行使しています。",
+        "audioPath": "./assets/audio/t17813812517557262_9.wav",
+        "phrases": [
+          {
+            "phrase": "exert considerable influence",
+            "meaning": "かなりの影響力を行使する",
+            "usage": "The company exerts considerable influence on the market. (その企業は市場にかなりの影響力を行使している。)"
+          },
+          {
+            "phrase": "advocating for",
+            "meaning": "〜を提唱する、〜を主張する",
+            "usage": "They are advocating for policy changes. (彼らは政策変更を提唱している。)"
+          },
+          {
+            "phrase": "non-state actors",
+            "meaning": "非国家主体",
+            "usage": "国際関係や社会問題の文脈で使われる。"
+          },
+          {
+            "phrase": "ambitious climate targets",
+            "meaning": "野心的な気候目標",
+            "usage": "ambitious goals/plans/projects のように、様々な目標や計画と組み合わせられる。"
+          }
+        ]
+      },
+      {
+        "en": "Mounting public pressure and youth activism worldwide serve as a potent catalyst, urging leaders to transcend political gridlock and act decisively.",
+        "ja": "世界中で高まる世論の圧力と若者の活動は、強力な触媒として機能し、指導者たちに政治的膠着状態を乗り越え、断固として行動するよう促しています。",
+        "audioPath": "./assets/audio/t17813812517557262_10.wav",
+        "phrases": [
+          {
+            "phrase": "Mounting public pressure",
+            "meaning": "高まる世論の圧力",
+            "usage": "The company faced mounting public pressure to improve its environmental record. (その会社は環境記録改善への世論の圧力の高まりに直面した。)"
+          },
+          {
+            "phrase": "youth activism",
+            "meaning": "若者の活動主義、若者による社会運動",
+            "usage": "Youth activism is playing a crucial role in addressing climate change. (若者の活動主義は気候変動問題に取り組む上で重要な役割を果たしている。)"
+          },
+          {
+            "phrase": "potent catalyst",
+            "meaning": "強力な触媒、強力なきっかけ",
+            "usage": "This discovery could serve as a potent catalyst for future research. (この発見は、将来の研究のための強力な触媒となりうる。)"
+          },
+          {
+            "phrase": "political gridlock",
+            "meaning": "政治的膠着状態、行き詰まり",
+            "usage": "The government is struggling to overcome political gridlock and pass essential legislation. (政府は政治的膠着状態を乗り越え、不可欠な法案を可決するのに苦労している。)"
+          }
+        ]
+      },
+      {
+        "en": "Despite persistent hurdles, the ongoing dialogue reflects a tacit recognition that collective action is indispensable for safeguarding planetary habitability for future generations.",
+        "ja": "絶え間ない障害にもかかわらず、進行中の対話は、将来の世代のために地球の居住可能性を守るには集団的行動が不可欠であるという暗黙の認識を反映しています。",
+        "audioPath": "./assets/audio/t17813812517557262_11.wav",
+        "phrases": [
+          {
+            "phrase": "persistent hurdles",
+            "meaning": "根強い障害、継続的な困難",
+            "usage": "経済成長のpersistent hurdlesを克服する。"
+          },
+          {
+            "phrase": "tacit recognition",
+            "meaning": "暗黙の認識、黙認",
+            "usage": "tacit agreement (暗黙の合意) のようにも使う。"
+          },
+          {
+            "phrase": "indispensable for",
+            "meaning": "〜にとって不可欠な、必須の",
+            "usage": "成功には努力がindispensable for achieving goals のように使う。"
+          },
+          {
+            "phrase": "collective action",
+            "meaning": "共同行動、集団的行動",
+            "usage": "collective responsibility (集団的責任) のようにも使える。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-13T20:07:31.755Z"
   }
 ]
