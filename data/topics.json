@@ -345,7 +345,8 @@
             "meaning": "主要な仮説を裏付ける、確証する",
             "usage": "新たな証拠が彼の主張をcorroborateした"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/2_3.wav"
       },
       {
         "en": "The reproducibility crisis in social psychology necessitates that researchers pre-register their hypotheses and analytical protocols prior to data collection.",
@@ -9625,5 +9626,298 @@
       }
     ],
     "createdAt": "2026-06-13T20:07:31.755Z"
+  },
+  {
+    "id": "t17814678589546248",
+    "title": "Post-Exhibition Reflections",
+    "titleJa": "展覧会後の考察",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I finally made it to the 'Modern Perspectives' exhibition at the city gallery last weekend, and it was quite an immersive experience.",
+        "ja": "先週末、ようやく市立美術館の『現代の視点』展に行ってきたんですが、実に没入感のある体験でした。",
+        "audioPath": "./assets/audio/t17814678589546248_0.wav",
+        "phrases": [
+          {
+            "phrase": "made it to",
+            "meaning": "ついに〜にたどり着く、〜を達成する",
+            "usage": "長い間行きたかった場所や、困難だった目標を達成した際に使う表現です。"
+          },
+          {
+            "phrase": "quite an immersive experience",
+            "meaning": "非常に没入感のある体験",
+            "usage": "「quite an + 名詞」で「かなりの〜」「驚くほどの〜」という意味になり、体験の度合いを強調します。"
+          }
+        ]
+      },
+      {
+        "en": "The curatorial choices were particularly compelling, showcasing a diverse array of contemporary artists whose works truly challenged conventional notions.",
+        "ja": "キュレーションの選択が特に秀逸で、従来の概念に挑戦するような多岐にわたる現代アーティストの作品が展示されていましたね。",
+        "audioPath": "./assets/audio/t17814678589546248_1.wav",
+        "phrases": [
+          {
+            "phrase": "curatorial choices",
+            "meaning": "キュレーターによる選定",
+            "usage": "展覧会や美術館での展示品選定について使われる表現です。"
+          },
+          {
+            "phrase": "diverse array of",
+            "meaning": "多様な〜の配列、品揃え",
+            "usage": "様々な種類のものが集まっている様子を表す際に便利です。"
+          },
+          {
+            "phrase": "challenged conventional notions",
+            "meaning": "従来の概念に挑戦した",
+            "usage": "既存の考え方や固定観念を覆すような新しい視点やアイデアを提示する文脈で使われます。"
+          }
+        ]
+      },
+      {
+        "en": "One installation, a multimedia piece exploring urban decay, left a particularly profound impression on me.",
+        "ja": "都市の衰退を探求したあるマルチメディア作品のインスタレーションは、特に深い感銘を与えました。",
+        "audioPath": "./assets/audio/t17814678589546248_2.wav",
+        "phrases": [
+          {
+            "phrase": "multimedia piece",
+            "meaning": "マルチメディア作品",
+            "usage": "a multimedia piece of art のように、芸術作品を指すことが多いです。"
+          },
+          {
+            "phrase": "urban decay",
+            "meaning": "都市の荒廃",
+            "usage": "都市部の衰退や老朽化を表す際に使われます。"
+          },
+          {
+            "phrase": "profound impression",
+            "meaning": "深い感銘、強い印象",
+            "usage": "非常に強い影響や感動を受けたことを示す表現です。"
+          }
+        ]
+      },
+      {
+        "en": "I found myself pondering its implications long after I'd left the gallery, which is always a sign of impactful art, wouldn't you agree?",
+        "ja": "ギャラリーを後にしてもその作品が持つ意味合いについて考えさせられ、これは心に残る芸術の証だといつも思うのですが、あなたもそう思いませんか？",
+        "audioPath": "./assets/audio/t17814678589546248_3.wav",
+        "phrases": [
+          {
+            "phrase": "pondering its implications",
+            "meaning": "その含意について熟考する",
+            "usage": "問題の根本的な意味合いを深く考える際に使えます。"
+          },
+          {
+            "phrase": "long after",
+            "meaning": "〜のずっと後まで",
+            "usage": "ある出来事が終わった後も、その影響が長く続くことを示します。"
+          },
+          {
+            "phrase": "a sign of",
+            "meaning": "〜の兆候、しるし",
+            "usage": "ある事柄が別の事柄の原因や結果であることを示す際に使われます。"
+          },
+          {
+            "phrase": "impactful art",
+            "meaning": "心に響く芸術、影響力のある芸術",
+            "usage": "単に美しいだけでなく、鑑賞者に強い印象や考えを与える作品を指します。"
+          }
+        ]
+      },
+      {
+        "en": "There was also a fascinating series of abstract paintings that employed a vibrant palette to evoke a sense of nostalgic longing.",
+        "ja": "また、ノスタルジックな郷愁感を呼び起こすために鮮やかな色彩を用いた、魅力的な一連の抽象画もありました。",
+        "audioPath": "./assets/audio/t17814678589546248_4.wav",
+        "phrases": [
+          {
+            "phrase": "fascinating series",
+            "meaning": "魅力的な一連の〜",
+            "usage": "a fascinating series of events (魅力的な一連の出来事) のように使われます。"
+          },
+          {
+            "phrase": "abstract paintings",
+            "meaning": "抽象画",
+            "usage": "美術作品の説明でよく使われる表現です。"
+          },
+          {
+            "phrase": "vibrant palette",
+            "meaning": "鮮やかな色彩（パレット）",
+            "usage": "色彩豊かな様子を表す際に用いられます。"
+          },
+          {
+            "phrase": "evoke a sense of",
+            "meaning": "〜な感覚を呼び起こす",
+            "usage": "感情や雰囲気を引き出す際に使われる、非常に汎用性の高い表現です。"
+          }
+        ]
+      },
+      {
+        "en": "It's always refreshing to witness artists pushing the boundaries of their craft and offering fresh perspectives on universal themes.",
+        "ja": "アーティストがその技術の限界を押し広げ、普遍的なテーマに新たな視点を提供しているのを目の当たりにするのは、いつも新鮮な気持ちになりますね。",
+        "audioPath": "./assets/audio/t17814678589546248_5.wav",
+        "phrases": [
+          {
+            "phrase": "pushing the boundaries",
+            "meaning": "限界を押し広げる、新たな領域を開拓する",
+            "usage": "新しい技術やアイデアで既存の枠を超えることを指す場合によく使われます。"
+          },
+          {
+            "phrase": "fresh perspectives",
+            "meaning": "斬新な視点、新しい見方",
+            "usage": "既存の事柄に対して、これまでにない新鮮な捉え方や考え方を提示する際に用いられます。"
+          },
+          {
+            "phrase": "universal themes",
+            "meaning": "普遍的なテーマ",
+            "usage": "時代や文化を超えて、多くの人々が共感したり関心を持ったりするような、広く共通する題材を指します。"
+          }
+        ]
+      },
+      {
+        "en": "The sheer ingenuity displayed across the different mediums was truly inspiring, from kinetic sculptures to intricate digital art.",
+        "ja": "キネティック彫刻から精緻なデジタルアートまで、様々な媒体で披露された純粋な独創性には本当に感銘を受けました。",
+        "audioPath": "./assets/audio/t17814678589546248_6.wav",
+        "phrases": [
+          {
+            "phrase": "sheer ingenuity",
+            "meaning": "純粋な創意工夫、並外れた独創性",
+            "usage": "The sheer ingenuity of the design impressed everyone. (そのデザインの並外れた独創性は皆を感心させた。)"
+          },
+          {
+            "phrase": "displayed across",
+            "meaning": "〜全体にわたって披露された、見られた",
+            "usage": "Talent was displayed across all departments. (才能は全部署にわたって見られた。)"
+          },
+          {
+            "phrase": "kinetic sculptures",
+            "meaning": "キネティック・スカルプチャー（動く彫刻）",
+            "usage": "The museum featured several kinetic sculptures that moved with the air currents. (その美術館は、気流とともに動くいくつかのキネティック・スカルプチャーを展示していた。)"
+          },
+          {
+            "phrase": "intricate digital art",
+            "meaning": "複雑で精巧なデジタルアート",
+            "usage": "She spent months creating an intricate digital art piece. (彼女は複雑で精巧なデジタルアート作品を作るのに数ヶ月を費やした。)"
+          }
+        ]
+      },
+      {
+        "en": "Did you manage to catch it before it concluded? I believe it ran for another week or so.",
+        "ja": "会期が終わる前にご覧になれましたか？確かあと一週間くらいは開催されていたと思うのですが。",
+        "audioPath": "./assets/audio/t17814678589546248_7.wav",
+        "phrases": [
+          {
+            "phrase": "manage to do",
+            "meaning": "なんとか〜する、苦労して〜する",
+            "usage": "He managed to finish the report on time. のように、困難を乗り越えて何かを達成した状況で使われます。"
+          },
+          {
+            "phrase": "catch it",
+            "meaning": "（イベント・番組などを）間に合う、見逃さない",
+            "usage": "Did you catch the latest episode of that show? のように、見逃さずに済んだか尋ねる際に使われます。"
+          },
+          {
+            "phrase": "concluded",
+            "meaning": "（イベント・会議などが）終了した、終わった",
+            "usage": "The conference concluded yesterday. のように、公式な場やイベントの終了を伝える際に使われます。"
+          },
+          {
+            "phrase": "ran for",
+            "meaning": "（期間・上映期間などが）続いた",
+            "usage": "The exhibition ran for three months. のように、イベントや展示会などがどれくらいの期間継続したかを示す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "It's a shame if you missed it; I was particularly keen on discussing the socio-political commentary embedded within some of the pieces.",
+        "ja": "もし見逃されたのなら残念です。特に、いくつかの作品に込められた社会政治的な批評について議論したかったんです。",
+        "audioPath": "./assets/audio/t17814678589546248_8.wav",
+        "phrases": [
+          {
+            "phrase": "It's a shame if",
+            "meaning": "〜だったら残念だ",
+            "usage": "It's a shame if you missed the meeting. (会議を欠席したら残念でしたね)"
+          },
+          {
+            "phrase": "keen on",
+            "meaning": "〜に熱心である、〜に興味がある",
+            "usage": "He is keen on learning new languages. (彼は新しい言語を学ぶことに熱心です)"
+          },
+          {
+            "phrase": "embedded within",
+            "meaning": "〜の中に埋め込まれている",
+            "usage": "The hidden message was embedded within the text. (隠されたメッセージは本文の中に埋め込まれていた)"
+          }
+        ]
+      },
+      {
+        "en": "Perhaps there's another exhibition on the horizon that piques your interest? I'm always open to exploring new cultural venues.",
+        "ja": "もしかしたら、何か他に興味を引くような今後の展覧会はありますか？私はいつも新しい文化施設を探索することに意欲的です。",
+        "audioPath": "./assets/audio/t17814678589546248_9.wav",
+        "phrases": [
+          {
+            "phrase": "on the horizon",
+            "meaning": "間近に迫って、近く起こる",
+            "usage": "新しいプロジェクトがon the horizonだ。"
+          },
+          {
+            "phrase": "piques your interest",
+            "meaning": "興味をそそる、関心を引く",
+            "usage": "pique one's interest の形で「〜の興味をそそる」という意味で使う。"
+          },
+          {
+            "phrase": "open to exploring",
+            "meaning": "〜することに前向きである、〜を検討する用意がある",
+            "usage": "open to + 動名詞/名詞 の形で「〜に前向きである」と使う。"
+          }
+        ]
+      },
+      {
+        "en": "I've heard whispers about an upcoming retrospective featuring a renowned minimalist sculptor; that could be quite captivating.",
+        "ja": "著名なミニマリスト彫刻家を特集する回顧展が開催されるという噂を耳にしました。それはかなり魅力的かもしれませんね。",
+        "audioPath": "./assets/audio/t17814678589546248_10.wav",
+        "phrases": [
+          {
+            "phrase": "heard whispers about",
+            "meaning": "〜の噂を聞く",
+            "usage": "非公式な情報や噂が出回っている状況を表す際に使う"
+          },
+          {
+            "phrase": "upcoming retrospective",
+            "meaning": "今後の回顧展",
+            "usage": "芸術作品や人物の過去の業績を振り返る展覧会を指す"
+          },
+          {
+            "phrase": "renowned minimalist sculptor",
+            "meaning": "著名なミニマリスト彫刻家",
+            "usage": "特定の分野で高い評価を受けている人物を紹介する際に使う"
+          },
+          {
+            "phrase": "quite captivating",
+            "meaning": "非常に魅力的である",
+            "usage": "興味をそそられ、引きつけられる様子を表現する際に使う"
+          }
+        ]
+      },
+      {
+        "en": "Let me know if you're inclined to go, and we could potentially coordinate a visit together sometime next month.",
+        "ja": "もし行かれるご意向があればお知らせください。来月あたりにでも一緒に訪問を調整できるかもしれません。",
+        "audioPath": "./assets/audio/t17814678589546248_11.wav",
+        "phrases": [
+          {
+            "phrase": "Let me know",
+            "meaning": "知らせてください",
+            "usage": "相手に都合や意向を確認する際の定番表現です。"
+          },
+          {
+            "phrase": "inclined to go",
+            "meaning": "行く気がある、行く傾向がある",
+            "usage": "be inclined to do で「～する傾向がある、～したい気がする」という意味になります。"
+          },
+          {
+            "phrase": "coordinate a visit",
+            "meaning": "訪問を調整する",
+            "usage": "ビジネスシーンで、会議や訪問の日程などを調整する際によく使われます。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-14T20:10:58.954Z"
   }
 ]
