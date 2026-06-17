@@ -10253,5 +10253,273 @@
       }
     ],
     "createdAt": "2026-06-16T18:53:37.642Z"
+  },
+  {
+    "id": "t17817184601254974",
+    "title": "Reflecting on a Recent Art Exhibition",
+    "titleJa": "最近のアート展を振り返る",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I finally managed to catch that contemporary art exhibition everyone's been raving about last weekend.",
+        "ja": "先週末、ようやくみんなが絶賛していた現代アート展を観に行くことができました。",
+        "audioPath": "./assets/audio/t17817184601254974_0.wav",
+        "phrases": [
+          {
+            "phrase": "managed to catch",
+            "meaning": "なんとか〜できた、どうにか〜する",
+            "usage": "困難な状況で目標を達成した際に使う。「I managed to finish the report on time.」"
+          },
+          {
+            "phrase": "catch that contemporary art exhibition",
+            "meaning": "(展覧会などを)見に行く、鑑賞する",
+            "usage": "「Let's catch a movie tonight.」のように、特定のイベントやショーを見に行く際に使う。"
+          },
+          {
+            "phrase": "raving about",
+            "meaning": "〜を絶賛する、熱狂的に褒める",
+            "usage": "「The critics are raving about her performance.」のように、人や物の評判を伝える際に使う。"
+          }
+        ]
+      },
+      {
+        "en": "It was quite an immersive experience, to say the least, with installations that truly challenged conventional perceptions.",
+        "ja": "控えめに言っても、本当に没入感のある体験で、従来の認識に挑戦するようなインスタレーションばかりでしたね。",
+        "audioPath": "./assets/audio/t17817184601254974_1.wav",
+        "phrases": [
+          {
+            "phrase": "immersive experience",
+            "meaning": "没入感のある体験",
+            "usage": "A virtual reality tour can be an immersive experience. VRツアーは没入感のある体験になり得る。"
+          },
+          {
+            "phrase": "to say the least",
+            "meaning": "控えめに言っても",
+            "usage": "It was difficult, to say the least. 控えめに言っても、それは困難だった。"
+          },
+          {
+            "phrase": "challenged conventional perceptions",
+            "meaning": "従来の認識に異議を唱える、疑問を投げかける",
+            "usage": "The artist's work challenged conventional perceptions of beauty. その芸術家の作品は、美しさに関する従来の認識に異議を唱えた。"
+          }
+        ]
+      },
+      {
+        "en": "One particular piece, a multi-sensory sculpture, left an indelible impression on me.",
+        "ja": "特に印象的だったのは、多感覚を刺激するある彫刻作品で、忘れられない感動を残しました。",
+        "audioPath": "./assets/audio/t17817184601254974_2.wav",
+        "phrases": [
+          {
+            "phrase": "multi-sensory sculpture",
+            "meaning": "五感に訴える彫刻",
+            "usage": "視覚だけでなく、触覚や聴覚など複数の感覚に働きかける作品を指す場合に使う"
+          },
+          {
+            "phrase": "left an indelible impression",
+            "meaning": "消えない、忘れられない印象を残した",
+            "usage": "非常に強い影響や記憶に残る体験を表す際に用いられる表現"
+          }
+        ]
+      },
+      {
+        "en": "The artist's audacious use of mixed media was absolutely captivating, pushing the boundaries of artistic expression.",
+        "ja": "アーティストの大胆なミクストメディアの使い方はまさに魅力的で、芸術表現の限界を押し広げていました。",
+        "audioPath": "./assets/audio/t17817184601254974_3.wav",
+        "phrases": [
+          {
+            "phrase": "pushing the boundaries",
+            "meaning": "限界を押し広げる、常識を打ち破る",
+            "usage": "科学技術やビジネスの分野で「革新的な試み」を表現する際によく使われます。"
+          },
+          {
+            "phrase": "audacious use of",
+            "meaning": "大胆な使用、型破りな活用",
+            "usage": "audacious plan/decision (大胆な計画/決断) のように、\"audacious\" は様々な名詞と組み合わせて使えます。"
+          },
+          {
+            "phrase": "absolutely captivating",
+            "meaning": "非常に魅力的、完全に心を奪われるような",
+            "usage": "absolutely essential/stunning のように、強調したい形容詞と組み合わせて使うことで表現に力強さが増します。"
+          }
+        ]
+      },
+      {
+        "en": "I found myself pondering its deeper philosophical implications long after I'd left the gallery.",
+        "ja": "ギャラリーを出た後も、その作品のより深い哲学的意味についてずっと考えさせられました。",
+        "audioPath": "./assets/audio/t17817184601254974_4.wav",
+        "phrases": [
+          {
+            "phrase": "pondering its deeper philosophical implications",
+            "meaning": "そのより深い哲学的意味合いについて熟考する",
+            "usage": "単に「考える」だけでなく、深く、時間をかけて考えるニュアンスがあります。例えば、a complex issue を pondering するといった使い方です。"
+          },
+          {
+            "phrase": "long after",
+            "meaning": "〜のずっと後まで",
+            "usage": "ある出来事が終わった後も、その影響や記憶が長く続くことを表します。例: The memory lingered long after the party ended."
+          },
+          {
+            "phrase": "left the gallery",
+            "meaning": "美術館を出た",
+            "usage": "単に「場所を出る」というだけでなく、ある経験や場所から離れることを示唆します。例えば、left the meeting room のように、会議室を出る場合にも使えます。"
+          }
+        ]
+      },
+      {
+        "en": "Have you had a chance to visit it yet, or are you planning to before it closes?",
+        "ja": "あなたはもう行く機会がありましたか、それとも閉幕前に訪れる予定ですか？",
+        "audioPath": "./assets/audio/t17817184601254974_5.wav",
+        "phrases": [
+          {
+            "phrase": "have a chance to do",
+            "meaning": "〜する機会がある",
+            "usage": "Have you had a chance to review the report? （その報告書を確認する機会はありましたか？）"
+          },
+          {
+            "phrase": "planning to",
+            "meaning": "〜するつもりである",
+            "usage": "She is planning to move to London next year. （彼女は来年ロンドンに引っ越すつもりです。）"
+          },
+          {
+            "phrase": "before it closes",
+            "meaning": "それが閉まる前に、それが終了する前に",
+            "usage": "The museum will close at 5 PM, so visit before it closes. （その博物館は午後5時に閉館するので、閉まる前に行ってください。）"
+          }
+        ]
+      },
+      {
+        "en": "I'd highly recommend it if you appreciate avant-garde works that provoke thought and discussion.",
+        "ja": "思考や議論を喚起するような前衛的な作品がお好きなら、ぜひ強くお勧めしますよ。",
+        "audioPath": "./assets/audio/t17817184601254974_6.wav",
+        "phrases": [
+          {
+            "phrase": "highly recommend",
+            "meaning": "強く推薦する",
+            "usage": "This book is highly recommended for students. のように使います。"
+          },
+          {
+            "phrase": "avant-garde works",
+            "meaning": "前衛的な作品",
+            "usage": "The museum is known for its collection of avant-garde works. のように使います。"
+          },
+          {
+            "phrase": "provoke thought",
+            "meaning": "思考を促す",
+            "usage": "The documentary aims to provoke thought on environmental issues. のように使います。"
+          },
+          {
+            "phrase": "provoke discussion",
+            "meaning": "議論を呼び起こす",
+            "usage": "His controversial statement provoked discussion among the panel. のように使います。"
+          }
+        ]
+      },
+      {
+        "en": "The curatorial choices were exceptionally discerning, creating a cohesive narrative despite the diverse range of artists.",
+        "ja": "キュレーションの選択が非常に洗練されていて、多種多様なアーティスト作品にもかかわらず、一貫した物語性を生み出していました。",
+        "audioPath": "./assets/audio/t17817184601254974_7.wav",
+        "phrases": [
+          {
+            "phrase": "exceptionally discerning",
+            "meaning": "並外れて見識のある、非常に洞察力のある",
+            "usage": "人や判断の質の高さを評価する際に使う。"
+          },
+          {
+            "phrase": "cohesive narrative",
+            "meaning": "首尾一貫した物語/説明",
+            "usage": "プレゼンや戦略、ブランド構築などで「まとまりのある話」を意味する。"
+          },
+          {
+            "phrase": "diverse range of",
+            "meaning": "多様な〜、幅広い種類の〜",
+            "usage": "\"a diverse range of products\" のように、様々な種類があることを示す。"
+          }
+        ]
+      },
+      {
+        "en": "It's certainly a testament to the thriving cultural scene in our city, don't you think?",
+        "ja": "まさに私たちの街の文化シーンが活況を呈している証拠だと思いませんか？",
+        "audioPath": "./assets/audio/t17817184601254974_8.wav",
+        "phrases": [
+          {
+            "phrase": "testament to",
+            "meaning": "〜の証拠、〜の証し",
+            "usage": "This success is a testament to their hard work. のように使う"
+          },
+          {
+            "phrase": "thriving cultural scene",
+            "meaning": "活気のある文化的な情景・雰囲気",
+            "usage": "The city is known for its thriving cultural scene. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "I'm always on the lookout for such enriching experiences that broaden my horizons.",
+        "ja": "私は常に、視野を広げてくれるような豊かな体験を求めているんです。",
+        "audioPath": "./assets/audio/t17817184601254974_9.wav",
+        "phrases": [
+          {
+            "phrase": "on the lookout for",
+            "meaning": "〜を探している、〜を警戒している",
+            "usage": "We are always on the lookout for new talent. (新しい人材を常に探している)"
+          },
+          {
+            "phrase": "enriching experiences",
+            "meaning": "豊かな経験、ためになる経験",
+            "usage": "enriching discussion (有意義な議論) のように、他の名詞とも組み合わせやすい。"
+          },
+          {
+            "phrase": "broaden my horizons",
+            "meaning": "視野を広げる、見聞を広める",
+            "usage": "Travel can broaden your horizons. (旅行は視野を広げる)"
+          }
+        ]
+      },
+      {
+        "en": "Perhaps we could go together to the next major exhibition that piques our interest.",
+        "ja": "もし次にお互いの興味を引くような大きな展覧会があれば、一緒に行きませんか？",
+        "audioPath": "./assets/audio/t17817184601254974_10.wav",
+        "phrases": [
+          {
+            "phrase": "go together",
+            "meaning": "一緒に行く",
+            "usage": "友人や家族とイベントに行く際などに使える表現です。"
+          },
+          {
+            "phrase": "major exhibition",
+            "meaning": "大規模な展示会",
+            "usage": "美術館や博物館などで開催される規模の大きな展示会を指す場合に適しています。"
+          },
+          {
+            "phrase": "piques our interest",
+            "meaning": "私たちの興味をそそる",
+            "usage": "「興味を引く」というニュアンスで、特に知的好奇心を刺激するような事柄に対して使われます。"
+          }
+        ]
+      },
+      {
+        "en": "It's always more engaging to discuss art with someone who shares a similar aesthetic sensibility.",
+        "ja": "同じような美的感覚を共有する人とアートについて語り合うのは、いつもより一層楽しいものですからね。",
+        "audioPath": "./assets/audio/t17817184601254974_11.wav",
+        "phrases": [
+          {
+            "phrase": "engaging to discuss",
+            "meaning": "議論するのが魅力的な、興味深い",
+            "usage": "It's engaging to discuss the new project with the team. (新しいプロジェクトについてチームと議論するのは興味深い)"
+          },
+          {
+            "phrase": "shares a similar",
+            "meaning": "類似した〜を共有している",
+            "usage": "They share a similar vision for the company's future. (彼らは会社の将来について類似したビジョンを共有している)"
+          },
+          {
+            "phrase": "aesthetic sensibility",
+            "meaning": "美的感覚、美意識",
+            "usage": "Her aesthetic sensibility is evident in her interior design choices. (彼女の美的感覚はインテリアデザインの選択に明らかである)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-17T17:47:40.125Z"
   }
 ]
