@@ -6,17 +6,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { topics, type Topic } from '../data/topics';
 import FolderCard from '../components/FolderCard';
+import { useProgress } from '../hooks/useProgress';
 
 const FOLDER_SIZE = 10;
-
-function totalSentences(): number {
-  return topics.reduce((n, t) => n + t.sentences.length, 0);
-}
-
-function totalMinutes(): number {
-  // Rough: ~3 minutes per topic
-  return topics.length * 3;
-}
 
 function latestTopic(): { topic: Topic; index: number } | null {
   if (topics.length === 0) return null;
@@ -26,20 +18,29 @@ function latestTopic(): { topic: Topic; index: number } | null {
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
+  const { completedCount, streak } = useProgress();
 
   const folders = useMemo(() => {
-    const groups: { folderNumber: number; start: number; end: number; count: number }[] = [];
+    const groups: {
+      folderNumber: number;
+      start: number;
+      end: number;
+      count: number;
+      topicIds: string[];
+    }[] = [];
     const totalFolders = Math.max(1, Math.ceil(topics.length / FOLDER_SIZE));
     for (let i = 0; i < totalFolders; i++) {
       const start = i * FOLDER_SIZE + 1;
       const end = (i + 1) * FOLDER_SIZE;
       const count = Math.max(0, Math.min(topics.length, end) - start + 1);
-      groups.push({ folderNumber: i + 1, start, end, count });
+      const topicIds = topics.slice(i * FOLDER_SIZE, (i + 1) * FOLDER_SIZE).map((t) => t.id);
+      groups.push({ folderNumber: i + 1, start, end, count, topicIds });
     }
     return groups;
   }, []);
 
   const featured = latestTopic();
+  const overallRatio = topics.length > 0 ? completedCount / topics.length : 0;
 
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
@@ -52,6 +53,7 @@ export default function HomeScreen() {
             start={item.start}
             end={item.end}
             count={item.count}
+            topicIds={item.topicIds}
           />
         )}
         contentContainerStyle={[
@@ -81,19 +83,36 @@ export default function HomeScreen() {
               {/* Stats row */}
               <View style={styles.statsRow}>
                 <View style={styles.stat}>
+                  <Text style={styles.statNum}>{completedCount}</Text>
+                  <Text style={styles.statLabel}>Done</Text>
+                </View>
+                <View style={styles.statDivider} />
+                <View style={styles.stat}>
+                  <Text style={styles.statNum}>
+                    {streak > 0 ? `🔥${streak}` : streak}
+                  </Text>
+                  <Text style={styles.statLabel}>Streak</Text>
+                </View>
+                <View style={styles.statDivider} />
+                <View style={styles.stat}>
                   <Text style={styles.statNum}>{topics.length}</Text>
                   <Text style={styles.statLabel}>Topics</Text>
                 </View>
-                <View style={styles.statDivider} />
-                <View style={styles.stat}>
-                  <Text style={styles.statNum}>{totalSentences()}</Text>
-                  <Text style={styles.statLabel}>Sentences</Text>
+              </View>
+
+              {/* Overall progress */}
+              <View style={styles.heroProgressRow}>
+                <View style={styles.heroProgressTrack}>
+                  <View
+                    style={[
+                      styles.heroProgressFill,
+                      { width: `${Math.round(overallRatio * 100)}%` },
+                    ]}
+                  />
                 </View>
-                <View style={styles.statDivider} />
-                <View style={styles.stat}>
-                  <Text style={styles.statNum}>{totalMinutes()}</Text>
-                  <Text style={styles.statLabel}>Minutes</Text>
-                </View>
+                <Text style={styles.heroProgressPct}>
+                  {Math.round(overallRatio * 100)}%
+                </Text>
               </View>
             </LinearGradient>
 
@@ -253,6 +272,31 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
     textTransform: 'uppercase',
     marginTop: 3,
+  },
+  heroProgressRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginTop: 16,
+  },
+  heroProgressTrack: {
+    flex: 1,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    overflow: 'hidden',
+  },
+  heroProgressFill: {
+    height: '100%',
+    borderRadius: 3,
+    backgroundColor: '#34d399',
+  },
+  heroProgressPct: {
+    color: 'rgba(255,255,255,0.7)',
+    fontSize: 11,
+    fontWeight: '700',
+    minWidth: 34,
+    textAlign: 'right',
   },
   featuredCard: {
     marginBottom: 22,

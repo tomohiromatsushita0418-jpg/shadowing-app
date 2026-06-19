@@ -4,7 +4,12 @@ on:
   schedule:
     # 15:00 UTC = 00:00 JST (next day)
     - cron: '0 15 * * *'
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Force a category (blank = daily rotation)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -30,6 +35,7 @@ jobs:
       - name: Generate new topics
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TOPIC_CATEGORY: ${{ github.event.inputs.category }}
         run: npx tsx scripts/generateTopics.ts
 
       - name: Generate audio

@@ -45,7 +45,7 @@ Web を試す場合は `w` を押すか `npm run web` を実行してくださ�
 ## スクリプトの手動実行
 
 ```bash
-# 新しいトピックを 3 件生成して data/topics.json に追記
+# 新しいトピックを 1 件生成して data/topics.json に追記（カテゴリは日替わりで巡回）
 npm run generate:topics
 
 # topics.json のうち音声未生成の文に対して MP3 を assets/audio/ に保存
@@ -55,7 +55,7 @@ npm run generate:audio
 npm run generate:daily
 ```
 
-- `scripts/generateTopics.ts` … GPT-4o で「Daily Conversation」「Business」「Current Affairs」各 1 件、計 3 件を生成
+- `scripts/generateTopics.ts` … Gemini で「Daily Conversation」「Business」「Current Affairs」「Chemical Industry（化学業界の最新ニュース）」を日替わりで巡回し、1 日 1 件生成
 - `scripts/generateAudio.ts` … OpenAI TTS (`tts-1-hd`, voice: `nova`) で 1 文ずつ MP3 を生成
 
 ---

@@ -1,8 +1,9 @@
 /**
  * generateTopics.ts
  *
- * Generates 3 new shadowing topics (Daily Conversation / Business /
- * Current Affairs) using Google Gemini API and appends them to
+ * Generates 1 new shadowing topic per run, rotating through the categories
+ * (Daily Conversation / Business / Current Affairs / Chemical Industry) by
+ * day-of-year, using the Google Gemini API and appending it to
  * data/topics.json.
  *
  * Run:      tsx scripts/generateTopics.ts
@@ -21,12 +22,29 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 const TOPICS_PATH = path.join(ROOT, 'data', 'topics.json');
 
-const CATEGORIES = ['Daily Conversation', 'Business', 'Current Affairs'] as const;
+const CATEGORIES = [
+  'Daily Conversation',
+  'Business',
+  'Current Affairs',
+  'Chemical Industry',
+] as const;
 const MODEL = 'gemini-2.5-flash';
+
+// Extra prompting guidance for categories that need more than their name to
+// produce the intended content. Keyed by category string.
+const CATEGORY_GUIDANCE: Record<string, string> = {
+  'Chemical Industry':
+    'This topic must read like a recent news/briefing piece about the global chemical industry. ' +
+    'Cover current developments and trends such as specialty chemicals, petrochemicals, ' +
+    'green/sustainable chemistry and decarbonization, battery and semiconductor materials, ' +
+    'supply-chain dynamics, M&A, regulation, and innovation. You may reference major players ' +
+    '(e.g. BASF, Dow, Mitsubishi Chemical, Shin-Etsu, Sinopec) and realistic industry themes. ' +
+    'Write in the polished register of a professional trade-press briefing.',
+};
 
 // Free tier TTS allows ~15 audio generations per day, so a topic must
 // stay within that budget. We generate ONE topic per day and rotate the
-// category by day-of-year so all three categories get coverage.
+// category by day-of-year so all categories get coverage.
 const MAX_SENTENCES_PER_TOPIC = 12;
 
 function pickCategoryForToday(): string {
@@ -64,10 +82,11 @@ async function generateOneTopic(category: string, existingTitles: string[]): Pro
   if (!apiKey) throw new Error('GEMINI_API_KEY env var is required.');
 
   const avoid = existingTitles.slice(-30).join('; ') || '(none)';
+  const guidance = CATEGORY_GUIDANCE[category];
   const prompt = `You are creating English shadowing practice content for advanced Japanese learners (TOEIC 700 to 990 level).
 
 Generate ONE topic in the category: "${category}".
-
+${guidance ? `\nCategory guidance: ${guidance}\n` : ''}
 Requirements:
 - EXACTLY ${MAX_SENTENCES_PER_TOPIC} sentences (no more, no less)
 - Each English sentence: sophisticated, native-sounding (advanced vocabulary, idiomatic, varied syntax) appropriate for the category
