@@ -179,6 +179,28 @@ export default function HomeScreen() {
               <Ionicons name="chevron-forward" size={16} color="#94a3b8" />
             </Pressable>
 
+            {/* Chemical market research entry */}
+            <Pressable
+              style={({ pressed }) => [
+                styles.chemBtn,
+                pressed && styles.phraseBookBtnPressed,
+              ]}
+              onPress={() => router.push('/chemical' as any)}
+            >
+              <View style={styles.phraseBookLeft}>
+                <View style={styles.chemIcon}>
+                  <Ionicons name="flask" size={18} color="#67e8f9" />
+                </View>
+                <View>
+                  <Text style={styles.chemTitle}>化学品 世界市場リサーチ</Text>
+                  <Text style={styles.phraseBookSub}>
+                    化学品名 / CAS番号 から市場レポートを生成
+                  </Text>
+                </View>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color="#94a3b8" />
+            </Pressable>
+
             {/* Section heading */}
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionTitle}>Stages</Text>
@@ -392,6 +414,34 @@ const styles = StyleSheet.create({
     marginBottom: 22,
   },
   phraseBookBtnPressed: { opacity: 0.8 },
+  chemBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(103,232,249,0.07)',
+    borderWidth: 1,
+    borderColor: 'rgba(103,232,249,0.25)',
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 22,
+  },
+  chemIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    backgroundColor: 'rgba(103,232,249,0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(103,232,249,0.35)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  chemTitle: {
+    color: '#a5f3fc',
+    fontSize: 15,
+    fontWeight: '800',
+    letterSpacing: 0.3,
+  },
   phraseBookLeft: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   phraseBookIcon: {
     width: 36,
