@@ -10715,27 +10715,132 @@
       {
         "en": "Employee morale during such periods of significant organizational change is a paramount consideration, requiring transparent communication and robust support systems.",
         "ja": "このような大規模な組織変更の時期における従業員の士気は最重要事項であり、透明性のあるコミュニケーションと強固なサポート体制が求められます。",
-        "audioPath": "./assets/audio/t17818055509553341_7.wav"
+        "audioPath": "./assets/audio/t17818055509553341_7.wav",
+        "phrases": [
+          {
+            "phrase": "employee morale",
+            "meaning": "従業員の士気",
+            "usage": "Employee morale is crucial for productivity. 従業員の士気は生産性にとって非常に重要です。"
+          },
+          {
+            "phrase": "organizational change",
+            "meaning": "組織変更",
+            "usage": "The company is undergoing significant organizational change. その会社は大きな組織変更を進めています。"
+          },
+          {
+            "phrase": "transparent communication",
+            "meaning": "透明性のあるコミュニケーション",
+            "usage": "Transparent communication builds trust. 透明性のあるコミュニケーションは信頼を築きます。"
+          },
+          {
+            "phrase": "robust support systems",
+            "meaning": "強固なサポート体制",
+            "usage": "We need robust support systems for new employees. 新入社員のために強固なサポート体制が必要です。"
+          }
+        ]
       },
       {
         "en": "We anticipate a degree of internal resistance, which must be managed through clear articulation of the rationale and the positive outcomes envisioned.",
         "ja": "ある程度の社内からの抵抗は予想されますが、その根拠と期待される前向きな成果を明確に説明することで対応しなければなりません。",
-        "audioPath": "./assets/audio/t17818055509553341_8.wav"
+        "audioPath": "./assets/audio/t17818055509553341_8.wav",
+        "phrases": [
+          {
+            "phrase": "anticipate a degree of",
+            "meaning": "ある程度の〜を予期する",
+            "usage": "We anticipate a degree of difficulty. のように、予想される事柄の程度を示す際に使う"
+          },
+          {
+            "phrase": "internal resistance",
+            "meaning": "内部からの反対、抵抗",
+            "usage": "The new policy faced internal resistance from some departments. のような文脈で使われる"
+          },
+          {
+            "phrase": "clear articulation of",
+            "meaning": "〜の明確な説明、明瞭な表現",
+            "usage": "The clear articulation of the project goals is crucial for success. のように、説明の明瞭さを強調する際に用いる"
+          },
+          {
+            "phrase": "positive outcomes envisioned",
+            "meaning": "想定される好ましい結果",
+            "usage": "The team discussed the positive outcomes envisioned for the new product launch. のように、将来期待される良い結果について述べる際に使う"
+          }
+        ]
       },
       {
         "en": "Ultimately, this strategic pivot aims to enhance our competitive edge, foster innovation, and secure sustainable growth in an increasingly volatile global economy.",
         "ja": "最終的に、この戦略的な転換は、競争優位性を高め、イノベーションを促進し、ますます変動する世界経済において持続可能な成長を確保することを目的としています。",
-        "audioPath": "./assets/audio/t17818055509553341_9.wav"
+        "audioPath": "./assets/audio/t17818055509553341_9.wav",
+        "phrases": [
+          {
+            "phrase": "strategic pivot",
+            "meaning": "戦略的転換",
+            "usage": "企業の方向転換や事業再編などの文脈で使われます。"
+          },
+          {
+            "phrase": "competitive edge",
+            "meaning": "競争優位性",
+            "usage": "競合他社に対する優位性や強みを指します。"
+          },
+          {
+            "phrase": "foster innovation",
+            "meaning": "イノベーションを促進する",
+            "usage": "新しいアイデアや技術の開発を奨励・支援する状況で使われます。"
+          },
+          {
+            "phrase": "sustainable growth",
+            "meaning": "持続可能な成長",
+            "usage": "長期的に維持できる経済的・事業的な成長を意味します。"
+          }
+        ]
       },
       {
         "en": "The implementation phase will demand meticulous project management and cross-functional collaboration to ensure a seamless transition and minimal disruption.",
         "ja": "導入フェーズでは、円滑な移行と最小限の混乱を確実にするために、綿密なプロジェクト管理と部門横断的な連携が不可欠となります。",
-        "audioPath": "./assets/audio/t17818055509553341_10.wav"
+        "audioPath": "./assets/audio/t17818055509553341_10.wav",
+        "phrases": [
+          {
+            "phrase": "implementation phase",
+            "meaning": "実行段階、実施段階",
+            "usage": "The project is currently in the implementation phase. (プロジェクトは現在、実行段階にあります。)"
+          },
+          {
+            "phrase": "meticulous project management",
+            "meaning": "綿密なプロジェクト管理",
+            "usage": "Meticulous project management is key to success. (綿密なプロジェクト管理が成功の鍵です。)"
+          },
+          {
+            "phrase": "cross-functional collaboration",
+            "meaning": "部門横断的な協力",
+            "usage": "Cross-functional collaboration is essential for innovation. (部門横断的な協力はイノベーションに不可欠です。)"
+          },
+          {
+            "phrase": "seamless transition",
+            "meaning": "円滑な移行",
+            "usage": "We aim for a seamless transition to the new system. (新システムへの円滑な移行を目指します。)"
+          }
+        ]
       },
       {
         "en": "Success will be measured not just by financial metrics, but also by our enhanced agility and reinforced market position in the years to come.",
         "ja": "成功は財務指標だけでなく、今後数年間の機動性の向上と市場における地位の強化によっても測られるでしょう。",
-        "audioPath": "./assets/audio/t17818055509553341_11.wav"
+        "audioPath": "./assets/audio/t17818055509553341_11.wav",
+        "phrases": [
+          {
+            "phrase": "measured not just by... but also by...",
+            "meaning": "〜だけでなく、〜によっても測られる",
+            "usage": "成果を多角的に評価する際に使われる表現です。"
+          },
+          {
+            "phrase": "enhanced agility",
+            "meaning": "向上した機敏性、俊敏性",
+            "usage": "ビジネスにおける変化への対応力や柔軟性を指します。"
+          },
+          {
+            "phrase": "reinforced market position",
+            "meaning": "強化された市場での地位",
+            "usage": "競合他社に対する優位性やブランド力を高めた状態を表します。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-06-18T17:59:10.955Z"
@@ -11030,7 +11135,8 @@
             "meaning": "大きな障害となる、相当な障壁をもたらす",
             "usage": "計画の実行を困難にする要因について述べる際に使います。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17818722661389645_10.wav"
       },
       {
         "en": "Ultimately, the industry's future success hinges on its ability to innovate sustainably, adapt to evolving regulatory landscapes, and strategically navigate complex global dynamics.",
