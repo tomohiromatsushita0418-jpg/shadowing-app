@@ -9,6 +9,7 @@ const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
   'Daily Conversation': { bg: '#2a1a1a', text: '#f87171' },
   Business: { bg: '#1a2744', text: '#60a5fa' },
   'Current Affairs': { bg: '#1a2a1a', text: '#4ade80' },
+  'Chemical Industry': { bg: '#102a2a', text: '#22d3ee' },
   // legacy seed categories
   'Business Negotiation': { bg: '#1a2744', text: '#60a5fa' },
   'Academic Research': { bg: '#1a2a1a', text: '#4ade80' },
