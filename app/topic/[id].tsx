@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { FlatList, Platform, StyleSheet, Text, View } from 'react-native';
+import { FlatList, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useLocalSearchParams, useNavigation, useFocusEffect } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
 import Constants from 'expo-constants';
@@ -8,6 +9,7 @@ import { topics, type Sentence } from '../../data/topics';
 import wordMeanings from '../../data/wordMeanings.json';
 import SentenceCard from '../../components/SentenceCard';
 import WordDefinitionModal from '../../components/WordDefinitionModal';
+import { useProgress } from '../../hooks/useProgress';
 
 interface DictionaryMeaning {
   partOfSpeech: string;
@@ -77,8 +79,10 @@ async function fetchJapaneseMeaning(word: string): Promise<string | null> {
 export default function TopicScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const navigation = useNavigation();
+  const { isComplete, toggleComplete, recordStudy } = useProgress();
 
   const topic = topics.find((t) => t.id === id);
+  const completed = topic ? isComplete(topic.id) : false;
 
   const [speakingIndex, setSpeakingIndex] = useState<number | null>(null);
   const [loadingIndex, setLoadingIndex] = useState<number | null>(null);
@@ -187,6 +191,8 @@ export default function TopicScreen() {
       await stopAll();
       if (playRequestIdRef.current !== myRequest) return;
 
+      // Playing a sentence counts as practice for today's streak.
+      recordStudy();
       setSpeakingIndex(index);
 
       if (sentence.audioPath) {
@@ -255,7 +261,7 @@ export default function TopicScreen() {
         if (playRequestIdRef.current === myRequest) setSpeakingIndex(null);
       }, estMs);
     },
-    [stopAll]
+    [stopAll, recordStudy]
   );
 
   const handleWordTap = useCallback(async (word: string) => {
@@ -333,6 +339,34 @@ export default function TopicScreen() {
             </Text>
           </View>
         }
+        ListFooterComponent={
+          <Pressable
+            onPress={() => toggleComplete(topic.id)}
+            style={({ pressed }) => [
+              styles.completeBtn,
+              completed && styles.completeBtnDone,
+              pressed && styles.completeBtnPressed,
+            ]}
+            accessibilityRole="button"
+            accessibilityLabel={
+              completed ? 'Mark topic as not done' : 'Mark topic as done'
+            }
+          >
+            <Ionicons
+              name={completed ? 'checkmark-circle' : 'checkmark-circle-outline'}
+              size={22}
+              color={completed ? '#0f1f14' : '#34d399'}
+            />
+            <Text
+              style={[
+                styles.completeBtnText,
+                completed && styles.completeBtnTextDone,
+              ]}
+            >
+              {completed ? '学習完了' : '完了にする'}
+            </Text>
+          </Pressable>
+        }
         showsVerticalScrollIndicator={false}
         style={styles.container}
       />
@@ -376,6 +410,31 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   sentenceCount: { color: '#64748b', fontSize: 13 },
+  completeBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    marginTop: 20,
+    marginBottom: 8,
+    paddingVertical: 15,
+    borderRadius: 14,
+    borderWidth: 1.5,
+    borderColor: 'rgba(52,211,153,0.5)',
+    backgroundColor: 'rgba(52,211,153,0.08)',
+  },
+  completeBtnDone: {
+    backgroundColor: '#34d399',
+    borderColor: '#34d399',
+  },
+  completeBtnPressed: { opacity: 0.8, transform: [{ scale: 0.99 }] },
+  completeBtnText: {
+    color: '#34d399',
+    fontSize: 15,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+  },
+  completeBtnTextDone: { color: '#0f1f14' },
   centered: {
     flex: 1,
     alignItems: 'center',
