@@ -3,12 +3,14 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { useProgress } from '../hooks/useProgress';
 
 interface Props {
   folderNumber: number; // 1-indexed
   start: number;
   end: number;
   count: number;
+  topicIds: string[]; // ids of the topics that live in this stage
 }
 
 // A small palette of accent colors cycled by stage number so each card
@@ -21,9 +23,13 @@ const PALETTES: { from: string; to: string; glow: string; accent: string }[] = [
   { from: '#5f4a1e', to: '#38290f', glow: '#f59e0b', accent: '#fbbf24' },
 ];
 
-export default function FolderCard({ folderNumber, start, end, count }: Props) {
+export default function FolderCard({ folderNumber, start, end, count, topicIds }: Props) {
   const router = useRouter();
+  const { completedInList } = useProgress();
   const palette = PALETTES[(folderNumber - 1) % PALETTES.length];
+  const doneCount = completedInList(topicIds);
+  const ratio = count > 0 ? doneCount / count : 0;
+  const allDone = count > 0 && doneCount === count;
 
   return (
     <Pressable
@@ -52,15 +58,39 @@ export default function FolderCard({ folderNumber, start, end, count }: Props) {
           <Text style={styles.range}>
             {start}–{end}
           </Text>
+
+          <View style={styles.progressRow}>
+            <View style={styles.progressTrack}>
+              <View
+                style={[
+                  styles.progressFill,
+                  {
+                    width: `${Math.round(ratio * 100)}%`,
+                    backgroundColor: palette.accent,
+                  },
+                ]}
+              />
+            </View>
+            <Text style={[styles.progressLabel, { color: palette.accent }]}>
+              {doneCount}/{count}
+            </Text>
+          </View>
         </View>
 
         <View style={styles.right}>
-          <View style={[styles.countPill, { borderColor: palette.accent }]}>
-            <Text style={[styles.countText, { color: palette.accent }]}>
-              {count}
-            </Text>
-            <Text style={styles.countLabel}>topics</Text>
-          </View>
+          {allDone ? (
+            <View style={[styles.countPill, { borderColor: palette.accent }]}>
+              <Ionicons name="checkmark-circle" size={15} color={palette.accent} />
+              <Text style={[styles.countLabel, { color: palette.accent }]}>done</Text>
+            </View>
+          ) : (
+            <View style={[styles.countPill, { borderColor: palette.accent }]}>
+              <Text style={[styles.countText, { color: palette.accent }]}>
+                {count}
+              </Text>
+              <Text style={styles.countLabel}>topics</Text>
+            </View>
+          )}
           <Ionicons name="chevron-forward" size={18} color={palette.accent} />
         </View>
       </LinearGradient>
@@ -109,6 +139,31 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginTop: 4,
     letterSpacing: 0.5,
+  },
+  progressRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    marginTop: 12,
+    paddingRight: 12,
+  },
+  progressTrack: {
+    flex: 1,
+    height: 5,
+    borderRadius: 3,
+    backgroundColor: 'rgba(0,0,0,0.35)',
+    overflow: 'hidden',
+  },
+  progressFill: {
+    height: '100%',
+    borderRadius: 3,
+  },
+  progressLabel: {
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 0.3,
+    minWidth: 34,
+    textAlign: 'right',
   },
   right: {
     flexDirection: 'row',

@@ -3,11 +3,13 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import type { Topic } from '../data/topics';
+import { useProgress } from '../hooks/useProgress';
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
   'Daily Conversation': { bg: '#2a1a1a', text: '#f87171' },
   Business: { bg: '#1a2744', text: '#60a5fa' },
   'Current Affairs': { bg: '#1a2a1a', text: '#4ade80' },
+  'Chemical Industry': { bg: '#102a2a', text: '#22d3ee' },
   // legacy seed categories
   'Business Negotiation': { bg: '#1a2744', text: '#60a5fa' },
   'Academic Research': { bg: '#1a2a1a', text: '#4ade80' },
@@ -32,11 +34,17 @@ function formatDate(iso: string): string {
 
 export default function TopicCard({ topic, index }: Props) {
   const router = useRouter();
+  const { isComplete } = useProgress();
   const colors = CATEGORY_COLORS[topic.category] ?? { bg: '#1e293b', text: '#94a3b8' };
+  const done = isComplete(topic.id);
 
   return (
     <Pressable
-      style={({ pressed }) => [styles.card, pressed && styles.pressed]}
+      style={({ pressed }) => [
+        styles.card,
+        done && styles.cardDone,
+        pressed && styles.pressed,
+      ]}
       onPress={() => router.push(`/topic/${topic.id}`)}
       accessibilityRole="button"
       accessibilityLabel={`Open topic: ${topic.title}`}
@@ -47,7 +55,14 @@ export default function TopicCard({ topic, index }: Props) {
             {topic.category}
           </Text>
         </View>
-        <Ionicons name="chevron-forward" size={16} color="#475569" />
+        {done ? (
+          <View style={styles.doneBadge}>
+            <Ionicons name="checkmark-circle" size={16} color="#34d399" />
+            <Text style={styles.doneText}>完了</Text>
+          </View>
+        ) : (
+          <Ionicons name="chevron-forward" size={16} color="#475569" />
+        )}
       </View>
 
       <Text style={styles.title} numberOfLines={2}>
@@ -95,9 +110,24 @@ const styles = StyleSheet.create({
     shadowRadius: 6,
     elevation: 4,
   },
+  cardDone: {
+    borderColor: 'rgba(52,211,153,0.4)',
+    backgroundColor: '#141d1a',
+  },
   pressed: {
     opacity: 0.75,
     transform: [{ scale: 0.98 }],
+  },
+  doneBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  doneText: {
+    color: '#34d399',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 0.4,
   },
   top: {
     flexDirection: 'row',
