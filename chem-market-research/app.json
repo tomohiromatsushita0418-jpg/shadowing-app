@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Chem Market Research",
+    "slug": "chem-market-research",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.chemmarket.research"
+    },
+    "android": {
+      "package": "com.chemmarket.research"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "scheme": "chem-market-research"
+  }
+}
