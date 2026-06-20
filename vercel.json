@@ -1,0 +1,11 @@
+{
+  "framework": null,
+  "buildCommand": "npx expo export -p web",
+  "outputDirectory": "dist",
+  "installCommand": "npm install --legacy-peer-deps",
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 60
+    }
+  }
+}
