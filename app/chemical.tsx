@@ -13,6 +13,8 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
+import { useAuth } from '../hooks/useAuth';
+import LoginGate from '../components/LoginGate';
 
 /* ----------------------------- 型 ----------------------------- */
 
@@ -70,7 +72,7 @@ interface VerifyLink {
 interface ApiResponse {
   identity: Identity;
   report: Report;
-  verify: { hs6: string | null; links: VerifyLink[] };
+  verify: { hs6: string | null; chemLinks: VerifyLink[]; links: VerifyLink[] };
   error?: string;
 }
 
@@ -105,6 +107,7 @@ function KV({ label, value }: { label: string; value?: string | null }) {
 
 export default function ChemicalScreen() {
   const insets = useSafeAreaInsets();
+  const { token, ready, isAuthed, login, logout } = useAuth();
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -119,10 +122,18 @@ export default function ChemicalScreen() {
     try {
       const res = await fetch('/api/research', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          ...(token ? { 'x-auth-token': token } : {}),
+        },
         body: JSON.stringify({ query: q }),
       });
       const json: ApiResponse = await res.json();
+      if (res.status === 401) {
+        // トークンが無効/失効 → ログイン画面へ戻す
+        await logout();
+        throw new Error('セッションが切れました。再度ログインしてください。');
+      }
       if (!res.ok || json.error) {
         throw new Error(json.error || `エラー (${res.status})`);
       }
@@ -132,6 +143,24 @@ export default function ChemicalScreen() {
     } finally {
       setLoading(false);
     }
+  }
+
+  // 認証状態の読み込み中
+  if (!ready) {
+    return (
+      <View style={[styles.container, styles.center]}>
+        <ActivityIndicator color="#67e8f9" />
+      </View>
+    );
+  }
+
+  // 未ログイン → ログインゲート
+  if (!isAuthed) {
+    return (
+      <View style={styles.container}>
+        <LoginGate onSubmit={login} />
+      </View>
+    );
   }
 
   const identity = data?.identity;
@@ -155,7 +184,16 @@ export default function ChemicalScreen() {
         end={{ x: 1, y: 1 }}
         style={styles.hero}
       >
-        <Text style={styles.brand}>CHEM MARKET INTEL</Text>
+        <View style={styles.heroTop}>
+          <Text style={styles.brand}>CHEM MARKET INTEL</Text>
+          <Pressable
+            style={({ pressed }) => [styles.logoutBtn, pressed && { opacity: 0.7 }]}
+            onPress={logout}
+          >
+            <Ionicons name="log-out-outline" size={14} color="#94a3b8" />
+            <Text style={styles.logoutText}>ログアウト</Text>
+          </Pressable>
+        </View>
         <Text style={styles.heroTitle}>化学品 世界市場リサーチ</Text>
         <Text style={styles.heroSub}>
           化学品名 または CAS番号 を入力すると、世界市場数量・サプライヤー・ユーザー・単価・
@@ -424,6 +462,31 @@ export default function ChemicalScreen() {
         </View>
       )}
 
+      {/* ---------------- NITE-CHRIP(化学品詳細・規制) ---------------- */}
+      {verify?.chemLinks && verify.chemLinks.length > 0 && (
+        <View style={styles.card}>
+          <SectionTitle icon="library-outline" title="化学品の詳細・法規制を調べる (NITE-CHRIP)" />
+          <Text style={styles.muted}>
+            NITE-CHRIP(化学物質総合情報提供システム)で、日本・海外の法規制や有害性などの
+            一次情報を確認できます。
+            {identity?.casNumber ? ` CAS番号「${identity.casNumber}」で検索してください。` : ''}
+          </Text>
+          {verify.chemLinks.map((l, i) => (
+            <Pressable
+              key={i}
+              style={({ pressed }) => [styles.linkRow, pressed && { opacity: 0.7 }]}
+              onPress={() => Linking.openURL(l.url)}
+            >
+              <View style={{ flex: 1 }}>
+                <Text style={styles.linkRowTitle}>{l.name}</Text>
+                <Text style={styles.linkRowDesc}>{l.desc}</Text>
+              </View>
+              <Ionicons name="open-outline" size={18} color="#67e8f9" />
+            </Pressable>
+          ))}
+        </View>
+      )}
+
       {report?.disclaimer && (
         <Text style={styles.disclaimer}>※ {report.disclaimer}</Text>
       )}
@@ -444,7 +507,16 @@ function Metric({ label, value }: { label: string; value?: string }) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#0f0f14' },
+  center: { justifyContent: 'center', alignItems: 'center' },
   content: { paddingHorizontal: 16 },
+  heroTop: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  logoutBtn: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  logoutText: { color: '#94a3b8', fontSize: 11.5, fontWeight: '700' },
   hero: {
     borderRadius: 20,
     padding: 22,

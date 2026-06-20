@@ -22,6 +22,20 @@ Vercel への Web デプロイ、GitHub Actions による日次自動化に対�
 - **実データで検証**: HSコードを基に **UN Comtrade / ITC Trade Map /
   財務省 貿易統計(税関)/ 実行関税率表** へのディープリンクを自動生成し、
   一次データで数量・金額・関税を直接確認できます
+- **化学品の詳細・法規制**: [NITE-CHRIP](https://www.nite.go.jp/chem/chrip/chrip_search/systemTop)
+  (化学物質総合情報提供システム)への導線。CAS番号で化審法・安衛法・化管法・
+  REACH・TSCA 等の規制を横断的に確認できます
+
+### ログイン(共有パスワード)
+
+化学品リサーチ機能は共有パスワードで保護されています。
+未ログイン時はパスワード入力画面が表示され、正しいパスワードを入力すると利用できます。
+
+- フロー: パスワード入力 → `api/login` が環境変数 `SITE_PASSWORD` と照合 →
+  検証トークン(SHA-256)を発行 → クライアントは `api/research` 呼び出し時に
+  `x-auth-token` で送信し、サーバが毎回検証します(パスワード平文は端末に保存されません)。
+- **環境変数 `SITE_PASSWORD` を Vercel に設定してください。** 未設定の場合、
+  ログインは機能せず、`api/research` の認証チェックはスキップされます。
 
 > 市場数値は公開情報・業界知識に基づく AI 推定です(信頼度ラベル付き)。
 > 厳密な一次データは上記の検証リンク先(公的・公開DB)でご確認ください。
@@ -32,9 +46,11 @@ Vercel への Web デプロイ、GitHub Actions による日次自動化に対�
 - バックエンド: `api/research.js`(Vercel Serverless Function)
   - PubChem で化学品を同定 → Gemini (`gemini-2.5-flash`) で市場レポートを生成 →
     貿易統計DBの検証リンクを構築
+  - 認証: `api/login.js`(共有パスワード照合 → トークン発行)
 - Vercel では `/api` 配下が自動的に Serverless Function としてデプロイされます。
-  **環境変数 `GEMINI_API_KEY` を Vercel の Project Settings → Environment Variables に
-  設定してください。**
+  **Vercel の Project Settings → Environment Variables に以下を設定してください。**
+  - `GEMINI_API_KEY` … レポート生成(必須)
+  - `SITE_PASSWORD` … 化学品リサーチのログイン用 共有パスワード(必須)
 
 ---
 

@@ -15,6 +15,11 @@
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const PUBCHEM = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug';
 const CAS_RE = /^\d{2,7}-\d{2}-\d$/;
+const crypto = require('crypto');
+
+function sha256(s) {
+  return crypto.createHash('sha256').update(String(s)).digest('hex');
+}
 
 /* ------------------------------------------------------------------ */
 /* PubChem: 化学品の同定(実データ)                                    */
@@ -103,6 +108,8 @@ ${idText}
 - 数値は公開情報・業界知識に基づく「推定レンジ」で構わない。ただし断定しすぎないこと。
 - 不明な項目は "データ不足" と明記し、捏造しない。
 - 関税・輸出入通関は、対象に最も妥当な HSコード(6桁)を推定して示す。
+- 規制(regulatory)は日本の法規制(化審法・安衛法・化管法・毒劇法 等)と
+  海外(REACH・TSCA 等)を、NITE-CHRIP で確認できる粒度で具体的に挙げる。
 - 出力は必ず下記スキーマの **有効なJSONのみ**(マークダウン記法やコードフェンス禁止)。
 
 【JSONスキーマ】
@@ -181,14 +188,29 @@ async function generateReport(identity, apiKey) {
 /* 実在する貿易統計DBへの検証用ディープリンク                          */
 /* ------------------------------------------------------------------ */
 
-function buildVerifyLinks(hsCode) {
+function buildVerifyLinks(hsCode, casNumber) {
   // HSコードの数字のみ(6桁)を抽出
   const digits = (hsCode || '').replace(/\D/g, '').slice(0, 6);
   const hs6 = digits.length >= 6 ? digits : null;
   const hs4 = hs6 ? hs6.slice(0, 4) : null;
+  const casLabel = casNumber ? `（CAS番号 ${casNumber} で検索）` : '（化学品名/CAS番号で検索）';
 
   return {
     hs6,
+    // 化学品の詳細・規制(NITE-CHRIP)
+    chemLinks: [
+      {
+        name: 'NITE-CHRIP(化学物質総合情報提供システム)',
+        desc: `日本の法規制(化審法・安衛法・化管法 等)・有害性・国際規制を横断検索${casLabel}`,
+        url: 'https://www.nite.go.jp/chem/chrip/chrip_search/systemTop',
+      },
+      {
+        name: 'NITE-CHRIP (English)',
+        desc: `Regulatory & hazard information across domestic/international lists${casLabel}`,
+        url: 'https://www.nite.go.jp/en/chem/chrip/chrip_search/systemTop',
+      },
+    ],
+    // 貿易・関税(数量/金額/関税の一次データ)
     links: [
       {
         name: 'UN Comtrade(国連貿易統計)',
@@ -239,6 +261,20 @@ module.exports = async (req, res) => {
   }
 
   try {
+    // 共有パスワード保護: SITE_PASSWORD が設定されている場合はトークンを検証
+    const sitePassword = process.env.SITE_PASSWORD;
+    if (sitePassword) {
+      const token = (req.headers['x-auth-token'] || '').toString();
+      const valid =
+        token.length > 0 &&
+        token.length === 64 &&
+        crypto.timingSafeEqual(Buffer.from(token), Buffer.from(sha256(sitePassword)));
+      if (!valid) {
+        res.status(401).json({ error: '認証が必要です。ログインしてください。' });
+        return;
+      }
+    }
+
     let body = req.body;
     if (typeof body === 'string') body = JSON.parse(body || '{}');
     const query = (body?.query || '').toString().trim();
@@ -258,7 +294,8 @@ module.exports = async (req, res) => {
 
     const identity = await resolveIdentity(query);
     const report = await generateReport(identity, apiKey);
-    const verify = buildVerifyLinks(report?.hsCode || '');
+    const cas = identity?.casNumber || report?.casNumber || null;
+    const verify = buildVerifyLinks(report?.hsCode || '', cas);
 
     res.status(200).json({ identity, report, verify });
   } catch (err) {
