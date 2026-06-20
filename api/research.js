@@ -195,6 +195,27 @@ async function generateReport(identity, apiKey) {
 const COMTRADE = 'https://comtradeapi.un.org/public/v1/preview/C/A/HS';
 const JAPAN_M49 = '392';
 
+// 主要貿易国の ISO3 → エリア対応(該当しない国は「その他」に集約)
+const REGION_GROUPS = {
+  アジア: ['CHN', 'JPN', 'KOR', 'PRK', 'TWN', 'HKG', 'MAC', 'MNG', 'IND', 'PAK', 'BGD', 'LKA', 'NPL', 'SGP', 'MYS', 'THA', 'IDN', 'VNM', 'PHL', 'MMR', 'KHM', 'LAO', 'BRN'],
+  中東: ['SAU', 'ARE', 'QAT', 'KWT', 'OMN', 'BHR', 'IRN', 'IRQ', 'ISR', 'JOR', 'LBN', 'SYR', 'YEM', 'TUR'],
+  欧州: ['DEU', 'FRA', 'GBR', 'ITA', 'ESP', 'NLD', 'BEL', 'CHE', 'AUT', 'SWE', 'NOR', 'DNK', 'FIN', 'POL', 'CZE', 'HUN', 'SVK', 'SVN', 'HRV', 'ROU', 'BGR', 'GRC', 'PRT', 'IRL', 'LUX', 'EST', 'LVA', 'LTU', 'RUS', 'UKR', 'BLR', 'ISL', 'MLT', 'CYP', 'SRB'],
+  北米: ['USA', 'CAN', 'MEX'],
+  中南米: ['BRA', 'ARG', 'CHL', 'COL', 'PER', 'VEN', 'ECU', 'URY', 'PRY', 'BOL', 'CRI', 'PAN', 'GTM', 'DOM', 'CUB', 'TTO'],
+  アフリカ: ['ZAF', 'EGY', 'NGA', 'MAR', 'DZA', 'TUN', 'KEN', 'ETH', 'GHA', 'TZA', 'AGO', 'CIV', 'SEN', 'LBY'],
+  オセアニア: ['AUS', 'NZL', 'FJI', 'PNG'],
+};
+const ISO_TO_REGION = (() => {
+  const m = {};
+  for (const [region, list] of Object.entries(REGION_GROUPS)) {
+    for (const iso of list) m[iso] = region;
+  }
+  return m;
+})();
+function regionOf(iso3) {
+  return ISO_TO_REGION[(iso3 || '').toUpperCase()] || 'その他';
+}
+
 async function comtradeFlow(hs6, flowCode, period) {
   // reporterCode=all(全報告国), partnerCode=0(相手国=World) で当該年の全世界フローを取得
   const url =
@@ -206,9 +227,10 @@ async function comtradeFlow(hs6, flowCode, period) {
 
 function summarize(rows) {
   const num = (v) => Number(v) || 0;
+  const valid = rows.filter((r) => String(r.reporterCode) !== '0' && num(r.primaryValue) > 0);
   const worldUsd = rows.reduce((a, r) => a + num(r.primaryValue), 0);
-  const top = rows
-    .filter((r) => String(r.reporterCode) !== '0' && num(r.primaryValue) > 0)
+  const top = valid
+    .slice()
     .sort((a, b) => num(b.primaryValue) - num(a.primaryValue))
     .slice(0, 8)
     .map((r) => ({
@@ -216,8 +238,29 @@ function summarize(rows) {
       valueUsd: num(r.primaryValue),
       netWgtKg: num(r.netWgt),
     }));
+
+  // エリア別に集計(実績)
+  const regionTotals = {};
+  for (const r of valid) {
+    const region = regionOf(r.reporterISO);
+    regionTotals[region] = (regionTotals[region] || 0) + num(r.primaryValue);
+  }
+  const byRegion = Object.entries(regionTotals)
+    .map(([region, valueUsd]) => ({
+      region,
+      valueUsd,
+      share: worldUsd > 0 ? valueUsd / worldUsd : 0,
+    }))
+    .sort((a, b) => b.valueUsd - a.valueUsd);
+
   const jp = rows.find((r) => String(r.reporterCode) === JAPAN_M49);
-  return { worldUsd, top, jpUsd: jp ? num(jp.primaryValue) : null, jpKg: jp ? num(jp.netWgt) : null };
+  return {
+    worldUsd,
+    top,
+    byRegion,
+    jpUsd: jp ? num(jp.primaryValue) : null,
+    jpKg: jp ? num(jp.netWgt) : null,
+  };
 }
 
 async function fetchComtrade(hs6) {
@@ -242,6 +285,8 @@ async function fetchComtrade(hs6) {
         worldImportUsd: imp ? imp.worldUsd : null,
         topExporters: exp ? exp.top : [],
         topImporters: imp ? imp.top : [],
+        exportByRegion: exp ? exp.byRegion : [],
+        importByRegion: imp ? imp.byRegion : [],
         japan: {
           exportUsd: exp ? exp.jpUsd : null,
           exportKg: exp ? exp.jpKg : null,

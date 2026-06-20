@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   Image,
   Linking,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -74,6 +75,11 @@ interface TradeRow {
   valueUsd: number;
   netWgtKg: number;
 }
+interface RegionRow {
+  region: string;
+  valueUsd: number;
+  share: number;
+}
 interface Comtrade {
   source: string;
   hs6: string;
@@ -82,6 +88,8 @@ interface Comtrade {
   worldImportUsd: number | null;
   topExporters: TradeRow[];
   topImporters: TradeRow[];
+  exportByRegion: RegionRow[];
+  importByRegion: RegionRow[];
   japan: {
     exportUsd: number | null;
     exportKg: number | null;
@@ -149,6 +157,17 @@ export default function ChemicalScreen() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<ApiResponse | null>(null);
+
+  // 印刷/PDF用のスタイル(web のみ): 背景を白に、操作UIを非表示に
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof document === 'undefined') return;
+    if (document.getElementById('chem-print-style')) return;
+    const style = document.createElement('style');
+    style.id = 'chem-print-style';
+    style.textContent =
+      '@media print { [data-print-hide] { display: none !important; } body { background: #fff !important; } }';
+    document.head.appendChild(style);
+  }, []);
 
   async function run() {
     const q = query.trim();
@@ -240,7 +259,7 @@ export default function ChemicalScreen() {
       </LinearGradient>
 
       {/* 検索 */}
-      <View style={styles.searchBox}>
+      <View style={styles.searchBox} {...printHide}>
         <TextInput
           style={styles.input}
           placeholder="例: Ethylene / 酢酸エチル / 64-17-5"
@@ -278,6 +297,21 @@ export default function ChemicalScreen() {
           <Ionicons name="alert-circle" size={18} color="#f87171" />
           <Text style={styles.errorText}>{error}</Text>
         </View>
+      )}
+
+      {/* ---------------- 印刷 / PDF保存 ---------------- */}
+      {data && Platform.OS === 'web' && (
+        <Pressable
+          style={({ pressed }) => [styles.printBtn, pressed && { opacity: 0.85 }]}
+          {...printHide}
+          onPress={() => {
+            // @ts-ignore - web のみ
+            if (typeof window !== 'undefined') window.print();
+          }}
+        >
+          <Ionicons name="print-outline" size={16} color="#67e8f9" />
+          <Text style={styles.printBtnText}>このレポートを印刷 / PDF保存</Text>
+        </Pressable>
       )}
 
       {/* ---------------- 同定情報 ---------------- */}
@@ -502,6 +536,24 @@ export default function ChemicalScreen() {
             />
           </View>
 
+          {comtrade.exportByRegion.length > 0 && (
+            <>
+              <Text style={styles.subHead}>エリア別 輸出額(実績)</Text>
+              {comtrade.exportByRegion.map((r, i) => (
+                <RegionBar key={i} row={r} />
+              ))}
+            </>
+          )}
+
+          {comtrade.importByRegion.length > 0 && (
+            <>
+              <Text style={styles.subHead}>エリア別 輸入額(実績)</Text>
+              {comtrade.importByRegion.map((r, i) => (
+                <RegionBar key={i} row={r} />
+              ))}
+            </>
+          )}
+
           {comtrade.topExporters.length > 0 && (
             <>
               <Text style={styles.subHead}>主要輸出国(実績・金額順)</Text>
@@ -613,6 +665,24 @@ function Metric({ label, value }: { label: string; value?: string }) {
   );
 }
 
+// RN Web で data-print-hide 属性を出力するためのprops(印刷時に非表示)
+const printHide = { dataSet: { printHide: 'true' } } as any;
+
+function RegionBar({ row }: { row: RegionRow }) {
+  const pct = Math.max(2, Math.round(row.share * 100));
+  return (
+    <View style={styles.regionRow}>
+      <Text style={styles.regionName}>{row.region}</Text>
+      <View style={styles.regionBarTrack}>
+        <View style={[styles.regionBarFill, { width: `${pct}%` }]} />
+      </View>
+      <Text style={styles.regionVal}>
+        {fmtUsd(row.valueUsd)} · {(row.share * 100).toFixed(1)}%
+      </Text>
+    </View>
+  );
+}
+
 /* --------------------------- styles --------------------------- */
 
 const styles = StyleSheet.create({
@@ -702,6 +772,20 @@ const styles = StyleSheet.create({
   muted: { color: '#94a3b8', fontSize: 12.5, lineHeight: 18, marginBottom: 8 },
   body: { color: '#cbd5e1', fontSize: 13.5, lineHeight: 21 },
   note: { color: '#94a3b8', fontSize: 12, lineHeight: 18, marginTop: 8, fontStyle: 'italic' },
+  printBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    marginHorizontal: 16,
+    marginTop: 14,
+    paddingVertical: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: 'rgba(103,232,249,0.3)',
+    backgroundColor: 'rgba(103,232,249,0.06)',
+  },
+  printBtnText: { color: '#67e8f9', fontSize: 13.5, fontWeight: '800' },
   realCard: { borderColor: 'rgba(52,211,153,0.3)', backgroundColor: 'rgba(52,211,153,0.04)' },
   realBadge: {
     backgroundColor: 'rgba(52,211,153,0.15)',
@@ -738,6 +822,17 @@ const styles = StyleSheet.create({
   },
   tradeCountry: { color: '#e2e8f0', fontSize: 13, fontWeight: '600', flex: 1 },
   tradeVal: { color: '#a7f3d0', fontSize: 12.5, fontWeight: '700' },
+  regionRow: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 5 },
+  regionName: { color: '#e2e8f0', fontSize: 12.5, fontWeight: '700', width: 64 },
+  regionBarTrack: {
+    flex: 1,
+    height: 8,
+    borderRadius: 4,
+    backgroundColor: 'rgba(255,255,255,0.06)',
+    overflow: 'hidden',
+  },
+  regionBarFill: { height: 8, borderRadius: 4, backgroundColor: '#34d399' },
+  regionVal: { color: '#a7f3d0', fontSize: 11, fontWeight: '700', width: 120, textAlign: 'right' },
   summaryHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   badge: { borderWidth: 1, borderRadius: 999, paddingHorizontal: 10, paddingVertical: 3, marginBottom: 10 },
   badgeText: { fontSize: 10.5, fontWeight: '800' },
