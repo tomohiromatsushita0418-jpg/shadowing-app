@@ -19,6 +19,9 @@ Vercel への Web デプロイ、GitHub Actions による日次自動化に対�
 - **エリア別 / 各国別**: 地域シェア・主要生産/消費国の数量
 - **サプライヤー / ユーザー**: 主要メーカーと需要業界・用途別シェア・単価(価格動向)
 - **関税・輸出入通関**: 推定 HSコード、主要輸出入国、関税率、通関留意点、日本の輸出入
+- **実貿易データ(実数値)**: 推定 HSコードを基に **UN Comtrade** の公開エンドポイント
+  (キー不要)から、対象年の **世界輸出入額・主要輸出入国ランキング・日本の輸出入**を
+  実数値で取得して表示します(取得できない場合はこのカードのみ非表示)
 - **実データで検証**: HSコードを基に **UN Comtrade / ITC Trade Map /
   財務省 貿易統計(税関)/ 実行関税率表** へのディープリンクを自動生成し、
   一次データで数量・金額・関税を直接確認できます
@@ -45,7 +48,8 @@ Vercel への Web デプロイ、GitHub Actions による日次自動化に対�
 - フロント: `app/chemical.tsx`(検索 UI とレポート表示)
 - バックエンド: `api/research.js`(Vercel Serverless Function)
   - PubChem で化学品を同定 → Gemini (`gemini-2.5-flash`) で市場レポートを生成 →
-    貿易統計DBの検証リンクを構築
+    UN Comtrade から実貿易データを取得 → 貿易統計DBの検証リンクを構築
+  - Gemini + Comtrade の所要時間に対応するため `vercel.json` で `maxDuration: 60` を設定
   - 認証: `api/login.js`(共有パスワード照合 → トークン発行)
 - Vercel では `/api` 配下が自動的に Serverless Function としてデプロイされます。
   **Vercel の Project Settings → Environment Variables に以下を設定してください。**

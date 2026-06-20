@@ -69,11 +69,48 @@ interface VerifyLink {
   desc: string;
   url: string;
 }
+interface TradeRow {
+  country: string;
+  valueUsd: number;
+  netWgtKg: number;
+}
+interface Comtrade {
+  source: string;
+  hs6: string;
+  year: string;
+  worldExportUsd: number | null;
+  worldImportUsd: number | null;
+  topExporters: TradeRow[];
+  topImporters: TradeRow[];
+  japan: {
+    exportUsd: number | null;
+    exportKg: number | null;
+    importUsd: number | null;
+    importKg: number | null;
+  };
+}
+
 interface ApiResponse {
   identity: Identity;
   report: Report;
   verify: { hs6: string | null; chemLinks: VerifyLink[]; links: VerifyLink[] };
+  comtrade?: Comtrade | null;
   error?: string;
+}
+
+function fmtUsd(n?: number | null): string {
+  if (n == null || !isFinite(n) || n <= 0) return '—';
+  if (n >= 1e9) return `$${(n / 1e9).toFixed(2)}B`;
+  if (n >= 1e6) return `$${(n / 1e6).toFixed(1)}M`;
+  if (n >= 1e3) return `$${(n / 1e3).toFixed(0)}K`;
+  return `$${n.toFixed(0)}`;
+}
+function fmtTons(kg?: number | null): string {
+  if (kg == null || !isFinite(kg) || kg <= 0) return '';
+  const t = kg / 1000;
+  if (t >= 1e6) return `${(t / 1e6).toFixed(2)} 百万t`;
+  if (t >= 1e3) return `${(t / 1e3).toFixed(1)} 千t`;
+  return `${t.toFixed(0)} t`;
 }
 
 const CONFIDENCE_LABEL: Record<string, { text: string; color: string }> = {
@@ -166,6 +203,7 @@ export default function ChemicalScreen() {
   const identity = data?.identity;
   const report = data?.report;
   const verify = data?.verify;
+  const comtrade = data?.comtrade;
   const conf = report?.confidence ? CONFIDENCE_LABEL[report.confidence] : null;
 
   return (
@@ -426,6 +464,78 @@ export default function ChemicalScreen() {
         </View>
       )}
 
+      {/* ---------------- 実貿易データ (UN Comtrade) ---------------- */}
+      {comtrade && (
+        <View style={[styles.card, styles.realCard]}>
+          <View style={styles.summaryHeader}>
+            <SectionTitle icon="stats-chart-outline" title="実貿易データ(UN Comtrade)" />
+            <View style={styles.realBadge}>
+              <Text style={styles.realBadgeText}>実データ {comtrade.year}年</Text>
+            </View>
+          </View>
+          <Text style={styles.muted}>
+            HSコード {comtrade.hs6} の {comtrade.year}年 実績(全世界・相手国=World)。出典: UN Comtrade。
+          </Text>
+
+          <View style={styles.metricGrid}>
+            <Metric label="世界輸出額(実績)" value={fmtUsd(comtrade.worldExportUsd)} />
+            <Metric label="世界輸入額(実績)" value={fmtUsd(comtrade.worldImportUsd)} />
+            <Metric
+              label="🇯🇵 日本 輸出"
+              value={
+                comtrade.japan.exportUsd
+                  ? `${fmtUsd(comtrade.japan.exportUsd)}${
+                      fmtTons(comtrade.japan.exportKg) ? ` / ${fmtTons(comtrade.japan.exportKg)}` : ''
+                    }`
+                  : '—'
+              }
+            />
+            <Metric
+              label="🇯🇵 日本 輸入"
+              value={
+                comtrade.japan.importUsd
+                  ? `${fmtUsd(comtrade.japan.importUsd)}${
+                      fmtTons(comtrade.japan.importKg) ? ` / ${fmtTons(comtrade.japan.importKg)}` : ''
+                    }`
+                  : '—'
+              }
+            />
+          </View>
+
+          {comtrade.topExporters.length > 0 && (
+            <>
+              <Text style={styles.subHead}>主要輸出国(実績・金額順)</Text>
+              {comtrade.topExporters.map((r, i) => (
+                <View key={i} style={styles.tradeRow}>
+                  <Text style={styles.tradeRank}>{i + 1}</Text>
+                  <Text style={styles.tradeCountry}>{r.country}</Text>
+                  <Text style={styles.tradeVal}>
+                    {fmtUsd(r.valueUsd)}
+                    {fmtTons(r.netWgtKg) ? `  ·  ${fmtTons(r.netWgtKg)}` : ''}
+                  </Text>
+                </View>
+              ))}
+            </>
+          )}
+
+          {comtrade.topImporters.length > 0 && (
+            <>
+              <Text style={styles.subHead}>主要輸入国(実績・金額順)</Text>
+              {comtrade.topImporters.map((r, i) => (
+                <View key={i} style={styles.tradeRow}>
+                  <Text style={styles.tradeRank}>{i + 1}</Text>
+                  <Text style={styles.tradeCountry}>{r.country}</Text>
+                  <Text style={styles.tradeVal}>
+                    {fmtUsd(r.valueUsd)}
+                    {fmtTons(r.netWgtKg) ? `  ·  ${fmtTons(r.netWgtKg)}` : ''}
+                  </Text>
+                </View>
+              ))}
+            </>
+          )}
+        </View>
+      )}
+
       {/* ---------------- 検証用リンク(実データDB) ---------------- */}
       {verify && verify.links.length > 0 && (
         <View style={styles.card}>
@@ -592,6 +702,42 @@ const styles = StyleSheet.create({
   muted: { color: '#94a3b8', fontSize: 12.5, lineHeight: 18, marginBottom: 8 },
   body: { color: '#cbd5e1', fontSize: 13.5, lineHeight: 21 },
   note: { color: '#94a3b8', fontSize: 12, lineHeight: 18, marginTop: 8, fontStyle: 'italic' },
+  realCard: { borderColor: 'rgba(52,211,153,0.3)', backgroundColor: 'rgba(52,211,153,0.04)' },
+  realBadge: {
+    backgroundColor: 'rgba(52,211,153,0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(52,211,153,0.4)',
+    borderRadius: 999,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    marginBottom: 10,
+  },
+  realBadgeText: { color: '#34d399', fontSize: 10.5, fontWeight: '800' },
+  subHead: {
+    color: '#94a3b8',
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+    marginTop: 16,
+    marginBottom: 6,
+  },
+  tradeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingVertical: 7,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255,255,255,0.05)',
+  },
+  tradeRank: {
+    color: '#34d399',
+    fontSize: 12,
+    fontWeight: '800',
+    width: 16,
+    textAlign: 'center',
+  },
+  tradeCountry: { color: '#e2e8f0', fontSize: 13, fontWeight: '600', flex: 1 },
+  tradeVal: { color: '#a7f3d0', fontSize: 12.5, fontWeight: '700' },
   summaryHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   badge: { borderWidth: 1, borderRadius: 999, paddingHorizontal: 10, paddingVertical: 3, marginBottom: 10 },
   badgeText: { fontSize: 10.5, fontWeight: '800' },

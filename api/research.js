@@ -25,13 +25,17 @@ function sha256(s) {
 /* PubChem: 化学品の同定(実データ)                                    */
 /* ------------------------------------------------------------------ */
 
-async function fetchJson(url) {
-  const res = await fetch(url, { headers: { Accept: 'application/json' } });
-  if (!res.ok) return null;
+async function fetchJson(url, ms = 15000) {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), ms);
   try {
+    const res = await fetch(url, { headers: { Accept: 'application/json' }, signal: ctrl.signal });
+    if (!res.ok) return null;
     return await res.json();
   } catch {
     return null;
+  } finally {
+    clearTimeout(t);
   }
 }
 
@@ -185,6 +189,72 @@ async function generateReport(identity, apiKey) {
 }
 
 /* ------------------------------------------------------------------ */
+/* UN Comtrade: 実際の輸出入数量/金額(実データ・キー不要の公開preview)  */
+/* ------------------------------------------------------------------ */
+
+const COMTRADE = 'https://comtradeapi.un.org/public/v1/preview/C/A/HS';
+const JAPAN_M49 = '392';
+
+async function comtradeFlow(hs6, flowCode, period) {
+  // reporterCode=all(全報告国), partnerCode=0(相手国=World) で当該年の全世界フローを取得
+  const url =
+    `${COMTRADE}?reporterCode=all&period=${period}&partnerCode=0&partner2Code=0` +
+    `&cmdCode=${hs6}&flowCode=${flowCode}&customsCode=C00&motCode=0`;
+  const json = await fetchJson(url, 12000);
+  return Array.isArray(json?.data) ? json.data : null;
+}
+
+function summarize(rows) {
+  const num = (v) => Number(v) || 0;
+  const worldUsd = rows.reduce((a, r) => a + num(r.primaryValue), 0);
+  const top = rows
+    .filter((r) => String(r.reporterCode) !== '0' && num(r.primaryValue) > 0)
+    .sort((a, b) => num(b.primaryValue) - num(a.primaryValue))
+    .slice(0, 8)
+    .map((r) => ({
+      country: r.reporterDesc || r.reporterISO || String(r.reporterCode),
+      valueUsd: num(r.primaryValue),
+      netWgtKg: num(r.netWgt),
+    }));
+  const jp = rows.find((r) => String(r.reporterCode) === JAPAN_M49);
+  return { worldUsd, top, jpUsd: jp ? num(jp.primaryValue) : null, jpKg: jp ? num(jp.netWgt) : null };
+}
+
+async function fetchComtrade(hs6) {
+  if (!/^\d{6}$/.test(hs6 || '')) return null;
+  // データには 1〜2 年のラグがあるため、直近年から順に試す
+  const thisYear = new Date().getUTCFullYear();
+  const years = [thisYear - 1, thisYear - 2, thisYear - 3];
+
+  for (const period of years) {
+    const [expRows, impRows] = await Promise.all([
+      comtradeFlow(hs6, 'X', period),
+      comtradeFlow(hs6, 'M', period),
+    ]);
+    const exp = expRows && expRows.length ? summarize(expRows) : null;
+    const imp = impRows && impRows.length ? summarize(impRows) : null;
+    if (exp || imp) {
+      return {
+        source: 'UN Comtrade',
+        hs6,
+        year: String(period),
+        worldExportUsd: exp ? exp.worldUsd : null,
+        worldImportUsd: imp ? imp.worldUsd : null,
+        topExporters: exp ? exp.top : [],
+        topImporters: imp ? imp.top : [],
+        japan: {
+          exportUsd: exp ? exp.jpUsd : null,
+          exportKg: exp ? exp.jpKg : null,
+          importUsd: imp ? imp.jpUsd : null,
+          importKg: imp ? imp.jpKg : null,
+        },
+      };
+    }
+  }
+  return null;
+}
+
+/* ------------------------------------------------------------------ */
 /* 実在する貿易統計DBへの検証用ディープリンク                          */
 /* ------------------------------------------------------------------ */
 
@@ -295,9 +365,18 @@ module.exports = async (req, res) => {
     const identity = await resolveIdentity(query);
     const report = await generateReport(identity, apiKey);
     const cas = identity?.casNumber || report?.casNumber || null;
+    const hs6 = (report?.hsCode || '').replace(/\D/g, '').slice(0, 6);
     const verify = buildVerifyLinks(report?.hsCode || '', cas);
 
-    res.status(200).json({ identity, report, verify });
+    // UN Comtrade の実貿易データ(取得失敗してもレポートは返す)
+    let comtrade = null;
+    try {
+      comtrade = await fetchComtrade(hs6);
+    } catch {
+      comtrade = null;
+    }
+
+    res.status(200).json({ identity, report, verify, comtrade });
   } catch (err) {
     res.status(500).json({ error: `レポート生成に失敗しました: ${err.message}` });
   }
