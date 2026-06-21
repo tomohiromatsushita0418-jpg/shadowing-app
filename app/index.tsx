@@ -14,8 +14,6 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
-import { useAuth } from '../hooks/useAuth';
-import LoginGate from '../components/LoginGate';
 
 /* ----------------------------- 型 ----------------------------- */
 
@@ -152,7 +150,6 @@ function KV({ label, value }: { label: string; value?: string | null }) {
 
 export default function ChemicalScreen() {
   const insets = useSafeAreaInsets();
-  const { token, ready, isAuthed, login, logout } = useAuth();
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -178,18 +175,10 @@ export default function ChemicalScreen() {
     try {
       const res = await fetch('/api/research', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          ...(token ? { 'x-auth-token': token } : {}),
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: q }),
       });
       const json: ApiResponse = await res.json();
-      if (res.status === 401) {
-        // トークンが無効/失効 → ログイン画面へ戻す
-        await logout();
-        throw new Error('セッションが切れました。再度ログインしてください。');
-      }
       if (!res.ok || json.error) {
         throw new Error(json.error || `エラー (${res.status})`);
       }
@@ -199,24 +188,6 @@ export default function ChemicalScreen() {
     } finally {
       setLoading(false);
     }
-  }
-
-  // 認証状態の読み込み中
-  if (!ready) {
-    return (
-      <View style={[styles.container, styles.center]}>
-        <ActivityIndicator color="#67e8f9" />
-      </View>
-    );
-  }
-
-  // 未ログイン → ログインゲート
-  if (!isAuthed) {
-    return (
-      <View style={styles.container}>
-        <LoginGate onSubmit={login} />
-      </View>
-    );
   }
 
   const identity = data?.identity;
@@ -241,16 +212,7 @@ export default function ChemicalScreen() {
         end={{ x: 1, y: 1 }}
         style={styles.hero}
       >
-        <View style={styles.heroTop}>
-          <Text style={styles.brand}>CHEM MARKET INTEL</Text>
-          <Pressable
-            style={({ pressed }) => [styles.logoutBtn, pressed && { opacity: 0.7 }]}
-            onPress={logout}
-          >
-            <Ionicons name="log-out-outline" size={14} color="#94a3b8" />
-            <Text style={styles.logoutText}>ログアウト</Text>
-          </Pressable>
-        </View>
+        <Text style={styles.brand}>CHEM MARKET INTEL</Text>
         <Text style={styles.heroTitle}>化学品 世界市場リサーチ</Text>
         <Text style={styles.heroSub}>
           化学品名 または CAS番号 を入力すると、世界市場数量・サプライヤー・ユーザー・単価・

@@ -15,11 +15,6 @@
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const PUBCHEM = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug';
 const CAS_RE = /^\d{2,7}-\d{2}-\d$/;
-const crypto = require('crypto');
-
-function sha256(s) {
-  return crypto.createHash('sha256').update(String(s)).digest('hex');
-}
 
 /* ------------------------------------------------------------------ */
 /* PubChem: 化学品の同定(実データ)                                    */
@@ -376,20 +371,6 @@ module.exports = async (req, res) => {
   }
 
   try {
-    // 共有パスワード保護: SITE_PASSWORD が設定されている場合はトークンを検証
-    const sitePassword = process.env.SITE_PASSWORD;
-    if (sitePassword) {
-      const token = (req.headers['x-auth-token'] || '').toString();
-      const valid =
-        token.length > 0 &&
-        token.length === 64 &&
-        crypto.timingSafeEqual(Buffer.from(token), Buffer.from(sha256(sitePassword)));
-      if (!valid) {
-        res.status(401).json({ error: '認証が必要です。ログインしてください。' });
-        return;
-      }
-    }
-
     let body = req.body;
     if (typeof body === 'string') body = JSON.parse(body || '{}');
     const query = (body?.query || '').toString().trim();
