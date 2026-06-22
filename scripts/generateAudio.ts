@@ -2,11 +2,16 @@
  * generateAudio.ts
  *
  * Generates native-sounding English audio for every sentence in
- * data/topics.json that doesn't yet have an audio file, using Google
- * Gemini's TTS preview model. Saves WAV files to assets/audio/.
+ * data/topics.json that doesn't yet have an audio file.
+ *
+ * Primary engine:   ElevenLabs (studio-grade, human-like). Used when
+ *                    ELEVENLABS_API_KEY is present. Outputs MP3.
+ * Fallback engine:   Google Gemini TTS preview. Used when no ElevenLabs
+ *                    key is set, or when ElevenLabs quota is exhausted.
+ *                    Outputs WAV.
  *
  * Run:      tsx scripts/generateAudio.ts
- * Requires: GEMINI_API_KEY
+ * Requires: ELEVENLABS_API_KEY (preferred) and/or GEMINI_API_KEY
  */
 
 import fs from 'node:fs';
@@ -22,23 +27,60 @@ const ROOT = path.resolve(__dirname, '..');
 const TOPICS_PATH = path.join(ROOT, 'data', 'topics.json');
 const AUDIO_DIR = path.join(ROOT, 'assets', 'audio');
 
-const MODEL = 'gemini-2.5-flash-preview-tts';
-// Voices: "Puck" upbeat, "Aoede" breezy, "Leda" youthful, "Charon" informative,
-// "Fenrir" excitable, "Zephyr" bright. "Puck" reads with natural intonation.
-const VOICE = process.env.TTS_VOICE || 'Puck';
-// Gemini TTS returns PCM16 mono at 24000 Hz
-const SAMPLE_RATE = 24000;
+// ---------------------------------------------------------------------------
+// ElevenLabs config (primary)
+// ---------------------------------------------------------------------------
+const ELEVEN_KEY = process.env.ELEVENLABS_API_KEY;
+// Default voice: "Brian" — a warm, natural American-male narrator voice that
+// reads conversationally rather than like a news anchor. Override with any
+// voice id from your ElevenLabs voice library via ELEVENLABS_VOICE_ID.
+const ELEVEN_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || 'nPczCjzI2devNBz1zQrb';
+// eleven_multilingual_v2 = the highest-fidelity, most human production model.
+// (eleven_turbo_v2_5 is faster/cheaper but slightly less expressive.)
+const ELEVEN_MODEL = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
 
-// Gemini TTS responds to natural-language style instructions when the
-// input is wrapped as: `Say [STYLE]: "[TEXT]"`. The model speaks only the
-// quoted text, applying the requested tone.
-function wrapWithStyle(text: string): string {
+// Voice settings tuned for natural, expressive speech:
+//  - stability 0.40   → lets intonation breathe (lower = more emotive/varied)
+//  - similarity 0.80  → stays faithful to the voice timbre
+//  - style 0.45       → adds conversational expressiveness
+//  - speaker_boost    → richer presence
+const ELEVEN_VOICE_SETTINGS = {
+  stability: Number(process.env.ELEVENLABS_STABILITY ?? 0.4),
+  similarity_boost: Number(process.env.ELEVENLABS_SIMILARITY ?? 0.8),
+  style: Number(process.env.ELEVENLABS_STYLE ?? 0.45),
+  use_speaker_boost: true,
+};
+
+// ---------------------------------------------------------------------------
+// Gemini config (fallback)
+// ---------------------------------------------------------------------------
+const GEMINI_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_MODEL = process.env.GEMINI_TTS_MODEL || 'gemini-2.5-flash-preview-tts';
+// "Sulafat" = warm; reads with a relaxed, human cadence rather than the
+// brighter/peppier "Puck". Other natural candidates worth A/B-testing via
+// TTS_VOICE: Achird (friendly), Algieba (smooth), Vindemiatrix (gentle),
+// Callirrhoe (easy-going), Zubenelgenubi (casual).
+const GEMINI_VOICE = process.env.TTS_VOICE || 'Sulafat';
+const GEMINI_SAMPLE_RATE = 24000;
+
+// The single biggest lever on perceived naturalness with Gemini TTS is the
+// style instruction. We ask for a real, unhurried human delivery — the way a
+// patient native speaker would read a sentence aloud for a learner: clear,
+// warm, with real intonation and micro-pauses, but never sing-songy or
+// announcer-like.
+function geminiWrapWithStyle(text: string): string {
   const style =
-    'in a natural, warm, expressive conversational tone — like a friend explaining something in person — with appropriate intonation, emphasis on key words, and brief natural pauses at commas';
-  // Strip any existing quotes in the text to avoid breaking the wrapper
+    'Read this the way a real person would say it out loud in a relaxed, ' +
+    'natural conversation — not like a robot or a news anchor. Use genuine ' +
+    'human intonation: let your pitch rise and fall naturally, stress the ' +
+    'words that carry meaning, and take small, unforced pauses at commas and ' +
+    'between thoughts. Keep a calm, warm, unhurried pace, clear enough for a ' +
+    'language learner to follow, but with the easy rhythm of everyday speech';
   const safe = text.replace(/"/g, '\\"');
-  return `Say ${style}: "${safe}"`;
+  return `${style}:\n\n"${safe}"`;
 }
+
+// ---------------------------------------------------------------------------
 
 function loadTopics(): Topic[] {
   if (!fs.existsSync(TOPICS_PATH)) return [];
@@ -72,20 +114,59 @@ function pcmToWav(pcm: Buffer, sampleRate: number): Buffer {
   return Buffer.concat([header, pcm]);
 }
 
-async function synthesize(text: string, outPath: string, attempt = 1): Promise<void> {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) throw new Error('GEMINI_API_KEY env var is required.');
+class QuotaError extends Error {}
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`;
+// Returns the relative audioPath written, or throws.
+async function synthesizeEleven(text: string, baseNoExt: string): Promise<string> {
+  if (!ELEVEN_KEY) throw new Error('no ElevenLabs key');
+  const url = `https://api.elevenlabs.io/v1/text-to-speech/${ELEVEN_VOICE_ID}?output_format=mp3_44100_128`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'xi-api-key': ELEVEN_KEY,
+      'Content-Type': 'application/json',
+      Accept: 'audio/mpeg',
+    },
+    body: JSON.stringify({
+      text,
+      model_id: ELEVEN_MODEL,
+      voice_settings: ELEVEN_VOICE_SETTINGS,
+    }),
+  });
+
+  if (res.status === 401 || res.status === 429) {
+    const body = await res.text();
+    // 401 with quota_exceeded, or 429 rate/credit limit → fall back to Gemini.
+    throw new QuotaError(`ElevenLabs ${res.status}: ${body.slice(0, 200)}`);
+  }
+  if (!res.ok) {
+    const t = await res.text();
+    throw new Error(`ElevenLabs error ${res.status}: ${t.slice(0, 300)}`);
+  }
+
+  const buf = Buffer.from(await res.arrayBuffer());
+  const outPath = `${baseNoExt}.mp3`;
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, buf);
+  return `./assets/audio/${path.basename(outPath)}`;
+}
+
+async function synthesizeGemini(
+  text: string,
+  baseNoExt: string,
+  attempt = 1
+): Promise<string> {
+  if (!GEMINI_KEY) throw new Error('GEMINI_API_KEY env var is required.');
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_KEY}`;
   const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      contents: [{ parts: [{ text: wrapWithStyle(text) }] }],
+      contents: [{ parts: [{ text: geminiWrapWithStyle(text) }] }],
       generationConfig: {
         responseModalities: ['AUDIO'],
         speechConfig: {
-          voiceConfig: { prebuiltVoiceConfig: { voiceName: VOICE } },
+          voiceConfig: { prebuiltVoiceConfig: { voiceName: GEMINI_VOICE } },
         },
       },
     }),
@@ -95,57 +176,98 @@ async function synthesize(text: string, outPath: string, attempt = 1): Promise<v
     const body = await res.text();
     const m = body.match(/retry in ([0-9.]+)s/);
     const wait = m ? Math.ceil(parseFloat(m[1]) * 1000) + 2000 : 30000 * attempt;
-    console.log(`    rate limited, retry in ${Math.round(wait / 1000)}s (attempt ${attempt})`);
+    console.log(`    [gemini] rate limited, retry in ${Math.round(wait / 1000)}s (attempt ${attempt})`);
     await new Promise((r) => setTimeout(r, wait));
-    return synthesize(text, outPath, attempt + 1);
+    return synthesizeGemini(text, baseNoExt, attempt + 1);
   }
-
   if (!res.ok) {
     const t = await res.text();
     throw new Error(`Gemini TTS error ${res.status}: ${t}`);
   }
   const json = (await res.json()) as {
-    candidates?: { content?: { parts?: { inlineData?: { data?: string; mimeType?: string } }[] } }[];
+    candidates?: { content?: { parts?: { inlineData?: { data?: string } }[] } }[];
   };
   const b64 = json.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
   if (!b64) throw new Error('No audio in response');
   const pcm = Buffer.from(b64, 'base64');
-  const wav = pcmToWav(pcm, SAMPLE_RATE);
+  const wav = pcmToWav(pcm, GEMINI_SAMPLE_RATE);
+  const outPath = `${baseNoExt}.wav`;
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, wav);
+  return `./assets/audio/${path.basename(outPath)}`;
 }
 
-// Free tier daily request cap (Gemini TTS): ~15 RPD. Leave a small buffer.
-const MAX_PER_RUN = Number(process.env.MAX_AUDIO_PER_RUN ?? 14);
+// Per-run cap. ElevenLabs free tier is ~10k chars/month, so the limiting
+// factor is monthly credits, not per-run. Default high; lower via env.
+const MAX_PER_RUN = Number(process.env.MAX_AUDIO_PER_RUN ?? 30);
+// Overwrite existing audio (used for a one-time migration to ElevenLabs).
+const FORCE = process.env.FORCE_REGEN === '1';
+
+// Find an already-generated audio file (either extension) for a sentence slot.
+function existingAudio(topicId: string, i: number): string | null {
+  for (const ext of ['mp3', 'wav']) {
+    const abs = path.join(AUDIO_DIR, `${topicId}_${i}.${ext}`);
+    if (fs.existsSync(abs)) return `./assets/audio/${topicId}_${i}.${ext}`;
+  }
+  return null;
+}
 
 async function main() {
   fs.mkdirSync(AUDIO_DIR, { recursive: true });
   const topics = loadTopics();
-  console.log(`Scanning ${topics.length} topics for missing audio (cap: ${MAX_PER_RUN}/run)...`);
+  const engine = ELEVEN_KEY ? 'ElevenLabs (Gemini fallback)' : 'Gemini';
+  console.log(
+    `Scanning ${topics.length} topics for missing audio — engine: ${engine}, cap: ${MAX_PER_RUN}/run${FORCE ? ', FORCE regen' : ''}...`
+  );
 
   let generated = 0;
   let skipped = 0;
   let mutated = false;
+  let elevenDisabled = !ELEVEN_KEY;
 
-  // Process newest first so today's freshly-generated topic gets audio
-  // before older backlog consumes the daily quota.
+  // Newest first so today's topic gets audio before older backlog.
   const ordered = [...topics].reverse();
   outer: for (const topic of ordered) {
     for (let i = 0; i < topic.sentences.length; i++) {
       const s = topic.sentences[i];
-      const filename = `${topic.id}_${i}.wav`;
-      const absPath = path.join(AUDIO_DIR, filename);
-      const relPath = `./assets/audio/${filename}`;
+      const baseNoExt = path.join(AUDIO_DIR, `${topic.id}_${i}`);
 
-      if (fs.existsSync(absPath)) {
-        if (s.audioPath !== relPath) { s.audioPath = relPath; mutated = true; }
-        skipped++;
-        continue;
+      if (!FORCE) {
+        const existing = existingAudio(topic.id, i);
+        if (existing) {
+          if (s.audioPath !== existing) { s.audioPath = existing; mutated = true; }
+          skipped++;
+          continue;
+        }
       }
 
       try {
-        console.log(`  TTS -> ${filename}: ${s.en.slice(0, 60)}...`);
-        await synthesize(s.en, absPath);
+        let relPath: string;
+        if (!elevenDisabled) {
+          try {
+            console.log(`  [11L] -> ${topic.id}_${i}: ${s.en.slice(0, 55)}...`);
+            relPath = await synthesizeEleven(s.en, baseNoExt);
+          } catch (e) {
+            if (e instanceof QuotaError) {
+              console.log(`  ElevenLabs quota/credits exhausted → switching to Gemini fallback.`);
+              console.log(`    (${e.message})`);
+              elevenDisabled = true;
+              console.log(`  [gemini] -> ${topic.id}_${i}: ${s.en.slice(0, 55)}...`);
+              relPath = await synthesizeGemini(s.en, baseNoExt);
+            } else {
+              throw e;
+            }
+          }
+        } else {
+          console.log(`  [gemini] -> ${topic.id}_${i}: ${s.en.slice(0, 55)}...`);
+          relPath = await synthesizeGemini(s.en, baseNoExt);
+        }
+
+        // Clean up a stale file with the *other* extension (provider switch).
+        const otherExt = relPath.endsWith('.mp3') ? 'wav' : 'mp3';
+        const stale = path.join(AUDIO_DIR, `${topic.id}_${i}.${otherExt}`);
+        if (fs.existsSync(stale)) fs.rmSync(stale);
+
         s.audioPath = relPath;
         mutated = true;
         generated++;
@@ -153,10 +275,10 @@ async function main() {
           console.log(`  reached per-run cap (${MAX_PER_RUN}); stopping.`);
           break outer;
         }
-        // Free tier: 3 RPM → space ~22s apart
-        await new Promise((r) => setTimeout(r, 22000));
+        // Gentle pacing. ElevenLabs has generous RPS; Gemini free is 3 RPM.
+        await new Promise((r) => setTimeout(r, elevenDisabled ? 22000 : 1200));
       } catch (err) {
-        console.error(`  !! failed ${filename}:`, err);
+        console.error(`  !! failed ${topic.id}_${i}:`, err);
         if (err instanceof Error && /429/.test(err.message)) {
           console.log('  giving up for today (rate limit).');
           break outer;
