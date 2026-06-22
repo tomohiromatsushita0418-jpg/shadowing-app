@@ -81,5 +81,9 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           REPORT_TO: ${{ secrets.REPORT_TO }}
           APP_BASE_URL: ${{ secrets.APP_BASE_URL }}
-        run: python3 scripts/notify_email.py
+        # Give Vercel's git-triggered build time to finish so the link is live
+        # by the time the email lands.
+        run: |
+          sleep 180
+          python3 scripts/notify_email.py
         continue-on-error: true
