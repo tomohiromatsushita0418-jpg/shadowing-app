@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { FlatList, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
-import { useLocalSearchParams, useNavigation, useFocusEffect } from 'expo-router';
+import { useLocalSearchParams, useNavigation, useFocusEffect, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
@@ -79,7 +79,19 @@ async function fetchJapaneseMeaning(word: string): Promise<string | null> {
 export default function TopicScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const navigation = useNavigation();
+  const router = useRouter();
   const { isComplete, toggleComplete, recordStudy } = useProgress();
+
+  // Return to the topic list. When the app was opened directly via a deep
+  // link (e.g. the notification email), there's no screen to go "back" to,
+  // so navigate to Home explicitly instead.
+  const goHome = useCallback(() => {
+    if (navigation.canGoBack()) {
+      router.back();
+    } else {
+      router.replace('/');
+    }
+  }, [navigation, router]);
 
   const topic = topics.find((t) => t.id === id);
   const completed = topic ? isComplete(topic.id) : false;
@@ -166,13 +178,26 @@ export default function TopicScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      if (topic) {
-        navigation.setOptions({ title: topic.title });
-      }
+      navigation.setOptions({
+        title: topic ? topic.title : '',
+        // Always show a Home button so the list is reachable even when this
+        // screen was opened directly from a deep link.
+        headerLeft: () => (
+          <Pressable
+            onPress={goHome}
+            hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+            style={styles.homeBtn}
+            accessibilityLabel="ホームに戻る"
+          >
+            <Ionicons name="chevron-back" size={22} color="#e2e8f0" />
+            <Ionicons name="home" size={17} color="#e2e8f0" />
+          </Pressable>
+        ),
+      });
       return () => {
         Speech.stop();
       };
-    }, [topic, navigation])
+    }, [topic, navigation, goHome])
   );
 
   const stopAll = useCallback(async () => {
@@ -390,6 +415,13 @@ export default function TopicScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#0f0f14' },
+  homeBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 1,
+    paddingRight: 8,
+    ...(Platform.OS === 'web' ? { cursor: 'pointer' as any } : {}),
+  },
   list: { paddingHorizontal: 16, paddingBottom: 40 },
   header: {
     flexDirection: 'row',

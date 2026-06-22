@@ -1,6 +1,14 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 
+// Ensure Home (index) is always the stack anchor — even when the app is
+// opened directly via a deep link to /topic/<id> (e.g. from the notification
+// email). Without this, a deep-linked topic has no screen beneath it and the
+// back button cannot return to the list.
+export const unstable_settings = {
+  initialRouteName: 'index',
+};
+
 export default function RootLayout() {
   return (
     <>
