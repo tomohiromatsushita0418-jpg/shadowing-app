@@ -40,6 +40,8 @@ jobs:
 
       - name: Generate audio
         env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npx tsx scripts/generateAudio.ts
 
@@ -72,3 +74,12 @@ jobs:
         env:
           VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: curl -fsSL -X POST "$VERCEL_DEPLOY_HOOK"
+
+      - name: Notify by email (new topic link)
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          REPORT_TO: ${{ secrets.REPORT_TO }}
+          APP_BASE_URL: ${{ secrets.APP_BASE_URL }}
+        run: python3 scripts/notify_email.py
+        continue-on-error: true
