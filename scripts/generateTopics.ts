@@ -145,6 +145,7 @@ async function main() {
   console.log(`Loaded ${topics.length} existing topics.`);
   console.log(`Today's category: ${category}`);
 
+  let added = false;
   try {
     const t = await generateOneTopic(category, existingTitles);
     if (t.sentences.length > MAX_SENTENCES_PER_TOPIC) {
@@ -153,6 +154,7 @@ async function main() {
     const id = uniqueId(existingIds);
     const topic: Topic = { id, ...t, createdAt: new Date().toISOString() } as Topic;
     topics.push(topic);
+    added = true;
     console.log(`  -> "${topic.title}" (${topic.sentences.length} sentences) id=${id}`);
   } catch (err) {
     console.error(`  !! failed for ${category}:`, err);
@@ -160,6 +162,14 @@ async function main() {
 
   saveTopics(topics);
   console.log(`Done. topics.json now has ${topics.length} topics.`);
+
+  // Fail the run when no topic was added (e.g. expired/invalid GEMINI_API_KEY).
+  // Without this the workflow stays green while the daily update silently
+  // stalls — exactly how generation stopped unnoticed before.
+  if (!added) {
+    console.error('No topic was generated this run — failing so the stall is visible.');
+    process.exit(1);
+  }
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });
