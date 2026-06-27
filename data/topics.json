@@ -11760,9 +11760,333 @@
             "meaning": "心から感動させる、真に刺激的な",
             "usage": "His dedication to the cause was genuinely inspiring. のように使います。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17820592245472977_11.wav"
       }
     ],
     "createdAt": "2026-06-21T16:27:04.547Z"
+  },
+  {
+    "id": "t17825445232250566",
+    "title": "The Geopolitical Race for AI Supremacy",
+    "titleJa": "AI覇権を巡る地政学的競争",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The burgeoning realm of artificial intelligence has swiftly emerged as a pivotal battleground in the ongoing contest for global technological and economic preeminence.",
+        "ja": "急成長する人工知能の分野は、世界の技術的・経済的優位性を巡る継続的な競争において、極めて重要な主戦場として急速に浮上しています。",
+        "audioPath": "./assets/audio/t17825445232250566_0.wav",
+        "phrases": [
+          {
+            "phrase": "burgeoning realm",
+            "meaning": "急成長している分野",
+            "usage": "The burgeoning realm of renewable energy is attracting significant investment."
+          },
+          {
+            "phrase": "pivotal battleground",
+            "meaning": "決定的な戦場、重要な競争領域",
+            "usage": "The company views the streaming market as a pivotal battleground for future growth."
+          },
+          {
+            "phrase": "ongoing contest",
+            "meaning": "進行中の競争",
+            "usage": "The ongoing contest for market share is intense."
+          },
+          {
+            "phrase": "global technological and economic preeminence",
+            "meaning": "世界的な技術的・経済的な優位性",
+            "usage": "Nations are vying for global technological and economic preeminence in the AI era."
+          }
+        ]
+      },
+      {
+        "en": "Major global powers are now heavily investing in AI research and development, recognizing its transformative potential across various sectors, from defense to healthcare.",
+        "ja": "主要な世界各国は、防衛から医療に至るまで、多岐にわたる分野におけるAIの変革的潜在力を認識し、その研究開発に多額の投資を行っています。",
+        "audioPath": "./assets/audio/t17825445232250566_1.wav",
+        "phrases": [
+          {
+            "phrase": "heavily investing in",
+            "meaning": "〜に多額の投資をしている",
+            "usage": "The company is heavily investing in new technology. (その会社は新技術に多額の投資をしている。)"
+          },
+          {
+            "phrase": "transformative potential",
+            "meaning": "変革をもたらす可能性",
+            "usage": "This new drug has transformative potential for treating cancer. (この新薬はがん治療に大きな変革をもたらす可能性を秘めている。)"
+          },
+          {
+            "phrase": "across various sectors",
+            "meaning": "様々な分野にわたって",
+            "usage": "The impact of the pandemic was felt across various sectors of the economy. (パンデミックの影響は経済の様々な分野に及んだ。)"
+          }
+        ]
+      },
+      {
+        "en": "Whichever nation establishes a significant lead in AI innovation stands to gain an unparalleled competitive edge, potentially reshaping global supply chains and economic hierarchies.",
+        "ja": "AIイノベーションにおいて顕著な優位性を確立した国は、比類のない競争力を獲得し、世界のサプライチェーンや経済的階層を再構築する可能性があります。",
+        "audioPath": "./assets/audio/t17825445232250566_2.wav",
+        "phrases": [
+          {
+            "phrase": "establishes a significant lead",
+            "meaning": "大きなリードを確立する",
+            "usage": "技術開発において大きなリードを確立する、といった文脈で使われます。"
+          },
+          {
+            "phrase": "stands to gain",
+            "meaning": "得るものがある、利益を得る可能性がある",
+            "usage": "この表現は、将来的に何らかの利益や利点が得られる状況を示唆します。"
+          },
+          {
+            "phrase": "unparalleled competitive edge",
+            "meaning": "比類なき競争優位性",
+            "usage": "他社や他国に対して圧倒的な強みを持つことを意味します。"
+          },
+          {
+            "phrase": "reshaping global supply chains",
+            "meaning": "グローバルサプライチェーンを再構築する",
+            "usage": "技術革新などが、世界の生産・供給網のあり方を大きく変えることを示します。"
+          }
+        ]
+      },
+      {
+        "en": "The integration of AI into military applications, such as autonomous weapons systems and advanced surveillance, raises profound ethical questions alongside strategic concerns.",
+        "ja": "自律型兵器システムや高度な監視など、軍事用途へのAI統合は、戦略的懸念と並んで、深刻な倫理的問題を提起しています。",
+        "audioPath": "./assets/audio/t17825445232250566_3.wav",
+        "phrases": [
+          {
+            "phrase": "integration of AI into military applications",
+            "meaning": "AIの軍事応用への統合",
+            "usage": "AIの軍事分野への導入について議論する際に使われます。"
+          },
+          {
+            "phrase": "autonomous weapons systems",
+            "meaning": "自律型兵器システム",
+            "usage": "AIが判断し、人間の介入なしに攻撃を行う兵器システムを指します。"
+          },
+          {
+            "phrase": "raises profound ethical questions",
+            "meaning": "深刻な倫理的問いを提起する",
+            "usage": "新しい技術や状況がもたらす道徳的な問題点を指摘する際に使われます。"
+          },
+          {
+            "phrase": "strategic concerns",
+            "meaning": "戦略的な懸念",
+            "usage": "軍事的な計画や行動におけるリスクや課題を指す場合に用いられます。"
+          }
+        ]
+      },
+      {
+        "en": "Access to vast datasets, often referred to as the new oil, is proving indispensable for training sophisticated AI models, thus fueling intense competition for data sovereignty.",
+        "ja": "新たな石油とも称される膨大なデータセットへのアクセスは、高度なAIモデルの訓練に不可欠であることが判明しており、データ主権を巡る激しい競争を煽っています。",
+        "audioPath": "./assets/audio/t17825445232250566_4.wav",
+        "phrases": [
+          {
+            "phrase": "access to vast datasets",
+            "meaning": "膨大なデータセットへのアクセス",
+            "usage": "vast datasets は「ビッグデータ」のような意味合いで使われます。例: Companies are vying for access to vast datasets to improve their services."
+          },
+          {
+            "phrase": "often referred to as",
+            "meaning": "〜としてしばしば言及される",
+            "usage": "あるものが一般的にどのように呼ばれているか説明する際に使います。例: This new technology, often referred to as 'AI', is changing the industry."
+          },
+          {
+            "phrase": "proving indispensable",
+            "meaning": "不可欠であることが証明される",
+            "usage": "indispensible は「不可欠な、必須の」という意味で、ビジネスシーンでよく使われます。例: Skilled engineers are proving indispensable for the company's success."
+          },
+          {
+            "phrase": "fueling intense competition",
+            "meaning": "激しい競争を煽る、激化させる",
+            "usage": "fuel は「〜を煽る、〜を助長する」という意味で、競争や議論などが激しくなる状況を表すのに適しています。例: The discovery of new resources is fueling intense competition among nations."
+          }
+        ]
+      },
+      {
+        "en": "The intricate global supply chains for advanced semiconductors, crucial for AI development, represent a significant vulnerability and a point of geopolitical leverage.",
+        "ja": "AI開発に不可欠な高度半導体の複雑なグローバルサプライチェーンは、重大な脆弱性であり、地政学的な影響力を行使するポイントとなっています。",
+        "audioPath": "./assets/audio/t17825445232250566_5.wav",
+        "phrases": [
+          {
+            "phrase": "global supply chains",
+            "meaning": "世界的な供給網",
+            "usage": "The company is struggling with disruptions in its global supply chains. (同社は世界的な供給網の混乱に苦しんでいる。)"
+          },
+          {
+            "phrase": "crucial for",
+            "meaning": "〜にとって不可欠な、極めて重要な",
+            "usage": "This information is crucial for our decision-making. (この情報は我々の意思決定にとって極めて重要だ。)"
+          },
+          {
+            "phrase": "point of geopolitical leverage",
+            "meaning": "地政学的な交渉材料となる点",
+            "usage": "Control over energy resources can be a point of geopolitical leverage. (エネルギー資源の支配は地政学的な交渉材料となりうる。)"
+          }
+        ]
+      },
+      {
+        "en": "Consequently, several nations are actively pursuing technological decoupling, aiming to cultivate self-sufficiency in critical AI components and capabilities to mitigate external dependencies.",
+        "ja": "その結果、いくつかの国々は、外部への依存を軽減するため、重要なAIコンポーネントや能力における自給自足を目指し、積極的に技術的デカップリングを推進しています。",
+        "audioPath": "./assets/audio/t17825445232250566_6.wav",
+        "phrases": [
+          {
+            "phrase": "actively pursuing",
+            "meaning": "積極的に追求している",
+            "usage": "The company is actively pursuing new market opportunities. (その会社は新たな市場機会を積極的に追求しています。)"
+          },
+          {
+            "phrase": "technological decoupling",
+            "meaning": "技術的分離",
+            "usage": "This refers to separating technological ecosystems between countries. (これは国間の技術的エコシステムを分離することを指します。)"
+          },
+          {
+            "phrase": "cultivate self-sufficiency",
+            "meaning": "自給自足（体制）を育成する",
+            "usage": "The goal is to cultivate self-sufficiency in essential resources. (目標は、必須資源における自給自足を育成することです。)"
+          },
+          {
+            "phrase": "mitigate external dependencies",
+            "meaning": "外部への依存を軽減する",
+            "usage": "This strategy aims to mitigate external dependencies on foreign suppliers. (この戦略は、外国の供給元への外部依存を軽減することを目指しています。)"
+          }
+        ]
+      },
+      {
+        "en": "Despite the imperative for international collaboration on AI ethics and safety, national interests often overshadow collective efforts to establish universal regulatory frameworks.",
+        "ja": "AIの倫理と安全性に関する国際協力の必要性があるにもかかわらず、国家の利益が、普遍的な規制枠組みを確立するための集団的努力をしばしば凌駕しています。",
+        "audioPath": "./assets/audio/t17825445232250566_7.wav",
+        "phrases": [
+          {
+            "phrase": "imperative for",
+            "meaning": "〜に対する必須事項、急務",
+            "usage": "There is an imperative for immediate action. すぐに行動することが急務である。"
+          },
+          {
+            "phrase": "international collaboration",
+            "meaning": "国際協力",
+            "usage": "International collaboration is crucial for tackling global challenges. 地球規模の課題に取り組む上で国際協力は不可欠だ。"
+          },
+          {
+            "phrase": "national interests",
+            "meaning": "国益",
+            "usage": "The government prioritized national interests in the trade negotiations. 政府は貿易交渉で国益を優先した。"
+          },
+          {
+            "phrase": "overshadow collective efforts",
+            "meaning": "集団的な努力をかすませる、影を薄くする",
+            "usage": "Personal ambition can sometimes overshadow collective efforts. 個人の野心が集団的な努力をかすませることがある。"
+          }
+        ]
+      },
+      {
+        "en": "The global talent pool for AI expertise is another focal point, with countries vying to attract and retain top researchers and engineers, leading to a sophisticated form of brain drain.",
+        "ja": "AI専門知識を持つグローバルな人材プールもまた焦点となっており、各国が優秀な研究者やエンジニアを引き留めようと競い合い、高度な頭脳流出の形を生み出しています。",
+        "audioPath": "./assets/audio/t17825445232250566_8.wav",
+        "phrases": [
+          {
+            "phrase": "global talent pool",
+            "meaning": "世界の優秀な人材の集まり",
+            "usage": "The company is trying to tap into the global talent pool for software developers."
+          },
+          {
+            "phrase": "focal point",
+            "meaning": "焦点、中心",
+            "usage": "The issue of climate change has become a major focal point in international discussions."
+          },
+          {
+            "phrase": "vying to attract and retain",
+            "meaning": "引きつけ、維持するために競い合う",
+            "usage": "Many tech companies are vying to attract and retain top engineers in a competitive market."
+          },
+          {
+            "phrase": "brain drain",
+            "meaning": "頭脳流出",
+            "usage": "The country is experiencing a significant brain drain as skilled professionals seek better opportunities abroad."
+          }
+        ]
+      },
+      {
+        "en": "This technological arms race is invariably reshaping diplomatic relations, potentially fostering new strategic alliances or solidifying existing blocs around shared AI development goals.",
+        "ja": "この技術的な軍拡競争は、必然的に外交関係を再構築しており、共通のAI開発目標を巡る新たな戦略的同盟を育んだり、既存のブロックを強化したりする可能性があります。",
+        "audioPath": "./assets/audio/t17825445232250566_9.wav",
+        "phrases": [
+          {
+            "phrase": "arms race",
+            "meaning": "軍拡競争、技術競争",
+            "usage": "The competition for advanced technology has become a global arms race."
+          },
+          {
+            "phrase": "reshaping diplomatic relations",
+            "meaning": "外交関係を再構築する",
+            "usage": "The new trade agreement is reshaping economic relations between the two countries."
+          },
+          {
+            "phrase": "strategic alliances",
+            "meaning": "戦略的提携",
+            "usage": "Many companies are forming strategic alliances to expand their market share."
+          },
+          {
+            "phrase": "solidifying existing blocs",
+            "meaning": "既存の勢力圏を強化する",
+            "usage": "The recent election results helped solidify the party's power base."
+          }
+        ]
+      },
+      {
+        "en": "Policymakers worldwide are grappling with the urgent necessity to formulate robust national AI strategies that balance innovation with responsible deployment and national security imperatives.",
+        "ja": "世界中の政策立案者は、イノベーションと責任ある展開、そして国家安全保障上の要請とのバランスを取りながら、堅固な国家AI戦略を策定するという喫緊の必要性に取り組んでいます。",
+        "audioPath": "./assets/audio/t17825445232250566_10.wav",
+        "phrases": [
+          {
+            "phrase": "grapple with",
+            "meaning": "〜と格闘する、〜に取り組む",
+            "usage": "困難な問題や課題に直面し、解決しようと努力する状況で使う。"
+          },
+          {
+            "phrase": "urgent necessity",
+            "meaning": "緊急の必要性",
+            "usage": "非常に重要で、すぐに対応が求められる状況で使う。"
+          },
+          {
+            "phrase": "formulate strategies",
+            "meaning": "戦略を策定する",
+            "usage": "計画や方針を具体的に立てる際に使う。"
+          },
+          {
+            "phrase": "balance A with B",
+            "meaning": "AとBのバランスを取る、AとBを両立させる",
+            "usage": "異なる要素や要求を適切に調整する際に使う。「balance work with life」のように使う。"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, the trajectory of AI development and its geopolitical ramifications will profoundly influence the global power dynamics for decades to come, warranting sustained vigilance and adaptive governance.",
+        "ja": "最終的に、AI開発の軌跡とその地政学的な影響は、今後数十年にわたり世界のパワーバランスに深く影響を与えるため、継続的な警戒と適応的なガバナンスが不可欠です。",
+        "audioPath": "./assets/audio/t17825445232250566_11.wav",
+        "phrases": [
+          {
+            "phrase": "geopolitical ramifications",
+            "meaning": "地政学的な影響/波及効果",
+            "usage": "The war had significant geopolitical ramifications. のように使う"
+          },
+          {
+            "phrase": "global power dynamics",
+            "meaning": "世界のパワーバランス/力学",
+            "usage": "国際関係や経済の文脈で頻繁に用いられる表現"
+          },
+          {
+            "phrase": "for decades to come",
+            "meaning": "今後数十年間にわたって",
+            "usage": "for years to come や for centuries to come のように期間を変えて使える"
+          },
+          {
+            "phrase": "sustained vigilance",
+            "meaning": "持続的な警戒/監視",
+            "usage": "継続的な注意や監視が必要な状況で使われる"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-06-27T07:15:23.225Z"
   }
 ]
