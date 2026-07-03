@@ -13372,53 +13372,534 @@
       {
         "en": "This pivot prioritizes advanced materials for electric vehicle batteries, cutting-edge semiconductor manufacturing, and biodegradable polymers, reflecting a future-oriented growth strategy.",
         "ja": "この転換は、電気自動車用バッテリー、最先端の半導体製造、生分解性ポリマー向けの先端材料を優先し、未来志向の成長戦略を反映しています。",
-        "audioPath": "./assets/audio/t17830107961628138_2.wav"
+        "audioPath": "./assets/audio/t17830107961628138_2.wav",
+        "phrases": [
+          {
+            "phrase": "pivot prioritizes",
+            "meaning": "〜を最優先する方針転換",
+            "usage": "The company's pivot prioritizes sustainability in its new product lines. (同社の戦略転換は、新製品ラインにおける持続可能性を最優先するものである。)"
+          },
+          {
+            "phrase": "cutting-edge semiconductor manufacturing",
+            "meaning": "最先端の半導体製造",
+            "usage": "This field requires continuous innovation and investment in cutting-edge semiconductor manufacturing. (この分野では、継続的な革新と最先端の半導体製造への投資が求められる。)"
+          },
+          {
+            "phrase": "future-oriented growth strategy",
+            "meaning": "将来志向の成長戦略",
+            "usage": "A future-oriented growth strategy is essential for long-term success. (将来志向の成長戦略は、長期的な成功に不可欠である。)"
+          }
+        ]
       },
       {
         "en": "Decarbonization initiatives are no longer aspirational but fundamental, compelling companies like BASF and Dow to channel significant R&D into green hydrogen and carbon capture technologies.",
         "ja": "脱炭素化への取り組みは、もはや願望ではなく基本的な要件となり、BASFやDowといった企業は、グリーン水素や炭素回収技術に多大な研究開発費を投入せざるを得なくなっています。",
-        "audioPath": "./assets/audio/t17830107961628138_3.wav"
+        "audioPath": "./assets/audio/t17830107961628138_3.wav",
+        "phrases": [
+          {
+            "phrase": "no longer aspirational but fundamental",
+            "meaning": "もはや願望ではなく、不可欠なもの",
+            "usage": "「no longer X but Y」の形で、状況の変化や本質を表す際に非常に有効。"
+          },
+          {
+            "phrase": "compelling companies to channel",
+            "meaning": "企業に〜するよう強いる/させる",
+            "usage": "「compel A to B」で「AにBすることを強制する」という意味。ビジネスでよく使う表現。"
+          },
+          {
+            "phrase": "channel significant R&D into",
+            "meaning": "多大な研究開発を〜に投入する",
+            "usage": "「channel resources/funds/efforts into X」のように、資源を特定の目的に向ける際に使う。"
+          }
+        ]
       },
       {
         "en": "Recent geopolitical tensions and logistical disruptions have underscored the imperative for robust and localized supply chains, prompting a reassessment of global sourcing strategies.",
         "ja": "近年の地政学的な緊張や物流の混乱は、強靭で地域に根差したサプライチェーンの必要性を浮き彫りにし、グローバルな調達戦略の再評価を促しています。",
-        "audioPath": "./assets/audio/t17830107961628138_4.wav"
+        "audioPath": "./assets/audio/t17830107961628138_4.wav",
+        "phrases": [
+          {
+            "phrase": "geopolitical tensions",
+            "meaning": "地政学的な緊張",
+            "usage": "国際情勢の不安定さを表す際によく使われる表現です。"
+          },
+          {
+            "phrase": "logistical disruptions",
+            "meaning": "物流の混乱",
+            "usage": "サプライチェーンや輸送に関する問題点を指摘する際に役立ちます。"
+          },
+          {
+            "phrase": "underscored the imperative",
+            "meaning": "〜の必要性を強調した",
+            "usage": "「〜が不可欠であることを強く示唆した」という意味で、重要性を訴える場面で使えます。"
+          },
+          {
+            "phrase": "reassessment of global sourcing strategies",
+            "meaning": "グローバルソーシング戦略の再評価",
+            "usage": "企業の調達方針の見直しや戦略変更について議論する際に適した表現です。"
+          }
+        ]
       },
       {
         "en": "Consequently, M&A activity remains vibrant, with strategic acquisitions aimed at bolstering technological capabilities and securing critical raw material access.",
         "ja": "その結果、M&A活動は依然として活発であり、技術力の強化と重要な原材料へのアクセス確保を目的とした戦略的な買収が相次いでいます。",
-        "audioPath": "./assets/audio/t17830107961628138_5.wav"
+        "audioPath": "./assets/audio/t17830107961628138_5.wav",
+        "phrases": [
+          {
+            "phrase": "remains vibrant",
+            "meaning": "活況を呈している、活発なままである",
+            "usage": "市場や経済状況が好調に推移していることを表す際によく使う。"
+          },
+          {
+            "phrase": "strategic acquisitions",
+            "meaning": "戦略的買収",
+            "usage": "企業の成長や競争力強化を目的としたM&Aを指す。"
+          },
+          {
+            "phrase": "bolstering technological capabilities",
+            "meaning": "技術力を強化する",
+            "usage": "企業が競争優位性を確立するために技術投資を行う文脈で使う。"
+          },
+          {
+            "phrase": "securing critical raw material access",
+            "meaning": "重要な原材料へのアクセスを確保する",
+            "usage": "サプライチェーンの安定化や地政学的リスクの議論で頻繁に用いられる。"
+          }
+        ]
       },
       {
         "en": "Innovation in biotechnological processes and circular economy models is rapidly gaining traction, offering pathways to reduce waste and enhance resource efficiency.",
         "ja": "バイオテクノロジーを用いたプロセスやサーキュラーエコノミーモデルにおけるイノベーションが急速に注目を集め、廃棄物の削減と資源効率の向上への道筋を示しています。",
-        "audioPath": "./assets/audio/t17830107961628138_6.wav"
+        "audioPath": "./assets/audio/t17830107961628138_6.wav",
+        "phrases": [
+          {
+            "phrase": "gaining traction",
+            "meaning": "勢いを増す、支持を得る",
+            "usage": "新しい製品やアイデアが市場で受け入れられ始めたときに使う。"
+          },
+          {
+            "phrase": "circular economy models",
+            "meaning": "循環型経済モデル",
+            "usage": "持続可能なビジネス戦略や環境政策を語る際に重要。"
+          },
+          {
+            "phrase": "offering pathways to",
+            "meaning": "〜への道筋を提供する",
+            "usage": "問題解決や目標達成のための手段を示す際に用いる。"
+          },
+          {
+            "phrase": "enhance resource efficiency",
+            "meaning": "資源効率を高める",
+            "usage": "生産性向上や環境負荷低減の文脈で頻繁に用いられる。"
+          }
+        ]
       },
       {
         "en": "The evolving regulatory landscape, particularly in Europe, mandates greater transparency and accountability for product lifecycle impacts, pushing the industry towards greener alternatives.",
         "ja": "特に欧州における規制環境の変化は、製品のライフサイクル全体にわたる影響に対する透明性と説明責任を強く求め、業界をより環境に優しい代替品へと推進しています。",
-        "audioPath": "./assets/audio/t17830107961628138_7.wav"
+        "audioPath": "./assets/audio/t17830107961628138_7.wav",
+        "phrases": [
+          {
+            "phrase": "regulatory landscape",
+            "meaning": "規制の状況、規制環境",
+            "usage": "The regulatory landscape is constantly changing. (規制環境は常に変化している。)"
+          },
+          {
+            "phrase": "product lifecycle impacts",
+            "meaning": "製品ライフサイクルへの影響",
+            "usage": "Companies are increasingly focused on reducing product lifecycle impacts. (企業は製品ライフサイクルの影響を低減することにますます注力している。)"
+          },
+          {
+            "phrase": "greener alternatives",
+            "meaning": "より環境に優しい代替案",
+            "usage": "We are exploring greener alternatives for our packaging. (私たちは包装材について、より環境に優しい代替案を検討している。)"
+          }
+        ]
       },
       {
         "en": "Companies such as Mitsubishi Chemical and Shin-Etsu are heavily investing in next-generation materials for electronics, anticipating surging demand from digitalization trends.",
         "ja": "三菱ケミカルや信越化学などの企業は、デジタル化の動向による需要の急増を見越し、エレクトロニクス向けの次世代材料に大規模な投資を行っています。",
-        "audioPath": "./assets/audio/t17830107961628138_8.wav"
+        "audioPath": "./assets/audio/t17830107961628138_8.wav",
+        "phrases": [
+          {
+            "phrase": "heavily investing in",
+            "meaning": "〜に多額の投資をしている",
+            "usage": "The company is heavily investing in renewable energy. (その会社は再生可能エネルギーに多額の投資をしている。)"
+          },
+          {
+            "phrase": "next-generation materials",
+            "meaning": "次世代素材",
+            "usage": "This research focuses on developing next-generation materials for sustainable construction. (この研究は持続可能な建築のための次世代素材の開発に焦点を当てている。)"
+          },
+          {
+            "phrase": "anticipating surging demand",
+            "meaning": "需要の急増を見込んで",
+            "usage": "Businesses are stocking up on goods, anticipating surging demand during the holiday season. (ホリデーシーズン中の需要急増を見込んで、企業は商品を買いだめしている。)"
+          },
+          {
+            "phrase": "digitalization trends",
+            "meaning": "デジタル化のトレンド",
+            "usage": "The shift to remote work is a major part of digitalization trends. (リモートワークへの移行は、デジタル化のトレンドの大きな部分を占めている。)"
+          }
+        ]
       },
       {
         "en": "However, navigating these transitions presents considerable challenges, including significant capital expenditure requirements and the need for a highly skilled workforce.",
         "ja": "しかしながら、これらの移行を乗り越えるには、多額の設備投資要件や高度なスキルを持つ労働力の必要性など、相当な課題が伴います。",
-        "audioPath": "./assets/audio/t17830107961628138_9.wav"
+        "audioPath": "./assets/audio/t17830107961628138_9.wav",
+        "phrases": [
+          {
+            "phrase": "presents considerable challenges",
+            "meaning": "かなりの課題を提示する／もたらす",
+            "usage": "「課題をもたらす」という意味で、The new policy presents several challenges. のように使う。"
+          },
+          {
+            "phrase": "capital expenditure requirements",
+            "meaning": "設備投資の要件",
+            "usage": "capital expenditure は「設備投資」で、ビジネスや経済ニュースで頻出する。"
+          },
+          {
+            "phrase": "highly skilled workforce",
+            "meaning": "高度な技能を持つ労働力",
+            "usage": "workforce は「労働力」を意味し、skilled workforce や diverse workforce のように使う。"
+          },
+          {
+            "phrase": "navigating these transitions",
+            "meaning": "これらの移行を乗り越えること",
+            "usage": "navigate は「困難な状況をうまく切り抜ける」という意味で、navigate complex negotiations のように使う。"
+          }
+        ]
       },
       {
         "en": "The competitive intensity is also escalating, with new entrants and agile startups challenging established players through disruptive sustainable technologies.",
         "ja": "競争の激しさも増しており、新たな参入企業や機敏なスタートアップが、破壊的な持続可能技術を通じて既存企業に挑んでいます。",
-        "audioPath": "./assets/audio/t17830107961628138_10.wav"
+        "audioPath": "./assets/audio/t17830107961628138_10.wav",
+        "phrases": [
+          {
+            "phrase": "competitive intensity",
+            "meaning": "競争の激しさ",
+            "usage": "市場や業界における競争の度合いを表現する際に使う。"
+          },
+          {
+            "phrase": "new entrants",
+            "meaning": "新規参入企業",
+            "usage": "市場に新しく参入してくる企業や個人を指す。"
+          },
+          {
+            "phrase": "established players",
+            "meaning": "既存企業、老舗企業",
+            "usage": "市場で既に地位や実績を確立している企業を指す。"
+          },
+          {
+            "phrase": "disruptive sustainable technologies",
+            "meaning": "破壊的持続可能技術",
+            "usage": "既存市場を一変させる可能性があり、かつ環境に配慮した技術。"
+          }
+        ]
       },
       {
         "en": "Ultimately, the industry's long-term prosperity hinges on its collective ability to innovate sustainably, adapt to dynamic market demands, and proactively address environmental imperatives.",
-        "ja": "最終的に、業界の長期的な繁栄は、持続可能な形で革新を進め、変化する市場の需要に適応し、環境上の必須課題に積極的に対処する、その総体的な能力にかかっています。"
+        "ja": "最終的に、業界の長期的な繁栄は、持続可能な形で革新を進め、変化する市場の需要に適応し、環境上の必須課題に積極的に対処する、その総体的な能力にかかっています。",
+        "phrases": [
+          {
+            "phrase": "hinges on",
+            "meaning": "〜にかかっている、〜次第である",
+            "usage": "成功の可否が何かに依存する状況で使う。"
+          },
+          {
+            "phrase": "adapt to dynamic market demands",
+            "meaning": "変化の激しい市場の需要に適応する",
+            "usage": "現代のビジネス環境における企業の課題を説明する際によく用いる。"
+          },
+          {
+            "phrase": "proactively address",
+            "meaning": "積極的に対処する、先を見越して対応する",
+            "usage": "問題や課題に対して、発生する前に手を打つ姿勢を示す。"
+          },
+          {
+            "phrase": "environmental imperatives",
+            "meaning": "環境上の必須課題、環境上の要請",
+            "usage": "企業が果たすべき環境責任や取り組むべき重要課題を指す。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-07-02T16:46:36.162Z"
+  },
+  {
+    "id": "t17830956823169811",
+    "title": "Exploring a New Creative Outlet",
+    "titleJa": "新しい創作活動に挑戦する",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I've recently embarked on a rather intriguing new hobby: pottery.",
+        "ja": "最近、陶芸というかなり魅力的な新しい趣味を始めました。",
+        "audioPath": "./assets/audio/t17830956823169811_0.wav",
+        "phrases": [
+          {
+            "phrase": "embarked on",
+            "meaning": "〜に着手する、〜を始める",
+            "usage": "embark on a new project のように、新しい挑戦や事業を始める際に使われます。"
+          },
+          {
+            "phrase": "rather intriguing",
+            "meaning": "かなり興味深い",
+            "usage": "rather は副詞で、形容詞や副詞を強める際に使われ、intriguing は「興味をそそるような」という意味です。"
+          }
+        ]
+      },
+      {
+        "en": "It's quite a departure from my usual pursuits, which tend to be more intellectually stimulating than hands-on.",
+        "ja": "普段、頭を使うことの多い私の趣味とは一線を画しており、随分と趣が異なります。",
+        "audioPath": "./assets/audio/t17830956823169811_1.wav",
+        "phrases": [
+          {
+            "phrase": "quite a departure from",
+            "meaning": "〜からのかなりの逸脱/変化",
+            "usage": "これは前例のない、かなりの方向転換だ。"
+          },
+          {
+            "phrase": "usual pursuits",
+            "meaning": "普段の活動/趣味",
+            "usage": "彼の通常の業務はデータ分析だ。"
+          },
+          {
+            "phrase": "intellectually stimulating",
+            "meaning": "知的に刺激的な",
+            "usage": "その会議は非常に知的に刺激的だった。"
+          },
+          {
+            "phrase": "hands-on",
+            "meaning": "実地の、実践的な",
+            "usage": "彼は実践的な経験を重視する。"
+          }
+        ]
+      },
+      {
+        "en": "The tactile experience of molding clay with my own hands is surprisingly therapeutic and utterly absorbing.",
+        "ja": "自分の手で土をこねる触覚的な体験は、驚くほど癒しになり、完全に没頭してしまいます。",
+        "audioPath": "./assets/audio/t17830956823169811_2.wav",
+        "phrases": [
+          {
+            "phrase": "tactile experience",
+            "meaning": "触覚的な体験",
+            "usage": "The tactile experience of using a new smartphone is important for user satisfaction."
+          },
+          {
+            "phrase": "molding clay",
+            "meaning": "粘土をこねる・成形する",
+            "usage": "Molding clay is a common art activity for children and adults alike."
+          },
+          {
+            "phrase": "utterly absorbing",
+            "meaning": "完全に夢中になる、没頭させる",
+            "usage": "The book was so utterly absorbing that I couldn't put it down."
+          }
+        ]
+      },
+      {
+        "en": "I'm still very much a novice, of course, and my initial attempts have been, shall we say, endearingly lopsided.",
+        "ja": "もちろん、まだ駆け出しで、最初の作品は、何というか、愛嬌のあるいびつな形ばかりですが。",
+        "audioPath": "./assets/audio/t17830956823169811_3.wav",
+        "phrases": [
+          {
+            "phrase": "very much a novice",
+            "meaning": "まったくの初心者、かなりの初心者",
+            "usage": "「very much a part of the team」のように、「非常に〜である」と強調したい名詞の前に使う。"
+          },
+          {
+            "phrase": "initial attempts",
+            "meaning": "最初の試み、初期の試み",
+            "usage": "「initial findings」や「initial investment」のように、ビジネスで「最初の〜」という意味で頻繁に使う。"
+          },
+          {
+            "phrase": "shall we say",
+            "meaning": "何と言いますか、言ってみれば",
+            "usage": "遠回しな表現や、適切な言葉を探しているとき、または婉曲的に表現したいときに使う。"
+          }
+        ]
+      },
+      {
+        "en": "However, there's an immense satisfaction in bringing a form to life from a mere lump of earth.",
+        "ja": "それでも、ただの土の塊から形を生み出すことには、計り知れない満足感があります。",
+        "audioPath": "./assets/audio/t17830956823169811_4.wav",
+        "phrases": [
+          {
+            "phrase": "immense satisfaction",
+            "meaning": "計り知れない満足感",
+            "usage": "His hard work brought him immense satisfaction. (彼の懸命な努力は彼に計り知れない満足感をもたらした)"
+          },
+          {
+            "phrase": "bringing ... to life",
+            "meaning": "〜に命を吹き込む、〜を生き生きとさせる",
+            "usage": "The actor brought the character to life. (その俳優はキャラクターに命を吹き込んだ)"
+          },
+          {
+            "phrase": "a lump of earth",
+            "meaning": "塊の土",
+            "usage": "The sculptor started with a lump of clay. (彫刻家は粘土の塊から始めた)"
+          }
+        ]
+      },
+      {
+        "en": "I've found myself completely engrossed in learning the various techniques, from centering the clay to mastering different glazing methods.",
+        "ja": "土の芯出しから様々な釉薬の技法を習得することまで、あらゆる技術の習得にすっかり夢中になっています。",
+        "audioPath": "./assets/audio/t17830956823169811_5.wav",
+        "phrases": [
+          {
+            "phrase": "engrossed in",
+            "meaning": "〜に夢中になっている、没頭している",
+            "usage": "He was engrossed in his book. のように、何かに深く集中している様子を表す際に使われます。"
+          },
+          {
+            "phrase": "learning the various techniques",
+            "meaning": "様々な技術を習得すること",
+            "usage": "ビジネスシーンで新しいスキルや方法論を学ぶ際に応用できます。例: learning the various techniques for data analysis."
+          },
+          {
+            "phrase": "mastering different glazing methods",
+            "meaning": "異なる釉薬の方法を習得すること",
+            "usage": "専門的なスキルや手法を完璧に身につけることを指します。例: mastering different project management methodologies."
+          }
+        ]
+      },
+      {
+        "en": "My instructor is incredibly patient and offers invaluable guidance, which has certainly eased my initial apprehension.",
+        "ja": "先生は本当に辛抱強く、貴重な指導をしてくださるので、最初の不安もずいぶん和らぎました。",
+        "audioPath": "./assets/audio/t17830956823169811_6.wav",
+        "phrases": [
+          {
+            "phrase": "incredibly patient",
+            "meaning": "信じられないほど忍耐強い",
+            "usage": "非常に忍耐強い様子を強調する際に使われます。"
+          },
+          {
+            "phrase": "invaluable guidance",
+            "meaning": "非常に貴重な指導・助言",
+            "usage": "大変役立つ、かけがえのない助言であることを示します。"
+          },
+          {
+            "phrase": "eased my apprehension",
+            "meaning": "私の不安を和らげた",
+            "usage": "心配や恐れが軽減された状況を表す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "It's a wonderful way to unwind after a demanding week and allows for a complete mental reset.",
+        "ja": "忙しい一週間の終わりにリラックスするのに最適な方法で、頭を完全にリフレッシュさせてくれます。",
+        "audioPath": "./assets/audio/t17830956823169811_7.wav",
+        "phrases": [
+          {
+            "phrase": "unwind after",
+            "meaning": "〜の後にリラックスする",
+            "usage": "I need to unwind after a long day at work. のように使います。"
+          },
+          {
+            "phrase": "demanding week",
+            "meaning": "要求の多い週、大変な週",
+            "usage": "After a demanding week, a vacation is much needed. のように使います。"
+          },
+          {
+            "phrase": "mental reset",
+            "meaning": "精神的なリセット、気分転換",
+            "usage": "Taking a short break can provide a mental reset. のように使います。"
+          }
+        ]
+      },
+      {
+        "en": "I'm already envisioning a collection of handcrafted mugs and bowls adorning my kitchen shelves.",
+        "ja": "すでに、手作りのマグカップや器がキッチンの棚を飾っている様子を思い描いています。",
+        "audioPath": "./assets/audio/t17830956823169811_8.wav",
+        "phrases": [
+          {
+            "phrase": "envisioning a collection of",
+            "meaning": "〜のコレクションを思い描いている",
+            "usage": "将来的な計画や希望を語る際に、具体的な品々を想像して表現するのに役立ちます。"
+          },
+          {
+            "phrase": "handcrafted mugs and bowls",
+            "meaning": "手作りのマグカップやボウル",
+            "usage": "「手作り感」「職人技」を強調したい場合に使える表現です。"
+          },
+          {
+            "phrase": "adorning my kitchen shelves",
+            "meaning": "私のキッチンの棚を飾る",
+            "usage": "単に「置く」だけでなく、空間を美しく彩る様子を表現する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The community at the studio is also wonderfully supportive, fostering a truly encouraging atmosphere for beginners.",
+        "ja": "工房のコミュニティも素晴らしく協力的で、初心者にとって本当に励みになる雰囲気を作り出してくれています。",
+        "audioPath": "./assets/audio/t17830956823169811_9.wav",
+        "phrases": [
+          {
+            "phrase": "wonderfully supportive",
+            "meaning": "驚くほど協力的で",
+            "usage": "colleagues are wonderfully supportive のように、人や集団のサポートぶりを強調する際に使う"
+          },
+          {
+            "phrase": "fostering an atmosphere",
+            "meaning": "雰囲気を作り出す、醸成する",
+            "usage": "fostering a positive atmosphere for growth のように、特定の雰囲気や環境を育むことを表す"
+          },
+          {
+            "phrase": "truly encouraging",
+            "meaning": "本当に励みになる、勇気づけられる",
+            "usage": "a truly encouraging sign of progress のように、ポジティブな状況や兆候を強調する際に使う"
+          }
+        ]
+      },
+      {
+        "en": "I'm contemplating investing in a small potter's wheel for home use, although that might be getting ahead of myself.",
+        "ja": "自宅用に小さなろくろを購入することも考えていますが、それは少し気が早いかもしれませんね。",
+        "phrases": [
+          {
+            "phrase": "contemplating investing in",
+            "meaning": "〜への投資を検討している",
+            "usage": "She is contemplating investing in a new business venture. (彼女は新しい事業への投資を検討している。)"
+          },
+          {
+            "phrase": "for home use",
+            "meaning": "家庭用の",
+            "usage": "This software is designed for home use. (このソフトウェアは家庭用です。)"
+          },
+          {
+            "phrase": "getting ahead of oneself",
+            "meaning": "早すぎる判断をする、先走りすぎる",
+            "usage": "Buying a wedding dress before getting engaged is getting ahead of oneself. (婚約前にウェディングドレスを買うのは早すぎる。)"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, it's about the creative journey and the joy of making something unique, rather than striving for perfection.",
+        "ja": "結局のところ、完璧を追求するのではなく、創造的な過程と何かユニークなものを作る喜びが大切なのです。",
+        "phrases": [
+          {
+            "phrase": "Ultimately, it's about",
+            "meaning": "結局は〜が重要である、〜が本質である",
+            "usage": "Ultimately, it's about finding a balance between work and life. (結局は仕事と生活のバランスを見つけることが重要だ)"
+          },
+          {
+            "phrase": "creative journey",
+            "meaning": "創造的な道のり、創作のプロセス",
+            "usage": "The artist described her creative journey from beginner to master. (その芸術家は初心者から達人までの自身の創造的な道のりを語った)"
+          },
+          {
+            "phrase": "joy of making",
+            "meaning": "作る喜び、創造する楽しみ",
+            "usage": "He found the joy of making music in his spare time. (彼は余暇に音楽を作る喜びを見出した)"
+          },
+          {
+            "phrase": "striving for perfection",
+            "meaning": "完璧を目指すこと、完璧主義",
+            "usage": "Don't get bogged down in striving for perfection; focus on progress. (完璧を目指すことに囚われず、進歩に焦点を当てよう)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-03T16:21:22.316Z"
   }
 ]
