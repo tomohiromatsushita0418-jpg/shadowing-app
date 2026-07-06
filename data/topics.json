@@ -13987,46 +13987,229 @@
       {
         "en": "Identifying partners whose values align with ours is paramount, ensuring a cohesive vision and sustainable long-term collaboration.",
         "ja": "企業価値観が当社と合致するパートナーを見つけることは極めて重要であり、これにより一貫したビジョンと持続可能な長期的な協業が保証されます。",
-        "audioPath": "./assets/audio/t17831806619680405_3.wav"
+        "audioPath": "./assets/audio/t17831806619680405_3.wav",
+        "phrases": [
+          {
+            "phrase": "align with",
+            "meaning": "〜と一致する、合致する",
+            "usage": "価値観や目標などが一致する際に使う。"
+          },
+          {
+            "phrase": "cohesive vision",
+            "meaning": "統一されたビジョン",
+            "usage": "チームや組織が共通の目標に向かう状態を表す。"
+          },
+          {
+            "phrase": "sustainable long-term collaboration",
+            "meaning": "持続可能な長期的な協力関係",
+            "usage": "環境やビジネスで、長く続く関係や取り組みを指す。"
+          }
+        ]
       },
       {
         "en": "The due diligence process for these prospective alliances demands rigorous scrutiny, particularly concerning financial health and market reputation.",
         "ja": "これらの将来的な提携に向けたデューデリジェンスプロセスは、特に財務健全性と市場での評判に関して、厳格な精査が求められます。",
-        "audioPath": "./assets/audio/t17831806619680405_4.wav"
+        "audioPath": "./assets/audio/t17831806619680405_4.wav",
+        "phrases": [
+          {
+            "phrase": "due diligence process",
+            "meaning": "デューデリジェンス（企業買収・提携前の精査）プロセス",
+            "usage": "M&Aや提携の際に、相手企業の財務状況や法務などを詳細に調査するプロセスを指します。"
+          },
+          {
+            "phrase": "prospective alliances",
+            "meaning": "提携候補、提携の見込み",
+            "usage": "将来的に提携する可能性のある企業や組織との関係を指す場合に用いられます。"
+          },
+          {
+            "phrase": "rigorous scrutiny",
+            "meaning": "厳格な精査、綿密な調査",
+            "usage": "単なるチェックではなく、非常に詳細かつ徹底的な調査が必要な状況で使われます。"
+          },
+          {
+            "phrase": "market reputation",
+            "meaning": "市場での評判、市場における評価",
+            "usage": "その企業や製品が業界内や顧客からどのように見られているかを示す言葉です。"
+          }
+        ]
       },
       {
         "en": "Crafting a robust memorandum of understanding is crucial to delineate roles, responsibilities, and expected outcomes clearly.",
         "ja": "役割、責任、および期待される成果を明確に定めるため、堅牢な基本合意書を作成することが極めて重要です。",
-        "audioPath": "./assets/audio/t17831806619680405_5.wav"
+        "audioPath": "./assets/audio/t17831806619680405_5.wav",
+        "phrases": [
+          {
+            "phrase": "crafting a robust memorandum of understanding",
+            "meaning": "強固な了解覚書を作成すること",
+            "usage": "ビジネス交渉や提携の初期段階で、合意事項を明確にするために使われます。"
+          },
+          {
+            "phrase": "delineate roles, responsibilities, and expected outcomes",
+            "meaning": "役割、責任、期待される成果を明確に定めること",
+            "usage": "プロジェクトやチームの目標設定において、各メンバーの貢献範囲をはっきりさせるために重要です。"
+          },
+          {
+            "phrase": "crucial to",
+            "meaning": "〜にとって極めて重要である",
+            "usage": "This is crucial to our success. のように、成功や達成に不可欠な要素を強調する際に使います。"
+          }
+        ]
       },
       {
         "en": "Our primary objective is to leverage these partnerships to circumvent market entry barriers and accelerate our time-to-market.",
         "ja": "当社の主要な目的は、これらのパートナーシップを活用し、市場参入障壁を回避し、市場投入までの時間を短縮することです。",
-        "audioPath": "./assets/audio/t17831806619680405_6.wav"
+        "audioPath": "./assets/audio/t17831806619680405_6.wav",
+        "phrases": [
+          {
+            "phrase": "primary objective",
+            "meaning": "最優先目標、主な目的",
+            "usage": "Our primary objective is to increase sales. (我々の最優先目標は売上を伸ばすことです)"
+          },
+          {
+            "phrase": "leverage these partnerships",
+            "meaning": "これらの提携を活用する",
+            "usage": "We will leverage these partnerships to expand our market share. (市場シェア拡大のためにこれらの提携を活用します)"
+          },
+          {
+            "phrase": "circumvent market entry barriers",
+            "meaning": "市場参入障壁を回避する",
+            "usage": "This strategy helps us circumvent market entry barriers. (この戦略は市場参入障壁の回避に役立ちます)"
+          },
+          {
+            "phrase": "accelerate time-to-market",
+            "meaning": "市場投入までの時間を加速する",
+            "usage": "Faster product development will accelerate time-to-market. (より迅速な製品開発は市場投入までの時間を加速させるでしょう)"
+          }
+        ]
       },
       {
         "en": "We anticipate these collaborations will significantly bolster our competitive edge in nascent, high-growth sectors.",
         "ja": "これらの協業が、初期段階にある高成長分野における当社の競争優位性を著しく強化すると期待しています。",
-        "audioPath": "./assets/audio/t17831806619680405_7.wav"
+        "audioPath": "./assets/audio/t17831806619680405_7.wav",
+        "phrases": [
+          {
+            "phrase": "anticipate these collaborations",
+            "meaning": "これらの協力関係を予想する",
+            "usage": "将来の計画や見通しを話す際に使われます。"
+          },
+          {
+            "phrase": "significantly bolster",
+            "meaning": "著しく強化する、補強する",
+            "usage": "競争力や業績などを高める文脈でよく使われます。"
+          },
+          {
+            "phrase": "competitive edge",
+            "meaning": "競争優位性、競争上の強み",
+            "usage": "ビジネスにおいて、他社との差別化要因を指す際に頻繁に使われます。"
+          },
+          {
+            "phrase": "nascent, high-growth sectors",
+            "meaning": "新興の高成長分野",
+            "usage": "将来性のある新しい市場や産業について言及する際に使われます。"
+          }
+        ]
       },
       {
         "en": "Mitigating potential operational friction and cultural discrepancies will require proactive communication and a shared governance framework.",
         "ja": "潜在的な運用上の摩擦や文化的な相違を軽減するには、積極的なコミュニケーションと共通のガバナンスフレームワークが必要です。",
-        "audioPath": "./assets/audio/t17831806619680405_8.wav"
+        "audioPath": "./assets/audio/t17831806619680405_8.wav",
+        "phrases": [
+          {
+            "phrase": "operational friction",
+            "meaning": "業務上の摩擦、運営上の支障",
+            "usage": "業務プロセスが円滑に進まない状況を指す。"
+          },
+          {
+            "phrase": "cultural discrepancies",
+            "meaning": "文化的な相違点、文化間の不一致",
+            "usage": "異なる文化を持つ人々や組織間の違いを表す。"
+          },
+          {
+            "phrase": "proactive communication",
+            "meaning": "先行的なコミュニケーション、積極的な意思疎通",
+            "usage": "問題発生前に働きかける能動的な情報共有。"
+          },
+          {
+            "phrase": "shared governance framework",
+            "meaning": "共有された統治の枠組み、共同ガバナンス体制",
+            "usage": "複数の主体が共同で意思決定・管理を行うための構造。"
+          }
+        ]
       },
       {
         "en": "The legal framework underpinning these agreements must be meticulously drafted to safeguard intellectual property and define dispute resolution mechanisms.",
         "ja": "これらの合意を支える法的枠組みは、知的財産を保護し、紛争解決メカニズムを明確に定義するために、細心の注意を払って作成されなければなりません。",
-        "audioPath": "./assets/audio/t17831806619680405_9.wav"
+        "audioPath": "./assets/audio/t17831806619680405_9.wav",
+        "phrases": [
+          {
+            "phrase": "legal framework",
+            "meaning": "法的枠組み",
+            "usage": "This refers to the system of laws and regulations that govern a particular area or activity."
+          },
+          {
+            "phrase": "underpinning these agreements",
+            "meaning": "これらの合意を支える",
+            "usage": "The verb 'underpin' means to support or form the basis of something. Here it describes the legal framework's essential role."
+          },
+          {
+            "phrase": "meticulously drafted",
+            "meaning": "細心の注意を払って起草された",
+            "usage": "This emphasizes the need for extreme care and precision when writing important legal documents."
+          },
+          {
+            "phrase": "safeguard intellectual property",
+            "meaning": "知的財産を保護する",
+            "usage": "A common and important phrase in business and legal contexts, referring to protecting patents, copyrights, trademarks, etc."
+          }
+        ]
       },
       {
         "en": "Successfully integrating diverse operational workflows post-agreement will be a critical determinant of our collective success.",
         "ja": "合意後、多様な業務フローを円滑に統合できるかが、我々全体の成功を決定づける重要な要素となるでしょう。",
-        "audioPath": "./assets/audio/t17831806619680405_10.wav"
+        "audioPath": "./assets/audio/t17831806619680405_10.wav",
+        "phrases": [
+          {
+            "phrase": "post-agreement",
+            "meaning": "合意後、契約後",
+            "usage": "post-merger (合併後), post-acquisition (買収後) のように、他の名詞と組み合わせて使う。"
+          },
+          {
+            "phrase": "critical determinant",
+            "meaning": "決定的な要因、極めて重要な決定因子",
+            "usage": "success の determinant のように、結果を左右する要因を指す。"
+          },
+          {
+            "phrase": "collective success",
+            "meaning": "全員での成功、組織全体の成功",
+            "usage": "collective effort (総力), collective responsibility (共同責任) など、組織全体に関わる事柄で使う。"
+          }
+        ]
       },
       {
         "en": "Ultimately, these strategic alliances are pivotal for realizing our ambitious global expansion objectives and securing future revenue streams.",
-        "ja": "最終的に、これらの戦略的提携は、当社の野心的なグローバル展開目標を実現し、将来の収益源を確保するために極めて重要です。"
+        "ja": "最終的に、これらの戦略的提携は、当社の野心的なグローバル展開目標を実現し、将来の収益源を確保するために極めて重要です。",
+        "phrases": [
+          {
+            "phrase": "strategic alliances",
+            "meaning": "戦略的提携",
+            "usage": "企業が競争力強化のために他社と組む際に使われるビジネス用語。"
+          },
+          {
+            "phrase": "pivotal for",
+            "meaning": "〜にとって極めて重要な",
+            "usage": "何かの成功や達成に不可欠な要素を説明する際に用いる。"
+          },
+          {
+            "phrase": "realizing our objectives",
+            "meaning": "私たちの目標を達成する",
+            "usage": "「目標を達成する」のフォーマルな表現で、計画やビジョンを実現する意味合いが強い。"
+          },
+          {
+            "phrase": "securing future revenue streams",
+            "meaning": "将来の収益源を確保する",
+            "usage": "企業の持続的な成長や安定経営にとって重要な概念。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-07-04T15:57:41.968Z"
@@ -14322,5 +14505,318 @@
       }
     ],
     "createdAt": "2026-07-05T16:02:25.639Z"
+  },
+  {
+    "id": "t17833594841254675",
+    "title": "Dual Imperatives: Chemical Industry's Pivot to Sustainability and High-Tech Materials",
+    "titleJa": "二重の要請：化学産業の持続可能性とハイテク材料への転換",
+    "category": "Chemical Industry",
+    "sentences": [
+      {
+        "en": "The global chemical industry is undergoing a profound structural transformation, driven by imperatives for sustainability and the burgeoning demand for advanced materials.",
+        "ja": "世界の化学産業は、持続可能性の要請と先端材料への需要急増に牽引され、抜本的な構造変革期にあります。",
+        "audioPath": "./assets/audio/t17833594841254675_0.wav",
+        "phrases": [
+          {
+            "phrase": "undergoing a profound structural transformation",
+            "meaning": "抜本的な構造変革を経験している／遂げている",
+            "usage": "企業や業界が大きな変化を経験している状況を表すのに適しています。"
+          },
+          {
+            "phrase": "driven by imperatives for sustainability",
+            "meaning": "持続可能性への要請によって推進されている",
+            "usage": "何か行動や変化の主要な動機や要因を説明する際に「driven by X」の形で使えます。"
+          },
+          {
+            "phrase": "burgeoning demand",
+            "meaning": "急増する需要",
+            "usage": "特定の製品やサービスに対する市場の需要が急速に高まっている状況を表すのに使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Major players like BASF and Dow are strategically divesting legacy petrochemical assets while aggressively investing in high-margin specialty chemicals and bio-based solutions.",
+        "ja": "BASFやダウといった大手企業は、従来の石油化学事業資産を戦略的に売却しつつ、高収益のスペシャリティケミカルやバイオベースソリューションに積極的に投資しています。",
+        "audioPath": "./assets/audio/t17833594841254675_1.wav",
+        "phrases": [
+          {
+            "phrase": "Major players",
+            "meaning": "主要企業、大手企業",
+            "usage": "業界の主要企業を指す際によく使う表現です。"
+          },
+          {
+            "phrase": "divesting assets",
+            "meaning": "資産を売却する、事業を売却する",
+            "usage": "企業が不採算部門や非中核事業を手放す状況で使われます。"
+          },
+          {
+            "phrase": "aggressively investing",
+            "meaning": "積極的に投資する、攻めの投資を行う",
+            "usage": "成長分野や新規事業に大胆に資金を投入する際に用います。"
+          },
+          {
+            "phrase": "high-margin",
+            "meaning": "高収益の、利益率の高い",
+            "usage": "high-margin products/services のように、利益率が高いものに対して使います。"
+          }
+        ]
+      },
+      {
+        "en": "This strategic recalibration is partly a response to stringent environmental regulations and mounting stakeholder pressure for decarbonization across value chains.",
+        "ja": "この戦略的な再編は、厳しい環境規制と、バリューチェーン全体での脱炭素化を求めるステークホルダーからの圧力の高まりに一部起因しています。",
+        "audioPath": "./assets/audio/t17833594841254675_2.wav",
+        "phrases": [
+          {
+            "phrase": "strategic recalibration",
+            "meaning": "戦略的な再調整",
+            "usage": "企業の経営戦略の見直しや方針転換を表す際に使われます。"
+          },
+          {
+            "phrase": "stringent environmental regulations",
+            "meaning": "厳しい環境規制",
+            "usage": "環境保護に関する法規制が厳格化されている状況を指します。"
+          },
+          {
+            "phrase": "mounting stakeholder pressure",
+            "meaning": "高まるステークホルダーからの圧力",
+            "usage": "利害関係者（株主、顧客、従業員など）からの要求や期待が強まっている様子を表します。"
+          },
+          {
+            "phrase": "decarbonization across value chains",
+            "meaning": "バリューチェーン全体での脱炭素化",
+            "usage": "製品やサービスの提供に関わる全ての段階（調達、製造、物流、販売、廃棄など）で二酸化炭素排出量を削減することです。"
+          }
+        ]
+      },
+      {
+        "en": "Significant capital expenditure is being directed towards R&D for next-generation battery components and semiconductor precursors, critical for the electronics and electric vehicle sectors.",
+        "ja": "次世代バッテリー部品や半導体前駆体といった、エレクトロニクスおよび電気自動車分野に不可欠な素材の研究開発に多額の設備投資が向けられています。",
+        "audioPath": "./assets/audio/t17833594841254675_3.wav",
+        "phrases": [
+          {
+            "phrase": "capital expenditure",
+            "meaning": "設備投資",
+            "usage": "企業の財務報告書などで頻繁に見られる表現。"
+          },
+          {
+            "phrase": "directed towards",
+            "meaning": "〜に向けられている、〜に投入されている",
+            "usage": "資金や努力の使途を説明する際によく使う。"
+          },
+          {
+            "phrase": "next-generation",
+            "meaning": "次世代の",
+            "usage": "技術革新や新製品開発の文脈で頻繁に登場する。"
+          },
+          {
+            "phrase": "critical for",
+            "meaning": "〜にとって極めて重要である",
+            "usage": "ある要素が他の要素にとって不可欠であることを強調する際に使う。"
+          }
+        ]
+      },
+      {
+        "en": "Asian chemical giants, notably Mitsubishi Chemical and Shin-Etsu, are fortifying their positions in these high-growth areas, leveraging robust domestic demand and technological prowess.",
+        "ja": "特に三菱ケミカルや信越化学といったアジアの化学大手は、堅調な国内需要と技術力を活用し、これらの高成長分野での地位を強化しています。",
+        "audioPath": "./assets/audio/t17833594841254675_4.wav",
+        "phrases": [
+          {
+            "phrase": "fortifying their positions",
+            "meaning": "自社の地位を強化する、立場を固める",
+            "usage": "企業は市場での競争力を高めるために、常に自社の地位を強化しようとします。"
+          },
+          {
+            "phrase": "high-growth areas",
+            "meaning": "高成長分野",
+            "usage": "ITや再生可能エネルギーは、現在注目されている高成長分野です。"
+          },
+          {
+            "phrase": "leveraging robust domestic demand",
+            "meaning": "堅調な国内需要を活用する",
+            "usage": "企業は、既存の強みを活用して新規事業に参入することがよくあります。(leverage X の形で)"
+          },
+          {
+            "phrase": "technological prowess",
+            "meaning": "技術力、技術的優位性",
+            "usage": "その企業は、高い技術力で市場をリードしています。"
+          }
+        ]
+      },
+      {
+        "en": "Supply-chain resilience has become a paramount concern, prompting a re-evaluation of global sourcing strategies and an emphasis on regional production hubs.",
+        "ja": "サプライチェーンのレジリエンスは最重要課題となっており、グローバルな調達戦略の見直しと地域生産拠点への重点化を促しています。",
+        "audioPath": "./assets/audio/t17833594841254675_5.wav",
+        "phrases": [
+          {
+            "phrase": "paramount concern",
+            "meaning": "最重要の懸念事項",
+            "usage": "This issue is of paramount concern to the company's future."
+          },
+          {
+            "phrase": "re-evaluation of",
+            "meaning": "〜の再評価",
+            "usage": "The company is undertaking a re-evaluation of its marketing strategies."
+          },
+          {
+            "phrase": "global sourcing strategies",
+            "meaning": "グローバルソーシング戦略（海外からの調達戦略）",
+            "usage": "Companies are reviewing their global sourcing strategies due to trade tensions."
+          },
+          {
+            "phrase": "emphasis on",
+            "meaning": "〜を重視すること",
+            "usage": "There is a growing emphasis on sustainable business practices."
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, mergers and acquisitions are increasingly focused on acquiring innovative startups or technologies that accelerate the transition to a circular economy.",
+        "ja": "さらに、M&Aは、サーキュラーエコノミーへの移行を加速する革新的なスタートアップや技術の獲得にますます集中しています。",
+        "audioPath": "./assets/audio/t17833594841254675_6.wav",
+        "phrases": [
+          {
+            "phrase": "mergers and acquisitions",
+            "meaning": "企業合併・買収 (M&A)",
+            "usage": "経済ニュースやビジネス文書で頻繁に登場する略語M&Aも一般的。"
+          },
+          {
+            "phrase": "focused on",
+            "meaning": "〜に焦点を当てている、〜に集中している",
+            "usage": "Our strategy is focused on sustainable growth. のように使う。"
+          },
+          {
+            "phrase": "accelerate the transition",
+            "meaning": "移行を加速させる",
+            "usage": "環境政策や技術革新の議論でよく用いられる表現。"
+          },
+          {
+            "phrase": "circular economy",
+            "meaning": "循環型経済",
+            "usage": "SDGsやESG投資など、現代のビジネスで重要な概念。"
+          }
+        ]
+      },
+      {
+        "en": "The development of advanced recycling technologies for plastics and other waste streams represents a key innovation frontier within the industry.",
+        "ja": "プラスチックやその他の廃棄物ストリーム向け高度リサイクル技術の開発は、業界内の重要なイノベーションの最前線を形成しています。",
+        "audioPath": "./assets/audio/t17833594841254675_7.wav",
+        "phrases": [
+          {
+            "phrase": "advanced recycling technologies",
+            "meaning": "高度なリサイクル技術",
+            "usage": "環境問題への取り組みにおいて重要な要素となる技術群を指す場合に使われます。"
+          },
+          {
+            "phrase": "waste streams",
+            "meaning": "廃棄物流",
+            "usage": "産業活動や日常生活から発生する様々な種類の廃棄物の流れを包括的に表す際に用いられます。"
+          },
+          {
+            "phrase": "innovation frontier",
+            "meaning": "イノベーションの最前線",
+            "usage": "新しい技術やアイデアが生まれる、まだ開拓されていない分野や領域を指す比喩的な表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Regulatory frameworks, particularly in the EU with its Green Deal initiatives, are shaping investment decisions and product development cycles globally.",
+        "ja": "規制の枠組み、特にEUのグリーンディール構想は、世界の投資決定や製品開発サイクルを形成しています。",
+        "audioPath": "./assets/audio/t17833594841254675_8.wav",
+        "phrases": [
+          {
+            "phrase": "Regulatory frameworks",
+            "meaning": "規制の枠組み",
+            "usage": "新しい規制の枠組みが導入される見込みです。"
+          },
+          {
+            "phrase": "Green Deal initiatives",
+            "meaning": "グリーンディール構想（イニシアチブ）",
+            "usage": "EUのグリーンディール構想は環境政策の重要な柱です。"
+          },
+          {
+            "phrase": "shaping investment decisions",
+            "meaning": "投資判断を形成する／左右する",
+            "usage": "経済状況が企業の投資判断を大きく左右します。"
+          },
+          {
+            "phrase": "product development cycles",
+            "meaning": "製品開発サイクル",
+            "usage": "製品開発サイクルを短縮することが競争力強化につながります。"
+          }
+        ]
+      },
+      {
+        "en": "Companies are also exploring novel carbon capture and utilization (CCU) technologies to mitigate emissions from energy-intensive processes.",
+        "ja": "企業はまた、エネルギー集約型プロセスからの排出を削減するため、革新的な炭素回収・利用（CCU）技術の探求も進めています。",
+        "audioPath": "./assets/audio/t17833594841254675_9.wav",
+        "phrases": [
+          {
+            "phrase": "exploring novel technologies",
+            "meaning": "新しい技術を模索している",
+            "usage": "革新的なアプローチや解決策を探る文脈で使われます。"
+          },
+          {
+            "phrase": "carbon capture and utilization",
+            "meaning": "炭素回収・利用",
+            "usage": "環境技術や気候変動対策に関する専門用語として頻出します。"
+          },
+          {
+            "phrase": "mitigate emissions",
+            "meaning": "排出量を緩和する",
+            "usage": "環境規制や企業のCSR活動に関するニュースでよく見られます。"
+          },
+          {
+            "phrase": "energy-intensive processes",
+            "meaning": "エネルギー集約型プロセス",
+            "usage": "製造業やエネルギー産業の効率化・環境負荷低減の議論で使われます。"
+          }
+        ]
+      },
+      {
+        "en": "This shift necessitates significant workforce retraining and the cultivation of new skill sets, particularly in data analytics and sustainable engineering.",
+        "ja": "この転換は、特にデータ分析と持続可能なエンジニアリングの分野において、大規模な従業員の再教育と新たなスキルセットの育成を必要とします。",
+        "audioPath": "./assets/audio/t17833594841254675_10.wav",
+        "phrases": [
+          {
+            "phrase": "necessitates significant workforce retraining",
+            "meaning": "大幅な労働力再教育を必要とする",
+            "usage": "新しい技術導入に伴い、この表現が使われることがあります。"
+          },
+          {
+            "phrase": "cultivation of new skill sets",
+            "meaning": "新しいスキルセットの育成",
+            "usage": "従業員の能力開発やキャリア形成の文脈でよく使われます。"
+          },
+          {
+            "phrase": "particularly in",
+            "meaning": "特に～において",
+            "usage": "特定の分野や項目を強調する際に便利な表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, the industry's future hinges on its ability to innovate sustainably, delivering high-performance materials while minimizing its environmental footprint.",
+        "ja": "最終的に、業界の未来は、環境負荷を最小限に抑えつつ高性能材料を提供し、持続的にイノベーションを起こす能力にかかっています。",
+        "audioPath": "./assets/audio/t17833594841254675_11.wav",
+        "phrases": [
+          {
+            "phrase": "hinges on",
+            "meaning": "〜にかかっている、〜次第である",
+            "usage": "The success of the project hinges on your support. (プロジェクトの成功はあなたの支援にかかっています)"
+          },
+          {
+            "phrase": "innovate sustainably",
+            "meaning": "持続可能な方法で革新する",
+            "usage": "Companies must innovate sustainably to meet future demands. (企業は将来の需要に応えるために持続可能な方法で革新しなければならない)"
+          },
+          {
+            "phrase": "environmental footprint",
+            "meaning": "環境負荷、環境への影響",
+            "usage": "Reducing our environmental footprint is a key corporate goal. (環境負荷を減らすことは、企業の重要な目標です)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-06T17:38:04.125Z"
   }
 ]
