@@ -14501,7 +14501,8 @@
             "meaning": "地政学的な安定",
             "usage": "Maintaining geopolitical stability is crucial for international trade. (地政学的な安定を維持することは国際貿易にとって極めて重要である)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17832673456394969_11.wav"
       }
     ],
     "createdAt": "2026-07-05T16:02:25.639Z"
@@ -14818,5 +14819,273 @@
       }
     ],
     "createdAt": "2026-07-06T17:38:04.125Z"
+  },
+  {
+    "id": "t17834441521943191",
+    "title": "Reflecting on a Gripping Play",
+    "titleJa": "観劇後の深い余韻",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "That was quite an intense theatrical experience, wasn't it? I'm still processing everything.",
+        "ja": "いやはや、実に骨太な演劇体験でしたね。まだ色々と頭の中で整理しきれていません。",
+        "audioPath": "./assets/audio/t17834441521943191_0.wav",
+        "phrases": [
+          {
+            "phrase": "intense theatrical experience",
+            "meaning": "強烈な演劇体験",
+            "usage": "感情や感覚に強く訴えかけるような、忘れられない演劇鑑賞のこと"
+          },
+          {
+            "phrase": "processing everything",
+            "meaning": "すべてを理解しようとしている、消化しようとしている",
+            "usage": "情報量が多い出来事や感情的な体験の後に、その意味や影響をじっくり考えている様子を表す"
+          }
+        ]
+      },
+      {
+        "en": "Indeed. The lead's portrayal of the protagonist was utterly captivating; she truly commanded the stage with her nuanced performance.",
+        "ja": "ええ、本当に。主演女優の主人公の描写は全くもって魅惑的で、彼女の繊細な演技が舞台を完全に支配していましたね。",
+        "audioPath": "./assets/audio/t17834441521943191_1.wav",
+        "phrases": [
+          {
+            "phrase": "lead's portrayal",
+            "meaning": "主演俳優の描写",
+            "usage": "The director praised the lead's portrayal of the villain. (監督は悪役に対する主演俳優の描写を称賛した。)"
+          },
+          {
+            "phrase": "utterly captivating",
+            "meaning": "完全に魅了するような",
+            "usage": "Her speech was utterly captivating, holding the audience's attention. (彼女のスピーチは完全に魅了するようなもので、聴衆の注意を引きつけた。)"
+          },
+          {
+            "phrase": "commanded the stage",
+            "meaning": "舞台を支配する、圧倒的な存在感を示す",
+            "usage": "The experienced actor commanded the stage from his first entrance. (経験豊富な俳優は、登場した最初から舞台を支配した。)"
+          },
+          {
+            "phrase": "nuanced performance",
+            "meaning": "微妙なニュアンスのある演技",
+            "usage": "The film is praised for its nuanced performance by the supporting cast. (その映画は助演キャストによる微妙なニュアンスのある演技で称賛されている。)"
+          }
+        ]
+      },
+      {
+        "en": "I found the playwright's exploration of existential dread particularly poignant, especially given its contemporary resonance.",
+        "ja": "劇作家が描いた実存的な不安の探求は、現代社会との関連性を考えると、特に心に響くものがありました。",
+        "audioPath": "./assets/audio/t17834441521943191_2.wav",
+        "phrases": [
+          {
+            "phrase": "exploration of",
+            "meaning": "～の探求、考察",
+            "usage": "The report's exploration of market trends was insightful. (その報告書の市場トレンドに関する考察は洞察に富んでいた。)"
+          },
+          {
+            "phrase": "existential dread",
+            "meaning": "実存的不安、生の不安",
+            "usage": "This theme is common in literature dealing with the human condition. (このテーマは人間の条件を扱う文学でよく見られる。)"
+          },
+          {
+            "phrase": "contemporary resonance",
+            "meaning": "現代的な響き、現代への共鳴",
+            "usage": "The film's themes have a strong contemporary resonance. (その映画のテーマは現代的な響きが強い。)"
+          }
+        ]
+      },
+      {
+        "en": "The scene where the two siblings finally confronted their long-simmering resentments was absolutely breathtaking – you could feel the tension palpably.",
+        "ja": "兄弟二人が長年くすぶり続けていた確執についに向き合う場面は、息をのむほどでしたね。張り詰めた空気が肌で感じられるようでした。",
+        "audioPath": "./assets/audio/t17834441521943191_3.wav",
+        "phrases": [
+          {
+            "phrase": "confront resentments",
+            "meaning": "わだかまり・不満に直面する",
+            "usage": "長年のわだかまりを解消するために話し合うような場面で使えます。"
+          },
+          {
+            "phrase": "long-simmering resentments",
+            "meaning": "長年くすぶっていたわだかまり",
+            "usage": "感情が長期間抑えられていたことを強調する際に役立ちます。"
+          },
+          {
+            "phrase": "feel the tension palpably",
+            "meaning": "緊張感を肌で感じるほど強く感じる",
+            "usage": "非常に緊迫した状況を表す際に効果的です。"
+          }
+        ]
+      },
+      {
+        "en": "It certainly provoked a great deal of introspection for me, making me ponder some rather uncomfortable truths about human nature.",
+        "ja": "確かに、私自身の内省を強く促され、人間の本質に関する少々不快な真実について深く考えさせられました。",
+        "audioPath": "./assets/audio/t17834441521943191_4.wav",
+        "phrases": [
+          {
+            "phrase": "provoked a great deal of introspection",
+            "meaning": "多くの内省を促した",
+            "usage": "This experience provoked a great deal of introspection for the team. (この経験はチームに多くの内省を促した。)"
+          },
+          {
+            "phrase": "ponder some rather uncomfortable truths",
+            "meaning": "いくつかのかなり不快な真実について熟考する",
+            "usage": "He had to ponder some rather uncomfortable truths about his own behavior. (彼は自身の行動に関するいくつかの不快な真実について熟考しなければならなかった。)"
+          },
+          {
+            "phrase": "human nature",
+            "meaning": "人間の本質",
+            "usage": "It's a classic example of human nature. (それは人間の本質を示す古典的な例だ。)"
+          }
+        ]
+      },
+      {
+        "en": "Compared to the more conventional productions we've seen lately, this one really pushed the boundaries of traditional storytelling.",
+        "ja": "最近観た一般的な作品と比べると、これは従来の物語の語り口の限界を本当に押し広げていました。",
+        "audioPath": "./assets/audio/t17834441521943191_5.wav",
+        "phrases": [
+          {
+            "phrase": "conventional productions",
+            "meaning": "従来の制作物",
+            "usage": "従来のやり方や型にはまったものを指す場合に使う"
+          },
+          {
+            "phrase": "pushed the boundaries",
+            "meaning": "限界を押し広げた、既成概念を打ち破った",
+            "usage": "新しい試みや革新的な取り組みを説明する際に用いる"
+          },
+          {
+            "phrase": "traditional storytelling",
+            "meaning": "伝統的な物語の語り方",
+            "usage": "昔からある物語の形式や手法を指す場合に使う"
+          }
+        ]
+      },
+      {
+        "en": "And the minimalist set design, coupled with the ingenious lighting, created an incredibly immersive atmosphere without being overtly distracting.",
+        "ja": "そして、ミニマリストな舞台装置と、実に巧妙な照明が相まって、過度に気を散らすことなく、信じられないほど没入感のある雰囲気を生み出していました。",
+        "audioPath": "./assets/audio/t17834441521943191_6.wav",
+        "phrases": [
+          {
+            "phrase": "coupled with",
+            "meaning": "～と組み合わされて、～に加えて",
+            "usage": "His experience, coupled with his enthusiasm, made him a strong candidate. (彼の経験は、熱意と相まって、彼を有力な候補者にした。)"
+          },
+          {
+            "phrase": "incredibly immersive",
+            "meaning": "信じられないほど没入感のある",
+            "usage": "The VR game offered an incredibly immersive experience. (そのVRゲームは信じられないほど没入感のある体験を提供した。)"
+          },
+          {
+            "phrase": "without being overtly distracting",
+            "meaning": "露骨に注意をそらすことなく",
+            "usage": "The background music was pleasant without being overtly distracting. (BGMは、露骨に注意をそらすことなく心地よかった。)"
+          }
+        ]
+      },
+      {
+        "en": "I'm still mulling over the ambiguity of the ending; it leaves so much open to interpretation, which I appreciate in a way.",
+        "ja": "結末の曖昧さについては、まだ頭の中で反芻しています。多くの解釈の余地を残しているのが、ある意味で良いですね。",
+        "audioPath": "./assets/audio/t17834441521943191_7.wav",
+        "phrases": [
+          {
+            "phrase": "mulling over",
+            "meaning": "じっくりと熟考する、あれこれ考える",
+            "usage": "I need some time to mull over your proposal. (あなたの提案についてじっくり考える時間が必要です)"
+          },
+          {
+            "phrase": "open to interpretation",
+            "meaning": "解釈の余地がある、どうとでも取れる",
+            "usage": "The contract's wording is a bit open to interpretation. (契約書の文言は解釈の余地が少しある)"
+          }
+        ]
+      },
+      {
+        "en": "We absolutely have to delve into this further over coffee sometime next week – there are so many layers to unpack.",
+        "ja": "来週あたり、ぜひまたコーヒーでも飲みながら、この作品についてもっと深く掘り下げて語り合いましょう。本当に多層的な作品ですから。",
+        "audioPath": "./assets/audio/t17834441521943191_8.wav",
+        "phrases": [
+          {
+            "phrase": "delve into this further",
+            "meaning": "これをさらに深く掘り下げる",
+            "usage": "問題やトピックについて、より詳細に調査・検討する際に使われます。"
+          },
+          {
+            "phrase": "unpack",
+            "meaning": "（複雑な問題などを）解明する、分析する",
+            "usage": "情報や状況の複雑な要素を一つずつ理解していくニュアンスで使われます。"
+          },
+          {
+            "phrase": "sometime next week",
+            "meaning": "来週のいつか",
+            "usage": "具体的な日時が決まっていないが、来週中に会う約束をする際に便利です。"
+          }
+        ]
+      },
+      {
+        "en": "Thank you for suggesting it, by the way. Sharing such a profound artistic encounter makes it all the more enriching.",
+        "ja": "ところで、誘ってくれてありがとう。こんな深遠な芸術体験を分かち合うことで、一層豊かなものになりますね。",
+        "audioPath": "./assets/audio/t17834441521943191_9.wav",
+        "phrases": [
+          {
+            "phrase": "by the way",
+            "meaning": "ところで、ちなみに",
+            "usage": "会話で話題を変えたり、補足情報を加える際に使う。"
+          },
+          {
+            "phrase": "profound artistic encounter",
+            "meaning": "深遠な芸術的出会い",
+            "usage": "\"profound impact\" (深遠な影響) や \"profound experience\" (深い経験) のように、\"profound\" は様々な名詞と組み合わせて使える。"
+          },
+          {
+            "phrase": "all the more",
+            "meaning": "ますます、いっそう",
+            "usage": "比較級を強調し、「それだけいっそう〜」という意味で使う。例: \"all the more difficult\""
+          }
+        ]
+      },
+      {
+        "en": "It really underscored the enduring power of live theater to challenge perspectives and ignite meaningful dialogue.",
+        "ja": "ライブ演劇が持つ、視点を問い直し、意義ある対話を喚起する不朽の力を改めて浮き彫りにしましたね。",
+        "audioPath": "./assets/audio/t17834441521943191_10.wav",
+        "phrases": [
+          {
+            "phrase": "underscored the enduring power",
+            "meaning": "〜の永続的な力を強調した",
+            "usage": "The success of the project underscored the enduring power of teamwork. (プロジェクトの成功は、チームワークの永続的な力を強調した。)"
+          },
+          {
+            "phrase": "challenge perspectives",
+            "meaning": "見方や考え方に異議を唱える、新たな視点を提供する",
+            "usage": "Documentaries often challenge perspectives on social issues. (ドキュメンタリーはしばしば社会問題に対する見方に異議を唱える。)"
+          },
+          {
+            "phrase": "ignite meaningful dialogue",
+            "meaning": "有意義な対話を引き起こす、火をつける",
+            "usage": "The controversial policy was expected to ignite meaningful dialogue among citizens. (その物議を醸す政策は、市民の間で有意義な対話を引き起こすと予想されていた。)"
+          }
+        ]
+      },
+      {
+        "en": "Overall, a truly memorable evening that will undoubtedly linger in my thoughts for quite some time.",
+        "ja": "総じて、本当に記憶に残る夜でした。間違いなく、私の心にしばらくの間、深く留まり続けることでしょう。",
+        "audioPath": "./assets/audio/t17834441521943191_11.wav",
+        "phrases": [
+          {
+            "phrase": "truly memorable",
+            "meaning": "本当に記憶に残る、非常に印象的な",
+            "usage": "「truly memorable experience」のように名詞を修飾して使う。"
+          },
+          {
+            "phrase": "linger in my thoughts",
+            "meaning": "心に残る、記憶に留まる",
+            "usage": "「linger in one's mind」や「linger in one's memory」とも表現できます。"
+          },
+          {
+            "phrase": "for quite some time",
+            "meaning": "かなり長い間、しばらくの間",
+            "usage": "そのプロジェクトはかなり長い間中断している。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-07T17:09:12.194Z"
   }
 ]
