@@ -13871,7 +13871,8 @@
             "meaning": "早すぎる判断をする、先走りすぎる",
             "usage": "Buying a wedding dress before getting engaged is getting ahead of oneself. (婚約前にウェディングドレスを買うのは早すぎる。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17830956823169811_10.wav"
       },
       {
         "en": "Ultimately, it's about the creative journey and the joy of making something unique, rather than striving for perfection.",
@@ -15997,5 +15998,268 @@
       }
     ],
     "createdAt": "2026-07-10T16:51:33.810Z"
+  },
+  {
+    "id": "t17837849213988166",
+    "title": "A Lively Catch-Up Session",
+    "titleJa": "近況を語り合う賑やかなひととき",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "It feels like ages since we last properly caught up; life's been quite a whirlwind lately, hasn't it?",
+        "ja": "最後にゆっくり話してからずいぶん経つ気がするね。最近は本当に目まぐるしい日々だったでしょう？",
+        "audioPath": "./assets/audio/t17837849213988166_0.wav",
+        "phrases": [
+          {
+            "phrase": "ages since",
+            "meaning": "（最後に〜してから）長い時間が経った",
+            "usage": "It feels like ages since I last saw you.（最後にあなたに会ってからずいぶん経つ気がする。）"
+          },
+          {
+            "phrase": "caught up",
+            "meaning": "近況を話し合う、情報交換する",
+            "usage": "Let's get together soon and catch up.（近いうちに集まって近況を話し合いましょう。）"
+          },
+          {
+            "phrase": "a whirlwind",
+            "meaning": "目まぐるしい出来事、激動",
+            "usage": "The past few weeks have been a whirlwind of activity.（ここ数週間は活動で目まぐるしかった。）"
+          }
+        ]
+      },
+      {
+        "en": "Absolutely, I've been completely swamped with work, barely having a moment to myself.",
+        "ja": "まったくだよ。仕事に完全に忙殺されていて、自分の時間なんてほとんど取れなかったよ。",
+        "audioPath": "./assets/audio/t17837849213988166_1.wav",
+        "phrases": [
+          {
+            "phrase": "swamped with work",
+            "meaning": "仕事でてんてこ舞いである、非常に忙しい",
+            "usage": "I'm swamped with deadlines this week. (今週は締め切りでてんてこ舞いです。)"
+          },
+          {
+            "phrase": "barely having a moment to myself",
+            "meaning": "自分のための時間がほとんどない、全く余裕がない",
+            "usage": "With the new baby, she's barely having a moment to herself. (新しい赤ちゃんが来て、彼女は自分のための時間がほとんどありません。)"
+          }
+        ]
+      },
+      {
+        "en": "I can certainly empathize; my latest project demanded an all-consuming focus, leaving little room for anything else.",
+        "ja": "その気持ち、本当によく分かる。僕の最新のプロジェクトも、他のことを考える余裕がないくらい全精力を注ぎ込む必要があったんだ。",
+        "audioPath": "./assets/audio/t17837849213988166_2.wav",
+        "phrases": [
+          {
+            "phrase": "empathize with",
+            "meaning": "〜に共感する",
+            "usage": "I can empathize with your situation. (あなたの状況に共感できます)"
+          },
+          {
+            "phrase": "demanded an all-consuming focus",
+            "meaning": "すべてを吸収するほどの集中力を要求した",
+            "usage": "This task demanded an all-consuming focus from everyone involved. (このタスクは関係者全員にすべてを吸収するほどの集中力を要求した)"
+          },
+          {
+            "phrase": "leaving little room for",
+            "meaning": "〜の余地をほとんど残さない",
+            "usage": "The tight deadline left little room for error. (厳しい締め切りは、ミスの余地をほとんど残さなかった)"
+          }
+        ]
+      },
+      {
+        "en": "Speaking of which, how did that intricate presentation you were preparing ultimately fare?",
+        "ja": "そういえば、君が準備していたあの手の込んだプレゼンテーションは結局どうだったの？",
+        "audioPath": "./assets/audio/t17837849213988166_3.wav",
+        "phrases": [
+          {
+            "phrase": "Speaking of which",
+            "meaning": "ところで、その話に関連して言うと",
+            "usage": "話題を変えるときや、前の発言から連想される別の話題に移るときに使う便利な表現です。"
+          },
+          {
+            "phrase": "intricate presentation",
+            "meaning": "複雑で手の込んだプレゼンテーション",
+            "usage": "内容が込み入っていて、作成に手間がかかっている様子を表します。"
+          },
+          {
+            "phrase": "ultimately fare",
+            "meaning": "最終的にどうなったか、どういう結果になったか",
+            "usage": "物事の最終的な結果や成り行きを尋ねる際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "It went remarkably well, thankfully; the client was thoroughly impressed, which was a huge relief after all the painstaking effort.",
+        "ja": "おかげさまで、驚くほどうまくいったよ。顧客も大変感銘を受けてくれてね。あれだけ苦心した甲斐があったと、本当にホッとしたんだ。",
+        "audioPath": "./assets/audio/t17837849213988166_4.wav",
+        "phrases": [
+          {
+            "phrase": "remarkably well",
+            "meaning": "驚くほど順調に",
+            "usage": "The project is progressing remarkably well. (プロジェクトは驚くほど順調に進んでいます。)"
+          },
+          {
+            "phrase": "thoroughly impressed",
+            "meaning": "徹底的に感心した、非常に感銘を受けた",
+            "usage": "She was thoroughly impressed by his presentation. (彼女は彼のプレゼンテーションに非常に感銘を受けた。)"
+          },
+          {
+            "phrase": "painstaking effort",
+            "meaning": "骨の折れる努力、入念な努力",
+            "usage": "It took painstaking effort to complete the report. (そのレポートを完成させるには骨の折れる努力が必要だった。)"
+          }
+        ]
+      },
+      {
+        "en": "That's fantastic news! I knew you'd knock it out of the park, given your meticulous approach.",
+        "ja": "それは素晴らしいニュースだね！君の緻密なアプローチを見れば、きっと大成功すると思っていたよ。",
+        "audioPath": "./assets/audio/t17837849213988166_5.wav",
+        "phrases": [
+          {
+            "phrase": "knock it out of the park",
+            "meaning": "（物事を）素晴らしい成功に導く、期待をはるかに超える成果を出す",
+            "usage": "He really knocked it out of the park with that presentation. (彼はそのプレゼンで本当に素晴らしい成果を出した。)"
+          },
+          {
+            "phrase": "meticulous approach",
+            "meaning": "綿密なアプローチ、細部にまで気を配ったやり方",
+            "usage": "Her meticulous approach to detail ensured the project's success. (彼女の細部への綿密なアプローチがプロジェクトの成功を確実にした。)"
+          }
+        ]
+      },
+      {
+        "en": "Thanks for the vote of confidence. What about you? Any exciting developments or perhaps some much-needed downtime?",
+        "ja": "信頼してくれてありがとう。君の方はどう？何か面白い進展があったり、あるいは待望の休息は取れたりした？",
+        "audioPath": "./assets/audio/t17837849213988166_6.wav",
+        "phrases": [
+          {
+            "phrase": "vote of confidence",
+            "meaning": "信頼の表明、支持",
+            "usage": "He received a vote of confidence from the board. (彼は理事会から信頼の表明を受けた。)"
+          },
+          {
+            "phrase": "exciting developments",
+            "meaning": "エキサイティングな進展、面白い展開",
+            "usage": "Are there any exciting developments in your project? (あなたのプロジェクトに何か面白い進展はありますか？)"
+          },
+          {
+            "phrase": "much-needed downtime",
+            "meaning": "切望していた休息期間、必要な休暇",
+            "usage": "After working non-stop for months, I really need some much-needed downtime. (数ヶ月間ぶっ通しで働いた後、本当に切望していた休息が必要だ。)"
+          }
+        ]
+      },
+      {
+        "en": "Well, I finally managed to carve out some time last weekend to delve into that historical fiction novel I'd been meaning to read.",
+        "ja": "うん、ようやく先週末、ずっと読みたかった歴史小説にじっくりと時間を割くことができたんだ。",
+        "audioPath": "./assets/audio/t17837849213988166_7.wav",
+        "phrases": [
+          {
+            "phrase": "carve out some time",
+            "meaning": "時間を捻出する、時間を作る",
+            "usage": "忙しいスケジュールの中から時間を作る、というニュアンスで使う。"
+          },
+          {
+            "phrase": "delve into",
+            "meaning": "〜を深く掘り下げる、〜を徹底的に調べる",
+            "usage": "問題やテーマを深く探求する際によく使う。"
+          }
+        ]
+      },
+      {
+        "en": "Oh, that sounds wonderfully restorative. I'm always looking for recommendations; was it engrossing?",
+        "ja": "ああ、それはなんて素晴らしい気分転換になったことだろう。いつもおすすめを探しているんだけど、夢中になれるような内容だった？",
+        "audioPath": "./assets/audio/t17837849213988166_8.wav",
+        "phrases": [
+          {
+            "phrase": "sounds wonderfully restorative",
+            "meaning": "とても癒される響きですね",
+            "usage": "相手の提案や計画に対して、魅力的でリラックスできそうだと感じたときに使う表現です。"
+          },
+          {
+            "phrase": "looking for recommendations",
+            "meaning": "おすすめを探している",
+            "usage": "新しい本、映画、レストランなど、何か良いものを探している状況で使えます。"
+          },
+          {
+            "phrase": "was it engrossing",
+            "meaning": "夢中になれるものでしたか？",
+            "usage": "相手が体験したこと（本、映画、ゲームなど）が、非常に面白く、時間を忘れるほどだったかどうかを尋ねる際に使います。"
+          }
+        ]
+      },
+      {
+        "en": "Absolutely captivating; the author's narrative prowess is truly something to behold, transporting you entirely to another era.",
+        "ja": "まったく魅了されたよ。著者の語りの巧みさは本当に見事なもので、読者を完全に別世界へと誘ってくれるんだ。",
+        "audioPath": "./assets/audio/t17837849213988166_9.wav",
+        "phrases": [
+          {
+            "phrase": "narrative prowess",
+            "meaning": "語りの巧みさ、物語を語る能力",
+            "usage": "彼の交渉術の巧みさは \"negotiating prowess\" とも言える。"
+          },
+          {
+            "phrase": "something to behold",
+            "meaning": "見るべき価値があるもの、注目に値するもの",
+            "usage": "そのパフォーマンスはまさに \"something to behold\" だった。"
+          },
+          {
+            "phrase": "transporting you entirely to another era",
+            "meaning": "あなたを完全に別の時代へといざなう",
+            "usage": "その音楽は私を青春時代に \"transported me to my youth\"。"
+          }
+        ]
+      },
+      {
+        "en": "I'll definitely add it to my ever-growing reading list. We should make this a more regular occurrence, catching up like this.",
+        "ja": "それは間違いなく、僕の増え続ける読書リストに加えるよ。こうして近況を語り合う機会は、もっと定期的に設けるべきだね。",
+        "audioPath": "./assets/audio/t17837849213988166_10.wav",
+        "phrases": [
+          {
+            "phrase": "ever-growing",
+            "meaning": "絶えず増え続ける、拡大し続ける",
+            "usage": "ever-growing demand (需要) や ever-growing concern (懸念) のように名詞を修飾する。"
+          },
+          {
+            "phrase": "regular occurrence",
+            "meaning": "定期的な出来事、頻繁なこと",
+            "usage": "make it a regular occurrence で「定期的に行う」という意味になる。"
+          },
+          {
+            "phrase": "catching up",
+            "meaning": "近況を報告し合う、情報交換する",
+            "usage": "Let's catch up soon. (近いうちに会って話そう) のように使う。"
+          }
+        ]
+      },
+      {
+        "en": "I couldn't agree more; it's genuinely invigorating to touch base and exchange perspectives amidst the daily grind.",
+        "ja": "全く同感だよ。日々の忙しさの中で、こうして連絡を取り合い、意見を交わすのは本当に新鮮な気持ちになるね。",
+        "audioPath": "./assets/audio/t17837849213988166_11.wav",
+        "phrases": [
+          {
+            "phrase": "couldn't agree more",
+            "meaning": "全く同感です",
+            "usage": "相手の意見に完全に同意する際に使う、非常に一般的な表現です。"
+          },
+          {
+            "phrase": "touch base",
+            "meaning": "（一時的に）連絡を取り合う、状況を確認する",
+            "usage": "ビジネスシーンで、進捗確認や情報共有のために短時間連絡を取ることを指します。"
+          },
+          {
+            "phrase": "exchange perspectives",
+            "meaning": "意見交換をする",
+            "usage": "異なる視点や考え方を共有し、理解を深めることを意味します。"
+          },
+          {
+            "phrase": "daily grind",
+            "meaning": "日々の単調な仕事、骨の折れる日常業務",
+            "usage": "退屈で大変な毎日の仕事やルーティンを指す際に使われます。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-11T15:48:41.398Z"
   }
 ]
