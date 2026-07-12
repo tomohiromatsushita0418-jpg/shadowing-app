@@ -13621,7 +13621,8 @@
             "meaning": "環境上の必須課題、環境上の要請",
             "usage": "企業が果たすべき環境責任や取り組むべき重要課題を指す。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17830107961628138_11.wav"
       }
     ],
     "createdAt": "2026-07-02T16:46:36.162Z"
@@ -13898,7 +13899,8 @@
             "meaning": "完璧を目指すこと、完璧主義",
             "usage": "Don't get bogged down in striving for perfection; focus on progress. (完璧を目指すことに囚われず、進歩に焦点を当てよう)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17830956823169811_11.wav"
       }
     ],
     "createdAt": "2026-07-03T16:21:22.316Z"
@@ -16261,5 +16263,313 @@
       }
     ],
     "createdAt": "2026-07-11T15:48:41.398Z"
+  },
+  {
+    "id": "t17838716129086910",
+    "title": "Building Supply Chain Resilience Amid Global Volatility",
+    "titleJa": "世界的な変動性の中でのサプライチェーンのレジリエンス構築",
+    "category": "Business",
+    "sentences": [
+      {
+        "en": "The recent confluence of geopolitical tensions, trade protectionism, and unforeseen natural disasters has underscored the critical imperative for robust supply chain resilience.",
+        "ja": "近年の地政学的緊張、貿易保護主義、そして予期せぬ自然災害の複合的な発生は、強靭なサプライチェーンのレジリエンスが極めて重要であることを浮き彫りにしました。",
+        "audioPath": "./assets/audio/t17838716129086910_0.wav",
+        "phrases": [
+          {
+            "phrase": "confluence of",
+            "meaning": "（複数の要素の）同時発生、合流",
+            "usage": "複数の困難な状況や要因が重なることを表現する際に使う。"
+          },
+          {
+            "phrase": "underscore the critical imperative",
+            "meaning": "極めて重要な必要性を強調する",
+            "usage": "報告書やプレゼンで、特定の行動や対策の緊急性を訴える際に使う。"
+          },
+          {
+            "phrase": "robust supply chain resilience",
+            "meaning": "堅牢なサプライチェーンの回復力",
+            "usage": "現代のビジネス環境において、リスク管理や持続可能性の文脈で頻繁に用いられる。"
+          }
+        ]
+      },
+      {
+        "en": "Companies can no longer afford to operate with lean, just-in-time models that prioritize cost efficiency above all else.",
+        "ja": "企業はもはや、コスト効率を最優先するリーンなジャストインタイムモデルのみで事業を運営する余裕はありません。",
+        "audioPath": "./assets/audio/t17838716129086910_1.wav",
+        "phrases": [
+          {
+            "phrase": "can no longer afford to",
+            "meaning": "もはや〜する余裕がない",
+            "usage": "企業は旧式のシステムを使い続ける余裕はない。"
+          },
+          {
+            "phrase": "just-in-time",
+            "meaning": "ジャストインタイム方式の、必要な時に必要なだけ",
+            "usage": "製造業のサプライチェーン管理で重要な概念。"
+          },
+          {
+            "phrase": "prioritize cost efficiency",
+            "meaning": "コスト効率を優先する",
+            "usage": "prioritize customer satisfaction (顧客満足度を優先する) のように応用できる。"
+          },
+          {
+            "phrase": "above all else",
+            "meaning": "何よりも、とりわけ",
+            "usage": "チームワークが何よりも重要だ。"
+          }
+        ]
+      },
+      {
+        "en": "A paradigm shift towards diversified sourcing strategies and localized production hubs is increasingly evident across various industries.",
+        "ja": "多角的な調達戦略と現地生産拠点の構築へのパラダイムシフトは、様々な産業においてますます顕著になっています。",
+        "audioPath": "./assets/audio/t17838716129086910_2.wav",
+        "phrases": [
+          {
+            "phrase": "paradigm shift",
+            "meaning": "抜本的な変化、パラダイムシフト",
+            "usage": "ビジネスや社会の根本的な変化を指す際に使う"
+          },
+          {
+            "phrase": "diversified sourcing strategies",
+            "meaning": "多様化した調達戦略",
+            "usage": "サプライチェーンのリスク分散や安定化のために重要"
+          },
+          {
+            "phrase": "localized production hubs",
+            "meaning": "地域化された生産拠点",
+            "usage": "地産地消やサプライチェーンの強靭化の文脈で使われる"
+          },
+          {
+            "phrase": "increasingly evident",
+            "meaning": "ますます明らかになっている",
+            "usage": "傾向や事実が徐々に明白になる状況を表す"
+          }
+        ]
+      },
+      {
+        "en": "Embracing advanced analytics and artificial intelligence is pivotal for gaining predictive insights into potential disruptions and optimizing inventory management.",
+        "ja": "高度な分析と人工知能の導入は、潜在的な混乱を予測し、在庫管理を最適化するための極めて重要な要素です。",
+        "audioPath": "./assets/audio/t17838716129086910_3.wav",
+        "phrases": [
+          {
+            "phrase": "pivotal for",
+            "meaning": "〜にとって極めて重要である",
+            "usage": "「成功は会社の将来にとって極めて重要だ」のように使う。"
+          },
+          {
+            "phrase": "gaining predictive insights",
+            "meaning": "予測的な知見を得る",
+            "usage": "データ分析やAIの文脈で、将来を予測するための深い理解を得ることを指す。"
+          },
+          {
+            "phrase": "potential disruptions",
+            "meaning": "潜在的な混乱/障害",
+            "usage": "サプライチェーンや事業運営におけるリスク要因を指す際によく使う。"
+          },
+          {
+            "phrase": "optimizing inventory management",
+            "meaning": "在庫管理を最適化する",
+            "usage": "効率化やコスト削減の文脈で、在庫の適正化を図ることを意味する。"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, fostering deeper collaborative relationships with key suppliers and logistics partners can significantly enhance adaptability.",
+        "ja": "さらに、主要なサプライヤーや物流パートナーとの協力関係を深めることは、適応性を著しく向上させることができます。",
+        "audioPath": "./assets/audio/t17838716129086910_4.wav",
+        "phrases": [
+          {
+            "phrase": "fostering deeper collaborative relationships",
+            "meaning": "より深い協力関係を育むこと",
+            "usage": "企業がサプライヤーやパートナーとの関係を強化する文脈でよく使われます。"
+          },
+          {
+            "phrase": "key suppliers",
+            "meaning": "主要なサプライヤー",
+            "usage": "ビジネスにおいて、取引の大部分を担う重要な供給元を指します。"
+          },
+          {
+            "phrase": "logistics partners",
+            "meaning": "物流パートナー",
+            "usage": "商品の輸送や保管を専門とする外部企業との協力関係を意味します。"
+          },
+          {
+            "phrase": "significantly enhance adaptability",
+            "meaning": "適応力を大幅に向上させる",
+            "usage": "変化する状況に柔軟に対応する能力を高めることを表します。"
+          }
+        ]
+      },
+      {
+        "en": "Regulatory compliance, particularly concerning environmental, social, and governance (ESG) factors, now plays a non-negotiable role in supply chain integrity.",
+        "ja": "環境・社会・ガバナンス（ESG）要因に関する規制遵守は、サプライチェーンの健全性において今や不可欠な役割を担っています。",
+        "audioPath": "./assets/audio/t17838716129086910_5.wav",
+        "phrases": [
+          {
+            "phrase": "environmental, social, and governance (ESG) factors",
+            "meaning": "環境・社会・ガバナンス（ESG）要因",
+            "usage": "企業の持続可能性評価において重要な要素です。"
+          },
+          {
+            "phrase": "plays a non-negotiable role",
+            "meaning": "不可欠な役割を果たす、交渉の余地のない役割を担う",
+            "usage": "その重要性を強調する際に使います。「〜は極めて重要である」"
+          },
+          {
+            "phrase": "supply chain integrity",
+            "meaning": "サプライチェーンの完全性",
+            "usage": "企業の信頼性やリスク管理において極めて重要です。"
+          }
+        ]
+      },
+      {
+        "en": "Businesses must proactively identify single points of failure and develop contingency plans to mitigate their impact on operations.",
+        "ja": "企業は、単一障害点を積極的に特定し、それが事業運営に与える影響を軽減するための緊急時対応計画を策定しなければなりません。",
+        "audioPath": "./assets/audio/t17838716129086910_6.wav",
+        "phrases": [
+          {
+            "phrase": "proactively identify",
+            "meaning": "積極的に特定する、事前に見つけ出す",
+            "usage": "問題やリスクを未然に防ぐ文脈でよく使われます。"
+          },
+          {
+            "phrase": "single points of failure",
+            "meaning": "単一障害点",
+            "usage": "システムやプロセスにおいて、そこが停止すると全体が機能しなくなる箇所を指す。"
+          },
+          {
+            "phrase": "contingency plans",
+            "meaning": "緊急時対応計画、不測の事態への計画",
+            "usage": "危機管理や事業継続計画（BCP）の文脈で頻出。"
+          },
+          {
+            "phrase": "mitigate their impact",
+            "meaning": "影響を軽減する、緩和する",
+            "usage": "損害、リスク、悪影響などを減らす際に使う。"
+          }
+        ]
+      },
+      {
+        "en": "The adoption of blockchain technology promises greater transparency and traceability, thereby bolstering trust throughout the entire value chain.",
+        "ja": "ブロックチェーン技術の導入は、より高い透明性と追跡可能性をもたらし、バリューチェーン全体における信頼を強化することが期待されます。",
+        "audioPath": "./assets/audio/t17838716129086910_7.wav",
+        "phrases": [
+          {
+            "phrase": "promises greater transparency",
+            "meaning": "より高い透明性をもたらす/約束する",
+            "usage": "「promise X」で「Xをもたらす/期待させる」の意で、ビジネスで頻繁に使われます。"
+          },
+          {
+            "phrase": "thereby bolstering trust",
+            "meaning": "それによって信頼を強化する",
+            "usage": "therebyは前の内容の結果を示す接続副詞。bolsterは『強化する、下支えする』の堅い表現です。"
+          },
+          {
+            "phrase": "throughout the entire value chain",
+            "meaning": "バリューチェーン全体を通じて",
+            "usage": "throughoutは「〜の至る所で/期間中ずっと」の意味で、ビジネスで頻出する表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Investing in reskilling and upskilling the workforce is also crucial to manage sophisticated supply chain ecosystems effectively.",
+        "ja": "洗練されたサプライチェーンのエコシステムを効果的に管理するためには、従業員のリスキリングとアップスキリングへの投資も不可欠です。",
+        "audioPath": "./assets/audio/t17838716129086910_8.wav",
+        "phrases": [
+          {
+            "phrase": "reskilling and upskilling",
+            "meaning": "従業員の再教育とスキルアップ",
+            "usage": "従業員のスキルを最新の状態に保つために重要です。"
+          },
+          {
+            "phrase": "manage ... effectively",
+            "meaning": "〜を効果的に管理する",
+            "usage": "複雑なプロジェクトを効果的に管理することが求められます。"
+          },
+          {
+            "phrase": "supply chain ecosystems",
+            "meaning": "サプライチェーンの生態系（複雑な連携システム）",
+            "usage": "グローバルなサプライチェーンの複雑さを表す言葉です。"
+          }
+        ]
+      },
+      {
+        "en": "Geopolitical risk assessments should be routinely integrated into strategic planning sessions to anticipate and react to global shifts.",
+        "ja": "地政学的リスク評価は、世界的な変動を予測し対応するために、戦略計画会議に定期的に組み込むべきです。",
+        "audioPath": "./assets/audio/t17838716129086910_9.wav",
+        "phrases": [
+          {
+            "phrase": "Geopolitical risk assessments",
+            "meaning": "地政学的リスク評価",
+            "usage": "企業戦略の策定において不可欠な要素です。"
+          },
+          {
+            "phrase": "routinely integrated into",
+            "meaning": "日常的に〜に組み込まれる",
+            "usage": "新しいプロセスが既存のワークフローにroutinely integrated into された。"
+          },
+          {
+            "phrase": "anticipate and react to",
+            "meaning": "〜を予測し、対応する",
+            "usage": "変化の激しい市場で成功するために重要な能力です。"
+          },
+          {
+            "phrase": "global shifts",
+            "meaning": "世界的な変化・変動",
+            "usage": "経済や社会の大きな動きを指す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The long-term objective is to build agile and adaptive supply networks capable of weathering unforeseen shocks and capitalizing on emerging opportunities.",
+        "ja": "長期的な目標は、予期せぬ衝撃を乗り越え、新たな機会を捉えることができる、機敏で適応性の高いサプライネットワークを構築することです。",
+        "audioPath": "./assets/audio/t17838716129086910_10.wav",
+        "phrases": [
+          {
+            "phrase": "agile and adaptive",
+            "meaning": "機敏で適応力のある",
+            "usage": "現代のビジネス環境では、agile and adaptiveな組織が成功する。"
+          },
+          {
+            "phrase": "weathering unforeseen shocks",
+            "meaning": "予期せぬ衝撃を乗り切る",
+            "usage": "The company needs a strategy to weather economic downturns."
+          },
+          {
+            "phrase": "capitalizing on emerging opportunities",
+            "meaning": "新たな機会を捉える/活用する",
+            "usage": "We must focus on capitalizing on new market trends."
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, a resilient supply chain transitions from a cost center to a strategic enabler of sustainable competitive advantage.",
+        "ja": "最終的に、レジリエントなサプライチェーンは、コストセンターから持続的な競争優位性を生み出す戦略的推進力へと変貌します。",
+        "audioPath": "./assets/audio/t17838716129086910_11.wav",
+        "phrases": [
+          {
+            "phrase": "transitions from A to B",
+            "meaning": "AからBへと移行する、変わる",
+            "usage": "組織やビジネスモデルの変化を説明する際によく使われる表現。"
+          },
+          {
+            "phrase": "cost center",
+            "meaning": "コストセンター（費用発生部門）",
+            "usage": "企業内で収益を生まず、費用のみが発生する部門を指す。"
+          },
+          {
+            "phrase": "strategic enabler",
+            "meaning": "戦略的推進要因、戦略を可能にするもの",
+            "usage": "特定の要素が企業の戦略目標達成に不可欠な役割を果たすことを示す。"
+          },
+          {
+            "phrase": "sustainable competitive advantage",
+            "meaning": "持続可能な競争優位性",
+            "usage": "他社が容易に模倣できない、長期的な競争上の強みを意味する。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-12T15:53:32.908Z"
   }
 ]
