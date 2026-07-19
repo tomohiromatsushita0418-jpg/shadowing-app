@@ -18106,7 +18106,7 @@
       {
         "en": "The global chemical industry is undergoing a profound transformation, driven by an urgent imperative for sustainability and the burgeoning demand for high-performance materials.",
         "ja": "世界の化学産業は、持続可能性への喫緊の要請と、高機能材料に対する需要の急増により、抜本的な変革期を迎えています。",
-        "audioPath": "./assets/audio/t17843897733244096_0.wav",
+        "audioPath": "./assets/audio/t17843897733244096_0.mp3",
         "phrases": [
           {
             "phrase": "undergoing a profound transformation",
@@ -18133,7 +18133,7 @@
       {
         "en": "Major players like BASF and Dow are aggressively reconfiguring their portfolios, divesting legacy petrochemical assets while channeling investments into specialized solutions.",
         "ja": "BASFやダウなどの主要企業は、従来の石油化学事業資産を売却しつつ、専門性の高いソリューションへの投資を集中させることで、積極的に事業ポートフォリオを再編しています。",
-        "audioPath": "./assets/audio/t17843897733244096_1.wav",
+        "audioPath": "./assets/audio/t17843897733244096_1.mp3",
         "phrases": [
           {
             "phrase": "major players",
@@ -18160,7 +18160,7 @@
       {
         "en": "Decarbonization remains a paramount challenge, compelling firms to explore novel processes, such as electrification of steam crackers and carbon capture technologies.",
         "ja": "脱炭素化は引き続き最重要課題であり、企業はスチームクラッカーの電化や炭素回収技術といった革新的なプロセスを模索することを余儀なくされています。",
-        "audioPath": "./assets/audio/t17843897733244096_2.wav",
+        "audioPath": "./assets/audio/t17843897733244096_2.mp3",
         "phrases": [
           {
             "phrase": "Decarbonization remains a paramount challenge",
@@ -18182,7 +18182,7 @@
       {
         "en": "The burgeoning electric vehicle market and the relentless pace of digital transformation are fueling unprecedented demand for advanced battery components and semiconductor precursors.",
         "ja": "拡大する電気自動車市場と、デジタル変革の絶え間ない進展が、高度なバッテリー部品や半導体前駆体に対する前例のない需要を掻き立てています。",
-        "audioPath": "./assets/audio/t17843897733244096_3.wav",
+        "audioPath": "./assets/audio/t17843897733244096_3.mp3",
         "phrases": [
           {
             "phrase": "burgeoning electric vehicle market",
@@ -18209,7 +18209,7 @@
       {
         "en": "Consequently, companies like Shin-Etsu Chemical are expanding capacity for silicon wafers and photoresists, crucial for next-generation electronics.",
         "ja": "結果として、信越化学工業のような企業は、次世代エレクトロニクスに不可欠なシリコンウェーハやフォトレジストの生産能力を増強しています。",
-        "audioPath": "./assets/audio/t17843897733244096_4.wav",
+        "audioPath": "./assets/audio/t17843897733244096_4.mp3",
         "phrases": [
           {
             "phrase": "expanding capacity",
@@ -18231,7 +18231,7 @@
       {
         "en": "Green chemistry principles are increasingly integrated into R&D, fostering the development of bio-based feedstocks and more environmentally benign manufacturing processes.",
         "ja": "グリーンケミストリーの原則は研究開発にますます組み込まれ、バイオマス由来原料やより環境負荷の低い製造プロセスの開発を促進しています。",
-        "audioPath": "./assets/audio/t17843897733244096_5.wav",
+        "audioPath": "./assets/audio/t17843897733244096_5.mp3",
         "phrases": [
           {
             "phrase": "integrated into",
@@ -18253,7 +18253,7 @@
       {
         "en": "Supply chain resilience has become a critical strategic focus, prompting a re-evaluation of global sourcing and a push towards regionalization to mitigate geopolitical risks.",
         "ja": "サプライチェーンのレジリエンスは極めて重要な戦略的焦点となり、地政学的リスクを軽減するために、グローバル調達の見直しと地域化への推進を促しています。",
-        "audioPath": "./assets/audio/t17843897733244096_6.wav",
+        "audioPath": "./assets/audio/t17843897733244096_6.mp3",
         "phrases": [
           {
             "phrase": "critical strategic focus",
@@ -18280,7 +18280,7 @@
       {
         "en": "Regulatory frameworks, particularly in the EU, are becoming more stringent, accelerating the shift towards safer and more sustainable chemical products.",
         "ja": "特にEUにおける規制枠組みは厳格化の一途を辿り、より安全で持続可能な化学製品への移行を加速させています。",
-        "audioPath": "./assets/audio/t17843897733244096_7.wav",
+        "audioPath": "./assets/audio/t17843897733244096_7.mp3",
         "phrases": [
           {
             "phrase": "Regulatory frameworks",
@@ -18307,7 +18307,7 @@
       {
         "en": "Strategic alliances and targeted M&A activities are prevalent as companies seek to acquire expertise in emerging areas like advanced recycling and hydrogen technologies.",
         "ja": "高度リサイクルや水素技術といった新興分野の専門知識を獲得するため、企業間では戦略的提携や的を絞ったM&Aが盛んに行われています。",
-        "audioPath": "./assets/audio/t17843897733244096_8.wav",
+        "audioPath": "./assets/audio/t17843897733244096_8.mp3",
         "phrases": [
           {
             "phrase": "strategic alliances",
@@ -18334,7 +18334,7 @@
       {
         "en": "The shift from bulk commodity chemicals to high-value specialty chemicals promises higher margins and greater insulation from volatile raw material prices.",
         "ja": "大量生産される汎用化学品から高付加価値のスペシャリティケミカルへの移行は、より高い利益率と、変動の激しい原材料価格からのより大きな保護をもたらします。",
-        "audioPath": "./assets/audio/t17843897733244096_9.wav",
+        "audioPath": "./assets/audio/t17843897733244096_9.mp3",
         "phrases": [
           {
             "phrase": "shift from A to B",
@@ -18377,7 +18377,8 @@
             "meaning": "画期的な持続可能なソリューション",
             "usage": "新しい技術や取り組みを評価する際に使う。「groundbreaking」単体でも重要。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17843897733244096_10.mp3"
       },
       {
         "en": "This strategic recalibration positions the industry not just as a supplier of materials, but as a pivotal enabler of the global green transition and technological advancement.",
@@ -18403,7 +18404,8 @@
             "meaning": "戦略的な再調整/再較正",
             "usage": "企業や組織が戦略を見直し、方向性を変える際に用いる。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17843897733244096_11.mp3"
       }
     ],
     "createdAt": "2026-07-18T15:49:33.324Z"
