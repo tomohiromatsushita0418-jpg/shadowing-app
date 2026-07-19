@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "buildCommand": "npx expo export -p web",
+  "buildCommand": "npx expo export -p web && mkdir -p dist/assets/audio && cp -R assets/audio/. dist/assets/audio/",
   "outputDirectory": "dist",
   "installCommand": "npm install --legacy-peer-deps",
   "rewrites": [
