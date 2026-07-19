@@ -18409,5 +18409,273 @@
       }
     ],
     "createdAt": "2026-07-18T15:49:33.324Z"
+  },
+  {
+    "id": "t17844763120422763",
+    "title": "Orchestrating a Weekend Get-Together",
+    "titleJa": "週末の集まりを企画する",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I was hoping we could finally put our heads together to plan that long-overdue catch-up everyone's been clamoring for.",
+        "ja": "みんながずっと心待ちにしていた、あの久しぶりの集まりを、いよいよ一緒に計画できたらと思っていました。",
+        "audioPath": "./assets/audio/t17844763120422763_0.mp3",
+        "phrases": [
+          {
+            "phrase": "put our heads together",
+            "meaning": "協力して考える、知恵を出し合う",
+            "usage": "Let's put our heads together to solve this problem. (この問題を解決するために協力して考えよう。)"
+          },
+          {
+            "phrase": "long-overdue",
+            "meaning": "とっくに済まされるべきだった、待ち望まれていた",
+            "usage": "a long-overdue apology (とっくに謝るべきだったこと)"
+          },
+          {
+            "phrase": "clamoring for",
+            "meaning": "〜を熱望している、〜を強く求めている",
+            "usage": "The public is clamoring for action. (国民は行動を強く求めている。)"
+          }
+        ]
+      },
+      {
+        "en": "My schedule's been rather hectic lately, but I've carved out some time next weekend, so I'm keen to make it happen.",
+        "ja": "最近はかなり多忙を極めていたのですが、来週末に何とか時間を捻出できたので、ぜひ実現させたいですね。",
+        "audioPath": "./assets/audio/t17844763120422763_1.mp3",
+        "phrases": [
+          {
+            "phrase": "hectic lately",
+            "meaning": "最近、てんてこ舞いだった",
+            "usage": "My schedule's been rather hectic lately. は「最近、私のスケジュールはかなり忙しかった」という意味です。"
+          },
+          {
+            "phrase": "carved out some time",
+            "meaning": "時間をなんとか作り出した",
+            "usage": "I've carved out some time next weekend. は「来週末、なんとか時間を空けました」という意味です。"
+          },
+          {
+            "phrase": "keen to make it happen",
+            "meaning": "それを実現させることに熱心である",
+            "usage": "I'm keen to make it happen. は「それを実現させるのがとても楽しみです」という意味です。"
+          }
+        ]
+      },
+      {
+        "en": "I was thinking a laid-back brunch would be ideal, something where we can genuinely unwind and chew the fat without feeling rushed.",
+        "ja": "気兼ねなくくつろぎながら、時間を気にせずじっくり語り合えるような、ゆったりとしたブランチが良いかと考えています。",
+        "audioPath": "./assets/audio/t17844763120422763_2.mp3",
+        "phrases": [
+          {
+            "phrase": "laid-back",
+            "meaning": "リラックスした、ゆったりした",
+            "usage": "a laid-back atmosphere (リラックスした雰囲気) のように使う"
+          },
+          {
+            "phrase": "unwind",
+            "meaning": "くつろぐ、リラックスする",
+            "usage": "After a long week, I need to unwind. (長い一週間の後、くつろぐ必要がある)"
+          },
+          {
+            "phrase": "chew the fat",
+            "meaning": "世間話をする、おしゃべりをする",
+            "usage": "Let's get together next week and chew the fat. (来週集まっておしゃべりしましょう)"
+          }
+        ]
+      },
+      {
+        "en": "Do you have a preference for Saturday or Sunday, or perhaps a specific time slot that works best for your myriad commitments?",
+        "ja": "土曜日と日曜日、どちらかご希望はありますか？あるいは、多岐にわたるご予定の中で、特に都合の良い時間帯があれば教えていただけますか。",
+        "audioPath": "./assets/audio/t17844763120422763_3.mp3",
+        "phrases": [
+          {
+            "phrase": "preference for",
+            "meaning": "〜に対する好み",
+            "usage": "Do you have a preference for coffee or tea? のように使う"
+          },
+          {
+            "phrase": "time slot",
+            "meaning": "時間枠、時間帯",
+            "usage": "We need to book a time slot for the meeting. のように使う"
+          },
+          {
+            "phrase": "works best for",
+            "meaning": "〜に最も都合が良い",
+            "usage": "Does this time slot work best for you? のように使う"
+          },
+          {
+            "phrase": "myriad commitments",
+            "meaning": "数多くの予定・仕事",
+            "usage": "She has myriad commitments as a CEO. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "I've heard great things about that new bistro downtown; their avocado toast is supposedly to die for, and the ambiance is quite inviting.",
+        "ja": "街の中心部にできた新しいビストロについて、とても評判が良いと聞きましたよ。アボカドトーストは絶品だそうで、雰囲気も大変魅力的です。",
+        "audioPath": "./assets/audio/t17844763120422763_4.mp3",
+        "phrases": [
+          {
+            "phrase": "heard great things about",
+            "meaning": "〜について良い評判を聞いている",
+            "usage": "I've heard great things about your new project. (あなたの新しいプロジェクトについて良い評判を聞いています。)"
+          },
+          {
+            "phrase": "to die for",
+            "meaning": "最高に素晴らしい、たまらないほど欲しい",
+            "usage": "This chocolate cake is to die for! (このチョコレートケーキは最高に美味しい！)"
+          },
+          {
+            "phrase": "quite inviting",
+            "meaning": "かなり魅力的な、誘いかけるような",
+            "usage": "The atmosphere of the cafe was quite inviting. (そのカフェの雰囲気はかなり魅力的だった。)"
+          }
+        ]
+      },
+      {
+        "en": "We should probably sound out the others to gauge their availability and dietary preferences before firming up any reservations.",
+        "ja": "予約を確定する前に、他のメンバーに都合の良い日時や食事の好みを確認しておくのが良いでしょうね。",
+        "audioPath": "./assets/audio/t17844763120422763_5.mp3",
+        "phrases": [
+          {
+            "phrase": "sound out",
+            "meaning": "（人）の意向を探る、意見を聞く",
+            "usage": "We need to sound out the team before making a decision. 決定を下す前にチームの意向を探る必要がある。"
+          },
+          {
+            "phrase": "gauge their availability",
+            "meaning": "相手の都合（空き時間）を把握する",
+            "usage": "Please gauge their availability for a meeting next week. 来週の会議の相手の都合を把握してください。"
+          },
+          {
+            "phrase": "firming up",
+            "meaning": "（計画・予約などを）確定させる、固める",
+            "usage": "We are firming up the details of the contract. 契約の詳細を固めているところです。"
+          }
+        ]
+      },
+      {
+        "en": "Getting everyone's calendars to align can be quite the logistical challenge, but I'm optimistic we can find a sweet spot.",
+        "ja": "皆のスケジュールを合わせるのは、なかなか骨の折れる作業ですが、きっとベストな時間帯を見つけられると信じています。",
+        "audioPath": "./assets/audio/t17844763120422763_6.mp3",
+        "phrases": [
+          {
+            "phrase": "calendars to align",
+            "meaning": "全員のスケジュールが一致する",
+            "usage": "会議の日程調整などでよく使われる表現です。"
+          },
+          {
+            "phrase": "logistical challenge",
+            "meaning": "運営上の課題、手配上の難題",
+            "usage": "イベント開催やプロジェクト進行における計画・実行上の困難さを指します。"
+          },
+          {
+            "phrase": "find a sweet spot",
+            "meaning": "最適な妥協点を見つける、ちょうど良いバランス点を見つける",
+            "usage": "複数の要求や条件を満たす、満足のいく解決策を見つける状況で使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Perhaps a shared document or a quick poll would streamline the process and prevent endless back-and-forth messaging.",
+        "ja": "共有ドキュメントや簡単なアンケートを活用すれば、やり取りが効率化され、無駄なメッセージの往復を避けられるかもしれません。",
+        "audioPath": "./assets/audio/t17844763120422763_7.mp3",
+        "phrases": [
+          {
+            "phrase": "streamline the process",
+            "meaning": "プロセスを効率化する",
+            "usage": "This will streamline the hiring process. (これにより採用プロセスが効率化されるでしょう)"
+          },
+          {
+            "phrase": "prevent endless back-and-forth messaging",
+            "meaning": "延々と続くメッセージのやり取りを防ぐ",
+            "usage": "We need to find a way to prevent endless back-and-forth messaging. (延々と続くメッセージのやり取りを防ぐ方法を見つける必要がある)"
+          }
+        ]
+      },
+      {
+        "en": "I'm really looking forward to reconnecting; it feels like ages since we all had a proper chinwag.",
+        "ja": "皆と再会できるのが本当に楽しみです。ちゃんとおしゃべりするのも、ずいぶん久しぶりな気がします。",
+        "audioPath": "./assets/audio/t17844763120422763_8.mp3",
+        "phrases": [
+          {
+            "phrase": "looking forward to",
+            "meaning": "〜を楽しみにしている",
+            "usage": "ビジネスメールで「ご返信をお待ちしております」の意味で \"I'm looking forward to your reply.\" のように使う。"
+          },
+          {
+            "phrase": "feels like ages",
+            "meaning": "久しぶりだ、ずいぶん長い時間が経ったように感じる",
+            "usage": "「最後に会ってからずいぶん経つね」は \"It feels like ages since we last met.\" のように使う。"
+          }
+        ]
+      },
+      {
+        "en": "It would be wonderful to rekindle those old friendships and create some new memories together.",
+        "ja": "昔からの友情を温め直し、皆で新たな思い出を作れたら素晴らしいですね。",
+        "audioPath": "./assets/audio/t17844763120422763_9.mp3",
+        "phrases": [
+          {
+            "phrase": "rekindle friendships",
+            "meaning": "友情を再び育む、友情を復活させる",
+            "usage": "It's nice to rekindle friendships from college."
+          },
+          {
+            "phrase": "create memories",
+            "meaning": "思い出を作る、思い出を刻む",
+            "usage": "We hope to create lasting memories on this trip."
+          },
+          {
+            "phrase": "together",
+            "meaning": "一緒に、共に",
+            "usage": "Let's work together to achieve our goals."
+          }
+        ]
+      },
+      {
+        "en": "Let's touch base again by midweek to see if we've made any headway with everyone's responses.",
+        "ja": "皆からの返信で何か進展があったか、週の半ば頃にまた連絡を取り合いましょう。",
+        "audioPath": "./assets/audio/t17844763120422763_10.mp3",
+        "phrases": [
+          {
+            "phrase": "touch base",
+            "meaning": "連絡を取る、近況を報告し合う",
+            "usage": "I'll touch base with you next week to give you an update. (来週、最新情報をお伝えするために連絡します。)"
+          },
+          {
+            "phrase": "make headway",
+            "meaning": "進展する、進歩する",
+            "usage": "We're making good headway on the new marketing campaign. (新しいマーケティングキャンペーンは順調に進んでいます。)"
+          }
+        ]
+      },
+      {
+        "en": "Hopefully, we can iron out the details swiftly and look forward to a thoroughly enjoyable gathering.",
+        "ja": "詳細を速やかに詰め、心ゆくまで楽しめる集まりにできることを願っています。",
+        "audioPath": "./assets/audio/t17844763120422763_11.mp3",
+        "phrases": [
+          {
+            "phrase": "iron out the details",
+            "meaning": "詳細を詰める、解決する",
+            "usage": "会議などで、まだ決まっていない細かい部分を話し合って決定する際に使います。"
+          },
+          {
+            "phrase": "swiftly",
+            "meaning": "迅速に、素早く",
+            "usage": "iron out the details swiftly のように、動詞を修飾して「迅速に詳細を詰める」という意味で使われます。"
+          },
+          {
+            "phrase": "look forward to",
+            "meaning": "〜を楽しみに待つ",
+            "usage": "gathering のような名詞や、attending the meeting のような動名詞を伴って、未来の出来事への期待を表します。"
+          },
+          {
+            "phrase": "thoroughly enjoyable",
+            "meaning": "徹底的に楽しい、非常に楽しい",
+            "usage": "enjoyable を thoroughly で強調しており、非常に満足度の高いイベントや体験を表す際に使われます。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-19T15:51:52.042Z"
   }
 ]
