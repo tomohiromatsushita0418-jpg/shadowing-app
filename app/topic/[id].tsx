@@ -7,6 +7,7 @@ import { Audio } from 'expo-av';
 import Constants from 'expo-constants';
 import { topics, type Sentence } from '../../data/topics';
 import wordMeanings from '../../data/wordMeanings.json';
+import wordAudio from '../../data/wordAudio.json';
 import SentenceCard from '../../components/SentenceCard';
 import WordDefinitionModal from '../../components/WordDefinitionModal';
 import { useProgress } from '../../hooks/useProgress';
@@ -24,6 +25,11 @@ interface DictionaryEntry {
 
 const TRANSLATE_MODELS = ['gemini-2.5-flash-lite', 'gemini-2.5-flash'];
 const BUNDLED_MEANINGS: Record<string, string> = wordMeanings as Record<string, string>;
+// Pre-generated (ElevenLabs) pronunciation files per word. Playing these gives
+// a consistent, human-like voice on every device instead of the OS's built-in
+// speech synthesizer (which is robotic on some devices). Words not present here
+// fall back to system TTS.
+const WORD_AUDIO: Record<string, string> = wordAudio as Record<string, string>;
 
 function resolveAudioUri(audioPath: string): string {
   if (audioPath.startsWith('http')) return audioPath;
@@ -109,6 +115,40 @@ export default function TopicScreen() {
   // tears down a playing sound.
   const soundRef = useRef<Audio.Sound | null>(null);
   const playRequestIdRef = useRef(0);
+  // Transient sound for word pronunciation (separate from sentence playback).
+  const wordSoundRef = useRef<Audio.Sound | null>(null);
+
+  // Pronounce a single word: prefer the pre-generated ElevenLabs file (uniform,
+  // human-like on every device); fall back to the OS speech synthesizer only
+  // when no file exists for that word yet.
+  const speakWord = useCallback(async (clean: string) => {
+    const rel = WORD_AUDIO[clean];
+    if (rel) {
+      try {
+        // Tear down any previous word sound first.
+        if (wordSoundRef.current) {
+          const prev = wordSoundRef.current;
+          wordSoundRef.current = null;
+          try { await prev.unloadAsync(); } catch {}
+        }
+        try { Speech.stop(); } catch {}
+        const uri = resolveAudioUri(rel);
+        const { sound } = await Audio.Sound.createAsync({ uri }, { shouldPlay: true });
+        wordSoundRef.current = sound;
+        sound.setOnPlaybackStatusUpdate((status) => {
+          if (status.isLoaded && status.didJustFinish) {
+            sound.unloadAsync().catch(() => {});
+            if (wordSoundRef.current === sound) wordSoundRef.current = null;
+          }
+        });
+        return;
+      } catch {
+        // fall through to system TTS
+      }
+    }
+    try { Speech.stop(); } catch {}
+    Speech.speak(clean, { language: 'en-US', rate: 0.8, pitch: 1.0 });
+  }, []);
 
   // Prime audio mode once on mount
   useEffect(() => {
@@ -171,6 +211,10 @@ export default function TopicScreen() {
       if (soundRef.current) {
         soundRef.current.unloadAsync().catch(() => {});
         soundRef.current = null;
+      }
+      if (wordSoundRef.current) {
+        wordSoundRef.current.unloadAsync().catch(() => {});
+        wordSoundRef.current = null;
       }
       Speech.stop();
     };
@@ -292,8 +336,7 @@ export default function TopicScreen() {
   const handleWordTap = useCallback(async (word: string) => {
     const clean = word.replace(/[^a-zA-Z'-]/g, '').toLowerCase();
     if (!clean) return;
-    Speech.stop();
-    Speech.speak(clean, { language: 'en-US', rate: 0.8, pitch: 1.0 });
+    speakWord(clean);
 
     setSelectedWord(clean);
     setDictData(null);
@@ -323,7 +366,7 @@ export default function TopicScreen() {
 
     await Promise.all([dictPromise, jpPromise]);
     setDictLoading(false);
-  }, []);
+  }, [speakWord]);
 
   const handleCloseModal = useCallback(() => {
     setModalVisible(false);
@@ -404,10 +447,7 @@ export default function TopicScreen() {
         error={dictError}
         japaneseMeaning={japaneseMeaning}
         onClose={handleCloseModal}
-        onPronounce={() => {
-          Speech.stop();
-          Speech.speak(selectedWord, { language: 'en-US', rate: 0.8 });
-        }}
+        onPronounce={() => speakWord(selectedWord)}
       />
     </>
   );
