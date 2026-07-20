@@ -1,26 +1,27 @@
 /**
  * generatePhraseAudio.ts
  *
- * Pre-generates ElevenLabs audio for the idioms/phrases shown under each
- * sentence (and saved to the phrase book), using the SAME voice and voice
- * settings as the sentence audio so a tapped phrase sounds like the same
+ * Pre-generates audio for the idioms/phrases shown under each sentence (and
+ * saved to the phrase book), using the SAME engine and voice as the sentence
+ * audio (Gemini / "Puck" by default) so a tapped phrase sounds like the same
  * speaker.
  *
  * Like generateWordAudio, this covers going-forward vocabulary only:
  * PHRASE_AUDIO_TOPICS_TAIL=N limits generation to the last N topics so the
  * historical catalog is never backfilled.
  *
- * Output:   assets/audio/phrases/<slug>.mp3
- * Manifest: data/phraseAudio.json  ({ "<normalized phrase>": "./assets/audio/phrases/<slug>.mp3" })
+ * Output:   assets/audio/phrases/<slug>.(wav|mp3)
+ * Manifest: data/phraseAudio.json  ({ "<normalized phrase>": "./assets/audio/phrases/<slug>.<ext>" })
  *
  * Run:      tsx scripts/generatePhraseAudio.ts
- * Requires: ELEVENLABS_API_KEY
+ * Requires: GEMINI_API_KEY (or ELEVENLABS_API_KEY with TTS_ENGINE=elevenlabs)
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { AUDIO_EXT, PACE_MS, QuotaError, engineReady, synthesize, ENGINE } from './ttsEngine.js';
 
 interface Phrase { phrase: string }
 interface Sentence { phrases?: Phrase[] }
@@ -33,19 +34,9 @@ const TOPICS = path.join(ROOT, 'data', 'topics.json');
 const MANIFEST = path.join(ROOT, 'data', 'phraseAudio.json');
 const PHRASE_DIR = path.join(ROOT, 'assets', 'audio', 'phrases');
 
-const ELEVEN_KEY = process.env.ELEVENLABS_API_KEY;
-const ELEVEN_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || 'nPczCjzI2devNBz1zQrb';
-const ELEVEN_MODEL = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
-
-// Must stay IDENTICAL to generateAudio.ts / generateWordAudio.ts.
-const ELEVEN_VOICE_SETTINGS = {
-  stability: Number(process.env.ELEVENLABS_STABILITY ?? 0.4),
-  similarity_boost: Number(process.env.ELEVENLABS_SIMILARITY ?? 0.8),
-  style: Number(process.env.ELEVENLABS_STYLE ?? 0.45),
-  use_speaker_boost: true,
-};
-
-const MAX_PER_RUN = Number(process.env.MAX_PHRASE_AUDIO_PER_RUN ?? 120);
+const MAX_PER_RUN = Number(
+  process.env.MAX_PHRASE_AUDIO_PER_RUN ?? (ENGINE === 'elevenlabs' ? 120 : 20)
+);
 const FORCE = process.env.FORCE_REGEN === '1';
 
 /** Same normalization the app uses to look up a phrase in the manifest. */
@@ -87,37 +78,25 @@ function saveManifest(m: Record<string, string>): void {
   fs.writeFileSync(MANIFEST, JSON.stringify(sorted, null, 2) + '\n');
 }
 
-class QuotaError extends Error {}
-
 async function synth(text: string, outPath: string): Promise<void> {
-  const url = `https://api.elevenlabs.io/v1/text-to-speech/${ELEVEN_VOICE_ID}?output_format=mp3_44100_128`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'xi-api-key': ELEVEN_KEY as string,
-      'Content-Type': 'application/json',
-      Accept: 'audio/mpeg',
-    },
-    body: JSON.stringify({
-      text,
-      model_id: ELEVEN_MODEL,
-      voice_settings: ELEVEN_VOICE_SETTINGS,
-    }),
-  });
-  if (res.status === 401 || res.status === 429) {
-    throw new QuotaError(`ElevenLabs ${res.status}: ${(await res.text()).slice(0, 160)}`);
-  }
-  if (!res.ok) {
-    throw new Error(`ElevenLabs error ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  }
-  const buf = Buffer.from(await res.arrayBuffer());
+  const buf = await synthesize(text);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, buf);
 }
 
+/** Existing audio for a phrase, in either engine's format. */
+function existingRel(slug: string): string | null {
+  for (const ext of ['wav', 'mp3']) {
+    if (fs.existsSync(path.join(PHRASE_DIR, `${slug}.${ext}`))) {
+      return `./assets/audio/phrases/${slug}.${ext}`;
+    }
+  }
+  return null;
+}
+
 async function main() {
-  if (!ELEVEN_KEY) {
-    console.log('ELEVENLABS_API_KEY not set — skipping phrase audio generation.');
+  if (!engineReady()) {
+    console.log(`TTS engine "${ENGINE}" has no API key — skipping phrase audio generation.`);
     return;
   }
   fs.mkdirSync(PHRASE_DIR, { recursive: true });
@@ -130,25 +109,28 @@ async function main() {
   }
 
   console.log(
-    `${phrases.length} phrases in scope; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run.`
+    `engine=${ENGINE}; ${phrases.length} phrases in scope; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run.`
   );
 
   let generated = 0;
   for (const p of phrases) {
     const slug = slugFor(p);
-    const abs = path.join(PHRASE_DIR, `${slug}.mp3`);
-    const rel = `./assets/audio/phrases/${slug}.mp3`;
+    const abs = path.join(PHRASE_DIR, `${slug}.${AUDIO_EXT}`);
+    const rel = `./assets/audio/phrases/${slug}.${AUDIO_EXT}`;
 
-    if (!FORCE && fs.existsSync(abs)) {
-      if (manifest[p] !== rel) manifest[p] = rel;
-      continue;
+    if (!FORCE) {
+      const existing = existingRel(slug);
+      if (existing) {
+        if (manifest[p] !== existing) manifest[p] = existing;
+        continue;
+      }
     }
 
     try {
       await synth(p, abs);
       manifest[p] = rel;
       generated++;
-      if (generated % 20 === 0) {
+      if (generated % 10 === 0) {
         saveManifest(manifest);
         console.log(`  ...${generated} generated (latest: "${p.slice(0, 40)}")`);
       }
@@ -156,10 +138,10 @@ async function main() {
         console.log(`  reached per-run cap (${MAX_PER_RUN}); stopping.`);
         break;
       }
-      await new Promise((r) => setTimeout(r, 350));
+      await new Promise((r) => setTimeout(r, PACE_MS));
     } catch (err) {
       if (err instanceof QuotaError) {
-        console.log('  ElevenLabs quota/credits exhausted — stopping (remaining phrases use system TTS).');
+        console.log(`  ${ENGINE} quota exhausted — stopping (remaining phrases use system TTS).`);
         console.log(`    (${err.message})`);
         break;
       }

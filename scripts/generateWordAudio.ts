@@ -6,22 +6,25 @@
  * across all devices — instead of falling back to each device's built-in
  * system speech synthesizer (which is robotic on some devices, e.g. iPad).
  *
- * Uses ElevenLabs (same engine/voice as sentence audio) for quality and
- * cross-device consistency. Words are processed MOST-FREQUENT-FIRST so the
+ * Uses the same engine/voice as the sentence audio (Gemini / "Puck" by
+ * default) for a consistent speaker across the app. Words are processed MOST-FREQUENT-FIRST so the
  * words users are most likely to tap get covered first within the monthly
  * free character budget. Any word without generated audio still works in the
  * app via the system-TTS fallback.
  *
- * Output:   assets/audio/words/<slug>.mp3
- * Manifest: data/wordAudio.json  ({ "<word>": "./assets/audio/words/<slug>.mp3" })
+ * Output:   assets/audio/words/<slug>.(wav|mp3)
+ * Manifest: data/wordAudio.json  ({ "<word>": "./assets/audio/words/<slug>.<ext>" })
  *
  * Run:      tsx scripts/generateWordAudio.ts
- * Requires: ELEVENLABS_API_KEY
+ * Requires: GEMINI_API_KEY (or ELEVENLABS_API_KEY with TTS_ENGINE=elevenlabs)
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+// Engine (Gemini/Puck by default) is shared with sentence + phrase audio so a
+// tapped word sounds like the same speaker.
+import { AUDIO_EXT, PACE_MS, QuotaError, engineReady, synthesize, ENGINE } from './ttsEngine.js';
 
 interface Sentence { en: string }
 interface Topic { sentences: Sentence[] }
@@ -33,20 +36,11 @@ const TOPICS = path.join(ROOT, 'data', 'topics.json');
 const MANIFEST = path.join(ROOT, 'data', 'wordAudio.json');
 const WORD_DIR = path.join(ROOT, 'assets', 'audio', 'words');
 
-const ELEVEN_KEY = process.env.ELEVENLABS_API_KEY;
-const ELEVEN_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || 'nPczCjzI2devNBz1zQrb';
-const ELEVEN_MODEL = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
-// Must stay IDENTICAL to the sentence-audio settings in generateAudio.ts so a
-// tapped word sounds like the same speaker as the sentence it came from.
-const ELEVEN_VOICE_SETTINGS = {
-  stability: Number(process.env.ELEVENLABS_STABILITY ?? 0.4),
-  similarity_boost: Number(process.env.ELEVENLABS_SIMILARITY ?? 0.8),
-  style: Number(process.env.ELEVENLABS_STYLE ?? 0.45),
-  use_speaker_boost: true,
-};
-
-// Keep well under the free monthly character budget per run by default.
-const MAX_PER_RUN = Number(process.env.MAX_WORD_AUDIO_PER_RUN ?? 400);
+// Gemini's free TTS tier is limited by requests/day (~15, mostly consumed by
+// the day's sentence audio), ElevenLabs by monthly characters.
+const MAX_PER_RUN = Number(
+  process.env.MAX_WORD_AUDIO_PER_RUN ?? (ENGINE === 'elevenlabs' ? 400 : 30)
+);
 // Rebuild existing word audio (e.g. after changing voice settings).
 const FORCE = process.env.FORCE_REGEN === '1';
 // Skip very short function words? No — learners tap those too. But we do skip
@@ -93,38 +87,25 @@ function saveManifest(m: Record<string, string>): void {
   fs.writeFileSync(MANIFEST, JSON.stringify(sorted, null, 2) + '\n');
 }
 
-class QuotaError extends Error {}
-
 async function synthWord(word: string, outPath: string): Promise<void> {
-  if (!ELEVEN_KEY) throw new Error('ELEVENLABS_API_KEY is required for word audio.');
-  const url = `https://api.elevenlabs.io/v1/text-to-speech/${ELEVEN_VOICE_ID}?output_format=mp3_44100_128`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'xi-api-key': ELEVEN_KEY,
-      'Content-Type': 'application/json',
-      Accept: 'audio/mpeg',
-    },
-    body: JSON.stringify({
-      text: word,
-      model_id: ELEVEN_MODEL,
-      voice_settings: ELEVEN_VOICE_SETTINGS,
-    }),
-  });
-  if (res.status === 401 || res.status === 429) {
-    throw new QuotaError(`ElevenLabs ${res.status}: ${(await res.text()).slice(0, 160)}`);
-  }
-  if (!res.ok) {
-    throw new Error(`ElevenLabs error ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  }
-  const buf = Buffer.from(await res.arrayBuffer());
+  const buf = await synthesize(word);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, buf);
 }
 
+/** Existing audio for a word, in either engine's format. */
+function existingRel(slug: string): string | null {
+  for (const ext of ['wav', 'mp3']) {
+    if (fs.existsSync(path.join(WORD_DIR, `${slug}.${ext}`))) {
+      return `./assets/audio/words/${slug}.${ext}`;
+    }
+  }
+  return null;
+}
+
 async function main() {
-  if (!ELEVEN_KEY) {
-    console.log('ELEVENLABS_API_KEY not set — skipping word audio generation.');
+  if (!engineReady()) {
+    console.log(`TTS engine "${ENGINE}" has no API key — skipping word audio generation.`);
     return;
   }
   fs.mkdirSync(WORD_DIR, { recursive: true });
@@ -139,25 +120,28 @@ async function main() {
   }
 
   console.log(
-    `${words.length} unique words; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run (most-frequent first).`
+    `engine=${ENGINE}; ${words.length} unique words; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run (most-frequent first).`
   );
 
   let generated = 0;
   for (const word of words) {
     const slug = slugFor(word);
-    const abs = path.join(WORD_DIR, `${slug}.mp3`);
-    const rel = `./assets/audio/words/${slug}.mp3`;
+    const abs = path.join(WORD_DIR, `${slug}.${AUDIO_EXT}`);
+    const rel = `./assets/audio/words/${slug}.${AUDIO_EXT}`;
 
-    if (!FORCE && fs.existsSync(abs)) {
-      if (manifest[word] !== rel) manifest[word] = rel;
-      continue;
+    if (!FORCE) {
+      const existing = existingRel(slug);
+      if (existing) {
+        if (manifest[word] !== existing) manifest[word] = existing;
+        continue;
+      }
     }
 
     try {
       await synthWord(word, abs);
       manifest[word] = rel;
       generated++;
-      if (generated % 25 === 0) {
+      if (generated % 10 === 0) {
         saveManifest(manifest);
         console.log(`  ...${generated} generated (latest: "${word}")`);
       }
@@ -165,10 +149,10 @@ async function main() {
         console.log(`  reached per-run cap (${MAX_PER_RUN}); stopping.`);
         break;
       }
-      await new Promise((r) => setTimeout(r, 350));
+      await new Promise((r) => setTimeout(r, PACE_MS));
     } catch (err) {
       if (err instanceof QuotaError) {
-        console.log(`  ElevenLabs quota/credits exhausted — stopping (remaining words use system TTS).`);
+        console.log(`  ${ENGINE} quota exhausted — stopping (remaining words use system TTS).`);
         console.log(`    (${err.message})`);
         break;
       }

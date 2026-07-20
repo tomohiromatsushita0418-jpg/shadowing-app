@@ -38,10 +38,8 @@ jobs:
           TOPIC_CATEGORY: ${{ github.event.inputs.category }}
         run: npx tsx scripts/generateTopics.ts
 
-      - name: Generate audio
+      - name: Generate audio (Gemini / Puck)
         env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npx tsx scripts/generateAudio.ts
 
@@ -51,13 +49,11 @@ jobs:
         run: npx tsx scripts/generateWordMeanings.ts
         continue-on-error: true
 
-      - name: Generate word audio (new topic only, ElevenLabs)
+      - name: Generate word audio (new topic only, Gemini / Puck)
         env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # Only cover the words in the newest topic(s) — no historical backfill.
-          WORD_AUDIO_TOPICS_TAIL: '2'
-          MAX_WORD_AUDIO_PER_RUN: '250'
+          WORD_AUDIO_TOPICS_TAIL: '1'
         run: npx tsx scripts/generateWordAudio.ts
         continue-on-error: true
 
@@ -67,13 +63,11 @@ jobs:
         run: npx tsx scripts/generatePhrases.ts
         continue-on-error: true
 
-      - name: Generate phrase audio (new topic only, ElevenLabs)
+      - name: Generate phrase audio (new topic only, Gemini / Puck)
         env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # Only the newest topic(s) — no historical backfill.
-          PHRASE_AUDIO_TOPICS_TAIL: '2'
-          MAX_PHRASE_AUDIO_PER_RUN: '120'
+          PHRASE_AUDIO_TOPICS_TAIL: '1'
         run: npx tsx scripts/generatePhraseAudio.ts
         continue-on-error: true
 

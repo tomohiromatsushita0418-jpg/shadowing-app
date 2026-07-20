@@ -27,10 +27,16 @@ const ROOT = path.resolve(__dirname, '..');
 const TOPICS_PATH = path.join(ROOT, 'data', 'topics.json');
 const AUDIO_DIR = path.join(ROOT, 'assets', 'audio');
 
+// Engine selection. Gemini (voice "Puck") is the default: it sounds natural,
+// and its free tier comfortably covers one 12-sentence topic per day, whereas
+// the ElevenLabs free tier only covers a few days per month. Set
+// TTS_ENGINE=elevenlabs to opt back into ElevenLabs.
+const ENGINE = (process.env.TTS_ENGINE || 'gemini').toLowerCase();
+
 // ---------------------------------------------------------------------------
-// ElevenLabs config (primary)
+// ElevenLabs config (opt-in)
 // ---------------------------------------------------------------------------
-const ELEVEN_KEY = process.env.ELEVENLABS_API_KEY;
+const ELEVEN_KEY = ENGINE === 'elevenlabs' ? process.env.ELEVENLABS_API_KEY : undefined;
 // Default voice: "Brian" — a warm, natural American-male narrator voice that
 // reads conversationally rather than like a news anchor. Override with any
 // voice id from your ElevenLabs voice library via ELEVENLABS_VOICE_ID.
@@ -56,28 +62,20 @@ const ELEVEN_VOICE_SETTINGS = {
 // ---------------------------------------------------------------------------
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_TTS_MODEL || 'gemini-2.5-flash-preview-tts';
-// "Sulafat" = warm; reads with a relaxed, human cadence rather than the
-// brighter/peppier "Puck". Other natural candidates worth A/B-testing via
-// TTS_VOICE: Achird (friendly), Algieba (smooth), Vindemiatrix (gentle),
-// Callirrhoe (easy-going), Zubenelgenubi (casual).
-const GEMINI_VOICE = process.env.TTS_VOICE || 'Sulafat';
+// "Puck" — the voice the user picked after A/B-listening to the back catalogue.
+const GEMINI_VOICE = process.env.TTS_VOICE || 'Puck';
 const GEMINI_SAMPLE_RATE = 24000;
 
-// The single biggest lever on perceived naturalness with Gemini TTS is the
-// style instruction. We ask for a real, unhurried human delivery — the way a
-// patient native speaker would read a sentence aloud for a learner: clear,
-// warm, with real intonation and micro-pauses, but never sing-songy or
-// announcer-like.
+// Style instruction. This is the exact wording that produced the audio the
+// user singled out as natural, so keep it stable — changing it changes how
+// every future topic sounds.
 function geminiWrapWithStyle(text: string): string {
   const style =
-    'Read this the way a real person would say it out loud in a relaxed, ' +
-    'natural conversation — not like a robot or a news anchor. Use genuine ' +
-    'human intonation: let your pitch rise and fall naturally, stress the ' +
-    'words that carry meaning, and take small, unforced pauses at commas and ' +
-    'between thoughts. Keep a calm, warm, unhurried pace, clear enough for a ' +
-    'language learner to follow, but with the easy rhythm of everyday speech';
+    'in a natural, warm, expressive conversational tone — like a friend ' +
+    'explaining something in person — with appropriate intonation, emphasis ' +
+    'on key words, and brief natural pauses at commas';
   const safe = text.replace(/"/g, '\\"');
-  return `${style}:\n\n"${safe}"`;
+  return `Say ${style}: "${safe}"`;
 }
 
 // ---------------------------------------------------------------------------
@@ -197,9 +195,12 @@ async function synthesizeGemini(
   return `./assets/audio/${path.basename(outPath)}`;
 }
 
-// Per-run cap. ElevenLabs free tier is ~10k chars/month, so the limiting
-// factor is monthly credits, not per-run. Default high; lower via env.
-const MAX_PER_RUN = Number(process.env.MAX_AUDIO_PER_RUN ?? 30);
+// Per-run cap. Gemini's free TTS tier allows ~15 requests/day, which is just
+// enough for one 12-sentence topic; ElevenLabs is limited by monthly credits
+// instead, so it can take a higher cap.
+const MAX_PER_RUN = Number(
+  process.env.MAX_AUDIO_PER_RUN ?? (ENGINE === 'elevenlabs' ? 30 : 14)
+);
 // Overwrite existing audio (used for a one-time migration to ElevenLabs).
 const FORCE = process.env.FORCE_REGEN === '1';
 
