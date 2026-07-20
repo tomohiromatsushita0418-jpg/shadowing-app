@@ -38,6 +38,11 @@ jobs:
           TOPIC_CATEGORY: ${{ github.event.inputs.category }}
         run: npx tsx scripts/generateTopics.ts
 
+      # Gemini's free TTS tier allows ~15 requests/day — just enough for one
+      # 12-sentence topic. Word/phrase audio would compete for the same budget
+      # and starve the sentences, so those steps are intentionally NOT run here.
+      # Run scripts/generateWordAudio.ts / generatePhraseAudio.ts manually (or
+      # with TTS_ENGINE=elevenlabs) if a larger quota becomes available.
       - name: Generate audio (Gemini / Puck)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -49,26 +54,10 @@ jobs:
         run: npx tsx scripts/generateWordMeanings.ts
         continue-on-error: true
 
-      - name: Generate word audio (new topic only, Gemini / Puck)
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Only cover the words in the newest topic(s) — no historical backfill.
-          WORD_AUDIO_TOPICS_TAIL: '1'
-        run: npx tsx scripts/generateWordAudio.ts
-        continue-on-error: true
-
       - name: Generate phrases (incremental)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npx tsx scripts/generatePhrases.ts
-        continue-on-error: true
-
-      - name: Generate phrase audio (new topic only, Gemini / Puck)
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Only the newest topic(s) — no historical backfill.
-          PHRASE_AUDIO_TOPICS_TAIL: '1'
-        run: npx tsx scripts/generatePhraseAudio.ts
         continue-on-error: true
 
       - name: Commit and push
