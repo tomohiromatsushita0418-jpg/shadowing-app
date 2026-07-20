@@ -4,13 +4,13 @@ import { useLocalSearchParams, useNavigation, useFocusEffect, useRouter } from '
 import { Ionicons } from '@expo/vector-icons';
 import * as Speech from 'expo-speech';
 import { Audio } from 'expo-av';
-import Constants from 'expo-constants';
 import { topics, type Sentence } from '../../data/topics';
 import wordMeanings from '../../data/wordMeanings.json';
 import wordAudio from '../../data/wordAudio.json';
 import SentenceCard from '../../components/SentenceCard';
 import WordDefinitionModal from '../../components/WordDefinitionModal';
 import { useProgress } from '../../hooks/useProgress';
+import { audioKey, playShort, resolveAudioUri } from '../../lib/audio';
 
 interface DictionaryMeaning {
   partOfSpeech: string;
@@ -30,21 +30,6 @@ const BUNDLED_MEANINGS: Record<string, string> = wordMeanings as Record<string, 
 // speech synthesizer (which is robotic on some devices). Words not present here
 // fall back to system TTS.
 const WORD_AUDIO: Record<string, string> = wordAudio as Record<string, string>;
-
-function resolveAudioUri(audioPath: string): string {
-  if (audioPath.startsWith('http')) return audioPath;
-  const clean = audioPath.replace(/^\.\//, '');
-  if (Platform.OS === 'web') return '/' + clean;
-  const hostUri =
-    (Constants.expoConfig as any)?.hostUri ||
-    (Constants as any).expoGoConfig?.hostUri ||
-    (Constants.manifest2 as any)?.extra?.expoGo?.developer?.hostUri;
-  if (hostUri) {
-    const host = String(hostUri).split('/')[0];
-    return `http://${host}/${clean}`;
-  }
-  return clean;
-}
 
 async function fetchJapaneseMeaning(word: string): Promise<string | null> {
   const cached = BUNDLED_MEANINGS[word.toLowerCase()];
@@ -115,39 +100,11 @@ export default function TopicScreen() {
   // tears down a playing sound.
   const soundRef = useRef<Audio.Sound | null>(null);
   const playRequestIdRef = useRef(0);
-  // Transient sound for word pronunciation (separate from sentence playback).
-  const wordSoundRef = useRef<Audio.Sound | null>(null);
-
   // Pronounce a single word: prefer the pre-generated ElevenLabs file (uniform,
   // human-like on every device); fall back to the OS speech synthesizer only
-  // when no file exists for that word yet.
+  // when no file exists for that word yet. Shared with phrase playback.
   const speakWord = useCallback(async (clean: string) => {
-    const rel = WORD_AUDIO[clean];
-    if (rel) {
-      try {
-        // Tear down any previous word sound first.
-        if (wordSoundRef.current) {
-          const prev = wordSoundRef.current;
-          wordSoundRef.current = null;
-          try { await prev.unloadAsync(); } catch {}
-        }
-        try { Speech.stop(); } catch {}
-        const uri = resolveAudioUri(rel);
-        const { sound } = await Audio.Sound.createAsync({ uri }, { shouldPlay: true });
-        wordSoundRef.current = sound;
-        sound.setOnPlaybackStatusUpdate((status) => {
-          if (status.isLoaded && status.didJustFinish) {
-            sound.unloadAsync().catch(() => {});
-            if (wordSoundRef.current === sound) wordSoundRef.current = null;
-          }
-        });
-        return;
-      } catch {
-        // fall through to system TTS
-      }
-    }
-    try { Speech.stop(); } catch {}
-    Speech.speak(clean, { language: 'en-US', rate: 0.8, pitch: 1.0 });
+    await playShort(clean, WORD_AUDIO[audioKey(clean)], 0.8);
   }, []);
 
   // Prime audio mode once on mount
@@ -211,10 +168,6 @@ export default function TopicScreen() {
       if (soundRef.current) {
         soundRef.current.unloadAsync().catch(() => {});
         soundRef.current = null;
-      }
-      if (wordSoundRef.current) {
-        wordSoundRef.current.unloadAsync().catch(() => {});
-        wordSoundRef.current = null;
       }
       Speech.stop();
     };

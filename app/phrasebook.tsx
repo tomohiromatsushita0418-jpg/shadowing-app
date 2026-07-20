@@ -9,8 +9,11 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useNavigation, useFocusEffect } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import * as Speech from 'expo-speech';
 import { usePhraseBook, type SavedPhrase } from '../hooks/usePhraseBook';
+import phraseAudio from '../data/phraseAudio.json';
+import { audioKey, playShort } from '../lib/audio';
+
+const PHRASE_AUDIO: Record<string, string> = phraseAudio as Record<string, string>;
 
 export default function PhraseBookScreen() {
   const navigation = useNavigation();
@@ -33,10 +36,7 @@ export default function PhraseBookScreen() {
   const renderItem = ({ item }: { item: SavedPhrase }) => (
     <TouchableOpacity
       activeOpacity={0.7}
-      onPress={() => {
-        try { Speech.stop(); } catch {}
-        Speech.speak(item.phrase, { language: 'en-US', rate: 0.85 });
-      }}
+      onPress={() => playShort(item.phrase, PHRASE_AUDIO[audioKey(item.phrase)])}
       style={styles.card}
     >
       <View style={styles.headerRow}>

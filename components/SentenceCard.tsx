@@ -8,9 +8,14 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import * as Speech from 'expo-speech';
 import type { Sentence } from '../data/topics';
 import { usePhraseBook } from '../hooks/usePhraseBook';
+import phraseAudio from '../data/phraseAudio.json';
+import { audioKey, playShort } from '../lib/audio';
+
+// Pre-generated phrase pronunciations (same ElevenLabs voice as the sentences).
+// Phrases without a file fall back to the device's speech synthesizer.
+const PHRASE_AUDIO: Record<string, string> = phraseAudio as Record<string, string>;
 
 interface Props {
   sentence: Sentence;
@@ -136,8 +141,8 @@ export default function SentenceCard({
                 key={i}
                 activeOpacity={0.7}
                 onPress={() => {
-                  try { Speech.stop(); } catch {}
-                  Speech.speak(p.phrase, { language: 'en-US', rate: 0.85, pitch: 1.0 });
+                  const key = audioKey(p.phrase);
+                  playShort(p.phrase, PHRASE_AUDIO[key]);
                 }}
                 style={styles.phraseItem}
                 accessibilityLabel={`Play phrase ${p.phrase}`}

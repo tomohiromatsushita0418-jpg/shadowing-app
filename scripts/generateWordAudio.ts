@@ -36,15 +36,19 @@ const WORD_DIR = path.join(ROOT, 'assets', 'audio', 'words');
 const ELEVEN_KEY = process.env.ELEVENLABS_API_KEY;
 const ELEVEN_VOICE_ID = process.env.ELEVENLABS_VOICE_ID || 'nPczCjzI2devNBz1zQrb';
 const ELEVEN_MODEL = process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2';
+// Must stay IDENTICAL to the sentence-audio settings in generateAudio.ts so a
+// tapped word sounds like the same speaker as the sentence it came from.
 const ELEVEN_VOICE_SETTINGS = {
   stability: Number(process.env.ELEVENLABS_STABILITY ?? 0.4),
   similarity_boost: Number(process.env.ELEVENLABS_SIMILARITY ?? 0.8),
-  style: Number(process.env.ELEVENLABS_STYLE ?? 0.3),
+  style: Number(process.env.ELEVENLABS_STYLE ?? 0.45),
   use_speaker_boost: true,
 };
 
 // Keep well under the free monthly character budget per run by default.
 const MAX_PER_RUN = Number(process.env.MAX_WORD_AUDIO_PER_RUN ?? 400);
+// Rebuild existing word audio (e.g. after changing voice settings).
+const FORCE = process.env.FORCE_REGEN === '1';
 // Skip very short function words? No — learners tap those too. But we do skip
 // single letters that aren't real words except "a" and "i".
 const MIN_LEN = 1;
@@ -124,8 +128,15 @@ async function main() {
     return;
   }
   fs.mkdirSync(WORD_DIR, { recursive: true });
-  const words = extractWordsByFrequency();
+  let words = extractWordsByFrequency();
   const manifest = loadManifest();
+
+  // When rebuilding (e.g. after a voice-settings change) only redo words that
+  // already have audio — never expand coverage into the historical backlog.
+  if (FORCE) {
+    words = words.filter((w) => manifest[w]);
+    console.log(`FORCE rebuild: regenerating ${words.length} existing words only.`);
+  }
 
   console.log(
     `${words.length} unique words; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run (most-frequent first).`
@@ -137,7 +148,7 @@ async function main() {
     const abs = path.join(WORD_DIR, `${slug}.mp3`);
     const rel = `./assets/audio/words/${slug}.mp3`;
 
-    if (fs.existsSync(abs)) {
+    if (!FORCE && fs.existsSync(abs)) {
       if (manifest[word] !== rel) manifest[word] = rel;
       continue;
     }
