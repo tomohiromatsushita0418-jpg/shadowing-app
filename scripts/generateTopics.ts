@@ -42,10 +42,12 @@ const CATEGORY_GUIDANCE: Record<string, string> = {
     'Write in the polished register of a professional trade-press briefing.',
 };
 
-// Free tier TTS allows ~15 audio generations per day, so a topic must
-// stay within that budget. We generate ONE topic per day and rotate the
+// Free tier TTS allows ~15 audio generations per day, and sentences, phrases
+// and words all draw on that same budget. Keeping topics at 10 sentences
+// leaves roughly 5 requests per day for phrase/word audio instead of the
+// sentences consuming everything. We generate ONE topic per day and rotate the
 // category by day-of-year so all categories get coverage.
-const MAX_SENTENCES_PER_TOPIC = 12;
+const MAX_SENTENCES_PER_TOPIC = 10;
 
 function pickCategoryForToday(): string {
   const now = new Date();
