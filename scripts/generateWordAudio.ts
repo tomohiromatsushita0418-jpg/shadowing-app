@@ -24,7 +24,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 // Engine (Gemini/Puck by default) is shared with sentence + phrase audio so a
 // tapped word sounds like the same speaker.
-import { AUDIO_EXT, PACE_MS, QuotaError, engineReady, synthesize, ENGINE } from './ttsEngine.js';
+import { QuotaError, allExhausted, anyEngineReady, paceFor, synthesize } from './ttsEngine.js';
 
 interface Sentence { en: string }
 interface Topic { sentences: Sentence[] }
@@ -38,9 +38,7 @@ const WORD_DIR = path.join(ROOT, 'assets', 'audio', 'words');
 
 // Gemini's free TTS tier is limited by requests/day (~15, mostly consumed by
 // the day's sentence audio), ElevenLabs by monthly characters.
-const MAX_PER_RUN = Number(
-  process.env.MAX_WORD_AUDIO_PER_RUN ?? (ENGINE === 'elevenlabs' ? 400 : 30)
-);
+const MAX_PER_RUN = Number(process.env.MAX_WORD_AUDIO_PER_RUN ?? 400);
 // Rebuild existing word audio (e.g. after changing voice settings).
 const FORCE = process.env.FORCE_REGEN === '1';
 // Skip very short function words? No — learners tap those too. But we do skip
@@ -87,10 +85,13 @@ function saveManifest(m: Record<string, string>): void {
   fs.writeFileSync(MANIFEST, JSON.stringify(sorted, null, 2) + '\n');
 }
 
-async function synthWord(word: string, outPath: string): Promise<void> {
-  const buf = await synthesize(word);
+/** Synthesizes `word`, writes it with the serving engine's extension. */
+async function synthWord(word: string, slug: string) {
+  const { buf, ext, engine } = await synthesize(word);
+  const outPath = path.join(WORD_DIR, `${slug}.${ext}`);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, buf);
+  return { rel: `./assets/audio/words/${slug}.${ext}`, engine };
 }
 
 /** Existing audio for a word, in either engine's format. */
@@ -104,8 +105,8 @@ function existingRel(slug: string): string | null {
 }
 
 async function main() {
-  if (!engineReady()) {
-    console.log(`TTS engine "${ENGINE}" has no API key — skipping word audio generation.`);
+  if (!anyEngineReady()) {
+    console.log('No TTS API key available — skipping word audio generation.');
     return;
   }
   fs.mkdirSync(WORD_DIR, { recursive: true });
@@ -120,14 +121,12 @@ async function main() {
   }
 
   console.log(
-    `engine=${ENGINE}; ${words.length} unique words; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run (most-frequent first).`
+    `${words.length} unique words; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run (most-frequent first).`
   );
 
   let generated = 0;
   for (const word of words) {
     const slug = slugFor(word);
-    const abs = path.join(WORD_DIR, `${slug}.${AUDIO_EXT}`);
-    const rel = `./assets/audio/words/${slug}.${AUDIO_EXT}`;
 
     if (!FORCE) {
       const existing = existingRel(slug);
@@ -138,22 +137,21 @@ async function main() {
     }
 
     try {
-      await synthWord(word, abs);
+      const { rel, engine } = await synthWord(word, slug);
       manifest[word] = rel;
       generated++;
       if (generated % 10 === 0) {
         saveManifest(manifest);
-        console.log(`  ...${generated} generated (latest: "${word}")`);
+        console.log(`  ...${generated} generated (latest: "${word}", via ${engine})`);
       }
       if (generated >= MAX_PER_RUN) {
         console.log(`  reached per-run cap (${MAX_PER_RUN}); stopping.`);
         break;
       }
-      await new Promise((r) => setTimeout(r, PACE_MS));
+      await new Promise((r) => setTimeout(r, paceFor(engine)));
     } catch (err) {
-      if (err instanceof QuotaError) {
-        console.log(`  ${ENGINE} quota exhausted — stopping (remaining words use system TTS).`);
-        console.log(`    (${err.message})`);
+      if (err instanceof QuotaError && allExhausted()) {
+        console.log('  all TTS quotas exhausted — stopping (remaining words use device TTS).');
         break;
       }
       console.error(`  !! failed "${word}":`, err instanceof Error ? err.message : err);

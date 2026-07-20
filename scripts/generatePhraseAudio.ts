@@ -21,7 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { AUDIO_EXT, PACE_MS, QuotaError, engineReady, synthesize, ENGINE } from './ttsEngine.js';
+import { QuotaError, allExhausted, anyEngineReady, paceFor, synthesize } from './ttsEngine.js';
 
 interface Phrase { phrase: string }
 interface Sentence { phrases?: Phrase[] }
@@ -34,9 +34,7 @@ const TOPICS = path.join(ROOT, 'data', 'topics.json');
 const MANIFEST = path.join(ROOT, 'data', 'phraseAudio.json');
 const PHRASE_DIR = path.join(ROOT, 'assets', 'audio', 'phrases');
 
-const MAX_PER_RUN = Number(
-  process.env.MAX_PHRASE_AUDIO_PER_RUN ?? (ENGINE === 'elevenlabs' ? 120 : 20)
-);
+const MAX_PER_RUN = Number(process.env.MAX_PHRASE_AUDIO_PER_RUN ?? 200);
 const FORCE = process.env.FORCE_REGEN === '1';
 
 /** Same normalization the app uses to look up a phrase in the manifest. */
@@ -78,10 +76,13 @@ function saveManifest(m: Record<string, string>): void {
   fs.writeFileSync(MANIFEST, JSON.stringify(sorted, null, 2) + '\n');
 }
 
-async function synth(text: string, outPath: string): Promise<void> {
-  const buf = await synthesize(text);
+/** Synthesizes `text`, writes it with the serving engine's extension. */
+async function synth(text: string, slug: string) {
+  const { buf, ext, engine } = await synthesize(text);
+  const outPath = path.join(PHRASE_DIR, `${slug}.${ext}`);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   fs.writeFileSync(outPath, buf);
+  return { rel: `./assets/audio/phrases/${slug}.${ext}`, engine };
 }
 
 /** Existing audio for a phrase, in either engine's format. */
@@ -95,8 +96,8 @@ function existingRel(slug: string): string | null {
 }
 
 async function main() {
-  if (!engineReady()) {
-    console.log(`TTS engine "${ENGINE}" has no API key — skipping phrase audio generation.`);
+  if (!anyEngineReady()) {
+    console.log('No TTS API key available — skipping phrase audio generation.');
     return;
   }
   fs.mkdirSync(PHRASE_DIR, { recursive: true });
@@ -109,14 +110,12 @@ async function main() {
   }
 
   console.log(
-    `engine=${ENGINE}; ${phrases.length} phrases in scope; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run.`
+    `${phrases.length} phrases in scope; ${Object.keys(manifest).length} already have audio. Cap ${MAX_PER_RUN}/run.`
   );
 
   let generated = 0;
   for (const p of phrases) {
     const slug = slugFor(p);
-    const abs = path.join(PHRASE_DIR, `${slug}.${AUDIO_EXT}`);
-    const rel = `./assets/audio/phrases/${slug}.${AUDIO_EXT}`;
 
     if (!FORCE) {
       const existing = existingRel(slug);
@@ -127,22 +126,21 @@ async function main() {
     }
 
     try {
-      await synth(p, abs);
+      const { rel, engine } = await synth(p, slug);
       manifest[p] = rel;
       generated++;
       if (generated % 10 === 0) {
         saveManifest(manifest);
-        console.log(`  ...${generated} generated (latest: "${p.slice(0, 40)}")`);
+        console.log(`  ...${generated} generated (latest: "${p.slice(0, 40)}", via ${engine})`);
       }
       if (generated >= MAX_PER_RUN) {
         console.log(`  reached per-run cap (${MAX_PER_RUN}); stopping.`);
         break;
       }
-      await new Promise((r) => setTimeout(r, PACE_MS));
+      await new Promise((r) => setTimeout(r, paceFor(engine)));
     } catch (err) {
-      if (err instanceof QuotaError) {
-        console.log(`  ${ENGINE} quota exhausted — stopping (remaining phrases use system TTS).`);
-        console.log(`    (${err.message})`);
+      if (err instanceof QuotaError && allExhausted()) {
+        console.log('  all TTS quotas exhausted — stopping (remaining phrases use device TTS).');
         break;
       }
       console.error(`  !! failed "${p.slice(0, 40)}":`, err instanceof Error ? err.message : err);
