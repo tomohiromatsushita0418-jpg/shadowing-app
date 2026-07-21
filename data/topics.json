@@ -19515,9 +19515,280 @@
       },
       {
         "en": "The long-term dividends, however, promise to far outweigh the short-term disruptions, positioning us for enduring success.",
-        "ja": "しかしながら、長期的な恩恵は短期的な混乱をはるかに上回り、当社を持続的な成功へと導くでしょう。"
+        "ja": "しかしながら、長期的な恩恵は短期的な混乱をはるかに上回り、当社を持続的な成功へと導くでしょう。",
+        "phrases": [
+          {
+            "phrase": "long-term dividends",
+            "meaning": "長期的な恩恵/見返り",
+            "usage": "投資だけでなく、努力や戦略の長期的な成果にも使える表現。"
+          },
+          {
+            "phrase": "far outweigh",
+            "meaning": "はるかに上回る",
+            "usage": "メリットがデメリットを上回る、といった比較でよく使われる。"
+          },
+          {
+            "phrase": "short-term disruptions",
+            "meaning": "短期的な混乱/障害",
+            "usage": "新しいシステム導入時などの一時的な問題を表す際に便利。"
+          },
+          {
+            "phrase": "enduring success",
+            "meaning": "永続的な成功",
+            "usage": "長期的な視点での成功や持続可能性を強調する際に使う。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-07-20T16:21:09.241Z"
+  },
+  {
+    "id": "t17846507130956701",
+    "title": "The Geopolitical Repercussions of Green Energy Transition",
+    "titleJa": "グリーンエネルギー移行の地政学的影響",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The accelerating global shift towards renewable energy sources is fundamentally reshaping geopolitical landscapes, challenging long-established power dynamics.",
+        "ja": "加速する世界的な再生可能エネルギーへの移行は、地政学的状況を根本的に再構築し、長年確立されてきた勢力図に挑戦しています。",
+        "audioPath": "./assets/audio/t17846507130956701_0.wav",
+        "phrases": [
+          {
+            "phrase": "global shift towards",
+            "meaning": "〜への世界的な移行",
+            "usage": "The global shift towards electric vehicles is accelerating. (電気自動車への世界的な移行が加速している。)"
+          },
+          {
+            "phrase": "fundamentally reshaping",
+            "meaning": "根本的に再構築している",
+            "usage": "New technologies are fundamentally reshaping the way we work. (新技術が働き方を根本的に再構築している。)"
+          },
+          {
+            "phrase": "long-established power dynamics",
+            "meaning": "長年確立された力関係",
+            "usage": "The new policy could disrupt long-established power dynamics in the industry. (その新しい政策は、業界における長年確立された力関係を混乱させる可能性がある。)"
+          }
+        ]
+      },
+      {
+        "en": "Major oil and gas producing nations are grappling with the imperative to diversify their economies as peak oil demand looms larger on the horizon.",
+        "ja": "主要な石油・ガス生産国は、石油需要のピークが目前に迫る中、経済の多角化という喫緊の課題に取り組んでいます。",
+        "audioPath": "./assets/audio/t17846507130956701_1.wav",
+        "phrases": [
+          {
+            "phrase": "grappling with",
+            "meaning": "〜に苦労している、〜に取り組んでいる",
+            "usage": "The company is grappling with a serious financial crisis. (その会社は深刻な財政危機に取り組んでいる。)"
+          },
+          {
+            "phrase": "peak oil demand",
+            "meaning": "石油需要のピーク",
+            "usage": "Experts predict that peak oil demand will be reached by 2030. (専門家は石油需要のピークが2030年までに到達すると予測している。)"
+          },
+          {
+            "phrase": "looms larger on the horizon",
+            "meaning": "（問題などが）現実味を帯びてくる、差し迫ってくる",
+            "usage": "The threat of climate change looms larger on the horizon. (気候変動の脅威はますます現実味を帯びてきている。)"
+          }
+        ]
+      },
+      {
+        "en": "Concurrently, countries historically reliant on fossil fuel imports are now strategically pursuing energy independence through massive investments in wind, solar, and other green technologies.",
+        "ja": "同時に、歴史的に化石燃料輸入に依存してきた国々は、風力、太陽光、その他のグリーン技術への大規模な投資を通じて、戦略的にエネルギー自給の達成を目指しています。",
+        "audioPath": "./assets/audio/t17846507130956701_2.wav",
+        "phrases": [
+          {
+            "phrase": "reliant on",
+            "meaning": "～に依存している",
+            "usage": "He is reliant on his parents for financial support. (彼は経済的な支援を両親に頼っている。)"
+          },
+          {
+            "phrase": "pursuing energy independence",
+            "meaning": "エネルギー自給自足を目指す",
+            "usage": "The country is pursuing energy independence by developing its own resources. (その国は自国の資源を開発することでエネルギー自給自足を目指している。)"
+          },
+          {
+            "phrase": "massive investments",
+            "meaning": "巨額の投資",
+            "usage": "Massive investments are needed to modernize the infrastructure. (インフラを近代化するには巨額の投資が必要だ。)"
+          }
+        ]
+      },
+      {
+        "en": "This transition, while environmentally crucial, introduces new vulnerabilities, particularly concerning the supply chains for critical minerals essential to green tech manufacturing.",
+        "ja": "この移行は、環境的に極めて重要である一方で、特にグリーン技術製造に不可欠な重要鉱物のサプライチェーンに関して、新たな脆弱性をもたらしています。",
+        "audioPath": "./assets/audio/t17846507130956701_3.wav",
+        "phrases": [
+          {
+            "phrase": "environmentally crucial",
+            "meaning": "環境にとって極めて重要な",
+            "usage": "This is crucial for the environment. のように、環境への重要性を強調する際に使われます。"
+          },
+          {
+            "phrase": "introduces new vulnerabilities",
+            "meaning": "新たな脆弱性を引き起こす",
+            "usage": "The new policy introduces new vulnerabilities to our security. のように、新しい状況が弱点をもたらすことを示します。"
+          },
+          {
+            "phrase": "critical minerals",
+            "meaning": "重要鉱物",
+            "usage": "These minerals are essential for renewable energy technologies. のように、特定の産業に不可欠な資源を指します。"
+          },
+          {
+            "phrase": "essential to",
+            "meaning": "〜に不可欠な",
+            "usage": "Clean water is essential to human life. のように、何かにとって必要不可欠であることを示します。"
+          }
+        ]
+      },
+      {
+        "en": "The scramble for control over these vital raw materials, such as lithium, cobalt, and rare earth elements, is igniting fresh competition among global powers.",
+        "ja": "リチウム、コバルト、希土類元素といったこれらの不可欠な原材料の支配を巡る争いは、世界の大国間で新たな競争を激化させています。",
+        "audioPath": "./assets/audio/t17846507130956701_4.wav",
+        "phrases": [
+          {
+            "phrase": "scramble for control",
+            "meaning": "支配権をめぐる激しい争奪",
+            "usage": "The scramble for control of the company intensified after the CEO's resignation. (CEO辞任後、その会社をめぐる支配権争奪戦は激化した。)"
+          },
+          {
+            "phrase": "raw materials",
+            "meaning": "原材料",
+            "usage": "The price of key raw materials has been rising steadily. (主要な原材料の価格が着実に上昇している。)"
+          },
+          {
+            "phrase": "igniting fresh competition",
+            "meaning": "新たな競争を勃発させる",
+            "usage": "The new technology is igniting fresh competition in the market. (その新技術は市場に新たな競争を勃発させている。)"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, the development of advanced energy storage solutions and grid modernization initiatives are becoming pivotal battlegrounds for technological supremacy.",
+        "ja": "さらに、先進的なエネルギー貯蔵ソリューションと送電網の近代化への取り組みは、技術的優位性を巡る重要な戦場となっています。",
+        "audioPath": "./assets/audio/t17846507130956701_5.wav",
+        "phrases": [
+          {
+            "phrase": "energy storage solutions",
+            "meaning": "エネルギー貯蔵ソリューション",
+            "usage": "再生可能エネルギーの普及に不可欠な技術分野です。"
+          },
+          {
+            "phrase": "grid modernization initiatives",
+            "meaning": "送電網近代化への取り組み",
+            "usage": "電力供給の安定化と効率化を目指すプロジェクトを指します。"
+          },
+          {
+            "phrase": "pivotal battlegrounds",
+            "meaning": "決定的な戦場、重要な争点",
+            "usage": "技術競争が激化している分野であることを示唆します。"
+          },
+          {
+            "phrase": "technological supremacy",
+            "meaning": "技術的優位性、技術覇権",
+            "usage": "他国や他社に対する技術的なリードを意味します。"
+          }
+        ]
+      },
+      {
+        "en": "Nations with robust innovation ecosystems and strategic foresight in these areas stand to gain significant economic and geopolitical leverage.",
+        "ja": "これらの分野で強固なイノベーションエコシステムと戦略的先見性を持つ国家は、経済的および地政学的に大きな影響力を獲得することになるでしょう。",
+        "audioPath": "./assets/audio/t17846507130956701_6.wav",
+        "phrases": [
+          {
+            "phrase": "robust innovation ecosystems",
+            "meaning": "堅調な（活発な）イノベーション・エコシステム（技術革新を生み出す仕組み）",
+            "usage": "A country needs robust innovation ecosystems to stay competitive. (競争力を維持するには、国は堅調なイノベーション・エコシステムを必要とする。)"
+          },
+          {
+            "phrase": "strategic foresight",
+            "meaning": "戦略的先見性（将来を見通す力）",
+            "usage": "Strategic foresight is crucial for long-term planning. (戦略的先見性は長期計画にとって極めて重要である。)"
+          },
+          {
+            "phrase": "stand to gain",
+            "meaning": "〜を得る可能性がある、〜する見込みがある",
+            "usage": "Companies that invest in R&D stand to gain a competitive advantage. (研究開発に投資する企業は競争優位性を得る可能性がある。)"
+          },
+          {
+            "phrase": "geopolitical leverage",
+            "meaning": "地政学的な（国際政治における）影響力",
+            "usage": "Economic strength can translate into geopolitical leverage. (経済力は地政学的な影響力に転換しうる。)"
+          }
+        ]
+      },
+      {
+        "en": "However, the equitable distribution of green technology and its benefits remains a pressing concern, potentially exacerbating existing North-South divides.",
+        "ja": "しかし、グリーン技術とその恩恵の公平な分配は依然として喫緊の課題であり、既存の南北格差をさらに悪化させる可能性があります。",
+        "audioPath": "./assets/audio/t17846507130956701_7.wav",
+        "phrases": [
+          {
+            "phrase": "equitable distribution",
+            "meaning": "公平な分配",
+            "usage": "資源の公平な分配 (equitable distribution of resources) のように使う。"
+          },
+          {
+            "phrase": "pressing concern",
+            "meaning": "喫緊の課題、差し迫った懸念",
+            "usage": "最も喫緊の課題 (the most pressing concern) のように使う。"
+          },
+          {
+            "phrase": "exacerbating existing North-South divides",
+            "meaning": "既存の南北格差を悪化させる",
+            "usage": "exacerbate (悪化させる) は、問題や状況を悪化させる文脈でよく使われる。"
+          }
+        ]
+      },
+      {
+        "en": "International cooperation is thus paramount to mitigate the risks of resource nationalism and ensure a just and orderly energy transition for all.",
+        "ja": "したがって、資源ナショナリズムのリスクを軽減し、すべての人にとって公正かつ秩序あるエネルギー移行を確実にするためには、国際協力が極めて重要です。",
+        "audioPath": "./assets/audio/t17846507130956701_8.wav",
+        "phrases": [
+          {
+            "phrase": "international cooperation",
+            "meaning": "国際協力",
+            "usage": "国際的な課題解決のために不可欠な表現です。"
+          },
+          {
+            "phrase": "mitigate the risks",
+            "meaning": "リスクを軽減する",
+            "usage": "「リスクを和らげる」「危険を緩和する」といったニュアンスで使われます。"
+          },
+          {
+            "phrase": "energy transition",
+            "meaning": "エネルギー転換",
+            "usage": "再生可能エネルギーへの移行など、エネルギーシステムの変革を指す現代的な表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Navigating this complex interplay of economic transformation, technological race, and diplomatic challenges will define the global order for decades to come.",
+        "ja": "経済変革、技術競争、外交的課題が複雑に絡み合うこの状況を乗りこなすことが、今後数十年の世界秩序を決定づけることになるでしょう。",
+        "audioPath": "./assets/audio/t17846507130956701_9.wav",
+        "phrases": [
+          {
+            "phrase": "Navigating this complex interplay",
+            "meaning": "この複雑な相互作用を乗り越えること",
+            "usage": "complex interplay of factors のように、複数の要素が絡み合う状況を乗り越える際に使う"
+          },
+          {
+            "phrase": "economic transformation",
+            "meaning": "経済変革",
+            "usage": "technological transformation と並べて使われることもある"
+          },
+          {
+            "phrase": "diplomatic challenges",
+            "meaning": "外交上の課題",
+            "usage": "international relations における重要な課題を指す"
+          },
+          {
+            "phrase": "define the global order",
+            "meaning": "世界秩序を決定づける",
+            "usage": "future global order のように、将来の国際社会のあり方を形作るという意味で使われる"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-21T16:18:33.095Z"
   }
 ]
