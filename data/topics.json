@@ -19366,7 +19366,8 @@
             "meaning": "高成長の新興経済国",
             "usage": "投資や事業拡大の有望な対象となる国々を指す。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17845644692419146_2.wav"
       },
       {
         "en": "Operational efficiency is paramount, necessitating a meticulous overhaul of our legacy systems and supply chain architecture.",
@@ -20050,5 +20051,254 @@
       }
     ],
     "createdAt": "2026-07-22T16:16:49.283Z"
+  },
+  {
+    "id": "t17848237663148203",
+    "title": "Debriefing a Personal Project",
+    "titleJa": "個人的なプロジェクトの振り返り",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "Honestly, I'm still riding the wave of exhilaration from finally wrapping up that monumental personal project I've been toiling away at for months.",
+        "ja": "正直なところ、何ヶ月も骨を折ってきたあの個人的な大プロジェクトをようやく終えられて、まだその高揚感に浸っています。",
+        "audioPath": "./assets/audio/t17848237663148203_0.wav",
+        "phrases": [
+          {
+            "phrase": "riding the wave of exhilaration",
+            "meaning": "興奮の余韻に浸っている",
+            "usage": "何かを達成した後の高揚感を表現する際に使われます。"
+          },
+          {
+            "phrase": "wrapping up",
+            "meaning": "〜を終える、完了する",
+            "usage": "プロジェクトや仕事を締めくくる際によく使われる表現です。"
+          },
+          {
+            "phrase": "toiling away at",
+            "meaning": "〜に懸命に（苦労して）取り組む",
+            "usage": "時間と労力をかけて困難な作業を進めている状況を表します。"
+          }
+        ]
+      },
+      {
+        "en": "When I initially embarked on it, I somewhat underestimated the sheer complexity and the labyrinthine nature of the challenges that lay ahead.",
+        "ja": "最初に取り掛かった時、私は目の前に立ちはだかる純粋な複雑さと、まるで迷宮のような課題の性質をいくぶん過小評価していました。",
+        "audioPath": "./assets/audio/t17848237663148203_1.wav",
+        "phrases": [
+          {
+            "phrase": "embarked on",
+            "meaning": "〜に着手する、〜を始める",
+            "usage": "embark on a new career のように、新しい挑戦を始める際に使われます。"
+          },
+          {
+            "phrase": "underestimated the sheer complexity",
+            "meaning": "その純粋な複雑さを過小評価した",
+            "usage": "「単純な問題だと思っていたが、実際は非常に複雑だった」という状況で使えます。"
+          },
+          {
+            "phrase": "labyrinthine nature",
+            "meaning": "迷路のような性質、複雑で入り組んだ性質",
+            "usage": "labyrinthine bureaucracy のように、理解や解決が困難な状況を指すのに適しています。"
+          },
+          {
+            "phrase": "lay ahead",
+            "meaning": "（困難などが）待ち受けている、前途にある",
+            "usage": "challenges that lay ahead のように、将来待ち受ける困難や課題について言及する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "There were countless evenings I found myself burning the midnight oil, meticulously fine-tuning every minute detail to ensure it met my exacting standards.",
+        "ja": "数えきれないほどの夜、私は徹夜して、自分の厳しい基準を満たすよう、あらゆる些細な細部まで丹念に調整していました。",
+        "audioPath": "./assets/audio/t17848237663148203_2.wav",
+        "phrases": [
+          {
+            "phrase": "burning the midnight oil",
+            "meaning": "夜遅くまで勉強・仕事をする",
+            "usage": "He was burning the midnight oil to finish the report."
+          },
+          {
+            "phrase": "fine-tuning",
+            "meaning": "微調整する",
+            "usage": "We need to fine-tune the marketing strategy."
+          },
+          {
+            "phrase": "exacting standards",
+            "meaning": "厳格な基準",
+            "usage": "The chef has exacting standards for food preparation."
+          }
+        ]
+      },
+      {
+        "en": "However, it was during one particularly frustrating impasse that I experienced a profound epiphany, which ultimately pivoted the entire trajectory of the endeavor.",
+        "ja": "しかし、特に苛立たしい行き詰まりに直面していた時、私は深いひらめきを得て、それが最終的にプロジェクト全体の方向性を大きく転換させました。",
+        "audioPath": "./assets/audio/t17848237663148203_3.wav",
+        "phrases": [
+          {
+            "phrase": "frustrating impasse",
+            "meaning": "フラストレーションがたまる行き詰まり",
+            "usage": "The negotiations reached a frustrating impasse. 交渉はフラストレーションがたまる行き詰まりに達した。"
+          },
+          {
+            "phrase": "profound epiphany",
+            "meaning": "深い気づき、啓示",
+            "usage": "She had a profound epiphany about her career path. 彼女はキャリアパスについて深い気づきを得た。"
+          },
+          {
+            "phrase": "pivoted the entire trajectory",
+            "meaning": "全体の軌道を変えた、方向転換させた",
+            "usage": "His advice pivoted the entire trajectory of my project. 彼の助言は私のプロジェクト全体の軌道を変えた。"
+          }
+        ]
+      },
+      {
+        "en": "The biggest unexpected hurdle was navigating the bureaucratic red tape, which proved to be a far more arduous and time-consuming process than anticipated.",
+        "ja": "最も予期せぬ障害は、官僚的な煩雑な手続きを乗り越えることでした。それは予想よりもはるかに骨が折れ、時間のかかる作業だと判明しました。",
+        "audioPath": "./assets/audio/t17848237663148203_4.wav",
+        "phrases": [
+          {
+            "phrase": "unexpected hurdle",
+            "meaning": "予期せぬ障害・困難",
+            "usage": "The project faced an unexpected hurdle due to budget cuts. 予算削減のため、プロジェクトは予期せぬ困難に直面した。"
+          },
+          {
+            "phrase": "navigating the bureaucratic red tape",
+            "meaning": "官僚的なお役所仕事・煩雑な手続きを乗り越える",
+            "usage": "It took months of navigating the bureaucratic red tape to get the permit. 許可を得るために、煩雑な手続きを乗り越えるのに数ヶ月かかった。"
+          },
+          {
+            "phrase": "time-consuming process",
+            "meaning": "時間のかかるプロセス・工程",
+            "usage": "Learning a new language is a time-consuming process. 新しい言語を学ぶのは時間のかかるプロセスだ。"
+          }
+        ]
+      },
+      {
+        "en": "Despite the occasional moments of sheer exasperation, I've emerged from this experience with a much more robust understanding of my own resilience and capabilities.",
+        "ja": "時折、純粋な苛立ちを感じる瞬間もありましたが、この経験を通じて、私は自身の回復力と能力について、はるかに強固な理解を得ることができました。",
+        "audioPath": "./assets/audio/t17848237663148203_5.wav",
+        "phrases": [
+          {
+            "phrase": "occasional moments of sheer exasperation",
+            "meaning": "時折の激しいいらだち",
+            "usage": "困難な状況でも、時折経験する強いフラストレーションを指す表現です。"
+          },
+          {
+            "phrase": "emerged from this experience",
+            "meaning": "この経験から抜け出す、この経験を経て〜になる",
+            "usage": "困難な経験を乗り越えた後の変化や成長を表す際に使われます。"
+          },
+          {
+            "phrase": "robust understanding",
+            "meaning": "確固たる理解、深い理解",
+            "usage": "単なる表面的な理解ではなく、しっかりとした、揺るぎない知識や理解があることを示します。"
+          },
+          {
+            "phrase": "own resilience and capabilities",
+            "meaning": "自身の回復力と能力",
+            "usage": "困難に立ち向かう力（resilience）と、持っている能力（capabilities）の両方を指す、自己評価に関連する表現です。"
+          }
+        ]
+      },
+      {
+        "en": "There's an undeniable sense of fulfillment that comes from seeing a vision materialize, especially after pouring so much of your heart and soul into it.",
+        "ja": "これほどまでに心血を注いだ後、構想が現実となるのを見るのは、紛れもない達成感がありますね。",
+        "audioPath": "./assets/audio/t17848237663148203_6.wav",
+        "phrases": [
+          {
+            "phrase": "sense of fulfillment",
+            "meaning": "達成感、満足感",
+            "usage": "This phrase describes the positive feeling of accomplishment after completing something important."
+          },
+          {
+            "phrase": "materialize",
+            "meaning": "具体化する、実現する",
+            "usage": "It means that an idea or plan becomes real or visible."
+          },
+          {
+            "phrase": "pouring your heart and soul into something",
+            "meaning": "〜に心血を注ぐ、全力を尽くす",
+            "usage": "This idiom emphasizes putting a lot of effort, passion, and dedication into a task or project."
+          }
+        ]
+      },
+      {
+        "en": "Now that this chapter is closed, I'm already contemplating my next venture, perhaps something less demanding but equally enriching for personal development.",
+        "ja": "この章が閉じたいま、すでに次の挑戦を考えています。おそらく、もう少し負担が少ないけれど、個人的な成長にとって同様に豊かなものになるでしょう。",
+        "audioPath": "./assets/audio/t17848237663148203_7.wav",
+        "phrases": [
+          {
+            "phrase": "chapter is closed",
+            "meaning": "ある段階や期間が終わった",
+            "usage": "This chapter of my life is closed. 私は新しい章を始めるつもりだ。"
+          },
+          {
+            "phrase": "contemplating my next venture",
+            "meaning": "次の事業や挑戦を熟考している",
+            "usage": "He is contemplating his next venture into the tech industry. 彼は次の事業展開を検討している。"
+          },
+          {
+            "phrase": "less demanding",
+            "meaning": "負担が少ない、要求水準が低い",
+            "usage": "She chose a less demanding job after her illness. 病気の後は、より負担の少ない仕事を選んだ。"
+          },
+          {
+            "phrase": "equally enriching",
+            "meaning": "同様に豊かな経験をもたらす、学びが多い",
+            "usage": "The trip was equally enriching for both his career and his personal life. その旅行は、彼のキャリアと私生活の両方にとって同様に豊かな経験となった。"
+          }
+        ]
+      },
+      {
+        "en": "I must express my sincere gratitude for your unwavering support and occasional reality checks; they were truly instrumental in keeping me grounded.",
+        "ja": "あなたの揺るぎないサポートと、時折の現実的な助言には心から感謝しなければなりません。それらが私を地に足つけさせてくれる上で、本当に大きな力となりました。",
+        "audioPath": "./assets/audio/t17848237663148203_8.wav",
+        "phrases": [
+          {
+            "phrase": "express my sincere gratitude",
+            "meaning": "心からの感謝を表明する",
+            "usage": "Thank you for your hard work. I want to express my sincere gratitude."
+          },
+          {
+            "phrase": "unwavering support",
+            "meaning": "揺るぎない支援",
+            "usage": "Her unwavering support gave me strength."
+          },
+          {
+            "phrase": "keeping me grounded",
+            "meaning": "私を地に足のついた状態に保つ、現実を見失わないようにする",
+            "usage": "His advice was helpful in keeping me grounded."
+          }
+        ]
+      },
+      {
+        "en": "All in all, while it was an immensely challenging undertaking, the profound satisfaction and invaluable lessons gleaned from it have made every single effort worthwhile.",
+        "ja": "全体として、それは非常に困難な事業でしたが、そこから得られた深い満足感と計り知れない教訓は、全ての努力を価値あるものにしてくれました。",
+        "audioPath": "./assets/audio/t17848237663148203_9.wav",
+        "phrases": [
+          {
+            "phrase": "All in all",
+            "meaning": "結局のところ、全体として",
+            "usage": "会議のまとめや、全体的な評価を述べる際によく使う表現。"
+          },
+          {
+            "phrase": "immensely challenging undertaking",
+            "meaning": "非常に困難な事業/仕事",
+            "usage": "「immensely difficult task」や「challenging project」のように、困難な課題やプロジェクトを表現する際に役立つ。"
+          },
+          {
+            "phrase": "gleaned from",
+            "meaning": "〜から得られた、〜から収集された",
+            "usage": "情報や知識、教訓などを特定の源から「苦労して集める」ニュアンスで使う。"
+          },
+          {
+            "phrase": "made every single effort worthwhile",
+            "meaning": "あらゆる努力を価値あるものにした",
+            "usage": "「努力や苦労が報われた」という肯定的な結果を表現する際に使う。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-23T16:22:46.314Z"
   }
 ]
