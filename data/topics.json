@@ -19393,7 +19393,8 @@
             "meaning": "既存システム、レガシーシステム",
             "usage": "古くて新しい技術と互換性のないシステムを指す。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17845644692419146_3.wav"
       },
       {
         "en": "Furthermore, cultivating a culture of innovation and agility among our workforce is a cornerstone of this transformative journey.",
@@ -20559,5 +20560,274 @@
       }
     ],
     "createdAt": "2026-07-24T16:35:34.674Z"
+  },
+  {
+    "id": "t17849951657222996",
+    "title": "The Global Scramble for Green Technology Minerals",
+    "titleJa": "グリーンテクノロジー鉱物の世界的な争奪戦",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The burgeoning demand for renewable energy technologies has inadvertently ignited a global scramble for critical minerals, indispensable components for everything from EV batteries to wind turbines.",
+        "ja": "再生可能エネルギー技術に対する需要の急増は、電気自動車のバッテリーから風力タービンに至るまで不可欠な部品である重要鉱物の世界的な争奪戦を期せずして引き起こしています。",
+        "audioPath": "./assets/audio/t17849951657222996_0.wav",
+        "phrases": [
+          {
+            "phrase": "burgeoning demand",
+            "meaning": "急増する需要",
+            "usage": "The burgeoning demand for AI technology is unprecedented."
+          },
+          {
+            "phrase": "ignited a global scramble",
+            "meaning": "世界的な奪い合いを引き起こした",
+            "usage": "The discovery of rare earth elements ignited a global scramble for resources."
+          },
+          {
+            "phrase": "indispensable components",
+            "meaning": "不可欠な構成要素",
+            "usage": "These components are indispensable for the manufacturing process."
+          }
+        ]
+      },
+      {
+        "en": "Nations worldwide are strategically repositioning themselves to secure reliable supply chains, recognizing these resources as pivotal to their economic future and energy independence.",
+        "ja": "各国は、これらの資源が経済の未来とエネルギー自立にとって極めて重要であると認識し、信頼性の高いサプライチェーンを確保するため戦略的に態勢を立て直しています。",
+        "audioPath": "./assets/audio/t17849951657222996_1.wav",
+        "phrases": [
+          {
+            "phrase": "strategically repositioning themselves",
+            "meaning": "戦略的に立ち位置を変える、再配置する",
+            "usage": "企業や国家が競争優位性を得るために使う表現です。"
+          },
+          {
+            "phrase": "secure reliable supply chains",
+            "meaning": "信頼できる供給網を確保する",
+            "usage": "グローバルビジネスや国際情勢で頻繁に使われる表現です。"
+          },
+          {
+            "phrase": "pivotal to",
+            "meaning": "〜にとって極めて重要な、中心となる",
+            "usage": "economic growth is pivotal to national stability のように、重要性を強調する際に使います。"
+          },
+          {
+            "phrase": "energy independence",
+            "meaning": "エネルギー自給、エネルギー独立",
+            "usage": "国家の経済安全保障に関する議論でよく登場します。"
+          }
+        ]
+      },
+      {
+        "en": "This intense competition is driving unprecedented investment into new mining ventures, often in developing countries rich in coveted elements like lithium, cobalt, and rare earth metals.",
+        "ja": "この激しい競争は、リチウム、コバルト、希土類金属といった垂涎の元素が豊富な発展途上国での新規鉱山事業に対し、前例のない投資を促しています。",
+        "audioPath": "./assets/audio/t17849951657222996_2.wav",
+        "phrases": [
+          {
+            "phrase": "intense competition",
+            "meaning": "激しい競争",
+            "usage": "The intense competition for market share is driving down prices."
+          },
+          {
+            "phrase": "unprecedented investment",
+            "meaning": "前例のない投資",
+            "usage": "The company announced unprecedented investment in renewable energy."
+          },
+          {
+            "phrase": "mining ventures",
+            "meaning": "鉱業事業",
+            "usage": "New mining ventures are being explored in remote regions."
+          },
+          {
+            "phrase": "rare earth metals",
+            "meaning": "レアアース（希土類金属）",
+            "usage": "Rare earth metals are crucial for many modern technologies."
+          }
+        ]
+      },
+      {
+        "en": "However, the extraction and processing of these minerals frequently entail significant environmental costs, including habitat destruction and water pollution, posing a formidable challenge to sustainable development.",
+        "ja": "しかしながら、これらの鉱物の採掘と加工は、生息地の破壊や水質汚染といった多大な環境負荷を伴うことが多く、持続可能な開発にとって手ごわい課題を突きつけています。",
+        "audioPath": "./assets/audio/t17849951657222996_3.wav",
+        "phrases": [
+          {
+            "phrase": "frequently entail",
+            "meaning": "頻繁に〜を伴う、引き起こす",
+            "usage": "The new policy will frequently entail higher costs for consumers. (新しい方針は、消費者にとってしばしばより高いコストを伴うだろう)"
+          },
+          {
+            "phrase": "significant environmental costs",
+            "meaning": "重大な環境コスト、環境への大きな負担",
+            "usage": "We must consider the significant environmental costs before approving the project. (プロジェクトを承認する前に、重大な環境コストを考慮しなければならない)"
+          },
+          {
+            "phrase": "posing a formidable challenge",
+            "meaning": "手ごわい課題を突きつける、大きな困難をもたらす",
+            "usage": "Climate change is posing a formidable challenge to global stability. (気候変動は、世界の安定に手ごわい課題を突きつけている)"
+          },
+          {
+            "phrase": "sustainable development",
+            "meaning": "持続可能な開発",
+            "usage": "The company is committed to achieving sustainable development. (その会社は持続可能な開発の達成に尽力している)"
+          }
+        ]
+      },
+      {
+        "en": "Furthermore, ethical concerns surrounding labor practices, particularly in artisanal mining sectors, cast a long shadow over the industry's commitment to responsible sourcing.",
+        "ja": "さらに、特に手作業による採掘部門における労働慣行を巡る倫理的懸念は、業界の責任ある調達への取り組みに暗い影を落としています。",
+        "audioPath": "./assets/audio/t17849951657222996_4.wav",
+        "phrases": [
+          {
+            "phrase": "ethical concerns",
+            "meaning": "倫理的な懸念",
+            "usage": "ethical concerns about data privacy のように、問題点を示す際に使われます。"
+          },
+          {
+            "phrase": "labor practices",
+            "meaning": "労働慣行",
+            "usage": "fair labor practices のように、労働条件や働き方に関する一般的な慣習を指します。"
+          },
+          {
+            "phrase": "cast a long shadow over",
+            "meaning": "〜に暗い影を落とす",
+            "usage": "The scandal cast a long shadow over his career のように、否定的な影響が長く続くことを示します。"
+          },
+          {
+            "phrase": "responsible sourcing",
+            "meaning": "責任ある調達",
+            "usage": "サプライチェーン全体で環境や人権に配慮した原材料の調達を意味します。"
+          }
+        ]
+      },
+      {
+        "en": "Major industrial powers are thus compelled to balance their urgent need for these materials with growing pressures for transparency and accountability across their mineral supply chains.",
+        "ja": "このため、主要な工業国は、これらの物質に対する喫緊の必要性と、鉱物サプライチェーン全体における透明性と説明責任を求める高まる圧力との間でバランスを取ることを余儀なくされています。",
+        "audioPath": "./assets/audio/t17849951657222996_5.wav",
+        "phrases": [
+          {
+            "phrase": "industrial powers",
+            "meaning": "工業国",
+            "usage": "先進工業国を指す場合が多い"
+          },
+          {
+            "phrase": "urgent need for",
+            "meaning": "〜に対する喫緊の必要性",
+            "usage": "essential need for や strong need for と似た意味合い"
+          },
+          {
+            "phrase": "growing pressures for",
+            "meaning": "〜に対する高まる圧力",
+            "usage": "environmental pressures for reform のような文脈でも使われる"
+          },
+          {
+            "phrase": "supply chains",
+            "meaning": "サプライチェーン、供給網",
+            "usage": "mineral supply chains のように具体的な品目を付けて使うことが多い"
+          }
+        ]
+      },
+      {
+        "en": "Diplomatic efforts are underway to forge international partnerships, aiming to diversify sources and mitigate the risks associated with concentrated production in a few key regions.",
+        "ja": "特定の主要地域に生産が集中することに伴うリスクを軽減し、供給源の多様化を図るため、国際的なパートナーシップを構築する外交努力が進められています。",
+        "audioPath": "./assets/audio/t17849951657222996_6.wav",
+        "phrases": [
+          {
+            "phrase": "efforts are underway",
+            "meaning": "取り組みが進められている",
+            "usage": "Negotiations are underway to resolve the dispute. 交渉が進行中です。"
+          },
+          {
+            "phrase": "forge international partnerships",
+            "meaning": "国際的な提携を築く",
+            "usage": "The company is looking to forge international partnerships to expand its market. その会社は市場拡大のために国際的な提携を築こうとしています。"
+          },
+          {
+            "phrase": "mitigate the risks",
+            "meaning": "リスクを軽減する",
+            "usage": "We need to take steps to mitigate the risks of cyberattacks. サイバー攻撃のリスクを軽減するための対策が必要です。"
+          }
+        ]
+      },
+      {
+        "en": "Innovations in recycling technologies are also gaining traction, offering a promising avenue to reduce reliance on virgin materials and foster a more circular economy.",
+        "ja": "リサイクル技術の革新もまた注目を集めており、バージン素材への依存を減らし、より循環型の経済を育成するための有望な道筋を提供しています。",
+        "audioPath": "./assets/audio/t17849951657222996_7.wav",
+        "phrases": [
+          {
+            "phrase": "gaining traction",
+            "meaning": "勢いを増している、注目を集めている",
+            "usage": "新しい技術やアイデアが普及し始める様子を表す際に使われます。"
+          },
+          {
+            "phrase": "promising avenue",
+            "meaning": "有望な道筋、将来性のある方法",
+            "usage": "解決策や進むべき方向性を示す際に用いられます。"
+          },
+          {
+            "phrase": "reduce reliance on",
+            "meaning": "〜への依存を減らす",
+            "usage": "特定の資源や要因への依存度を下げることを意味します。"
+          },
+          {
+            "phrase": "circular economy",
+            "meaning": "循環型経済",
+            "usage": "資源を繰り返し利用する経済モデルを指す、環境関連のビジネスでよく使われる用語です。"
+          }
+        ]
+      },
+      {
+        "en": "The geopolitical implications of this resource race are profound, potentially reshaping alliances and trade agreements as countries vie for strategic advantage.",
+        "ja": "この資源争奪戦の地政学的な影響は計り知れず、各国が戦略的優位性を競う中で、同盟関係や貿易協定を再構築する可能性を秘めています。",
+        "audioPath": "./assets/audio/t17849951657222996_8.wav",
+        "phrases": [
+          {
+            "phrase": "geopolitical implications",
+            "meaning": "地政学的な影響/含意",
+            "usage": "報道や分析記事で、ある出来事の国際政治上の影響を論じる際によく使われます。"
+          },
+          {
+            "phrase": "reshaping alliances",
+            "meaning": "同盟関係を再構築する/変える",
+            "usage": "国際情勢の変化により、既存の同盟関係が見直されたり、新たな関係が形成されたりする状況を表します。"
+          },
+          {
+            "phrase": "vie for",
+            "meaning": "〜を求めて競い合う",
+            "usage": "権力、地位、市場シェアなどを求めて争う状況で使われます。"
+          },
+          {
+            "phrase": "strategic advantage",
+            "meaning": "戦略的優位性",
+            "usage": "企業が競争で優位に立つため、または国家が国際関係で有利な立場を得るために使われる表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, navigating this complex landscape will require a concerted global approach, balancing economic imperatives with environmental stewardship and social equity.",
+        "ja": "最終的に、この複雑な状況を乗り切るには、経済的要請と環境管理、そして社会の公平性を両立させる、協調的な地球規模のアプローチが必要となるでしょう。",
+        "audioPath": "./assets/audio/t17849951657222996_9.wav",
+        "phrases": [
+          {
+            "phrase": "navigating this complex landscape",
+            "meaning": "この複雑な状況を乗り切る、うまく対処する",
+            "usage": "new market landscape のように、複雑な状況や分野を指すことが多い"
+          },
+          {
+            "phrase": "concerted global approach",
+            "meaning": "協調された国際的な取り組み",
+            "usage": "concerted effort (共同の努力) と同様に、複数主体による協力的な行動を強調する"
+          },
+          {
+            "phrase": "economic imperatives",
+            "meaning": "経済的な必須事項、経済的要請",
+            "usage": "imperative は「必須の」「不可欠な」という意味で、ここでは経済活動を進める上で避けられない要因を指す"
+          },
+          {
+            "phrase": "environmental stewardship",
+            "meaning": "環境保全への責任、環境管理",
+            "usage": "stewardship は「管理人の職務」を意味し、ここでは環境に対する責任ある態度を示す"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-25T15:59:25.722Z"
   }
 ]
