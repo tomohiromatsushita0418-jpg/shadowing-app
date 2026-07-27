@@ -19415,7 +19415,8 @@
             "meaning": "変革の道のり、変革の旅",
             "usage": "企業や組織の大きな変化を表す際に使う。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17845644692419146_4.wav"
       },
       {
         "en": "We are actively engaging with key stakeholders, ensuring transparency and garnering their invaluable insights throughout this transition.",
@@ -21083,5 +21084,264 @@
       }
     ],
     "createdAt": "2026-07-26T15:57:23.792Z"
+  },
+  {
+    "id": "t17851712625304365",
+    "title": "Coordinating a Dinner Gathering",
+    "titleJa": "ディナー会のアレンジ",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "So, I was thinking we should finally nail down the specifics for our much-anticipated dinner gathering next month.",
+        "ja": "それで、来月予定している、みんなが楽しみにしているディナー会の詳細をそろそろ詰めるべきだと考えていたんだ。",
+        "audioPath": "./assets/audio/t17851712625304365_0.wav",
+        "phrases": [
+          {
+            "phrase": "nail down the specifics",
+            "meaning": "詳細を確定する、具体的に決める",
+            "usage": "We need to nail down the specifics of the project plan by Friday. (金曜日までにプロジェクト計画の詳細を確定させる必要がある。)"
+          },
+          {
+            "phrase": "much-anticipated",
+            "meaning": "待ち望まれた、大いに期待されている",
+            "usage": "The much-anticipated sequel to the popular movie will be released next year. (人気の映画の待ち望まれた続編が来年公開される。)"
+          },
+          {
+            "phrase": "dinner gathering",
+            "meaning": "夕食会、懇親会",
+            "usage": "We are planning a small dinner gathering for the team next week. (来週、チームのために小規模な夕食会を計画しています。)"
+          }
+        ]
+      },
+      {
+        "en": "Indeed, it's high time we firm up the guest list and ascertain everyone's availability to avoid any scheduling snafus.",
+        "ja": "そうだね、そろそろ招待客のリストを確定させて、みんなの都合を確認しないと、スケジュールの手違いが発生しかねないからね。",
+        "audioPath": "./assets/audio/t17851712625304365_1.wav",
+        "phrases": [
+          {
+            "phrase": "it's high time",
+            "meaning": "〜するのにちょうど良い時期だ、そろそろ〜すべきだ",
+            "usage": "It's high time we started the project. (そろそろプロジェクトを始めるべきだ)"
+          },
+          {
+            "phrase": "firm up",
+            "meaning": "〜を確定させる、〜を固める",
+            "usage": "We need to firm up the details of the contract. (契約の詳細を確定させる必要がある)"
+          },
+          {
+            "phrase": "ascertain availability",
+            "meaning": "都合・空き具合を確認する",
+            "usage": "Please ascertain your availability for the meeting next week. (来週の会議へのご都合をご確認ください)"
+          },
+          {
+            "phrase": "scheduling snafus",
+            "meaning": "スケジュール上の混乱・手違い",
+            "usage": "Avoid scheduling snafus by confirming all appointments. (すべての予約を確認して、スケジュールの混乱を避けましょう)"
+          }
+        ]
+      },
+      {
+        "en": "I'm leaning towards a rustic Italian theme, perhaps featuring a homemade pasta dish and a robust tiramisu for dessert.",
+        "ja": "私は素朴なイタリアンテーマに傾いているんだ。手打ちパスタと、デザートには濃厚なティラミスを出すのはどうかな。",
+        "audioPath": "./assets/audio/t17851712625304365_2.wav",
+        "phrases": [
+          {
+            "phrase": "leaning towards",
+            "meaning": "〜に傾いている、〜にしようと思っている",
+            "usage": "I'm leaning towards accepting the offer. (その申し出を受ける方に傾いています)"
+          },
+          {
+            "phrase": "homemade pasta dish",
+            "meaning": "手打ちパスタ料理",
+            "usage": "The restaurant is famous for its homemade pasta dishes. (そのレストランは手打ちパスタ料理で有名です)"
+          },
+          {
+            "phrase": "robust tiramisu",
+            "meaning": "濃厚なティラミス",
+            "usage": "The robust flavor of the coffee made the tiramisu especially delicious. (コーヒーの濃厚な風味がティラミスを格別においしくしました)"
+          }
+        ]
+      },
+      {
+        "en": "That sounds absolutely delightful, but we should probably discreetly inquire about any dietary restrictions or allergies among our prospective attendees.",
+        "ja": "それは本当に素晴らしいね。でも、招待予定のゲストの中に何か食事制限やアレルギーがないか、さりげなく確認しておくべきだろうね。",
+        "audioPath": "./assets/audio/t17851712625304365_3.wav",
+        "phrases": [
+          {
+            "phrase": "absolutely delightful",
+            "meaning": "実に素晴らしい、この上なく楽しい",
+            "usage": "相手の提案や意見に強く同意する際に使うポジティブな表現です。"
+          },
+          {
+            "phrase": "discreetly inquire",
+            "meaning": "控えめに尋ねる、さりげなく問い合わせる",
+            "usage": "相手に不快感を与えずに情報を得るために使われます。"
+          },
+          {
+            "phrase": "dietary restrictions",
+            "meaning": "食事制限",
+            "usage": "アレルギーや宗教上の理由などによる食事上の制約を指します。"
+          },
+          {
+            "phrase": "prospective attendees",
+            "meaning": "見込み参加者、将来の出席者",
+            "usage": "イベントや会議などに参加する可能性のある人々を指します。"
+          }
+        ]
+      },
+      {
+        "en": "Right, we definitely wouldn't want to inadvertently serve something that's off-limits; a little proactive communication goes a long way.",
+        "ja": "そうだね、うっかり禁忌のものを出してしまっては大変だから、事前に少し連絡を取っておくことが非常に重要だ。",
+        "audioPath": "./assets/audio/t17851712625304365_4.wav",
+        "phrases": [
+          {
+            "phrase": "inadvertently serve",
+            "meaning": "意図せず（不適切・禁止されたものを）提供してしまう",
+            "usage": "We inadvertently sent the wrong invoice. (誤った請求書を送ってしまった)"
+          },
+          {
+            "phrase": "off-limits",
+            "meaning": "禁止されている、立ち入り禁止の",
+            "usage": "This area is off-limits to unauthorized personnel. (この区域は関係者以外立ち入り禁止です)"
+          },
+          {
+            "phrase": "proactive communication",
+            "meaning": "先を見越した積極的なコミュニケーション",
+            "usage": "Proactive communication with clients can prevent misunderstandings. (顧客との積極的なコミュニケーションは誤解を防ぐことができます)"
+          },
+          {
+            "phrase": "goes a long way",
+            "meaning": "非常に役に立つ、効果が大きい",
+            "usage": "A little kindness goes a long way. (少しの親切は大きな助けになる)"
+          }
+        ]
+      },
+      {
+        "en": "Regarding responsibilities, would you be amenable to curating the wine selection, while I focus on crafting a suitable playlist for the evening's ambiance?",
+        "ja": "役割分担についてだけど、君がワインの選定を担当してくれないかな？その間、僕はその夜の雰囲気に合うプレイリストを作ることに集中するよ。",
+        "audioPath": "./assets/audio/t17851712625304365_5.wav",
+        "phrases": [
+          {
+            "phrase": "amenable to",
+            "meaning": "〜に賛成で、〜を受け入れられる",
+            "usage": "Are you amenable to this proposal? のように提案を受け入れるか尋ねる際に使う"
+          },
+          {
+            "phrase": "curating the wine selection",
+            "meaning": "ワインのセレクションを厳選・企画すること",
+            "usage": "curate は美術館の学芸員が由来で、単に選ぶだけでなく、テーマや意図を持って選ぶニュアンスがある"
+          },
+          {
+            "phrase": "crafting a suitable playlist",
+            "meaning": "適切なプレイリストを作成すること",
+            "usage": "craft は手作業で丁寧に作るイメージで、単なるmakeより凝った印象を与える"
+          },
+          {
+            "phrase": "evening's ambiance",
+            "meaning": "その夜の雰囲気",
+            "usage": "ambiance は「雰囲気、ムード」を指し、特にレストランやイベントなどで使われることが多い"
+          }
+        ]
+      },
+      {
+        "en": "Certainly, I'd be happy to; a thoughtfully chosen vintage can truly elevate the entire dining experience, after all.",
+        "ja": "もちろん、喜んで引き受けよう。結局のところ、慎重に選ばれたヴィンテージワインは、食事全体の体験を本当に格上げしてくれるからね。",
+        "audioPath": "./assets/audio/t17851712625304365_6.wav",
+        "phrases": [
+          {
+            "phrase": "be happy to",
+            "meaning": "喜んで〜する",
+            "usage": "I'd be happy to help. のように、依頼に対して快諾する際に使う"
+          },
+          {
+            "phrase": "thoughtfully chosen",
+            "meaning": "考え抜かれた、慎重に選ばれた",
+            "usage": "thoughtfully chosen gift のように、単に選んだのではなく、相手のことを考えて選んだニュアンスを伝える"
+          },
+          {
+            "phrase": "elevate the entire dining experience",
+            "meaning": "食事体験全体を向上させる",
+            "usage": "This new menu will elevate the entire dining experience. のように、高級感や特別感を出す際に使う"
+          }
+        ]
+      },
+      {
+        "en": "And let's not forget to factor in contingency plans for potential last-minute cancellations or unexpected dietary curveballs.",
+        "ja": "それから、土壇場でのキャンセルや予期せぬ食事に関するイレギュラーな要求に備えて、緊急時対応計画も考慮に入れておこう。",
+        "audioPath": "./assets/audio/t17851712625304365_7.wav",
+        "phrases": [
+          {
+            "phrase": "factor in",
+            "meaning": "〜を考慮に入れる、織り込む",
+            "usage": "We need to factor in the cost of shipping. (送料を考慮に入れる必要がある)"
+          },
+          {
+            "phrase": "contingency plans",
+            "meaning": "緊急時対応計画、予備計画",
+            "usage": "The company has contingency plans for various emergencies. (会社は様々な緊急事態に備えた対応計画を持っている)"
+          },
+          {
+            "phrase": "last-minute cancellations",
+            "meaning": "土壇場でのキャンセル、直前のキャンセル",
+            "usage": "Be prepared for last-minute cancellations from clients. (顧客からの直前のキャンセルに備えよ)"
+          },
+          {
+            "phrase": "dietary curveballs",
+            "meaning": "予期せぬ食事に関する問題・要望",
+            "usage": "A good caterer can handle dietary curveballs like allergies or vegan requests. (優秀なケータリング業者はアレルギーやビーガン対応のような食事に関する予期せぬ要望にも対応できる)"
+          }
+        ]
+      },
+      {
+        "en": "Indeed, meticulous planning now will undoubtedly pave the way for a seamless and memorable evening for everyone involved.",
+        "ja": "そうだね、今の綿密な計画が、関係者全員にとって間違いなくスムーズで記憶に残る夜への道を開いてくれるだろう。",
+        "audioPath": "./assets/audio/t17851712625304365_8.wav",
+        "phrases": [
+          {
+            "phrase": "meticulous planning",
+            "meaning": "綿密な計画",
+            "usage": "Meticulous planning is essential for the success of this project. (このプロジェクトの成功には綿密な計画が不可欠です。)"
+          },
+          {
+            "phrase": "pave the way for",
+            "meaning": "〜への道を開く、〜のきっかけとなる",
+            "usage": "This discovery will pave the way for new treatments. (この発見は新しい治療法への道を開くだろう。)"
+          },
+          {
+            "phrase": "seamless and memorable",
+            "meaning": "滞りのない、思い出に残る",
+            "usage": "We aim to provide a seamless and memorable experience for our customers. (私たちは顧客に、滞りのない思い出に残る体験を提供することを目指しています。)"
+          }
+        ]
+      },
+      {
+        "en": "Fantastic! I'll send out a preliminary message to gauge interest and preferred dates by the end of the week, then we can reconvene.",
+        "ja": "素晴らしい！今週末までに、興味のある人と希望日を測るための仮のメッセージを送るよ。それからまた集まって相談しよう。",
+        "audioPath": "./assets/audio/t17851712625304365_9.wav",
+        "phrases": [
+          {
+            "phrase": "send out",
+            "meaning": "送付する、発送する",
+            "usage": "招待状をsend outする、情報を広くsend outする のように使う。"
+          },
+          {
+            "phrase": "preliminary message",
+            "meaning": "予備的なメッセージ、仮の連絡",
+            "usage": "a preliminary report (予備報告書) や preliminary findings (予備調査結果) のように使う。"
+          },
+          {
+            "phrase": "gauge interest",
+            "meaning": "関心度を測る、興味を評価する",
+            "usage": "顧客の反応をgauge interestする、市場のニーズをgauge interestする のように使う。"
+          },
+          {
+            "phrase": "by the end of the week",
+            "meaning": "週末までに、週の終わりまでに",
+            "usage": "by the end of the day (今日中に) や by the end of the month (月末までに) のように応用できる。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-27T16:54:22.530Z"
   }
 ]
