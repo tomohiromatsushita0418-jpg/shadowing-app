@@ -19442,7 +19442,8 @@
             "meaning": "貴重な知見を得る",
             "usage": "専門家から知見を得る (garner insights from experts) のように使う。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17845644692419146_5.wav"
       },
       {
         "en": "Mitigating potential resistance to change requires robust change management protocols and clear communication cascades.",
@@ -21617,5 +21618,264 @@
       }
     ],
     "createdAt": "2026-07-28T16:29:31.947Z"
+  },
+  {
+    "id": "t17853418293482392",
+    "title": "The Evolving Landscape of AI Governance",
+    "titleJa": "AIガバナンスの進化する情勢",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "The rapid proliferation of generative artificial intelligence models has underscored the urgent need for robust regulatory frameworks globally.",
+        "ja": "生成AIモデルの急速な普及は、世界的に強固な規制枠組みが喫緊の課題であることを浮き彫りにしています。",
+        "audioPath": "./assets/audio/t17853418293482392_0.wav",
+        "phrases": [
+          {
+            "phrase": "rapid proliferation",
+            "meaning": "急速な普及・増殖",
+            "usage": "The rapid proliferation of smartphones has changed our lives. (スマートフォンの急速な普及は私たちの生活を変えた。)"
+          },
+          {
+            "phrase": "underscored the urgent need for",
+            "meaning": "〜の緊急の必要性を強調した",
+            "usage": "The recent crisis underscored the urgent need for better disaster preparedness. (最近の危機は、より良い災害対策の緊急の必要性を強調した。)"
+          },
+          {
+            "phrase": "robust regulatory frameworks",
+            "meaning": "堅牢な規制の枠組み",
+            "usage": "Governments are working to establish robust regulatory frameworks for new technologies. (政府は新技術のために堅牢な規制の枠組みを確立しようと取り組んでいる。)"
+          },
+          {
+            "phrase": "globally",
+            "meaning": "世界的に、地球規模で",
+            "usage": "This is a problem that needs to be addressed globally. (これは世界的に取り組む必要がある問題だ。)"
+          }
+        ]
+      },
+      {
+        "en": "Policymakers are grappling with the multifaceted challenges of balancing innovation incentives with mitigating potential societal risks.",
+        "ja": "政策立案者たちは、イノベーション促進と潜在的な社会的リスク軽減との間で多岐にわたる課題への対応に苦慮しています。",
+        "audioPath": "./assets/audio/t17853418293482392_1.wav",
+        "phrases": [
+          {
+            "phrase": "grappling with",
+            "meaning": "〜と格闘している、〜に取り組んでいる",
+            "usage": "困難な問題や課題に直面している状況で使われます。"
+          },
+          {
+            "phrase": "multifaceted challenges",
+            "meaning": "多面的な課題",
+            "usage": "複雑で様々な側面を持つ問題を表す際に便利です。"
+          },
+          {
+            "phrase": "balancing A with B",
+            "meaning": "AとBのバランスを取る、AとBを両立させる",
+            "usage": "本文では「innovation incentives」と「mitigating potential societal risks」がAとBに当たります。"
+          },
+          {
+            "phrase": "mitigating risks",
+            "meaning": "リスクを軽減する",
+            "usage": "潜在的な危険や悪影響を減らすことを意味し、ビジネスでよく使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Discussions frequently revolve around accountability for autonomous systems, data privacy concerns, and the prevention of algorithmic bias.",
+        "ja": "議論は、自律システムの責任、データプライバシーの問題、そしてアルゴリズムによる偏見の防止を中心に頻繁に展開されています。",
+        "audioPath": "./assets/audio/t17853418293482392_2.wav",
+        "phrases": [
+          {
+            "phrase": "revolve around",
+            "meaning": "〜を中心に展開する、〜が主なテーマである",
+            "usage": "議論や問題の焦点を示す際によく使われます。"
+          },
+          {
+            "phrase": "accountability for",
+            "meaning": "〜に対する説明責任、〜の責任",
+            "usage": "企業や個人の責任範囲を明確にする文脈で頻出します。"
+          },
+          {
+            "phrase": "data privacy concerns",
+            "meaning": "データプライバシーに関する懸念",
+            "usage": "個人情報保護や情報セキュリティの議論で非常に重要な表現です。"
+          },
+          {
+            "phrase": "prevention of",
+            "meaning": "〜の防止、〜の予防",
+            "usage": "事故や問題、リスクを未然に防ぐ必要性を述べる際に使います。"
+          }
+        ]
+      },
+      {
+        "en": "Different jurisdictions are adopting divergent approaches, ranging from stringent preemptive legislation to more flexible, industry-led self-regulation.",
+        "ja": "各管轄区域は、厳格な先行的法制化から、より柔軟な業界主導の自主規制まで、異なるアプローチを採用しています。",
+        "audioPath": "./assets/audio/t17853418293482392_3.wav",
+        "phrases": [
+          {
+            "phrase": "adopting divergent approaches",
+            "meaning": "異なるアプローチを採用している",
+            "usage": "企業が市場戦略においてadopting divergent approaches をとることがある"
+          },
+          {
+            "phrase": "stringent preemptive legislation",
+            "meaning": "厳格な先制的な法規制",
+            "usage": "環境問題に対してstringent preemptive legislation が導入されることがある"
+          },
+          {
+            "phrase": "industry-led self-regulation",
+            "meaning": "業界主導の自主規制",
+            "usage": "新しい技術分野ではindustry-led self-regulation が試みられることが多い"
+          }
+        ]
+      },
+      {
+        "en": "The European Union's AI Act, for instance, represents a landmark effort to categorize AI systems by risk level and impose corresponding obligations.",
+        "ja": "例えば、欧州連合のAI法は、AIシステムをリスクレベルによって分類し、それに応じた義務を課す画期的な取り組みです。",
+        "audioPath": "./assets/audio/t17853418293482392_4.wav",
+        "phrases": [
+          {
+            "phrase": "landmark effort",
+            "meaning": "画期的な取り組み",
+            "usage": "This new policy is a landmark effort to improve public health. (この新政策は公衆衛生を改善するための画期的な取り組みです)"
+          },
+          {
+            "phrase": "categorize ... by",
+            "meaning": "〜によって分類する",
+            "usage": "We need to categorize the data by region. (地域別にデータを分類する必要があります)"
+          },
+          {
+            "phrase": "impose obligations",
+            "meaning": "義務を課す",
+            "usage": "The new law will impose obligations on all businesses. (新しい法律はすべての企業に義務を課すことになる)"
+          }
+        ]
+      },
+      {
+        "en": "Conversely, some nations prioritize fostering technological advancement, advocating for a lighter touch to avoid stifling entrepreneurial spirit.",
+        "ja": "対照的に、一部の国々は技術革新の促進を優先し、起業家精神を阻害しないよう、より緩やかな規制を提唱しています。",
+        "audioPath": "./assets/audio/t17853418293482392_5.wav",
+        "phrases": [
+          {
+            "phrase": "prioritize fostering",
+            "meaning": "育成を優先する",
+            "usage": "We prioritize fostering innovation and creativity."
+          },
+          {
+            "phrase": "technological advancement",
+            "meaning": "技術的進歩",
+            "usage": "Rapid technological advancement is key to economic growth."
+          },
+          {
+            "phrase": "a lighter touch",
+            "meaning": "介入を少なくする、緩やかなアプローチ",
+            "usage": "The government decided to adopt a lighter touch to regulation."
+          },
+          {
+            "phrase": "entrepreneurial spirit",
+            "meaning": "起業家精神",
+            "usage": "Fostering entrepreneurial spirit is vital for new businesses."
+          }
+        ]
+      },
+      {
+        "en": "International cooperation is deemed indispensable to establish common standards and ensure interoperability across national borders.",
+        "ja": "国際協力は、共通の基準を確立し、国境を越えた相互運用性を確保するために不可欠であると見なされています。",
+        "audioPath": "./assets/audio/t17853418293482392_6.wav",
+        "phrases": [
+          {
+            "phrase": "is deemed indispensable",
+            "meaning": "不可欠であるとみなされる",
+            "usage": "Quality control is deemed indispensable for customer satisfaction. (品質管理は顧客満足に不可欠であるとみなされている。)"
+          },
+          {
+            "phrase": "establish common standards",
+            "meaning": "共通の基準を確立する",
+            "usage": "We need to establish common standards for data privacy. (データプライバシーに関する共通の基準を確立する必要がある。)"
+          },
+          {
+            "phrase": "ensure interoperability",
+            "meaning": "相互運用性を確保する",
+            "usage": "The goal is to ensure interoperability between all new devices. (目標は、すべての新しいデバイス間の相互運用性を確保することだ。)"
+          },
+          {
+            "phrase": "across national borders",
+            "meaning": "国境を越えて",
+            "usage": "This issue requires cooperation across national borders. (この問題は国境を越えた協力を必要とする。)"
+          }
+        ]
+      },
+      {
+        "en": "Experts warn that a fragmented regulatory landscape could impede global collaboration and create arbitrage opportunities for less ethical actors.",
+        "ja": "専門家は、分断された規制環境が国際協力を妨げ、倫理観の低い主体に抜け穴を与える可能性があると警鐘を鳴らしています。",
+        "audioPath": "./assets/audio/t17853418293482392_7.wav",
+        "phrases": [
+          {
+            "phrase": "fragmented regulatory landscape",
+            "meaning": "分断された規制環境",
+            "usage": "各国で規制が異なる状況を指す。ビジネスや政策議論でよく使われる。"
+          },
+          {
+            "phrase": "impede global collaboration",
+            "meaning": "世界的な協調を妨げる",
+            "usage": "impede は「妨げる」というフォーマルな動詞。国際的な課題について話す際に有用。"
+          },
+          {
+            "phrase": "arbitrage opportunities",
+            "meaning": "裁定取引の機会",
+            "usage": "異なる市場間の価格差を利用して利益を得る機会。金融・経済ニュースで頻出。"
+          }
+        ]
+      },
+      {
+        "en": "The evolving nature of AI itself necessitates agile and adaptive governance mechanisms, rather than static, one-size-fits-all solutions.",
+        "ja": "AI自体の進化する性質は、静的な画一的解決策ではなく、機敏で適応性のあるガバナンスメカニズムを必要としています。",
+        "audioPath": "./assets/audio/t17853418293482392_8.wav",
+        "phrases": [
+          {
+            "phrase": "evolving nature",
+            "meaning": "進化し続ける性質",
+            "usage": "The evolving nature of technology requires constant learning. (テクノロジーの進化し続ける性質は、絶え間ない学習を要求する。)"
+          },
+          {
+            "phrase": "necessitates agile and adaptive",
+            "meaning": "機敏で適応力のある〜を必要とする",
+            "usage": "This situation necessitates agile and adaptive strategies. (この状況は、機敏で適応力のある戦略を必要とする。)"
+          },
+          {
+            "phrase": "one-size-fits-all solutions",
+            "meaning": "万能な解決策、画一的な解決策",
+            "usage": "There are no one-size-fits-all solutions in international diplomacy. (国際外交には万能な解決策はない。)"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, striking the right equilibrium between fostering innovation and safeguarding public welfare remains the paramount objective for global stakeholders.",
+        "ja": "最終的に、イノベーションの育成と公共の福祉の保護との間の適切な均衡を見出すことが、世界の利害関係者にとっての最重要課題であり続けています。",
+        "audioPath": "./assets/audio/t17853418293482392_9.wav",
+        "phrases": [
+          {
+            "phrase": "striking the right equilibrium",
+            "meaning": "適切な均衡を取る",
+            "usage": "相反する要素の間で調和を取る際に、「strike a balance」と同様に使う。"
+          },
+          {
+            "phrase": "fostering innovation",
+            "meaning": "革新を育む、イノベーションを促進する",
+            "usage": "企業や組織が新しいアイデアや技術開発を奨励する文脈で頻繁に用いられる。"
+          },
+          {
+            "phrase": "safeguarding public welfare",
+            "meaning": "公共の福祉を守る",
+            "usage": "政府、企業、NPOなどが社会貢献や倫理的責任について語る際に使う。"
+          },
+          {
+            "phrase": "paramount objective",
+            "meaning": "最も重要な目的",
+            "usage": "「paramount importance」（最重要性）のように、何かが極めて重要であることを強調する際に使う。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-07-29T16:17:09.348Z"
   }
 ]
