@@ -407,6 +407,7 @@
   "provide": "./assets/audio/words/provide.mp3",
   "push": "./assets/audio/words/push.mp3",
   "put": "./assets/audio/words/put.mp3",
+  "quantum": "./assets/audio/words/quantum.wav",
   "quick": "./assets/audio/words/quick.mp3",
   "quite": "./assets/audio/words/quite.mp3",
   "rather": "./assets/audio/words/rather.mp3",
