@@ -19271,7 +19271,8 @@
             "meaning": "ますます自動化された",
             "usage": "The manufacturing sector is becoming increasingly automated. (製造業はますます自動化が進んでいる)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17845521984925089_10.wav"
       },
       {
         "en": "Successful implementation hinges on cross-functional collaboration and unwavering commitment from every level of the organization.",
@@ -19292,7 +19293,8 @@
             "meaning": "揺るぎないコミットメント/献身",
             "usage": "プロジェクトへの揺るぎない献身が必要だ (Unwavering commitment to the project is required.)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17845521984925089_11.wav"
       }
     ],
     "createdAt": "2026-07-20T12:56:38.492Z"
@@ -23943,5 +23945,239 @@
       }
     ],
     "createdAt": "2026-08-07T15:49:59.677Z"
+  },
+  {
+    "id": "t17862026091319998",
+    "title": "Reflecting on a Captivating Exhibition",
+    "titleJa": "魅力的な展覧会を振り返って",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I finally made it to the contemporary art exhibition we talked about last week, and it truly exceeded my expectations.",
+        "ja": "先週話していた現代アート展にようやく行ってきたんだけど、期待をはるかに上回る内容だったよ。",
+        "audioPath": "./assets/audio/t17862026091319998_0.wav",
+        "phrases": [
+          {
+            "phrase": "made it to",
+            "meaning": "（目的地などに）たどり着く、行くことができた",
+            "usage": "I finally made it to the meeting on time. （会議に時間通りにたどり着くことができた）"
+          },
+          {
+            "phrase": "talked about",
+            "meaning": "～について話した",
+            "usage": "We talked about the project yesterday. （昨日、そのプロジェクトについて話した）"
+          },
+          {
+            "phrase": "exceeded my expectations",
+            "meaning": "期待以上だった",
+            "usage": "The new restaurant really exceeded my expectations. （その新しいレストランは本当に期待以上だった）"
+          }
+        ]
+      },
+      {
+        "en": "The curation was absolutely brilliant, showcasing a diverse range of mediums that challenged conventional artistic boundaries.",
+        "ja": "キュレーションが本当に見事だったね。従来の芸術の枠を超えた、実に多様な表現方法が紹介されていてさ。",
+        "audioPath": "./assets/audio/t17862026091319998_1.wav",
+        "phrases": [
+          {
+            "phrase": "absolutely brilliant",
+            "meaning": "非常に素晴らしい、見事な",
+            "usage": "Absolutely brilliant performance! のように、賞賛を強調する際に使われます。"
+          },
+          {
+            "phrase": "showcasing a diverse range of",
+            "meaning": "多様な〜を披露する、見せる",
+            "usage": "The exhibition is showcasing a diverse range of local crafts. のように、多様なものを紹介する文脈で使えます。"
+          },
+          {
+            "phrase": "challenged conventional boundaries",
+            "meaning": "従来の境界線を打ち破る、常識を覆す",
+            "usage": "Her innovative approach challenged conventional boundaries in education. のように、新しい試みが既存の枠組みを超える様子を表します。"
+          }
+        ]
+      },
+      {
+        "en": "One installation, in particular, a multi-sensory experience involving light and sound, was utterly mesmerizing and thought-provoking.",
+        "ja": "特に、光と音を使った多感覚体験ができるあるインスタレーションは、完全に魅了されると同時に深く考えさせられたよ。",
+        "audioPath": "./assets/audio/t17862026091319998_2.wav",
+        "phrases": [
+          {
+            "phrase": "multi-sensory experience",
+            "meaning": "五感を刺激する体験",
+            "usage": "This exhibition offers a truly multi-sensory experience. この展示はまさに五感を刺激する体験を提供します。"
+          },
+          {
+            "phrase": "utterly mesmerizing",
+            "meaning": "完全に魅惑的な、うっとりするほど",
+            "usage": "The performance was utterly mesmerizing. そのパフォーマンスはうっとりするほど魅惑的だった。"
+          },
+          {
+            "phrase": "thought-provoking",
+            "meaning": "考えさせられるような",
+            "usage": "It was a thought-provoking film that stayed with me for days. それは数日間私の心に残る、考えさせられる映画だった。"
+          }
+        ]
+      },
+      {
+        "en": "It truly underscored the artist's profound ability to evoke powerful emotions and spark introspection among viewers.",
+        "ja": "それは、見る者の心に強い感情を呼び起こし、内省を促すという、そのアーティストの深い才能を如実に示していたね。",
+        "audioPath": "./assets/audio/t17862026091319998_3.wav",
+        "phrases": [
+          {
+            "phrase": "underscored the ... ability",
+            "meaning": "〜の能力を強調した、際立たせた",
+            "usage": "This event underscored the team's ability to overcome challenges. この出来事は、チームが困難を乗り越える能力を際立たせた。"
+          },
+          {
+            "phrase": "evoke powerful emotions",
+            "meaning": "力強い感情を呼び起こす",
+            "usage": "The music was designed to evoke powerful emotions in the audience. その音楽は、聴衆に力強い感情を呼び起こすように作られていた。"
+          },
+          {
+            "phrase": "spark introspection",
+            "meaning": "内省を促す、内省のきっかけを与える",
+            "usage": "The documentary aimed to spark introspection about our consumption habits. そのドキュメンタリーは、私たちの消費習慣についての内省を促すことを目的としていた。"
+          }
+        ]
+      },
+      {
+        "en": "The sheer ingenuity behind some of the conceptual pieces was astounding, prompting lively discussions among the attendees.",
+        "ja": "いくつかのコンセプト作品の背後にある純粋な独創性には驚かされたし、来場者の間で活発な議論が巻き起こっていたよ。",
+        "audioPath": "./assets/audio/t17862026091319998_4.wav",
+        "phrases": [
+          {
+            "phrase": "sheer ingenuity",
+            "meaning": "純粋な創意工夫、並外れた独創性",
+            "usage": "The sheer ingenuity of the design was impressive. (そのデザインの並外れた独創性は印象的だった。)"
+          },
+          {
+            "phrase": "conceptual pieces",
+            "meaning": "概念的な作品、コンセプトアート",
+            "usage": "The exhibition featured several conceptual pieces that challenged viewers' perceptions. (その展覧会は、鑑賞者の認識に挑戦するいくつかの概念的な作品を特徴としていた。)"
+          },
+          {
+            "phrase": "prompting lively discussions",
+            "meaning": "活発な議論を促す、引き起こす",
+            "usage": "The controversial announcement prompted lively discussions among the staff. (その物議を醸す発表は、職員の間で活発な議論を促した。)"
+          }
+        ]
+      },
+      {
+        "en": "I was particularly struck by how seamlessly technology was integrated into traditional art forms, blurring the lines between the digital and the tangible.",
+        "ja": "テクノロジーが伝統的な芸術形式にこれほどシームレスに統合され、デジタルと実体の境界を曖昧にしていることに特に感銘を受けたんだ。",
+        "audioPath": "./assets/audio/t17862026091319998_5.wav",
+        "phrases": [
+          {
+            "phrase": "particularly struck by",
+            "meaning": "～に特に感銘を受けた、心を動かされた",
+            "usage": "I was particularly struck by her dedication. (彼女の献身ぶりに特に感銘を受けた。)"
+          },
+          {
+            "phrase": "seamlessly integrated",
+            "meaning": "継ぎ目なく、スムーズに統合された",
+            "usage": "The new software was seamlessly integrated into our existing system. (新しいソフトウェアは既存のシステムにスムーズに統合された。)"
+          },
+          {
+            "phrase": "blurring the lines between",
+            "meaning": "～の境界線を曖昧にする",
+            "usage": "The internet is blurring the lines between work and personal life. (インターネットは仕事と私生活の境界線を曖昧にしている。)"
+          }
+        ]
+      },
+      {
+        "en": "It's rare to encounter such a cohesive yet eclectic collection that manages to be both intellectually stimulating and aesthetically pleasing.",
+        "ja": "知的に刺激的でありながら美的にも満足感を与える、こんなにまとまりがありつつも多岐にわたるコレクションに出会うのは珍しいことだよ。",
+        "audioPath": "./assets/audio/t17862026091319998_6.wav",
+        "phrases": [
+          {
+            "phrase": "rare to encounter",
+            "meaning": "めったに〜に遭遇しない",
+            "usage": "It's rare to encounter such a talented individual. のように使う"
+          },
+          {
+            "phrase": "cohesive yet eclectic",
+            "meaning": "まとまりがありながらも多様な",
+            "usage": "This approach offers a cohesive yet eclectic mix of strategies. のように使う"
+          },
+          {
+            "phrase": "intellectually stimulating",
+            "meaning": "知的好奇心を刺激する",
+            "usage": "The lecture was intellectually stimulating and thought-provoking. のように使う"
+          },
+          {
+            "phrase": "aesthetically pleasing",
+            "meaning": "美的感覚に訴える、見た目が美しい",
+            "usage": "The interior design was both functional and aesthetically pleasing. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "The entire experience left me feeling creatively invigorated and with a renewed appreciation for artistic innovation.",
+        "ja": "全体の体験を通して、創造的な活力を得られたし、芸術的革新への新たな認識が芽生えたよ。",
+        "audioPath": "./assets/audio/t17862026091319998_7.wav",
+        "phrases": [
+          {
+            "phrase": "creatively invigorated",
+            "meaning": "創造的な意欲をかき立てられた",
+            "usage": "新しいアイデアやプロジェクトによって、創造的なエネルギーが高まった状態を表す際に使われます。"
+          },
+          {
+            "phrase": "renewed appreciation",
+            "meaning": "新たな評価、再認識",
+            "usage": "以前は当たり前だと思っていたことや、見過ごしていたことの価値を改めて認識したときに使います。"
+          },
+          {
+            "phrase": "artistic innovation",
+            "meaning": "芸術的な革新",
+            "usage": "新しい芸術表現や技術、概念などが登場し、芸術の世界に変化をもたらすことを指します。"
+          }
+        ]
+      },
+      {
+        "en": "If you have an opportunity before it closes, I wholeheartedly recommend carving out some time to immerse yourself in it.",
+        "ja": "もし閉幕するまでに機会があれば、ぜひ時間を割いて、その世界にどっぷり浸ることを心からお勧めするよ。",
+        "audioPath": "./assets/audio/t17862026091319998_8.wav",
+        "phrases": [
+          {
+            "phrase": "carving out some time",
+            "meaning": "時間を捻出する、時間を確保する",
+            "usage": "忙しい中でも、意識的に時間を作るニュアンス。例: I need to carve out some time for exercise."
+          },
+          {
+            "phrase": "immerse yourself in",
+            "meaning": "〜に没頭する、〜に深く浸る",
+            "usage": "ある活動や経験に完全に集中する様子を表す。例: She immersed herself in her studies."
+          },
+          {
+            "phrase": "wholeheartedly recommend",
+            "meaning": "心から〜を勧める",
+            "usage": "強く、熱意を持って勧める場合に使う。例: I wholeheartedly recommend this book to anyone interested in history."
+          }
+        ]
+      },
+      {
+        "en": "It’s an invaluable cultural outing that truly offers a refreshing perspective on the evolving landscape of contemporary art.",
+        "ja": "現代アートの進化する展望に新たな視点を与えてくれる、本当に貴重な文化体験だからね。",
+        "audioPath": "./assets/audio/t17862026091319998_9.wav",
+        "phrases": [
+          {
+            "phrase": "offers a refreshing perspective",
+            "meaning": "新鮮な視点を提供する",
+            "usage": "このプロジェクトは問題解決に新たな視点をもたらすだろう。"
+          },
+          {
+            "phrase": "evolving landscape",
+            "meaning": "変化する状況/情勢",
+            "usage": "業界の絶えず変化する情勢に適応する必要がある。"
+          },
+          {
+            "phrase": "invaluable cultural outing",
+            "meaning": "非常に貴重な文化体験/外出",
+            "usage": "`invaluable` は「非常に貴重な」という意味で、ビジネスでは「invaluable asset (貴重な資産)」のように使う。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-08-08T15:23:29.131Z"
   }
 ]
