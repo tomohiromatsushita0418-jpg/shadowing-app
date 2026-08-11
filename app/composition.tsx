@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useCallback, useRef } from 'react';
+import React, { useMemo, useState, useCallback, useRef, useEffect } from 'react';
 import {
   ActivityIndicator,
   KeyboardAvoidingView,
@@ -11,20 +11,17 @@ import {
   View,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import compositionData from '../data/composition.json';
+import { topics, type Topic } from '../data/topics';
+import { useComposeProgress, type Verdict } from '../hooks/useComposeProgress';
 
-interface Problem { ja: string; en: string; point?: string }
-interface CompoSet {
-  title: string; titleJa?: string; category: string;
-  createdAt?: string; problems: Problem[];
-}
+interface Problem { ja: string; en: string }
 
-const DATA = compositionData as Record<string, CompoSet>;
 const GRADE_MODELS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite'];
 
 interface Grade {
-  verdict: 'perfect' | 'good' | 'needs_work';
+  verdict: Verdict;
   score: number;
   best: string;
   feedback: string;
@@ -32,16 +29,8 @@ interface Grade {
   alternatives?: string[];
 }
 
-/** Pick the most recent topic that has a composition set. */
-function latestSet(): { id: string; set: CompoSet } | null {
-  const entries = Object.entries(DATA).filter(([, s]) => s.problems?.length);
-  if (!entries.length) return null;
-  entries.sort((a, b) => {
-    const ta = a[1].createdAt ? Date.parse(a[1].createdAt) : 0;
-    const tb = b[1].createdAt ? Date.parse(b[1].createdAt) : 0;
-    return tb - ta;
-  });
-  return { id: entries[0][0], set: entries[0][1] };
+function latestTopic(): Topic | undefined {
+  return topics.length ? topics[topics.length - 1] : undefined;
 }
 
 async function gradeAnswer(problem: Problem, answer: string): Promise<Grade> {
@@ -55,12 +44,12 @@ async function gradeAnswer(problem: Problem, answer: string): Promise<Grade> {
 
 学習者の英文を評価し、次のJSONだけを返してください（前置き不要）:
 {
-  "verdict": "perfect" | "good" | "needs_work",   // 意味が正確で自然なら perfect、通じるが改善余地なら good、誤り/不自然なら needs_work
+  "verdict": "perfect" | "good" | "needs_work",
   "score": 0-100 の整数,
   "best": "この和文に対する最も自然な英語(学習者の表現を活かしつつ最善の1文)",
   "feedback": "日本語で: 何が正しく、何が違うか、なぜか。文法・語法の誤りを具体的に指摘",
   "nuance": "日本語で: この表現が持つニュアンスや、より自然にするコツ",
-  "alternatives": ["別解1", "別解2"]   // 他の自然な言い方(任意, 最大3つ)
+  "alternatives": ["別解1", "別解2"]
 }
 
 厳しすぎず、学習者が伸びるよう具体的で actionable なアドバイスにすること。`;
@@ -106,10 +95,23 @@ const VERDICT = {
 
 export default function CompositionScreen() {
   const insets = useSafeAreaInsets();
-  const picked = useMemo(() => latestSet(), []);
-  const problems = picked?.set.problems ?? [];
+  const navigation = useNavigation();
+  const { topicId, index } = useLocalSearchParams<{ topicId?: string; index?: string }>();
+  const { getRecord, saveRecord, topicSummary } = useComposeProgress();
 
-  const [idx, setIdx] = useState(0);
+  const topic = useMemo(
+    () => (topicId ? topics.find((t) => t.id === topicId) : latestTopic()),
+    [topicId]
+  );
+  const problems: Problem[] = useMemo(
+    () => (topic ? topic.sentences.map((s) => ({ ja: s.ja, en: s.en })) : []),
+    [topic]
+  );
+
+  const [idx, setIdx] = useState(() => {
+    const n = Number(index);
+    return Number.isFinite(n) && n >= 0 ? Math.floor(n) : 0;
+  });
   const [answer, setAnswer] = useState('');
   const [grading, setGrading] = useState(false);
   const [grade, setGrade] = useState<Grade | null>(null);
@@ -117,26 +119,33 @@ export default function CompositionScreen() {
   const [showModel, setShowModel] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
 
+  useEffect(() => {
+    if (topic) navigation.setOptions({ title: '瞬間英作文' });
+  }, [topic, navigation]);
+
   const problem = problems[idx];
+  const summary = topic ? topicSummary(topic.id, problems.length) : null;
+  const prevRecord = topic && problem ? getRecord(topic.id, idx) : undefined;
 
   const submit = useCallback(async () => {
-    if (!answer.trim() || !problem) return;
+    if (!answer.trim() || !problem || !topic) return;
     setGrading(true);
     setError(null);
     setGrade(null);
     try {
       const g = await gradeAnswer(problem, answer.trim());
       setGrade(g);
+      saveRecord(topic.id, idx, { verdict: g.verdict, score: g.score });
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
     } catch {
       setError('採点に失敗しました。通信環境を確認してもう一度お試しください。');
     } finally {
       setGrading(false);
     }
-  }, [answer, problem]);
+  }, [answer, problem, topic, idx, saveRecord]);
 
-  const next = useCallback(() => {
-    setIdx((i) => i + 1);
+  const goTo = useCallback((n: number) => {
+    setIdx(n);
     setAnswer('');
     setGrade(null);
     setError(null);
@@ -144,36 +153,29 @@ export default function CompositionScreen() {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
   }, []);
 
-  const restart = useCallback(() => {
-    setIdx(0);
-    setAnswer('');
-    setGrade(null);
-    setError(null);
-    setShowModel(false);
-  }, []);
-
-  if (!picked) {
+  if (!topic || !problems.length) {
     return (
       <View style={styles.empty}>
         <Ionicons name="create-outline" size={48} color="#475569" />
-        <Text style={styles.emptyTitle}>問題がまだありません</Text>
-        <Text style={styles.emptySub}>
-          毎日のトピック生成時に、その日の内容から{'\n'}瞬間英作文が10問作られます。
-        </Text>
+        <Text style={styles.emptyTitle}>問題がありません</Text>
+        <Text style={styles.emptySub}>トピックが読み込まれていません。</Text>
       </View>
     );
   }
 
-  // Finished all problems
   if (idx >= problems.length) {
     return (
       <View style={styles.empty}>
         <Ionicons name="trophy" size={52} color="#fbbf24" />
-        <Text style={styles.emptyTitle}>本日分の10問 完了！</Text>
-        <Text style={styles.emptySub}>お疲れさまでした。{'\n'}また明日、新しいトピックで挑戦しましょう。</Text>
-        <Pressable style={styles.primaryBtn} onPress={restart}>
+        <Text style={styles.emptyTitle}>全{problems.length}問 完了！</Text>
+        {summary && (
+          <Text style={styles.emptySub}>
+            理解度 {summary.understood} / {summary.total}{'\n'}お疲れさまでした。
+          </Text>
+        )}
+        <Pressable style={styles.primaryBtn} onPress={() => goTo(0)}>
           <Ionicons name="refresh" size={18} color="#0b1220" />
-          <Text style={styles.primaryBtnText}>もう一度</Text>
+          <Text style={styles.primaryBtnText}>最初から</Text>
         </Pressable>
       </View>
     );
@@ -192,32 +194,34 @@ export default function CompositionScreen() {
         contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 120 }]}
         keyboardShouldPersistTaps="handled"
       >
-        {/* progress */}
         <View style={styles.progressRow}>
-          <Text style={styles.progressText}>
-            問題 {idx + 1} / {problems.length}
-          </Text>
-          <Text style={styles.topicText} numberOfLines={1}>
-            {picked.set.titleJa || picked.set.title}
-          </Text>
+          <Text style={styles.progressText}>問題 {idx + 1} / {problems.length}</Text>
+          {summary && (
+            <Text style={styles.summaryText}>
+              理解度 {summary.understood}/{summary.total}
+            </Text>
+          )}
         </View>
+        <Text style={styles.topicText} numberOfLines={1}>
+          {topic.titleJa || topic.title}
+        </Text>
         <View style={styles.progressBar}>
           <View style={[styles.progressFill, { width: `${((idx + (grade ? 1 : 0)) / problems.length) * 100}%` }]} />
         </View>
 
-        {/* Japanese prompt */}
         <View style={styles.promptCard}>
           <Text style={styles.promptLabel}>この日本語を英語にしてください</Text>
           <Text style={styles.promptJa}>{problem.ja}</Text>
-          {problem.point ? (
-            <View style={styles.pointRow}>
-              <Ionicons name="bulb-outline" size={13} color="#fbbf24" />
-              <Text style={styles.pointText}>{problem.point}</Text>
+          {prevRecord && !grade ? (
+            <View style={styles.prevRow}>
+              <Ionicons name={VERDICT[prevRecord.verdict].icon} size={13} color={VERDICT[prevRecord.verdict].color} />
+              <Text style={[styles.prevText, { color: VERDICT[prevRecord.verdict].color }]}>
+                前回: {prevRecord.score}点
+              </Text>
             </View>
           ) : null}
         </View>
 
-        {/* answer input */}
         <Text style={styles.inputLabel}>あなたの解答（手入力・キーボードのマイクで音声入力も可）</Text>
         <TextInput
           style={styles.input}
@@ -250,7 +254,6 @@ export default function CompositionScreen() {
 
         {error && <Text style={styles.errorText}>{error}</Text>}
 
-        {/* grading result */}
         {grade && v && (
           <View style={styles.result}>
             <View style={[styles.verdictBadge, { backgroundColor: v.bg, borderColor: v.color }]}>
@@ -292,11 +295,11 @@ export default function CompositionScreen() {
 
             <Pressable style={styles.modelToggle} onPress={() => setShowModel((s) => !s)}>
               <Ionicons name={showModel ? 'chevron-up' : 'chevron-down'} size={14} color="#94a3b8" />
-              <Text style={styles.modelToggleText}>用意された模範解答を{showModel ? '隠す' : '見る'}</Text>
+              <Text style={styles.modelToggleText}>元の英文（模範解答）を{showModel ? '隠す' : '見る'}</Text>
             </Pressable>
             {showModel && <Text style={styles.modelAnswer} selectable>{problem.en}</Text>}
 
-            <Pressable style={styles.primaryBtn} onPress={next}>
+            <Pressable style={styles.primaryBtn} onPress={() => goTo(idx + 1)}>
               <Text style={styles.primaryBtnText}>
                 {idx + 1 >= problems.length ? '結果を見る' : '次の問題へ'}
               </Text>
@@ -316,14 +319,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 8,
-    gap: 12,
+    marginBottom: 2,
   },
   progressText: { color: '#e2e8f0', fontSize: 13, fontWeight: '800', letterSpacing: 0.5 },
-  topicText: { color: '#64748b', fontSize: 12, flex: 1, textAlign: 'right' },
-  progressBar: {
-    height: 4, backgroundColor: '#1e293b', borderRadius: 2, overflow: 'hidden', marginBottom: 20,
-  },
+  summaryText: { color: '#34d399', fontSize: 12, fontWeight: '800' },
+  topicText: { color: '#64748b', fontSize: 12, marginBottom: 8 },
+  progressBar: { height: 4, backgroundColor: '#1e293b', borderRadius: 2, overflow: 'hidden', marginBottom: 20 },
   progressFill: { height: 4, backgroundColor: '#22d3ee', borderRadius: 2 },
   promptCard: {
     backgroundColor: '#161b27',
@@ -338,11 +339,11 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase', marginBottom: 10,
   },
   promptJa: { color: '#f1f5f9', fontSize: 19, lineHeight: 29, fontWeight: '600' },
-  pointRow: {
+  prevRow: {
     flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 14,
     paddingTop: 12, borderTopWidth: 1, borderTopColor: '#1e293b',
   },
-  pointText: { color: '#94a3b8', fontSize: 12, flex: 1, fontStyle: 'italic' },
+  prevText: { fontSize: 12, fontWeight: '700' },
   inputLabel: { color: '#94a3b8', fontSize: 12, marginBottom: 8, fontWeight: '600' },
   input: {
     backgroundColor: '#0b1220',
@@ -387,10 +388,7 @@ const styles = StyleSheet.create({
     color: '#64748b', fontSize: 11, fontWeight: '700', letterSpacing: 1,
     textTransform: 'uppercase', marginBottom: 4,
   },
-  yourAnswer: {
-    color: '#cbd5e1', fontSize: 15, lineHeight: 22, marginBottom: 16,
-    fontStyle: 'italic',
-  },
+  yourAnswer: { color: '#cbd5e1', fontSize: 15, lineHeight: 22, marginBottom: 16, fontStyle: 'italic' },
   bestBox: {
     backgroundColor: 'rgba(34,211,238,0.06)',
     borderLeftWidth: 3,

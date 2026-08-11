@@ -39,3 +39,5 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 .vercel
+set-gemini-key.sh
+gemini-key.txt

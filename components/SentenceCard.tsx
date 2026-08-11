@@ -8,10 +8,14 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
 import type { Sentence } from '../data/topics';
 import { usePhraseBook } from '../hooks/usePhraseBook';
+import { useComposeProgress } from '../hooks/useComposeProgress';
 import phraseAudio from '../data/phraseAudio.json';
 import { audioKey, playShort } from '../lib/audio';
+
+const VERDICT_COLOR = { perfect: '#34d399', good: '#fbbf24', needs_work: '#f87171' } as const;
 
 // Pre-generated phrase pronunciations (same ElevenLabs voice as the sentences).
 // Phrases without a file fall back to the device's speech synthesizer.
@@ -40,6 +44,9 @@ export default function SentenceCard({
   const [pressedIdx, setPressedIdx] = useState<number | null>(null);
   const [stuckIdx, setStuckIdx] = useState<number | null>(null);
   const { isSaved, togglePhrase } = usePhraseBook();
+  const router = useRouter();
+  const { getRecord } = useComposeProgress();
+  const record = topicId ? getRecord(topicId, index) : undefined;
 
   const words = sentence.en.split(/(\s+)/);
 
@@ -112,17 +119,43 @@ export default function SentenceCard({
       </Pressable>
 
       <View style={styles.translationRow}>
-        <TouchableOpacity
-          onPress={() => setShowTranslation((v) => !v)}
-          style={styles.toggleBtn}
-        >
-          <Ionicons
-            name={showTranslation ? 'eye-off-outline' : 'eye-outline'}
-            size={14}
-            color="#475569"
-          />
-          <Text style={styles.toggleText}>訳</Text>
-        </TouchableOpacity>
+        <View style={styles.translationHeader}>
+          <TouchableOpacity
+            onPress={() => setShowTranslation((v) => !v)}
+            style={styles.toggleBtn}
+          >
+            <Ionicons
+              name={showTranslation ? 'eye-off-outline' : 'eye-outline'}
+              size={14}
+              color="#475569"
+            />
+            <Text style={styles.toggleText}>訳</Text>
+          </TouchableOpacity>
+
+          {topicId && (
+            <TouchableOpacity
+              style={[styles.composeBtn, record && { borderColor: VERDICT_COLOR[record.verdict] }]}
+              onPress={() =>
+                router.push(`/composition?topicId=${topicId}&index=${index}` as any)
+              }
+              accessibilityLabel="この文で瞬間英作文"
+            >
+              {record ? (
+                <>
+                  <Ionicons name="checkmark-circle" size={13} color={VERDICT_COLOR[record.verdict]} />
+                  <Text style={[styles.composeText, { color: VERDICT_COLOR[record.verdict] }]}>
+                    {record.score}点
+                  </Text>
+                </>
+              ) : (
+                <>
+                  <Ionicons name="create-outline" size={13} color="#22d3ee" />
+                  <Text style={styles.composeText}>英作文</Text>
+                </>
+              )}
+            </TouchableOpacity>
+          )}
+        </View>
         {showTranslation && (
           <Text selectable style={styles.translation}>{sentence.ja}</Text>
         )}
@@ -249,12 +282,33 @@ const styles = StyleSheet.create({
     borderTopColor: '#1e293b',
     paddingTop: 8,
   },
+  translationHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 6,
+  },
   toggleBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 4,
     alignSelf: 'flex-start',
-    marginBottom: 6,
+  },
+  composeBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    borderWidth: 1,
+    borderColor: 'rgba(34,211,238,0.4)',
+    borderRadius: 999,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+  },
+  composeText: {
+    color: '#22d3ee',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 0.3,
   },
   toggleText: {
     color: '#475569',
