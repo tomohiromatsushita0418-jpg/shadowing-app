@@ -34,6 +34,10 @@ export default function RootLayout() {
           options={{ title: '熟語帳', headerBackTitle: 'Home' }}
         />
         <Stack.Screen
+          name="composition"
+          options={{ title: '瞬間英作文', headerBackTitle: 'Home' }}
+        />
+        <Stack.Screen
           name="topic/[id]"
           options={{ title: '', headerBackTitle: 'Back' }}
         />

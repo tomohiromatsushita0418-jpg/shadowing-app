@@ -179,6 +179,26 @@ export default function HomeScreen() {
               <Ionicons name="chevron-forward" size={16} color="#94a3b8" />
             </Pressable>
 
+            {/* Instant composition entry */}
+            <Pressable
+              style={({ pressed }) => [
+                styles.composeBtn,
+                pressed && styles.phraseBookBtnPressed,
+              ]}
+              onPress={() => router.push('/composition' as any)}
+            >
+              <View style={styles.phraseBookLeft}>
+                <View style={styles.composeIcon}>
+                  <Ionicons name="create" size={18} color="#22d3ee" />
+                </View>
+                <View>
+                  <Text style={styles.composeTitle}>瞬間英作文</Text>
+                  <Text style={styles.phraseBookSub}>今日のトピックで10問・AI添削</Text>
+                </View>
+              </View>
+              <Ionicons name="chevron-forward" size={16} color="#94a3b8" />
+            </Pressable>
+
             {/* Section heading */}
             <View style={styles.sectionHeader}>
               <Text style={styles.sectionTitle}>Stages</Text>
@@ -392,6 +412,35 @@ const styles = StyleSheet.create({
     marginBottom: 22,
   },
   phraseBookBtnPressed: { opacity: 0.8 },
+  composeBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: 'rgba(34,211,238,0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(34,211,238,0.25)',
+    borderRadius: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    marginBottom: 22,
+    marginTop: -8,
+  },
+  composeIcon: {
+    width: 36,
+    height: 36,
+    borderRadius: 10,
+    backgroundColor: 'rgba(34,211,238,0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(34,211,238,0.35)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  composeTitle: {
+    color: '#a5f3fc',
+    fontSize: 15,
+    fontWeight: '800',
+    letterSpacing: 0.3,
+  },
   phraseBookLeft: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   phraseBookIcon: {
     width: 36,
