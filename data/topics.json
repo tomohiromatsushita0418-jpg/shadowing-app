@@ -24970,5 +24970,244 @@
       }
     ],
     "createdAt": "2026-08-11T15:55:06.911Z"
+  },
+  {
+    "id": "t17865500322111392",
+    "title": "Catching Up Over Coffee",
+    "titleJa": "コーヒーを飲みながら近況報告",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "It's truly wonderful to finally catch up with you; it feels like ages since we last had a proper conversation.",
+        "ja": "本当に久しぶりにじっくり話せて嬉しいよ。まともに話すのは随分前のような気がするね。",
+        "audioPath": "./assets/audio/t17865500322111392_0.wav",
+        "phrases": [
+          {
+            "phrase": "catch up with",
+            "meaning": "（しばらくぶりに）～と近況を話し合う、～に追いつく",
+            "usage": "久しぶりに友人と会って近況を話し合う場面でよく使われます。"
+          },
+          {
+            "phrase": "it feels like ages",
+            "meaning": "長い時間が経過したように感じる",
+            "usage": "実際にはそれほど時間が経っていなくても、そう感じるほど久しぶりであることを強調する際に使います。"
+          },
+          {
+            "phrase": "proper conversation",
+            "meaning": "ちゃんとした会話、まともな会話",
+            "usage": "単なる挨拶以上の、内容のある会話であることを示唆します。"
+          }
+        ]
+      },
+      {
+        "en": "So, what have you been up to lately? I'm eager to hear all about your latest endeavors.",
+        "ja": "それで、最近どうしてたの？君の最近の取り組みについて、ぜひ聞かせてほしいな。",
+        "audioPath": "./assets/audio/t17865500322111392_1.wav",
+        "phrases": [
+          {
+            "phrase": "up to lately",
+            "meaning": "最近どうしていたか",
+            "usage": "What have you been up to lately? は近況を尋ねる定番のフレーズです。"
+          },
+          {
+            "phrase": "eager to hear",
+            "meaning": "聞きたくてたまらない",
+            "usage": "I'm eager to hear your thoughts. のように、相手の意見や話を聞きたい時に使います。"
+          },
+          {
+            "phrase": "latest endeavors",
+            "meaning": "最新の取り組み・事業",
+            "usage": "endeavors は努力や試みだけでなく、事業やプロジェクトを指すこともあります。"
+          }
+        ]
+      },
+      {
+        "en": "On my end, I've actually taken up pottery, which has been surprisingly therapeutic and creatively fulfilling.",
+        "ja": "僕はというと、実は陶芸を始めたんだ。これが意外なほど癒しになって、創造的な充実感があるんだよ。",
+        "audioPath": "./assets/audio/t17865500322111392_2.wav",
+        "phrases": [
+          {
+            "phrase": "taken up",
+            "meaning": "（趣味などを）始める、習い始める",
+            "usage": "He has taken up painting recently. 彼は最近絵を描き始めた。"
+          },
+          {
+            "phrase": "creatively fulfilling",
+            "meaning": "創造的に満足感のある",
+            "usage": "This project is creatively fulfilling for the team. このプロジェクトはチームにとって創造的に満足感がある。"
+          }
+        ]
+      },
+      {
+        "en": "It's quite challenging to master the wheel, but there's an immense sense of accomplishment in crafting something with your own hands.",
+        "ja": "ろくろを使いこなすのはなかなか難しいんだけど、自分の手で何かを作り上げる達成感はひとしおだよ。",
+        "audioPath": "./assets/audio/t17865500322111392_3.wav",
+        "phrases": [
+          {
+            "phrase": "master the wheel",
+            "meaning": "車を運転できるようになる、車の運転を習得する",
+            "usage": "ここでは比喩的に「何かを習得する」という意味で使われているが、文字通り車の運転を指すこともある。"
+          },
+          {
+            "phrase": "sense of accomplishment",
+            "meaning": "達成感",
+            "usage": "何かを成し遂げたときに感じる満足感を表す。例: a great sense of accomplishment"
+          },
+          {
+            "phrase": "craft something with your own hands",
+            "meaning": "自分の手で何かを作り上げる",
+            "usage": "手作業で物を作るプロセスや、その結果得られる満足感を強調する表現。"
+          }
+        ]
+      },
+      {
+        "en": "Speaking of which, I hosted a small gathering last weekend, and it turned out to be quite an enjoyable affair, albeit a bit chaotic initially.",
+        "ja": "そういえば、先週末に小さな集まりを主催したんだ。最初は少しばたばたしたけど、結局はとても楽しい会になったよ。",
+        "audioPath": "./assets/audio/t17865500322111392_4.wav",
+        "phrases": [
+          {
+            "phrase": "Speaking of which",
+            "meaning": "そういえば、その話ですが",
+            "usage": "話題を転換する際に使う便利なフレーズです。"
+          },
+          {
+            "phrase": "turned out to be",
+            "meaning": "〜であることがわかった、〜になった",
+            "usage": "結果が予想と異なった場合などに使われます。"
+          },
+          {
+            "phrase": "quite an enjoyable affair",
+            "meaning": "かなり楽しい催し（出来事）",
+            "usage": "affair は「出来事」「催し」「事柄」などを指し、フォーマルな場面でも使われます。"
+          },
+          {
+            "phrase": "albeit a bit chaotic",
+            "meaning": "多少混乱はあったものの",
+            "usage": "albeit は although や though と似た意味で、譲歩を表すフォーマルな接続詞です。"
+          }
+        ]
+      },
+      {
+        "en": "Work-wise, I've been entrusted with a new project that's pushing me out of my comfort zone, but I'm embracing the learning curve.",
+        "ja": "仕事の方はね、新しいプロジェクトを任されて、自分の慣れた領域から一歩踏み出すことになっているんだけど、この学びの過程を楽しんでいるところだよ。",
+        "audioPath": "./assets/audio/t17865500322111392_5.wav",
+        "phrases": [
+          {
+            "phrase": "entrusted with",
+            "meaning": "〜を任される、〜を委ねられる",
+            "usage": "I was entrusted with the responsibility of leading the team. (チームを率いる責任を任された)"
+          },
+          {
+            "phrase": "pushing me out of my comfort zone",
+            "meaning": "自分の快適な領域・慣れた範囲から追い出す",
+            "usage": "This new role is definitely pushing me out of my comfort zone, but I'm excited about the challenge. (この新しい役割は間違いなく私のコンフォートゾーンを押し広げているが、挑戦にワクワクしている)"
+          },
+          {
+            "phrase": "embracing the learning curve",
+            "meaning": "学習曲線（新しいことを学ぶ過程）を受け入れる、楽しむ",
+            "usage": "Even though it's challenging, I'm embracing the learning curve and eager to develop new skills. (たとえ困難であっても、学習過程を受け入れ、新しいスキルを開発することに意欲的です)"
+          }
+        ]
+      },
+      {
+        "en": "All in all, life feels a bit like a whirlwind these days, but in a good way, full of new experiences and personal growth.",
+        "ja": "全体的に見て、最近の生活はまるで旋風みたいだけど、新しい経験や自己成長に満ちていて、良い意味で充実しているよ。",
+        "audioPath": "./assets/audio/t17865500322111392_6.wav",
+        "phrases": [
+          {
+            "phrase": "All in all",
+            "meaning": "総合的に見ると、全体として",
+            "usage": "All in all, the project was a success. (総合的に見て、このプロジェクトは成功だった。)"
+          },
+          {
+            "phrase": "a bit like",
+            "meaning": "〜に少し似ている",
+            "usage": "This situation feels a bit like a puzzle. (この状況はパズルのようだ。)"
+          },
+          {
+            "phrase": "in a good way",
+            "meaning": "良い意味で、良い方向に",
+            "usage": "It was a challenging task, but it pushed me to grow, in a good way. (困難な仕事だったが、良い方向に私を成長させてくれた。)"
+          },
+          {
+            "phrase": "personal growth",
+            "meaning": "自己成長、個人的な成長",
+            "usage": "The seminar focused on strategies for personal growth. (そのセミナーは自己成長のための戦略に焦点を当てた。)"
+          }
+        ]
+      },
+      {
+        "en": "Have you found any new passions or significant changes that have reshaped your perspective recently?",
+        "ja": "君の方は、最近何か新しい情熱を見つけたり、物の見方を変えるような大きな変化はあったかい？",
+        "audioPath": "./assets/audio/t17865500322111392_7.wav",
+        "phrases": [
+          {
+            "phrase": "found any new passions",
+            "meaning": "新たな情熱を見つける",
+            "usage": "新しい趣味や興味関心が見つかったか尋ねる際に使えます。"
+          },
+          {
+            "phrase": "significant changes",
+            "meaning": "大きな変化",
+            "usage": "人生やキャリアにおける重要な転換点を表すのに適しています。"
+          },
+          {
+            "phrase": "reshaped your perspective",
+            "meaning": "視点を変える、見方を変える",
+            "usage": "考え方や価値観に影響を与えた出来事や経験について話す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "We really ought to make this a more regular occurrence; these conversations are always so invigorating.",
+        "ja": "本当に、もっと定期的に会うべきだね。こういう話はいつもすごく刺激になるよ。",
+        "audioPath": "./assets/audio/t17865500322111392_8.wav",
+        "phrases": [
+          {
+            "phrase": "ought to",
+            "meaning": "〜すべきである、〜した方がよい",
+            "usage": "should とほぼ同じ意味で、より丁寧な響きがある。We ought to finish this report by Friday. のように使う。"
+          },
+          {
+            "phrase": "make something an occurrence",
+            "meaning": "〜を（定期的な）出来事にする",
+            "usage": "この文脈では「〜を定例化する」という意味合い。We should make this meeting a weekly occurrence. のように使う。"
+          },
+          {
+            "phrase": "invigorating",
+            "meaning": "元気づけるような、活力を与える",
+            "usage": "会話や経験などが気分を高揚させ、元気にしてくれる様子を表す。An invigorating walk in the mountains. のように使う。"
+          }
+        ]
+      },
+      {
+        "en": "It's truly a breath of fresh air to reconnect and hear about your journey; let's certainly plan something again soon.",
+        "ja": "改めて君と繋がり、近況を聞けて本当に新鮮な気持ちになったよ。近いうちにまたぜひ計画しようね。",
+        "audioPath": "./assets/audio/t17865500322111392_9.wav",
+        "phrases": [
+          {
+            "phrase": "a breath of fresh air",
+            "meaning": "新鮮な息吹、気分転換になるもの",
+            "usage": "新しいアイデアや変化がもたらす良い影響を表す際に使われます。"
+          },
+          {
+            "phrase": "reconnect with",
+            "meaning": "再びつながる、再会する",
+            "usage": "久しぶりに連絡を取ったり、関係を修復したりする際に使います。"
+          },
+          {
+            "phrase": "hear about your journey",
+            "meaning": "あなたのこれまでの道のり（経験）を聞く",
+            "usage": "相手の経験やキャリアについて話を聞くことを丁寧に伝える表現です。"
+          },
+          {
+            "phrase": "plan something again soon",
+            "meaning": "近いうちにまた何かを計画する",
+            "usage": "次の約束や会合を提案する際の丁寧で前向きな表現です。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-08-12T15:53:52.211Z"
   }
 ]
