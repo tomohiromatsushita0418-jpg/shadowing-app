@@ -25982,5 +25982,253 @@
       }
     ],
     "createdAt": "2026-08-15T15:14:29.192Z"
+  },
+  {
+    "id": "t17868933248573174",
+    "title": "Sharing My Latest Endeavor",
+    "titleJa": "新しい挑戦について語る",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "I've been absolutely captivated by my recent foray into learning the cello; it's proving to be quite a formidable, yet deeply rewarding, undertaking.",
+        "ja": "最近チェロの練習を始めたのですが、すっかり魅了されています。手強いですが、計り知れないほどやりがいがありますね。",
+        "audioPath": "./assets/audio/t17868933248573174_0.wav",
+        "phrases": [
+          {
+            "phrase": "absolutely captivated by",
+            "meaning": "〜に完全に魅了されている",
+            "usage": "I was absolutely captivated by her performance. (彼女のパフォーマンスに完全に魅了された。)"
+          },
+          {
+            "phrase": "recent foray into",
+            "meaning": "〜への最近の進出・試み",
+            "usage": "This is my recent foray into the world of AI. (これはAIの世界への私の最近の試みです。)"
+          },
+          {
+            "phrase": "proving to be",
+            "meaning": "〜であることがわかる、〜だと判明する",
+            "usage": "The task is proving to be more difficult than expected. (その仕事は予想よりも難しいことがわかっている。)"
+          },
+          {
+            "phrase": "deeply rewarding",
+            "meaning": "非常にやりがいのある",
+            "usage": "It was a deeply rewarding experience. (それは非常にやりがいのある経験だった。)"
+          }
+        ]
+      },
+      {
+        "en": "Initially, I was quite daunted by the instrument's sheer size and the perceived complexity of its technique, but I'm gradually getting the hang of it.",
+        "ja": "最初は楽器の大きさと、技術の複雑さにかなり気後れしましたが、少しずつコツを掴んできています。",
+        "audioPath": "./assets/audio/t17868933248573174_1.wav",
+        "phrases": [
+          {
+            "phrase": "daunted by",
+            "meaning": "～に気後れする、～に圧倒される",
+            "usage": "The challenge ahead might seem daunting, but we can overcome it. (目の前の課題は気後れするかもしれませんが、私たちはそれを乗り越えられます。)"
+          },
+          {
+            "phrase": "getting the hang of it",
+            "meaning": "それに慣れていく、コツを掴む",
+            "usage": "It takes time to get the hang of a new software. (新しいソフトウェアに慣れるには時間がかかります。)"
+          }
+        ]
+      },
+      {
+        "en": "My instructor is incredibly patient and discerning, meticulously guiding me through each bow stroke and finger placement.",
+        "ja": "先生は信じられないほど忍耐強く、的確な方で、弓の運び方から指の置き方まで、細部にわたって丁寧に指導してくださいます。",
+        "audioPath": "./assets/audio/t17868933248573174_2.wav",
+        "phrases": [
+          {
+            "phrase": "incredibly patient",
+            "meaning": "信じられないほど忍耐強い",
+            "usage": "He was incredibly patient with my mistakes. (彼は私のミスに信じられないほど忍耐強かった。)"
+          },
+          {
+            "phrase": "discerning",
+            "meaning": "識別力のある、洞察力のある",
+            "usage": "A discerning customer will appreciate the quality. (目利きの顧客は品質を評価するだろう。)"
+          },
+          {
+            "phrase": "meticulously guiding",
+            "meaning": "細心の注意を払って導く",
+            "usage": "The chef meticulously guided us through the recipe. (シェフは私たちにレシピを細心の注意を払って導いてくれた。)"
+          },
+          {
+            "phrase": "finger placement",
+            "meaning": "指の位置、指使い",
+            "usage": "Proper finger placement is crucial for playing the piano. (ピアノを弾く上で適切な指使いは非常に重要だ。)"
+          }
+        ]
+      },
+      {
+        "en": "There's something profoundly meditative about the process, a complete immersion that truly allows me to disengage from the daily grind.",
+        "ja": "この練習過程には何か深い瞑想的な要素があって、完全に没頭することで、日々の雑事から本当に解放されるんです。",
+        "audioPath": "./assets/audio/t17868933248573174_3.wav",
+        "phrases": [
+          {
+            "phrase": "profoundly meditative",
+            "meaning": "非常に瞑想的な、深い落ち着きをもたらす",
+            "usage": "This music has a profoundly meditative quality. (この音楽には非常に瞑想的な質がある)"
+          },
+          {
+            "phrase": "complete immersion",
+            "meaning": "完全に没頭すること、全身全霊を傾けること",
+            "usage": "The language program offers complete immersion in Spanish. (その語学プログラムはスペイン語への完全没頭を提供する)"
+          },
+          {
+            "phrase": "disengage from",
+            "meaning": "〜から離れる、〜から手を引く",
+            "usage": "It's important to disengage from work during vacation. (休暇中は仕事から離れることが重要だ)"
+          },
+          {
+            "phrase": "daily grind",
+            "meaning": "日々の単調な仕事、退屈な日常業務",
+            "usage": "He longed to escape the daily grind of his office job. (彼はオフィスでの仕事の退屈な日常から逃れたがっていた)"
+          }
+        ]
+      },
+      {
+        "en": "I'm still very much a novice, of course, but I've managed to coax a few recognizable melodies out of it, much to my own astonishment.",
+        "ja": "もちろんまだ初心者同然ですが、自分でも驚くことに、いくつか聞き覚えのあるメロディーを奏でられるようになりました。",
+        "audioPath": "./assets/audio/t17868933248573174_4.wav",
+        "phrases": [
+          {
+            "phrase": "very much a novice",
+            "meaning": "かなりの初心者である",
+            "usage": "I'm still very much a novice in this field. のように、ある分野での経験が浅いことを強調して使う。"
+          },
+          {
+            "phrase": "coax ... out of",
+            "meaning": "（苦労して）〜を引き出す、〜をなんとか作り出す",
+            "usage": "He finally coaxed a confession out of the suspect. のように、困難な状況から何かを得る様子を表す。"
+          },
+          {
+            "phrase": "much to my own astonishment",
+            "meaning": "自分でも驚くほど",
+            "usage": "The project was completed ahead of schedule, much to everyone's astonishment. のように、予期せぬ結果に驚きを表す際に使う。"
+          }
+        ]
+      },
+      {
+        "en": "It's a stark reminder that persistent effort truly yields discernible progress, even in seemingly insurmountable challenges.",
+        "ja": "これは、一見乗り越えられないような課題であっても、粘り強い努力が確かに目に見える進歩をもたらすという、痛感させられる教訓です。",
+        "audioPath": "./assets/audio/t17868933248573174_5.wav",
+        "phrases": [
+          {
+            "phrase": "stark reminder",
+            "meaning": "厳しい現実を突きつける、痛烈な戒め",
+            "usage": "This incident serves as a stark reminder of the dangers of complacency. (この事件は、現状に満足することの危険性に対する痛烈な戒めとなっている。)"
+          },
+          {
+            "phrase": "persistent effort",
+            "meaning": "粘り強い努力、継続的な努力",
+            "usage": "Success often comes to those who demonstrate persistent effort over time. (成功はしばしば、時間をかけて粘り強い努力を示す者に訪れる。)"
+          },
+          {
+            "phrase": "yields discernible progress",
+            "meaning": "目に見える進歩をもたらす、認識できる進展を生む",
+            "usage": "With consistent practice, you will begin to see yields discernible progress in your skills. (一貫した練習を続ければ、スキルに目に見える進歩が見られるようになるだろう。)"
+          },
+          {
+            "phrase": "insurmountable challenges",
+            "meaning": "乗り越えられない困難、克服不能な課題",
+            "usage": "They faced insurmountable challenges but managed to find a solution. (彼らは乗り越えられない困難に直面したが、解決策を見つけることができた。)"
+          }
+        ]
+      },
+      {
+        "en": "I was actually contemplating having a small, informal practice session next Saturday afternoon, if you're amenable to dropping by.",
+        "ja": "実は、もし差し支えなければなのですが、来週の土曜の午後にでも、ちょっとした非公式の練習会をしようかと考えていたんです。",
+        "audioPath": "./assets/audio/t17868933248573174_6.wav",
+        "phrases": [
+          {
+            "phrase": "contemplating having",
+            "meaning": "〜することを検討している",
+            "usage": "I'm contemplating buying a new car. (新しい車を買うことを検討しています。)"
+          },
+          {
+            "phrase": "informal practice session",
+            "meaning": "非公式な練習会",
+            "usage": "Let's have an informal practice session to discuss the project. (プロジェクトについて話し合うための非公式な練習会を開きましょう。)"
+          },
+          {
+            "phrase": "amenable to",
+            "meaning": "〜に進んで応じる、〜を受け入れる",
+            "usage": "She is amenable to suggestions. (彼女は提案に喜んで応じます。)"
+          },
+          {
+            "phrase": "dropping by",
+            "meaning": "立ち寄る",
+            "usage": "I'll be dropping by your office later. (後であなたのオフィスに立ち寄ります。)"
+          }
+        ]
+      },
+      {
+        "en": "You wouldn't have to stay long, just a brief visit to witness my rather rudimentary attempts at musicality.",
+        "ja": "長く滞在していただく必要はなくて、私のかなり初歩的な演奏の試みを少しだけ見ていただければ、それで十分です。",
+        "audioPath": "./assets/audio/t17868933248573174_7.wav",
+        "phrases": [
+          {
+            "phrase": "wouldn't have to",
+            "meaning": "〜する必要はないだろう",
+            "usage": "You wouldn't have to worry about it. (そのことを心配する必要はないでしょう)"
+          },
+          {
+            "phrase": "stay long",
+            "meaning": "長く滞在する",
+            "usage": "He decided not to stay long at the party. (彼はパーティーに長く留まらないことにした)"
+          },
+          {
+            "phrase": "brief visit",
+            "meaning": "短い訪問",
+            "usage": "It was just a brief visit, but it was nice to see them. (ほんの短い訪問だったが、彼らに会えてよかった)"
+          },
+          {
+            "phrase": "rudimentary attempts",
+            "meaning": "初歩的な試み、基本的な試み",
+            "usage": "His rudimentary understanding of the subject was evident. (その主題に関する彼の初歩的な理解は明らかだった)"
+          }
+        ]
+      },
+      {
+        "en": "Perhaps it might even pique your interest in picking up an instrument yourself, though no pressure whatsoever, of course.",
+        "ja": "もしかしたら、あなた自身も楽器を始めてみようという興味が湧くかもしれませんね。もちろん、全くプレッシャーをかけるつもりはありませんが。",
+        "audioPath": "./assets/audio/t17868933248573174_8.wav",
+        "phrases": [
+          {
+            "phrase": "pique your interest",
+            "meaning": "興味をそそる、関心を刺激する",
+            "usage": "この新しいプロジェクトがあなたの興味をそそることを願っています。"
+          },
+          {
+            "phrase": "picking up an instrument",
+            "meaning": "楽器を始める、習得する (趣味やスキルについて)",
+            "usage": "彼は最近、新しい言語を習得し始めた。(He started picking up a new language recently.)"
+          },
+          {
+            "phrase": "no pressure whatsoever",
+            "meaning": "全くプレッシャーはない、一切強制ではない",
+            "usage": "参加は任意で、全くプレッシャーはありません。(Participation is optional, no pressure whatsoever.)"
+          }
+        ]
+      },
+      {
+        "en": "It would be lovely to have your company, and I could certainly offer you some refreshments while you're there.",
+        "ja": "お越しいただけたら嬉しいですし、もちろんいらっしゃる間は、何かお飲み物などお出しできますよ。",
+        "phrases": [
+          {
+            "phrase": "have your company",
+            "meaning": "同席する、一緒にいる",
+            "usage": "フォーマルな場面で「ご一緒できて光栄です」のように使える。"
+          },
+          {
+            "phrase": "offer you some refreshments",
+            "meaning": "軽食や飲み物を提供する",
+            "usage": "会議やイベントで「お飲み物をご用意しております」と言う際によく使う。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-08-16T15:15:24.857Z"
   }
 ]
