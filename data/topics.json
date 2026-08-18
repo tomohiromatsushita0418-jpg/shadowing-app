@@ -26480,5 +26480,279 @@
       }
     ],
     "createdAt": "2026-08-17T15:19:25.188Z"
+  },
+  {
+    "id": "t17870666868084871",
+    "title": "Navigating Persistent Inflation: Central Bank Dilemmas",
+    "titleJa": "根強いインフレとの闘い：中央銀行のジレンマ",
+    "category": "Current Affairs",
+    "sentences": [
+      {
+        "en": "Global economies continue to grapple with persistent inflationary pressures, a phenomenon exacerbated by supply chain disruptions and robust consumer demand.",
+        "ja": "世界経済は、サプライチェーンの混乱と旺盛な消費者需要によって拍車がかかる、根強いインフレ圧力との格闘を続けている。",
+        "audioPath": "./assets/audio/t17870666868084871_0.wav",
+        "phrases": [
+          {
+            "phrase": "grapple with",
+            "meaning": "〜と格闘する、〜に取り組む",
+            "usage": "The company is grappling with a serious financial crisis. (その会社は深刻な財政危機と格闘している。)"
+          },
+          {
+            "phrase": "persistent inflationary pressures",
+            "meaning": "根強いインフレ圧力",
+            "usage": "The central bank is trying to curb persistent inflationary pressures. (中央銀行は根強いインフレ圧力を抑制しようとしている。)"
+          },
+          {
+            "phrase": "supply chain disruptions",
+            "meaning": "サプライチェーンの混乱",
+            "usage": "Global trade has been affected by supply chain disruptions. (世界の貿易はサプライチェーンの混乱の影響を受けている。)"
+          },
+          {
+            "phrase": "robust consumer demand",
+            "meaning": "力強い消費者需要",
+            "usage": "Despite the economic slowdown, there is still robust consumer demand for electronics. (経済の減速にもかかわらず、エレクトロニクス製品には依然として力強い消費者需要がある。)"
+          }
+        ]
+      },
+      {
+        "en": "Central banks worldwide are caught between the imperative to tame inflation and the risk of triggering an economic downturn through overly aggressive monetary tightening.",
+        "ja": "世界各国の中央銀行は、インフレ抑制という喫緊の課題と、過度な金融引き締めによる景気後退を招くリスクとの間で板挟みになっている。",
+        "audioPath": "./assets/audio/t17870666868084871_1.wav",
+        "phrases": [
+          {
+            "phrase": "caught between",
+            "meaning": "〜と〜の間で板挟みになっている",
+            "usage": "be caught between a rock and a hard place のように、困難な選択を迫られている状況を表す際にも使われます。"
+          },
+          {
+            "phrase": "tame inflation",
+            "meaning": "インフレを抑制する",
+            "usage": "中央銀行や政府が物価上昇を抑えようとする文脈でよく使われます。"
+          },
+          {
+            "phrase": "trigger an economic downturn",
+            "meaning": "景気後退を引き起こす",
+            "usage": "金融政策やその他の要因が経済に悪影響を与える可能性を示す際に用いられます。"
+          },
+          {
+            "phrase": "monetary tightening",
+            "meaning": "金融引き締め",
+            "usage": "中央銀行が金利を引き上げたり、市場から資金を吸収したりする政策を指します。"
+          }
+        ]
+      },
+      {
+        "en": "The Federal Reserve, for instance, has signaled a cautious approach, balancing its dual mandate of price stability and maximum employment.",
+        "ja": "例えば、連邦準備制度理事会は、物価安定と最大限の雇用という二つの責務のバランスを取りながら、慎重なアプローチを示している。",
+        "audioPath": "./assets/audio/t17870666868084871_2.wav",
+        "phrases": [
+          {
+            "phrase": "signaled a cautious approach",
+            "meaning": "慎重な姿勢を示した",
+            "usage": "The company signaled a cautious approach to hiring new staff. (会社は新規採用に慎重な姿勢を示した。)"
+          },
+          {
+            "phrase": "balancing its dual mandate",
+            "meaning": "その二重の使命のバランスを取る",
+            "usage": "The government is struggling with balancing its dual mandate of economic growth and environmental protection. (政府は経済成長と環境保護という二重の使命のバランスを取るのに苦労している。)"
+          },
+          {
+            "phrase": "price stability",
+            "meaning": "物価の安定",
+            "usage": "The central bank's primary goal is to maintain price stability. (中央銀行の主な目標は物価の安定を維持することである。)"
+          },
+          {
+            "phrase": "maximum employment",
+            "meaning": "雇用の最大化",
+            "usage": "Achieving maximum employment is a key objective for the economy. (雇用の最大化を達成することは、経済にとって重要な目標である。)"
+          }
+        ]
+      },
+      {
+        "en": "European policymakers face unique challenges, contending with divergent national fiscal policies and the lingering effects of energy price volatility.",
+        "ja": "欧州の政策立案者たちは、各国で異なる財政政策や、根強く残るエネルギー価格変動の影響と格闘しながら、独自の課題に直面している。",
+        "audioPath": "./assets/audio/t17870666868084871_3.wav",
+        "phrases": [
+          {
+            "phrase": "face unique challenges",
+            "meaning": "特有の課題に直面する",
+            "usage": "The company faces unique challenges in expanding into new markets. のように使う"
+          },
+          {
+            "phrase": "contending with",
+            "meaning": "〜と争う、〜に対処する",
+            "usage": "They are contending with a difficult economic situation. のように使う"
+          },
+          {
+            "phrase": "lingering effects",
+            "meaning": "長引く影響",
+            "usage": "The lingering effects of the pandemic are still being felt. のように使う"
+          },
+          {
+            "phrase": "energy price volatility",
+            "meaning": "エネルギー価格の変動性",
+            "usage": "Businesses need to plan for energy price volatility. のように使う"
+          }
+        ]
+      },
+      {
+        "en": "Emerging markets, often more susceptible to capital outflows, are particularly vulnerable to the ripple effects of developed economies' monetary stances.",
+        "ja": "資本流出の影響を受けやすい新興市場国は、先進国の金融政策が波及する影響に対し、特に脆弱である。",
+        "audioPath": "./assets/audio/t17870666868084871_4.wav",
+        "phrases": [
+          {
+            "phrase": "Emerging markets",
+            "meaning": "新興市場",
+            "usage": "新興国経済を指す際に使われる一般的な表現です。"
+          },
+          {
+            "phrase": "susceptible to",
+            "meaning": "〜に影響されやすい、〜にかかりやすい",
+            "usage": "The economy is susceptible to global trends. のように、経済や人が何かに影響を受けやすい状況を表します。"
+          },
+          {
+            "phrase": "capital outflows",
+            "meaning": "資本流出",
+            "usage": "投資資金が国外へ流出することを指す経済用語です。"
+          },
+          {
+            "phrase": "ripple effects",
+            "meaning": "波及効果、連鎖反応",
+            "usage": "ある出来事が他の様々な事柄に影響を及ぼす様子を表します。例えば、a ripple effect on the stock market のように使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The debate among economists intensifies regarding whether current inflation is primarily a demand-side phenomenon or driven by structural supply constraints.",
+        "ja": "現在のインフレが主に需要側の現象なのか、それとも構造的な供給制約によって引き起こされているのかについて、経済学者たちの間で議論が白熱している。",
+        "audioPath": "./assets/audio/t17870666868084871_5.wav",
+        "phrases": [
+          {
+            "phrase": "intensifies regarding",
+            "meaning": "〜に関して激化する",
+            "usage": "The discussion intensifies regarding the new policy. (新しい方針に関して議論が激化する)"
+          },
+          {
+            "phrase": "demand-side phenomenon",
+            "meaning": "需要側の現象",
+            "usage": "Economists are analyzing whether the rise in prices is a demand-side phenomenon. (物価上昇が需要側の現象かどうか、経済学者は分析している)"
+          },
+          {
+            "phrase": "driven by",
+            "meaning": "〜によって引き起こされる、〜に推進される",
+            "usage": "The company's success is driven by its innovative products. (その会社の成功は革新的な製品によって推進されている)"
+          },
+          {
+            "phrase": "structural supply constraints",
+            "meaning": "構造的な供給制約",
+            "usage": "The report highlighted the impact of structural supply constraints on global trade. (その報告書は世界貿易に対する構造的な供給制約の影響を強調した)"
+          }
+        ]
+      },
+      {
+        "en": "Wage-price spirals remain a significant concern for monetary authorities, potentially embedding inflation into the long-term economic fabric.",
+        "ja": "賃金と物価の悪循環は金融当局にとって依然として大きな懸念事項であり、インフレが長期的な経済構造に定着する可能性を秘めている。",
+        "audioPath": "./assets/audio/t17870666868084871_6.wav",
+        "phrases": [
+          {
+            "phrase": "wage-price spirals",
+            "meaning": "賃金と物価の相互上昇スパイラル",
+            "usage": "経済学や金融政策の文脈で使われる専門用語です。"
+          },
+          {
+            "phrase": "significant concern",
+            "meaning": "重大な懸念事項",
+            "usage": "金融当局や政府機関が抱える問題を表す際によく使われます。"
+          },
+          {
+            "phrase": "embedding inflation",
+            "meaning": "インフレを定着させる、根付かせる",
+            "usage": "インフレが一時的ではなく、経済の構造に深く入り込む状況を指します。"
+          },
+          {
+            "phrase": "economic fabric",
+            "meaning": "経済構造、経済の基盤",
+            "usage": "社会の構造を指す 'social fabric' と同様の比喩表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Governments, meanwhile, are under pressure to deploy targeted fiscal measures to alleviate the burden on households without further fueling inflationary pressures.",
+        "ja": "一方、各国政府は、インフレ圧力をさらに煽ることなく、家計への負担を軽減するための的を絞った財政措置を講じるよう圧力を受けている。",
+        "audioPath": "./assets/audio/t17870666868084871_7.wav",
+        "phrases": [
+          {
+            "phrase": "under pressure",
+            "meaning": "圧力を受けている、プレッシャーがかかっている",
+            "usage": "The company is under pressure to increase profits. (会社は利益を増やすよう圧力を受けている)"
+          },
+          {
+            "phrase": "deploy fiscal measures",
+            "meaning": "財政措置を講じる、財政政策を実施する",
+            "usage": "The government decided to deploy fiscal measures to stimulate the economy. (政府は経済を刺激するために財政措置を講じることを決定した)"
+          },
+          {
+            "phrase": "alleviate the burden",
+            "meaning": "負担を軽減する、和らげる",
+            "usage": "The aid package aims to alleviate the burden on low-income families. (その支援策は低所得者世帯の負担を軽減することを目的としている)"
+          },
+          {
+            "phrase": "fueling inflationary pressures",
+            "meaning": "インフレ圧力を煽る、助長する",
+            "usage": "Excessive spending can be fueling inflationary pressures. (過度な支出はインフレ圧力を助長する可能性がある)"
+          }
+        ]
+      },
+      {
+        "en": "The interplay between geopolitical tensions and commodity prices further complicates the outlook, adding another layer of uncertainty to forecasting models.",
+        "ja": "地政学的緊張と一次産品価格の相互作用は、見通しをさらに複雑にし、予測モデルに不確実性の層を重ねている。",
+        "audioPath": "./assets/audio/t17870666868084871_8.wav",
+        "phrases": [
+          {
+            "phrase": "interplay between A and B",
+            "meaning": "AとBの相互作用",
+            "usage": "The interplay between technology and society is complex. (テクノロジーと社会の相互作用は複雑だ。)"
+          },
+          {
+            "phrase": "complicates the outlook",
+            "meaning": "見通しを複雑にする",
+            "usage": "New regulations will complicate the outlook for the industry. (新しい規制が業界の見通しを複雑にするだろう。)"
+          },
+          {
+            "phrase": "add another layer of uncertainty",
+            "meaning": "不確実性をさらに増す",
+            "usage": "The sudden resignation added another layer of uncertainty to the project. (突然の辞任がプロジェクトにさらなる不確実性を加えた。)"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, the path to restoring price stability will necessitate a delicate calibration of policies, coupled with adaptive strategies from businesses and consumers alike.",
+        "ja": "最終的に、物価安定を取り戻す道筋は、政策の慎重な調整と、企業および消費者双方からの適応戦略が相まって初めて実現されるだろう。",
+        "audioPath": "./assets/audio/t17870666868084871_9.wav",
+        "phrases": [
+          {
+            "phrase": "path to restoring",
+            "meaning": "回復への道筋",
+            "usage": "the path to recovery (回復への道筋) のように、目標達成へのプロセスを指す際に使われます。"
+          },
+          {
+            "phrase": "delicate calibration",
+            "meaning": "慎重な調整",
+            "usage": "政策や計画などを細かく、かつ慎重に調整する必要がある状況で使われます。"
+          },
+          {
+            "phrase": "coupled with",
+            "meaning": "〜と組み合わされて",
+            "usage": "A coupled with B の形で、二つ以上の要素が組み合わさって効果を発揮する様子を表します。"
+          },
+          {
+            "phrase": "consumers alike",
+            "meaning": "消費者に至るまで（同様に）",
+            "usage": "businesses and consumers alike のように、特定のグループ全体に影響が及ぶことを示す際に使われます。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-08-18T15:24:46.808Z"
   }
 ]
