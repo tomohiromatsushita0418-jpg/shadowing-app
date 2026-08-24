@@ -28044,5 +28044,244 @@
       }
     ],
     "createdAt": "2026-08-23T15:15:16.221Z"
+  },
+  {
+    "id": "t17875856239317490",
+    "title": "Recounting a Memorable Trip",
+    "titleJa": "思い出に残る旅行を語る",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "So, do tell, how was your much-anticipated trip to Patagonia? I've been eager to hear all about it.",
+        "ja": "それで、楽しみにしていたパタゴニア旅行はどうでしたか？ずっと詳しく聞きたいと思っていました。",
+        "audioPath": "./assets/audio/t17875856239317490_0.wav",
+        "phrases": [
+          {
+            "phrase": "do tell",
+            "meaning": "ぜひ教えてください、話してください",
+            "usage": "相手に何かについて話すよう促す、ややインフォーマルな表現です。"
+          },
+          {
+            "phrase": "much-anticipated",
+            "meaning": "待ち望まれていた、大いに期待されていた",
+            "usage": "会議やイベントなど、多くの人が楽しみにしているものに使われます。"
+          },
+          {
+            "phrase": "eager to hear",
+            "meaning": "聞きたくてたまらない、楽しみにしている",
+            "usage": "相手の話や報告に強い関心があることを示します。"
+          }
+        ]
+      },
+      {
+        "en": "It was utterly breathtaking, a truly transformative experience that far exceeded any preconceived notions I had.",
+        "ja": "もう、息をのむほど素晴らしかったです。事前に抱いていたどんな想像もはるかに超える、まさに人生観が変わるような経験でした。",
+        "audioPath": "./assets/audio/t17875856239317490_1.wav",
+        "phrases": [
+          {
+            "phrase": "transformative experience",
+            "meaning": "変革をもたらす経験",
+            "usage": "The workshop was a truly transformative experience for all participants."
+          },
+          {
+            "phrase": "far exceeded",
+            "meaning": "はるかに上回った",
+            "usage": "Our team's performance far exceeded the project goals."
+          },
+          {
+            "phrase": "preconceived notions",
+            "meaning": "先入観、固定観念",
+            "usage": "It's essential to approach new cultures without preconceived notions."
+          }
+        ]
+      },
+      {
+        "en": "The sheer majesty of the Glaciar Perito Moreno, with its thunderous calving events, left an indelible impression on my soul.",
+        "ja": "ペリトモレノ氷河の圧倒的な雄大さ、そして轟音を立てて崩れ落ちる氷塊の光景は、私の心に深く刻み込まれました。",
+        "audioPath": "./assets/audio/t17875856239317490_2.wav",
+        "phrases": [
+          {
+            "phrase": "sheer majesty",
+            "meaning": "純粋な威厳、圧倒的な雄大さ",
+            "usage": "the sheer majesty of the mountains のように、形容詞 sheer で強調して使う"
+          },
+          {
+            "phrase": "thunderous calving events",
+            "meaning": "轟音を立てて氷が崩落する現象",
+            "usage": "自然現象の描写で使われる、氷河のダイナミックな様子を表す"
+          },
+          {
+            "phrase": "indelible impression",
+            "meaning": "消えることのない印象、忘れられない印象",
+            "usage": "leave an indelible impression on my mind/soul のような形で、強い記憶に残る体験を表す"
+          }
+        ]
+      },
+      {
+        "en": "We did encounter a minor hiccup with our trekking permits, which momentarily threw a wrench in our meticulously planned itinerary.",
+        "ja": "トレッキングの許可証でちょっとした手違いがあり、綿密に計画していた旅程が一時的に狂ってしまいましたが。",
+        "audioPath": "./assets/audio/t17875856239317490_3.wav",
+        "phrases": [
+          {
+            "phrase": "encounter a hiccup",
+            "meaning": "ちょっとした問題に遭遇する",
+            "usage": "We encountered a few hiccups during the project launch. (プロジェクト立ち上げ中にいくつか小さな問題に遭遇しました。)"
+          },
+          {
+            "phrase": "throw a wrench in",
+            "meaning": "〜に支障をきたす、〜を台無しにする",
+            "usage": "The sudden budget cuts threw a wrench in our expansion plans. (突然の予算削減が、私たちの拡大計画に支障をきたしました。)"
+          },
+          {
+            "phrase": "meticulously planned",
+            "meaning": "綿密に計画された",
+            "usage": "The event was meticulously planned to ensure everything ran smoothly. (イベントはすべてがスムーズに進むように綿密に計画されました。)"
+          }
+        ]
+      },
+      {
+        "en": "However, that unexpected diversion led us to a charming, off-the-beaten-path village we would have otherwise completely missed.",
+        "ja": "しかし、その予期せぬ回り道のおかげで、他では見つけられなかったような魅力的な秘境の村を発見できたんです。",
+        "audioPath": "./assets/audio/t17875856239317490_4.wav",
+        "phrases": [
+          {
+            "phrase": "off-the-beaten-path",
+            "meaning": "あまり知られていない、隠れた",
+            "usage": "An off-the-beaten-path restaurant is one that most tourists don't know about."
+          },
+          {
+            "phrase": "otherwise completely missed",
+            "meaning": "そうでなければ完全に見逃していただろう",
+            "usage": "This phrase emphasizes that a discovery was fortunate and unlikely to have happened by chance."
+          }
+        ]
+      },
+      {
+        "en": "And the authentic Patagonian lamb asado, slow-roasted over an open fire, was an absolute culinary revelation.",
+        "ja": "それから、焚き火でじっくりと焼き上げた本場のパタゴニア産ラム肉のアサードは、まさに食の発見でした。",
+        "audioPath": "./assets/audio/t17875856239317490_5.wav",
+        "phrases": [
+          {
+            "phrase": "authentic Patagonian lamb asado",
+            "meaning": "本格的なパタゴニア風ラムのアサード（炭火焼き料理）",
+            "usage": "特定の地域や国の伝統的な料理名を表す際に使えます。例: authentic Italian pizza"
+          },
+          {
+            "phrase": "slow-roasted over an open fire",
+            "meaning": "直火でじっくりとローストされた",
+            "usage": "食材の調理法を具体的に描写する際に役立ちます。例: The vegetables were slow-roasted over an open fire."
+          },
+          {
+            "phrase": "absolute culinary revelation",
+            "meaning": "まさに食の発見（感動的な体験）",
+            "usage": "食体験や芸術作品など、非常に感銘を受けたものを表現する際に使います。"
+          }
+        ]
+      },
+      {
+        "en": "I must confess, I harbored a slight skepticism about the hype, but it genuinely lived up to its legendary reputation, and then some.",
+        "ja": "正直なところ、少しだけ過大評価されているのではと疑っていたのですが、その伝説的な評判に偽りなく、いやそれ以上でしたね。",
+        "audioPath": "./assets/audio/t17875856239317490_6.wav",
+        "phrases": [
+          {
+            "phrase": "must confess",
+            "meaning": "認めざるを得ない、告白すると",
+            "usage": "I must confess I was wrong. (私が間違っていたことを認めざるを得ません。)"
+          },
+          {
+            "phrase": "harbored skepticism",
+            "meaning": "懐疑心を抱いていた",
+            "usage": "She harbored skepticism about the project's success. (彼女はそのプロジェクトの成功に懐疑心を抱いていた。)"
+          },
+          {
+            "phrase": "lived up to its reputation",
+            "meaning": "評判に違わぬ活躍をする、期待に応える",
+            "usage": "The restaurant lived up to its reputation for excellent food. (そのレストランは素晴らしい料理という評判に違わぬ活躍をした。)"
+          },
+          {
+            "phrase": "and then some",
+            "meaning": "それ以上にも、おまけに",
+            "usage": "He finished the race in record time, and then some. (彼はレースを記録的なタイムで終え、さらにそれを上回った。)"
+          }
+        ]
+      },
+      {
+        "en": "Anyone with even a passing interest in dramatic landscapes and genuine wilderness should absolutely put it at the top of their bucket list.",
+        "ja": "壮大な景色や手つかずの自然に少しでも興味がある人なら、間違いなく人生で一度は訪れるべき場所だと思います。",
+        "audioPath": "./assets/audio/t17875856239317490_7.wav",
+        "phrases": [
+          {
+            "phrase": "passing interest",
+            "meaning": "かすかな関心、ちょっとした興味",
+            "usage": "a passing interest in art のように、一時的または表面的な興味を示す際に使われます。"
+          },
+          {
+            "phrase": "dramatic landscapes",
+            "meaning": "雄大な自然景観、ドラマチックな風景",
+            "usage": "写真や旅行記事などで、印象的で変化に富んだ景観を表現する際によく使われます。"
+          },
+          {
+            "phrase": "genuine wilderness",
+            "meaning": "手つかずの自然、本物の荒野",
+            "usage": "開発されていない、ありのままの自然環境を指す場合に用いられます。"
+          },
+          {
+            "phrase": "put it at the top of their bucket list",
+            "meaning": "人生で絶対にやりたいことリストの最上位に入れる",
+            "usage": "「死ぬまでに絶対やりたいこと」の筆頭に挙げる、という意味の口語的な表現です。"
+          }
+        ]
+      },
+      {
+        "en": "Coming back to the daily grind has been a bit jarring, to say the least; I'm still mentally adrift in those vast, untamed expanses.",
+        "ja": "日常の忙しさに戻るのは、控えめに言っても少し衝撃的でした。まだ精神的には、あの広大な手つかずの自然の中に漂っているような気分です。",
+        "audioPath": "./assets/audio/t17875856239317490_8.wav",
+        "phrases": [
+          {
+            "phrase": "the daily grind",
+            "meaning": "日常の単調な仕事、退屈なルーティン",
+            "usage": "仕事の厳しさや日常の繰り返しを表現する際に使う。"
+          },
+          {
+            "phrase": "a bit jarring",
+            "meaning": "少し衝撃的な、不快な",
+            "usage": "予期せぬ変化や出来事への反応を表す際に使う。"
+          },
+          {
+            "phrase": "to say the least",
+            "meaning": "控えめに言っても、少なくとも",
+            "usage": "強調したいときに文末に加える表現。"
+          },
+          {
+            "phrase": "mentally adrift",
+            "meaning": "精神的にさまよっている、心が集中できていない",
+            "usage": "集中力散漫な状態や、心が別の場所にある状態を表す。"
+          }
+        ]
+      },
+      {
+        "en": "I'm already poring over maps and guidebooks, contemplating my next grand adventure, perhaps somewhere equally remote and awe-inspiring.",
+        "ja": "もうすでに地図やガイドブックを穴が開くほど眺めていて、次の壮大な冒険を考えています。今度は同じくらい人里離れた、畏敬の念を抱かせるような場所がいいですね。",
+        "audioPath": "./assets/audio/t17875856239317490_9.wav",
+        "phrases": [
+          {
+            "phrase": "poring over",
+            "meaning": "熟読する、綿密に調べる",
+            "usage": "契約書や報告書をporing overする、のようにビジネスでも使える。"
+          },
+          {
+            "phrase": "grand adventure",
+            "meaning": "壮大な冒険",
+            "usage": "「grand plan」（壮大な計画）のように他の名詞と組み合わせて使う。"
+          },
+          {
+            "phrase": "awe-inspiring",
+            "meaning": "畏敬の念を抱かせる、感動的な",
+            "usage": "「awe-inspiring performance」（感動的なパフォーマンス）のように使う。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-08-24T15:33:43.931Z"
   }
 ]
