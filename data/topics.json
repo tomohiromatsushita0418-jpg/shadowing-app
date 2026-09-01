@@ -29816,5 +29816,163 @@
       }
     ],
     "createdAt": "2026-08-31T20:34:19.790Z"
+  },
+  {
+    "id": "t17882859706397188",
+    "title": "Settling Into My New Neighborhood",
+    "titleJa": "新しい近所での生活に慣れる",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "It's been a whirlwind since I moved into the new place, but I'm finally starting to feel settled.",
+        "ja": "引っ越してからは目まぐるしい日々でしたが、ようやく落ち着き始めた感じです。",
+        "audioPath": "./assets/audio/t17882859706397188_0.wav",
+        "phrases": [
+          {
+            "phrase": "a whirlwind",
+            "meaning": "目まぐるしい出来事、混乱",
+            "usage": "It's been a whirlwind since I started the new job. のように、新しい状況で忙しい様子を表す。"
+          },
+          {
+            "phrase": "feel settled",
+            "meaning": "落ち着く、慣れる",
+            "usage": "After a few weeks, I finally feel settled in my new apartment. のように、新しい環境に慣れて安心した状態を表す。"
+          }
+        ]
+      },
+      {
+        "en": "The initial unpacking chaos has subsided, and I've even managed to find a few hidden gems in the vicinity.",
+        "ja": "最初の荷解きの混乱は収まり、近所にはいくつかの隠れた名店も見つけましたよ。",
+        "audioPath": "./assets/audio/t17882859706397188_1.wav",
+        "phrases": [
+          {
+            "phrase": "unpacking chaos",
+            "meaning": "荷解きの混乱",
+            "usage": "引っ越し直後の散らかった状況を表す際に使えます。"
+          },
+          {
+            "phrase": "has subsided",
+            "meaning": "（騒ぎや感情などが）静まった、収まった",
+            "usage": "The storm has subsided. のように、自然現象や感情の鎮静化にも使えます。"
+          },
+          {
+            "phrase": "hidden gems",
+            "meaning": "隠れた逸品、素晴らしいもの",
+            "usage": "思わぬ場所で見つけた素晴らしいものや、あまり知られていない良い場所などを指します。"
+          },
+          {
+            "phrase": "in the vicinity",
+            "meaning": "近所で、近辺に",
+            "usage": "near here とほぼ同義ですが、ややフォーマルな響きがあります。"
+          }
+        ]
+      },
+      {
+        "en": "I've been making a conscious effort to explore the local independent shops and cafes, and it's been quite rewarding.",
+        "ja": "地元の個人商店やカフェを積極的に開拓するようにしていて、それがなかなか楽しいんです。",
+        "phrases": [
+          {
+            "phrase": "making a conscious effort",
+            "meaning": "意識的に努力している",
+            "usage": "新しい習慣を身につける際などに使う表現です。"
+          },
+          {
+            "phrase": "explore the local independent shops and cafes",
+            "meaning": "地元の個人経営の店やカフェを巡る",
+            "usage": "地域経済を応援する文脈などで使われます。"
+          },
+          {
+            "phrase": "quite rewarding",
+            "meaning": "非常にやりがいのある、満足のいく",
+            "usage": "努力が実を結んだ時や、経験から得られる満足感を表現する際に使います。"
+          }
+        ]
+      },
+      {
+        "en": "Last weekend, I stumbled upon a charming little bookstore that felt like stepping into a different era.",
+        "ja": "先週末、まるで別世界に迷い込んだかのような魅力的な小さな本屋さんを見つけたんですよ。",
+        "audioPath": "./assets/audio/t17882859706397188_3.wav",
+        "phrases": [
+          {
+            "phrase": "stumbled upon",
+            "meaning": "偶然見つける",
+            "usage": "偶然、思いがけず何かを見つけた状況で使われます。例: I stumbled upon an old photograph in the attic."
+          },
+          {
+            "phrase": "stepping into",
+            "meaning": "〜に足を踏み入れる、〜の世界に入る",
+            "usage": "物理的な場所だけでなく、比喩的に新しい状況や環境に入ることを表します。例: It felt like stepping into a fairy tale."
+          },
+          {
+            "phrase": "a different era",
+            "meaning": "異なる時代",
+            "usage": "過去の時代や、現代とはかけ離れた雰囲気を持つ場所や状況を表現する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The community vibe here is surprisingly vibrant; people are genuinely friendly and keen to strike up a conversation.",
+        "ja": "ここのコミュニティの雰囲気は驚くほど活気があって、皆さんが本当に気さくで、気軽に話しかけてくれます。",
+        "phrases": [
+          {
+            "phrase": "community vibe",
+            "meaning": "地域社会の雰囲気、コミュニティの雰囲気",
+            "usage": "The office has a great community vibe. (そのオフィスは素晴らしいコミュニティの雰囲気がある。)"
+          },
+          {
+            "phrase": "genuinely friendly",
+            "meaning": "心から親切な、本当にフレンドリーな",
+            "usage": "She was genuinely friendly to everyone she met. (彼女は会う人すべてに心から親切だった。)"
+          },
+          {
+            "phrase": "keen to strike up a conversation",
+            "meaning": "会話を始めることに熱心な、積極的に話しかけようとする",
+            "usage": "He's always keen to strike up a conversation with new people. (彼はいつも新しい人たちに積極的に話しかけようとする。)"
+          }
+        ]
+      },
+      {
+        "en": "I even had a delightful chat with my next-door neighbor about gardening tips, which was an unexpected but pleasant encounter.",
+        "ja": "隣の住人とはガーデニングのコツについて楽しいおしゃべりまでしました。思いがけないことでしたが、嬉しい出会いでしたね。",
+        "audioPath": "./assets/audio/t17882859706397188_5.wav",
+        "phrases": [
+          {
+            "phrase": "next-door neighbor",
+            "meaning": "隣人",
+            "usage": "my next-door neighbor のように所有格で使うことが多いです。"
+          },
+          {
+            "phrase": "pleasant encounter",
+            "meaning": "心地よい出会い",
+            "usage": "unexpected but pleasant encounter のように、予期せぬ良い出来事を表す際に使われます。"
+          },
+          {
+            "phrase": "about gardening tips",
+            "meaning": "園芸のコツについて",
+            "usage": "特定の話題について話す際に about + 複数形 の形で使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Getting around without a car has been a bit of an adjustment, but the public transport network is remarkably efficient.",
+        "ja": "車なしで移動するのは少し慣れが必要でしたが、公共交通機関のネットワークが驚くほど効率的なんです。",
+        "audioPath": "./assets/audio/t17882859706397188_6.wav"
+      },
+      {
+        "en": "I'm still figuring out the best routes for my morning jogs, but the scenic park nearby is quickly becoming my favorite spot.",
+        "ja": "朝のジョギングに最適なルートはまだ模索中ですが、近くの景色が良い公園はすっかりお気に入りの場所になりつつあります。",
+        "audioPath": "./assets/audio/t17882859706397188_7.wav"
+      },
+      {
+        "en": "Overall, it feels like I'm slowly but surely weaving myself into the fabric of this new environment.",
+        "ja": "全体的に見て、この新しい環境に、ゆっくりとですが着実に馴染んできている感じです。",
+        "audioPath": "./assets/audio/t17882859706397188_8.wav"
+      },
+      {
+        "en": "I'm genuinely looking forward to discovering what other charms and experiences this neighborhood has in store for me.",
+        "ja": "この近所がこれからどんな魅力や経験を用意してくれているのか、心から楽しみにしています。"
+      }
+    ],
+    "createdAt": "2026-09-01T18:06:10.639Z"
   }
 ]
