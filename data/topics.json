@@ -29886,7 +29886,8 @@
             "meaning": "非常にやりがいのある、満足のいく",
             "usage": "努力が実を結んだ時や、経験から得られる満足感を表現する際に使います。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17882859706397188_2.wav"
       },
       {
         "en": "Last weekend, I stumbled upon a charming little bookstore that felt like stepping into a different era.",
@@ -29956,23 +29957,333 @@
       {
         "en": "Getting around without a car has been a bit of an adjustment, but the public transport network is remarkably efficient.",
         "ja": "車なしで移動するのは少し慣れが必要でしたが、公共交通機関のネットワークが驚くほど効率的なんです。",
-        "audioPath": "./assets/audio/t17882859706397188_6.wav"
+        "audioPath": "./assets/audio/t17882859706397188_6.wav",
+        "phrases": [
+          {
+            "phrase": "Getting around",
+            "meaning": "移動する、動き回る",
+            "usage": "「街を移動するのは簡単だ」のように使う。"
+          },
+          {
+            "phrase": "a bit of an adjustment",
+            "meaning": "少しの調整、慣れが必要なこと",
+            "usage": "新しい環境や状況に慣れる際に使う。「最初は少し慣れが必要だった」"
+          },
+          {
+            "phrase": "public transport network",
+            "meaning": "公共交通網",
+            "usage": "交通インフラや都市計画について話す際によく使われる。"
+          }
+        ]
       },
       {
         "en": "I'm still figuring out the best routes for my morning jogs, but the scenic park nearby is quickly becoming my favorite spot.",
         "ja": "朝のジョギングに最適なルートはまだ模索中ですが、近くの景色が良い公園はすっかりお気に入りの場所になりつつあります。",
-        "audioPath": "./assets/audio/t17882859706397188_7.wav"
+        "audioPath": "./assets/audio/t17882859706397188_7.wav",
+        "phrases": [
+          {
+            "phrase": "figuring out",
+            "meaning": "〜を理解する、〜を解決する、〜を見つけ出す",
+            "usage": "問題の原因や最適な方法を特定する際によく使う表現。"
+          },
+          {
+            "phrase": "quickly becoming",
+            "meaning": "急速に〜になりつつある",
+            "usage": "市場のトレンドや状況が速やかに変化していることを述べる際に使う。"
+          }
+        ]
       },
       {
         "en": "Overall, it feels like I'm slowly but surely weaving myself into the fabric of this new environment.",
         "ja": "全体的に見て、この新しい環境に、ゆっくりとですが着実に馴染んできている感じです。",
-        "audioPath": "./assets/audio/t17882859706397188_8.wav"
+        "audioPath": "./assets/audio/t17882859706397188_8.wav",
+        "phrases": [
+          {
+            "phrase": "slowly but surely",
+            "meaning": "着実に、ゆっくりとだが確実に",
+            "usage": "Slowly but surely, the project is moving forward. (プロジェクトはゆっくりだが着実に進んでいる)"
+          },
+          {
+            "phrase": "weaving myself into",
+            "meaning": "（環境や集団などに）溶け込んでいく、入り込んでいく",
+            "usage": "She is weaving herself into the local community. (彼女は地域社会に溶け込もうとしている)"
+          },
+          {
+            "phrase": "the fabric of",
+            "meaning": "〜の構造、基盤、成り立ち",
+            "usage": "the fabric of society (社会の構造) のように、抽象的なものの根幹を表す際によく使われる"
+          }
+        ]
       },
       {
         "en": "I'm genuinely looking forward to discovering what other charms and experiences this neighborhood has in store for me.",
-        "ja": "この近所がこれからどんな魅力や経験を用意してくれているのか、心から楽しみにしています。"
+        "ja": "この近所がこれからどんな魅力や経験を用意してくれているのか、心から楽しみにしています。",
+        "phrases": [
+          {
+            "phrase": "genuinely looking forward to",
+            "meaning": "心から楽しみにしている",
+            "usage": "I'm genuinely looking forward to our meeting next week. (来週の会議を心から楽しみにしています。)"
+          },
+          {
+            "phrase": "has in store for",
+            "meaning": "（将来）～に用意している、待ち受けている",
+            "usage": "Who knows what the future has in store for us? (未来が私たちに何を用意しているかなんて、誰にもわからない。)"
+          },
+          {
+            "phrase": "other charms and experiences",
+            "meaning": "その他の魅力や経験",
+            "usage": "This city offers other charms and experiences beyond the tourist spots. (この街は観光地以外にも、その他の魅力や経験を提供しています。)"
+          }
+        ]
       }
     ],
     "createdAt": "2026-09-01T18:06:10.639Z"
+  },
+  {
+    "id": "t17883732388310395",
+    "title": "Strategic Repositioning in a Competitive Landscape",
+    "titleJa": "競争の激しい市場における戦略的再編",
+    "category": "Business",
+    "sentences": [
+      {
+        "en": "Our market share has been steadily eroding, compelling us to critically reassess our value proposition in this intensely competitive landscape.",
+        "ja": "当社の市場シェアは着実に低下しており、この非常に競争の激しい状況下で、私たちの価値提案を根本的に再評価せざるを得ません。",
+        "audioPath": "./assets/audio/t17883732388310395_0.wav",
+        "phrases": [
+          {
+            "phrase": "steadily eroding",
+            "meaning": "着実に侵食されている、徐々に失われている",
+            "usage": "market shareが徐々に減少している状況を表すのに適しています。"
+          },
+          {
+            "phrase": "compelling us to",
+            "meaning": "〜せざるを得なくさせる、〜を強く促す",
+            "usage": "状況が私たちに行動を促す場合に使われます。"
+          },
+          {
+            "phrase": "critically reassess",
+            "meaning": "綿密に再評価する、厳しく見直す",
+            "usage": "現状を真剣に分析し、見直す必要があることを示します。"
+          },
+          {
+            "phrase": "intensely competitive",
+            "meaning": "非常に競争の激しい",
+            "usage": "競争が激しい市場状況を説明する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "To reclaim our competitive edge, we must meticulously analyze shifting consumer preferences and emerging technological paradigms.",
+        "ja": "競争優位を取り戻すためには、変化する顧客の嗜好と新たな技術パラダイムを綿密に分析する必要があります。",
+        "audioPath": "./assets/audio/t17883732388310395_1.wav",
+        "phrases": [
+          {
+            "phrase": "reclaim our competitive edge",
+            "meaning": "競争優位性を取り戻す",
+            "usage": "企業が市場での地位を回復する際に使われる表現です。"
+          },
+          {
+            "phrase": "meticulously analyze",
+            "meaning": "綿密に分析する",
+            "usage": "細部まで注意深く調査・検討するニュアンスがあります。"
+          },
+          {
+            "phrase": "shifting consumer preferences",
+            "meaning": "変化する消費者の嗜好",
+            "usage": "市場調査やマーケティング戦略で頻繁に用いられる表現です。"
+          },
+          {
+            "phrase": "emerging technological paradigms",
+            "meaning": "台頭する技術パラダイム（新しい技術体系や考え方）",
+            "usage": "新しい技術の動向や、それがもたらす大きな変化を指す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The executive team is currently deliberating various strategic imperatives, including a potential pivot towards higher-margin, specialized product offerings.",
+        "ja": "経営陣は現在、より利益率の高い専門製品への転換を含む、さまざまな戦略的要件について熟考しています。",
+        "audioPath": "./assets/audio/t17883732388310395_2.wav",
+        "phrases": [
+          {
+            "phrase": "deliberating various strategic imperatives",
+            "meaning": "様々な戦略的必須事項を熟考している",
+            "usage": "企業の重要方針決定の文脈で使われます。"
+          },
+          {
+            "phrase": "potential pivot towards",
+            "meaning": "〜への潜在的な転換",
+            "usage": "事業戦略や方向性の変更について話す際に使われます。"
+          },
+          {
+            "phrase": "higher-margin, specialized product offerings",
+            "meaning": "より利益率が高く、専門化された製品提供",
+            "usage": "企業の製品戦略や収益性向上策を説明する際に用いられます。"
+          }
+        ]
+      },
+      {
+        "en": "A comprehensive brand revitalization campaign is paramount to recalibrating public perception and differentiating ourselves from formidable rivals.",
+        "ja": "一般の認識を再調整し、強力な競合他社との差別化を図るためには、包括的なブランド再活性化キャンペーンが不可欠です。",
+        "phrases": [
+          {
+            "phrase": "brand revitalization campaign",
+            "meaning": "ブランド再生キャンペーン",
+            "usage": "企業がイメージ刷新や売上向上を目指す際に行われる活動を指します。"
+          },
+          {
+            "phrase": "is paramount to",
+            "meaning": "〜にとって極めて重要である",
+            "usage": "It is paramount to secure funding. (資金確保が極めて重要だ)"
+          },
+          {
+            "phrase": "recalibrating public perception",
+            "meaning": "世間の認識を再調整すること",
+            "usage": "企業の評判やイメージを意図的に変えたい場合に用いられます。"
+          },
+          {
+            "phrase": "differentiating ourselves from",
+            "meaning": "〜との差別化を図る",
+            "usage": "競合他社との違いを明確にし、独自の価値をアピールする際に使います。"
+          }
+        ]
+      },
+      {
+        "en": "We envision leveraging our core competencies in innovation and customer service to carve out a distinctive niche in the crowded marketplace.",
+        "ja": "混雑した市場で独自のニッチを切り開くため、私たちはイノベーションと顧客サービスにおける中核的競争力を活用することを構想しています。",
+        "audioPath": "./assets/audio/t17883732388310395_4.wav",
+        "phrases": [
+          {
+            "phrase": "leveraging our core competencies",
+            "meaning": "中核となる能力を活用すること",
+            "usage": "This phrase is common in business strategy discussions, meaning to effectively use a company's main strengths."
+          },
+          {
+            "phrase": "carve out a distinctive niche",
+            "meaning": "独自のニッチ（市場での特別な位置）を切り開くこと",
+            "usage": "This idiom suggests creating a unique and specialized position in a competitive market."
+          },
+          {
+            "phrase": "crowded marketplace",
+            "meaning": "競争の激しい市場",
+            "usage": "Used to describe a market with many competitors, making it difficult to stand out."
+          }
+        ]
+      },
+      {
+        "en": "This strategic realignment will necessitate significant investment in R&D and a robust overhaul of our operational infrastructure.",
+        "ja": "この戦略的再編は、研究開発への多大な投資と、当社の運用インフラの大幅な見直しを必要とするでしょう。",
+        "audioPath": "./assets/audio/t17883732388310395_5.wav",
+        "phrases": [
+          {
+            "phrase": "strategic realignment",
+            "meaning": "戦略的再編成",
+            "usage": "企業の組織変更や事業方針の転換などを指す際に使われます。"
+          },
+          {
+            "phrase": "significant investment",
+            "meaning": "多額の投資",
+            "usage": "研究開発（R&D）や新規事業への資金投入など、重要な投資を意味します。"
+          },
+          {
+            "phrase": "robust overhaul",
+            "meaning": "抜本的な改革、徹底的な見直し",
+            "usage": "既存のシステムやプロセスを全面的に改善・刷新する際に使われます。"
+          },
+          {
+            "phrase": "operational infrastructure",
+            "meaning": "事業運営基盤、業務インフラ",
+            "usage": "企業の日常的な業務遂行に必要な設備、システム、組織体制などを指します。"
+          }
+        ]
+      },
+      {
+        "en": "Evidently, proactive stakeholder communication will be crucial in garnering support and ensuring a seamless transition throughout this transformation.",
+        "ja": "明らかに、この変革全体を通じて支持を得て、円滑な移行を確実にするためには、積極的なステークホルダーとのコミュニケーションが極めて重要となります。",
+        "audioPath": "./assets/audio/t17883732388310395_6.wav",
+        "phrases": [
+          {
+            "phrase": "proactive stakeholder communication",
+            "meaning": "積極的な利害関係者とのコミュニケーション",
+            "usage": "変化やプロジェクトの初期段階から関係者と積極的に情報共有することの重要性を示す際に使われます。"
+          },
+          {
+            "phrase": "garnering support",
+            "meaning": "支持を得ること",
+            "usage": "新しい計画や提案に対する賛同や協力を引き出す状況で使われます。"
+          },
+          {
+            "phrase": "seamless transition",
+            "meaning": "円滑な移行",
+            "usage": "組織変更やシステム導入などで、混乱なくスムーズに新しい状態へ移行することを示す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "We anticipate that this bold move will not only stem the tide of declining revenue but also unlock substantial avenues for future growth.",
+        "ja": "この大胆な一手が、収益減少の流れを食い止めるだけでなく、将来の成長に向けた大きな道筋を切り開くと期待しています。",
+        "audioPath": "./assets/audio/t17883732388310395_7.wav",
+        "phrases": [
+          {
+            "phrase": "anticipate that",
+            "meaning": "～ということを予期する、予測する",
+            "usage": "We anticipate that the project will be completed on time. (そのプロジェクトが予定通り完了すると予測しています)"
+          },
+          {
+            "phrase": "stem the tide of",
+            "meaning": "～の勢いを食い止める、阻止する",
+            "usage": "It is difficult to stem the tide of inflation. (インフレの勢いを食い止めるのは難しい)"
+          },
+          {
+            "phrase": "unlock avenues for",
+            "meaning": "～への道を開く、～の可能性を引き出す",
+            "usage": "This new technology could unlock avenues for scientific discovery. (この新技術は科学的発見への道を開く可能性がある)"
+          }
+        ]
+      },
+      {
+        "en": "Our objective is to transition from a volume-driven model to one predicated on value creation and long-term customer loyalty.",
+        "ja": "私たちの目標は、量重視のモデルから、価値創造と長期的な顧客ロイヤルティに基づくモデルへと移行することです。",
+        "audioPath": "./assets/audio/t17883732388310395_8.wav",
+        "phrases": [
+          {
+            "phrase": "objective is to transition from A to B",
+            "meaning": "AからBへ移行することが目的である",
+            "usage": "The company's objective is to transition from traditional retail to e-commerce."
+          },
+          {
+            "phrase": "predicated on",
+            "meaning": "〜に基づいている、〜を前提としている",
+            "usage": "This strategy is predicated on the assumption that the market will grow."
+          },
+          {
+            "phrase": "long-term customer loyalty",
+            "meaning": "長期的な顧客ロイヤルティ（顧客からの信頼や愛着）",
+            "usage": "Building long-term customer loyalty is crucial for sustainable business growth."
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, success hinges on our collective ability to adapt swiftly and execute this strategic vision with unwavering conviction.",
+        "ja": "究極的には、成功は、私たちが迅速に適応し、この戦略的ビジョンを揺るぎない確信を持って実行する集合的な能力にかかっています。",
+        "phrases": [
+          {
+            "phrase": "hinges on",
+            "meaning": "〜にかかっている、〜次第である",
+            "usage": "The success of the project hinges on effective teamwork. (プロジェクトの成功は効果的なチームワークにかかっている。)"
+          },
+          {
+            "phrase": "adapt swiftly",
+            "meaning": "迅速に適応する",
+            "usage": "Businesses must adapt swiftly to market changes. (企業は市場の変化に迅速に適応しなければならない。)"
+          },
+          {
+            "phrase": "unwavering conviction",
+            "meaning": "揺るぎない確信、不動の信念",
+            "usage": "She presented her ideas with unwavering conviction. (彼女は揺るぎない確信を持って自分のアイデアを提示した。)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-09-02T18:20:38.831Z"
   }
 ]
