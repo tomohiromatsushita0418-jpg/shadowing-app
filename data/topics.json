@@ -30810,9 +30810,249 @@
             "meaning": "急速に変化する",
             "usage": "「rapidly evolving market/technology」のように、変化の速い状況を説明する際に使う。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17885446965123468_9.wav"
       }
     ],
     "createdAt": "2026-09-04T17:58:16.512Z"
+  },
+  {
+    "id": "t17886278402213742",
+    "title": "Embracing a Slower Pace",
+    "titleJa": "ゆったりとしたペースを受け入れる",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "It's such a relief to finally emerge from that whirlwind of deadlines; I feel like I can breathe again.",
+        "ja": "あの怒涛の締め切りラッシュからようやく抜け出せて、本当にホッとしています。やっと一息つけますよ。",
+        "audioPath": "./assets/audio/t17886278402213742_0.wav",
+        "phrases": [
+          {
+            "phrase": "such a relief",
+            "meaning": "本当に安心した、ほっとした",
+            "usage": "It's such a relief to hear that you're okay. のように、何か良い知らせや状況の改善に対して使う"
+          },
+          {
+            "phrase": "emerge from",
+            "meaning": "〜から抜け出す、〜から現れる",
+            "usage": "emerge from a difficult period のように、困難な状況や場所から脱する際に使う"
+          },
+          {
+            "phrase": "whirlwind of deadlines",
+            "meaning": "締め切りに追われる激務、殺人的な締め切りラッシュ",
+            "usage": "a whirlwind of activity のように、非常に忙しい状況を表す比喩的な表現"
+          },
+          {
+            "phrase": "breathe again",
+            "meaning": "息をつく、安心する",
+            "usage": "After the exam, I could finally breathe again. のように、緊張やプレッシャーから解放された状態を表す"
+          }
+        ]
+      },
+      {
+        "en": "For weeks on end, I was practically living on caffeine and sheer willpower, barely getting by on minimal sleep.",
+        "ja": "何週間もぶっ通しで、カフェインと気力だけで乗り切っていたようなもので、睡眠もほとんど取れていませんでした。",
+        "audioPath": "./assets/audio/t17886278402213742_1.wav",
+        "phrases": [
+          {
+            "phrase": "weeks on end",
+            "meaning": "何週間も続けて",
+            "usage": "He worked for weeks on end to finish the project. (彼はプロジェクトを終えるために何週間もぶっ通しで働いた。)"
+          },
+          {
+            "phrase": "barely getting by",
+            "meaning": "なんとかやっていく、かろうじて生活する",
+            "usage": "With the rising cost of living, many families are barely getting by. (生活費の上昇により、多くの家族がなんとか生活している。)"
+          },
+          {
+            "phrase": "sheer willpower",
+            "meaning": "純粋な精神力、ただただ強い意志",
+            "usage": "It took sheer willpower to overcome his addiction. (彼の依存症を克服するには、ただただ強い意志が必要だった。)"
+          }
+        ]
+      },
+      {
+        "en": "Now, I'm genuinely looking forward to recalibrating my routine and embracing a much more leisurely pace for a while.",
+        "ja": "これからは、自分のルーティンを見直して、しばらくの間はもっとゆったりとしたペースで過ごすのが心から楽しみです。",
+        "audioPath": "./assets/audio/t17886278402213742_2.wav",
+        "phrases": [
+          {
+            "phrase": "genuinely looking forward to",
+            "meaning": "心から楽しみにしている",
+            "usage": "I'm genuinely looking forward to our meeting next week. のように、期待感を強調する際に使います。"
+          },
+          {
+            "phrase": "recalibrating my routine",
+            "meaning": "自分の日常（習慣）を再調整する",
+            "usage": "After the project, I need to recalibrate my routine to focus on personal development. のように、生活や仕事のペースを見直す際に使います。"
+          },
+          {
+            "phrase": "embracing a ... pace",
+            "meaning": "（〜な）ペースを受け入れる",
+            "usage": "She decided to start embracing a slower pace of life after retirement. のように、新しいライフスタイルや考え方を取り入れる際に使います。"
+          }
+        ]
+      },
+      {
+        "en": "I'm thinking of spending entire afternoons just perusing books at that cozy independent bookstore downtown, without any agenda.",
+        "ja": "予定を何も入れずに、街中にあるあの居心地の良い独立系書店で、午後いっぱい本をあさって過ごすのもいいなと思っています。",
+        "audioPath": "./assets/audio/t17886278402213742_3.wav",
+        "phrases": [
+          {
+            "phrase": "spending entire afternoons",
+            "meaning": "午後の時間を丸々費やす",
+            "usage": "週末の過ごし方として、趣味に没頭する様子を表す際に使える表現です。"
+          },
+          {
+            "phrase": "perusing books",
+            "meaning": "本をじっくり読む、精読する",
+            "usage": "単に読むだけでなく、内容を吟味しながら読むニュアンスが含まれます。"
+          },
+          {
+            "phrase": "without any agenda",
+            "meaning": "特に目的もなく、気ままに",
+            "usage": "ビジネスシーンでは「下心なく」「純粋に」といった意味合いで使われることもあります。"
+          }
+        ]
+      },
+      {
+        "en": "It's high time I recharged my batteries; I've been running on fumes for far too long.",
+        "ja": "そろそろ英気を養うべき時ですね。あまりにも長い間、燃料切れ寸前で走り続けていましたから。",
+        "audioPath": "./assets/audio/t17886278402213742_4.wav",
+        "phrases": [
+          {
+            "phrase": "high time",
+            "meaning": "～すべき頃合いだ、そろそろ～する時期だ",
+            "usage": "It's high time we started the meeting. (会議を始める頃合いだ)"
+          },
+          {
+            "phrase": "recharged my batteries",
+            "meaning": "元気を回復する、リフレッシュする",
+            "usage": "I need to take a vacation to recharge my batteries. (リフレッシュするために休暇を取る必要がある)"
+          },
+          {
+            "phrase": "running on fumes",
+            "meaning": "エネルギー切れ寸前で、ギリギリの状態で活動している",
+            "usage": "After working for 18 hours straight, he was running on fumes. (18時間ぶっ通しで働いた後、彼はギリギリの状態で活動していた)"
+          }
+        ]
+      },
+      {
+        "en": "Perhaps we could even pencil in a casual brunch sometime next week, if your schedule permits?",
+        "ja": "よろしければ、来週あたり、カジュアルなブランチでもご一緒しませんか？お時間があれば、ですが。",
+        "audioPath": "./assets/audio/t17886278402213742_5.wav",
+        "phrases": [
+          {
+            "phrase": "pencil in",
+            "meaning": "（仮に）予定を書き込む、仮決めする",
+            "usage": "Let's pencil in a meeting for Friday. のように、まだ確定ではない予定を入れる際に使う"
+          },
+          {
+            "phrase": "sometime next week",
+            "meaning": "来週のどこかで",
+            "usage": "具体的な曜日や時間が決まっていない場合に、漠然と来週中を指す表現"
+          },
+          {
+            "phrase": "if your schedule permits",
+            "meaning": "ご都合がよろしければ",
+            "usage": "相手の都合を伺う丁寧な表現で、ビジネスシーンでよく使われる"
+          }
+        ]
+      },
+      {
+        "en": "This intense period really underscored the importance of maintaining a healthy work-life equilibrium, didn't it?",
+        "ja": "この激務の期間は、ワークライフバランスを健全に保つことの重要性を改めて痛感させられましたね。",
+        "audioPath": "./assets/audio/t17886278402213742_6.wav",
+        "phrases": [
+          {
+            "phrase": "underscored the importance of",
+            "meaning": "～の重要性を強調した",
+            "usage": "His speech underscored the importance of international cooperation. のように使います。"
+          },
+          {
+            "phrase": "maintaining a healthy work-life equilibrium",
+            "meaning": "健全なワークライフバランスを維持すること",
+            "usage": "It's crucial for long-term career satisfaction. のように使います。"
+          },
+          {
+            "phrase": "didn't it?",
+            "meaning": "～ですよね？（付加疑問文）",
+            "usage": "This is a common way to seek agreement in conversation. のように使います。"
+          }
+        ]
+      },
+      {
+        "en": "I just hope I don't get restless too quickly after being constantly on the go for so long.",
+        "ja": "ただ、これだけ長い間常に動き回っていたので、すぐに落ち着かなくなってしまわないか、少し心配ですが。",
+        "audioPath": "./assets/audio/t17886278402213742_7.wav",
+        "phrases": [
+          {
+            "phrase": "restless too quickly",
+            "meaning": "あまりにも早く落ち着きがなくなる",
+            "usage": "長期間忙しく動き回った後に、すぐに退屈したり飽きたりしてしまう様子を表します。"
+          },
+          {
+            "phrase": "on the go",
+            "meaning": "忙しく動き回っている、外出している",
+            "usage": "常に忙しく活動している状態を指す一般的な表現です。"
+          },
+          {
+            "phrase": "for so long",
+            "meaning": "長い間",
+            "usage": "期間の長さを強調する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "It'll probably take a bit of conscious effort to fully decompress and truly settle into this newfound tranquility.",
+        "ja": "心からリラックスして、この新しい静けさにすっかり馴染むには、意識的に少し努力が必要になるでしょうね。",
+        "audioPath": "./assets/audio/t17886278402213742_8.wav",
+        "phrases": [
+          {
+            "phrase": "conscious effort",
+            "meaning": "意識的な努力",
+            "usage": "It takes conscious effort to learn a new language. 新しい言語を学ぶには意識的な努力が必要だ。"
+          },
+          {
+            "phrase": "fully decompress",
+            "meaning": "完全にリラックスする、緊張を解く",
+            "usage": "After a stressful week, I need to fully decompress this weekend. ストレスの多い一週間の後、今週末は完全にリラックスする必要がある。"
+          },
+          {
+            "phrase": "settle into",
+            "meaning": "〜に慣れる、〜に落ち着く",
+            "usage": "It took me a while to settle into my new job. 新しい仕事に慣れるのにしばらく時間がかかった。"
+          }
+        ]
+      },
+      {
+        "en": "But I'm determined to savor every moment of this much-needed reprieve before diving back into the fray.",
+        "ja": "ですが、再び激務に飛び込む前に、この待ち望んだ休息のひとときを一瞬一瞬大切に味わい尽くすつもりです。",
+        "audioPath": "./assets/audio/t17886278402213742_9.wav",
+        "phrases": [
+          {
+            "phrase": "determined to",
+            "meaning": "〜する決意である",
+            "usage": "I am determined to finish this project on time. このプロジェクトを期日までに終える決意です。"
+          },
+          {
+            "phrase": "savor every moment",
+            "meaning": "あらゆる瞬間を味わう、楽しむ",
+            "usage": "She tried to savor every moment of her vacation. 彼女は休暇のあらゆる瞬間を味わおうとした。"
+          },
+          {
+            "phrase": "much-needed",
+            "meaning": "切望されていた、待望の",
+            "usage": "This is a much-needed break from our busy schedule. これは忙しいスケジュールからの待望の休息です。"
+          },
+          {
+            "phrase": "diving back into",
+            "meaning": "〜に再び飛び込む、戻る",
+            "usage": "After the holidays, we'll be diving back into work. 休暇の後、私たちは仕事に再び戻ることになる。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-09-05T17:04:00.221Z"
   }
 ]
