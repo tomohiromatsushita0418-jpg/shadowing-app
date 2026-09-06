@@ -29930,7 +29930,8 @@
             "meaning": "会話を始めることに熱心な、積極的に話しかけようとする",
             "usage": "He's always keen to strike up a conversation with new people. (彼はいつも新しい人たちに積極的に話しかけようとする。)"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17882859706397188_4.wav"
       },
       {
         "en": "I even had a delightful chat with my next-door neighbor about gardening tips, which was an unexpected but pleasant encounter.",
@@ -31054,5 +31055,269 @@
       }
     ],
     "createdAt": "2026-09-05T17:04:00.221Z"
+  },
+  {
+    "id": "t17887156677531837",
+    "title": "Forging Synergies Through Post-Acquisition Integration",
+    "titleJa": "買収後統合による相乗効果の創出",
+    "category": "Business",
+    "sentences": [
+      {
+        "en": "The successful integration of the newly acquired entity is paramount to realizing the anticipated synergies and shareholder value.",
+        "ja": "買収した新会社の統合を成功させることは、期待される相乗効果と株主価値を実現するために極めて重要です。",
+        "audioPath": "./assets/audio/t17887156677531837_0.wav",
+        "phrases": [
+          {
+            "phrase": "successful integration",
+            "meaning": "新しく買収した企業の円滑な統合",
+            "usage": "The successful integration of the new team is crucial. (新チームの円滑な統合は重要だ)"
+          },
+          {
+            "phrase": "is paramount to",
+            "meaning": "～にとって極めて重要である",
+            "usage": "Customer satisfaction is paramount to our success. (顧客満足は我々の成功にとって極めて重要だ)"
+          },
+          {
+            "phrase": "realizing synergies",
+            "meaning": "相乗効果の実現",
+            "usage": "The merger is expected to realize significant synergies. (その合併は大きな相乗効果を実現すると期待されている)"
+          },
+          {
+            "phrase": "shareholder value",
+            "meaning": "株主価値",
+            "usage": "The company's strategy focuses on maximizing shareholder value. (その会社の戦略は株主価値の最大化に焦点を当てている)"
+          }
+        ]
+      },
+      {
+        "en": "We must meticulously plan the cultural assimilation process to ensure a cohesive and productive work environment.",
+        "ja": "結束力があり生産性の高い職場環境を確保するため、文化的な同化プロセスを綿密に計画する必要があります。",
+        "audioPath": "./assets/audio/t17887156677531837_1.wav",
+        "phrases": [
+          {
+            "phrase": "meticulously plan",
+            "meaning": "綿密に計画する",
+            "usage": "The team meticulously planned the product launch to avoid any issues."
+          },
+          {
+            "phrase": "cultural assimilation",
+            "meaning": "文化の同化、異文化の受け入れ",
+            "usage": "The company focused on cultural assimilation to integrate foreign employees smoothly."
+          },
+          {
+            "phrase": "cohesive and productive",
+            "meaning": "まとまりがあり生産的な",
+            "usage": "A cohesive and productive team is essential for achieving business goals."
+          },
+          {
+            "phrase": "work environment",
+            "meaning": "職場環境",
+            "usage": "Creating a positive work environment is a priority for HR."
+          }
+        ]
+      },
+      {
+        "en": "One of the primary hurdles will be harmonizing disparate IT infrastructures without disrupting ongoing operations.",
+        "ja": "主要な課題の一つは、既存の業務を中断させることなく、異なるITインフラを調和させることでしょう。",
+        "audioPath": "./assets/audio/t17887156677531837_2.wav",
+        "phrases": [
+          {
+            "phrase": "primary hurdles",
+            "meaning": "主な障害・障壁",
+            "usage": "The primary hurdles to overcome include funding and public perception. (克服すべき主な障害には、資金調達と世論が含まれます。)"
+          },
+          {
+            "phrase": "harmonizing disparate IT infrastructures",
+            "meaning": "互いに異なるITインフラを調和させる・統合する",
+            "usage": "The company is struggling with harmonizing disparate IT infrastructures after the merger. (合併後、その会社は互いに異なるITインフラの統合に苦労しています。)"
+          },
+          {
+            "phrase": "without disrupting ongoing operations",
+            "meaning": "進行中の業務を妨げることなく",
+            "usage": "We need to implement the new system without disrupting ongoing operations. (進行中の業務を妨げることなく、新しいシステムを導入する必要があります。)"
+          }
+        ]
+      },
+      {
+        "en": "Effective communication is indispensable for assuaging employee anxieties and fostering a sense of shared purpose across both organizations.",
+        "ja": "従業員の不安を和らげ、両組織間の共通の目的意識を育む上で、効果的なコミュニケーションは不可欠です。",
+        "audioPath": "./assets/audio/t17887156677531837_3.wav",
+        "phrases": [
+          {
+            "phrase": "indispensable for",
+            "meaning": "～に不可欠である",
+            "usage": "This skill is indispensable for success in this field. この分野での成功にはこのスキルが不可欠だ。"
+          },
+          {
+            "phrase": "assuaging employee anxieties",
+            "meaning": "従業員の不安を和らげる",
+            "usage": "The manager's calm explanation helped in assuaging their anxieties. マネージャーの落ち着いた説明が彼らの不安を和らげるのに役立った。"
+          },
+          {
+            "phrase": "fostering a sense of shared purpose",
+            "meaning": "共通の目的意識を育む",
+            "usage": "Team-building activities are great for fostering a sense of shared purpose. チームビルディング活動は共通の目的意識を育むのに最適だ。"
+          },
+          {
+            "phrase": "across both organizations",
+            "meaning": "両組織にわたって",
+            "usage": "The new policy needs to be implemented across both organizations. 新しい方針は両組織にわたって実施される必要がある。"
+          }
+        ]
+      },
+      {
+        "en": "Our immediate priority is to identify key talent within the acquired firm and devise robust retention strategies.",
+        "ja": "当面の最優先事項は、買収先企業内の主要な人材を特定し、強固な引き留め戦略を考案することです。",
+        "audioPath": "./assets/audio/t17887156677531837_4.wav",
+        "phrases": [
+          {
+            "phrase": "immediate priority",
+            "meaning": "最優先事項",
+            "usage": "Our immediate priority is to improve customer service. (顧客サービスの改善が最優先事項です)"
+          },
+          {
+            "phrase": "identify key talent",
+            "meaning": "主要な才能・人材を見極める",
+            "usage": "It's important to identify key talent early in the project. (プロジェクトの初期段階で主要な人材を見極めることが重要です)"
+          },
+          {
+            "phrase": "devise robust retention strategies",
+            "meaning": "強固な維持戦略を考案する",
+            "usage": "The company needs to devise robust retention strategies to keep its best employees. (会社は優秀な従業員を引き留めるために強固な維持戦略を考案する必要がある)"
+          }
+        ]
+      },
+      {
+        "en": "Leveraging the combined market reach of both companies presents an unparalleled opportunity for accelerated growth and expanded customer base.",
+        "ja": "両社の市場リーチを組み合わせることは、加速的な成長と顧客基盤の拡大にとって比類ない機会をもたらします。",
+        "audioPath": "./assets/audio/t17887156677531837_5.wav",
+        "phrases": [
+          {
+            "phrase": "Leveraging the combined market reach",
+            "meaning": "両社の市場への到達範囲を組み合わせることを活用する",
+            "usage": "新製品のプロモーションで、既存の顧客基盤を活用する際に使える表現です。"
+          },
+          {
+            "phrase": "presents an unparalleled opportunity",
+            "meaning": "比類なき機会を提供する",
+            "usage": "競合他社にはない、非常に有利な状況やチャンスを説明する際に使われます。"
+          },
+          {
+            "phrase": "accelerated growth",
+            "meaning": "加速された成長",
+            "usage": "事業の成長スピードが速まっている状況を具体的に示すのに適しています。"
+          },
+          {
+            "phrase": "expanded customer base",
+            "meaning": "拡大された顧客基盤",
+            "usage": "新規顧客の獲得や、これまでリーチできなかった層へのアプローチに成功した際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "The leadership team is committed to a phased integration approach, prioritizing critical functions initially to mitigate operational risks.",
+        "ja": "経営陣は段階的な統合アプローチにコミットしており、運用上のリスクを軽減するため、初期段階では重要な機能に優先的に取り組みます。",
+        "audioPath": "./assets/audio/t17887156677531837_6.wav",
+        "phrases": [
+          {
+            "phrase": "committed to",
+            "meaning": "～に尽力している、～に専念している",
+            "usage": "We are committed to improving customer satisfaction. のように、目標や活動への強い意志を示す際に使われます。"
+          },
+          {
+            "phrase": "phased integration approach",
+            "meaning": "段階的な統合アプローチ",
+            "usage": "新しいシステム導入などで、一度に全てを行うのではなく、段階を踏んで進める方法を指すビジネス用語です。"
+          },
+          {
+            "phrase": "prioritizing critical functions",
+            "meaning": "重要な機能を優先すること",
+            "usage": "業務やプロジェクトにおいて、何よりも先に着手すべき、または最も重要視すべき業務・機能を示す際に使われます。"
+          },
+          {
+            "phrase": "mitigate operational risks",
+            "meaning": "運営上のリスクを軽減する",
+            "usage": "ビジネスの継続性や安定性を保つために、業務遂行上の潜在的な危険や損害を小さく抑えることを意味します。"
+          }
+        ]
+      },
+      {
+        "en": "We anticipate some initial resistance to change, necessitating proactive engagement and transparent dialogue with all stakeholders.",
+        "ja": "変化に対する初期の抵抗は予想されるため、すべてのステークホルダーとの積極的な関与と透明性のある対話が必要です。",
+        "audioPath": "./assets/audio/t17887156677531837_7.wav",
+        "phrases": [
+          {
+            "phrase": "anticipate resistance",
+            "meaning": "抵抗を予期する",
+            "usage": "We anticipate resistance from the union. のように使います。"
+          },
+          {
+            "phrase": "necessitating proactive engagement",
+            "meaning": "積極的な関与を必要とする",
+            "usage": "This situation is necessitating proactive engagement from all departments. のように使います。"
+          },
+          {
+            "phrase": "transparent dialogue",
+            "meaning": "透明性のある対話",
+            "usage": "Maintaining transparent dialogue with customers is crucial. のように使います。"
+          },
+          {
+            "phrase": "all stakeholders",
+            "meaning": "全ての利害関係者",
+            "usage": "We need to consider the impact on all stakeholders. のように使います。"
+          }
+        ]
+      },
+      {
+        "en": "Establishing clear metrics for integration progress will enable us to track performance and make agile adjustments as needed.",
+        "ja": "統合の進捗状況に関する明確な指標を設定することで、実績を追跡し、必要に応じて迅速な調整を行うことが可能になります。",
+        "audioPath": "./assets/audio/t17887156677531837_8.wav",
+        "phrases": [
+          {
+            "phrase": "Establishing clear metrics",
+            "meaning": "明確な指標を設定すること",
+            "usage": "KPIを設定する、という文脈でよく使われます。"
+          },
+          {
+            "phrase": "integration progress",
+            "meaning": "統合の進捗状況",
+            "usage": "M&Aやシステム統合などの文脈で使われます。"
+          },
+          {
+            "phrase": "track performance",
+            "meaning": "業績を追跡する、業績を評価する",
+            "usage": "企業の業績やプロジェクトの進捗を監視する際に使われます。"
+          },
+          {
+            "phrase": "make agile adjustments",
+            "meaning": "機敏な調整を行う",
+            "usage": "変化の速いビジネス環境で、迅速に対応して計画を修正する際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Ultimately, our goal is not merely to merge two companies, but to forge a more formidable and innovative market leader.",
+        "ja": "最終的に、私たちの目標は単に2社を合併させることではなく、より強固で革新的な市場のリーダーを築き上げることです。",
+        "audioPath": "./assets/audio/t17887156677531837_9.wav",
+        "phrases": [
+          {
+            "phrase": "not merely to X, but to Y",
+            "meaning": "単にXするだけでなく、Yする",
+            "usage": "「〜にとどまらず、むしろ〜」と強調する構文。動詞の原形が続く。"
+          },
+          {
+            "phrase": "forge a market leader",
+            "meaning": "市場のリーダーを築き上げる",
+            "usage": "努力して強力な組織や地位を創造する際に使う。「forge a path (道を切り開く)」も類例。"
+          },
+          {
+            "phrase": "formidable market leader",
+            "meaning": "強大な市場のリーダー",
+            "usage": "競合他社にとって脅威となるような、非常に強力な市場の支配者を指す。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-09-06T17:27:47.753Z"
   }
 ]
