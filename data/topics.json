@@ -29677,7 +29677,8 @@
             "meaning": "調達先の多角化",
             "usage": "一つの供給元に頼らず、複数の供給元から調達することの重要性を示唆します。"
           }
-        ]
+        ],
+        "audioPath": "./assets/audio/t17882084597905651_4.wav"
       },
       {
         "en": "Consequently, robust M&A activity is expected to persist as firms seek to acquire specialized capabilities, secure proprietary technologies, and expand their market access in niche segments.",
@@ -31589,5 +31590,249 @@
       }
     ],
     "createdAt": "2026-09-08T18:14:36.855Z"
+  },
+  {
+    "id": "t17889776721707485",
+    "title": "Tackling a Challenging Personal Project",
+    "titleJa": "個人的な難題プロジェクトへの挑戦",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "It's been quite a whirlwind lately, but I've finally carved out some time to catch up properly.",
+        "ja": "最近は本当に目まぐるしかったけど、ようやくちゃんと近況を話せる時間が取れたよ。",
+        "audioPath": "./assets/audio/t17889776721707485_0.wav",
+        "phrases": [
+          {
+            "phrase": "quite a whirlwind",
+            "meaning": "非常に多忙な期間、てんやわんや",
+            "usage": "The past few weeks have been quite a whirlwind. (ここ数週間は本当に多忙でした。)"
+          },
+          {
+            "phrase": "carved out some time",
+            "meaning": "（苦労して）時間を作り出す、確保する",
+            "usage": "carve out a niche (ニッチを切り開く) のように、努力して何かを得る意味で使う。"
+          },
+          {
+            "phrase": "catch up properly",
+            "meaning": "きちんと遅れを取り戻す、状況を把握する",
+            "usage": "catch up on work (仕事の遅れを取り戻す) や catch up on news (ニュースを把握する) のように使う。"
+          }
+        ]
+      },
+      {
+        "en": "I've actually been pouring a significant amount of my spare time into this ambitious personal project I embarked on a few months back.",
+        "ja": "実は数ヶ月前から、個人的に始めたある意欲的なプロジェクトに、かなりの余暇を費やしているんだ。",
+        "audioPath": "./assets/audio/t17889776721707485_1.wav",
+        "phrases": [
+          {
+            "phrase": "pouring a significant amount of my spare time into",
+            "meaning": "かなりの余暇を〜に費やしている",
+            "usage": "He's pouring a lot of time into his new business. 彼は新しいビジネスに多くの時間を費やしている。"
+          },
+          {
+            "phrase": "ambitious personal project",
+            "meaning": "野心的な個人的プロジェクト",
+            "usage": "She's working on an ambitious personal project to write a novel. 彼女は小説を書くという野心的な個人的プロジェクトに取り組んでいる。"
+          },
+          {
+            "phrase": "embarked on",
+            "meaning": "〜に着手した、〜を始めた",
+            "usage": "They embarked on a new journey. 彼らは新たな旅に着手した。"
+          }
+        ]
+      },
+      {
+        "en": "It's a rather intricate undertaking, requiring a fair bit of meticulous planning and a steep learning curve in a completely new domain.",
+        "ja": "かなり複雑な作業で、綿密な計画が必要だし、全く新しい分野なので急な学習曲線も強いられているんだ。",
+        "audioPath": "./assets/audio/t17889776721707485_2.wav",
+        "phrases": [
+          {
+            "phrase": "intricate undertaking",
+            "meaning": "複雑な事業・仕事",
+            "usage": "This project is an intricate undertaking that requires significant resources. このプロジェクトは多大なリソースを必要とする複雑な事業だ。"
+          },
+          {
+            "phrase": "a fair bit of",
+            "meaning": "かなりの量の、かなりの",
+            "usage": "It takes a fair bit of time to master this skill. このスキルを習得するにはかなりの時間がかかる。"
+          },
+          {
+            "phrase": "steep learning curve",
+            "meaning": "急な学習曲線（習得が難しいこと）",
+            "usage": "The steep learning curve for this software was challenging. このソフトウェアの急な学習曲線は困難だった。"
+          },
+          {
+            "phrase": "new domain",
+            "meaning": "新しい分野",
+            "usage": "Entering a new domain requires adaptability and a willingness to learn. 新しい分野に進出するには、適応力と学習意欲が必要だ。"
+          }
+        ]
+      },
+      {
+        "en": "There have certainly been moments of sheer frustration, where I felt I was constantly hitting roadblocks, but perseverance has been key.",
+        "ja": "もちろん、常に壁にぶつかっているように感じる、純粋な苛立ちを感じる瞬間も多々あったけど、粘り強さが鍵だったね。",
+        "audioPath": "./assets/audio/t17889776721707485_3.wav",
+        "phrases": [
+          {
+            "phrase": "sheer frustration",
+            "meaning": "純粋な、まったくのフラストレーション",
+            "usage": "sheer joy (純粋な喜び) のように sheer は形容詞を強調する"
+          },
+          {
+            "phrase": "hitting roadblocks",
+            "meaning": "障害にぶつかる、行き詰まる",
+            "usage": "progress is hitting roadblocks のように進歩が停滞する状況で使われる"
+          },
+          {
+            "phrase": "perseverance has been key",
+            "meaning": "忍耐力が鍵となってきた",
+            "usage": "success depends on perseverance のように成功の要因として使われる"
+          }
+        ]
+      },
+      {
+        "en": "I've had to really hone my problem-solving skills, particularly when unanticipated technical glitches cropped up.",
+        "ja": "特に予期せぬ技術的な問題が発生した時は、問題解決能力を本当に磨かなければならなかったんだ。",
+        "audioPath": "./assets/audio/t17889776721707485_4.wav",
+        "phrases": [
+          {
+            "phrase": "hone my problem-solving skills",
+            "meaning": "問題解決能力を磨く",
+            "usage": "I need to hone my presentation skills. (プレゼン能力を磨く必要がある)"
+          },
+          {
+            "phrase": "unanticipated technical glitches",
+            "meaning": "予期せぬ技術的な不具合",
+            "usage": "We encountered unanticipated technical glitches during the launch. (ローンチ中に予期せぬ技術的な不具合に遭遇した)"
+          },
+          {
+            "phrase": "cropped up",
+            "meaning": "（問題などが）突然現れる、生じる",
+            "usage": "New problems cropped up unexpectedly. (予期せず新たな問題が生じた)"
+          }
+        ]
+      },
+      {
+        "en": "It's demanded a level of dedication I hadn't quite anticipated, often encroaching upon my weekends and evenings.",
+        "ja": "週末や夜の時間にまで及ぶことが多く、予想していなかったほどの献身が求められたよ。",
+        "audioPath": "./assets/audio/t17889776721707485_5.wav",
+        "phrases": [
+          {
+            "phrase": "a level of dedication",
+            "meaning": "ある程度の献身",
+            "usage": "It requires a high level of dedication to succeed."
+          },
+          {
+            "phrase": "hadn't quite anticipated",
+            "meaning": "全く予期していなかった",
+            "usage": "We hadn't quite anticipated the scale of the problem."
+          },
+          {
+            "phrase": "encroaching upon",
+            "meaning": "〜を侵食する、〜に及ぶ",
+            "usage": "The new policy is encroaching upon employee privacy."
+          }
+        ]
+      },
+      {
+        "en": "Despite the arduous journey, seeing the tangible progress and the vision slowly materialize has been incredibly gratifying.",
+        "ja": "大変な道のりではあったけれど、具体的な進捗が見え、構想が徐々に形になっていくのは本当に大きな喜びだった。",
+        "audioPath": "./assets/audio/t17889776721707485_6.wav",
+        "phrases": [
+          {
+            "phrase": "arduous journey",
+            "meaning": "困難な道のり、骨の折れる旅",
+            "usage": "プロジェクトや目標達成までの大変な過程を指す際に使う。"
+          },
+          {
+            "phrase": "tangible progress",
+            "meaning": "目に見える進歩、具体的な進展",
+            "usage": "会議などで「具体的な進捗が見られる」といった文脈でよく使う。"
+          },
+          {
+            "phrase": "vision materialize",
+            "meaning": "構想が具体化する、ビジョンが実現する",
+            "usage": "計画や夢が現実になる様子を表す。主語はvision。"
+          },
+          {
+            "phrase": "incredibly gratifying",
+            "meaning": "信じられないほど満足のいく、非常に喜ばしい",
+            "usage": "努力が報われた時や、大きな成果が出た時の感情を表現する。"
+          }
+        ]
+      },
+      {
+        "en": "I'm nearing the finish line now, and the prospect of finally presenting the completed work is truly exhilarating.",
+        "ja": "もうゴールは間近で、ようやく完成した作品を発表できると思うと、本当にワクワクするね。",
+        "audioPath": "./assets/audio/t17889776721707485_7.wav",
+        "phrases": [
+          {
+            "phrase": "nearing the finish line",
+            "meaning": "ゴールが近い、最終段階に来ている",
+            "usage": "プロジェクトや目標達成が間近に迫っている状況で使われます。"
+          },
+          {
+            "phrase": "the prospect of",
+            "meaning": "〜という見通し、〜という可能性",
+            "usage": "将来の良いこと、または悪いことに対する期待や懸念を表す際に使います。"
+          },
+          {
+            "phrase": "completed work",
+            "meaning": "完成した仕事、成果物",
+            "usage": "プロジェクトやタスクが完了した状態の成果物を指します。"
+          },
+          {
+            "phrase": "truly exhilarating",
+            "meaning": "本当にワクワクする、爽快な",
+            "usage": "非常に興奮したり、喜びを感じたりする強い感情を表す際に使われます。"
+          }
+        ]
+      },
+      {
+        "en": "Beyond the project itself, I feel I've undergone a significant personal transformation, gaining immense confidence and resilience.",
+        "ja": "プロジェクトそのものだけでなく、個人的にも大きな変革を経験し、計り知れない自信と回復力を得られたと感じているよ。",
+        "audioPath": "./assets/audio/t17889776721707485_8.wav",
+        "phrases": [
+          {
+            "phrase": "undergone a significant personal transformation",
+            "meaning": "大きな個人的変革を遂げる",
+            "usage": "キャリアチェンジや自己啓発の文脈でよく使われます。"
+          },
+          {
+            "phrase": "gaining immense confidence",
+            "meaning": "計り知れない自信を得る",
+            "usage": "「immense」は「計り知れないほどの」という意味で、感情や量の大きさを強調します。"
+          },
+          {
+            "phrase": "gaining resilience",
+            "meaning": "回復力・立ち直る力を得る",
+            "usage": "困難な状況から立ち直る能力を指す場合に用いられます。"
+          }
+        ]
+      },
+      {
+        "en": "It's definitely inspired me to seek out more opportunities for similar intellectually stimulating pursuits going forward.",
+        "ja": "この経験が、今後も同じように知的に刺激的な活動をもっと探求していくきっかけになったのは間違いないね。",
+        "audioPath": "./assets/audio/t17889776721707485_9.wav",
+        "phrases": [
+          {
+            "phrase": "seek out",
+            "meaning": "探し出す、見つけ出す",
+            "usage": "新しいビジネスチャンスをseek outする。"
+          },
+          {
+            "phrase": "intellectually stimulating",
+            "meaning": "知的好奇心を刺激する、知的に刺激的な",
+            "usage": "intellectually stimulating discussions (知的に刺激的な議論) のように使う。"
+          },
+          {
+            "phrase": "going forward",
+            "meaning": "今後、将来的に",
+            "usage": "今後の計画や方針を話す際によく使われる。"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-09-09T18:14:32.170Z"
   }
 ]
