@@ -193,7 +193,7 @@ export default function HomeScreen() {
                 </View>
                 <View>
                   <Text style={styles.composeTitle}>瞬間英作文</Text>
-                  <Text style={styles.phraseBookSub}>今日のトピックで10問・AI添削</Text>
+                  <Text style={styles.phraseBookSub}>過去の全エピソードからランダム10問・AI添削</Text>
                 </View>
               </View>
               <Ionicons name="chevron-forward" size={16} color="#94a3b8" />

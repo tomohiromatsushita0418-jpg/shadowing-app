@@ -95,5 +95,16 @@ export function useComposeProgress() {
     [store]
   );
 
-  return { store, getRecord, saveRecord, topicSummary };
+  // Overall comprehension across everything answered so far.
+  const overallSummary = useCallback(() => {
+    const keys = Object.keys(store);
+    let understood = 0;
+    for (const k of keys) {
+      const v = store[k].verdict;
+      if (v === 'perfect' || v === 'good') understood++;
+    }
+    return { answered: keys.length, understood };
+  }, [store]);
+
+  return { store, getRecord, saveRecord, topicSummary, overallSummary };
 }

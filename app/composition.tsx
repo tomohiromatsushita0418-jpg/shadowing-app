@@ -13,12 +13,20 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { topics, type Topic } from '../data/topics';
+import { topics } from '../data/topics';
 import { useComposeProgress, type Verdict } from '../hooks/useComposeProgress';
 
-interface Problem { ja: string; en: string }
+interface PhraseLite { phrase: string }
+interface Problem {
+  topicId: string;
+  sIndex: number;
+  ja: string;
+  en: string;
+  phrases?: PhraseLite[];
+}
 
 const GRADE_MODELS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite'];
+const RANDOM_COUNT = 10;
 
 interface Grade {
   verdict: Verdict;
@@ -29,9 +37,59 @@ interface Grade {
   alternatives?: string[];
 }
 
-function latestTopic(): Topic | undefined {
-  return topics.length ? topics[topics.length - 1] : undefined;
+// --- tile building ----------------------------------------------------------
+
+const normPhrase = (s: string) =>
+  s.toLowerCase().replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim();
+const normTok = (s: string) => s.toLowerCase().replace(/[^a-z0-9']/g, '');
+
+/** Split the reference sentence into tappable tiles: individual words, but
+ *  known idioms/phrases are merged into a single multi-word tile. */
+function buildTiles(en: string, phrases?: PhraseLite[]): string[] {
+  const tokens = en.trim().split(/\s+/).filter(Boolean);
+  const used = new Array(tokens.length).fill(false);
+  const groups: { start: number; len: number }[] = [];
+  const phraseList = (phrases ?? [])
+    .map((p) => normPhrase(p.phrase))
+    .filter((p) => p.includes(' ')) // only multi-word phrases become tiles
+    .sort((a, b) => b.length - a.length);
+
+  for (const ph of phraseList) {
+    const pw = ph.split(' ');
+    for (let i = 0; i + pw.length <= tokens.length; i++) {
+      if (used.slice(i, i + pw.length).some(Boolean)) continue;
+      let ok = true;
+      for (let j = 0; j < pw.length; j++) {
+        if (normTok(tokens[i + j]) !== pw[j]) { ok = false; break; }
+      }
+      if (ok) {
+        for (let j = 0; j < pw.length; j++) used[i + j] = true;
+        groups.push({ start: i, len: pw.length });
+        break;
+      }
+    }
+  }
+
+  const tiles: string[] = [];
+  let i = 0;
+  while (i < tokens.length) {
+    const g = groups.find((gr) => gr.start === i);
+    if (g) { tiles.push(tokens.slice(i, i + g.len).join(' ')); i += g.len; }
+    else { tiles.push(tokens[i]); i++; }
+  }
+  return tiles;
 }
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// --- grading ----------------------------------------------------------------
 
 async function gradeAnswer(problem: Problem, answer: string): Promise<Grade> {
   const key = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
@@ -93,26 +151,45 @@ const VERDICT = {
   needs_work: { label: '要修正', color: '#f87171', bg: 'rgba(248,113,113,0.12)', icon: 'close-circle' as const },
 };
 
+// --- screen -----------------------------------------------------------------
+
 export default function CompositionScreen() {
   const insets = useSafeAreaInsets();
   const navigation = useNavigation();
   const { topicId, index } = useLocalSearchParams<{ topicId?: string; index?: string }>();
   const { getRecord, saveRecord, topicSummary } = useComposeProgress();
 
-  const topic = useMemo(
-    () => (topicId ? topics.find((t) => t.id === topicId) : latestTopic()),
-    [topicId]
-  );
-  const problems: Problem[] = useMemo(
-    () => (topic ? topic.sentences.map((s) => ({ ja: s.ja, en: s.en })) : []),
-    [topic]
-  );
+  // Build the problem list. With a topicId → that topic's sentences in order.
+  // Without → a random mix across every topic ("past episodes, random").
+  const problems: Problem[] = useMemo(() => {
+    if (topicId) {
+      const t = topics.find((x) => x.id === topicId);
+      if (!t) return [];
+      return t.sentences.map((s, i) => ({
+        topicId: t.id, sIndex: i, ja: s.ja, en: s.en, phrases: s.phrases,
+      }));
+    }
+    const pool: Problem[] = [];
+    for (const t of topics) {
+      t.sentences.forEach((s, i) =>
+        pool.push({ topicId: t.id, sIndex: i, ja: s.ja, en: s.en, phrases: s.phrases })
+      );
+    }
+    return shuffle(pool).slice(0, RANDOM_COUNT);
+  }, [topicId]);
+
+  const isRandom = !topicId;
 
   const [idx, setIdx] = useState(() => {
-    const n = Number(index);
-    return Number.isFinite(n) && n >= 0 ? Math.floor(n) : 0;
+    if (topicId) {
+      const n = Number(index);
+      return Number.isFinite(n) && n >= 0 ? Math.floor(n) : 0;
+    }
+    return 0;
   });
-  const [answer, setAnswer] = useState('');
+  const [selected, setSelected] = useState<number[]>([]);
+  const [typed, setTyped] = useState('');
+  const [typeMode, setTypeMode] = useState(false);
   const [grading, setGrading] = useState(false);
   const [grade, setGrade] = useState<Grade | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -120,40 +197,52 @@ export default function CompositionScreen() {
   const scrollRef = useRef<ScrollView>(null);
 
   useEffect(() => {
-    if (topic) navigation.setOptions({ title: '瞬間英作文' });
-  }, [topic, navigation]);
+    navigation.setOptions({ title: '瞬間英作文' });
+  }, [navigation]);
 
   const problem = problems[idx];
-  const summary = topic ? topicSummary(topic.id, problems.length) : null;
-  const prevRecord = topic && problem ? getRecord(topic.id, idx) : undefined;
+
+  // Shuffled tiles, stable per problem.
+  const tiles = useMemo(
+    () => (problem ? shuffle(buildTiles(problem.en, problem.phrases)) : []),
+    [problem?.topicId, problem?.sIndex]
+  );
+
+  const answer = typeMode
+    ? typed.trim()
+    : selected.map((i) => tiles[i]).join(' ').trim();
+
+  const summary = topicId && problem ? topicSummary(topicId, problems.length) : null;
+  const prevRecord = problem ? getRecord(problem.topicId, problem.sIndex) : undefined;
 
   const submit = useCallback(async () => {
-    if (!answer.trim() || !problem || !topic) return;
+    if (!answer || !problem) return;
     setGrading(true);
     setError(null);
     setGrade(null);
     try {
-      const g = await gradeAnswer(problem, answer.trim());
+      const g = await gradeAnswer(problem, answer);
       setGrade(g);
-      saveRecord(topic.id, idx, { verdict: g.verdict, score: g.score });
+      saveRecord(problem.topicId, problem.sIndex, { verdict: g.verdict, score: g.score });
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);
     } catch {
       setError('採点に失敗しました。通信環境を確認してもう一度お試しください。');
     } finally {
       setGrading(false);
     }
-  }, [answer, problem, topic, idx, saveRecord]);
+  }, [answer, problem, saveRecord]);
 
   const goTo = useCallback((n: number) => {
     setIdx(n);
-    setAnswer('');
+    setSelected([]);
+    setTyped('');
     setGrade(null);
     setError(null);
     setShowModel(false);
     scrollRef.current?.scrollTo({ y: 0, animated: false });
   }, []);
 
-  if (!topic || !problems.length) {
+  if (!problem) {
     return (
       <View style={styles.empty}>
         <Ionicons name="create-outline" size={48} color="#475569" />
@@ -169,19 +258,18 @@ export default function CompositionScreen() {
         <Ionicons name="trophy" size={52} color="#fbbf24" />
         <Text style={styles.emptyTitle}>全{problems.length}問 完了！</Text>
         {summary && (
-          <Text style={styles.emptySub}>
-            理解度 {summary.understood} / {summary.total}{'\n'}お疲れさまでした。
-          </Text>
+          <Text style={styles.emptySub}>理解度 {summary.understood} / {summary.total}{'\n'}お疲れさまでした。</Text>
         )}
         <Pressable style={styles.primaryBtn} onPress={() => goTo(0)}>
           <Ionicons name="refresh" size={18} color="#0b1220" />
-          <Text style={styles.primaryBtnText}>最初から</Text>
+          <Text style={styles.primaryBtnText}>{isRandom ? 'もう一度（別のランダム）' : '最初から'}</Text>
         </Pressable>
       </View>
     );
   }
 
   const v = grade ? VERDICT[grade.verdict] : null;
+  const usedSet = new Set(selected);
 
   return (
     <KeyboardAvoidingView
@@ -196,14 +284,14 @@ export default function CompositionScreen() {
       >
         <View style={styles.progressRow}>
           <Text style={styles.progressText}>問題 {idx + 1} / {problems.length}</Text>
-          {summary && (
-            <Text style={styles.summaryText}>
-              理解度 {summary.understood}/{summary.total}
-            </Text>
+          {summary ? (
+            <Text style={styles.summaryText}>理解度 {summary.understood}/{summary.total}</Text>
+          ) : (
+            <Text style={styles.randomTag}>ランダム出題</Text>
           )}
         </View>
         <Text style={styles.topicText} numberOfLines={1}>
-          {topic.titleJa || topic.title}
+          {isRandom ? '過去の全エピソードから' : ''}
         </Text>
         <View style={styles.progressBar}>
           <View style={[styles.progressFill, { width: `${((idx + (grade ? 1 : 0)) / problems.length) * 100}%` }]} />
@@ -215,31 +303,87 @@ export default function CompositionScreen() {
           {prevRecord && !grade ? (
             <View style={styles.prevRow}>
               <Ionicons name={VERDICT[prevRecord.verdict].icon} size={13} color={VERDICT[prevRecord.verdict].color} />
-              <Text style={[styles.prevText, { color: VERDICT[prevRecord.verdict].color }]}>
-                前回: {prevRecord.score}点
-              </Text>
+              <Text style={[styles.prevText, { color: VERDICT[prevRecord.verdict].color }]}>前回: {prevRecord.score}点</Text>
             </View>
           ) : null}
         </View>
 
-        <Text style={styles.inputLabel}>あなたの解答（手入力・キーボードのマイクで音声入力も可）</Text>
-        <TextInput
-          style={styles.input}
-          value={answer}
-          onChangeText={setAnswer}
-          placeholder="Type your English here…"
-          placeholderTextColor="#475569"
-          multiline
-          autoCapitalize="sentences"
-          autoCorrect
-          editable={!grade}
-        />
+        {/* Input header */}
+        <View style={styles.inputHeader}>
+          <Text style={styles.inputLabel}>
+            {typeMode ? 'あなたの解答（手入力）' : '選択肢をタップして英文を組み立て'}
+          </Text>
+          {!grade && (
+            <Pressable onPress={() => setTypeMode((m) => !m)} style={styles.modeToggleBtn}>
+              <Ionicons name={typeMode ? 'apps-outline' : 'create-outline'} size={13} color="#94a3b8" />
+              <Text style={styles.modeToggleText}>{typeMode ? '選択に戻す' : '手入力'}</Text>
+            </Pressable>
+          )}
+        </View>
+
+        {typeMode ? (
+          <TextInput
+            style={styles.input}
+            value={typed}
+            onChangeText={setTyped}
+            placeholder="Type your English here…"
+            placeholderTextColor="#475569"
+            multiline
+            autoCapitalize="sentences"
+            autoCorrect
+            editable={!grade}
+          />
+        ) : (
+          <>
+            {/* Answer area */}
+            <View style={styles.answerArea}>
+              {selected.length === 0 ? (
+                <Text style={styles.answerPlaceholder}>ここに組み立てた英文が入ります</Text>
+              ) : (
+                selected.map((tileIdx, pos) => (
+                  <Pressable
+                    key={`${tileIdx}-${pos}`}
+                    style={styles.answerChip}
+                    disabled={!!grade}
+                    onPress={() => setSelected((s) => s.filter((_, p) => p !== pos))}
+                  >
+                    <Text style={styles.answerChipText}>{tiles[tileIdx]}</Text>
+                  </Pressable>
+                ))
+              )}
+            </View>
+
+            {/* Word/phrase bank */}
+            {!grade && (
+              <View style={styles.bank}>
+                {tiles.map((t, i) =>
+                  usedSet.has(i) ? null : (
+                    <Pressable
+                      key={i}
+                      style={styles.bankTile}
+                      onPress={() => setSelected((s) => [...s, i])}
+                    >
+                      <Text style={styles.bankTileText}>{t}</Text>
+                    </Pressable>
+                  )
+                )}
+              </View>
+            )}
+
+            {!grade && selected.length > 0 && (
+              <Pressable style={styles.clearBtn} onPress={() => setSelected([])}>
+                <Ionicons name="backspace-outline" size={14} color="#64748b" />
+                <Text style={styles.clearBtnText}>クリア</Text>
+              </Pressable>
+            )}
+          </>
+        )}
 
         {!grade && (
           <Pressable
-            style={[styles.primaryBtn, (!answer.trim() || grading) && styles.btnDisabled]}
+            style={[styles.primaryBtn, (!answer || grading) && styles.btnDisabled]}
             onPress={submit}
-            disabled={!answer.trim() || grading}
+            disabled={!answer || grading}
           >
             {grading ? (
               <ActivityIndicator size="small" color="#0b1220" />
@@ -263,7 +407,7 @@ export default function CompositionScreen() {
             </View>
 
             <Text style={styles.yourAnswerLabel}>あなたの解答</Text>
-            <Text style={styles.yourAnswer}>{answer.trim()}</Text>
+            <Text style={styles.yourAnswer}>{answer}</Text>
 
             <View style={styles.bestBox}>
               <Text style={styles.sectionLabel}>💡 最も自然な英語</Text>
@@ -276,14 +420,12 @@ export default function CompositionScreen() {
                 <Text style={styles.fbText}>{grade.feedback}</Text>
               </View>
             ) : null}
-
             {grade.nuance ? (
               <View style={styles.fbBox}>
                 <Text style={styles.sectionLabel}>🎯 ニュアンス・コツ</Text>
                 <Text style={styles.fbText}>{grade.nuance}</Text>
               </View>
             ) : null}
-
             {grade.alternatives && grade.alternatives.length > 0 ? (
               <View style={styles.fbBox}>
                 <Text style={styles.sectionLabel}>🔁 別の言い方</Text>
@@ -300,9 +442,7 @@ export default function CompositionScreen() {
             {showModel && <Text style={styles.modelAnswer} selectable>{problem.en}</Text>}
 
             <Pressable style={styles.primaryBtn} onPress={() => goTo(idx + 1)}>
-              <Text style={styles.primaryBtnText}>
-                {idx + 1 >= problems.length ? '結果を見る' : '次の問題へ'}
-              </Text>
+              <Text style={styles.primaryBtnText}>{idx + 1 >= problems.length ? '結果を見る' : '次の問題へ'}</Text>
               <Ionicons name="arrow-forward" size={18} color="#0b1220" />
             </Pressable>
           </View>
@@ -315,24 +455,16 @@ export default function CompositionScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#0f0f14' },
   scroll: { padding: 16 },
-  progressRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 2,
-  },
+  progressRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 2 },
   progressText: { color: '#e2e8f0', fontSize: 13, fontWeight: '800', letterSpacing: 0.5 },
   summaryText: { color: '#34d399', fontSize: 12, fontWeight: '800' },
-  topicText: { color: '#64748b', fontSize: 12, marginBottom: 8 },
+  randomTag: { color: '#22d3ee', fontSize: 12, fontWeight: '800' },
+  topicText: { color: '#64748b', fontSize: 12, marginBottom: 8, minHeight: 15 },
   progressBar: { height: 4, backgroundColor: '#1e293b', borderRadius: 2, overflow: 'hidden', marginBottom: 20 },
   progressFill: { height: 4, backgroundColor: '#22d3ee', borderRadius: 2 },
   promptCard: {
-    backgroundColor: '#161b27',
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: '#1e2d45',
-    padding: 18,
-    marginBottom: 20,
+    backgroundColor: '#161b27', borderRadius: 16, borderWidth: 1, borderColor: '#1e2d45',
+    padding: 18, marginBottom: 20,
   },
   promptLabel: {
     color: '#64748b', fontSize: 11, fontWeight: '700', letterSpacing: 1,
@@ -344,43 +476,44 @@ const styles = StyleSheet.create({
     paddingTop: 12, borderTopWidth: 1, borderTopColor: '#1e293b',
   },
   prevText: { fontSize: 12, fontWeight: '700' },
-  inputLabel: { color: '#94a3b8', fontSize: 12, marginBottom: 8, fontWeight: '600' },
+  inputHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
+  inputLabel: { color: '#94a3b8', fontSize: 12, fontWeight: '600', flex: 1 },
+  modeToggleBtn: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  modeToggleText: { color: '#94a3b8', fontSize: 12, fontWeight: '600' },
   input: {
-    backgroundColor: '#0b1220',
-    borderWidth: 1,
-    borderColor: '#334155',
-    borderRadius: 12,
-    padding: 14,
-    color: '#e2e8f0',
-    fontSize: 16,
-    lineHeight: 24,
-    minHeight: 90,
-    textAlignVertical: 'top',
-    marginBottom: 16,
+    backgroundColor: '#0b1220', borderWidth: 1, borderColor: '#334155', borderRadius: 12,
+    padding: 14, color: '#e2e8f0', fontSize: 16, lineHeight: 24, minHeight: 90,
+    textAlignVertical: 'top', marginBottom: 16,
   },
+  answerArea: {
+    flexDirection: 'row', flexWrap: 'wrap', gap: 8, minHeight: 60,
+    backgroundColor: '#0b1220', borderWidth: 1, borderColor: '#334155', borderRadius: 12,
+    padding: 12, marginBottom: 14, alignItems: 'flex-start',
+  },
+  answerPlaceholder: { color: '#475569', fontSize: 14, fontStyle: 'italic', paddingVertical: 6 },
+  answerChip: {
+    backgroundColor: '#22d3ee', borderRadius: 8, paddingHorizontal: 11, paddingVertical: 7,
+  },
+  answerChipText: { color: '#0b1220', fontSize: 15, fontWeight: '700' },
+  bank: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 8 },
+  bankTile: {
+    backgroundColor: '#1e2d45', borderWidth: 1, borderColor: '#334155', borderRadius: 8,
+    paddingHorizontal: 11, paddingVertical: 8,
+  },
+  bankTileText: { color: '#e2e8f0', fontSize: 15, fontWeight: '600' },
+  clearBtn: { flexDirection: 'row', alignItems: 'center', gap: 4, alignSelf: 'flex-end', paddingVertical: 6 },
+  clearBtnText: { color: '#64748b', fontSize: 12, fontWeight: '600' },
   primaryBtn: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 8,
-    backgroundColor: '#22d3ee',
-    paddingVertical: 15,
-    borderRadius: 999,
-    marginTop: 8,
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8,
+    backgroundColor: '#22d3ee', paddingVertical: 15, borderRadius: 999, marginTop: 8,
   },
   btnDisabled: { opacity: 0.4 },
   primaryBtnText: { color: '#0b1220', fontSize: 16, fontWeight: '800', letterSpacing: 0.3 },
   errorText: { color: '#f87171', fontSize: 13, marginTop: 12, textAlign: 'center' },
   result: { marginTop: 22 },
   verdictBadge: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-    borderWidth: 1,
-    borderRadius: 12,
-    paddingVertical: 10,
-    paddingHorizontal: 14,
-    marginBottom: 16,
+    flexDirection: 'row', alignItems: 'center', gap: 8, borderWidth: 1, borderRadius: 12,
+    paddingVertical: 10, paddingHorizontal: 14, marginBottom: 16,
   },
   verdictLabel: { fontSize: 14, fontWeight: '800', flex: 1 },
   scoreText: { fontSize: 15, fontWeight: '900' },
@@ -390,28 +523,19 @@ const styles = StyleSheet.create({
   },
   yourAnswer: { color: '#cbd5e1', fontSize: 15, lineHeight: 22, marginBottom: 16, fontStyle: 'italic' },
   bestBox: {
-    backgroundColor: 'rgba(34,211,238,0.06)',
-    borderLeftWidth: 3,
-    borderLeftColor: '#22d3ee',
-    borderRadius: 8,
-    padding: 14,
-    marginBottom: 12,
+    backgroundColor: 'rgba(34,211,238,0.06)', borderLeftWidth: 3, borderLeftColor: '#22d3ee',
+    borderRadius: 8, padding: 14, marginBottom: 12,
   },
   fbBox: {
-    backgroundColor: '#161b27',
-    borderRadius: 10,
-    padding: 14,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: '#1e2d45',
+    backgroundColor: '#161b27', borderRadius: 10, padding: 14, marginBottom: 12,
+    borderWidth: 1, borderColor: '#1e2d45',
   },
   sectionLabel: { color: '#e2e8f0', fontSize: 13, fontWeight: '800', marginBottom: 8 },
   bestText: { color: '#a5f3fc', fontSize: 17, lineHeight: 25, fontWeight: '600' },
   fbText: { color: '#cbd5e1', fontSize: 14, lineHeight: 22 },
   altText: { color: '#cbd5e1', fontSize: 14, lineHeight: 24 },
   modelToggle: {
-    flexDirection: 'row', alignItems: 'center', gap: 5, alignSelf: 'center',
-    paddingVertical: 10, marginTop: 4,
+    flexDirection: 'row', alignItems: 'center', gap: 5, alignSelf: 'center', paddingVertical: 10, marginTop: 4,
   },
   modelToggleText: { color: '#94a3b8', fontSize: 12, fontWeight: '600' },
   modelAnswer: {
