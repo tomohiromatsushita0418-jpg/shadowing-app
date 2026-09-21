@@ -15,6 +15,8 @@ import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { topics } from '../data/topics';
 import { useComposeProgress, type Verdict } from '../hooks/useComposeProgress';
+import { useAccount } from '../lib/account';
+import LockedNotice from '../components/LockedNotice';
 
 interface PhraseLite { phrase: string }
 interface Problem {
@@ -158,6 +160,7 @@ export default function CompositionScreen() {
   const navigation = useNavigation();
   const { topicId, index } = useLocalSearchParams<{ topicId?: string; index?: string }>();
   const { getRecord, saveRecord, topicSummary } = useComposeProgress();
+  const { ready: accountReady, hasAccess } = useAccount();
 
   // Build the problem list. With a topicId → that topic's sentences in order.
   // Without → a random mix across every topic ("past episodes, random").
@@ -241,6 +244,18 @@ export default function CompositionScreen() {
     setShowModel(false);
     scrollRef.current?.scrollTo({ y: 0, animated: false });
   }, []);
+
+  if (!accountReady) {
+    return <View style={styles.container} />;
+  }
+
+  if (!hasAccess) {
+    return (
+      <View style={styles.container}>
+        <LockedNotice what="瞬間英作文" />
+      </View>
+    );
+  }
 
   if (!problem) {
     return (

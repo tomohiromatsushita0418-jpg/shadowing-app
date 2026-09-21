@@ -9,8 +9,11 @@ import wordMeanings from '../../data/wordMeanings.json';
 import wordAudio from '../../data/wordAudio.json';
 import SentenceCard from '../../components/SentenceCard';
 import WordDefinitionModal from '../../components/WordDefinitionModal';
+import LockedNotice from '../../components/LockedNotice';
 import { useProgress } from '../../hooks/useProgress';
 import { audioKey, playShort, resolveAudioUri } from '../../lib/audio';
+import { isPreviewTopic } from '../../lib/access';
+import { useAccount } from '../../lib/account';
 
 interface DictionaryMeaning {
   partOfSpeech: string;
@@ -72,6 +75,7 @@ export default function TopicScreen() {
   const navigation = useNavigation();
   const router = useRouter();
   const { isComplete, toggleComplete, recordStudy } = useProgress();
+  const { ready: accountReady, hasAccess } = useAccount();
 
   // Return to the topic list. When the app was opened directly via a deep
   // link (e.g. the notification email), there's no screen to go "back" to,
@@ -84,8 +88,12 @@ export default function TopicScreen() {
     }
   }, [navigation, router]);
 
-  const topic = topics.find((t) => t.id === id);
+  const topicIndex = topics.findIndex((t) => t.id === id);
+  const topic = topicIndex >= 0 ? topics[topicIndex] : undefined;
   const completed = topic ? isComplete(topic.id) : false;
+  // The newest few episodes stay open to everyone so visitors arriving from
+  // search or social can actually hear the product before signing up.
+  const unlocked = hasAccess || isPreviewTopic(topicIndex, topics.length);
 
   const [speakingIndex, setSpeakingIndex] = useState<number | null>(null);
   const [loadingIndex, setLoadingIndex] = useState<number | null>(null);
@@ -329,6 +337,20 @@ export default function TopicScreen() {
     return (
       <View style={styles.centered}>
         <Text style={styles.errorText}>Topic not found.</Text>
+      </View>
+    );
+  }
+
+  // Wait for the session lookup before deciding — otherwise a paying user sees
+  // the lock flash on every navigation.
+  if (!accountReady) {
+    return <View style={styles.centered} />;
+  }
+
+  if (!unlocked) {
+    return (
+      <View style={styles.container}>
+        <LockedNotice what="このエピソード" />
       </View>
     );
   }

@@ -12,6 +12,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { usePhraseBook, type SavedPhrase } from '../hooks/usePhraseBook';
 import phraseAudio from '../data/phraseAudio.json';
 import { audioKey, playShort } from '../lib/audio';
+import { useAccount } from '../lib/account';
+import LockedNotice from '../components/LockedNotice';
 
 const PHRASE_AUDIO: Record<string, string> = phraseAudio as Record<string, string>;
 
@@ -19,6 +21,7 @@ export default function PhraseBookScreen() {
   const navigation = useNavigation();
   const insets = useSafeAreaInsets();
   const { phrases, removePhrase } = usePhraseBook();
+  const { ready: accountReady, hasAccess } = useAccount();
 
   useFocusEffect(
     useCallback(() => {
@@ -63,6 +66,18 @@ export default function PhraseBookScreen() {
       ) : null}
     </TouchableOpacity>
   );
+
+  if (!accountReady) {
+    return <View style={styles.container} />;
+  }
+
+  if (!hasAccess) {
+    return (
+      <View style={styles.container}>
+        <LockedNotice what="熟語帳" />
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>

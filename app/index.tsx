@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { topics, type Topic } from '../data/topics';
 import FolderCard from '../components/FolderCard';
+import AccountBanner from '../components/AccountBanner';
 import { useProgress } from '../hooks/useProgress';
 
 const FOLDER_SIZE = 10;
@@ -115,6 +116,8 @@ export default function HomeScreen() {
                 </Text>
               </View>
             </LinearGradient>
+
+            <AccountBanner />
 
             {/* Today's pick */}
             {featured && (

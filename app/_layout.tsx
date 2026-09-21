@@ -1,5 +1,6 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { AccountProvider } from '../lib/account';
 
 // Ensure Home (index) is always the stack anchor — even when the app is
 // opened directly via a deep link to /topic/<id> (e.g. from the notification
@@ -11,7 +12,7 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   return (
-    <>
+    <AccountProvider>
       <StatusBar style="light" />
       <Stack
         screenOptions={{
@@ -41,7 +42,23 @@ export default function RootLayout() {
           name="topic/[id]"
           options={{ title: '', headerBackTitle: 'Back' }}
         />
+        <Stack.Screen
+          name="login"
+          options={{ title: 'ログイン', headerBackTitle: 'Home' }}
+        />
+        <Stack.Screen
+          name="paywall"
+          options={{ title: 'プラン', headerBackTitle: 'Home', presentation: 'modal' }}
+        />
+        <Stack.Screen
+          name="account"
+          options={{ title: 'アカウント', headerBackTitle: 'Home' }}
+        />
+        <Stack.Screen
+          name="legal"
+          options={{ title: '規約・特商法表記', headerBackTitle: 'Back' }}
+        />
       </Stack>
-    </>
+    </AccountProvider>
   );
 }
