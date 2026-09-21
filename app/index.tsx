@@ -7,7 +7,9 @@ import { useRouter } from 'expo-router';
 import { topics, type Topic } from '../data/topics';
 import FolderCard from '../components/FolderCard';
 import AccountBanner from '../components/AccountBanner';
+import Welcome from '../components/Welcome';
 import { useProgress } from '../hooks/useProgress';
+import { useOnboarding } from '../hooks/useOnboarding';
 
 const FOLDER_SIZE = 10;
 
@@ -20,6 +22,7 @@ export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { completedCount, streak } = useProgress();
+  const { ready: onbReady, onboarded, complete } = useOnboarding();
 
   const folders = useMemo(() => {
     const groups: {
@@ -81,8 +84,12 @@ export default function HomeScreen() {
                 Shadow it. Rebuild it. Own it.
               </Text>
 
-              {/* Stats row */}
-              <View style={styles.statsRow}>
+              {/* Stats row → tap for the full dashboard */}
+              <Pressable
+                style={styles.statsRow}
+                onPress={() => router.push('/dashboard' as any)}
+                accessibilityLabel="学習の記録を見る"
+              >
                 <View style={styles.stat}>
                   <Text style={styles.statNum}>{completedCount}</Text>
                   <Text style={styles.statLabel}>Done</Text>
@@ -99,7 +106,7 @@ export default function HomeScreen() {
                   <Text style={styles.statNum}>{topics.length}</Text>
                   <Text style={styles.statLabel}>Topics</Text>
                 </View>
-              </View>
+              </Pressable>
 
               {/* Overall progress */}
               <View style={styles.heroProgressRow}>
@@ -212,6 +219,7 @@ export default function HomeScreen() {
           </>
         }
       />
+      {onbReady && !onboarded && <Welcome onStart={complete} />}
     </View>
   );
 }

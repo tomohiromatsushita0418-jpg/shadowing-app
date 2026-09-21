@@ -129,7 +129,26 @@ ${material}
   "sections": [
     { "heading": "見出し", "paragraphs": ["段落1", "段落2"] }
   ]
-}`;
+}
+
+paragraphs の各要素は本文の1段落。小見出しを入れたい場合だけ "### 小見出し" という要素を挟む。`;
+}
+
+/**
+ * The model reliably slips Markdown into the paragraph strings despite being
+ * asked for plain text, and a literal "### 1. foo" on the page looks broken.
+ * Rather than fight the prompt, promote the two things it actually emits.
+ */
+function paragraphToHtml(paragraph: string): string {
+  const heading = paragraph.match(/^#{2,4}\s+(.*)$/);
+  if (heading) return `<h3>${inline(heading[1])}</h3>`;
+  return `<p>${inline(paragraph)}</p>`;
+}
+
+function inline(text: string): string {
+  return esc(text)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/`([^`]+)`/g, '<em>$1</em>');
 }
 
 function toHtml(
@@ -140,8 +159,8 @@ function toHtml(
   const parts = sections
     .map(
       (section) =>
-        `<h2>${esc(section.heading)}</h2>\n${section.paragraphs
-          .map((p) => `<p>${esc(p)}</p>`)
+        `<h2>${esc(section.heading.replace(/^#{2,4}\s+/, ''))}</h2>\n${section.paragraphs
+          .map(paragraphToHtml)
           .join('\n')}`,
     )
     .join('\n');
