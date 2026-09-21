@@ -169,45 +169,33 @@ export default function HomeScreen() {
               </Pressable>
             )}
 
-            {/* Phrase book entry */}
-            <Pressable
-              style={({ pressed }) => [
-                styles.phraseBookBtn,
-                pressed && styles.phraseBookBtnPressed,
-              ]}
-              onPress={() => router.push('/phrasebook' as any)}
-            >
-              <View style={styles.phraseBookLeft}>
-                <View style={styles.phraseBookIcon}>
-                  <Ionicons name="bookmark" size={18} color="#fbbf24" />
-                </View>
-                <View>
-                  <Text style={styles.phraseBookTitle}>熟語帳</Text>
-                  <Text style={styles.phraseBookSub}>保存したフレーズを復習</Text>
-                </View>
-              </View>
-              <Ionicons name="chevron-forward" size={16} color="#94a3b8" />
-            </Pressable>
-
-            {/* Instant composition entry */}
-            <Pressable
-              style={({ pressed }) => [
-                styles.composeBtn,
-                pressed && styles.phraseBookBtnPressed,
-              ]}
-              onPress={() => router.push('/composition' as any)}
-            >
-              <View style={styles.phraseBookLeft}>
-                <View style={styles.composeIcon}>
-                  <Ionicons name="create" size={18} color="#22d3ee" />
-                </View>
-                <View>
-                  <Text style={styles.composeTitle}>瞬間英作文</Text>
-                  <Text style={styles.phraseBookSub}>過去の全エピソードからランダム10問・AI添削</Text>
-                </View>
-              </View>
-              <Ionicons name="chevron-forward" size={16} color="#94a3b8" />
-            </Pressable>
+            {/* Practice menu — one cohesive set */}
+            <View style={styles.menu}>
+              {[
+                { icon: 'create', tint: '#22d3ee', title: '瞬間英作文', sub: '和文を英語に・AIが添削', to: '/composition' },
+                { icon: 'bookmark', tint: '#fbbf24', title: '熟語帳', sub: '保存した表現を復習・クイズ', to: '/phrasebook' },
+                { icon: 'stats-chart', tint: '#34d399', title: '学習の記録', sub: '連続日数・理解度・成果', to: '/dashboard' },
+              ].map((m, i, arr) => (
+                <Pressable
+                  key={m.title}
+                  style={({ pressed }) => [
+                    styles.menuItem,
+                    i < arr.length - 1 && styles.menuItemBorder,
+                    pressed && styles.menuItemPressed,
+                  ]}
+                  onPress={() => router.push(m.to as any)}
+                >
+                  <View style={[styles.menuIcon, { backgroundColor: m.tint + '1f', borderColor: m.tint + '4d' }]}>
+                    <Ionicons name={m.icon as any} size={18} color={m.tint} />
+                  </View>
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.menuTitle}>{m.title}</Text>
+                    <Text style={styles.menuSub}>{m.sub}</Text>
+                  </View>
+                  <Ionicons name="chevron-forward" size={16} color="#475569" />
+                </Pressable>
+              ))}
+            </View>
 
             {/* Section heading */}
             <View style={styles.sectionHeader}>
@@ -474,6 +462,33 @@ const styles = StyleSheet.create({
     fontSize: 11,
     marginTop: 1,
   },
+  menu: {
+    backgroundColor: '#12151d',
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: '#1e2533',
+    marginBottom: 24,
+    overflow: 'hidden',
+  },
+  menuItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    paddingVertical: 15,
+    paddingHorizontal: 16,
+  },
+  menuItemBorder: { borderBottomWidth: 1, borderBottomColor: '#1e2533' },
+  menuItemPressed: { backgroundColor: 'rgba(255,255,255,0.03)' },
+  menuIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 11,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  menuTitle: { color: '#f1f5f9', fontSize: 15, fontWeight: '800', letterSpacing: 0.2 },
+  menuSub: { color: '#64748b', fontSize: 12, marginTop: 2 },
   sectionHeader: {
     flexDirection: 'row',
     alignItems: 'flex-end',
