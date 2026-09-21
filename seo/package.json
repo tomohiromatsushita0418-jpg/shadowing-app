@@ -1,0 +1,16 @@
+{
+  "name": "resound-seo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static marketing/SEO site generated from the app's own corpus.",
+  "scripts": {
+    "build": "tsx build.ts",
+    "preview": "tsx build.ts && npx --yes serve dist"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.22.0",
+    "typescript": "^5.3.0"
+  }
+}

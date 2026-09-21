@@ -1,0 +1,20 @@
+{
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/style.css",
+      "headers": [{ "key": "cache-control", "value": "public, max-age=3600, s-maxage=86400" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "x-content-type-options", "value": "nosniff" },
+        { "key": "referrer-policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

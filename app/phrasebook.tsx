@@ -90,9 +90,20 @@ export default function PhraseBookScreen() {
           { paddingBottom: insets.bottom + 32 },
         ]}
         ListHeaderComponent={
-          <Text style={styles.headerCount}>
-            {grouped.length} {grouped.length === 1 ? 'phrase' : 'phrases'} 保存中
-          </Text>
+          <View style={styles.listHeaderRow}>
+            <Text style={styles.headerCount}>
+              {grouped.length} {grouped.length === 1 ? 'phrase' : 'phrases'} 保存中
+            </Text>
+            {grouped.length >= 4 && (
+              <TouchableOpacity
+                style={styles.quizBtn}
+                onPress={() => navigation.navigate('phrasequiz' as never)}
+              >
+                <Ionicons name="school" size={15} color="#0b1220" />
+                <Text style={styles.quizBtnText}>復習クイズ</Text>
+              </TouchableOpacity>
+            )}
+          </View>
         }
         ListEmptyComponent={
           <View style={styles.empty}>
@@ -112,14 +123,29 @@ export default function PhraseBookScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#0f0f14' },
   list: { paddingHorizontal: 16, paddingTop: 8 },
+  listHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+  },
   headerCount: {
     color: '#94a3b8',
     fontSize: 12,
     fontWeight: '700',
     letterSpacing: 1,
     textTransform: 'uppercase',
-    marginBottom: 10,
   },
+  quizBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    backgroundColor: '#fbbf24',
+    paddingVertical: 7,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+  },
+  quizBtnText: { color: '#0b1220', fontSize: 13, fontWeight: '800' },
   card: {
     backgroundColor: 'rgba(251,191,36,0.06)',
     borderRadius: 12,
