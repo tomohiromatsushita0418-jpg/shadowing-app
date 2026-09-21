@@ -41,3 +41,11 @@ yarn-error.*
 .vercel
 set-gemini-key.sh
 gemini-key.txt
+
+# seo site build output
+seo/dist/
+seo/node_modules/
+
+# generated media
+build/
+build-video-*/

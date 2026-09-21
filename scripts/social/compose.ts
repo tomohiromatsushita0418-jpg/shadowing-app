@@ -24,6 +24,7 @@ export interface Sentence {
   en: string;
   ja: string;
   phrases?: Phrase[];
+  audioPath?: string;
 }
 export interface Topic {
   id: string;

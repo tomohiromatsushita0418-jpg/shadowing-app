@@ -66,7 +66,7 @@ function authorizationHeader(method: string, url: string, credentials: XCredenti
   )}`;
   const signature = crypto.createHmac('sha1', signingKey).update(baseString).digest('base64');
 
-  const header = { ...params, oauth_signature: signature };
+  const header: Record<string, string> = { ...params, oauth_signature: signature };
   return `OAuth ${Object.keys(header)
     .sort()
     .map((key) => `${percentEncode(key)}="${percentEncode(header[key])}"`)

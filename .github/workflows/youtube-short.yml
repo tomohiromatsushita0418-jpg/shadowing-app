@@ -1,0 +1,77 @@
+name: YouTube Short
+
+# Renders a vertical Short from the episode's existing audio and uploads it.
+#
+# The video pipeline needs ffmpeg and a CJK font, neither of which exist on a
+# stock macOS dev machine, so this has only ever run here. Use the manual
+# trigger with upload=false first: it renders the video and attaches it as a
+# workflow artifact for you to watch before anything reaches the channel.
+#
+# The schedule is commented out deliberately — turn it on once you have seen
+# an artifact you are happy with.
+on:
+  workflow_dispatch:
+    inputs:
+      topic_index:
+        description: 'Episode index (-1 = newest)'
+        required: false
+        default: '-1'
+      sentences:
+        description: 'How many sentences to include'
+        required: false
+        default: '3'
+      upload:
+        description: 'true to upload to YouTube, false to only render'
+        required: false
+        default: 'false'
+  # schedule:
+  #   - cron: '0 18 * * *' # 03:00 JST
+
+permissions:
+  contents: read
+
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci --legacy-peer-deps
+
+      - name: Install a CJK font
+        # ffmpeg is preinstalled on ubuntu runners; the Japanese font is not.
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          ffmpeg -version | head -1
+
+      - name: Render the Short
+        env:
+          VIDEO_TOPIC_INDEX: ${{ github.event.inputs.topic_index || '-1' }}
+          VIDEO_SENTENCES: ${{ github.event.inputs.sentences || '3' }}
+          VIDEO_OUT: build/short.mp4
+        run: npx tsx scripts/social/video.ts
+
+      - name: Upload the rendering for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: short-mp4
+          path: build/short.mp4
+          retention-days: 7
+
+      - name: Publish to YouTube
+        if: ${{ github.event.inputs.upload == 'true' }}
+        env:
+          VIDEO_OUT: build/short.mp4
+          VIDEO_TOPIC_INDEX: ${{ github.event.inputs.topic_index || '-1' }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_PRIVACY: ${{ secrets.YOUTUBE_PRIVACY }}
+        run: npx tsx scripts/social/youtube.ts
