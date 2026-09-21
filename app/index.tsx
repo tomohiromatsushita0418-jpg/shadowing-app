@@ -72,13 +72,13 @@ export default function HomeScreen() {
               style={styles.hero}
             >
               <View style={styles.brandRow}>
-                <Text style={styles.brandName}>ECHO</Text>
+                <Text style={styles.brandName}>RESOUND</Text>
                 <Text style={styles.brandSep}>·</Text>
-                <Text style={styles.brandSub}>shadowing studio</Text>
+                <Text style={styles.brandSub}>english studio</Text>
               </View>
 
               <Text style={styles.heroSub}>
-                A daily shadowing ritual, curated by AI.
+                Shadow it. Rebuild it. Own it.
               </Text>
 
               {/* Stats row */}

@@ -72,7 +72,7 @@ def build_html(topic, url: str) -> str:
 <html lang="ja"><head><meta charset="UTF-8"></head>
 <body style="margin:0;padding:24px;background:#0f0f14;font-family:'Helvetica Neue',Arial,sans-serif;">
   <div style="max-width:560px;margin:0 auto;">
-    <div style="letter-spacing:6px;font-size:12px;font-weight:700;color:#fafafa;">ECHO</div>
+    <div style="letter-spacing:6px;font-size:12px;font-weight:700;color:#fafafa;">RESOUND</div>
     <div style="color:#64748b;font-size:13px;margin:4px 0 24px;">{today} ・ 今日のシャドーイング</div>
 
     <div style="background:#161b27;border:1px solid #1e2d45;border-radius:16px;padding:24px;">
@@ -108,7 +108,7 @@ def build_plain(topic, url: str) -> str:
     category = topic.get("category", "")
     n = len(topic.get("sentences", []))
     return (
-        f"【ECHO 今日のシャドーイング】\n\n"
+        f"【Resound 今日のトピック】\n\n"
         f"[{category}] {title}\n{title_ja}\n\n"
         f"全 {n} 文。タップで音声再生、単語タップで意味表示。\n\n"
         f"▶ 今日のトピックを開く:\n{url}\n"
@@ -136,7 +136,7 @@ def main() -> int:
 
     url = f"{base}/topic/{topic['id']}"
     recipients = [e.strip() for e in to_raw.split(",") if e.strip()]
-    subject = f"【ECHO 今日のシャドーイング】{topic.get('titleJa') or topic.get('title')}"
+    subject = f"【Resound 今日のトピック】{topic.get('titleJa') or topic.get('title')}"
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
