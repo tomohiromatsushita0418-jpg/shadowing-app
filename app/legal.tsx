@@ -12,8 +12,8 @@ import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-na
 // オフィスの契約が現実的な選択肢になります。
 // ---------------------------------------------------------------------------
 
-const OPERATOR = 'TODO: 運営者氏名';
-const CONTACT_EMAIL = 'TODO: 問い合わせ用メールアドレス';
+const OPERATOR = 'Matsushita Tomohiro';
+const CONTACT_EMAIL = 'tomohiro.matsushita.0418@gmail.com';
 const SERVICE_NAME = 'Resound';
 
 type Row = { label: string; value: string };
