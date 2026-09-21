@@ -25,7 +25,12 @@ export function required(name: string): string {
 // crashing every function at cold start.
 let _stripe: Stripe | null = null;
 export function stripe(): Stripe {
-  if (!_stripe) _stripe = new Stripe(required('STRIPE_SECRET_KEY'));
+  // Edge runtime: use the fetch-based HTTP client instead of Node's http.
+  if (!_stripe) {
+    _stripe = new Stripe(required('STRIPE_SECRET_KEY'), {
+      httpClient: Stripe.createFetchHttpClient(),
+    });
+  }
   return _stripe;
 }
 

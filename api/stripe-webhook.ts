@@ -13,8 +13,10 @@
 // a cancelled subscription), every handler re-fetches the subscription from
 // Stripe and writes whatever it says right now.
 
-import type Stripe from 'stripe';
+import Stripe from 'stripe';
 import { required, stripe, supabaseAdmin } from './_lib';
+
+export const config = { runtime: 'edge' };
 
 /**
  * `current_period_end` lives on the subscription in older Stripe API versions
@@ -118,6 +120,8 @@ export default async function handler(request: Request): Promise<Response> {
       payload,
       signature,
       required('STRIPE_WEBHOOK_SECRET'),
+      undefined,
+      Stripe.createSubtleCryptoProvider(),
     );
   } catch (error) {
     console.error('[stripe-webhook] signature verification failed', error);

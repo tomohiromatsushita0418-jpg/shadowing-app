@@ -7,6 +7,8 @@
 
 import { appUrl, getOrCreateCustomer, json, preflight, required, requireUser, stripe } from './_lib';
 
+export const config = { runtime: 'edge' };
+
 export default async function handler(request: Request): Promise<Response> {
   const pre = preflight(request);
   if (pre) return pre;
