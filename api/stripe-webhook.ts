@@ -64,7 +64,12 @@ async function resolveUserId(sub: Stripe.Subscription): Promise<string | null> {
   if (data?.id) return data.id as string;
 
   // Last resort: the id we stamped onto the customer at creation time.
-  const customer = await stripe().customers.retrieve(customerId);
+  // Cast structurally — `customers.retrieve` is typed as Customer | DeletedCustomer,
+  // and a deleted customer carries no metadata, which the runtime check handles.
+  const customer = (await stripe().customers.retrieve(customerId)) as {
+    deleted?: boolean;
+    metadata?: Record<string, string>;
+  };
   if (!customer.deleted && customer.metadata?.supabase_user_id) {
     return customer.metadata.supabase_user_id;
   }
