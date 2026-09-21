@@ -14,7 +14,7 @@ import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-na
 
 const OPERATOR = 'TODO: 運営者氏名';
 const CONTACT_EMAIL = 'TODO: 問い合わせ用メールアドレス';
-const SERVICE_NAME = 'Shadowing App';
+const SERVICE_NAME = 'Resound';
 
 type Row = { label: string; value: string };
 
@@ -30,10 +30,11 @@ const TOKUSHOHO: Row[] = [
     value: '請求があったら遅滞なく開示します。下記メールアドレスまでご連絡ください。',
   },
   { label: 'メールアドレス', value: CONTACT_EMAIL },
-  { label: '販売価格', value: '月額プラン ¥680（税込） / 年額プラン ¥5,800（税込）' },
+  { label: '販売価格', value: '月額プラン ¥980（税込） / 年額プラン ¥7,800（税込）' },
   { label: '商品代金以外の必要料金', value: 'インターネット接続に係る通信料はお客様のご負担となります。' },
   { label: 'お支払い方法', value: 'クレジットカード決済（Stripe）' },
-  { label: 'お支払い時期', value: 'お申し込み時に初回分を決済し、以後は同日に自動更新されます。' },
+  { label: '無料トライアル', value: 'アカウント登録から7日間はすべての機能を無料でご利用いただけます。トライアル期間中に解約すれば料金は発生しません。' },
+  { label: 'お支払い時期', value: 'プラン購読のお申し込み時に初回分を決済し、以後は購読期間ごとに同日に自動更新されます。' },
   {
     label: 'サービス提供時期',
     value: '決済完了後、ただちにすべての機能をご利用いただけます。',

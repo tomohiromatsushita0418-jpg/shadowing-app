@@ -6,8 +6,9 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { topics } from '../data/topics';
 import { useAccount } from '../lib/account';
 
-const MONTHLY_YEN = 680;
-const YEARLY_YEN = 5800;
+const MONTHLY_YEN = 980;
+const YEARLY_YEN = 7800;
+const TRIAL_DAYS = 7;
 // Rounded down to the nearest yen — never overstate the discount.
 const YEARLY_PER_MONTH = Math.floor(YEARLY_YEN / 12);
 const YEARLY_DISCOUNT_PCT = Math.round((1 - YEARLY_YEN / (MONTHLY_YEN * 12)) * 100);
@@ -132,6 +133,15 @@ export default function PaywallScreen() {
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
 
+      {!trialOver ? (
+        <View style={styles.trialNote}>
+          <Ionicons name="gift-outline" size={16} color="#fbbf24" />
+          <Text style={styles.trialNoteText}>
+            最初の{TRIAL_DAYS}日間は無料。トライアル中に解約すれば料金はかかりません。
+          </Text>
+        </View>
+      ) : null}
+
       <Pressable
         style={[styles.primary, busy && styles.disabled]}
         onPress={() => void onSubscribe()}
@@ -140,7 +150,9 @@ export default function PaywallScreen() {
         {busy ? (
           <ActivityIndicator color="#0f0f14" />
         ) : (
-          <Text style={styles.primaryLabel}>{session ? '購読をはじめる' : 'ログインして続ける'}</Text>
+          <Text style={styles.primaryLabel}>
+            {session ? `${TRIAL_DAYS}日間無料で始める` : 'ログインして続ける'}
+          </Text>
         )}
       </Pressable>
 
@@ -208,6 +220,17 @@ const styles = StyleSheet.create({
   primaryLabel: { color: '#0f0f14', fontSize: 16, fontWeight: '800' },
   disabled: { opacity: 0.6 },
   error: { color: '#f87171', fontSize: 13, textAlign: 'center' },
+  trialNote: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    backgroundColor: 'rgba(251,191,36,0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(251,191,36,0.25)',
+    borderRadius: 10,
+    padding: 12,
+  },
+  trialNoteText: { color: '#fde68a', fontSize: 12.5, lineHeight: 19, flex: 1, fontWeight: '600' },
   legal: { color: '#64748b', fontSize: 11, lineHeight: 18, textAlign: 'center' },
   legalLink: { color: '#94a3b8', fontSize: 12, textAlign: 'center', textDecorationLine: 'underline' },
   ghost: { alignSelf: 'center', paddingVertical: 10, paddingHorizontal: 16 },
