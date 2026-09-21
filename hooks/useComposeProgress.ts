@@ -59,6 +59,9 @@ export function keyFor(topicId: string, index: number) {
 
 export function useComposeProgress() {
   const store = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
+  // `store` identity changes once the persisted value loads, so this re-renders
+  // consumers when it flips true.
+  const ready = loaded;
 
   const getRecord = useCallback(
     (topicId: string, index: number): ComposeRecord | undefined =>
@@ -106,5 +109,18 @@ export function useComposeProgress() {
     return { answered: keys.length, understood };
   }, [store]);
 
-  return { store, getRecord, saveRecord, topicSummary, overallSummary };
+  // Priority for spaced review: unanswered = 2, needs_work = 3 (most urgent),
+  // good = 1, perfect = 0. Higher = surface sooner in random practice.
+  const reviewWeight = useCallback(
+    (topicId: string, index: number): number => {
+      const r = store[keyFor(topicId, index)];
+      if (!r) return 2;
+      if (r.verdict === 'needs_work') return 3;
+      if (r.verdict === 'good') return 1;
+      return 0; // perfect — rarely resurface
+    },
+    [store]
+  );
+
+  return { store, ready, getRecord, saveRecord, topicSummary, overallSummary, reviewWeight };
 }

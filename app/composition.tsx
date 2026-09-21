@@ -91,6 +91,31 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+// Word-level LCS diff between the learner's answer and the best sentence.
+// `common` words match; the rest are highlighted (extra/wrong on the answer
+// side, missing/better on the model side).
+type DiffPart = { text: string; common: boolean };
+function diffWords(a: string, b: string): { a: DiffPart[]; b: DiffPart[] } {
+  const A = a.trim().split(/\s+/).filter(Boolean);
+  const B = b.trim().split(/\s+/).filter(Boolean);
+  const nrm = (w: string) => w.toLowerCase().replace(/[^a-z0-9']/g, '');
+  const n = A.length, m = B.length;
+  const dp: number[][] = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--)
+    for (let j = m - 1; j >= 0; j--)
+      dp[i][j] = nrm(A[i]) === nrm(B[j]) ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const ra: DiffPart[] = [], rb: DiffPart[] = [];
+  let i = 0, j = 0;
+  while (i < n && j < m) {
+    if (nrm(A[i]) === nrm(B[j])) { ra.push({ text: A[i], common: true }); rb.push({ text: B[j], common: true }); i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) { ra.push({ text: A[i], common: false }); i++; }
+    else { rb.push({ text: B[j], common: false }); j++; }
+  }
+  while (i < n) { ra.push({ text: A[i], common: false }); i++; }
+  while (j < m) { rb.push({ text: B[j], common: false }); j++; }
+  return { a: ra, b: rb };
+}
+
 // --- grading ----------------------------------------------------------------
 
 async function gradeAnswer(problem: Problem, answer: string): Promise<Grade> {
@@ -159,29 +184,42 @@ export default function CompositionScreen() {
   const insets = useSafeAreaInsets();
   const navigation = useNavigation();
   const { topicId, index } = useLocalSearchParams<{ topicId?: string; index?: string }>();
-  const { getRecord, saveRecord, topicSummary } = useComposeProgress();
+  const { getRecord, saveRecord, topicSummary, reviewWeight, ready: progressReady } = useComposeProgress();
   const { ready: accountReady, hasAccess } = useAccount();
+  const isRandom = !topicId;
 
-  // Build the problem list. With a topicId → that topic's sentences in order.
-  // Without → a random mix across every topic ("past episodes, random").
-  const problems: Problem[] = useMemo(() => {
-    if (topicId) {
-      const t = topics.find((x) => x.id === topicId);
-      if (!t) return [];
-      return t.sentences.map((s, i) => ({
-        topicId: t.id, sIndex: i, ja: s.ja, en: s.en, phrases: s.phrases,
-      }));
-    }
+  // Topic mode → that topic's sentences in order.
+  const topicProblems: Problem[] = useMemo(() => {
+    if (!topicId) return [];
+    const t = topics.find((x) => x.id === topicId);
+    if (!t) return [];
+    return t.sentences.map((s, i) => ({
+      topicId: t.id, sIndex: i, ja: s.ja, en: s.en, phrases: s.phrases,
+    }));
+  }, [topicId]);
+
+  // Random mode → weak-first spaced review across every episode. Sentences you
+  // got wrong (needs_work) or haven't tried surface far more often than ones
+  // you've already nailed. Built once, after saved progress has loaded.
+  const [randomProblems, setRandomProblems] = useState<Problem[]>([]);
+  useEffect(() => {
+    if (topicId || !progressReady || randomProblems.length) return;
     const pool: Problem[] = [];
     for (const t of topics) {
       t.sentences.forEach((s, i) =>
         pool.push({ topicId: t.id, sIndex: i, ja: s.ja, en: s.en, phrases: s.phrases })
       );
     }
-    return shuffle(pool).slice(0, RANDOM_COUNT);
-  }, [topicId]);
+    // Weighted shuffle: draw with probability ∝ (reviewWeight + 0.3) so even
+    // "perfect" items appear occasionally.
+    const scored = pool.map((p) => ({
+      p, key: Math.random() / (reviewWeight(p.topicId, p.sIndex) + 0.3),
+    }));
+    scored.sort((a, b) => a.key - b.key);
+    setRandomProblems(scored.slice(0, RANDOM_COUNT).map((x) => x.p));
+  }, [topicId, progressReady, randomProblems.length, reviewWeight]);
 
-  const isRandom = !topicId;
+  const problems = isRandom ? randomProblems : topicProblems;
 
   const [idx, setIdx] = useState(() => {
     if (topicId) {
@@ -253,6 +291,15 @@ export default function CompositionScreen() {
     return (
       <View style={styles.container}>
         <LockedNotice what="瞬間英作文" />
+      </View>
+    );
+  }
+
+  if (isRandom && randomProblems.length === 0) {
+    return (
+      <View style={styles.empty}>
+        <ActivityIndicator size="large" color="#22d3ee" />
+        <Text style={styles.emptySub}>苦手を優先して出題を準備中…</Text>
       </View>
     );
   }
@@ -421,13 +468,32 @@ export default function CompositionScreen() {
               <Text style={[styles.scoreText, { color: v.color }]}>{grade.score}点</Text>
             </View>
 
-            <Text style={styles.yourAnswerLabel}>あなたの解答</Text>
-            <Text style={styles.yourAnswer}>{answer}</Text>
+            {(() => {
+              const d = diffWords(answer, grade.best);
+              return (
+                <>
+                  <Text style={styles.yourAnswerLabel}>あなたの解答（<Text style={{ color: '#f87171' }}>赤=不要/違い</Text>）</Text>
+                  <Text style={styles.yourAnswer}>
+                    {d.a.map((p, i) => (
+                      <Text key={i} style={p.common ? undefined : styles.diffWrong}>
+                        {p.text}{i < d.a.length - 1 ? ' ' : ''}
+                      </Text>
+                    ))}
+                  </Text>
 
-            <View style={styles.bestBox}>
-              <Text style={styles.sectionLabel}>💡 最も自然な英語</Text>
-              <Text style={styles.bestText} selectable>{grade.best}</Text>
-            </View>
+                  <View style={styles.bestBox}>
+                    <Text style={styles.sectionLabel}>💡 最も自然な英語（<Text style={{ color: '#34d399' }}>緑=入れるべき語</Text>）</Text>
+                    <Text style={styles.bestText} selectable>
+                      {d.b.map((p, i) => (
+                        <Text key={i} style={p.common ? undefined : styles.diffAdd}>
+                          {p.text}{i < d.b.length - 1 ? ' ' : ''}
+                        </Text>
+                      ))}
+                    </Text>
+                  </View>
+                </>
+              );
+            })()}
 
             {grade.feedback ? (
               <View style={styles.fbBox}>
@@ -547,6 +613,8 @@ const styles = StyleSheet.create({
   },
   sectionLabel: { color: '#e2e8f0', fontSize: 13, fontWeight: '800', marginBottom: 8 },
   bestText: { color: '#a5f3fc', fontSize: 17, lineHeight: 25, fontWeight: '600' },
+  diffWrong: { color: '#f87171', textDecorationLine: 'line-through' },
+  diffAdd: { color: '#34d399', fontWeight: '900' },
   fbText: { color: '#cbd5e1', fontSize: 14, lineHeight: 22 },
   altText: { color: '#cbd5e1', fontSize: 14, lineHeight: 24 },
   modelToggle: {
