@@ -108,6 +108,19 @@ export default function TopicScreen() {
   // tears down a playing sound.
   const soundRef = useRef<Audio.Sound | null>(null);
   const playRequestIdRef = useRef(0);
+  const listRef = useRef<FlatList<Sentence>>(null);
+
+  // Playback controls: speed, single-sentence loop, and continuous "play all".
+  const SPEEDS = [1.0, 0.85, 0.7] as const;
+  const [rate, setRate] = useState<number>(1.0);
+  const [repeat, setRepeat] = useState(false);
+  const [playingAll, setPlayingAll] = useState(false);
+  const rateRef = useRef(rate);
+  const repeatRef = useRef(repeat);
+  const playingAllRef = useRef(playingAll);
+  useEffect(() => { rateRef.current = rate; }, [rate]);
+  useEffect(() => { repeatRef.current = repeat; }, [repeat]);
+  useEffect(() => { playingAllRef.current = playingAll; }, [playingAll]);
   // Pronounce a single word: prefer the pre-generated ElevenLabs file (uniform,
   // human-like on every device); fall back to the OS speech synthesizer only
   // when no file exists for that word yet. Shared with phrase playback.
@@ -215,6 +228,22 @@ export default function TopicScreen() {
     try { Speech.stop(); } catch {}
   }, []);
 
+  const playRef = useRef<(i: number, s: Sentence) => void>(() => {});
+
+  // When a sentence finishes (and it isn't looping), continue to the next one
+  // if we're in "play all" mode; otherwise stop.
+  const onSentenceEnd = useCallback((index: number) => {
+    if (repeatRef.current) return; // looping handles replay
+    if (playingAllRef.current && topic && index + 1 < topic.sentences.length) {
+      const next = index + 1;
+      listRef.current?.scrollToIndex({ index: next, viewPosition: 0.3, animated: true });
+      setTimeout(() => playRef.current(next, topic.sentences[next]), 250);
+    } else {
+      setPlayingAll(false);
+      setSpeakingIndex(null);
+    }
+  }, [topic]);
+
   const playSentence = useCallback(
     async (index: number, sentence: Sentence) => {
       const myRequest = ++playRequestIdRef.current;
@@ -231,7 +260,7 @@ export default function TopicScreen() {
           const uri = resolveAudioUri(sentence.audioPath);
           const loadPromise = Audio.Sound.createAsync(
             { uri },
-            { shouldPlay: true }
+            { shouldPlay: true, rate: rateRef.current, shouldCorrectPitch: true, isLooping: repeatRef.current }
           );
           const timeoutPromise = new Promise<never>((_, reject) =>
             setTimeout(() => reject(new Error('audio timeout')), 6000)
@@ -249,15 +278,13 @@ export default function TopicScreen() {
           soundRef.current = sound;
           sound.setOnPlaybackStatusUpdate((status) => {
             if (!status.isLoaded) {
-              if ((status as any).error) {
-                setSpeakingIndex(null);
-              }
+              if ((status as any).error) setSpeakingIndex(null);
               return;
             }
-            if (status.didJustFinish) {
-              setSpeakingIndex(null);
+            if (status.didJustFinish && !status.isLooping) {
               sound.unloadAsync().catch(() => {});
               if (soundRef.current === sound) soundRef.current = null;
+              if (playRequestIdRef.current === myRequest) onSentenceEnd(index);
             }
           });
           return;
@@ -268,31 +295,56 @@ export default function TopicScreen() {
         }
       }
 
-      // TTS fallback
+      // TTS fallback — approximate speed with the rate param.
       try { Speech.stop(); } catch {}
+      const finish = () => {
+        if (playRequestIdRef.current !== myRequest) return;
+        if (repeatRef.current) { playRef.current(index, sentence); return; }
+        onSentenceEnd(index);
+      };
       Speech.speak(sentence.en, {
         language: 'en-US',
-        rate: 0.85,
+        rate: rateRef.current * 0.85,
         pitch: 1.0,
-        onDone: () => {
-          if (playRequestIdRef.current === myRequest) setSpeakingIndex(null);
-        },
-        onError: () => {
-          if (playRequestIdRef.current === myRequest) setSpeakingIndex(null);
-        },
-        onStopped: () => {
-          if (playRequestIdRef.current === myRequest) setSpeakingIndex(null);
-        },
+        onDone: finish,
+        onError: () => { if (playRequestIdRef.current === myRequest) { setPlayingAll(false); setSpeakingIndex(null); } },
+        onStopped: () => {},
       });
-      // Safety timeout so the speaking indicator clears even if onDone is
-      // dropped by the platform (some web browsers).
-      const estMs = Math.max(2500, sentence.en.length * 70) + 2000;
-      setTimeout(() => {
-        if (playRequestIdRef.current === myRequest) setSpeakingIndex(null);
-      }, estMs);
     },
-    [stopAll, recordStudy]
+    [stopAll, recordStudy, onSentenceEnd]
   );
+
+  useEffect(() => { playRef.current = playSentence; }, [playSentence]);
+
+  // Cycle speed 1.0 → 0.85 → 0.7 → 1.0, applying live to any playing sound.
+  const cycleSpeed = useCallback(() => {
+    setRate((cur) => {
+      const i = SPEEDS.indexOf(cur as any);
+      const next = SPEEDS[(i + 1) % SPEEDS.length];
+      soundRef.current?.setRateAsync(next, true).catch(() => {});
+      return next;
+    });
+  }, []);
+
+  const toggleRepeat = useCallback(() => {
+    setRepeat((r) => {
+      const next = !r;
+      soundRef.current?.setIsLoopingAsync(next).catch(() => {});
+      return next;
+    });
+  }, []);
+
+  const togglePlayAll = useCallback(() => {
+    if (playingAllRef.current) {
+      setPlayingAll(false);
+      stopAll();
+      setSpeakingIndex(null);
+    } else if (topic && topic.sentences.length) {
+      setPlayingAll(true);
+      listRef.current?.scrollToIndex({ index: 0, viewPosition: 0, animated: true });
+      playSentence(0, topic.sentences[0]);
+    }
+  }, [topic, stopAll, playSentence]);
 
   const handleWordTap = useCallback(async (word: string) => {
     const clean = word.replace(/[^a-zA-Z'-]/g, '').toLowerCase();
@@ -358,8 +410,14 @@ export default function TopicScreen() {
   return (
     <>
       <FlatList
+        ref={listRef}
         data={topic.sentences}
         keyExtractor={(_, i) => String(i)}
+        onScrollToIndexFailed={(info) => {
+          setTimeout(() => {
+            listRef.current?.scrollToIndex({ index: info.index, viewPosition: 0.3, animated: true });
+          }, 300);
+        }}
         renderItem={({ item, index }) => (
           <SentenceCard
             sentence={item}
@@ -373,13 +431,51 @@ export default function TopicScreen() {
         )}
         contentContainerStyle={styles.list}
         ListHeaderComponent={
-          <View style={styles.header}>
-            <View style={styles.categoryBadge}>
-              <Text style={styles.categoryText}>{topic.category}</Text>
+          <View>
+            <View style={styles.header}>
+              <View style={styles.categoryBadge}>
+                <Text style={styles.categoryText}>{topic.category}</Text>
+              </View>
+              <Text style={styles.sentenceCount}>
+                {topic.sentences.length} sentences
+              </Text>
             </View>
-            <Text style={styles.sentenceCount}>
-              {topic.sentences.length} sentences
-            </Text>
+
+            {/* Playback controls */}
+            <View style={styles.controlBar}>
+              <Pressable
+                onPress={togglePlayAll}
+                style={[styles.playAllBtn, playingAll && styles.playAllBtnOn]}
+                accessibilityLabel={playingAll ? '連続再生を停止' : '全文を連続再生'}
+              >
+                <Ionicons
+                  name={playingAll ? 'stop' : 'play'}
+                  size={16}
+                  color={playingAll ? '#0b1220' : '#0b1220'}
+                />
+                <Text style={styles.playAllText}>{playingAll ? '停止' : '通し再生'}</Text>
+              </Pressable>
+
+              <Pressable
+                onPress={cycleSpeed}
+                style={[styles.ctrlChip, rate !== 1.0 && styles.ctrlChipActive]}
+                accessibilityLabel="再生速度"
+              >
+                <Ionicons name="speedometer-outline" size={14} color={rate !== 1.0 ? '#22d3ee' : '#94a3b8'} />
+                <Text style={[styles.ctrlChipText, rate !== 1.0 && styles.ctrlChipTextActive]}>
+                  {rate.toFixed(2).replace(/0$/, '')}×
+                </Text>
+              </Pressable>
+
+              <Pressable
+                onPress={toggleRepeat}
+                style={[styles.ctrlChip, repeat && styles.ctrlChipActive]}
+                accessibilityLabel="1文リピート"
+              >
+                <Ionicons name="repeat" size={15} color={repeat ? '#22d3ee' : '#94a3b8'} />
+                <Text style={[styles.ctrlChipText, repeat && styles.ctrlChipTextActive]}>1文</Text>
+              </Pressable>
+            </View>
           </View>
         }
         ListFooterComponent={
@@ -457,6 +553,39 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   sentenceCount: { color: '#64748b', fontSize: 13 },
+  controlBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    paddingBottom: 10,
+    marginBottom: 4,
+    borderBottomWidth: 1,
+    borderBottomColor: '#1e293b',
+  },
+  playAllBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    backgroundColor: '#22d3ee',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 999,
+  },
+  playAllBtnOn: { backgroundColor: '#f87171' },
+  playAllText: { color: '#0b1220', fontSize: 14, fontWeight: '800', letterSpacing: 0.3 },
+  ctrlChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+    borderWidth: 1,
+    borderColor: '#334155',
+    borderRadius: 999,
+    paddingVertical: 7,
+    paddingHorizontal: 12,
+  },
+  ctrlChipActive: { borderColor: '#22d3ee', backgroundColor: 'rgba(34,211,238,0.08)' },
+  ctrlChipText: { color: '#94a3b8', fontSize: 13, fontWeight: '700' },
+  ctrlChipTextActive: { color: '#22d3ee' },
   completeBtn: {
     flexDirection: 'row',
     alignItems: 'center',
