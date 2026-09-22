@@ -27,7 +27,7 @@ export default function LoginScreen() {
 
   const verify = async () => {
     const token = code.replace(/\D/g, '');
-    if (token.length < 6) { setError('メールに記載のコードを入力してください'); return; }
+    if (token.length < 6) { setError('6桁のコードを入力してください'); return; }
     setVerifying(true);
     setError(null);
     const result = await verifyEmailCode(email.trim(), token);
@@ -87,20 +87,20 @@ export default function LoginScreen() {
           <Text style={styles.title}>コードを送信しました</Text>
           <Text style={styles.body}>
             {email} 宛のメールに書かれた{'\n'}
-            <Text style={{ color: '#fde68a', fontWeight: '800' }}>数字コード</Text>を、この画面に入力してください。
+            <Text style={{ color: '#fde68a', fontWeight: '800' }}>6桁の数字コード</Text>を、この画面に入力してください。
           </Text>
 
           <TextInput
             style={[styles.input, styles.codeInput]}
             value={code}
-            onChangeText={(t) => { setCode(t.replace(/\D/g, '').slice(0, 10)); if (error) setError(null); }}
-            placeholder="12345678"
+            onChangeText={(t) => { setCode(t.replace(/\D/g, '').slice(0, 6)); if (error) setError(null); }}
+            placeholder="123456"
             placeholderTextColor="#475569"
             keyboardType="number-pad"
             inputMode="numeric"
             textContentType="oneTimeCode"
             autoComplete="one-time-code"
-            maxLength={10}
+            maxLength={6}
             editable={!verifying}
             onSubmitEditing={() => void verify()}
             autoFocus
