@@ -30,10 +30,12 @@ export const supabase = createClient(
       storage: AsyncStorage,
       persistSession: true,
       autoRefreshToken: true,
-      // On web the magic-link callback lands back on the SPA with a `?code=`
-      // query param that supabase-js exchanges for a session automatically.
       detectSessionInUrl: Platform.OS === 'web',
-      flowType: 'pkce',
+      // Web uses the implicit flow: the magic link returns the tokens directly
+      // in the URL hash, so there's no PKCE code_verifier that Safari's tracking
+      // prevention can wipe between requesting and clicking the link (a common
+      // cause of the "link just loops back to login" bug). Native keeps PKCE.
+      flowType: Platform.OS === 'web' ? 'implicit' : 'pkce',
     },
   },
 );
