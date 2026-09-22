@@ -24,6 +24,7 @@ type AccountValue = {
   /** The only thing screens should branch on. */
   hasAccess: boolean;
   signInWithEmail: (email: string) => Promise<{ error?: string }>;
+  verifyEmailCode: (email: string, token: string) => Promise<{ error?: string }>;
   signOut: () => Promise<void>;
   startCheckout: (plan: 'monthly' | 'yearly') => Promise<{ error?: string }>;
   openBillingPortal: () => Promise<{ error?: string }>;
@@ -137,6 +138,18 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
     return error ? { error: error.message } : {};
   }, []);
 
+  // Verify the 6-digit code from the email. This avoids the magic-link redirect
+  // entirely — link scanners can't consume a code the user types by hand.
+  const verifyEmailCode = useCallback(async (email: string, token: string) => {
+    if (!isAuthConfigured) return { error: 'ログイン機能はまだ有効化されていません' };
+    const { error } = await supabase.auth.verifyOtp({
+      email: email.trim(),
+      token: token.trim(),
+      type: 'email',
+    });
+    return error ? { error: error.message } : {};
+  }, []);
+
   const signOut = useCallback(async () => {
     await supabase.auth.signOut();
     setProfile(null);
@@ -211,6 +224,7 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
       entitlement,
       hasAccess,
       signInWithEmail,
+      verifyEmailCode,
       signOut,
       startCheckout,
       openBillingPortal,
@@ -224,6 +238,7 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
       entitlement,
       hasAccess,
       signInWithEmail,
+      verifyEmailCode,
       signOut,
       startCheckout,
       openBillingPortal,

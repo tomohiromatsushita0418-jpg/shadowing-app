@@ -16,12 +16,28 @@ import { useAccount } from '../lib/account';
 
 export default function LoginScreen() {
   const router = useRouter();
-  const { ready, session, email: signedInEmail, signInWithEmail, signOut } = useAccount();
+  const { ready, session, email: signedInEmail, signInWithEmail, verifyEmailCode, signOut } = useAccount();
 
   const [email, setEmail] = useState('');
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [code, setCode] = useState('');
+  const [verifying, setVerifying] = useState(false);
+
+  const verify = async () => {
+    const token = code.replace(/\D/g, '');
+    if (token.length < 6) {
+      setError('6桁のコードを入力してください');
+      return;
+    }
+    setVerifying(true);
+    setError(null);
+    const result = await verifyEmailCode(email.trim(), token);
+    setVerifying(false);
+    if (result.error) setError('コードが正しくないか、期限切れです。もう一度お試しください。');
+    // On success, `session` flips and the logged-in view renders automatically.
+  };
 
   const submit = async () => {
     const trimmed = email.trim();
@@ -65,19 +81,56 @@ export default function LoginScreen() {
 
   if (sent) {
     return (
-      <View style={[styles.container, styles.center]}>
-        <Ionicons name="mail-open-outline" size={56} color="#fbbf24" />
-        <Text style={styles.title}>メールを送信しました</Text>
-        <Text style={styles.body}>
-          {email} 宛のリンクをタップすると{'\n'}ログインが完了します。
-        </Text>
-        <Text style={styles.hint}>
-          届かない場合は迷惑メールフォルダをご確認ください。
-        </Text>
-        <Pressable style={styles.ghost} onPress={() => setSent(false)}>
-          <Text style={styles.ghostLabel}>別のアドレスで送り直す</Text>
-        </Pressable>
-      </View>
+      <KeyboardAvoidingView
+        style={styles.container}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
+        <ScrollView contentContainerStyle={styles.scroll} keyboardShouldPersistTaps="handled">
+          <Ionicons name="mail-open-outline" size={56} color="#fbbf24" />
+          <Text style={styles.title}>コードを送信しました</Text>
+          <Text style={styles.body}>
+            {email} 宛のメールに書かれた{'\n'}<Text style={{ color: '#fde68a', fontWeight: '800' }}>6桁の数字コード</Text>を入力してください。
+          </Text>
+
+          <TextInput
+            style={[styles.input, styles.codeInput]}
+            value={code}
+            onChangeText={(t) => { setCode(t.replace(/\D/g, '').slice(0, 6)); if (error) setError(null); }}
+            placeholder="123456"
+            placeholderTextColor="#475569"
+            keyboardType="number-pad"
+            inputMode="numeric"
+            textContentType="oneTimeCode"
+            autoComplete="one-time-code"
+            maxLength={6}
+            editable={!verifying}
+            onSubmitEditing={() => void verify()}
+            autoFocus
+          />
+
+          {error ? <Text style={styles.error}>{error}</Text> : null}
+
+          <Pressable
+            style={[styles.primary, (verifying || code.length < 6) && styles.disabled]}
+            onPress={() => void verify()}
+            disabled={verifying || code.length < 6}
+          >
+            {verifying ? (
+              <ActivityIndicator color="#0f0f14" />
+            ) : (
+              <Text style={styles.primaryLabel}>ログイン</Text>
+            )}
+          </Pressable>
+
+          <Text style={styles.hint}>
+            届かない場合は迷惑メールフォルダもご確認ください。{'\n'}
+            メール内のリンクをタップしてもログインできます。
+          </Text>
+          <Pressable style={styles.ghost} onPress={() => { setSent(false); setCode(''); setError(null); }}>
+            <Text style={styles.ghostLabel}>別のアドレスで送り直す</Text>
+          </Pressable>
+        </ScrollView>
+      </KeyboardAvoidingView>
     );
   }
 
@@ -156,6 +209,13 @@ const styles = StyleSheet.create({
     color: '#f1f5f9',
     fontSize: 16,
     marginTop: 8,
+  },
+  codeInput: {
+    textAlign: 'center',
+    fontSize: 30,
+    fontWeight: '800',
+    letterSpacing: 10,
+    paddingVertical: 16,
   },
   primary: {
     width: '100%',
