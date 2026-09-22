@@ -10,18 +10,13 @@ type Props = {
 };
 
 /**
- * Shown in place of gated content. Which call to action appears depends on
- * where the user is in the funnel: a visitor who has never signed up is offered
- * the free trial, while someone whose trial has lapsed is offered a plan.
+ * Shown in place of gated content (episodes 11+ and the practice tools). The
+ * newest 10 episodes are free; everything else needs a subscription. A logged-out
+ * visitor is nudged to sign up first, then subscribe.
  */
 export default function LockedNotice({ what }: Props) {
   const router = useRouter();
-  const { session, entitlement } = useAccount();
-
-  const trialUsed = Boolean(session) && entitlement?.plan !== 'trial';
-  const trialLapsed =
-    Boolean(session) && entitlement?.plan === 'trial' && (entitlement?.trialDaysLeft ?? 0) === 0;
-  const needsPlan = trialUsed || trialLapsed;
+  const { session } = useAccount();
 
   return (
     <View style={styles.container}>
@@ -32,17 +27,17 @@ export default function LockedNotice({ what }: Props) {
       <Text style={styles.title}>{what}はロックされています</Text>
 
       <Text style={styles.body}>
-        {needsPlan
-          ? '無料トライアルが終了しました。購読すると全エピソードと全機能が再び使えます。'
-          : 'メールアドレスだけで登録でき、7日間はすべての機能を無料でお試しいただけます。'}
+        無料で読めるのは最新10話までです。{'\n'}
+        購読すると、過去の全エピソードのアーカイブと{'\n'}
+        瞬間英作文・熟語などの全機能が使い放題になります。
       </Text>
 
       <Pressable
         style={styles.primary}
-        onPress={() => router.push(needsPlan ? '/paywall' : '/login')}
+        onPress={() => router.push(session ? '/paywall' : '/login')}
       >
         <Text style={styles.primaryLabel}>
-          {needsPlan ? 'プランを見る' : '7日間無料で試す'}
+          {session ? 'プランを見る' : '登録して続ける'}
         </Text>
       </Pressable>
 

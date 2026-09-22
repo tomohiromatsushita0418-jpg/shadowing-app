@@ -6,7 +6,7 @@
  * address is worth giving up. Three is enough to judge the product and far too
  * few to learn from, which is exactly the trade we want.
  */
-export const FREE_PREVIEW_TOPICS = 3;
+export const FREE_PREVIEW_TOPICS = 10;
 
 /** `index` is the position in `topics` (oldest first), so the newest are at the end. */
 export function isPreviewTopic(index: number, total: number): boolean {

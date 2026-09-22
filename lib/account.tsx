@@ -107,10 +107,13 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
 
   const entitlement = useMemo(() => (profile ? entitlementOf(profile) : null), [profile]);
 
-  // Until the paywall is switched on (or if Supabase isn't configured yet)
-  // everything stays unlocked — this is what lets the code ship ahead of the
-  // Stripe account being live.
-  const hasAccess = !isPaywallEnabled || entitlement?.active === true;
+  // Full access = an active paid subscription. There is no free trial: the free
+  // tier is the newest FREE_PREVIEW_TOPICS episodes (see lib/access.ts); the full
+  // archive and the practice tools require a subscription.
+  // Until the paywall is switched on everything stays unlocked (ships ahead of
+  // going live).
+  const hasAccess =
+    !isPaywallEnabled || (entitlement?.plan === 'pro' && entitlement.active === true);
 
   const authedFetch = useCallback(async (path: string, init?: RequestInit) => {
     const { data } = await supabase.auth.getSession();

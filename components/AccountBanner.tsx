@@ -23,7 +23,7 @@ export default function AccountBanner() {
       <Pressable style={[styles.banner, styles.accent]} onPress={() => router.push('/login')}>
         <Ionicons name="gift-outline" size={20} color="#fbbf24" />
         <View style={styles.textWrap}>
-          <Text style={styles.title}>7日間、全エピソードが無料</Text>
+          <Text style={styles.title}>最新10話は無料で読めます</Text>
           <Text style={styles.sub}>メールアドレスだけで登録できます</Text>
         </View>
         <Ionicons name="chevron-forward" size={18} color="#64748b" />
@@ -31,8 +31,7 @@ export default function AccountBanner() {
     );
   }
 
-  const plan = entitlement?.plan ?? 'trial';
-  const daysLeft = entitlement?.trialDaysLeft ?? 0;
+  const plan = entitlement?.plan ?? 'free';
 
   if (plan === 'pro') {
     return (
@@ -47,33 +46,13 @@ export default function AccountBanner() {
     );
   }
 
-  if (plan === 'trial' && daysLeft > 0) {
-    // Only start pushing the plan in the back half of the trial; nagging on
-    // day one is how you lose someone who was going to convert on day six.
-    const urgent = daysLeft <= 3;
-    return (
-      <Pressable
-        style={[styles.banner, urgent && styles.accent]}
-        onPress={() => router.push(urgent ? '/paywall' : '/account')}
-      >
-        <Ionicons name="time-outline" size={20} color={urgent ? '#fbbf24' : '#94a3b8'} />
-        <View style={styles.textWrap}>
-          <Text style={styles.title}>無料トライアル 残り {daysLeft} 日</Text>
-          <Text style={styles.sub}>
-            {urgent ? '¥680/月 または ¥5,800/年 で継続できます' : 'すべての機能をお試しいただけます'}
-          </Text>
-        </View>
-        <Ionicons name="chevron-forward" size={18} color="#64748b" />
-      </Pressable>
-    );
-  }
-
+  // Logged in, not subscribed → free tier (newest 10 episodes).
   return (
     <Pressable style={[styles.banner, styles.accent]} onPress={() => router.push('/paywall')}>
-      <Ionicons name="lock-closed-outline" size={20} color="#fbbf24" />
+      <Ionicons name="lock-open-outline" size={20} color="#fbbf24" />
       <View style={styles.textWrap}>
-        <Text style={styles.title}>トライアルが終了しました</Text>
-        <Text style={styles.sub}>購読すると全エピソードが再び開きます</Text>
+        <Text style={styles.title}>過去の全エピソードを開放</Text>
+        <Text style={styles.sub}>購読で全アーカイブと全機能が使い放題に</Text>
       </View>
       <Ionicons name="chevron-forward" size={18} color="#64748b" />
     </Pressable>

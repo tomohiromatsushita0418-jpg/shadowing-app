@@ -8,30 +8,26 @@ import { useAccount } from '../lib/account';
 
 const MONTHLY_YEN = 980;
 const YEARLY_YEN = 7800;
-const TRIAL_DAYS = 7;
 // Rounded down to the nearest yen — never overstate the discount.
 const YEARLY_PER_MONTH = Math.floor(YEARLY_YEN / 12);
 const YEARLY_DISCOUNT_PCT = Math.round((1 - YEARLY_YEN / (MONTHLY_YEN * 12)) * 100);
 
 const BENEFITS: { icon: keyof typeof Ionicons.glyphMap; text: string }[] = [
-  { icon: 'albums-outline', text: `全${topics.length}エピソードが見放題（毎日1本ずつ追加）` },
+  { icon: 'albums-outline', text: `過去の全${topics.length}エピソードが見放題（毎日1本ずつ追加）` },
   { icon: 'volume-high-outline', text: 'ネイティブ音声で文・単語・熟語を何度でも再生' },
-  { icon: 'bookmark-outline', text: '熟語帳に無制限で保存' },
-  { icon: 'flash-outline', text: '瞬間英作文トレーニング' },
+  { icon: 'flash-outline', text: '瞬間英作文トレーニング（AI添削・苦手復習）' },
+  { icon: 'bookmark-outline', text: '熟語帳・熟語クイズが無制限' },
   { icon: 'flame-outline', text: '学習進捗とストリークの記録' },
 ];
 
 export default function PaywallScreen() {
   const router = useRouter();
   const params = useLocalSearchParams<{ checkout?: string }>();
-  const { ready, session, entitlement, startCheckout } = useAccount();
+  const { ready, session, startCheckout } = useAccount();
 
   const [plan, setPlan] = useState<'monthly' | 'yearly'>('yearly');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const trialDaysLeft = entitlement?.trialDaysLeft ?? 0;
-  const trialOver = entitlement?.plan === 'trial' && trialDaysLeft === 0;
 
   const onSubscribe = async () => {
     if (!session) {
@@ -60,13 +56,10 @@ export default function PaywallScreen() {
         style={styles.hero}
       >
         <Ionicons name="headset" size={40} color="#fbbf24" />
-        <Text style={styles.title}>
-          {trialOver ? '無料トライアルが終了しました' : 'すべてのエピソードを開放'}
-        </Text>
+        <Text style={styles.title}>すべてのエピソードを開放</Text>
         <Text style={styles.subtitle}>
-          {trialOver
-            ? '続けて学習するにはプランをお選びください。'
-            : '毎日更新される教材で、TOEIC 700 から 990 へ。'}
+          無料は最新10話まで。購読で過去の全アーカイブと{'\n'}
+          全機能が使い放題に。毎日更新でTOEIC 700→990へ。
         </Text>
       </LinearGradient>
 
@@ -133,15 +126,6 @@ export default function PaywallScreen() {
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
 
-      {!trialOver ? (
-        <View style={styles.trialNote}>
-          <Ionicons name="gift-outline" size={16} color="#fbbf24" />
-          <Text style={styles.trialNoteText}>
-            最初の{TRIAL_DAYS}日間は無料。トライアル中に解約すれば料金はかかりません。
-          </Text>
-        </View>
-      ) : null}
-
       <Pressable
         style={[styles.primary, busy && styles.disabled]}
         onPress={() => void onSubscribe()}
@@ -151,7 +135,7 @@ export default function PaywallScreen() {
           <ActivityIndicator color="#0f0f14" />
         ) : (
           <Text style={styles.primaryLabel}>
-            {session ? `${TRIAL_DAYS}日間無料で始める` : 'ログインして続ける'}
+            {session ? '購読をはじめる' : 'ログインして続ける'}
           </Text>
         )}
       </Pressable>
