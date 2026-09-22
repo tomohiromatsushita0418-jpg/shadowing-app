@@ -22,12 +22,21 @@ export const isAuthConfigured = Boolean(url && anonKey);
 export const isPaywallEnabled =
   isAuthConfigured && process.env.EXPO_PUBLIC_PAYWALL_ENABLED === 'true';
 
+// On web, persist to localStorage directly — the AsyncStorage web adapter can
+// silently no-op in a static export, which means the session survives in memory
+// (login looks fine) but is gone on the next full page load (paywall/checkout
+// then thinks you're logged out). Native uses AsyncStorage.
+const authStorage =
+  Platform.OS === 'web'
+    ? (typeof window !== 'undefined' ? window.localStorage : undefined)
+    : AsyncStorage;
+
 export const supabase = createClient(
   url || 'https://unconfigured.supabase.co',
   anonKey || 'unconfigured',
   {
     auth: {
-      storage: AsyncStorage,
+      storage: authStorage,
       persistSession: true,
       autoRefreshToken: true,
       detectSessionInUrl: Platform.OS === 'web',
