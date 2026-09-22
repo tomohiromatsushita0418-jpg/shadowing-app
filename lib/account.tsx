@@ -35,6 +35,20 @@ type AccountValue = {
 
 const AccountContext = createContext<AccountValue | null>(null);
 
+// Comp accounts: emails that get full access without paying (the operator, and
+// anyone else you choose to grant). Set EXPO_PUBLIC_COMP_EMAILS to a
+// comma-separated list. Knowing an email here grants nothing on its own —
+// access still requires a real authenticated session for that inbox — so it is
+// safe that the list ends up in the client bundle.
+const COMP_EMAILS = (process.env.EXPO_PUBLIC_COMP_EMAILS ?? '')
+  .split(',')
+  .map((e) => e.trim().toLowerCase())
+  .filter(Boolean);
+
+function isCompEmail(email: string | null | undefined): boolean {
+  return !!email && COMP_EMAILS.includes(email.toLowerCase());
+}
+
 function openUrl(url: string) {
   if (Platform.OS === 'web' && typeof window !== 'undefined') {
     window.location.assign(url);
@@ -105,15 +119,32 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
     await loadProfile(data.session?.user.id);
   }, [loadProfile]);
 
-  const entitlement = useMemo(() => (profile ? entitlementOf(profile) : null), [profile]);
+  const isComp = isCompEmail(session?.user.email);
 
-  // Full access = an active paid subscription. There is no free trial: the free
-  // tier is the first FREE_PREVIEW_TOPICS episodes — Stage 1 (see lib/access.ts);
-  // everything from Stage 2 on and the practice tools require a subscription.
-  // Until the paywall is switched on everything stays unlocked (ships ahead of
-  // going live).
+  const entitlement = useMemo<Entitlement | null>(() => {
+    // Comp accounts read as an active "pro" (status "comp") so every isPro/lock
+    // check across the app unlocks, without touching Stripe or the database.
+    if (isComp) {
+      return {
+        active: true,
+        plan: 'pro',
+        status: 'comp',
+        trialEndsAt: null,
+        trialDaysLeft: 0,
+        currentPeriodEnd: null,
+        cancelAtPeriodEnd: false,
+      };
+    }
+    return profile ? entitlementOf(profile) : null;
+  }, [isComp, profile]);
+
+  // Full access = an active paid subscription (or a comp account). There is no
+  // free trial: the free tier is the first FREE_PREVIEW_TOPICS episodes — Stage 1
+  // (see lib/access.ts); everything from Stage 2 on and the practice tools
+  // require a subscription. Until the paywall is switched on everything stays
+  // unlocked (ships ahead of going live).
   const hasAccess =
-    !isPaywallEnabled || (entitlement?.plan === 'pro' && entitlement.active === true);
+    !isPaywallEnabled || isComp || (entitlement?.plan === 'pro' && entitlement.active === true);
 
   const authedFetch = useCallback(async (path: string, init?: RequestInit) => {
     const { data } = await supabase.auth.getSession();

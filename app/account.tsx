@@ -74,6 +74,7 @@ export default function AccountScreen() {
     );
   }
 
+  const isComp = entitlement?.status === 'comp';
   const isPro = entitlement?.plan === 'pro' && entitlement.active === true;
 
   return (
@@ -91,11 +92,15 @@ export default function AccountScreen() {
             color={isPro ? '#34d399' : '#fbbf24'}
           />
           <Text style={styles.statusText}>
-            {isPro ? '購読中' : '無料プラン'}
+            {isComp ? 'フルアクセス（運営）' : isPro ? '購読中' : '無料プラン'}
           </Text>
         </View>
 
-        {isPro ? (
+        {isComp ? (
+          <Text style={styles.body}>
+            運営アカウントとして、全エピソードと全機能を無料でご利用いただけます。
+          </Text>
+        ) : isPro ? (
           <Text style={styles.body}>
             {entitlement?.cancelAtPeriodEnd
               ? `${formatDate(entitlement.currentPeriodEnd)} に解約予定です。それまでは全機能をご利用いただけます。`
@@ -110,7 +115,7 @@ export default function AccountScreen() {
 
       {error ? <Text style={styles.error}>{error}</Text> : null}
 
-      {isPro ? (
+      {isComp ? null : isPro ? (
         <Pressable style={[styles.primary, busy && styles.disabled]} onPress={() => void onManage()} disabled={busy}>
           {busy ? (
             <ActivityIndicator color="#0f0f14" />
