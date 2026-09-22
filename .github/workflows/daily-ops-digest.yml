@@ -1,0 +1,26 @@
+name: Daily Ops Digest
+
+# 毎朝、稼働状況＋新着お問い合わせのAI分析を運営にメール通知する。
+on:
+  schedule:
+    - cron: '0 22 * * *'   # 22:00 UTC = 07:00 JST
+  workflow_dispatch: {}
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Send ops digest
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          REPORT_TO: ${{ secrets.REPORT_TO }}
+          APP_BASE_URL: ${{ secrets.APP_BASE_URL }}
+        run: python3 scripts/ops_digest.py

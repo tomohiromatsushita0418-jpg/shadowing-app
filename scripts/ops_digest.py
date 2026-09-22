@@ -1,0 +1,219 @@
+#!/usr/bin/env python3
+"""
+ops_digest.py — 毎日の運営ダッシュボードをメール送信する。
+
+内容:
+  1. 稼働チェック（サイト / 最新エピソード / 音声 / 決済API）
+  2. 教材生成の成否（topics.json の最新 createdAt が当日か）
+  3. 新着お問い合わせ・ご要望を Gemini が「対応可否・方法」まで分析
+本文=HTML、送信=Gmail SMTP（daily-topics と同じ仕組み）。
+
+Env:
+  SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY   … feedback の読み書き
+  GEMINI_API_KEY                            … 分析
+  GMAIL_ADDRESS, GMAIL_APP_PASSWORD, REPORT_TO
+  APP_BASE_URL (default https://shadowing-app-gray.vercel.app)
+"""
+import json, os, smtplib, ssl, sys, urllib.request, urllib.error
+from datetime import datetime, timezone, timedelta
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+JST = timezone(timedelta(hours=9))
+BASE = os.getenv("APP_BASE_URL", "https://shadowing-app-gray.vercel.app").rstrip("/")
+UA = {"User-Agent": "Mozilla/5.0"}
+
+
+def http(url, method="GET", headers=None, data=None):
+    h = dict(UA); h.update(headers or {})
+    body = json.dumps(data).encode() if data is not None else None
+    if body is not None: h["Content-Type"] = "application/json"
+    req = urllib.request.Request(url, data=body, method=method, headers=h)
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            raw = r.read()
+            return r.status, (json.loads(raw) if raw else None)
+    except urllib.error.HTTPError as e:
+        try: return e.code, json.loads(e.read())
+        except Exception: return e.code, None
+    except Exception as e:
+        return 0, str(e)
+
+
+def code_only(url, method="GET"):
+    try:
+        req = urllib.request.Request(url, method=method, headers=UA)
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return r.status
+    except urllib.error.HTTPError as e:
+        return e.code
+    except Exception:
+        return 0
+
+
+# ---------- 1 & 2: health ----------
+def health():
+    checks = []
+    checks.append(("サイト", code_only(BASE)))
+    topics = json.loads((ROOT / "data" / "topics.json").read_text())
+    latest = topics[-1]
+    checks.append(("最新エピソード", code_only(f"{BASE}/topic/{latest['id']}")))
+    # newest audio (either ext)
+    audio = latest["sentences"][0].get("audioPath", "")
+    if audio:
+        checks.append(("音声配信", code_only(f"{BASE}/{audio.lstrip('./')}")))
+    # checkout API alive → 401 (unauthorized) is healthy
+    checks.append(("決済API", code_only(f"{BASE}/api/checkout", "POST")))
+
+    created = latest.get("createdAt", "")
+    fresh = False
+    try:
+        d = datetime.fromisoformat(created.replace("Z", "+00:00")).astimezone(JST)
+        fresh = d.date() == datetime.now(JST).date()
+    except Exception:
+        pass
+    return checks, latest, fresh, len(topics)
+
+
+# ---------- 3: feedback ----------
+def fetch_feedback():
+    url = os.getenv("SUPABASE_URL", "").rstrip("/")
+    key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+    if not url or not key:
+        return None
+    s, rows = http(
+        f"{url}/rest/v1/feedback?status=eq.new&select=id,created_at,kind,message,email&order=created_at.asc",
+        headers={"apikey": key, "Authorization": f"Bearer {key}"},
+    )
+    return rows if isinstance(rows, list) else []
+
+
+def analyze(message, kind):
+    key = os.getenv("GEMINI_API_KEY", "")
+    if not key:
+        return None
+    prompt = f"""あなたは英語学習アプリ「Resound」のプロダクト責任者の補佐です。
+アプリは「シャドーイング/瞬間英作文/熟語」の3機能に絞ったサブスク(Web,Expo/React Native,Supabase,Stripe)。
+以下のユーザーからの{('不具合報告' if kind=='bug' else 'ご要望' if kind=='request' else '意見')}を分析し、JSONだけ返す:
+「{message}」
+{{
+ "summary": "一文要約",
+ "feasibility": "high" | "medium" | "low" | "no",   // 実装/対応の現実性
+ "effort": "小" | "中" | "大",
+ "approach": "対応方法・実装方針を1-2文で（日本語）",
+ "recommend": "run" | "hold" | "decline"            // 運営への推奨
+}}"""
+    s, j = http(
+        f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}",
+        method="POST",
+        data={"contents": [{"role": "user", "parts": [{"text": prompt}]}],
+              "generationConfig": {"temperature": 0.3, "responseMimeType": "application/json"}},
+    )
+    try:
+        t = j["candidates"][0]["content"]["parts"][0]["text"]
+        return json.loads(t)
+    except Exception:
+        return None
+
+
+def mark_notified(ids):
+    url = os.getenv("SUPABASE_URL", "").rstrip("/"); key = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+    for fid in ids:
+        http(f"{url}/rest/v1/feedback?id=eq.{fid}", method="PATCH",
+             headers={"apikey": key, "Authorization": f"Bearer {key}", "Prefer": "return=minimal"},
+             data={"status": "notified"})
+
+
+# ---------- compose + send ----------
+FEAS = {"high": "#34d399", "medium": "#fbbf24", "low": "#f59e0b", "no": "#f87171"}
+REC = {"run": "対応推奨", "hold": "保留", "decline": "見送り推奨"}
+
+
+def build_html(checks, latest, fresh, total, fb_items):
+    today = datetime.now(JST).strftime("%Y年%m月%d日")
+    rows = "".join(
+        f'<tr><td style="padding:4px 10px;color:#94a3b8">{n}</td>'
+        f'<td style="padding:4px 10px;font-weight:700;color:{"#34d399" if c in (200,401) else "#f87171"}">{c if c else "×"}</td></tr>'
+        for n, c in checks
+    )
+    gen = ('<span style="color:#34d399">✓ 本日分 生成済み</span>' if fresh
+           else '<span style="color:#f87171">✗ 本日分 未生成（要確認）</span>')
+    fb_html = ""
+    if fb_items is None:
+        fb_html = '<p style="color:#f59e0b">※ Supabase未設定のためお問い合わせを取得できません。</p>'
+    elif not fb_items:
+        fb_html = '<p style="color:#64748b">新着はありません。</p>'
+    else:
+        for it in fb_items:
+            a = it.get("_analysis") or {}
+            col = FEAS.get(a.get("feasibility"), "#94a3b8")
+            kind = {"bug": "🐞不具合", "request": "💡要望", "other": "💬その他"}.get(it.get("kind"), it.get("kind"))
+            fb_html += f"""
+            <div style="border-left:3px solid {col};background:#161b27;border-radius:8px;padding:12px 14px;margin:10px 0">
+              <div style="color:#e2e8f0;font-size:13px;margin-bottom:6px">{kind}　<span style="color:#64748b">{(it.get('email') or '匿名')}</span></div>
+              <div style="color:#f1f5f9;font-size:14px;margin-bottom:8px">{it.get('message','')}</div>
+              <div style="color:#cbd5e1;font-size:13px;line-height:1.6">
+                <b>要約:</b> {a.get('summary','-')}<br>
+                <b>対応可否:</b> <span style="color:{col}">{a.get('feasibility','-')}</span>／工数 {a.get('effort','-')}／
+                <b>{REC.get(a.get('recommend'),'-')}</b><br>
+                <b>方法:</b> {a.get('approach','-')}
+              </div>
+            </div>"""
+    return f"""<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"></head>
+<body style="margin:0;padding:24px;background:#0f0f14;font-family:'Helvetica Neue',Arial,sans-serif">
+<div style="max-width:600px;margin:0 auto">
+  <div style="letter-spacing:6px;font-size:12px;font-weight:700;color:#fafafa">RESOUND ・ 運営ダッシュボード</div>
+  <div style="color:#64748b;font-size:13px;margin:4px 0 20px">{today}</div>
+
+  <h2 style="color:#90caf9;font-size:16px">稼働状況</h2>
+  <table style="border-collapse:collapse;background:#111827;border-radius:8px">{rows}</table>
+  <p style="color:#94a3b8;font-size:13px;margin-top:10px">教材生成: {gen}　/　総エピソード {total}</p>
+
+  <h2 style="color:#90caf9;font-size:16px;margin-top:24px">新着お問い合わせ・ご要望（AI分析）</h2>
+  {fb_html}
+
+  <p style="color:#475569;font-size:12px;margin-top:24px">
+    対応する項目は「これやって」と Claude に伝えれば実装します。導入可否の最終判断はあなたです。
+  </p>
+</div></body></html>"""
+
+
+def main():
+    gmail = os.getenv("GMAIL_ADDRESS", "").strip()
+    app_pass = os.getenv("GMAIL_APP_PASSWORD", "").strip()
+    to_raw = os.getenv("REPORT_TO", "").strip()
+
+    checks, latest, fresh, total = health()
+    fb = fetch_feedback()
+    notified = []
+    if fb:
+        for it in fb:
+            it["_analysis"] = analyze(it.get("message", ""), it.get("kind", "other"))
+            notified.append(it["id"])
+
+    html = build_html(checks, latest, fresh, total, fb)
+
+    if not (gmail and app_pass and to_raw):
+        print("メール未設定のため送信スキップ。健全性:", checks, "fresh:", fresh, "feedback:", None if fb is None else len(fb))
+        return 0
+
+    msg = MIMEMultipart("alternative")
+    n_fb = 0 if not fb else len(fb)
+    msg["Subject"] = f"【Resound 運営】{datetime.now(JST):%m/%d} 稼働{'OK' if fresh else '要確認'}・新着{n_fb}件"
+    msg["From"] = gmail
+    msg["To"] = to_raw
+    msg.attach(MIMEText("HTML対応のメールでご覧ください。", "plain", "utf-8"))
+    msg.attach(MIMEText(html, "html", "utf-8"))
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=ssl.create_default_context()) as s:
+        s.login(gmail, app_pass)
+        s.sendmail(gmail, [e.strip() for e in to_raw.split(",") if e.strip()], msg.as_string())
+    if notified:
+        mark_notified(notified)
+    print(f"送信完了。新着{n_fb}件を分析・通知。")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
