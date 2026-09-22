@@ -98,9 +98,9 @@ export default function PaywallScreen() {
         </View>
         <Text style={styles.planPrice}>
           ¥{YEARLY_YEN.toLocaleString()}
-          <Text style={styles.planPeriod}> / 年</Text>
+          <Text style={styles.planPeriod}> / 年（税込）</Text>
         </Text>
-        <Text style={styles.planNote}>月あたり ¥{YEARLY_PER_MONTH.toLocaleString()}</Text>
+        <Text style={styles.planNote}>月あたり ¥{YEARLY_PER_MONTH.toLocaleString()}（税込）</Text>
       </Pressable>
 
       <Pressable
@@ -119,7 +119,7 @@ export default function PaywallScreen() {
         </View>
         <Text style={styles.planPrice}>
           ¥{MONTHLY_YEN.toLocaleString()}
-          <Text style={styles.planPeriod}> / 月</Text>
+          <Text style={styles.planPeriod}> / 月（税込）</Text>
         </Text>
         <Text style={styles.planNote}>いつでも解約できます</Text>
       </Pressable>
