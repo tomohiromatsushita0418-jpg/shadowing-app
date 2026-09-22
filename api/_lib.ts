@@ -122,7 +122,19 @@ export async function getProfile(userId: string): Promise<Profile | null> {
  */
 export async function getOrCreateCustomer(user: User): Promise<string> {
   const profile = await getProfile(user.id);
-  if (profile?.stripe_customer_id) return profile.stripe_customer_id;
+  const existing = profile?.stripe_customer_id;
+  if (existing) {
+    // Verify the stored id still resolves in the *current* Stripe mode. After a
+    // test→live switch (or a manually deleted customer) the old id is dead and
+    // reusing it makes checkout/portal 500 with "No such customer". In that case
+    // we fall through and mint a fresh customer, overwriting the stale mapping.
+    try {
+      const c = await stripe().customers.retrieve(existing);
+      if (!(c as { deleted?: boolean }).deleted) return existing;
+    } catch (err) {
+      if ((err as { code?: string }).code !== 'resource_missing') throw err;
+    }
+  }
 
   const customer = await stripe().customers.create({
     email: user.email ?? undefined,

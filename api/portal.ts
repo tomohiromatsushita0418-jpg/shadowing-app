@@ -20,11 +20,20 @@ export default async function handler(request: Request): Promise<Response> {
       return json(request, { error: 'no_subscription' }, 404);
     }
 
-    const session = await stripe().billingPortal.sessions.create({
-      customer: profile.stripe_customer_id,
-      return_url: `${appUrl()}/account`,
-      locale: 'ja',
-    });
+    let session;
+    try {
+      session = await stripe().billingPortal.sessions.create({
+        customer: profile.stripe_customer_id,
+        return_url: `${appUrl()}/account`,
+        locale: 'ja',
+      });
+    } catch (err) {
+      // Stale id (e.g. left over from test mode) — nothing to manage here.
+      if ((err as { code?: string }).code === 'resource_missing') {
+        return json(request, { error: 'no_subscription' }, 404);
+      }
+      throw err;
+    }
 
     return json(request, { url: session.url });
   } catch (error) {
