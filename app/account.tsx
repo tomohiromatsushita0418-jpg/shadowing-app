@@ -74,9 +74,7 @@ export default function AccountScreen() {
     );
   }
 
-  const plan = entitlement?.plan ?? 'trial';
-  const isPro = plan === 'pro';
-  const isTrial = plan === 'trial' && (entitlement?.trialDaysLeft ?? 0) > 0;
+  const isPro = entitlement?.plan === 'pro' && entitlement.active === true;
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.scroll}>
@@ -88,12 +86,12 @@ export default function AccountScreen() {
       <View style={[styles.card, isPro && styles.cardPro]}>
         <View style={styles.statusRow}>
           <Ionicons
-            name={isPro ? 'checkmark-circle' : isTrial ? 'time-outline' : 'lock-closed-outline'}
+            name={isPro ? 'checkmark-circle' : 'lock-open-outline'}
             size={22}
-            color={isPro ? '#34d399' : isTrial ? '#fbbf24' : '#f87171'}
+            color={isPro ? '#34d399' : '#fbbf24'}
           />
           <Text style={styles.statusText}>
-            {isPro ? '購読中' : isTrial ? '無料トライアル中' : 'トライアル終了'}
+            {isPro ? '購読中' : '無料プラン'}
           </Text>
         </View>
 
@@ -103,13 +101,9 @@ export default function AccountScreen() {
               ? `${formatDate(entitlement.currentPeriodEnd)} に解約予定です。それまでは全機能をご利用いただけます。`
               : `次回更新日: ${formatDate(entitlement?.currentPeriodEnd ?? null)}`}
           </Text>
-        ) : isTrial ? (
-          <Text style={styles.body}>
-            残り {entitlement?.trialDaysLeft} 日（{formatDate(entitlement?.trialEndsAt ?? null)} まで）
-          </Text>
         ) : (
           <Text style={styles.body}>
-            購読すると全エピソードと全機能が再び使えるようになります。
+            最新10話を無料でご利用中です。購読すると過去の全エピソードと全機能が開放されます。
           </Text>
         )}
       </View>
