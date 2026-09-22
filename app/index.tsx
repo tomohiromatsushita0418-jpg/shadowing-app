@@ -176,6 +176,7 @@ export default function HomeScreen() {
                 { icon: 'refresh-circle', tint: '#f87171', title: '間違えた問題を復習', sub: '瞬間英作文の「要修正」だけ', to: '/composition?mode=wrong' },
                 { icon: 'bookmark', tint: '#fbbf24', title: '熟語帳', sub: '保存した表現を復習・クイズ', to: '/phrasebook' },
                 { icon: 'stats-chart', tint: '#34d399', title: '学習の記録', sub: '連続日数・理解度・成果', to: '/dashboard' },
+                { icon: 'chatbubble-ellipses', tint: '#a78bfa', title: 'お問い合わせ・ご要望', sub: '不具合報告・機能リクエスト', to: '/feedback' },
               ].map((m, i, arr) => (
                 <Pressable
                   key={m.title}

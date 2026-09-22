@@ -47,6 +47,10 @@ export default function RootLayout() {
           options={{ title: '学習の記録', headerBackTitle: 'Home' }}
         />
         <Stack.Screen
+          name="feedback"
+          options={{ title: 'お問い合わせ・ご要望', headerBackTitle: 'Home' }}
+        />
+        <Stack.Screen
           name="topic/[id]"
           options={{ title: '', headerBackTitle: 'Back' }}
         />
