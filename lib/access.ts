@@ -1,14 +1,18 @@
 /**
- * How many of the newest episodes stay readable without an account.
+ * How many episodes from the very beginning (Stage 1) stay readable without a
+ * subscription.
  *
- * A hard wall at the front door would waste every visitor the SEO site and the
- * social accounts send over — they need to hear the audio before an email
- * address is worth giving up. Three is enough to judge the product and far too
- * few to learn from, which is exactly the trade we want.
+ * The free tier is the *first* `FREE_PREVIEW_TOPICS` episodes — Stage 1 — so a
+ * new learner starts at lesson 1 and follows the intended order. It is enough to
+ * judge the product and to get a real first week of study; everything past
+ * Stage 1 requires a subscription.
  */
 export const FREE_PREVIEW_TOPICS = 10;
 
-/** `index` is the position in `topics` (oldest first), so the newest are at the end. */
-export function isPreviewTopic(index: number, total: number): boolean {
-  return index >= total - FREE_PREVIEW_TOPICS;
+/**
+ * `index` is the position in `topics` (oldest first). The free tier is the first
+ * `FREE_PREVIEW_TOPICS` episodes (Stage 1); everything after is locked.
+ */
+export function isPreviewTopic(index: number, _total: number): boolean {
+  return index < FREE_PREVIEW_TOPICS;
 }

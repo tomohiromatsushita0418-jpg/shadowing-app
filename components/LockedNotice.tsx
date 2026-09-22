@@ -10,9 +10,9 @@ type Props = {
 };
 
 /**
- * Shown in place of gated content (episodes 11+ and the practice tools). The
- * newest 10 episodes are free; everything else needs a subscription. A logged-out
- * visitor is nudged to sign up first, then subscribe.
+ * Shown in place of gated content (Stage 2 onward and the practice tools). The
+ * first 10 episodes (Stage 1) are free; everything else needs a subscription. A
+ * logged-out visitor is nudged to sign up first, then subscribe.
  */
 export default function LockedNotice({ what }: Props) {
   const router = useRouter();
@@ -27,8 +27,8 @@ export default function LockedNotice({ what }: Props) {
       <Text style={styles.title}>{what}はロックされています</Text>
 
       <Text style={styles.body}>
-        無料で読めるのは最新10話までです。{'\n'}
-        購読すると、過去の全エピソードのアーカイブと{'\n'}
+        無料で読めるのは最初の10話（Stage 1）までです。{'\n'}
+        購読すると、Stage 2以降の全エピソードと{'\n'}
         瞬間英作文・熟語などの全機能が使い放題になります。
       </Text>
 

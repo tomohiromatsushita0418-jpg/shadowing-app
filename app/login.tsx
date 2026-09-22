@@ -139,7 +139,7 @@ export default function LoginScreen() {
         <Text style={styles.title}>ログイン / 新規登録</Text>
         <Text style={styles.body}>
           メールアドレスだけで始められます。{'\n'}
-          パスワード不要。最新10話は無料で読めます。
+          パスワード不要。最初の10話（Stage 1）は無料で読めます。
         </Text>
 
         <TextInput

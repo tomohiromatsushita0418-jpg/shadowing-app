@@ -2,8 +2,10 @@ import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import type { Topic } from '../data/topics';
+import { topics, type Topic } from '../data/topics';
 import { useProgress } from '../hooks/useProgress';
+import { useAccount } from '../lib/account';
+import { isPreviewTopic } from '../lib/access';
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
   'Daily Conversation': { bg: '#2a1a1a', text: '#f87171' },
@@ -35,6 +37,9 @@ function formatDate(iso: string): string {
 export default function TopicCard({ topic, index }: Props) {
   const router = useRouter();
   const { isComplete } = useProgress();
+  const { paywallEnabled, entitlement } = useAccount();
+  const isPro = entitlement?.plan === 'pro' && entitlement.active === true;
+  const locked = paywallEnabled && !isPro && !isPreviewTopic(index, topics.length);
   const colors = CATEGORY_COLORS[topic.category] ?? { bg: '#1e293b', text: '#94a3b8' };
   const done = isComplete(topic.id);
 
@@ -43,11 +48,12 @@ export default function TopicCard({ topic, index }: Props) {
       style={({ pressed }) => [
         styles.card,
         done && styles.cardDone,
+        locked && styles.cardLocked,
         pressed && styles.pressed,
       ]}
-      onPress={() => router.push(`/topic/${topic.id}`)}
+      onPress={() => router.push(locked ? '/paywall' : `/topic/${topic.id}`)}
       accessibilityRole="button"
-      accessibilityLabel={`Open topic: ${topic.title}`}
+      accessibilityLabel={locked ? `ロック中: ${topic.title} — 購読で解放` : `Open topic: ${topic.title}`}
     >
       <View style={styles.top}>
         <View style={[styles.badge, { backgroundColor: colors.bg }]}>
@@ -55,7 +61,12 @@ export default function TopicCard({ topic, index }: Props) {
             {topic.category}
           </Text>
         </View>
-        {done ? (
+        {locked ? (
+          <View style={styles.lockBadge}>
+            <Ionicons name="lock-closed" size={13} color="#fbbf24" />
+            <Text style={styles.lockText}>購読で解放</Text>
+          </View>
+        ) : done ? (
           <View style={styles.doneBadge}>
             <Ionicons name="checkmark-circle" size={16} color="#34d399" />
             <Text style={styles.doneText}>完了</Text>
@@ -113,6 +124,22 @@ const styles = StyleSheet.create({
   cardDone: {
     borderColor: 'rgba(52,211,153,0.4)',
     backgroundColor: '#141d1a',
+  },
+  cardLocked: {
+    borderColor: 'rgba(251,191,36,0.25)',
+    backgroundColor: '#14141a',
+    opacity: 0.85,
+  },
+  lockBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  lockText: {
+    color: '#fbbf24',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 0.4,
   },
   pressed: {
     opacity: 0.75,

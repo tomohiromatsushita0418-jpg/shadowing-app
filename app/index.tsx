@@ -11,6 +11,7 @@ import Welcome from '../components/Welcome';
 import { useProgress } from '../hooks/useProgress';
 import { useOnboarding } from '../hooks/useOnboarding';
 import { useAccount } from '../lib/account';
+import { FREE_PREVIEW_TOPICS } from '../lib/access';
 
 const FOLDER_SIZE = 10;
 
@@ -24,8 +25,12 @@ export default function HomeScreen() {
   const router = useRouter();
   const { completedCount, streak } = useProgress();
   const { ready: onbReady, onboarded, complete } = useOnboarding();
-  const { session, entitlement } = useAccount();
+  const { session, entitlement, paywallEnabled } = useAccount();
   const isPro = entitlement?.plan === 'pro' && entitlement.active === true;
+  // Free tier is Stage 1 (the first FREE_PREVIEW_TOPICS episodes). Any stage that
+  // begins past that is locked until the user subscribes. When the paywall is
+  // off (pre-launch) nothing is locked.
+  const stageLocked = (start: number) => paywallEnabled && !isPro && start > FREE_PREVIEW_TOPICS;
 
   const folders = useMemo(() => {
     const groups: {
@@ -47,6 +52,7 @@ export default function HomeScreen() {
   }, []);
 
   const featured = latestTopic();
+  const featuredLocked = featured ? stageLocked(featured.index + 1) : false;
   const overallRatio = topics.length > 0 ? completedCount / topics.length : 0;
 
   return (
@@ -61,6 +67,7 @@ export default function HomeScreen() {
             end={item.end}
             count={item.count}
             topicIds={item.topicIds}
+            locked={stageLocked(item.start)}
           />
         )}
         contentContainerStyle={[
@@ -173,17 +180,25 @@ export default function HomeScreen() {
                   styles.featuredCard,
                   pressed && styles.featuredPressed,
                 ]}
-                onPress={() => router.push(`/topic/${featured.topic.id}`)}
+                onPress={() =>
+                  router.push(featuredLocked ? '/paywall' : `/topic/${featured.topic.id}`)
+                }
               >
                 <LinearGradient
-                  colors={['#0c4a6e', '#0e7490']}
+                  colors={featuredLocked ? ['#1e293b', '#0f172a'] : ['#0c4a6e', '#0e7490']}
                   start={{ x: 0, y: 0 }}
                   end={{ x: 1, y: 1 }}
                   style={styles.featuredInner}
                 >
                   <View style={styles.featuredHeader}>
-                    <View style={styles.featuredDot} />
-                    <Text style={styles.featuredKicker}>LATEST DROP</Text>
+                    {featuredLocked ? (
+                      <Ionicons name="lock-closed" size={13} color="#fbbf24" />
+                    ) : (
+                      <View style={styles.featuredDot} />
+                    )}
+                    <Text style={styles.featuredKicker}>
+                      {featuredLocked ? '購読で解放' : 'LATEST DROP'}
+                    </Text>
                   </View>
                   <Text style={styles.featuredTitle} numberOfLines={2}>
                     {featured.topic.title}
@@ -201,8 +216,14 @@ export default function HomeScreen() {
                       </Text>
                     </View>
                     <View style={styles.featuredCta}>
-                      <Text style={styles.featuredCtaText}>Start</Text>
-                      <Ionicons name="arrow-forward" size={16} color="#0c4a6e" />
+                      <Text style={styles.featuredCtaText}>
+                        {featuredLocked ? '購読で解放' : 'Start'}
+                      </Text>
+                      <Ionicons
+                        name={featuredLocked ? 'lock-closed' : 'arrow-forward'}
+                        size={16}
+                        color="#0c4a6e"
+                      />
                     </View>
                   </View>
                 </LinearGradient>

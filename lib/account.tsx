@@ -108,8 +108,8 @@ export function AccountProvider({ children }: { children: React.ReactNode }) {
   const entitlement = useMemo(() => (profile ? entitlementOf(profile) : null), [profile]);
 
   // Full access = an active paid subscription. There is no free trial: the free
-  // tier is the newest FREE_PREVIEW_TOPICS episodes (see lib/access.ts); the full
-  // archive and the practice tools require a subscription.
+  // tier is the first FREE_PREVIEW_TOPICS episodes — Stage 1 (see lib/access.ts);
+  // everything from Stage 2 on and the practice tools require a subscription.
   // Until the paywall is switched on everything stays unlocked (ships ahead of
   // going live).
   const hasAccess =

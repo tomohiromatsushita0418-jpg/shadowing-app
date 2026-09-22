@@ -13,7 +13,7 @@ const YEARLY_PER_MONTH = Math.floor(YEARLY_YEN / 12);
 const YEARLY_DISCOUNT_PCT = Math.round((1 - YEARLY_YEN / (MONTHLY_YEN * 12)) * 100);
 
 const BENEFITS: { icon: keyof typeof Ionicons.glyphMap; text: string }[] = [
-  { icon: 'albums-outline', text: `過去の全${topics.length}エピソードが見放題（毎日1本ずつ追加）` },
+  { icon: 'albums-outline', text: `全${topics.length}エピソードが見放題（Stage 2以降も全部・毎日1本ずつ追加）` },
   { icon: 'volume-high-outline', text: 'ネイティブ音声で文・単語・熟語を何度でも再生' },
   { icon: 'flash-outline', text: '瞬間英作文トレーニング（AI添削・苦手復習）' },
   { icon: 'bookmark-outline', text: '熟語帳・熟語クイズが無制限' },
@@ -58,8 +58,8 @@ export default function PaywallScreen() {
         <Ionicons name="headset" size={40} color="#fbbf24" />
         <Text style={styles.title}>すべてのエピソードを開放</Text>
         <Text style={styles.subtitle}>
-          無料は最新10話まで。購読で過去の全アーカイブと{'\n'}
-          全機能が使い放題に。毎日更新でTOEIC 700→990へ。
+          無料は最初の10話（Stage 1）まで。購読でStage 2以降の{'\n'}
+          全エピソードと全機能が使い放題に。毎日更新でTOEIC 700→990へ。
         </Text>
       </LinearGradient>
 

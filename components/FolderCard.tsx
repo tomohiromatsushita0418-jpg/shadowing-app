@@ -11,6 +11,7 @@ interface Props {
   end: number;
   count: number;
   topicIds: string[]; // ids of the topics that live in this stage
+  locked?: boolean; // requires a subscription (everything past the free Stage 1)
 }
 
 // A small palette of accent colors cycled by stage number so each card
@@ -23,10 +24,14 @@ const PALETTES: { from: string; to: string; glow: string; accent: string }[] = [
   { from: '#5f4a1e', to: '#38290f', glow: '#f59e0b', accent: '#fbbf24' },
 ];
 
-export default function FolderCard({ folderNumber, start, end, count, topicIds }: Props) {
+// Muted slate palette used for every locked stage so they read as "not yet
+// yours" — clearly distinct from the colorful unlocked cards.
+const LOCKED_PALETTE = { from: '#161a22', to: '#0e1117', glow: '#000000', accent: '#64748b' };
+
+export default function FolderCard({ folderNumber, start, end, count, topicIds, locked }: Props) {
   const router = useRouter();
   const { completedInList } = useProgress();
-  const palette = PALETTES[(folderNumber - 1) % PALETTES.length];
+  const palette = locked ? LOCKED_PALETTE : PALETTES[(folderNumber - 1) % PALETTES.length];
   const doneCount = completedInList(topicIds);
   const ratio = count > 0 ? doneCount / count : 0;
   const allDone = count > 0 && doneCount === count;
@@ -36,11 +41,16 @@ export default function FolderCard({ folderNumber, start, end, count, topicIds }
       style={({ pressed }) => [
         styles.cardOuter,
         { shadowColor: palette.glow },
+        locked && styles.cardOuterLocked,
         pressed && styles.pressed,
       ]}
-      onPress={() => router.push(`/folder/${folderNumber}`)}
+      // Locked stages aren't dead — tapping opens the paywall so the lock is
+      // self-explanatory and one tap from being unlocked.
+      onPress={() => router.push(locked ? '/paywall' : `/folder/${folderNumber}`)}
       accessibilityRole="button"
-      accessibilityLabel={`Open stage ${folderNumber}`}
+      accessibilityLabel={
+        locked ? `Stage ${folderNumber} はロック中 — 購読で解放` : `Open stage ${folderNumber}`
+      }
     >
       <LinearGradient
         colors={[palette.from, palette.to]}
@@ -52,33 +62,46 @@ export default function FolderCard({ folderNumber, start, end, count, topicIds }
           <Text style={[styles.stageLabel, { color: palette.accent }]}>
             STAGE
           </Text>
-          <Text style={styles.stageNumber}>
+          <Text style={[styles.stageNumber, locked && styles.stageNumberLocked]}>
             {String(folderNumber).padStart(2, '0')}
           </Text>
           <Text style={styles.range}>
             {start}–{end}
           </Text>
 
-          <View style={styles.progressRow}>
-            <View style={styles.progressTrack}>
-              <View
-                style={[
-                  styles.progressFill,
-                  {
-                    width: `${Math.round(ratio * 100)}%`,
-                    backgroundColor: palette.accent,
-                  },
-                ]}
-              />
+          {locked ? (
+            <View style={styles.lockedRow}>
+              <Ionicons name="lock-closed" size={13} color={palette.accent} />
+              <Text style={[styles.lockedText, { color: palette.accent }]}>
+                購読で解放
+              </Text>
             </View>
-            <Text style={[styles.progressLabel, { color: palette.accent }]}>
-              {doneCount}/{count}
-            </Text>
-          </View>
+          ) : (
+            <View style={styles.progressRow}>
+              <View style={styles.progressTrack}>
+                <View
+                  style={[
+                    styles.progressFill,
+                    {
+                      width: `${Math.round(ratio * 100)}%`,
+                      backgroundColor: palette.accent,
+                    },
+                  ]}
+                />
+              </View>
+              <Text style={[styles.progressLabel, { color: palette.accent }]}>
+                {doneCount}/{count}
+              </Text>
+            </View>
+          )}
         </View>
 
         <View style={styles.right}>
-          {allDone ? (
+          {locked ? (
+            <View style={styles.lockBadge}>
+              <Ionicons name="lock-closed" size={18} color="#0f0f14" />
+            </View>
+          ) : allDone ? (
             <View style={[styles.countPill, { borderColor: palette.accent }]}>
               <Ionicons name="checkmark-circle" size={15} color={palette.accent} />
               <Text style={[styles.countLabel, { color: palette.accent }]}>done</Text>
@@ -107,6 +130,7 @@ const styles = StyleSheet.create({
     shadowRadius: 14,
     elevation: 8,
   },
+  cardOuterLocked: { shadowOpacity: 0.15, elevation: 3, opacity: 0.9 },
   pressed: { opacity: 0.85, transform: [{ scale: 0.985 }] },
   card: {
     borderRadius: 18,
@@ -132,6 +156,26 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     lineHeight: 44,
     letterSpacing: -1,
+  },
+  stageNumberLocked: { color: 'rgba(255,255,255,0.5)' },
+  lockedRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginTop: 12,
+  },
+  lockedText: {
+    fontSize: 12,
+    fontWeight: '800',
+    letterSpacing: 0.5,
+  },
+  lockBadge: {
+    width: 34,
+    height: 34,
+    borderRadius: 17,
+    backgroundColor: '#fbbf24',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   range: {
     color: 'rgba(255,255,255,0.55)',

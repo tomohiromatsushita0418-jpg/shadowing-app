@@ -103,7 +103,7 @@ export default function AccountScreen() {
           </Text>
         ) : (
           <Text style={styles.body}>
-            最新10話を無料でご利用中です。購読すると過去の全エピソードと全機能が開放されます。
+            最初の10話（Stage 1）を無料でご利用中です。購読するとStage 2以降の全エピソードと全機能が開放されます。
           </Text>
         )}
       </View>

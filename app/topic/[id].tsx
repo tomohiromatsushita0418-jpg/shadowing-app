@@ -91,8 +91,8 @@ export default function TopicScreen() {
   const topicIndex = topics.findIndex((t) => t.id === id);
   const topic = topicIndex >= 0 ? topics[topicIndex] : undefined;
   const completed = topic ? isComplete(topic.id) : false;
-  // The newest few episodes stay open to everyone so visitors arriving from
-  // search or social can actually hear the product before signing up.
+  // Stage 1 (the first few episodes) stays open to everyone so visitors arriving
+  // from search or social can actually hear the product before signing up.
   const unlocked = hasAccess || isPreviewTopic(topicIndex, topics.length);
 
   const [speakingIndex, setSpeakingIndex] = useState<number | null>(null);

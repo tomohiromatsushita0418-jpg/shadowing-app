@@ -23,7 +23,7 @@ export default function AccountBanner() {
       <Pressable style={[styles.banner, styles.accent]} onPress={() => router.push('/login')}>
         <Ionicons name="gift-outline" size={20} color="#fbbf24" />
         <View style={styles.textWrap}>
-          <Text style={styles.title}>最新10話は無料で読めます</Text>
+          <Text style={styles.title}>最初の10話（Stage 1）は無料で読めます</Text>
           <Text style={styles.sub}>メールアドレスだけで登録できます</Text>
         </View>
         <Ionicons name="chevron-forward" size={18} color="#64748b" />
@@ -46,13 +46,13 @@ export default function AccountBanner() {
     );
   }
 
-  // Logged in, not subscribed → free tier (newest 10 episodes).
+  // Logged in, not subscribed → free tier (Stage 1, the first 10 episodes).
   return (
     <Pressable style={[styles.banner, styles.accent]} onPress={() => router.push('/paywall')}>
       <Ionicons name="lock-open-outline" size={20} color="#fbbf24" />
       <View style={styles.textWrap}>
-        <Text style={styles.title}>過去の全エピソードを開放</Text>
-        <Text style={styles.sub}>購読で全アーカイブと全機能が使い放題に</Text>
+        <Text style={styles.title}>Stage 2以降の全エピソードを開放</Text>
+        <Text style={styles.sub}>購読で全エピソードと全機能が使い放題に</Text>
       </View>
       <Ionicons name="chevron-forward" size={18} color="#64748b" />
     </Pressable>
