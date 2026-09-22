@@ -183,9 +183,10 @@ const VERDICT = {
 export default function CompositionScreen() {
   const insets = useSafeAreaInsets();
   const navigation = useNavigation();
-  const { topicId, index } = useLocalSearchParams<{ topicId?: string; index?: string }>();
-  const { getRecord, saveRecord, topicSummary, reviewWeight, ready: progressReady } = useComposeProgress();
+  const { topicId, index, mode } = useLocalSearchParams<{ topicId?: string; index?: string; mode?: string }>();
+  const { store, getRecord, saveRecord, topicSummary, reviewWeight, ready: progressReady } = useComposeProgress();
   const { ready: accountReady, hasAccess } = useAccount();
+  const wrongMode = mode === 'wrong' && !topicId;
   const isRandom = !topicId;
 
   // Topic mode → that topic's sentences in order.
@@ -202,22 +203,31 @@ export default function CompositionScreen() {
   // got wrong (needs_work) or haven't tried surface far more often than ones
   // you've already nailed. Built once, after saved progress has loaded.
   const [randomProblems, setRandomProblems] = useState<Problem[]>([]);
+  const [randomBuilt, setRandomBuilt] = useState(false);
   useEffect(() => {
-    if (topicId || !progressReady || randomProblems.length) return;
+    if (topicId || !progressReady || randomBuilt) return;
     const pool: Problem[] = [];
     for (const t of topics) {
       t.sentences.forEach((s, i) =>
         pool.push({ topicId: t.id, sIndex: i, ja: s.ja, en: s.en, phrases: s.phrases })
       );
     }
-    // Weighted shuffle: draw with probability ∝ (reviewWeight + 0.3) so even
-    // "perfect" items appear occasionally.
-    const scored = pool.map((p) => ({
-      p, key: Math.random() / (reviewWeight(p.topicId, p.sIndex) + 0.3),
-    }));
-    scored.sort((a, b) => a.key - b.key);
-    setRandomProblems(scored.slice(0, RANDOM_COUNT).map((x) => x.p));
-  }, [topicId, progressReady, randomProblems.length, reviewWeight]);
+
+    if (wrongMode) {
+      // Only sentences the learner previously got wrong (要修正).
+      const wrong = pool.filter((p) => store[`${p.topicId}#${p.sIndex}`]?.verdict === 'needs_work');
+      setRandomProblems(shuffle(wrong));
+    } else {
+      // Weighted shuffle: draw with probability ∝ (reviewWeight + 0.3) so even
+      // "perfect" items appear occasionally.
+      const scored = pool.map((p) => ({
+        p, key: Math.random() / (reviewWeight(p.topicId, p.sIndex) + 0.3),
+      }));
+      scored.sort((a, b) => a.key - b.key);
+      setRandomProblems(scored.slice(0, RANDOM_COUNT).map((x) => x.p));
+    }
+    setRandomBuilt(true);
+  }, [topicId, progressReady, randomBuilt, reviewWeight, wrongMode, store]);
 
   const problems = isRandom ? randomProblems : topicProblems;
 
@@ -238,8 +248,8 @@ export default function CompositionScreen() {
   const scrollRef = useRef<ScrollView>(null);
 
   useEffect(() => {
-    navigation.setOptions({ title: '瞬間英作文' });
-  }, [navigation]);
+    navigation.setOptions({ title: wrongMode ? '間違えた問題を復習' : '瞬間英作文' });
+  }, [navigation, wrongMode]);
 
   const problem = problems[idx];
 
@@ -295,11 +305,24 @@ export default function CompositionScreen() {
     );
   }
 
-  if (isRandom && randomProblems.length === 0) {
+  if (isRandom && !randomBuilt) {
     return (
       <View style={styles.empty}>
         <ActivityIndicator size="large" color="#22d3ee" />
-        <Text style={styles.emptySub}>苦手を優先して出題を準備中…</Text>
+        <Text style={styles.emptySub}>{wrongMode ? '苦手な問題を集めています…' : '苦手を優先して出題を準備中…'}</Text>
+      </View>
+    );
+  }
+
+  if (wrongMode && randomProblems.length === 0) {
+    return (
+      <View style={styles.empty}>
+        <Ionicons name="checkmark-done-circle" size={52} color="#34d399" />
+        <Text style={styles.emptyTitle}>復習する間違いはありません</Text>
+        <Text style={styles.emptySub}>
+          「要修正」と判定された問題がここに集まります。{'\n'}
+          まずは通常の瞬間英作文に挑戦してみましょう。
+        </Text>
       </View>
     );
   }
@@ -349,7 +372,7 @@ export default function CompositionScreen() {
           {summary ? (
             <Text style={styles.summaryText}>理解度 {summary.understood}/{summary.total}</Text>
           ) : (
-            <Text style={styles.randomTag}>ランダム出題</Text>
+            <Text style={styles.randomTag}>{wrongMode ? '苦手復習' : 'ランダム出題'}</Text>
           )}
         </View>
         <Text style={styles.topicText} numberOfLines={1}>
