@@ -10,6 +10,7 @@ import AccountBanner from '../components/AccountBanner';
 import Welcome from '../components/Welcome';
 import { useProgress } from '../hooks/useProgress';
 import { useOnboarding } from '../hooks/useOnboarding';
+import { useAccount } from '../lib/account';
 
 const FOLDER_SIZE = 10;
 
@@ -23,6 +24,8 @@ export default function HomeScreen() {
   const router = useRouter();
   const { completedCount, streak } = useProgress();
   const { ready: onbReady, onboarded, complete } = useOnboarding();
+  const { session, entitlement } = useAccount();
+  const isPro = entitlement?.plan === 'pro' && entitlement.active === true;
 
   const folders = useMemo(() => {
     const groups: {
@@ -74,15 +77,52 @@ export default function HomeScreen() {
               end={{ x: 1, y: 1 }}
               style={styles.hero}
             >
-              <View style={styles.brandRow}>
-                <Text style={styles.brandName}>RESOUND</Text>
-                <Text style={styles.brandSep}>·</Text>
-                <Text style={styles.brandSub}>english studio</Text>
+              <View style={styles.topBar}>
+                <View style={styles.brandRow}>
+                  <Text style={styles.brandName}>RESOUND</Text>
+                  <Text style={styles.brandSep}>·</Text>
+                  <Text style={styles.brandSub}>english studio</Text>
+                </View>
+                <View style={styles.topIcons}>
+                  <Pressable
+                    style={styles.iconBtn}
+                    onPress={() => router.push('/feedback' as any)}
+                    accessibilityLabel="お問い合わせ・ご要望"
+                  >
+                    <Ionicons name="chatbubble-ellipses-outline" size={19} color="#cbd5e1" />
+                  </Pressable>
+                  <Pressable
+                    style={styles.iconBtn}
+                    onPress={() => router.push((session ? '/account' : '/login') as any)}
+                    accessibilityLabel={session ? 'アカウント' : 'ログイン'}
+                  >
+                    <Ionicons
+                      name={session ? 'person-circle' : 'person-circle-outline'}
+                      size={22}
+                      color={session ? '#22d3ee' : '#cbd5e1'}
+                    />
+                  </Pressable>
+                </View>
               </View>
 
               <Text style={styles.heroSub}>
                 Shadow it. Rebuild it. Own it.
               </Text>
+
+              {/* Login / subscribe CTA */}
+              {!session ? (
+                <Pressable style={styles.ctaLogin} onPress={() => router.push('/login' as any)}>
+                  <Ionicons name="sparkles" size={15} color="#0b1220" />
+                  <Text style={styles.ctaLoginText}>ログイン / 無料で新規登録</Text>
+                  <Ionicons name="arrow-forward" size={15} color="#0b1220" />
+                </Pressable>
+              ) : !isPro ? (
+                <Pressable style={styles.ctaSubscribe} onPress={() => router.push('/paywall' as any)}>
+                  <Ionicons name="lock-open" size={15} color="#fde68a" />
+                  <Text style={styles.ctaSubscribeText}>購読して全エピソード・全機能を開放</Text>
+                  <Ionicons name="chevron-forward" size={15} color="#fde68a" />
+                </Pressable>
+              ) : null}
 
               {/* Stats row → tap for the full dashboard */}
               <Pressable
@@ -176,7 +216,6 @@ export default function HomeScreen() {
                 { icon: 'refresh-circle', tint: '#f87171', title: '間違えた問題を復習', sub: '瞬間英作文の「要修正」だけ', to: '/composition?mode=wrong' },
                 { icon: 'bookmark', tint: '#fbbf24', title: '熟語帳', sub: '保存した表現を復習・クイズ', to: '/phrasebook' },
                 { icon: 'stats-chart', tint: '#34d399', title: '学習の記録', sub: '連続日数・理解度・成果', to: '/dashboard' },
-                { icon: 'chatbubble-ellipses', tint: '#a78bfa', title: 'お問い合わせ・ご要望', sub: '不具合報告・機能リクエスト', to: '/feedback' },
               ].map((m, i, arr) => (
                 <Pressable
                   key={m.title}
@@ -234,12 +273,50 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(255,255,255,0.04)',
   },
+  topBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 22,
+  },
   brandRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    marginBottom: 28,
   },
+  topIcons: { flexDirection: 'row', alignItems: 'center', gap: 4 },
+  iconBtn: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.05)',
+  },
+  ctaLogin: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+    backgroundColor: '#22d3ee',
+    borderRadius: 999,
+    paddingVertical: 12,
+    marginBottom: 22,
+  },
+  ctaLoginText: { color: '#0b1220', fontSize: 14, fontWeight: '800', letterSpacing: 0.3 },
+  ctaSubscribe: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 7,
+    borderWidth: 1,
+    borderColor: 'rgba(251,191,36,0.4)',
+    backgroundColor: 'rgba(251,191,36,0.08)',
+    borderRadius: 999,
+    paddingVertical: 12,
+    marginBottom: 22,
+  },
+  ctaSubscribeText: { color: '#fde68a', fontSize: 13.5, fontWeight: '800' },
   brandName: {
     color: '#fafafa',
     fontSize: 13,
