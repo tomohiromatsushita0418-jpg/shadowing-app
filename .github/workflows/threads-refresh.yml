@@ -1,0 +1,40 @@
+name: Threads Token Refresh
+
+# Threads long-lived tokens expire after 60 days. This job refreshes the token
+# (each refresh mints a fresh 60-day token) and writes it back to the
+# THREADS_ACCESS_TOKEN secret, so the daily Social Post job never dies.
+#
+# Runs weekly — far more often than needed, so a single missed run can never let
+# the token lapse. Refreshing an already-valid token is free and harmless.
+#
+# Requires a GH_PAT secret: a GitHub Personal Access Token allowed to write this
+# repo's Actions secrets (the built-in GITHUB_TOKEN cannot update secrets).
+on:
+  schedule:
+    - cron: '0 3 * * 0' # every Sunday 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: threads-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh the long-lived token and update the secret
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          CURRENT: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$CURRENT" ]; then echo "No THREADS_ACCESS_TOKEN set."; exit 1; fi
+          resp=$(curl -s "https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=$CURRENT")
+          new=$(printf '%s' "$resp" | python3 -c "import sys,json;print(json.load(sys.stdin).get('access_token',''))" 2>/dev/null || true)
+          if [ -z "$new" ]; then echo "Refresh failed: $resp"; exit 1; fi
+          days=$(printf '%s' "$resp" | python3 -c "import sys,json;print(round(json.load(sys.stdin).get('expires_in',0)/86400))" 2>/dev/null || echo '?')
+          printf '%s' "$new" | gh secret set THREADS_ACCESS_TOKEN --repo "$REPO"
+          echo "Threads token refreshed. New token valid for ~${days} days."
