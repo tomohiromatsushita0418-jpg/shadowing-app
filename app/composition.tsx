@@ -121,7 +121,7 @@ function diffWords(a: string, b: string): { a: DiffPart[]; b: DiffPart[] } {
 async function gradeAnswer(problem: Problem, answer: string): Promise<Grade> {
   const key = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
   if (!key) throw new Error('no-key');
-  const prompt = `あなたは経験豊富な英語コーチです。日本人学習者(TOEIC 700→990)の「瞬間英作文」を添削します。
+  const prompt = `あなたは経験豊富な英語コーチです。日本人学習者(中上級〜上級)の「瞬間英作文」を添削します。
 
 【和文(問題)】${problem.ja}
 【模範解答の一例】${problem.en}

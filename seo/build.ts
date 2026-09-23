@@ -76,7 +76,16 @@ function page(opts: {
 
 // ---------------------------------------------------------------------------
 
-const topics = loadTopics();
+const allTopics = loadTopics();
+
+// Only the free tier — Stage 1, the first FREE_EPISODES episodes — is published
+// publicly. Everything past that is paid content, so it never gets a public page
+// on the marketing site (that would give the subscription away for free). This
+// matches the app's own free preview (lib/access.ts FREE_PREVIEW_TOPICS).
+const FREE_EPISODES = 10;
+const topics = allTopics.slice(0, FREE_EPISODES);
+const libraryCount = allTopics.length;
+
 const phraseIndex = buildPhraseIndex(topics);
 const collections = buildCollections(phraseIndex);
 
@@ -106,12 +115,12 @@ writeFileSync(resolve(OUT, 'style.css'), STYLESHEET, 'utf8');
   const body = `
 <h1>${esc(BRAND)} — ${esc(TAGLINE)}</h1>
 <p class="lead">${esc(DESCRIPTION)}</p>
-<p>ビジネス、時事、日常会話、化学業界まで。実際に使われる英文を1日1本、全文和訳と表現解説つきで公開しています。
-現在 <strong>${topics.length}本</strong>のエピソード、<strong>${phraseIndex.size.toLocaleString()}個</strong>の英語表現を収録。</p>
+<p>ビジネス、時事、日常会話、化学業界まで。実際に使われる英文を、全文和訳と表現解説つきで。
+全<strong>${libraryCount}話</strong>のうち、最初の<strong>${topics.length}話（Stage 1）</strong>を無料で公開中。続きはアプリの購読でご利用いただけます。</p>
 
-${appCta('音声つきでシャドーイングする', '同じ教材をネイティブ音声で。7日間は無料で全機能を使えます。')}
+${appCta('音声つきでシャドーイングする', '同じ教材をネイティブ音声で。最初の10話（Stage 1）は無料。続きはアプリの購読で。')}
 
-<h2>最新のエピソード</h2>
+<h2>無料公開エピソード</h2>
 <ul class="list">
 ${latest
   .map(
@@ -170,7 +179,7 @@ ${articles.length ? `<h2>最新の解説</h2>\n<ul class="list">\n${articles
 {
   const body = `
 <h1>エピソード一覧</h1>
-<p class="lead">全 ${topics.length} 本。毎日1本ずつ追加しています。</p>
+<p class="lead">Stage 1 の ${topics.length} 話を無料で公開中。全 ${libraryCount} 話はアプリでご利用いただけます。</p>
 <ul class="list">
 ${episodes
   .map(
@@ -186,7 +195,7 @@ ${appCta()}`;
   page({
     path: '/episodes/',
     title: 'エピソード一覧',
-    description: `${BRAND} の全${topics.length}エピソード。ビジネス・時事・日常会話の英文を和訳と表現解説つきで掲載。`,
+    description: `${BRAND} の無料公開エピソード（Stage 1・${topics.length}話）。ビジネス・時事・日常会話の英文を和訳と表現解説つきで掲載。`,
     body,
     priority: 0.9,
     forceIndex: true,

@@ -88,14 +88,14 @@ async function main() {
     '',
     ...topic.sentences.slice(0, 3).map((s) => `${s.en}\n${s.ja}`),
     '',
-    '#英語学習 #シャドーイング #TOEIC #英語リスニング #Shorts',
+    '#英語学習 #シャドーイング #英語スピーキング #英語リスニング #Shorts',
   ].join('\n');
 
   const metadata = {
     snippet: {
       title,
       description: truncate(description, 4900),
-      tags: ['英語学習', 'シャドーイング', 'TOEIC', '英語リスニング', 'ビジネス英語'],
+      tags: ['英語学習', 'シャドーイング', '英語スピーキング', '英語リスニング', 'ビジネス英語'],
       categoryId: CATEGORY_ID,
       defaultLanguage: 'ja',
     },

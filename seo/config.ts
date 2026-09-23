@@ -16,7 +16,7 @@ export const APP_URL = env('APP_URL', 'https://resound.study');
 export const BRAND = 'RESOUND';
 export const TAGLINE = '毎日つづける英語シャドーイング';
 export const DESCRIPTION =
-  'ビジネス・時事・日常会話の英文を、和訳と表現解説つきで毎日1本。TOEIC 700点から先に進むためのシャドーイング教材。';
+  'ビジネス・時事・日常会話の英文を、和訳と表現解説つきで毎日1本。ネイティブ音声のシャドーイングで、リスニングとスピーキングを徹底的に鍛える英語学習教材。';
 
 /** Optional: set to add <meta name="google-site-verification">. */
 export const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim() ?? '';

@@ -128,7 +128,7 @@ function gaSnippet(): string {
 /** The conversion unit. Every content page ends with one. */
 export function appCta(
   headline = '音声でシャドーイングする',
-  sub = '同じ教材を、ネイティブ音声つきで。毎日1本更新、7日間は無料です。',
+  sub = '同じ教材を、ネイティブ音声つきで。最初の10話（Stage 1）は無料でご利用いただけます。',
 ): string {
   return `<aside class="cta">
   <h2>${esc(headline)}</h2>

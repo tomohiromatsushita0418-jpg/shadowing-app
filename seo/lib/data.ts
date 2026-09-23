@@ -51,7 +51,10 @@ export function episodeSlug(topic: Topic, number: number): string {
 }
 
 export function topicTitleJa(topic: Topic): string {
-  return topic.titleJaImproved || topic.titleJa || topic.title;
+  // `titleJaImproved` is a processing flag (boolean) set by scripts/improveTitles.ts,
+  // NOT the title itself — the improved title lives in `titleJa`. Reading the flag
+  // here is what used to render the literal string "true" for improved topics.
+  return topic.titleJa || topic.title;
 }
 
 export function topicDate(topic: Topic): string | null {

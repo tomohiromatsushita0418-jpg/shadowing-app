@@ -85,7 +85,7 @@ async function generateOneTopic(category: string, existingTitles: string[]): Pro
 
   const avoid = existingTitles.slice(-30).join('; ') || '(none)';
   const guidance = CATEGORY_GUIDANCE[category];
-  const prompt = `You are creating English shadowing practice content for advanced Japanese learners (TOEIC 700 to 990 level).
+  const prompt = `You are creating English shadowing practice content for upper-intermediate to advanced Japanese learners, to strengthen their listening and speaking.
 
 Generate ONE topic in the category: "${category}".
 ${guidance ? `\nCategory guidance: ${guidance}\n` : ''}

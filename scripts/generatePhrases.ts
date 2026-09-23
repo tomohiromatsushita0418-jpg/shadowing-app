@@ -26,7 +26,7 @@ const MAX_PER_RUN = Number(process.env.MAX_PHRASES_PER_RUN ?? 50);
 
 async function extract(en: string): Promise<Phrase[]> {
   const key = process.env.GEMINI_API_KEY!;
-  const prompt = `次の英文から、TOEIC700→990レベルの日本人学習者が「覚える価値がある」と感じる熟語・コロケーション・言い回し・イディオムを2〜4個抽出してください。
+  const prompt = `次の英文から、中上級〜上級レベルの日本人学習者が「覚える価値がある」と感じる熟語・コロケーション・言い回し・イディオムを2〜4個抽出してください。
 
 英文: "${en}"
 

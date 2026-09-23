@@ -66,12 +66,22 @@ function siteUrl(): string {
   return (process.env.SITE_URL || 'https://learn.resound.study').replace(/\/$/, '');
 }
 
+function appUrl(): string {
+  return (process.env.APP_URL || 'https://resound.study').replace(/\/$/, '');
+}
+
+// Only Stage 1 — the first FREE_EPISODES episodes — has a public marketing page.
+// Posts about paid episodes drive to the app instead of a 404. Keep in sync with
+// seo/build.ts FREE_EPISODES and the app's lib/access.ts FREE_PREVIEW_TOPICS.
+const FREE_EPISODES = 10;
+
 export function episodeUrl(topic: Topic, number: number): string {
+  if (number > FREE_EPISODES) return appUrl();
   return `${siteUrl()}/episodes/${number}-${slugify(topic.title)}/`;
 }
 
 const CATEGORY_TAGS: Record<string, string[]> = {
-  Business: ['#ビジネス英語', '#TOEIC'],
+  Business: ['#ビジネス英語', '#英語リスニング'],
   'Business Negotiation': ['#ビジネス英語', '#英語交渉'],
   'Daily Conversation': ['#日常英会話', '#英語学習'],
   'Current Affairs': ['#時事英語', '#英語ニュース'],
@@ -104,7 +114,7 @@ export function composePosts(topic: Topic, number: number): Post[] {
   const url = episodeUrl(topic, number);
   const seed = dayNumber(topic);
   const tags = tagsFor(topic);
-  const titleJa = topic.titleJaImproved || topic.titleJa || topic.title;
+  const titleJa = topic.titleJa || topic.title;
 
   const withPhrases = topic.sentences.filter((s) => (s.phrases?.length ?? 0) > 0);
   const posts: Post[] = [];

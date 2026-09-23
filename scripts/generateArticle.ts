@@ -106,9 +106,9 @@ function buildPrompt(topic: Topic): string {
     )
     .join('\n');
 
-  return `あなたは日本人英語学習者（TOEIC 700〜900点台）向けに解説記事を書く英語講師です。
+  return `あなたは日本人英語学習者（中上級〜上級）のリスニング・スピーキング力強化を指導する英語講師です。
 
-以下は「${topic.titleJaImproved || topic.titleJa || topic.title}」という学習教材の全文です。
+以下は「${topic.titleJa || topic.title}」という学習教材の全文です。
 
 ${material}
 
@@ -169,8 +169,8 @@ function toHtml(
   // the full material and gives the episode page an internal link.
   const source = `<h2>この記事で扱った教材</h2>
 <p>本記事の英文はすべて <strong>第${episodeNumber}回「${esc(
-    topic.titleJaImproved || topic.titleJa || topic.title,
-  )}」</strong>からの引用です。全文と音声はエピソードページでご覧いただけます。</p>`;
+    topic.titleJa || topic.title,
+  )}」</strong>からの引用です。全文と音声はアプリでご利用いただけます。</p>`;
 
   return `${parts}\n${source}`;
 }

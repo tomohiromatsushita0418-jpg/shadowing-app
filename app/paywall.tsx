@@ -59,7 +59,7 @@ export default function PaywallScreen() {
         <Text style={styles.title}>すべてのエピソードを開放</Text>
         <Text style={styles.subtitle}>
           無料は最初の10話（Stage 1）まで。購読でStage 2以降の{'\n'}
-          全エピソードと全機能が使い放題に。毎日更新でTOEIC 700→990へ。
+          全エピソードと全機能が使い放題に。毎日更新でリスニングとスピーキングを徹底強化。
         </Text>
       </LinearGradient>
 
