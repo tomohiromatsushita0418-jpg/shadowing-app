@@ -10,6 +10,12 @@ import { isPreviewTopic } from '../lib/access';
 const CATEGORY_COLORS: Record<string, { bg: string; text: string }> = {
   'Daily Conversation': { bg: '#2a1a1a', text: '#f87171' },
   Business: { bg: '#1a2744', text: '#60a5fa' },
+  'Japan News': { bg: '#2a1a1a', text: '#fb7185' },
+  'World News': { bg: '#1a2a1a', text: '#4ade80' },
+  Travel: { bg: '#10202a', text: '#38bdf8' },
+  Sports: { bg: '#1a2a10', text: '#a3e635' },
+  History: { bg: '#2a2410', text: '#fbbf24' },
+  Trends: { bg: '#231a2e', text: '#c084fc' },
   'Current Affairs': { bg: '#1a2a1a', text: '#4ade80' },
   'Chemical Industry': { bg: '#102a2a', text: '#22d3ee' },
   // legacy seed categories

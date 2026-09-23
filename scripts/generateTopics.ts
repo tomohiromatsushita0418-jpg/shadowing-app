@@ -22,24 +22,59 @@ const __dirname = path.dirname(__filename);
 const ROOT = path.resolve(__dirname, '..');
 const TOPICS_PATH = path.join(ROOT, 'data', 'topics.json');
 
+// Daily rotation, in this exact order (2026-09 spec). One topic per day, the
+// category advances by one each day and wraps around.
 const CATEGORIES = [
-  'Daily Conversation',
-  'Business',
-  'Current Affairs',
-  'Chemical Industry',
+  'Daily Conversation', // 日常会話
+  'Business', // ビジネス
+  'Japan News', // 時事ニュース（日本）
+  'World News', // 時事ニュース（世界）
+  'Travel', // 旅行
+  'Sports', // スポーツ
+  'History', // 歴史（世界の国々を順番に）
+  'Trends', // 流行
 ] as const;
 const MODEL = 'gemini-2.5-flash';
+
+// When the History slot comes up it walks through the world's countries in this
+// order, one per visit, so the series builds a tour of world history over time.
+const HISTORY_COUNTRIES = [
+  'Egypt', 'Greece', 'Italy (Rome)', 'China', 'India', 'Iran (Persia)', 'Turkey',
+  'United Kingdom', 'France', 'Germany', 'Spain', 'Portugal', 'the Netherlands',
+  'Russia', 'the United States', 'Mexico', 'Peru', 'Brazil', 'Japan', 'Korea',
+  'Mongolia', 'Vietnam', 'Thailand', 'Indonesia', 'Ethiopia', 'Mali', 'Egypt (modern)',
+  'South Africa', 'Australia', 'Canada', 'Austria', 'Poland', 'Sweden', 'Greece (modern)',
+] as const;
 
 // Extra prompting guidance for categories that need more than their name to
 // produce the intended content. Keyed by category string.
 const CATEGORY_GUIDANCE: Record<string, string> = {
-  'Chemical Industry':
-    'This topic must read like a recent news/briefing piece about the global chemical industry. ' +
-    'Cover current developments and trends such as specialty chemicals, petrochemicals, ' +
-    'green/sustainable chemistry and decarbonization, battery and semiconductor materials, ' +
-    'supply-chain dynamics, M&A, regulation, and innovation. You may reference major players ' +
-    '(e.g. BASF, Dow, Mitsubishi Chemical, Shin-Etsu, Sinopec) and realistic industry themes. ' +
-    'Write in the polished register of a professional trade-press briefing.',
+  'Daily Conversation':
+    'A natural, everyday spoken-English scene (shopping, dining out, catching up with a friend, ' +
+    'a phone call, small talk at work). Conversational, idiomatic, the way people actually speak.',
+  'Business':
+    'A realistic workplace/business situation — a meeting, a negotiation, a project update, ' +
+    'a client email read aloud. Polished professional English.',
+  'Japan News':
+    'A recent news / current-affairs briefing about JAPAN (Japanese politics, economy, society, ' +
+    'business, technology, culture), written in polished English as if reporting Japanese news to ' +
+    'an international audience. Timely, specific, factual in tone.',
+  'World News':
+    'A recent news / current-affairs briefing about WORLD events outside Japan (international ' +
+    'politics, the global economy, science and technology, major world developments), in the ' +
+    'polished register of a serious news outlet.',
+  'Travel':
+    'A travel scene or travel-writing piece — airports and check-in, hotels, asking directions, ' +
+    'sightseeing, local food and customs, trip planning. Vivid and practical.',
+  'Sports':
+    'A sports news / commentary piece — a match report, an athlete profile, tournament analysis, ' +
+    'or a training/health angle. Energetic, specific, in the register of sports journalism.',
+  'History':
+    'An engaging, factual history piece. Cover key events, eras, notable figures and cultural ' +
+    'legacy. Educational and vivid, in the register of good popular-history writing.',
+  'Trends':
+    'A piece about a current trend or pop-culture phenomenon — technology and social-media trends, ' +
+    'fashion, lifestyle, entertainment, or something going viral. Fresh and contemporary.',
 };
 
 // Free tier TTS allows ~15 audio generations per day, and sentences, phrases
@@ -49,11 +84,18 @@ const CATEGORY_GUIDANCE: Record<string, string> = {
 // category by day-of-year so all categories get coverage.
 const MAX_SENTENCES_PER_TOPIC = 10;
 
-function pickCategoryForToday(): string {
-  const now = new Date();
-  const start = Date.UTC(now.getUTCFullYear(), 0, 0);
-  const day = Math.floor((now.getTime() - start) / 86400000);
-  return CATEGORIES[day % CATEGORIES.length];
+// Strict sequential rotation keyed off how many topics already exist, so the
+// order stays exact even if a day's run is skipped (a date-based rotation would
+// jump a category on a missed day).
+function pickCategory(topicCount: number): string {
+  return CATEGORIES[topicCount % CATEGORIES.length];
+}
+
+// Which country the next History topic covers: walk HISTORY_COUNTRIES by how
+// many History topics already exist.
+function nextHistoryCountry(topics: Topic[]): string {
+  const count = topics.filter((t) => t.category === 'History').length;
+  return HISTORY_COUNTRIES[count % HISTORY_COUNTRIES.length];
 }
 
 function loadTopics(): Topic[] {
@@ -79,12 +121,16 @@ function uniqueId(existing: Set<string>): string {
   return id;
 }
 
-async function generateOneTopic(category: string, existingTitles: string[]): Promise<Omit<Topic, 'id'>> {
+async function generateOneTopic(
+  category: string,
+  existingTitles: string[],
+  extraGuidance?: string,
+): Promise<Omit<Topic, 'id'>> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error('GEMINI_API_KEY env var is required.');
 
   const avoid = existingTitles.slice(-30).join('; ') || '(none)';
-  const guidance = CATEGORY_GUIDANCE[category];
+  const guidance = [CATEGORY_GUIDANCE[category], extraGuidance].filter(Boolean).join(' ');
   const prompt = `You are creating English shadowing practice content for upper-intermediate to advanced Japanese learners, to strengthen their listening and speaking.
 
 Generate ONE topic in the category: "${category}".
@@ -143,12 +189,16 @@ async function main() {
   const existingIds = new Set(topics.map((t) => t.id));
   const existingTitles = topics.map((t) => t.title);
 
-  const category = process.env.TOPIC_CATEGORY || pickCategoryForToday();
+  const category = process.env.TOPIC_CATEGORY || pickCategory(topics.length);
+  const historyCountry = category === 'History' ? nextHistoryCountry(topics) : null;
+  const extraGuidance = historyCountry
+    ? `Center this entire piece on the history of ${historyCountry}.`
+    : undefined;
   console.log(`Loaded ${topics.length} existing topics.`);
-  console.log(`Today's category: ${category}`);
+  console.log(`Today's category: ${category}${historyCountry ? ` (${historyCountry})` : ''}`);
 
   try {
-    const t = await generateOneTopic(category, existingTitles);
+    const t = await generateOneTopic(category, existingTitles, extraGuidance);
     if (t.sentences.length > MAX_SENTENCES_PER_TOPIC) {
       t.sentences = t.sentences.slice(0, MAX_SENTENCES_PER_TOPIC);
     }
