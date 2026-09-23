@@ -49,3 +49,6 @@ seo/node_modules/
 # generated media
 build/
 build-video-*/
+setup-values.txt
+
+seo/package-lock.json
