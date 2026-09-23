@@ -8,10 +8,10 @@ function env(name: string, fallback: string): string {
 }
 
 /** Where this static site itself is served. Used for canonicals and sitemap. */
-export const SITE_URL = env('SITE_URL', 'https://resound-english.vercel.app');
+export const SITE_URL = env('SITE_URL', 'https://learn.resound.study');
 
 /** Where the app lives. Every call to action points here. */
-export const APP_URL = env('APP_URL', 'https://shadowing-app-gray.vercel.app');
+export const APP_URL = env('APP_URL', 'https://resound.study');
 
 export const BRAND = 'RESOUND';
 export const TAGLINE = '毎日つづける英語シャドーイング';

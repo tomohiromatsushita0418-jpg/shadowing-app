@@ -63,7 +63,7 @@ function slugify(input: string): string {
 }
 
 function siteUrl(): string {
-  return (process.env.SITE_URL || 'https://resound-english.vercel.app').replace(/\/$/, '');
+  return (process.env.SITE_URL || 'https://learn.resound.study').replace(/\/$/, '');
 }
 
 export function episodeUrl(topic: Topic, number: number): string {

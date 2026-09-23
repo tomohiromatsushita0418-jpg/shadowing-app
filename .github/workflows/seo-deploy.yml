@@ -1,0 +1,60 @@
+name: SEO Deploy
+
+# Rebuilds the static SEO site (seo/) from the app's corpus and redeploys it to
+# the `resound-seo` Vercel project. The site is a prebuilt static export, so it
+# does not redeploy on its own when new episodes/articles land — this job is
+# what keeps learn.resound.study current.
+#
+# Runs daily at 18:00 UTC (03:00 JST), after Daily Topic Generation (00:00 JST)
+# and Daily Article (02:00 JST) have committed the day's content. Also runs on
+# demand and whenever the corpus or the SEO code changes on main.
+on:
+  schedule:
+    - cron: '0 18 * * *' # 03:00 JST
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/topics.json'
+      - 'seo/**'
+      - '.github/workflows/seo-deploy.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-deploy
+  cancel-in-progress: true
+
+env:
+  SITE_URL: https://learn.resound.study
+  APP_URL: https://resound.study
+  VERCEL_ORG_ID: team_fPHLzI9IBMX9O97pQpmQYNTF
+  VERCEL_PROJECT_ID: prj_hJfNNbIPEJN2UACBTlABl6zq3lEk
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Build the static site
+        working-directory: seo
+        run: |
+          npm install
+          npm run build
+
+      - name: Static hosting config (trailing slashes + security headers)
+        working-directory: seo
+        run: |
+          node -e "const c=require('./vercel.json');require('fs').writeFileSync('dist/vercel.json',JSON.stringify({trailingSlash:c.trailingSlash,headers:c.headers},null,2))"
+
+      - name: Deploy to Vercel (resound-seo, production)
+        run: |
+          npx --yes vercel@latest deploy seo/dist --prod --yes --token="$VERCEL_TOKEN"
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
