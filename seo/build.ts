@@ -118,6 +118,7 @@ writeFileSync(resolve(OUT, 'style.css'), STYLESHEET, 'utf8');
   <h1>シャドーイング×瞬間英作文で、<br>“話せる英語”へ。</h1>
   <p class="hero-sub">ネイティブ音声の<strong>シャドーイング</strong>で耳と口をつくり、AIが添削する<strong>瞬間英作文</strong>で“自分で言える”に変える。日常会話からビジネス・時事・旅行・スポーツ・歴史まで、実際に使う英文を毎日1本。</p>
   <a class="cta-button lg" href="${esc(APP_URL)}?utm_source=seo" rel="noopener">Resound を無料ではじめる →</a>
+  <p class="update-badge"><span class="dot"></span>毎日1話、新しいエピソードを追加中</p>
   <div class="pillars">
     <div class="pillar"><span class="pi">🎧</span><b>シャドーイング</b><span>ネイティブ音声を真似て、声に出す</span></div>
     <div class="pillar"><span class="pi">✍️</span><b>瞬間英作文</b><span>和文から自分で英作文、AIが添削</span></div>
@@ -125,9 +126,10 @@ writeFileSync(resolve(OUT, 'style.css'), STYLESHEET, 'utf8');
   </div>
 </section>
 
-<p class="freenote">全<strong>${libraryCount}話</strong>のうち、最初の<strong>${topics.length}話（Stage 1）</strong>を無料公開中。続きはアプリの購読で。すべて全文和訳と表現解説つきです。</p>
+<p class="freenote"><strong>毎日1話ずつ新しいエピソードを追加</strong>。現在 全<strong>${libraryCount}話</strong>（毎日増加中）、うち最初の<strong>${topics.length}話（Stage 1）</strong>を無料公開中。続き・最新回はアプリの購読で、すべて全文和訳と表現解説つきです。</p>
 
 <h2>無料公開エピソード</h2>
+<p class="section-note">Stage 1 の10話をどうぞ。第11話以降と毎日追加される最新回は、アプリの購読でご覧いただけます。</p>
 <ul class="list">
 ${latest
   .map(

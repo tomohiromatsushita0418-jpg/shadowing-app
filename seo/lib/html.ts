@@ -224,8 +224,15 @@ li{margin:4px 0}
 .pillar b{display:block;color:var(--text);font-size:14px;margin-bottom:4px}
 .pillar span:last-child{color:var(--muted);font-size:12px;line-height:1.6;display:block}
 .freenote{color:var(--muted);font-size:14px;background:var(--panel);border:1px solid var(--line);
-  border-radius:12px;padding:14px 16px;margin:22px 0 8px;text-align:center}
+  border-radius:12px;padding:14px 16px;margin:22px 0 8px;text-align:center;line-height:1.8}
 .freenote strong{color:var(--accent)}
+.update-badge{display:inline-flex;align-items:center;gap:9px;margin:18px 0 0;
+  color:var(--text);font-size:13px;font-weight:700;background:var(--panel);
+  border:1px solid var(--line);border-radius:999px;padding:7px 16px}
+.update-badge .dot{width:8px;height:8px;border-radius:50%;background:#34d399;
+  box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)}70%{box-shadow:0 0 0 7px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.section-note{color:var(--muted);font-size:13px;margin:-4px 0 14px}
 @media(max-width:560px){.pillars{grid-template-columns:1fr}.home-hero h1{font-size:26px}}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:0 0 20px}
 .grid a{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;
