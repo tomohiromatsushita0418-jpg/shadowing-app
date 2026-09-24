@@ -67,7 +67,8 @@ function siteUrl(): string {
 }
 
 function appUrl(): string {
-  return (process.env.APP_URL || 'https://resound.study').replace(/\/$/, '');
+  const base = (process.env.APP_URL || 'https://resound.study').replace(/\/$/, '');
+  return `${base}?utm_source=threads`;
 }
 
 // Only Stage 1 — the first FREE_EPISODES episodes — has a public marketing page.

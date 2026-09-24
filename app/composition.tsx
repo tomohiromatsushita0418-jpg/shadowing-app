@@ -11,12 +11,12 @@ import {
   View,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useLocalSearchParams, useNavigation } from 'expo-router';
+import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { topics } from '../data/topics';
 import { useComposeProgress, type Verdict } from '../hooks/useComposeProgress';
+import { useComposeQuota } from '../hooks/useComposeQuota';
 import { useAccount } from '../lib/account';
-import LockedNotice from '../components/LockedNotice';
 
 interface PhraseLite { phrase: string }
 interface Problem {
@@ -186,6 +186,11 @@ export default function CompositionScreen() {
   const { topicId, index, mode } = useLocalSearchParams<{ topicId?: string; index?: string; mode?: string }>();
   const { store, getRecord, saveRecord, topicSummary, reviewWeight, ready: progressReady } = useComposeProgress();
   const { ready: accountReady, hasAccess } = useAccount();
+  const router = useRouter();
+  const { used: freeUsed, ready: quotaReady, increment: incFreeQuota, limit: freeLimit } =
+    useComposeQuota();
+  const countedRef = useRef<Set<string>>(new Set());
+  const [quotaBlocked, setQuotaBlocked] = useState(false);
   const wrongMode = mode === 'wrong' && !topicId;
   const isRandom = !topicId;
 
@@ -253,6 +258,28 @@ export default function CompositionScreen() {
 
   const problem = problems[idx];
 
+  // Free-tier quota: a non-subscriber may open FREE_COMPOSE_LIMIT distinct
+  // problems (lifetime). Opening one beyond that shows the paywall instead.
+  // Comp/pro accounts (hasAccess) never consume quota.
+  useEffect(() => {
+    if (hasAccess || !quotaReady || !problem) {
+      setQuotaBlocked(false);
+      return;
+    }
+    const key = `${problem.topicId}#${problem.sIndex}`;
+    if (countedRef.current.has(key)) {
+      setQuotaBlocked(false); // revisiting an already-opened problem is free
+      return;
+    }
+    if (freeUsed >= freeLimit) {
+      setQuotaBlocked(true); // this would be the (limit+1)th distinct problem
+      return;
+    }
+    countedRef.current.add(key);
+    incFreeQuota();
+    setQuotaBlocked(false);
+  }, [hasAccess, quotaReady, problem, freeUsed, freeLimit, incFreeQuota]);
+
   // Shuffled tiles, stable per problem.
   const tiles = useMemo(
     () => (problem ? shuffle(buildTiles(problem.en, problem.phrases)) : []),
@@ -293,14 +320,25 @@ export default function CompositionScreen() {
     scrollRef.current?.scrollTo({ y: 0, animated: false });
   }, []);
 
-  if (!accountReady) {
+  if (!accountReady || !quotaReady) {
     return <View style={styles.container} />;
   }
 
-  if (!hasAccess) {
+  if (quotaBlocked) {
     return (
       <View style={styles.container}>
-        <LockedNotice what="瞬間英作文" />
+        <View style={styles.empty}>
+          <Ionicons name="lock-closed" size={48} color="#fbbf24" />
+          <Text style={styles.emptyTitle}>無料の瞬間英作文は{freeLimit}問までです</Text>
+          <Text style={styles.emptySub}>
+            購読すると瞬間英作文が使い放題に。{'\n'}
+            AI添削・間違えた問題だけ復習・熟語帳など全機能が開放されます。
+          </Text>
+          <Pressable style={styles.primaryBtn} onPress={() => router.push('/paywall')}>
+            <Ionicons name="sparkles" size={18} color="#0b1220" />
+            <Text style={styles.primaryBtnText}>購読して続ける</Text>
+          </Pressable>
+        </View>
       </View>
     );
   }

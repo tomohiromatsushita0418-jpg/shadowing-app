@@ -25,6 +25,13 @@ export const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.tr
 export const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID?.trim() ?? '';
 
 /**
+ * Supabase project (public anon key) for the lightweight page-view beacon that
+ * feeds the daily funnel digest. Both must be set for the beacon to render.
+ */
+export const SUPABASE_URL = process.env.SUPABASE_URL?.trim().replace(/\/$/, '') ?? '';
+export const SUPABASE_ANON = process.env.SUPABASE_ANON_KEY?.trim() ?? '';
+
+/**
  * Pages whose body text is shorter than this are emitted but marked noindex.
  *
  * This is the guard against Google's "scaled content abuse" / thin-content

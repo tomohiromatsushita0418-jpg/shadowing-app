@@ -3,7 +3,6 @@ import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { topics } from '../data/topics';
 import { useAccount } from '../lib/account';
 
 const MONTHLY_YEN = 980;
@@ -13,7 +12,7 @@ const YEARLY_PER_MONTH = Math.floor(YEARLY_YEN / 12);
 const YEARLY_DISCOUNT_PCT = Math.round((1 - YEARLY_YEN / (MONTHLY_YEN * 12)) * 100);
 
 const BENEFITS: { icon: keyof typeof Ionicons.glyphMap; text: string }[] = [
-  { icon: 'albums-outline', text: `全${topics.length}エピソードが見放題（Stage 2以降も全部・毎日1本ずつ追加）` },
+  { icon: 'albums-outline', text: '全エピソードが見放題（Stage 2以降も全部・毎日1本ずつ増えます）' },
   { icon: 'volume-high-outline', text: 'ネイティブ音声で文・単語・熟語を何度でも再生' },
   { icon: 'flash-outline', text: '瞬間英作文トレーニング（AI添削・苦手復習）' },
   { icon: 'bookmark-outline', text: '熟語帳・熟語クイズが無制限' },

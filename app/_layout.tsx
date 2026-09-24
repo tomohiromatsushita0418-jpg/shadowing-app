@@ -1,6 +1,7 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { AccountProvider } from '../lib/account';
+import { useTrackVisit } from '../hooks/useTrackVisit';
 
 // Ensure Home (index) is always the stack anchor — even when the app is
 // opened directly via a deep link to /topic/<id> (e.g. from the notification
@@ -11,6 +12,7 @@ export const unstable_settings = {
 };
 
 export default function RootLayout() {
+  useTrackVisit();
   return (
     <AccountProvider>
       <StatusBar style="light" />

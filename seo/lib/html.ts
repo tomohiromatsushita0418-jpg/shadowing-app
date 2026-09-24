@@ -4,8 +4,18 @@ import {
   GA_MEASUREMENT_ID,
   GOOGLE_SITE_VERIFICATION,
   SITE_URL,
+  SUPABASE_ANON,
+  SUPABASE_URL,
   TAGLINE,
 } from '../config';
+
+/** One page-view row per session into public.visits, for the funnel digest. */
+function viewBeacon(): string {
+  if (!SUPABASE_URL || !SUPABASE_ANON) return '';
+  const endpoint = JSON.stringify(`${SUPABASE_URL}/rest/v1/visits`);
+  const anon = JSON.stringify(SUPABASE_ANON);
+  return `<script>(function(){try{if(sessionStorage.getItem('sv'))return;sessionStorage.setItem('sv','1');fetch(${endpoint},{method:'POST',headers:{apikey:${anon},'content-type':'application/json'},body:JSON.stringify({kind:'seo_view',source:'seo',path:location.pathname}),keepalive:true})}catch(e){}})();</script>`;
+}
 
 export function esc(input: unknown): string {
   return String(input ?? '')
@@ -109,6 +119,7 @@ ${body}
     <a href="${esc(APP_URL)}/legal" rel="noopener">利用規約・特商法表記</a>
   </nav>
 </footer>
+${viewBeacon()}
 </body>
 </html>`;
 }
@@ -133,7 +144,7 @@ export function appCta(
   return `<aside class="cta">
   <h2>${esc(headline)}</h2>
   <p>${esc(sub)}</p>
-  <a class="cta-button" href="${esc(APP_URL)}" rel="noopener">${esc(BRAND)} を無料で試す</a>
+  <a class="cta-button" href="${esc(APP_URL)}?utm_source=seo" rel="noopener">${esc(BRAND)} を無料で試す</a>
 </aside>`;
 }
 
