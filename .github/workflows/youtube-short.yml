@@ -43,11 +43,11 @@ jobs:
 
       - run: npm ci --legacy-peer-deps
 
-      - name: Install a CJK font
-        # ffmpeg is preinstalled on ubuntu runners; the Japanese font is not.
+      - name: Install ffmpeg and a CJK font
+        # Current ubuntu runners no longer ship ffmpeg, and never had a Japanese font.
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-noto-cjk
+          sudo apt-get install -y -qq ffmpeg fonts-noto-cjk
           ffmpeg -version | head -1
 
       - name: Render the Short
