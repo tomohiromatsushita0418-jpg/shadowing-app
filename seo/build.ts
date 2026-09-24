@@ -115,7 +115,7 @@ writeFileSync(resolve(OUT, 'style.css'), STYLESHEET, 'utf8');
   const body = `
 <h1>${esc(BRAND)} — ${esc(TAGLINE)}</h1>
 <p class="lead">${esc(DESCRIPTION)}</p>
-<p>ビジネス、時事、日常会話、化学業界まで。実際に使われる英文を、全文和訳と表現解説つきで。
+<p>日常会話からビジネス、国内外の時事ニュース、旅行・スポーツ・歴史・流行まで。実際に使われる英文を、全文和訳と表現解説つきで。
 全<strong>${libraryCount}話</strong>のうち、最初の<strong>${topics.length}話（Stage 1）</strong>を無料で公開中。続きはアプリの購読でご利用いただけます。</p>
 
 ${appCta('音声つきでシャドーイングする', '同じ教材をネイティブ音声で。最初の10話（Stage 1）は無料。続きはアプリの購読で。')}
@@ -195,7 +195,7 @@ ${appCta()}`;
   page({
     path: '/episodes/',
     title: 'エピソード一覧',
-    description: `${BRAND} の無料公開エピソード（Stage 1・${topics.length}話）。ビジネス・時事・日常会話の英文を和訳と表現解説つきで掲載。`,
+    description: `${BRAND} の無料公開エピソード（Stage 1・${topics.length}話）。日常会話・ビジネス・時事・旅行・スポーツ・歴史など、実際に使われる英文を和訳と表現解説つきで掲載。`,
     body,
     priority: 0.9,
     forceIndex: true,
@@ -328,7 +328,7 @@ ${appCta()}`;
   page({
     path: '/phrases/',
     title: '英語表現集',
-    description: `ビジネス・時事・日常会話の英語表現 ${phraseIndex.size.toLocaleString()}語を、意味・使い方・実際の例文つきで分野別に収録。`,
+    description: `日常会話・ビジネス・時事・旅行・スポーツ・歴史などの英語表現 ${phraseIndex.size.toLocaleString()}語を、意味・使い方・実際の例文つきで分野別に収録。`,
     body,
     priority: 0.9,
     forceIndex: true,
