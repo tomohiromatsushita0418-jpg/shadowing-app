@@ -1,38 +1,40 @@
 name: YouTube Short
 
-# Renders a vertical Short from the episode's existing audio and uploads it.
+# "Ren & Mio" English mini-drama: one idiom per episode, a 30–45 s two-person
+# scene that continues a running story, with English + Japanese subtitles.
 #
-# The video pipeline needs ffmpeg and a CJK font, neither of which exist on a
-# stock macOS dev machine, so this has only ever run here. Use the manual
-# trigger with upload=false first: it renders the video and attaches it as a
-# workflow artifact for you to watch before anything reaches the channel.
+#   drama.ts       Gemini writes the scene (idiom from the newest lessons) and
+#                  voices both characters in one multi-speaker TTS call.
+#   dramaVideo.ts  ffmpeg renders the vertical Short.
+#   youtube.ts     uploads it (unlisted unless YOUTUBE_PRIVACY=public).
 #
-# The schedule is commented out deliberately — turn it on once you have seen
-# an artifact you are happy with.
+# The story only advances (data/drama.json) after a successful upload, so a
+# render-only run never skips an episode.
 on:
   workflow_dispatch:
     inputs:
-      topic_index:
-        description: 'Episode index (-1 = newest)'
-        required: false
-        default: '-1'
-      sentences:
-        description: 'How many sentences to include'
-        required: false
-        default: '3'
       upload:
         description: 'true to upload to YouTube, false to only render'
         required: false
         default: 'false'
+  # Enabled once the first episodes have been reviewed.
   # schedule:
-  #   - cron: '0 18 * * *' # 03:00 JST
+  #   - cron: '0 10 * * *' # 19:00 JST
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: youtube-short
+  cancel-in-progress: false
 
 jobs:
   short:
     runs-on: ubuntu-latest
+    env:
+      DRAMA_OUT: build/drama
+      VIDEO_OUT: build/short.mp4
+      UPLOAD: ${{ github.event_name == 'schedule' || github.event.inputs.upload == 'true' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -50,28 +52,40 @@ jobs:
           sudo apt-get install -y -qq ffmpeg fonts-noto-cjk
           ffmpeg -version | head -1
 
-      - name: Render the Short
+      - name: Write and voice today's episode
         env:
-          VIDEO_TOPIC_INDEX: ${{ github.event.inputs.topic_index || '-1' }}
-          VIDEO_SENTENCES: ${{ github.event.inputs.sentences || '3' }}
-          VIDEO_OUT: build/short.mp4
-        run: npx tsx scripts/social/video.ts
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: npx tsx scripts/social/drama.ts
 
-      - name: Upload the rendering for review
+      - name: Render the Short
+        run: npx tsx scripts/social/dramaVideo.ts
+
+      - name: Keep the rendering for review
         uses: actions/upload-artifact@v4
         with:
           name: short-mp4
-          path: build/short.mp4
+          path: |
+            build/short.mp4
+            build/drama/script.json
           retention-days: 7
 
       - name: Publish to YouTube
-        if: ${{ github.event.inputs.upload == 'true' }}
+        if: env.UPLOAD == 'true'
         env:
-          VIDEO_OUT: build/short.mp4
-          VIDEO_TOPIC_INDEX: ${{ github.event.inputs.topic_index || '-1' }}
-          SITE_URL: ${{ secrets.SITE_URL }}
+          YT_META: build/drama/script.json
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_PRIVACY: ${{ secrets.YOUTUBE_PRIVACY }}
         run: npx tsx scripts/social/youtube.ts
+
+      - name: Advance the story
+        if: env.UPLOAD == 'true'
+        run: |
+          cp build/drama/state.json data/drama.json
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/drama.json
+          git commit -m "drama: episode $(python3 -c "import json;print(json.load(open('data/drama.json'))['episode'])")" || exit 0
+          git pull --rebase origin main
+          git push

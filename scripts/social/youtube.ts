@@ -69,39 +69,69 @@ async function main() {
   const file = path.resolve(ROOT, process.env.VIDEO_OUT ?? 'build/short.mp4');
   if (!fs.existsSync(file)) throw new Error(`Video not found: ${file}`);
 
-  const topics = loadTopics();
-  const raw = Number(process.env.VIDEO_TOPIC_INDEX ?? -1);
-  const index = raw < 0 ? topics.length + raw : raw;
-  const topic = topics[index];
-  if (!topic) throw new Error(`No topic at index ${index}`);
+  const app = 'https://resound.study?utm_source=youtube';
+  let title: string;
+  let description: string;
+  let tags: string[];
 
-  const titleJa = topic.titleJaImproved || topic.titleJa || topic.title;
-  const url = episodeUrl(topic, index + 1);
-
-  // "#Shorts" plus the vertical aspect ratio is what gets it classified as a Short.
-  const title = truncate(`${titleJa} | 英語シャドーイング #Shorts`, TITLE_LIMIT);
-  const description = [
-    `第${index + 1}回「${titleJa}」より。`,
-    '',
-    '英文・和訳・表現解説の全文はこちら:',
-    url,
-    '',
-    ...topic.sentences.slice(0, 3).map((s) => `${s.en}\n${s.ja}`),
-    '',
-    '#英語学習 #シャドーイング #英語スピーキング #英語リスニング #Shorts',
-  ].join('\n');
+  const metaFile = process.env.YT_META;
+  if (metaFile) {
+    // Ren & Mio drama episode (scripts/social/drama.ts).
+    const d = JSON.parse(fs.readFileSync(path.resolve(ROOT, metaFile), 'utf8')) as {
+      episode: number; title: string; idiom: string; meaning: string;
+      lines: { speaker: string; en: string; ja: string }[];
+    };
+    // "#Shorts" plus the vertical aspect ratio is what gets it classified as a Short.
+    title = truncate(`【英会話ドラマ#${d.episode}】${d.idiom}＝${d.meaning}｜${d.title} #Shorts`, TITLE_LIMIT);
+    description = [
+      `今日の熟語：${d.idiom}（${d.meaning}）`,
+      '',
+      '蓮と美桜の英会話ドラマ。毎日1つ、使える熟語を会話で覚えよう。続きは明日！',
+      '',
+      ...d.lines.map((l) => `${l.speaker}: ${l.en}\n　${l.ja}`),
+      '',
+      '▶ 毎日の英語シャドーイング＆AI瞬間英作文はアプリ「Resound」で（最初の10話無料）',
+      app,
+      '',
+      '※ 登場人物・音声はAIで生成したフィクションです。',
+      '',
+      '#英会話 #英語学習 #英語フレーズ #英熟語 #英語リスニング #Shorts',
+    ].join('\n');
+    tags = ['英会話', '英語学習', '英熟語', '英語フレーズ', 'シャドーイング', d.idiom];
+  } else {
+    const topics = loadTopics();
+    const raw = Number(process.env.VIDEO_TOPIC_INDEX ?? -1);
+    const index = raw < 0 ? topics.length + raw : raw;
+    const topic = topics[index];
+    if (!topic) throw new Error(`No topic at index ${index}`);
+    const titleJa = topic.titleJa || topic.title;
+    title = truncate(`${titleJa} | 英語シャドーイング #Shorts`, TITLE_LIMIT);
+    description = [
+      `第${index + 1}回「${titleJa}」より。`,
+      '',
+      ...topic.sentences.slice(0, 3).map((s) => `${s.en}\n${s.ja}`),
+      '',
+      '▶ アプリ「Resound」:', app,
+      '',
+      '#英語学習 #シャドーイング #英語スピーキング #英語リスニング #Shorts',
+    ].join('\n');
+    tags = ['英語学習', 'シャドーイング', '英語スピーキング', '英語リスニング'];
+    void episodeUrl;
+  }
 
   const metadata = {
     snippet: {
       title,
       description: truncate(description, 4900),
-      tags: ['英語学習', 'シャドーイング', '英語スピーキング', '英語リスニング', 'ビジネス英語'],
+      tags,
       categoryId: CATEGORY_ID,
       defaultLanguage: 'ja',
     },
     status: {
       privacyStatus: process.env.YOUTUBE_PRIVACY ?? 'unlisted',
       selfDeclaredMadeForKids: false,
+      // Realistic-looking AI characters and voices must be disclosed.
+      containsSyntheticMedia: true,
     },
   };
 

@@ -1,0 +1,20 @@
+{
+  "episode": 0,
+  "characters": {
+    "Ren": {
+      "ja": "蓮",
+      "voice": "Puck",
+      "image": "assets/drama/ren.jpg",
+      "profile": "28, just back in Tokyo after three years at his trading company's London office. Charming, quick-witted, a little overconfident, secretly works harder than anyone."
+    },
+    "Mio": {
+      "ja": "美桜",
+      "voice": "Aoede",
+      "image": "assets/drama/mio.jpg",
+      "profile": "27, the sharpest analyst on the same team. Cool and precise at work, dry sense of humour, kinder than she lets on. Not impressed by Ren — yet."
+    }
+  },
+  "premise": "A light workplace rom-com at a Tokyo trading company. Ren has just joined Mio's team and they are thrown together on one project after another. Slow-burn chemistry, playful banter, small wins and setbacks at work.",
+  "synopsis": "Ren has just transferred back from London and is introduced to Mio's team on his first morning.",
+  "usedIdioms": []
+}
