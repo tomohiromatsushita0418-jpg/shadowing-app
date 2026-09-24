@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import {
   APP_URL,
   BRAND,
@@ -91,7 +92,7 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : '<meta name="robo
 <meta name="twitter:description" content="${esc(clamp(description, 158))}">
 ${GOOGLE_SITE_VERIFICATION ? `<meta name="google-site-verification" content="${esc(GOOGLE_SITE_VERIFICATION)}">` : ''}
 <link rel="alternate" type="application/rss+xml" title="${esc(BRAND)}" href="${esc(canonical('/feed.xml'))}">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v=${STYLE_VERSION}">
 ${structured.length ? `<script type="application/ld+json">${JSON.stringify(structured.length === 1 ? structured[0] : structured)}</script>` : ''}
 ${GA_MEASUREMENT_ID ? gaSnippet() : ''}
 </head>
@@ -242,3 +243,8 @@ li{margin:4px 0}
 @media(max-width:560px){h1{font-size:22px}main{padding:4px 16px 48px}
   .site-header{padding:14px 16px 6px}.breadcrumbs{padding:4px 16px}.site-footer{padding:24px 16px 40px}}
 `;
+
+// Content hash so the stylesheet URL changes whenever the CSS does — new HTML
+// never renders against a browser-cached old stylesheet (the "unstyled/left-
+// aligned on first load after a deploy" bug).
+export const STYLE_VERSION = createHash('sha1').update(STYLESHEET).digest('hex').slice(0, 8);
