@@ -121,9 +121,17 @@ function wrapEn(text: string, per: number): string {
   return out.join('\\N');
 }
 
+/** Wrap Japanese at `per` chars, never starting a line with closing punctuation. */
 function wrapJa(text: string, per: number): string {
+  const noStart = '、。，．！？!?）」』…ーっゃゅょァィゥェォッャュョ';
   const out: string[] = [];
-  for (let i = 0; i < text.length; i += per) out.push(text.slice(i, i + per));
+  let i = 0;
+  while (i < text.length) {
+    let end = Math.min(i + per, text.length);
+    while (end < text.length && noStart.includes(text[end])) end++;
+    out.push(text.slice(i, end));
+    i = end;
+  }
   return out.join('\\N');
 }
 
@@ -173,7 +181,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
   ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(cx(CARD_X.Mio), plateY)}{\\fs40\\c${COLOR.Mio}}Mio {\\fs30\\c&H00B8B0A6&}美桜`);
 
   // Intro beat in the subtitle zone.
-  ev.push(`Dialogue: 1,${assTime(0)},${assTime(INTRO)},T,,0,0,0,,${at(540, 1480)}{\\fs58}この熟語、会話で使えますか？{\\fs40\\c&H00B8B0A6&}\\N\\N▶ 2人の会話を聴いてみよう`);
+  ev.push(`Dialogue: 1,${assTime(0)},${assTime(INTRO)},T,,0,0,0,,${at(540, 1390)}{\\fs58}この熟語、会話で使えますか？{\\fs40\\c&H00B8B0A6&}\\N\\N▶ 2人の会話を聴いてみよう`);
 
   // Dialogue subtitles.
   script.lines.forEach((line, i) => {
@@ -183,14 +191,14 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     const en = highlight(wrapEn(esc(line.en), 26), script.idiom);
     const ja = wrapJa(esc(line.ja), 20);
     ev.push(
-      `Dialogue: 1,${assTime(start)},${assTime(end)},T,,0,0,0,,${at(540, 1500)}{\\fs34\\c${COLOR[name]}}${name}\\N{\\fs60\\c&H00F5F5F5&}${en}\\N{\\fs42\\c&H00A8D8E8&}${ja}`,
+      `Dialogue: 1,${assTime(start)},${assTime(end)},T,,0,0,0,,${at(540, 1400)}{\\fs34\\c${COLOR[name]}}${name}\\N{\\fs60\\c&H00F5F5F5&}${en}\\N{\\fs42\\c&H00A8D8E8&}${ja}`,
     );
   });
 
   // Outro recap + CTA.
   const o = total - OUTRO;
   ev.push(
-    `Dialogue: 1,${assTime(o)},${assTime(total)},T,,0,0,0,,${at(540, 1490)}{\\fs36\\c&H00B8B0A6&}今日の熟語をおさらい\\N{\\fs64\\c&H0024BFFB&}${esc(script.idiom)}\\N{\\fs44}＝ ${esc(script.meaning)}\\N\\N{\\fs40}続きは明日 ▶\\N{\\fs34\\c&H0024BFFB&}毎日の英語はアプリ Resound で`,
+    `Dialogue: 1,${assTime(o)},${assTime(total)},T,,0,0,0,,${at(540, 1400)}{\\fs36\\c&H00B8B0A6&}今日の熟語をおさらい\\N{\\fs64\\c&H0024BFFB&}${esc(script.idiom)}\\N{\\fs44}＝ ${esc(script.meaning)}\\N\\N{\\fs40}続きは明日 ▶\\N{\\fs34\\c&H0024BFFB&}毎日の英語はアプリ Resound で`,
   );
 
   return header + ev.join('\n') + '\n';
