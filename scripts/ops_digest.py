@@ -162,6 +162,35 @@ def fetch_funnel():
     }
 
 
+def fetch_threads_views():
+    """直近24時間に投稿したThreads各件のview数を合計（要 threads_manage_insights）。"""
+    uid = os.getenv("THREADS_USER_ID", "")
+    tok = os.getenv("THREADS_ACCESS_TOKEN", "")
+    if not uid or not tok:
+        return None
+    since = int((datetime.now(timezone.utc) - timedelta(hours=24)).timestamp())
+    s, j = http(f"https://graph.threads.net/v1.0/{uid}/threads?fields=id,timestamp&since={since}&limit=50&access_token={tok}")
+    if not isinstance(j, dict):
+        return None
+    total, counted = 0, 0
+    for p in j.get("data", []):
+        pid = p.get("id")
+        if not pid:
+            continue
+        s2, ins = http(f"https://graph.threads.net/v1.0/{pid}/insights?metric=views&access_token={tok}")
+        try:
+            for m in ins.get("data", []):
+                if m.get("name") == "views":
+                    tv = (m.get("total_value") or {}).get("value")
+                    if tv is None and m.get("values"):
+                        tv = sum(v.get("value", 0) for v in m["values"])
+                    total += tv or 0
+                    counted += 1
+        except Exception:
+            pass
+    return {"views": total, "posts": counted}
+
+
 def analyze_funnel(f):
     key = os.getenv("GEMINI_API_KEY", "")
     if not key or not f:
@@ -169,6 +198,7 @@ def analyze_funnel(f):
     prompt = f"""あなたは英語学習サブスク「Resound」のグロース担当です。
 直近24時間のファネル数値:
 - SEO記事の閲覧(セッション): {f['seo_views']}
+- Threads閲覧: {f.get('threads_views', '未計測')}
 - アプリ流入(合計): {f['app_visits']} / 内訳: {json.dumps(f['by_source'], ensure_ascii=False)}
 - 新規登録: {f['signups']}
 - 新規課金(pro化): {f['conversions']}
@@ -213,9 +243,14 @@ def build_funnel_html(f, fa):
           <b>ボトルネック:</b> {fa.get('bottleneck','-')}<br>
           <b>改善提案:</b><ul style="margin:6px 0 0 18px;padding:0">{sug}</ul>
         </div>"""
+    tv_row = ""
+    if f.get("threads_views") is not None:
+        tv_row = (f'<tr><td style="padding:4px 10px;color:#94a3b8">Threads 閲覧（{f.get("threads_posts",0)}投稿）</td>'
+                  f'<td style="padding:4px 10px;color:#e2e8f0;font-weight:700">{f["threads_views"]}</td></tr>')
     return f"""
     <table style="border-collapse:collapse;background:#111827;border-radius:8px;width:100%">
       <tr><td style="padding:4px 10px;color:#94a3b8">SEO記事 閲覧</td><td style="padding:4px 10px;color:#e2e8f0;font-weight:700">{f['seo_views']}</td></tr>
+      {tv_row}
       <tr><td style="padding:4px 10px;color:#94a3b8">アプリ流入（合計）</td><td style="padding:4px 10px;color:#e2e8f0;font-weight:700">{f['app_visits']}</td></tr>
       <tr><td style="padding:4px 10px;color:#94a3b8">新規登録</td><td style="padding:4px 10px;color:#e2e8f0;font-weight:700">{f['signups']}</td></tr>
       <tr><td style="padding:4px 10px;color:#94a3b8">新規課金</td><td style="padding:4px 10px;color:#34d399;font-weight:800">{f['conversions']}</td></tr>
@@ -292,6 +327,10 @@ def main():
             notified.append(it["id"])
 
     funnel = fetch_funnel()
+    tv = fetch_threads_views()
+    if funnel is not None and tv is not None:
+        funnel["threads_views"] = tv["views"]
+        funnel["threads_posts"] = tv["posts"]
     funnel_ana = analyze_funnel(funnel)
 
     html = build_html(checks, latest, fresh, total, fb, funnel, funnel_ana)

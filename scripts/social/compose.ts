@@ -169,7 +169,10 @@ export function composePosts(topic: Topic, number: number): Post[] {
     url,
   });
 
-  return posts;
+  // Every post closes with the same short app pitch, right before the link, so
+  // even a casual reader learns what Resound is and why to tap through.
+  const PROMO = '🎧 アプリ「Resound」：ネイティブ音声でシャドーイング＋AIが添削する瞬間英作文。最初の10話は無料👇';
+  return posts.map((p) => ({ ...p, text: `${p.text}\n\n${PROMO}` }));
 }
 
 /**
