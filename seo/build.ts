@@ -10,7 +10,7 @@
 
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
-import { APP_URL, BRAND, DESCRIPTION, MIN_INDEXABLE_CHARS, SITE_URL, TAGLINE } from './config';
+import { APP_URL, BRAND, DESCRIPTION, MIN_INDEXABLE_CHARS, SITE_URL } from './config';
 import {
   buildCollections,
   buildPhraseIndex,
@@ -113,12 +113,19 @@ writeFileSync(resolve(OUT, 'style.css'), STYLESHEET, 'utf8');
 {
   const latest = episodes.slice(0, 6);
   const body = `
-<h1>${esc(BRAND)} — ${esc(TAGLINE)}</h1>
-<p class="lead">${esc(DESCRIPTION)}</p>
-<p>日常会話からビジネス、国内外の時事ニュース、旅行・スポーツ・歴史・流行まで。実際に使われる英文を、全文和訳と表現解説つきで。
-全<strong>${libraryCount}話</strong>のうち、最初の<strong>${topics.length}話（Stage 1）</strong>を無料で公開中。続きはアプリの購読でご利用いただけます。</p>
+<section class="home-hero">
+  <p class="eyebrow">RESOUND · ENGLISH STUDIO</p>
+  <h1>シャドーイング×瞬間英作文で、<br>“話せる英語”へ。</h1>
+  <p class="hero-sub">ネイティブ音声の<strong>シャドーイング</strong>で耳と口をつくり、AIが添削する<strong>瞬間英作文</strong>で“自分で言える”に変える。日常会話からビジネス・時事・旅行・スポーツ・歴史まで、実際に使う英文を毎日1本。</p>
+  <a class="cta-button lg" href="${esc(APP_URL)}?utm_source=seo" rel="noopener">Resound を無料ではじめる →</a>
+  <div class="pillars">
+    <div class="pillar"><span class="pi">🎧</span><b>シャドーイング</b><span>ネイティブ音声を真似て、声に出す</span></div>
+    <div class="pillar"><span class="pi">✍️</span><b>瞬間英作文</b><span>和文から自分で英作文、AIが添削</span></div>
+    <div class="pillar"><span class="pi">🔁</span><b>復習で定着</b><span>間違いと熟語だけ繰り返して自分のものに</span></div>
+  </div>
+</section>
 
-${appCta('音声つきでシャドーイングする', '同じ教材をネイティブ音声で。最初の10話（Stage 1）は無料。続きはアプリの購読で。')}
+<p class="freenote">全<strong>${libraryCount}話</strong>のうち、最初の<strong>${topics.length}話（Stage 1）</strong>を無料公開中。続きはアプリの購読で。すべて全文和訳と表現解説つきです。</p>
 
 <h2>無料公開エピソード</h2>
 <ul class="list">
@@ -154,6 +161,8 @@ ${articles.length ? `<h2>最新の解説</h2>\n<ul class="list">\n${articles
         `<li><a href="/blog/${esc(a.slug)}/"><span class="t">${esc(a.title)}</span><span class="s">${esc(a.date.slice(0, 10))}</span></a></li>`,
     )
     .join('\n')}\n</ul>` : ''}
+
+${appCta('今日の1本を、声に出してみる', 'ネイティブ音声のシャドーイングとAI瞬間英作文。最初の10話（Stage 1）は無料。')}
 `;
 
   page({

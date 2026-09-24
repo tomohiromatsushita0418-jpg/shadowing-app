@@ -14,9 +14,9 @@ export const SITE_URL = env('SITE_URL', 'https://learn.resound.study');
 export const APP_URL = env('APP_URL', 'https://resound.study');
 
 export const BRAND = 'RESOUND';
-export const TAGLINE = '毎日つづける英語シャドーイング';
+export const TAGLINE = 'シャドーイング×瞬間英作文で話せる英語へ';
 export const DESCRIPTION =
-  '日常会話・ビジネス・国内外の時事ニュース・旅行・スポーツ・歴史・流行まで、実際に使われる英文を和訳と表現解説つきで毎日1本。ネイティブ音声のシャドーイングで、リスニングとスピーキングを徹底的に鍛える英語学習教材。';
+  'ネイティブ音声のシャドーイングと、AI添削つき瞬間英作文で"話せる英語"へ。日常会話・ビジネス・国内外の時事・旅行・スポーツ・歴史まで、実際に使う英文を毎日1本。リスニングとスピーキングを本気で鍛える英語学習アプリ。';
 
 /** Optional: set to add <meta name="google-site-verification">. */
 export const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION?.trim() ?? '';
