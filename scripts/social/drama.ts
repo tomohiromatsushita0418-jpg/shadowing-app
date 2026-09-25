@@ -134,17 +134,54 @@ Return ONLY JSON:
   "nextSynopsis": "updated running story summary in Japanese (<= 280 chars), including this episode"
 }`;
 
-  const res = await gemini(TEXT_MODEL, {
-    contents: [{ role: 'user', parts: [{ text: prompt }] }],
-    generationConfig: { temperature: 0.9, responseMimeType: 'application/json' },
-  });
-  const raw = res.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
-  const parsed = JSON.parse(raw) as Omit<Script, 'episode'>;
-  const lines = (parsed.lines ?? []).filter(
-    (l) => (l.speaker === 'Ren' || l.speaker === 'Mio') && l.en?.trim() && l.ja?.trim(),
-  );
-  if (lines.length < 4) throw new Error(`Script too short (${lines.length} lines)`);
-  return { ...parsed, lines, episode };
+  // A response schema keeps the output valid JSON; still retry a couple of
+  // times in case the model returns something unusable.
+  const schema = {
+    type: 'OBJECT',
+    properties: {
+      idiom: { type: 'STRING' },
+      meaning: { type: 'STRING' },
+      title: { type: 'STRING' },
+      lines: {
+        type: 'ARRAY',
+        items: {
+          type: 'OBJECT',
+          properties: {
+            speaker: { type: 'STRING', enum: ['Ren', 'Mio'] },
+            en: { type: 'STRING' },
+            ja: { type: 'STRING' },
+          },
+          required: ['speaker', 'en', 'ja'],
+        },
+      },
+      nextSynopsis: { type: 'STRING' },
+    },
+    required: ['idiom', 'meaning', 'title', 'lines', 'nextSynopsis'],
+  };
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await gemini(TEXT_MODEL, {
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: {
+          temperature: 0.9,
+          responseMimeType: 'application/json',
+          responseSchema: schema,
+        },
+      });
+      const raw = res.candidates?.[0]?.content?.parts?.[0]?.text ?? '';
+      const parsed = JSON.parse(raw) as Omit<Script, 'episode'>;
+      const lines = (parsed.lines ?? []).filter(
+        (l) => (l.speaker === 'Ren' || l.speaker === 'Mio') && l.en?.trim() && l.ja?.trim(),
+      );
+      if (lines.length < 4) throw new Error(`Script too short (${lines.length} lines)`);
+      return { ...parsed, lines, episode };
+    } catch (error) {
+      lastError = error;
+      console.log(`[drama] script attempt ${attempt} failed: ${(error as Error).message}`);
+    }
+  }
+  throw lastError;
 }
 
 function pcmToWav(pcm: Buffer, sampleRate: number): Buffer {
