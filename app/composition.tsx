@@ -17,6 +17,7 @@ import { topics } from '../data/topics';
 import { useComposeProgress, type Verdict } from '../hooks/useComposeProgress';
 import { useComposeQuota } from '../hooks/useComposeQuota';
 import { useAccount } from '../lib/account';
+import DragTiles from '../components/DragTiles';
 
 interface PhraseLite { phrase: string }
 interface Problem {
@@ -251,6 +252,7 @@ export default function CompositionScreen() {
   const [error, setError] = useState<string | null>(null);
   const [showModel, setShowModel] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
+  const [scrollLocked, setScrollLocked] = useState(false);
 
   useEffect(() => {
     navigation.setOptions({ title: wrongMode ? '間違えた問題を復習' : '瞬間英作文' });
@@ -392,7 +394,6 @@ export default function CompositionScreen() {
   }
 
   const v = grade ? VERDICT[grade.verdict] : null;
-  const usedSet = new Set(selected);
 
   return (
     <KeyboardAvoidingView
@@ -402,6 +403,7 @@ export default function CompositionScreen() {
     >
       <ScrollView
         ref={scrollRef}
+        scrollEnabled={!scrollLocked}
         contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 120 }]}
         keyboardShouldPersistTaps="handled"
       >
@@ -434,7 +436,7 @@ export default function CompositionScreen() {
         {/* Input header */}
         <View style={styles.inputHeader}>
           <Text style={styles.inputLabel}>
-            {typeMode ? 'あなたの解答（手入力）' : '選択肢をタップして英文を組み立て'}
+            {typeMode ? 'あなたの解答（手入力）' : 'タップ・ドラッグで英文を組み立て（並べ替えもOK）'}
           </Text>
           {!grade && (
             <Pressable onPress={() => setTypeMode((m) => !m)} style={styles.modeToggleBtn}>
@@ -458,40 +460,22 @@ export default function CompositionScreen() {
           />
         ) : (
           <>
-            {/* Answer area */}
-            <View style={styles.answerArea}>
-              {selected.length === 0 ? (
-                <Text style={styles.answerPlaceholder}>ここに組み立てた英文が入ります</Text>
-              ) : (
-                selected.map((tileIdx, pos) => (
-                  <Pressable
-                    key={`${tileIdx}-${pos}`}
-                    style={styles.answerChip}
-                    disabled={!!grade}
-                    onPress={() => setSelected((s) => s.filter((_, p) => p !== pos))}
-                  >
-                    <Text style={styles.answerChipText}>{tiles[tileIdx]}</Text>
-                  </Pressable>
-                ))
-              )}
-            </View>
-
-            {/* Word/phrase bank */}
-            {!grade && (
-              <View style={styles.bank}>
-                {tiles.map((t, i) =>
-                  usedSet.has(i) ? null : (
-                    <Pressable
-                      key={i}
-                      style={styles.bankTile}
-                      onPress={() => setSelected((s) => [...s, i])}
-                    >
-                      <Text style={styles.bankTileText}>{t}</Text>
-                    </Pressable>
-                  )
-                )}
-              </View>
-            )}
+            <DragTiles
+              tiles={tiles}
+              selected={selected}
+              onChange={setSelected}
+              disabled={!!grade}
+              onDragging={(active) => setScrollLocked(active)}
+              styles={{
+                answerArea: styles.answerArea,
+                answerChip: styles.answerChip,
+                answerChipText: styles.answerChipText,
+                answerPlaceholder: styles.answerPlaceholder,
+                bank: styles.bank,
+                bankTile: styles.bankTile,
+                bankTileText: styles.bankTileText,
+              }}
+            />
 
             {!grade && selected.length > 0 && (
               <Pressable style={styles.clearBtn} onPress={() => setSelected([])}>
