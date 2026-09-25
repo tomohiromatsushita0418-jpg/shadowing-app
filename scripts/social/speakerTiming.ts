@@ -47,8 +47,8 @@ function medianPitch(samples: Int16Array, rate: number, from: number, to: number
     let energy = 0;
     for (let i = 0; i < win; i++) energy += x[start + i] * x[start + i];
     if (Math.sqrt(energy / win) < peak * 0.08) continue; // unvoiced / quiet
+    const corr: number[] = [];
     let best = 0;
-    let bestLag = 0;
     for (let lag = minLag; lag <= maxLag; lag++) {
       let num = 0;
       let e2 = 0;
@@ -57,12 +57,21 @@ function medianPitch(samples: Int16Array, rate: number, from: number, to: number
         e2 += x[start + i + lag] * x[start + i + lag];
       }
       const c = num / Math.sqrt(energy * e2 + 1e-12);
-      if (c > best) {
-        best = c;
-        bestLag = lag;
+      corr.push(c);
+      if (c > best) best = c;
+    }
+    if (best <= 0.6) continue;
+    // A periodic voice also correlates at 2x, 3x its period; taking the global
+    // peak reads a high voice an octave low. Use the SHORTEST lag that is
+    // (nearly) as good as the best, at a local maximum.
+    let pick = -1;
+    for (let k = 1; k < corr.length - 1; k++) {
+      if (corr[k] >= 0.88 * best && corr[k] >= corr[k - 1] && corr[k] >= corr[k + 1]) {
+        pick = k;
+        break;
       }
     }
-    if (best > 0.6 && bestLag > 0) pitches.push(r / bestLag);
+    if (pick >= 0) pitches.push(r / (minLag + pick));
   }
   if (pitches.length < 3) return null;
   pitches.sort((p, q) => p - q);
@@ -122,7 +131,7 @@ export function speakerTimings(
   // Cost of putting stretch i in a turn of the given voice: how far its pitch
   // sits on the wrong side of the threshold, weighted by duration.
   const logThr = Math.log(threshold);
-  const cost = (i: number, voice: string) => {
+  const pitchCost = (i: number, voice: string) => {
     const p = stretches[i].pitch;
     if (p === null) return 0;
     const d = Math.log(p) - logThr;
@@ -130,38 +139,47 @@ export function speakerTimings(
     return wrong * (stretches[i].end - stretches[i].start);
   };
 
-  // Split the stretches, in order, into exactly the script's turns so that
-  // total mismatch is minimal (dynamic programming over stretch × turn).
+  // Expected speaking time of each turn, from its share of the text. Pitch
+  // alone gets fooled by very expressive lines, so a turn whose length is far
+  // from what its words need is penalised too.
+  const dur = stretches.map((s) => s.end - s.start);
+  const speech = dur.reduce((a, b) => a + b, 0);
+  const tw = expected.map((t) => t.lines.reduce((a, i) => a + lines[i].en.length + 8, 0));
+  const twSum = tw.reduce((a, b) => a + b, 0);
+  const expDur = tw.map((w) => (speech * w) / twSum);
+  const LAMBDA = 0.6;
+
+  // dp[i][k]: best cost with stretches [0, i) split into turns [0, k).
   const INF = Number.POSITIVE_INFINITY;
   const dp: number[][] = Array.from({ length: N + 1 }, () => new Array(T + 1).fill(INF));
-  const from: number[][] = Array.from({ length: N + 1 }, () => new Array(T + 1).fill(-1));
+  const back: number[][] = Array.from({ length: N + 1 }, () => new Array(T + 1).fill(-1));
   dp[0][0] = 0;
-  for (let i = 1; i <= N; i++) {
-    for (let k = 1; k <= Math.min(i, T); k++) {
-      const c = cost(i - 1, expected[k - 1].voice);
-      const stay = dp[i - 1][k]; // stretch i-1 continues turn k-1
-      const open = dp[i - 1][k - 1]; // stretch i-1 starts turn k-1
-      if (stay <= open) {
-        dp[i][k] = stay + c;
-        from[i][k] = k;
-      } else {
-        dp[i][k] = open + c;
-        from[i][k] = k - 1;
+  for (let k = 1; k <= T; k++) {
+    const voice = expected[k - 1].voice;
+    for (let i = k; i <= N - (T - k); i++) {
+      let pc = 0;
+      let d = 0;
+      for (let j = i - 1; j >= k - 1; j--) {
+        // turn k-1 covers stretches [j, i)
+        pc += pitchCost(j, voice);
+        d += dur[j];
+        if (!Number.isFinite(dp[j][k - 1])) continue;
+        const dev = d - expDur[k - 1];
+        const c = dp[j][k - 1] + pc + (LAMBDA * dev * dev) / Math.max(expDur[k - 1], 0.5);
+        if (c < dp[i][k]) {
+          dp[i][k] = c;
+          back[i][k] = j;
+        }
       }
     }
   }
   if (!Number.isFinite(dp[N][T])) return null;
-  const turnOf: number[] = new Array(N);
-  for (let i = N, k = T; i >= 1; i--) {
-    turnOf[i - 1] = k - 1;
-    k = from[i][k];
+  const turns: { start: number; end: number }[] = new Array(T);
+  for (let i = N, k = T; k >= 1; k--) {
+    const j = back[i][k];
+    turns[k - 1] = { start: stretches[j].start, end: stretches[i - 1].end };
+    i = j;
   }
-  const turns = expected.map(() => ({ start: INF, end: 0 }));
-  stretches.forEach((st, i) => {
-    const t = turns[turnOf[i]];
-    t.start = Math.min(t.start, st.start);
-    t.end = Math.max(t.end, st.end);
-  });
 
   // Lines within a turn: share the turn's time by text length.
   const spans: Span[] = new Array(lines.length);
