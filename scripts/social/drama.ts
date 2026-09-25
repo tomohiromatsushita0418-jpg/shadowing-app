@@ -27,7 +27,9 @@ const ROOT = path.resolve(__dirname, '../..');
 const STATE_FILE = path.join(ROOT, 'data', 'drama.json');
 
 const TEXT_MODEL = 'gemini-2.5-flash';
-const TTS_MODEL = 'gemini-2.5-flash-preview-tts';
+// Each TTS model has its own free daily quota. The daily lessons use
+// gemini-2.5-flash-preview-tts, so the drama tries a different one first.
+const TTS_MODELS = ['gemini-3.1-flash-tts-preview', 'gemini-2.5-flash-preview-tts'];
 const TTS_SAMPLE_RATE = 24000;
 
 type Character = { ja: string; voice: string; image: string; profile: string };
@@ -204,8 +206,22 @@ function pcmToWav(pcm: Buffer, sampleRate: number): Buffer {
 }
 
 async function voice(script: Script, state: State): Promise<Buffer> {
+  let lastError: unknown;
+  for (const model of TTS_MODELS) {
+    try {
+      return await voiceWith(model, script, state);
+    } catch (error) {
+      lastError = error;
+      if (!/ 429:/.test((error as Error).message)) throw error;
+      console.log(`[drama] ${model} out of free quota, trying the next model`);
+    }
+  }
+  throw lastError;
+}
+
+async function voiceWith(model: string, script: Script, state: State): Promise<Buffer> {
   const transcript = script.lines.map((l) => `${l.speaker}: ${l.en}`).join('\n');
-  const res = await gemini(TTS_MODEL, {
+  const res = await gemini(model, {
     contents: [
       {
         role: 'user',

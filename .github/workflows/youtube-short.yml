@@ -17,7 +17,11 @@ on:
         description: 'true to upload to YouTube, false to only render'
         required: false
         default: 'false'
+  # Three episodes a day, like Threads: morning commute, lunch, evening.
+  # YouTube's free API quota allows 6 uploads/day; TTS uses a separate model.
   schedule:
+    - cron: '0 23 * * *' # 08:00 JST
+    - cron: '0 3 * * *'  # 12:00 JST
     - cron: '0 10 * * *' # 19:00 JST
 
 permissions:
