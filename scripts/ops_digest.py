@@ -199,11 +199,12 @@ def analyze_funnel(f):
 直近24時間のファネル数値:
 - SEO記事の閲覧(セッション): {f['seo_views']}
 - Threads閲覧: {f.get('threads_views', '未計測')}
+- YouTubeショート: 直近{f.get('yt_count', 0)}本の合計再生 {f.get('yt_views', '未計測')}（最新話の熟語: {f.get('yt_latest', '-')}）
 - アプリ流入(合計): {f['app_visits']} / 内訳: {json.dumps(f['by_source'], ensure_ascii=False)}
 - 新規登録: {f['signups']}
 - 新規課金(pro化): {f['conversions']}
 - 現在の有料会員合計: {f['total_pro']}
-集客経路はSEOサイト(learn.resound.study)とThreads(@syosyaman_no_eigo)の無料2本のみ。
+集客経路はSEOサイト(learn.resound.study)・Threads(@syosyaman_no_eigo)・YouTubeショート(英会話ドラマ)の無料3本。
 次のJSONだけ返す:
 {{
  "summary": "今日のファネルの一言講評（日本語）",
@@ -220,6 +221,98 @@ def analyze_funnel(f):
         return json.loads(j["candidates"][0]["content"]["parts"][0]["text"])
     except Exception:
         return None
+
+
+# ---------- automation jobs + YouTube Shorts ----------
+WORKFLOWS = [
+    ("daily-topics.yml", "教材生成"),
+    ("daily-content.yml", "解説記事"),
+    ("seo-deploy.yml", "SEOサイト更新"),
+    ("social-post.yml", "Threads投稿"),
+    ("youtube-short.yml", "YouTubeショート"),
+    ("threads-refresh.yml", "Threadsトークン更新"),
+]
+
+
+def fetch_jobs():
+    """各自動ジョブの直近実行（GitHub Actions）の成否。"""
+    tok = os.getenv("GITHUB_TOKEN", "")
+    repo = os.getenv("GITHUB_REPOSITORY", "")
+    if not tok or not repo:
+        return None
+    out = []
+    for wf, label in WORKFLOWS:
+        s, j = http(f"https://api.github.com/repos/{repo}/actions/workflows/{wf}/runs?per_page=1",
+                    headers={"Authorization": f"Bearer {tok}", "Accept": "application/vnd.github+json"})
+        runs = j.get("workflow_runs", []) if isinstance(j, dict) else []
+        if not runs:
+            out.append({"label": label, "result": None, "when": None, "url": None})
+            continue
+        r = runs[0]
+        when = datetime.fromisoformat(r["created_at"].replace("Z", "+00:00")).astimezone(JST)
+        out.append({"label": label, "result": r.get("conclusion") or r.get("status"),
+                    "when": when, "url": r.get("html_url")})
+    return out
+
+
+def fetch_shorts():
+    """英会話ドラマ（YouTubeショート）の最新状況と再生数（YOUTUBE_API_KEYがあれば）。"""
+    p = ROOT / "data" / "drama.json"
+    if not p.exists():
+        return None
+    d = json.loads(p.read_text())
+    vids = [dict(v) for v in d.get("videos", [])][-7:]
+    info = {"episode": d.get("episode", 0), "videos": vids, "fresh": False, "views_total": None}
+    if vids:
+        try:
+            up = datetime.fromisoformat(vids[-1]["uploadedAt"].replace("Z", "+00:00")).astimezone(JST)
+            info["fresh"] = (datetime.now(JST) - up) < timedelta(hours=30)
+        except Exception:
+            pass
+    key = os.getenv("YOUTUBE_API_KEY", "")
+    if key and vids:
+        ids = ",".join(v["id"] for v in vids)
+        s, j = http(f"https://www.googleapis.com/youtube/v3/videos?part=statistics&id={ids}&key={key}")
+        if isinstance(j, dict) and "items" in j:
+            stats = {it["id"]: int(it.get("statistics", {}).get("viewCount", 0)) for it in j["items"]}
+            for v in vids:
+                v["views"] = stats.get(v["id"])
+            info["views_total"] = sum(stats.values())
+    return info
+
+
+def build_jobs_html(jobs):
+    if jobs is None:
+        return '<p style="color:#64748b">（ジョブ状況はGitHub上の実行時のみ取得）</p>'
+    rows = ""
+    for j in jobs:
+        res = j["result"]
+        ok = res == "success"
+        col = "#34d399" if ok else ("#fbbf24" if res in ("in_progress", "queued") else "#f87171")
+        mark = "✓" if ok else ("…" if res in ("in_progress", "queued") else ("—" if res is None else "✗"))
+        when = j["when"].strftime("%m/%d %H:%M") if j["when"] else "未実行"
+        link = f'<a href="{j["url"]}" style="color:#64748b">{when}</a>' if j["url"] else when
+        rows += (f'<tr><td style="padding:4px 10px;color:#94a3b8">{j["label"]}</td>'
+                 f'<td style="padding:4px 10px;color:{col};font-weight:800">{mark}</td>'
+                 f'<td style="padding:4px 10px;font-size:12px">{link}</td></tr>')
+    return f'<table style="border-collapse:collapse;background:#111827;border-radius:8px">{rows}</table>'
+
+
+def build_shorts_html(sh):
+    if not sh:
+        return '<p style="color:#64748b">まだ投稿がありません。</p>'
+    state = ('<span style="color:#34d399">✓ 直近24時間に投稿あり</span>' if sh["fresh"]
+             else '<span style="color:#f87171">✗ 直近の投稿なし（要確認）</span>')
+    rows = ""
+    for v in reversed(sh["videos"]):
+        views = v.get("views")
+        rows += (f'<tr><td style="padding:3px 10px;color:#94a3b8">#{v["episode"]}</td>'
+                 f'<td style="padding:3px 10px"><a href="https://youtube.com/shorts/{v["id"]}" style="color:#fbbf24">{v["idiom"]}</a>'
+                 f'<span style="color:#64748b"> ＝{v.get("meaning","")}</span></td>'
+                 f'<td style="padding:3px 10px;color:#e2e8f0;font-weight:700">{"-" if views is None else f"{views:,}回"}</td></tr>')
+    total = "" if sh["views_total"] is None else f'　/　直近{len(sh["videos"])}本の合計再生 <b style="color:#e2e8f0">{sh["views_total"]:,}回</b>'
+    return f"""<p style="color:#94a3b8;font-size:13px">{state}　/　最新 第{sh["episode"]}話{total}</p>
+    <table style="border-collapse:collapse;background:#111827;border-radius:8px">{rows}</table>"""
 
 
 # ---------- compose + send ----------
@@ -261,7 +354,7 @@ def build_funnel_html(f, fa):
     {ana}"""
 
 
-def build_html(checks, latest, fresh, total, fb_items, funnel=None, funnel_ana=None):
+def build_html(checks, latest, fresh, total, fb_items, funnel=None, funnel_ana=None, jobs=None, shorts=None):
     today = datetime.now(JST).strftime("%Y年%m月%d日")
     rows = "".join(
         f'<tr><td style="padding:4px 10px;color:#94a3b8">{n}</td>'
@@ -301,6 +394,12 @@ def build_html(checks, latest, fresh, total, fb_items, funnel=None, funnel_ana=N
   <table style="border-collapse:collapse;background:#111827;border-radius:8px">{rows}</table>
   <p style="color:#94a3b8;font-size:13px;margin-top:10px">教材生成: {gen}　/　総エピソード {total}</p>
 
+  <h2 style="color:#90caf9;font-size:16px;margin-top:24px">自動化ジョブ（直近の実行）</h2>
+  {build_jobs_html(jobs)}
+
+  <h2 style="color:#90caf9;font-size:16px;margin-top:24px">YouTubeショート（英会話ドラマ）</h2>
+  {build_shorts_html(shorts)}
+
   <h2 style="color:#90caf9;font-size:16px;margin-top:24px">集客ファネル（直近24時間・AI分析）</h2>
   {build_funnel_html(funnel, funnel_ana)}
 
@@ -331,9 +430,17 @@ def main():
     if funnel is not None and tv is not None:
         funnel["threads_views"] = tv["views"]
         funnel["threads_posts"] = tv["posts"]
+    jobs = fetch_jobs()
+    shorts = fetch_shorts()
+    if funnel is not None and shorts:
+        funnel["yt_views"] = shorts["views_total"] if shorts["views_total"] is not None else "未計測"
+        funnel["yt_count"] = len(shorts["videos"])
+        funnel["yt_latest"] = shorts["videos"][-1]["idiom"] if shorts["videos"] else "-"
     funnel_ana = analyze_funnel(funnel)
 
-    html = build_html(checks, latest, fresh, total, fb, funnel, funnel_ana)
+    html = build_html(checks, latest, fresh, total, fb, funnel, funnel_ana, jobs, shorts)
+    jobs_ok = jobs is None or all(j["result"] in ("success", "in_progress", "queued", None) for j in jobs)
+    all_ok = fresh and jobs_ok and (shorts is None or shorts["fresh"])
 
     if not (gmail and app_pass and to_raw):
         print("メール未設定のため送信スキップ。健全性:", checks, "fresh:", fresh, "feedback:", None if fb is None else len(fb))
@@ -341,7 +448,7 @@ def main():
 
     msg = MIMEMultipart("alternative")
     n_fb = 0 if not fb else len(fb)
-    msg["Subject"] = f"【Resound 運営】{datetime.now(JST):%m/%d} 稼働{'OK' if fresh else '要確認'}・新着{n_fb}件"
+    msg["Subject"] = f"【Resound 運営】{datetime.now(JST):%m/%d} 稼働{'OK' if all_ok else '要確認'}・新着{n_fb}件"
     msg["From"] = gmail
     msg["To"] = to_raw
     msg.attach(MIMEText("HTML対応のメールでご覧ください。", "plain", "utf-8"))

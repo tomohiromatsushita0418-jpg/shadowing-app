@@ -162,6 +162,13 @@ async function main() {
   if (!response.ok) throw new Error(`YouTube upload ${response.status}: ${payload.slice(0, 600)}`);
 
   const parsed = JSON.parse(payload) as { id?: string };
+  if (metaFile && parsed.id) {
+    // Recorded into data/drama.json by the workflow so the daily digest can report on it.
+    fs.writeFileSync(
+      path.join(path.dirname(path.resolve(ROOT, metaFile)), 'video.json'),
+      JSON.stringify({ id: parsed.id, uploadedAt: new Date().toISOString() }),
+    );
+  }
   console.log(
     `[youtube] uploaded (${metadata.status.privacyStatus}): https://youtube.com/watch?v=${parsed.id}`,
   );

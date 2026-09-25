@@ -82,7 +82,20 @@ jobs:
       - name: Advance the story
         if: env.UPLOAD == 'true'
         run: |
-          cp build/drama/state.json data/drama.json
+          python3 - <<'PY'
+          import json, os
+          state = json.load(open('build/drama/state.json'))
+          script = json.load(open('build/drama/script.json'))
+          if os.path.exists('build/drama/video.json'):
+              v = json.load(open('build/drama/video.json'))
+              state.setdefault('videos', []).append({
+                  'episode': script['episode'], 'id': v['id'], 'idiom': script['idiom'],
+                  'meaning': script['meaning'], 'title': script['title'], 'uploadedAt': v['uploadedAt'],
+              })
+              state['videos'] = state['videos'][-90:]
+          json.dump(state, open('data/drama.json', 'w'), ensure_ascii=False, indent=2)
+          open('data/drama.json', 'a').write('\n')
+          PY
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/drama.json
