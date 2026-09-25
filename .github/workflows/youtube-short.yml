@@ -17,9 +17,8 @@ on:
         description: 'true to upload to YouTube, false to only render'
         required: false
         default: 'false'
-  # Enabled once the first episodes have been reviewed.
-  # schedule:
-  #   - cron: '0 10 * * *' # 19:00 JST
+  schedule:
+    - cron: '0 10 * * *' # 19:00 JST
 
 permissions:
   contents: write
