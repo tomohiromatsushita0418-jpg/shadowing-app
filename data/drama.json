@@ -1,5 +1,5 @@
 {
-  "episode": 1,
+  "episode": 2,
   "characters": {
     "Ren": {
       "ja": "蓮",
@@ -15,9 +15,10 @@
     }
   },
   "premise": "A light workplace rom-com at a Tokyo trading company. Ren has just joined Mio's team and they are thrown together on one project after another. Slow-burn chemistry, playful banter, small wins and setbacks at work.",
-  "synopsis": "Renがロンドンから戻り、美桜のチームに紹介された。新しいプロジェクトが部署に「usher in」するであろう変化について、二人の間で早速軽妙なやり取りが始まる。美桜は一筋縄ではいかない様子。",
+  "synopsis": "Renがロンドンから戻り、美桜のチームに紹介された。新しいプロジェクトが部署に「usher in」するであろう変化について、二人の間で早速軽妙なやり取りが始まった。今回のプロジェクトで古いやり方が「gradually giving way to」新しいテクノロジーに変わると主張するRenに、美桜は皮肉を交えながら応じ、二人の軽妙な口論が続いている。美桜はRenにまだ心を許さない様子。",
   "usedIdioms": [
-    "usher in"
+    "usher in",
+    "gradually giving way to"
   ],
   "videos": [
     {
@@ -27,6 +28,14 @@
       "meaning": "〜をもたらす",
       "title": "新しい時代が到来？",
       "uploadedAt": "2026-09-25T00:30:00Z"
+    },
+    {
+      "episode": 2,
+      "id": "EQNypOFRCaM",
+      "idiom": "gradually giving way to",
+      "meaning": "徐々に〜に取って代わる",
+      "title": "変わる時代、変わるMio？",
+      "uploadedAt": "2026-09-25T12:55:28.355Z"
     }
   ]
 }
