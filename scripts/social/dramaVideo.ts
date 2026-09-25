@@ -22,6 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Script } from './drama';
+import { speakerTimings } from './speakerTiming';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -66,6 +67,10 @@ function lineTimings(voice: string, script: Script, total: number): { start: num
   let speechEnd = total;
   if (silences.length && silences[0].s <= 0.05) speechStart = silences.shift()!.e;
   if (silences.length && silences[silences.length - 1].e >= total - 0.05) speechEnd = silences.pop()!.s;
+
+  // Preferred: align turns by who is actually speaking (voice pitch).
+  const byVoice = speakerTimings(voice, silences, speechStart, speechEnd, script.lines);
+  if (byVoice) return byVoice;
 
   if (silences.length >= n - 1) {
     const cuts = [...silences]
