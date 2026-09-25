@@ -17,12 +17,12 @@
  * Needs ffmpeg/ffprobe with libass and a CJK font (fonts-noto-cjk).
  */
 
-import { execFileSync, spawnSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Script } from './drama';
-import { speakerTimings } from './speakerTiming';
+import { detectSpeech, speakerTimings } from './speakerTiming';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -54,23 +54,11 @@ function duration(file: string): number {
 /** Speech spans for each line, in seconds relative to the voice track. */
 function lineTimings(voice: string, script: Script, total: number): { start: number; end: number }[] {
   const n = script.lines.length;
-  const r = spawnSync('ffmpeg', ['-hide_banner', '-i', voice, '-af', 'silencedetect=noise=-38dB:d=0.22', '-f', 'null', '-'], {
-    encoding: 'utf8',
-  });
-  const log = `${r.stderr ?? ''}`;
-  const starts = [...log.matchAll(/silence_start: ([\d.]+)/g)].map((m) => Number(m[1]));
-  const ends = [...log.matchAll(/silence_end: ([\d.]+)/g)].map((m) => Number(m[1]));
-  const silences = starts.map((s, i) => ({ s, e: ends[i] ?? total })).filter((x) => x.e > x.s);
-
-  // Leading/trailing silence bounds the speech.
-  let speechStart = 0;
-  let speechEnd = total;
-  if (silences.length && silences[0].s <= 0.05) speechStart = silences.shift()!.e;
-  if (silences.length && silences[silences.length - 1].e >= total - 0.05) speechEnd = silences.pop()!.s;
+  const { silences, speechStart, speechEnd } = detectSpeech(voice, total);
 
   // Preferred: align turns by who is actually speaking (voice pitch).
   const byVoice = speakerTimings(voice, silences, speechStart, speechEnd, script.lines);
-  if (byVoice) return byVoice;
+  if (byVoice) return byVoice.spans;
 
   if (silences.length >= n - 1) {
     const cuts = [...silences]

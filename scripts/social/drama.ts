@@ -20,6 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadTopics } from './compose';
+import { checkVoiceTrack } from './speakerTiming';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -241,8 +242,18 @@ async function main() {
   console.log(`[drama] #${script.episode} "${script.title}" — ${script.idiom} (${script.meaning})`);
   for (const l of script.lines) console.log(`  ${l.speaker}: ${l.en} / ${l.ja}`);
 
-  const wav = await voice(script, state);
-  fs.writeFileSync(path.join(outDir, 'voice.wav'), wav);
+  // TTS occasionally skips or merges lines; check the track against the
+  // script and re-voice (it's cheap) rather than publish a broken episode.
+  const wavPath = path.join(outDir, 'voice.wav');
+  let wav: Buffer = Buffer.alloc(0);
+  for (let attempt = 1; ; attempt++) {
+    wav = await voice(script, state);
+    fs.writeFileSync(wavPath, wav);
+    const check = checkVoiceTrack(wavPath, script.lines);
+    console.log(`[drama] voice check #${attempt}: ${check.reason}`);
+    if (check.ok) break;
+    if (attempt >= 3) throw new Error(`voice track still broken after ${attempt} tries: ${check.reason}`);
+  }
   fs.writeFileSync(path.join(outDir, 'script.json'), JSON.stringify(script, null, 2));
 
   const next: State = {

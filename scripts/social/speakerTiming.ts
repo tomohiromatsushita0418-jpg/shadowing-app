@@ -12,6 +12,7 @@
  * caller can fall back.
  */
 
+import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 
 export type Span = { start: number; end: number };
@@ -85,7 +86,7 @@ export function speakerTimings(
   speechEnd: number,
   lines: { speaker: string; en: string }[],
   lowVoice = 'Ren',
-): Span[] | null {
+): { spans: Span[]; cost: number } | null {
   const { samples, rate } = readWav(wavFile);
 
   // Speech stretches between the pauses.
@@ -195,5 +196,47 @@ export function speakerTimings(
     });
   });
   console.log(`[speaker-timing] ${T} turns aligned by voice (split at ${Math.round(threshold)} Hz, mismatch ${dp[N][T].toFixed(2)})`);
-  return spans;
+  return { spans, cost: dp[N][T] / T };
+}
+
+/** Pauses in a WAV (ffmpeg silencedetect) and the span that actually holds speech. */
+export function detectSpeech(wavFile: string, total: number) {
+  const r = spawnSync('ffmpeg', ['-hide_banner', '-i', wavFile, '-af', 'silencedetect=noise=-38dB:d=0.22', '-f', 'null', '-'], {
+    encoding: 'utf8',
+  });
+  const log = `${r.stderr ?? ''}`;
+  const starts = [...log.matchAll(/silence_start: ([\d.]+)/g)].map((m) => Number(m[1]));
+  const ends = [...log.matchAll(/silence_end: ([\d.]+)/g)].map((m) => Number(m[1]));
+  const silences = starts.map((s, i) => ({ s, e: ends[i] ?? total })).filter((x) => x.e > x.s);
+  let speechStart = 0;
+  let speechEnd = total;
+  if (silences.length && silences[0].s <= 0.05) speechStart = silences.shift()!.e;
+  if (silences.length && silences[silences.length - 1].e >= total - 0.05) speechEnd = silences.pop()!.s;
+  return { silences, speechStart, speechEnd };
+}
+
+/**
+ * Does this voice track really contain the whole script? TTS sometimes drops
+ * or merges lines; then the audio is too short for the text, or no split of
+ * it matches the script's alternating voices.
+ */
+export function checkVoiceTrack(
+  wavFile: string,
+  lines: { speaker: string; en: string }[],
+): { ok: boolean; reason: string } {
+  const buf = fs.readFileSync(wavFile);
+  const rate = buf.readUInt32LE(24);
+  const dataStart = buf.indexOf('data', 12) + 8;
+  const total = (buf.length - dataStart) / 2 / rate;
+  const { silences, speechStart, speechEnd } = detectSpeech(wavFile, total);
+  const speech = speechEnd - speechStart;
+  const chars = lines.reduce((a, l) => a + l.en.length, 0);
+  const expected = chars / 15; // ~15 characters per second of clear speech
+  if (speech < expected * 0.7) {
+    return { ok: false, reason: `too short: ${speech.toFixed(1)}s for ~${expected.toFixed(1)}s of text` };
+  }
+  const aligned = speakerTimings(wavFile, silences, speechStart, speechEnd, lines);
+  if (!aligned) return { ok: false, reason: 'voices do not match the script' };
+  if (aligned.cost > 0.25) return { ok: false, reason: `poor alignment (${aligned.cost.toFixed(2)})` };
+  return { ok: true, reason: `ok (${speech.toFixed(1)}s, alignment ${aligned.cost.toFixed(2)})` };
 }
