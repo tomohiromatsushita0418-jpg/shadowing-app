@@ -1,5 +1,5 @@
 {
-  "episode": 0,
+  "episode": 1,
   "characters": {
     "Ren": {
       "ja": "蓮",
@@ -15,6 +15,8 @@
     }
   },
   "premise": "A light workplace rom-com at a Tokyo trading company. Ren has just joined Mio's team and they are thrown together on one project after another. Slow-burn chemistry, playful banter, small wins and setbacks at work.",
-  "synopsis": "Ren has just transferred back from London and is introduced to Mio's team on his first morning.",
-  "usedIdioms": []
+  "synopsis": "Renがロンドンから戻り、美桜のチームに紹介された。新しいプロジェクトが部署に「usher in」するであろう変化について、二人の間で早速軽妙なやり取りが始まる。美桜は一筋縄ではいかない様子。",
+  "usedIdioms": [
+    "usher in"
+  ]
 }
