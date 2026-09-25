@@ -225,6 +225,7 @@ function main() {
   const voiceLen = duration(voice);
   const total = INTRO + voiceLen + OUTRO;
   const spans = lineTimings(voice, script, voiceLen);
+  script.lines.forEach((l, i) => console.log(`[drama-video]   ${l.speaker} ${(INTRO + spans[i].start).toFixed(2)}-${(INTRO + spans[i].end).toFixed(2)}  ${l.en}`));
 
   // Who is lit when: speaker during their line, both during intro/outro.
   const lit: Record<'Ren' | 'Mio', [number, number][]> = {

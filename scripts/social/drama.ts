@@ -210,7 +210,7 @@ async function voice(script: Script, state: State): Promise<Buffer> {
         role: 'user',
         parts: [
           {
-            text: `Read this scene between Ren and Mio as a natural, warm, lightly playful conversation between two young colleagues. Clear pronunciation for English learners, relaxed pace, a short natural pause between turns.\n\n${transcript}`,
+            text: `Read this scene between Ren and Mio as a natural, warm, lightly playful conversation between two young colleagues. Clear pronunciation for English learners, relaxed pace. Leave a clear pause of about one second every time the speaker changes, and do not pause for long inside a line.\n\n${transcript}`,
           },
         ],
       },
