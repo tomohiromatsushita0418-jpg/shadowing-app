@@ -31,7 +31,7 @@ const W = 1080;
 const H = 1920;
 const FPS = 30;
 const INTRO = 2.6;
-const OUTRO = 3.6;
+const OUTRO = 4.5; // long enough to read the app address
 const FONT = process.env.VIDEO_FONT ?? 'Noto Sans CJK JP';
 
 // Character cards
@@ -162,6 +162,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 
   // Header: series tag + episode title, then today's idiom card — whole clip.
   ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(540, 118)}{\\fs34\\c&H0024BFFB&\\fsp6}RESOUND 英会話ドラマ  #${script.episode}`);
+  // The app's address stays on screen the whole clip: Shorts can't carry a
+  // tappable link, so viewers need to be able to read and remember it.
+  ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(540, 228)}{\\fs30\\c&H00B8B0A6&}アプリで毎日つづける ▶ {\\c&H0024BFFB&\\b1}resound.study`);
   ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(540, 180)}{\\fs44}${esc(script.title)}`);
   ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(540, 282)}{\\fs30\\c&H00B8B0A6&}今日の熟語`);
   ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(540, 360)}{\\fs78\\c&H0024BFFB&}${esc(script.idiom)}`);
@@ -170,8 +173,9 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
   // Name plates under the cards.
   const plateY = CARD_Y + CARD_H + FRAME * 2 + 40;
   const cx = (x: number) => x + (CARD_W + FRAME * 2) / 2;
-  ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(cx(CARD_X.Ren), plateY)}{\\fs40\\c${COLOR.Ren}}Ren {\\fs30\\c&H00B8B0A6&}蓮`);
-  ev.push(`Dialogue: 0,${all[0]},${all[1]},T,,0,0,0,,${at(cx(CARD_X.Mio), plateY)}{\\fs40\\c${COLOR.Mio}}Mio {\\fs30\\c&H00B8B0A6&}美桜`);
+  const plates = [all[0], assTime(total - OUTRO)];
+  ev.push(`Dialogue: 0,${plates[0]},${plates[1]},T,,0,0,0,,${at(cx(CARD_X.Ren), plateY)}{\\fs40\\c${COLOR.Ren}}Ren {\\fs30\\c&H00B8B0A6&}蓮`);
+  ev.push(`Dialogue: 0,${plates[0]},${plates[1]},T,,0,0,0,,${at(cx(CARD_X.Mio), plateY)}{\\fs40\\c${COLOR.Mio}}Mio {\\fs30\\c&H00B8B0A6&}美桜`);
 
   // Intro beat in the subtitle zone.
   ev.push(`Dialogue: 1,${assTime(0)},${assTime(INTRO)},T,,0,0,0,,${at(540, 1390)}{\\fs58}この熟語、会話で使えますか？{\\fs40\\c&H00B8B0A6&}\\N\\N▶ 2人の会話を聴いてみよう`);
@@ -191,7 +195,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
   // Outro recap + CTA.
   const o = total - OUTRO;
   ev.push(
-    `Dialogue: 1,${assTime(o)},${assTime(total)},T,,0,0,0,,${at(540, 1400)}{\\fs36\\c&H00B8B0A6&}今日の熟語をおさらい\\N{\\fs64\\c&H0024BFFB&}${esc(script.idiom)}\\N{\\fs44}＝ ${esc(script.meaning)}\\N\\N{\\fs40}続きは明日 ▶\\N{\\fs34\\c&H0024BFFB&}毎日の英語はアプリ Resound で`,
+    `Dialogue: 1,${assTime(o)},${assTime(total)},T,,0,0,0,,${at(540, 1420)}{\\fs44}続きは明日 ▶\\N\\N{\\fs34\\c&H00B8B0A6&}シャドーイング×瞬間英作文アプリ\\N{\\fs64\\c&H0024BFFB&}resound.study\\N{\\fs32\\c&H00B8B0A6&}プロフィールのリンクから無料で始められます`,
   );
 
   return header + ev.join('\n') + '\n';

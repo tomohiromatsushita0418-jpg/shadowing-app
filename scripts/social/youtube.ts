@@ -84,6 +84,8 @@ async function main() {
     // "#Shorts" plus the vertical aspect ratio is what gets it classified as a Short.
     title = truncate(`【英会話ドラマ#${d.episode}】${d.idiom}＝${d.meaning}｜${d.title} #Shorts`, TITLE_LIMIT);
     description = [
+      `▶ アプリで毎日シャドーイング＆AI瞬間英作文（最初の10話無料）: ${app}`,
+      '',
       `今日の熟語：${d.idiom}（${d.meaning}）`,
       '',
       '蓮と美桜の英会話ドラマ。毎日1つ、使える熟語を会話で覚えよう。続きは明日！',
