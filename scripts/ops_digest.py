@@ -231,6 +231,7 @@ WORKFLOWS = [
     ("social-post.yml", "Threads投稿"),
     ("youtube-short.yml", "YouTubeショート"),
     ("threads-refresh.yml", "Threadsトークン更新"),
+    ("audio-backfill.yml", "熟語・単語の音声作成"),
 ]
 
 
@@ -306,13 +307,10 @@ def build_shorts_html(sh):
     rows = ""
     for v in reversed(sh["videos"]):
         views = v.get("views")
-        tt = v.get("tiktok")
-        tt_cell = ("—" if not tt else ("TikTok ✓" if tt.get("privacy") == "PUBLIC_TO_EVERYONE" else "TikTok 非公開"))
         rows += (f'<tr><td style="padding:3px 10px;color:#94a3b8">#{v["episode"]}</td>'
                  f'<td style="padding:3px 10px"><a href="https://youtube.com/shorts/{v["id"]}" style="color:#fbbf24">{v["idiom"]}</a>'
                  f'<span style="color:#64748b"> ＝{v.get("meaning","")}</span></td>'
-                 f'<td style="padding:3px 10px;color:#e2e8f0;font-weight:700">{"-" if views is None else f"{views:,}回"}</td>'
-                 f'<td style="padding:3px 10px;color:#64748b;font-size:12px">{tt_cell}</td></tr>')
+                 f'<td style="padding:3px 10px;color:#e2e8f0;font-weight:700">{"-" if views is None else f"{views:,}回"}</td></tr>')
     total = "" if sh["views_total"] is None else f'　/　直近{len(sh["videos"])}本の合計再生 <b style="color:#e2e8f0">{sh["views_total"]:,}回</b>'
     return f"""<p style="color:#94a3b8;font-size:13px">{state}　/　最新 第{sh["episode"]}話{total}</p>
     <table style="border-collapse:collapse;background:#111827;border-radius:8px">{rows}</table>"""
@@ -400,7 +398,7 @@ def build_html(checks, latest, fresh, total, fb_items, funnel=None, funnel_ana=N
   <h2 style="color:#90caf9;font-size:16px;margin-top:24px">自動化ジョブ（直近の実行）</h2>
   {build_jobs_html(jobs)}
 
-  <h2 style="color:#90caf9;font-size:16px;margin-top:24px">YouTubeショート／TikTok（英会話ドラマ）</h2>
+  <h2 style="color:#90caf9;font-size:16px;margin-top:24px">YouTubeショート（英会話ドラマ）</h2>
   {build_shorts_html(shorts)}
 
   <h2 style="color:#90caf9;font-size:16px;margin-top:24px">集客ファネル（直近24時間・AI分析）</h2>
