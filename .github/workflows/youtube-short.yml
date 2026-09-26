@@ -7,6 +7,7 @@ name: YouTube Short
 #                  voices both characters in one multi-speaker TTS call.
 #   dramaVideo.ts  ffmpeg renders the vertical Short.
 #   youtube.ts     uploads it (unlisted unless YOUTUBE_PRIVACY=public).
+#   tiktok.ts      posts the same video to TikTok once credentials exist.
 #
 # The story only advances (data/drama.json) after a successful upload, so a
 # render-only run never skips an episode.
@@ -82,6 +83,20 @@ jobs:
           YOUTUBE_PRIVACY: ${{ secrets.YOUTUBE_PRIVACY }}
         run: npx tsx scripts/social/youtube.ts
 
+      - name: Publish to TikTok
+        # Same video. Skips quietly until TikTok credentials exist; never
+        # blocks the YouTube episode or the story from advancing.
+        if: env.UPLOAD == 'true'
+        continue-on-error: true
+        env:
+          YT_META: build/drama/script.json
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          TIKTOK_PRIVACY: ${{ secrets.TIKTOK_PRIVACY }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: npx tsx scripts/social/tiktok.ts
+
       - name: Advance the story
         if: env.UPLOAD == 'true'
         run: |
@@ -95,6 +110,8 @@ jobs:
                   'episode': script['episode'], 'id': v['id'], 'idiom': script['idiom'],
                   'meaning': script['meaning'], 'title': script['title'], 'uploadedAt': v['uploadedAt'],
               })
+              if os.path.exists('build/drama/tiktok.json'):
+                  state['videos'][-1]['tiktok'] = json.load(open('build/drama/tiktok.json'))
               state['videos'] = state['videos'][-90:]
           json.dump(state, open('data/drama.json', 'w'), ensure_ascii=False, indent=2)
           open('data/drama.json', 'a').write('\n')
