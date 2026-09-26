@@ -1,5 +1,5 @@
 {
-  "episode": 2,
+  "episode": 3,
   "characters": {
     "Ren": {
       "ja": "蓮",
@@ -15,10 +15,11 @@
     }
   },
   "premise": "A light workplace rom-com at a Tokyo trading company. Ren has just joined Mio's team and they are thrown together on one project after another. Slow-burn chemistry, playful banter, small wins and setbacks at work.",
-  "synopsis": "Renがロンドンから戻り、美桜のチームに紹介された。新しいプロジェクトが部署に「usher in」するであろう変化について、二人の間で早速軽妙なやり取りが始まった。今回のプロジェクトで古いやり方が「gradually giving way to」新しいテクノロジーに変わると主張するRenに、美桜は皮肉を交えながら応じ、二人の軽妙な口論が続いている。美桜はRenにまだ心を許さない様子。",
+  "synopsis": "ロンドン帰りのRenと美桜は、新しいプロジェクトがもたらす変化を巡る軽妙な口論を続ける。Renは古いやり方が新しいテクノロジーに「gradually giving way to」いると主張し、最新技術が「gaining considerable traction」していると力説。一方、美桜はそれが単なる流行ではないかと懐疑的で、効率性だけでなく正確さも重要だと反論する。Renは美桜を説得できるか。",
   "usedIdioms": [
     "usher in",
-    "gradually giving way to"
+    "gradually giving way to",
+    "gaining considerable traction"
   ],
   "videos": [
     {
@@ -36,6 +37,14 @@
       "meaning": "徐々に〜に取って代わる",
       "title": "変わる時代、変わるMio？",
       "uploadedAt": "2026-09-25T12:55:28.355Z"
+    },
+    {
+      "episode": 3,
+      "id": "ES_gAc6AeBs",
+      "idiom": "gaining considerable traction",
+      "meaning": "注目を集めている",
+      "title": "勢いは本物？",
+      "uploadedAt": "2026-09-26T01:08:06.327Z"
     }
   ]
 }
