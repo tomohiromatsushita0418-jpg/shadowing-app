@@ -1,5 +1,5 @@
 {
-  "episode": 3,
+  "episode": 4,
   "characters": {
     "Ren": {
       "ja": "蓮",
@@ -15,11 +15,12 @@
     }
   },
   "premise": "A light workplace rom-com at a Tokyo trading company. Ren has just joined Mio's team and they are thrown together on one project after another. Slow-burn chemistry, playful banter, small wins and setbacks at work.",
-  "synopsis": "ロンドン帰りのRenと美桜は、新しいプロジェクトがもたらす変化を巡る軽妙な口論を続ける。Renは古いやり方が新しいテクノロジーに「gradually giving way to」いると主張し、最新技術が「gaining considerable traction」していると力説。一方、美桜はそれが単なる流行ではないかと懐疑的で、効率性だけでなく正確さも重要だと反論する。Renは美桜を説得できるか。",
+  "synopsis": "ロンドン帰りのRenと美桜は、新しいプロジェクトを巡る議論を続ける。Renは最新技術の効率性を主張するが、美桜は正確性を重視し、人間の分析への需要が「resurgence of」する可能性を示唆する。二人の意見はすれ違ったままだが、Renは美桜を説得できるだろうか？",
   "usedIdioms": [
     "usher in",
     "gradually giving way to",
-    "gaining considerable traction"
+    "gaining considerable traction",
+    "resurgence of"
   ],
   "videos": [
     {
@@ -45,6 +46,14 @@
       "meaning": "注目を集めている",
       "title": "勢いは本物？",
       "uploadedAt": "2026-09-26T01:08:06.327Z"
+    },
+    {
+      "episode": 4,
+      "id": "Q0F54y_Hw_A",
+      "idiom": "resurgence of",
+      "meaning": "〜の復活、再興",
+      "title": "「旧式」の逆襲？",
+      "uploadedAt": "2026-09-26T08:32:04.835Z"
     }
   ]
 }
