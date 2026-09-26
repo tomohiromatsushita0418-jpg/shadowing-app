@@ -35376,25 +35376,363 @@
       {
         "en": "Moreover, the communal aspect of sharing these tangible passions, whether at a record fair or a photography workshop, fosters genuine human connection often diluted in virtual spaces.",
         "ja": "さらに、レコード市や写真ワークショップなどでこれらの具体的な情熱を分かち合うという共同体的な側面は、バーチャル空間では希薄になりがちな本物の人間関係を育みます。",
-        "audioPath": "./assets/audio/t17903630858496445_5.mp3"
+        "audioPath": "./assets/audio/t17903630858496445_5.mp3",
+        "phrases": [
+          {
+            "phrase": "communal aspect",
+            "meaning": "共同体的な側面、共有する側面",
+            "usage": "The communal aspect of the festival made everyone feel like a part of the community. (祭りの共同体的側面が、皆に地域社会の一員であると感じさせた。)"
+          },
+          {
+            "phrase": "tangible passions",
+            "meaning": "具体的な情熱、形のある趣味",
+            "usage": "Collecting vintage cars can be a way to express tangible passions. (ヴィンテージカーを集めることは、具体的な情熱を表現する方法になりうる。)"
+          },
+          {
+            "phrase": "fosters genuine human connection",
+            "meaning": "本物の人間的なつながりを育む",
+            "usage": "Face-to-face interactions foster genuine human connection more effectively than online communication. (対面での交流は、オンラインコミュニケーションよりも効果的に本物の人間的なつながりを育む。)"
+          },
+          {
+            "phrase": "diluted in virtual spaces",
+            "meaning": "仮想空間で希薄になっている",
+            "usage": "The sense of community can be diluted in virtual spaces if not actively maintained. (仮想空間では、積極的に維持されないと共同体の感覚が希薄になることがある。)"
+          }
+        ]
       },
       {
         "en": "Retailers and independent businesses are keenly observing this paradigm shift, adapting their offerings to cater to a demographic increasingly valuing craftsmanship and hands-on engagement.",
-        "ja": "小売業者や独立系企業は、このパラダイムシフトを鋭く観察し、職人技や実践的な関わりをますます重視する層に応えるべく、提供する商品やサービスを適応させています。"
+        "ja": "小売業者や独立系企業は、このパラダイムシフトを鋭く観察し、職人技や実践的な関わりをますます重視する層に応えるべく、提供する商品やサービスを適応させています。",
+        "phrases": [
+          {
+            "phrase": "paradigm shift",
+            "meaning": "パラダイムシフト、考え方や方法の大きな転換",
+            "usage": "業界で大きな paradigm shift が起きている。"
+          },
+          {
+            "phrase": "keenly observing",
+            "meaning": "熱心に観察する、注意深く見守る",
+            "usage": "市場の動向を keenly observe する必要がある。"
+          },
+          {
+            "phrase": "cater to",
+            "meaning": "〜の要求に応じる、〜を対象とする",
+            "usage": "特定の顧客層に cater to する戦略。"
+          },
+          {
+            "phrase": "hands-on engagement",
+            "meaning": "実践的な関与、体験型の参加",
+            "usage": "hands-on experience や hands-on training のように使う。"
+          }
+        ]
       },
       {
         "en": "This trend also underscores a broader societal introspection about our relationship with technology and the imperative to cultivate offline sanctuaries.",
-        "ja": "このトレンドはまた、テクノロジーとの関係や、オフラインの安息の場を育むことの必要性に関する、より広範な社会的な内省を浮き彫りにしています。"
+        "ja": "このトレンドはまた、テクノロジーとの関係や、オフラインの安息の場を育むことの必要性に関する、より広範な社会的な内省を浮き彫りにしています。",
+        "phrases": [
+          {
+            "phrase": "underscores a broader societal introspection",
+            "meaning": "より広範な社会的な内省を浮き彫りにする",
+            "usage": "この表現は、ある出来事が社会全体で深く考えるべき問題であることを示唆する際に使われます。"
+          },
+          {
+            "phrase": "relationship with technology",
+            "meaning": "テクノロジーとの関係",
+            "usage": "現代社会における人間とテクノロジーの関わり方を説明する際によく使われるコロケーションです。"
+          },
+          {
+            "phrase": "imperative to cultivate",
+            "meaning": "〜を育むことが不可欠である",
+            "usage": "「〜しなければならない」「〜が重要である」という強い必要性や義務感を表現する際に用いられます。"
+          },
+          {
+            "phrase": "offline sanctuaries",
+            "meaning": "オフラインの聖域（安息の地）",
+            "usage": "デジタルデトックスや、テクノロジーから離れて心身を休めることができる場所や時間を指す比喩的な表現です。"
+          }
+        ]
       },
       {
         "en": "Ultimately, the analogue revival serves as a potent reminder that true enrichment often lies in the tangible, the deliberate, and the beautifully imperfect.",
-        "ja": "究極的に、アナログ回帰は、真の豊かさはしばしば触れるもの、意図的なもの、そして美しく不完全なものの中に宿るという力強い再認識として機能しています。"
+        "ja": "究極的に、アナログ回帰は、真の豊かさはしばしば触れるもの、意図的なもの、そして美しく不完全なものの中に宿るという力強い再認識として機能しています。",
+        "phrases": [
+          {
+            "phrase": "serves as a potent reminder",
+            "meaning": "〜を強く思い出させるものとなる、重要な再認識となる",
+            "usage": "この出来事は、環境保護の重要性を強く思い出させるものとなった。"
+          },
+          {
+            "phrase": "lies in",
+            "meaning": "〜にある、〜に存在する（本質や原因など）",
+            "usage": "問題の核心は、コミュニケーション不足にある。"
+          },
+          {
+            "phrase": "true enrichment",
+            "meaning": "真の豊かさ、本質的な充実",
+            "usage": "物質的な成功だけでなく、真の豊かさを追求すべきだ。"
+          },
+          {
+            "phrase": "beautifully imperfect",
+            "meaning": "美しく不完全な、魅力的な欠点のある",
+            "usage": "彼女の作品は、その美しく不完全な点が多くの人々を惹きつけている。"
+          }
+        ]
       },
       {
         "en": "It encourages us to step back, unplug, and rediscover the simple, profound joys that a hyper-connected world sometimes obscures.",
-        "ja": "それは私たちに、一歩引いて、デジタル接続を外し、過剰に繋がった世界が時に覆い隠してしまう、素朴で深遠な喜びを再発見するよう促します。"
+        "ja": "それは私たちに、一歩引いて、デジタル接続を外し、過剰に繋がった世界が時に覆い隠してしまう、素朴で深遠な喜びを再発見するよう促します。",
+        "phrases": [
+          {
+            "phrase": "step back",
+            "meaning": "一歩引いて考える、距離を置く",
+            "usage": "問題解決のために一度立ち止まって全体像を把握する際に使う。"
+          },
+          {
+            "phrase": "unplug",
+            "meaning": "（デジタル機器から）離れる、日常から離れてリラックスする",
+            "usage": "休暇や週末にデジタルデトックスをする際に「unplug from technology」のように使う。"
+          },
+          {
+            "phrase": "a hyper-connected world",
+            "meaning": "超接続社会、情報過多な世界",
+            "usage": "現代社会の課題や特性を論じる際に使う。"
+          }
+        ]
       }
     ],
     "createdAt": "2026-09-25T19:04:45.849Z"
+  },
+  {
+    "id": "t17904464236682317",
+    "title": "Catching Up Over Coffee",
+    "titleJa": "コーヒーを飲みながら近況報告",
+    "category": "Daily Conversation",
+    "sentences": [
+      {
+        "en": "It's been ages, Emily! How have you been holding up with everything going on?",
+        "ja": "エミリー、本当に久しぶり！最近いろいろあったけど、調子はどう？",
+        "audioPath": "./assets/audio/t17904464236682317_0.wav",
+        "phrases": [
+          {
+            "phrase": "It's been ages",
+            "meaning": "久しぶりだね",
+            "usage": "久しぶりに会った友人などに使うカジュアルな表現です。"
+          },
+          {
+            "phrase": "how have you been holding up",
+            "meaning": "どう乗り切っていますか、どうしていますか",
+            "usage": "困難な状況や忙しい状況に対して、相手の様子を気遣う際に使われます。"
+          },
+          {
+            "phrase": "everything going on",
+            "meaning": "起こっている全ての出来事、最近の状況",
+            "usage": "最近の世の中の出来事や、相手の身の回りで起こっている様々な事柄を指します。"
+          }
+        ]
+      },
+      {
+        "en": "I know, right? Life's been a whirlwind, but I can't complain, all things considered.",
+        "ja": "本当だよね！怒涛の日々だったけど、まあ、全体的に見れば文句は言えないかな。",
+        "audioPath": "./assets/audio/t17904464236682317_1.wav",
+        "phrases": [
+          {
+            "phrase": "I know, right?",
+            "meaning": "本当にそうですね！／わかります！",
+            "usage": "相手の意見に強く同意する際に使う、くだけた表現です。"
+          },
+          {
+            "phrase": "a whirlwind",
+            "meaning": "目まぐるしい出来事、大混乱",
+            "usage": "Life's been a whirlwind. のように、非常に忙しい時期や多くのことが同時に起こっている状況を表します。"
+          },
+          {
+            "phrase": "all things considered",
+            "meaning": "総合的に考えると、すべてを考慮すると",
+            "usage": "最終的な判断や結論を述べる際に、様々な要因を考慮に入れていることを示します。"
+          }
+        ]
+      },
+      {
+        "en": "I remember you were knee-deep in that fascinating project; did it ever come to fruition?",
+        "ja": "あの興味深いプロジェクトにどっぷり浸かっていたと記憶しているんだけど、あれは結局実を結んだの？",
+        "audioPath": "./assets/audio/t17904464236682317_2.wav",
+        "phrases": [
+          {
+            "phrase": "knee-deep in",
+            "meaning": "（仕事や活動などに）深く関わっている、忙殺されている",
+            "usage": "I'm knee-deep in work this week. (今週は仕事で手一杯です)"
+          },
+          {
+            "phrase": "come to fruition",
+            "meaning": "（計画などが）実を結ぶ、実現する",
+            "usage": "After years of hard work, their plan finally came to fruition. (長年の努力の末、彼らの計画はついに実を結んだ)"
+          }
+        ]
+      },
+      {
+        "en": "It did, eventually! We hit a couple of snags along the way, but we managed to iron them out, and the launch went surprisingly well.",
+        "ja": "ええ、最終的にはね！途中でいくつか問題にぶつかったんだけど、なんとか解決して、ローンチは驚くほど順調だったわ。",
+        "audioPath": "./assets/audio/t17904464236682317_3.wav",
+        "phrases": [
+          {
+            "phrase": "hit a snag",
+            "meaning": "予期せぬ障害にぶつかる",
+            "usage": "We hit a snag in the project timeline. (プロジェクトのタイムラインで問題が発生した。)"
+          },
+          {
+            "phrase": "iron out",
+            "meaning": "（問題などを）解決する、解消する",
+            "usage": "We need to iron out the details before the meeting. (会議の前に詳細を詰める必要がある。)"
+          },
+          {
+            "phrase": "went surprisingly well",
+            "meaning": "驚くほどうまくいった",
+            "usage": "The presentation went surprisingly well, despite my nerves. (緊張していたにもかかわらず、プレゼンは驚くほどうまくいった。)"
+          }
+        ]
+      },
+      {
+        "en": "That's fantastic news! On my end, I've finally gotten around to decluttering my entire apartment, which feels like a monumental accomplishment.",
+        "ja": "それは素晴らしいわね！私の方は、やっとアパート全体の片付けに取り掛かれて、それがとてつもない偉業のように感じているの。",
+        "audioPath": "./assets/audio/t17904464236682317_4.wav",
+        "phrases": [
+          {
+            "phrase": "On my end",
+            "meaning": "私の方では、私の状況では",
+            "usage": "自分の状況や担当範囲について話す際に使う。"
+          },
+          {
+            "phrase": "get around to",
+            "meaning": "(なかなかできなかったことを)ようやく始める、着手する",
+            "usage": "I finally got around to cleaning my garage. のように、get around to doing something の形で使う。"
+          },
+          {
+            "phrase": "monumental accomplishment",
+            "meaning": "偉業、途方もない功績",
+            "usage": "非常に大きな成果や達成を強調する際に使う。"
+          }
+        ]
+      },
+      {
+        "en": "Oh, I can totally relate! There's something incredibly liberating about shedding the excess, isn't there?",
+        "ja": "ああ、すごくよく分かるわ！余分なものを手放すのって、信じられないくらい解放感があるでしょう？",
+        "audioPath": "./assets/audio/t17904464236682317_5.wav",
+        "phrases": [
+          {
+            "phrase": "totally relate",
+            "meaning": "すごく共感できる",
+            "usage": "相手の話に強く同意する際に使うカジュアルな表現です。"
+          },
+          {
+            "phrase": "incredibly liberating",
+            "meaning": "信じられないほど自由な",
+            "usage": "何かから解放された時の解放感や爽快感を強調する際に使われます。"
+          },
+          {
+            "phrase": "shedding the excess",
+            "meaning": "余分なものを手放すこと",
+            "usage": "物理的なものだけでなく、ストレスや不要な考えなどを手放すことにも使えます。"
+          }
+        ]
+      },
+      {
+        "en": "Absolutely. Speaking of new beginnings, have you given any thought to your plans for the upcoming long weekend?",
+        "ja": "本当にそうね。新しいことと言えば、今度の連休の予定は何か考えている？",
+        "audioPath": "./assets/audio/t17904464236682317_6.wav",
+        "phrases": [
+          {
+            "phrase": "Speaking of",
+            "meaning": "～といえば、～の話ですが",
+            "usage": "話題を転換する際に使う便利な表現です。"
+          },
+          {
+            "phrase": "given any thought to",
+            "meaning": "～について考えたことはありますか",
+            "usage": "相手の考えや計画を尋ねる丁寧な言い方です。"
+          },
+          {
+            "phrase": "upcoming long weekend",
+            "meaning": "間近の連休",
+            "usage": "「upcoming」は「近づいている」という意味で、様々な名詞と組み合わせて使えます。"
+          }
+        ]
+      },
+      {
+        "en": "Not concretely, but I'm leaning towards a quiet getaway, perhaps somewhere I can completely disconnect and recharge.",
+        "ja": "具体的にはまだだけど、静かな休暇に傾いているわ。完全にデジタルデトックスしてリフレッシュできるような場所がいいな。",
+        "audioPath": "./assets/audio/t17904464236682317_7.wav",
+        "phrases": [
+          {
+            "phrase": "leaning towards",
+            "meaning": "〜に傾いている、〜の方に惹かれている",
+            "usage": "I'm leaning towards a new car. (新しい車にしようかと思っている。)"
+          },
+          {
+            "phrase": "quiet getaway",
+            "meaning": "静かな休暇、落ち着いた旅行",
+            "usage": "She planned a quiet getaway to the mountains. (彼女は山への静かな休暇を計画した。)"
+          },
+          {
+            "phrase": "completely disconnect",
+            "meaning": "完全に連絡を断つ、世間から離れる",
+            "usage": "It's important to completely disconnect from work sometimes. (時には仕事から完全に離れることが重要だ。)"
+          },
+          {
+            "phrase": "recharge",
+            "meaning": "（心身を）リフレッシュする、元気を回復する",
+            "usage": "I need to recharge my batteries this weekend. (週末にリフレッシュする必要がある。)"
+          }
+        ]
+      },
+      {
+        "en": "That sounds utterly blissful. If you're looking for company, I'm always up for an impromptu road trip, provided there's good coffee involved.",
+        "ja": "それは至福の時間になりそうね。もし誰か一緒に行く相手を探しているなら、美味しいコーヒーがあれば、いつでも急なロードトリップは大歓迎よ。",
+        "audioPath": "./assets/audio/t17904464236682317_8.wav",
+        "phrases": [
+          {
+            "phrase": "utterly blissful",
+            "meaning": "この上なく至福の、この上なく幸せな",
+            "usage": "This is a strong expression to describe a state of extreme happiness or peace."
+          },
+          {
+            "phrase": "up for",
+            "meaning": "〜する気がある、〜に賛成である",
+            "usage": "I'm up for a challenge. / Are you up for a game tonight?"
+          },
+          {
+            "phrase": "impromptu",
+            "meaning": "即興の、ぶっつけの",
+            "usage": "An impromptu speech needs to be delivered without prior preparation."
+          },
+          {
+            "phrase": "provided that",
+            "meaning": "〜という条件で、〜である限り",
+            "usage": "You can go to the party, provided that you finish your homework first."
+          }
+        ]
+      },
+      {
+        "en": "You're on! Let's put our heads together later and hash out the specifics. It would be grand to catch up properly then, too.",
+        "ja": "決まりね！また後で一緒に具体的に計画を練りましょう。その時もじっくり話せるのは最高だわ。",
+        "phrases": [
+          {
+            "phrase": "put our heads together",
+            "meaning": "協力して考える、知恵を出し合う",
+            "usage": "Let's put our heads together to solve this problem. (この問題を解決するために協力して考えよう)"
+          },
+          {
+            "phrase": "hash out",
+            "meaning": "（議論して）詳細を詰める、解決する",
+            "usage": "We need to hash out the details of the contract. (契約の詳細を詰める必要がある)"
+          },
+          {
+            "phrase": "catch up properly",
+            "meaning": "きちんと近況を報告し合う、じっくり話す",
+            "usage": "It's been a while, let's catch up properly soon. (しばらく会っていないね、近いうちにじっくり話そう)"
+          }
+        ]
+      }
+    ],
+    "createdAt": "2026-09-26T18:13:43.668Z"
   }
 ]
